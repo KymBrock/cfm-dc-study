@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come Follow Me Corner - D&C Study Guides 2025</title>
+    <meta name="description" content="Enhanced scripture study guides for Doctrine and Covenants with verse-by-verse analysis, word studies, and modern applications.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background: linear-gradient(135deg, #f9fafb 0%, #e8f0ea 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 10px 30px rgba(124, 152, 133, 0.2);
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        
+        .year-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 1.1em;
+        }
+        
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-tab {
+            padding: 10px 25px;
+            background: white;
+            color: #7c9885;
+            border: 2px solid #7c9885;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+        
+        .nav-tab:hover, .nav-tab.active {
+            background: #7c9885;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(124, 152, 133, 0.3);
+        }
+        
+        /* Study Guide Grid */
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .guide-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(124, 152, 133, 0.25);
+        }
+        
+        .guide-header {
+            background: linear-gradient(135deg, #7c9885 0%, #6b8774 100%);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .guide-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .guide-title {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .guide-body {
+            padding: 20px;
+        }
+        
+        .guide-date {
+            color: #6b7280;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .guide-description {
+            color: #374151;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .guide-features {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        
+        .feature-badge {
+            background: #e8f0ea;
+            color: #7c9885;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+        
+        .guide-action {
+            display: inline-block;
+            background: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+        
+        .guide-action:hover {
+            background: #6b8774;
+            transform: translateX(5px);
+        }
+        
+        /* Status Badges */
+        .status-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.9);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .status-available {
+            color: #059669;
+        }
+        
+        .status-new {
+            color: #dc2626;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-coming {
+            color: #9ca3af;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* Coming Soon Card */
+        .coming-soon {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .coming-soon .guide-header {
+            background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+        }
+        
+        .coming-soon .guide-action {
+            background: #9ca3af;
+        }
+        
+        /* Features Section */
+        .features-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .features-title {
+            color: #7c9885;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .feature-item {
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .feature-name {
+            color: #374151;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .feature-desc {
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6b7280;
+            background: white;
+            border-radius: 50px 50px 0 0;
+            margin-top: 50px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-link {
+            color: #7c9885;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #6b8774;
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-tab {
+                width: 200px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <h1>Come Follow Me Corner</h1>
+            <p class="subtitle">Enhanced Scripture Study Guides</p>
+            <div class="year-badge">Doctrine & Covenants 2025</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <a href="#september" class="nav-tab active">September 2025</a>
+            <a href="#october" class="nav-tab">October (Coming)</a>
+            <a href="#november" class="nav-tab">November (Coming)</a>
+            <a href="#december" class="nav-tab">December (Coming)</a>
+        </nav>
+        
+        <!-- Study Guides Grid -->
+        <div class="guides-grid">
+            <!-- D&C 98 -->
+            <a href="dc98.html" class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-number">D&C 98</div>
+                    <div class="guide-title">The Law of Retaliation and Forgiveness</div>
+                    <span class="status-badge status-available">✓ Available</span>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-date">September 1-7, 2025</div>
+                    <p class="guide-description">
+                        Discover the Lord's law for dealing with persecution, the divine endorsement of constitutional law, and the eternal principles of forgiveness.
+                    </p>
+                    <div class="guide-features">
+                        <span class="feature-badge">105 verses</span>
+                        <span class="feature-badge">Word Studies</span>
+                        <span class="feature-badge">Historical Context</span>
+                    </div>
+                    <span class="guide-action">Open Study Guide →</span>
+                </div>
+            </a>
+            
+            <!-- D&C 99 -->
+            <a href="dc99.html" class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-number">D&C 99</div>
+                    <div class="guide-title">John Murdock's Mission Call</div>
+                    <span class="status-badge status-available">✓ Available</span>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-date">September 1-7, 2025</div>
+                    <p class="guide-description">
+                        Explore personal revelation, missionary service, and the Lord's individual guidance through this brief but powerful revelation.
+                    </p>
+                    <div class="guide-features">
+                        <span class="feature-badge">8 verses</span>
+                        <span class="feature-badge">Personal Ministry</span>
+                        <span class="feature-badge">Mission Principles</span>
+                    </div>
+                    <span class="guide-action">Open Study Guide →</span>
+                </div>
+            </a>
+            
+            <!-- D&C 100 -->
+            <a href="dc100.html" class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-number">D&C 100</div>
+                    <div class="guide-title">Mission to Canada</div>
+                    <span class="status-badge status-available">✓ Available</span>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-date">September 8-14, 2025</div>
+                    <p class="guide-description">
+                        Follow Joseph and Sidney's mission journey with promises of divine support and the assurance that "all things shall work together for good."
+                    </p>
+                    <div class="guide-features">
+                        <span class="feature-badge">17 verses</span>
+                        <span class="feature-badge">Mission Promises</span>
+                        <span class="feature-badge">Divine Assurance</span>
+                    </div>
+                    <span class="guide-action">Open Study Guide →</span>
+                </div>
+            </a>
+            
+            <!-- D&C 101 -->
+            <a href="dc101.html" class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-number">D&C 101</div>
+                    <div class="guide-title">Zion's Chastening & Redemption</div>
+                    <span class="status-badge status-new">NEW!</span>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-date">September 15-21, 2025</div>
+                    <p class="guide-description">
+                        Understand why the Saints suffered in Missouri, receive glorious millennial promises, and learn the parable of the nobleman and olive trees.
+                    </p>
+                    <div class="guide-features">
+                        <span class="feature-badge">101 verses</span>
+                        <span class="feature-badge">Millennial Promises</span>
+                        <span class="feature-badge">Constitutional Principles</span>
+                    </div>
+                    <span class="guide-action">Open Study Guide →</span>
+                </div>
+            </a>
+            
+            <!-- D&C 102-105 Coming Soon -->
+            <div class="guide-card coming-soon">
+                <div class="guide-header">
+                    <div class="guide-number">D&C 102-105</div>
+                    <div class="guide-title">High Councils & Zion's Camp</div>
+                    <span class="status-badge status-coming">Coming Soon</span>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-date">September 22-28, 2025</div>
+                    <p class="guide-description">
+                        Organization of the first high council, instructions for Zion's Camp, and the Lord's promises for redeeming Zion.
+                    </p>
+                    <div class="guide-features">
+                        <span class="feature-badge">4 Sections</span>
+                        <span class="feature-badge">Church Government</span>
+                        <span class="feature-badge">Zion's Camp</span>
+                    </div>
+                    <span class="guide-action">Coming Soon</span>
+                </div>
+            </div>
+            
+            <!-- D&C 106-108 Coming Soon -->
+            <div class="guide-card coming-soon">
+                <div class="guide-header">
+                    <div class="guide-number">D&C 106-108</div>
+                    <div class="guide-title">Individual Instructions</div>
+                    <span class="status-badge status-coming">Coming Soon</span>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-date">September 29 - October 5, 2025</div>
+                    <p class="guide-description">
+                        Personal revelations to Warren Cowdery, instructions about the Twelve Apostles, and Lyman Sherman's calling.
+                    </p>
+                    <div class="guide-features">
+                        <span class="feature-badge">3 Sections</span>
+                        <span class="feature-badge">Personal Revelation</span>
+                        <span class="feature-badge">Priesthood Keys</span>
+                    </div>
+                    <span class="guide-action">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features Section -->
+        <div class="features-section">
+            <h2 class="features-title">What's Included in Each Study Guide</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📖</div>
+                    <div class="feature-name">Verse-by-Verse Analysis</div>
+                    <div class="feature-desc">Complete scripture text with doctrinal insights</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-name">Word Studies</div>
+                    <div class="feature-desc">Hebrew, Greek, and etymology explorations</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📜</div>
+                    <div class="feature-name">Historical Context</div>
+                    <div class="feature-desc">Background and setting for each revelation</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <div class="feature-name">Modern Application</div>
+                    <div class="feature-desc">Personal, family, and church applications</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔗</div>
+                    <div class="feature-name">Cross-References</div>
+                    <div class="feature-desc">Scripture chains and related passages</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">❓</div>
+                    <div class="feature-name">Study Questions</div>
+                    <div class="feature-desc">Thought-provoking discussion prompts</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me" target="_blank" class="footer-link">Official CFM Manual</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament" target="_blank" class="footer-link">D&C Online</a>
+                <a href="#" class="footer-link">About CFM Corner</a>
+            </div>
+            <p>© 2025 Come Follow Me Corner - Enhanced Scripture Study</p>
+            <p style="font-size: 0.85em; margin-top: 10px;">
+                Created with love for deeper scripture study • Free to use and share
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 99 Complete Study Guide - John Murdock's Mission Call</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section.active {
+            background-color: #5a6b5f;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        /* Sub-Accordion for Verse Analysis */
+        .sub-accordion {
+            background-color: #e8d4a2;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #d4c190;
+        }
+        
+        .sub-accordion.active {            background-color: #c8b080;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            color: #374151;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        /* Content Panels */
+        .content-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 15px;
+        }
+        
+        .content-panel.active {
+            max-height: none;
+            overflow: visible;
+            padding: 20px;
+            border: 1px solid #e8d4a2;            border-top: none;
+        }
+        
+        /* Sub-Panel for verse analysis */
+        .sub-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #fefefe;
+            border-radius: 0 0 6px 6px;
+            margin-bottom: 10px;
+        }
+        
+        .sub-panel.active {
+            max-height: none;
+            overflow: visible;
+            padding: 15px;
+            border: 1px solid #e8d4a2;
+            border-top: none;
+        }
+        
+        .panel-content {
+            padding: 0;
+        }
+        
+        /* Content Styling */
+        h2 {
+            color: #7c9885;
+            margin: 25px 0 15px 0;
+            font-size: 1.8em;            font-weight: 400;
+        }
+        
+        h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+        
+        h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Scripture Quote Styling */
+        .scripture-quote {            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        /* Highlight Boxes */
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 1px solid #d4c190;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+        
+        a:hover {            color: #6b8774;
+            border-bottom: 1px solid #6b8774;
+        }
+        
+        /* Lists within panels */
+        .panel-content ul li strong {
+            color: #6b8774;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 25px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .panel-content {
+                padding: 20px;
+            }
+            
+            .tab-controls {
+                justify-content: center;
+            }
+            
+            .tab-btn {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+        
+        /* Site Header Styles */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        
+        .site-nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: Georgia, serif;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .cfm-button:hover {
+            background-color: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+            color: #999;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .site-header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .site-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="#" class="cfm-button disabled" title="CFMCorner lesson coming soon">View Full Lesson</a>
+                <a href="dc98.html" class="cfm-button">D&C 98</a>
+                <a href="dc100_complete.html" class="cfm-button">D&C 100</a>
+                <a href="dc101_complete.html" class="cfm-button">D&C 101</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 99</h1>
+            <div class="subtitle">John Murdock's Mission Call</div>
+            <div class="date-location">August 29, 1832 • Hiram, Ohio</div>
+        </div>
+        
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>John Murdock's Mission Call</h3>
+                
+                <div class="info-box">
+                    <h4>Basic Information</h4>
+                    <ul>
+                        <li><strong>Date of Revelation:</strong> August 29, 1832</li>
+                        <li><strong>Location:</strong> Hiram, Ohio</li>
+                        <li><strong>Recipient:</strong> John Murdock, received through Joseph Smith the Prophet</li>
+                        <li><strong>Section Summary:</strong> The Lord calls John Murdock to proclaim the gospel in the eastern countries, promises blessings to those who receive missionaries as little children, and provides counsel about caring for his motherless children before departing on his mission.</li>
+                    </ul>
+                </div>
+                
+                <h4>Key Principles</h4>
+                <ul>
+                    <li><strong>Primary Doctrinal Principle:</strong> Those who receive the Lord's servants with childlike humility receive His kingdom and obtain mercy.</li>
+                    <li><strong>Secondary Principle:</strong> Missionaries serve as witnesses, symbolically "cleansing their feet" as a means of demonstrating their diligence to the Lord, releasing any negative feelings, and leaving outcomes in the Lord's hands without carrying disappointment or feelings of undue responsibility.</li>
+                    <li><strong>Application Principle:</strong> The Lord balances spiritual callings with temporal responsibilities, ensuring families are provided for when breadwinners are called to serve.</li>
+                </ul>
+                
+                <h4>Timeframe & Setting (4 Layers)</h4>
+                
+                <p><strong>Circumstances Among Recipients:</strong> John Murdock had been widowed for over a year since his wife Julia died in childbirth on April 30, 1831. His twin babies had been adopted by Joseph and Emma Smith, though one (Joseph Murdock Smith) had died during the March 1832 Hiram mob attack. John was struggling with grief while trying to care for his remaining children and determine how to balance his missionary desires with parental duties.</p>
+                
+                <p><strong>Circumstances Within the Church:</strong> The Church was recovering from the violent mob attack in Hiram, Ohio (March 1832) where Joseph Smith was tarred and feathered. Missionary work was expanding rapidly despite persecution. Many elders were being called to preach, leaving families behind. The Bishop's role in caring for missionaries' families was becoming more defined. Questions arose about how to provide for temporal needs while fulfilling spiritual callings.</p>
+                
+                <p><strong>Relevant Local Circumstances:</strong> The Hiram area remained tense after the mob violence. Local opposition to the Church was strong, with ministers actively preaching against the Saints. Economic conditions were difficult, making it challenging for widowers like Murdock to provide for children while serving missions. The community of Saints was developing systems of mutual support for families of missionaries.</p>
+                
+                <p><strong>Relevant Global Circumstances:</strong> The Second Great Awakening was at its height, creating both religious interest and sectarian competition. The 1830s saw increased mobility with improved roads and transportation, facilitating missionary travel. Social welfare systems were minimal, making family and church support crucial for orphans and widows. Child mortality rates were high, making Murdock's concern for his children's welfare particularly poignant.</p>                
+                <h4>Purpose of the Revelation (Dual Timeline)</h4>
+                
+                <p><strong>Short Term:</strong></p>
+                <ul>
+                    <li>Provided clear direction for John Murdock's immediate missionary service</li>
+                    <li>Addressed his concerns about his motherless children's care</li>
+                    <li>Established the pattern of cleansing feet as a witness against rejecters</li>
+                    <li>Coordinated with Bishop Whitney to ensure family support during the mission</li>
+                </ul>
+                
+                <p><strong>Long Term:</strong></p>
+                <ul>
+                    <li>Established principles for balancing family responsibilities with Church callings</li>
+                    <li>Set precedent for Church welfare support of missionaries' families</li>
+                    <li>Provided pattern for missionary witness and testimony against those who reject truth</li>
+                    <li>Demonstrated the Lord's awareness of individual circumstances and needs</li>
+                </ul>
+                
+                <h4>Significance (Dual Timeline)</h4>
+                
+                <p><strong>Short Term:</strong> John Murdock faithfully fulfilled this mission call, traveling extensively through the eastern states. His children were cared for by the Saints in Ohio, with Bishop Whitney overseeing their welfare. The mission strengthened branches in Ohio, Pennsylvania, and New York.</p>
+                
+                <p><strong>Long Term:</strong> This revelation established important precedents for missionary service and family support that continue today. The Church's welfare system ensures missionaries' families are cared for. The principle of being a witness continues through modern missionary testimony bearing. The balance between Church service and family responsibilities remains a key principle. The childlike reception requirement influences how missionaries approach teaching.</p>
+                
+                <h4>Cultural Insights (Dual Perspective)</h4>
+                
+                <p><strong>Ancient:</strong></p>
+                <ul>
+                    <li>Echoes Christ's teaching about receiving the kingdom as a little child (<a href="https://www.blueletterbible.org/kjv/mat/18/3/">Matthew 18:3</a>)</li>
+                    <li>Parallels Old Testament prophets shaking dust from feet (<a href="https://www.blueletterbible.org/kjv/neh/5/13/">Nehemiah 5:13</a>)</li>
+                    <li>Reflects apostolic pattern of going two by two from city to city (<a href="https://www.blueletterbible.org/kjv/luk/10/1/">Luke 10:1</a>)</li>
+                    <li>Connects to biblical promises about caring for orphans and widows (<a href="https://www.blueletterbible.org/kjv/jas/1/27/">James 1:27</a>)</li>
+                    <li>Fulfills pattern of swift judgment found in prophetic literature (<a href="https://www.blueletterbible.org/kjv/isa/66/15-16/">Isaiah 66:15-16</a>)</li>
+                </ul>                
+                <p><strong>Modern:</strong></p>
+                <ul>
+                    <li>Addresses work-life balance challenges faced by modern Church members</li>
+                    <li>Provides framework for humanitarian service and family support systems</li>
+                    <li>Guides single-parent families in Church service opportunities</li>
+                    <li>Influences modern missionary preparation and family considerations</li>
+                    <li>Shapes Church welfare programs for supporting service-oriented families</li>
+                    <li>Demonstrates divine awareness of individual family circumstances</li>
+                </ul>
+                
+                <h4>Modern Application (5 Components)</h4>
+                
+                <p><strong>Personal Application:</strong> Seek balance between Church service and family responsibilities. Receive gospel messengers with humility and openness. Bear testimony even when rejected. Trust the Lord's timing in personal callings. Ensure family needs are met before accepting demanding callings.</p>
+                
+                <p><strong>Family Application:</strong> Support family members called to serve missions or demanding callings. Teach children to receive truth with humility. Create family plans for supporting each other during service. Share testimonies even when others don't accept them. Prepare temporally for times of service and sacrifice.</p>
+                
+                <p><strong>Church Application:</strong> Support missionary families through ward councils and Relief Society. Ensure converts are received with love regardless of background. Bear witness of truth even in hostile environments. Coordinate welfare assistance for families of those serving. Create mentoring programs for single-parent families.</p>
+                
+                <p><strong>Community Application:</strong> Demonstrate childlike openness to truth from unexpected sources. Share beliefs respectfully even when facing rejection. Support single-parent families in the community. Build networks of support for families with absent parents. Model balance between service and family responsibilities.</p>
+                
+                <div class="highlight-box">
+                    <h4>Questions for Personal Study</h4>
+                    <ol>
+                        <li>How can I receive gospel truth with the humility of a little child?</li>
+                        <li>What prevents me from accepting truth from unexpected messengers?</li>
+                        <li>How do I balance Church service with family responsibilities?</li>
+                        <li>When have I failed to receive someone the Lord sent to teach me?</li>
+                        <li>How can I bear testimony even when facing rejection?</li>
+                        <li>What family needs must I address before accepting additional responsibilities?</li>
+                        <li>How can I support single parents trying to serve in the Church?</li>
+                    </ol>
+                </div>                
+                <h4>Key Doctrines</h4>
+                
+                <p><strong>Key Doctrines Highlighted:</strong></p>
+                <ul>
+                    <li>Bishop's role in providing for missionaries' families</li>
+                    <li>Receiving missionaries as little children brings kingdom blessings</li>
+                    <li>The practice of symbolically cleansing feet as a personal spiritual ordinance</li>
+                </ul>
+                
+                <p><strong>Previous Doctrines Clarified:</strong></p>
+                <ul>
+                    <li>The childlike humility required to enter God's kingdom</li>
+                    <li>The chain of reception: receiving servants means receiving Christ</li>
+                    <li>Balance between temporal and spiritual responsibilities</li>
+                </ul>
+                
+                <p><strong>Covenant Principles Explained:</strong></p>
+                <ul>
+                    <li>Those who receive God's servants receive Him and His kingdom</li>
+                    <li>Rejection of divine messengers brings judgment</li>
+                    <li>Covenant people must care for each other's temporal needs</li>
+                    <li>Missionary service requires both spiritual calling and temporal preparation</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>The Murdock Family Tragedy</h3>
+                
+                <p>John Murdock's wife Julia died giving birth to twins on April 30, 1831. On the same day, Emma Smith gave birth to twins who died. In an act of compassion, John allowed Joseph and Emma to adopt his twins. During the Hiram mob attack (March 24, 1832), baby Joseph Murdock Smith died from exposure to the cold. Julia Murdock Smith survived and was raised by the Smiths.</p>
+                
+                <h4>Eastern Countries Mission</h4>
+                <p>The "eastern countries" referred to states east of Ohio, including Pennsylvania, New York, and New England. These areas had established branches needing strengthening. John Murdock had previously served successful missions in these regions and knew the territory well.</p>                
+                <h4>Church Context in 1832</h4>
+                <p>The Church was experiencing rapid growth but also severe persecution. The mob attack in Hiram, Ohio (March 24, 1832) where Joseph Smith was tarred and feathered had shaken the community. Despite this, missionary work was accelerating. The Lord was calling many to preach, requiring the development of systems to care for missionaries' families.</p>
+                
+                <h4>Cleansing of Feet</h4>
+                <p>This was not the first mention of this ordinance (see D&C 24:15; 60:15; 75:20), but this revelation provides additional context about it being done "in secret places." The practice was taken seriously by early missionaries, in part as a final testimony for those who rejected the gospel, but the fact that they performed it "in secret" indicates that this was not intended to be a public spectacle, shaming or casting judgment on others. Rather, it was intended as a personal interaction between the missionary and the Lord, allowing the missionary to demonstrate that he had done all he could, and that he was free from further obligations of responsibility to that community or person. This allowed the missionary to relinquish burdens of remorse, disappointment, guilt, etc., removing those spiritual pollutants and allowing them to move on without regret, preventing them from carrying those feelings into the next assignment.</p>
+                
+                <div class="info-box">
+                    <h4>John Murdock's Background</h4>
+                    <ul>
+                        <li>Joined the Church in November 1830 in Kirtland, Ohio</li>
+                        <li>Former Reformed Baptist preacher with significant biblical knowledge</li>
+                        <li>Lost his wife Julia in childbirth (April 30, 1831)</li>
+                        <li>Allowed Joseph and Emma to adopt his twin babies</li>
+                        <li>Lost one adopted son (Joseph Murdock Smith) in the Hiram mob attack</li>
+                        <li>Had three other children needing care during his mission</li>
+                    </ul>
+                </div>
+                
+                <h4>Mission Fulfillment</h4>
+                <p>Following this revelation, John Murdock:</p>
+                <ul>
+                    <li>Arranged for Caleb Baldwin to take his three children to Missouri, paying $10 per child</li>
+                    <li>Departed with Zebedee Coltrin for the eastern states in September 1832</li>
+                    <li>Baptized many converts despite facing persecution and rejection</li>
+                    <li>Was not reunited with his children until 1834 as part of Zion's Camp</li>
+                    <li>Later served as bishop in Nauvoo and Utah</li>
+                    <li>Served a mission to Australia in his later years</li>
+                    <li>Fulfilled the revelation by serving until his death</li>
+                </ul>
+            </div>
+        </div>        
+        <!-- VERSE-BY-VERSE ANALYSIS -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE ANALYSIS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <!-- 1-2 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">1-2: The Missionary Call and Divine Authority</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>1</strong> Behold, thus saith the Lord unto my servant John Murdock—thou art called to go into the eastern countries from house to house, from village to village, and from city to city, to proclaim mine everlasting gospel unto the inhabitants thereof, in the midst of persecution and wickedness.</p>
+                        <p><strong>2</strong> And who receiveth you receiveth me; and you shall have power to declare my word in the demonstration of my Holy Spirit.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Personal, specific missionary call to eastern states</li>
+                        <li>Three-fold preaching pattern: houses, villages, cities</li>
+                        <li>Mission field characterized by persecution and wickedness</li>
+                        <li>Missionary represents the Lord directly</li>
+                        <li>Holy Spirit provides power for declaration</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"eastern countries"</strong> - Refers to eastern United States, particularly New England states</li>
+                        <li><strong>"house to house"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g2596/kjv/tr/0-1/">κατ' οἶκον (*kat' oikon*)</a> — personal, intimate ministry pattern</li>
+                        <li><strong>"everlasting gospel"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g166/kjv/tr/0-1/">εὐαγγέλιον αἰώνιον (*euangelion aiōnion*)</a> — eternal good news</li>
+                        <li><strong>"receiveth"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6901/kjv/wlc/0-1/">קָבַל (*qabal*)</a> — "to receive, accept, take"</li>
+                        <li><strong>"demonstration"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g585/kjv/tr/0-1/">ἀπόδειξις (*apodeixis*)</a> — "proof, demonstration, showing forth"</li>
+                    </ul>                    
+                    <h4>Reflection Questions</h4>
+                    <ul>
+                        <li>How does knowing we represent the Lord change our approach to service?</li>
+                        <li>What does preaching "from house to house" teach about personal ministry?</li>
+                        <li>How do we maintain faith when serving "in the midst of persecution"?</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/40/">Matthew 10:40</a> — "He that receiveth you receiveth me"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/joh/13/20/">John 13:20</a> — "He that receiveth whomsoever I send receiveth me"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1co/2/4/">1 Corinthians 2:4</a> — "In demonstration of the Spirit and of power"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.36">D&C 84:36</a> — "He that receiveth my servants receiveth me"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18.15-16">D&C 18:15-16</a> — Joy in bringing souls to Christ</li>
+                    </ul>
+                    
+                    <p><strong>Modern Application:</strong> This personal pattern of ministry—house to house—remains effective today. While we may use technology and social media, the principle of personal, individual outreach continues. The promise that those who receive us receive the Lord gives confidence in sharing the gospel.</p>
+                </div>
+                
+                <!-- 3-4 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">3-4: Reception and Rejection</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>3</strong> And who receiveth you as a little child, receiveth my kingdom; and blessed are they, for they shall obtain mercy.</p>
+                        <p><strong>4</strong> And whoso rejecteth you shall be rejected of my Father and his house; and you shall cleanse your feet in the secret places by the way for a testimony against them.</p>
+                    </div>                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Childlike reception brings kingdom blessings</li>
+                        <li>Humble acceptance results in divine mercy</li>
+                        <li>Rejection of God's servants who are acting on His behalf equals rejection by God</li>
+                        <li>Symbolic foot cleansing serves as witness</li>
+                        <li>Divine justice follows rejection of truth</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"as a little child"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g3813/kjv/tr/0-1/">ὡς παιδίον (*hōs paidion*)</a> — "like a young child," implying humility and teachability</li>
+                        <li><strong>"obtain mercy"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h7355/kjv/wlc/0-1/">רָחַם (*racham*)</a> — "to have compassion, show mercy"</li>
+                        <li><strong>"cleanse your feet"</strong> - Ancient Middle Eastern custom signifying release of obligation</li>
+                        <li><strong>"secret places"</strong> - Private, not public display of judgment</li>
+                        <li><strong>"testimony"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g3141/kjv/tr/0-1/">μαρτυρία (*martyria*)</a> — "witness, evidence"</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ul>
+                        <li>What childlike qualities help us receive the gospel?</li>
+                        <li>How do we handle rejection without becoming bitter?</li>
+                        <li>What is the significance of cleansing feet "in secret places"?</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/18/3/">Matthew 18:3</a> — "Except ye become as little children"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/10/11/">Luke 10:11</a> — "Even the very dust of your city"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/13/51/">Acts 13:51</a> — "They shook off the dust of their feet"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/24.15">D&C 24:15</a> — "Shake off the dust of thy feet"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11.37-38">3 Nephi 11:37-38</a> — Becoming as a little child</li>
+                    </ul>                    
+                    <p><strong>Modern Application:</strong> The principle of childlike reception challenges our intellectual pride and calls us to humble learning. The private nature of "cleansing feet" reminds us that judgment belongs to God, not public condemnation by us.</p>
+                </div>
+                
+                <!-- 5-6 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">5-6: Coming Judgment and Family Provision</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>5</strong> And behold, and lo, I come quickly to judgment, to convince all of their ungodly deeds which they have committed against me, as it is written of me in the volume of the book.</p>
+                        <p><strong>6</strong> And now, verily I say unto you, that it is not expedient that you should go until your children are provided for, and sent up kindly unto the bishop of Zion.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Christ's coming to judgment is imminent</li>
+                        <li>All ungodly deeds will be exposed and judged</li>
+                        <li>Scriptural prophecies of judgment will be fulfilled</li>
+                        <li>Family responsibilities must precede missionary service</li>
+                        <li>Bishop provides temporal care for missionaries' families</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"quickly"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g5035/kjv/tr/0-1/">ταχύ (*tachy*)</a> — "speedily, soon, without delay"</li>
+                        <li><strong>"convince"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g1651/kjv/tr/0-1/">ἐλέγχω (*elegchō*)</a> — "to convict, reprove, expose"</li>
+                        <li><strong>"ungodly deeds"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g763/kjv/tr/0-1/">ἀσέβεια (*asebeia*)</a> — "impiety, wickedness"</li>
+                        <li><strong>"volume of the book"</strong> - Reference to prophetic scriptures, possibly the Book of Life (<a href="https://www.blueletterbible.org/kjv/rev/20/12/">Revelation 20:12</a>) or the Book of Generations (Sefer Toldot - <a href="https://www.blueletterbible.org/kjv/gen/5/1/">Genesis 5:1</a>)</li>
+                        <li><strong>"kindly"</strong> - With care and compassion, not mere duty</li>
+                    </ul>                    
+                    <h4>Reflection Questions</h4>
+                    <ul>
+                        <li>How does knowing Christ comes "quickly" affect our urgency in missionary work?</li>
+                        <li>What does proper provision for family look like before accepting callings?</li>
+                        <li>How does the Church support families of those serving?</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/jde/1/15/">Jude 1:15</a> — "To convince all that are ungodly"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/22/12/">Revelation 22:12</a> — "Behold, I come quickly"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1ti/5/8/">1 Timothy 5:8</a> — "If any provide not for his own"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/75.28">D&C 75:28</a> — Church's duty to support missionaries' families</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/83.2">D&C 83:2</a> — Women and children have claim upon husbands and Church</li>
+                    </ul>
+                    
+                    <p><strong>Modern Application:</strong> This balance between missionary service and family responsibility continues today. The Church's welfare system, like the ancient role of the bishop, ensures families are cared for when parents serve. We must never neglect family duties for Church service.</p>
+                </div>
+                
+                <!-- 7-8 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">7-8: Lifetime Service or Zion Inheritance</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>7</strong> And after a few years, if thou desirest of me, thou mayest go up also unto the goodly land, to possess thine inheritance;</p>
+                        <p><strong>8</strong> Otherwise thou shalt continue proclaiming my gospel until thou be taken. Amen.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Unique choice offered: Zion inheritance or lifetime missionary service</li>
+                        <li>"Few years" indicates temporary but extended service</li>
+                        <li>Zion described as "goodly land" with inheritance awaiting</li>
+                        <li>Alternative is missionary service until death</li>
+                        <li>Both options are acceptable to the Lord</li>
+                    </ul>                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"goodly land"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/">אֶרֶץ טוֹבָה (*eretz tovah*)</a> — "good, pleasant land," echoing promised land language</li>
+                        <li><strong>"inheritance"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g2817/kjv/tr/0-1/">κληρονομία (*klēronomia*)</a> — "property received by inheritance"</li>
+                        <li><strong>"until thou be taken"</strong> - Euphemism for death while serving</li>
+                        <li>This unique option not offered to other missionaries</li>
+                        <li>Reflects John's earlier declaration to serve "full time"</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ul>
+                        <li>Why might the Lord offer this unique choice to John Murdock?</li>
+                        <li>What does this teach about individual nature of callings?</li>
+                        <li>How do we discern between good options in our service?</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/deu/8/7/">Deuteronomy 8:7</a> — "A good land"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/psa/37/11/">Psalm 37:11</a> — "The meek shall inherit the earth"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/63.20">D&C 63:20</a> — Saints to receive inheritance</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101.18">D&C 101:18</a> — Inheritance in Zion</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/php/1/23-24/">Philippians 1:23-24</a> — Paul's desire to depart or remain</li>
+                    </ul>
+                    
+                    <p><strong>Modern Application:</strong> This personalized revelation shows the Lord knows our individual circumstances and offers choices within His will. Not all callings are identical; the Lord adapts His requirements to our situations while maintaining high standards of service.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Summary and Integration</h4>
+                    <p>Doctrine and Covenants 99 provides intimate insight into the Lord's individual care for His servants. Key principles include:</p>
+                    <ol>
+                        <li><strong>Representative Authority:</strong> Missionaries represent Christ directly</li>
+                        <li><strong>Childlike Reception:</strong> Humility opens hearts to kingdom blessings</li>
+                        <li><strong>Divine Justice:</strong> Rejection of servants brings divine consequences</li>
+                        <li><strong>Family Priority:</strong> Temporal needs must be met before spiritual service</li>
+                        <li><strong>Individual Callings:</strong> The Lord personalizes calls to individual circumstances</li>
+                        <li><strong>Sacrifice and Blessing:</strong> Great sacrifice brings great blessings</li>
+                    </ol>
+                    
+                    <p>This section demonstrates that the Lord knows each servant personally, understands family circumstances, and provides ways to balance competing responsibilities. John Murdock's example of sacrifice—giving up his children to serve—stands as a powerful witness of consecration.</p>
+                    
+                    <p>The revelation's promise that those who receive missionaries "as a little child" receive the kingdom reminds us that humility and teachability are essential for spiritual growth. The unique choice offered to John shows the Lord's flexibility within His perfect plan.</p>
+                    
+                    <p>For modern readers, this revelation affirms that God knows our individual circumstances and will provide ways to serve Him while caring for family responsibilities. The Church's welfare system continues this pattern of supporting those who sacrifice for the kingdom.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- KEY WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">KEY WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>Comprehensive Word Studies from Visual Markup Analysis</h3>
+                
+                <!-- CALLED -->
+                <div class="info-box">
+                    <h4>1. CALLED</h4>
+                    <ul>
+                        <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h7121/kjv/wlc/0-1/">קָרָא (*qara*)</a> — "to call, proclaim, read, summon"</li>
+                        <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2564/kjv/tr/0-1/">καλέω (*kaleō*)</a> — "to call, invite, name"</li>
+                        <li><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/vocare">vocare</a> — "to call, summon, invite"</li>
+                        <li><strong>Etymology:</strong> From Proto-Indo-European *gal- "to call, shout" <a href="https://www.etymonline.com/word/call">[Etymonline]</a></li>
+                        <li><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/called">Called</a> — "Invited; summoned; addressed; named; appointed"</li>
+                    </ul>                    <p><strong>Cross-References:</strong></p>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/8/30/">Romans 8:30</a> — "Whom he called, them he also justified"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1co/1/9/">1 Corinthians 1:9</a> — "God is faithful, by whom ye were called"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/4.3">D&C 4:3</a> — "If ye have desires to serve God ye are called"</li>
+                    </ul>
+                    <p><strong>Significance:</strong> Divine calling represents both invitation and commission, establishing covenant responsibility for ministry.</p>
+                </div>
+                
+                <!-- LITTLE CHILD -->
+                <div class="info-box">
+                    <h4>2. LITTLE CHILD</h4>
+                    <ul>
+                        <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h5288/kjv/wlc/0-1/">נַעַר (*na'ar*)</a> — "child, lad, youth"</li>
+                        <li><strong>Hebrew (additional):</strong> <a href="https://www.blueletterbible.org/lexicon/h1121/kjv/wlc/0-1/">בֵּן (*ben*)</a> — "son"; בָּנִים (*banim*) — "sons/children"; בָּנוֹת (*banot*) — "daughters" - linguistically connected to <a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/">בָּנָה (*banah*)</a> — "to build," suggesting children as "builders" of the future</li>
+                        <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g3813/kjv/tr/0-1/">παιδίον (*paidion*)</a> — "little child, infant"</li>
+                        <li><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/parvulus">parvulus</a> — "very small, little child"</li>
+                        <li><strong>Etymology:</strong> Child from Old English cild "fetus, infant, unborn child" <a href="https://www.etymonline.com/word/child">[Etymonline]</a></li>
+                        <li><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/child">Child</a> — "A son or a daughter; a male or female descendant"</li>
+                    </ul>
+                    <p><strong>Cross-References:</strong></p>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/18/3/">Matthew 18:3</a> — "Except ye be converted, and become as little children"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mar/10/15/">Mark 10:15</a> — "Whosoever shall not receive the kingdom of God as a little child"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3.19">Mosiah 3:19</a> — "Becometh as a child"</li>
+                    </ul>
+                    <p><strong>Significance:</strong> Childlike reception requires humility, teachability, and trust without skepticism. The Hebrew connection between "children" and "builders" suggests that those who receive the gospel as children become builders of God's kingdom.</p>
+                </div>                
+                <!-- CLEANSE YOUR FEET -->
+                <div class="info-box">
+                    <h4>3. CLEANSE YOUR FEET</h4>
+                    <ul>
+                        <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h7364/kjv/wlc/0-1/">רָחַץ (*rachats*)</a> — "to wash, wash off, bathe"</li>
+                        <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g1621/kjv/tr/0-1/">ἐκτινάσσω (*ektinassō*)</a> — "to shake off"</li>
+                        <li><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/mundare">mundare pedes</a> — "to cleanse feet"</li>
+                        <li><strong>Etymology:</strong> Cleanse from Old English clǣnsian "to make clean" <a href="https://www.etymonline.com/word/cleanse">[Etymonline]</a></li>
+                        <li><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/cleanse">Cleanse</a> — "To purify; to make clean; to remove impurity"</li>
+                    </ul>
+                    <p><strong>Cross-References:</strong></p>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/14/">Matthew 10:14</a> — "Shake off the dust of your feet"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/13/51/">Acts 13:51</a> — "They shook off the dust of their feet against them"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/60.15">D&C 60:15</a> — "Shake off the dust of thy feet"</li>
+                    </ul>
+                    <p><strong>Significance:</strong> This ordinance serves as a testimony against those who reject the gospel, transferring accountability.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>Practical Applications for Modern Saints</h3>                
+                <h4>Personal Ministry</h4>
+                <p>John Murdock's call to go "from house to house, from village to village, and from city to city" teaches us about personal ministry. In our digital age, this pattern reminds us that genuine gospel sharing happens through personal relationships and individual connections, not just mass communication.</p>
+                
+                <h4>Balancing Family and Church Service</h4>
+                <p>The Lord's instruction that John should not depart until his children were "provided for, and sent up kindly unto the bishop" establishes an eternal principle: family responsibilities must be balanced with Church service. The Lord never asks us to neglect family duties for His work.</p>
+                
+                <h4>Receiving Truth with Childlike Humility</h4>
+                <p>The promise that those who receive missionaries "as a little child" receive the kingdom challenges our sophisticated age. Childlike qualities include:</p>
+                <ul>
+                    <li>Teachability without skepticism</li>
+                    <li>Trust without demanding proof</li>
+                    <li>Humility without pride</li>
+                    <li>Openness without prejudice</li>
+                    <li>Joy without reservation</li>
+                </ul>
+                
+                <h4>Handling Rejection</h4>
+                <p>The instruction to cleanse feet "in secret places" teaches important principles about handling rejection:</p>
+                <ul>
+                    <li>Don't make public spectacles of those who reject truth</li>
+                    <li>Leave judgment to God</li>
+                    <li>Move forward without bitterness</li>
+                    <li>Continue serving despite opposition</li>
+                    <li>Trust in divine justice</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>For Teachers and Leaders</h4>
+                    <p>When teaching from D&C 99, consider these approaches:</p>
+                    <ul>
+                        <li><strong>Share John Murdock's story</strong> - His sacrifice makes the principles real and relatable</li>
+                        <li><strong>Discuss modern applications</strong> - How do we balance family and Church today?</li>
+                        <li><strong>Explore childlike qualities</strong> - What prevents us from receiving truth?</li>
+                        <li><strong>Address missionary work</strong> - How can we share the gospel personally?</li>
+                        <li><strong>Examine individual callings</strong> - How does the Lord personalize our service?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        <!-- STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>Questions for Personal and Group Study</h3>
+                
+                <h4>Understanding the Text</h4>
+                <ol>
+                    <li>What specific geographic pattern did the Lord establish for John Murdock's mission? (house to house, village to village, city to city)</li>
+                    <li>What promise does the Lord make to those who receive His missionaries "as a little child"?</li>
+                    <li>What was John Murdock required to do before departing on his mission?</li>
+                    <li>What unique choice did the Lord offer John Murdock in verses 7-8?</li>
+                    <li>What does "cleanse your feet in the secret places" mean?</li>
+                </ol>
+                
+                <h4>Applying the Principles</h4>
+                <ol>
+                    <li>How can we receive gospel messengers "as a little child" in our sophisticated age?</li>
+                    <li>What modern situations require us to balance family responsibilities with Church service?</li>
+                    <li>How do we handle rejection of our testimonies without becoming bitter?</li>
+                    <li>What does it mean that those who receive the Lord's servants receive Him?</li>
+                    <li>How can we support families of those called to demanding Church service?</li>
+                </ol>
+                
+                <h4>Deeper Reflection</h4>
+                <ol>
+                    <li>Why might the Lord have offered John Murdock a choice between settling in Zion or continuing missionary work?</li>
+                    <li>What does this revelation teach about the Lord's awareness of individual circumstances?</li>
+                    <li>How does John Murdock's sacrifice compare to sacrifices asked of us today?</li>
+                    <li>What childlike qualities do you most need to develop?</li>
+                    <li>How has the Lord personalized your service to match your circumstances?</li>
+                </ol>
+                
+                <h4>Historical Context Questions</h4>
+                <ol>
+                    <li>How did the recent mob attack in Hiram affect John Murdock personally?</li>
+                    <li>Why was the "eastern countries" mission field significant in 1832?</li>
+                    <li>How did Bishop Whitney support missionaries' families?</li>
+                    <li>What happened to John Murdock's children while he served his mission?</li>
+                    <li>How did John ultimately fulfill this revelation throughout his life?</li>
+                </ol>                
+                <div class="info-box">
+                    <h4>Group Discussion Prompts</h4>
+                    <ul>
+                        <li><strong>Opening Question:</strong> Share a time when you had to balance competing responsibilities. How did you decide what to prioritize?</li>
+                        <li><strong>Scripture Discussion:</strong> Read verses 3-4 together. What does it mean to receive someone "as a little child"?</li>
+                        <li><strong>Personal Application:</strong> How can we better support single parents and families with parents serving in demanding callings?</li>
+                        <li><strong>Testimony Sharing:</strong> When have you seen the Lord provide for families during times of service?</li>
+                        <li><strong>Closing Thought:</strong> What sacrifice is the Lord asking of you right now? How can John Murdock's example inspire you?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript Functions -->
+    <script>
+        function toggleSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        function toggleSubSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        function expandAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add("active");
+                panels[i].classList.add("active");
+            }
+        }
+        
+        function collapseAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+                panels[i].classList.remove("active");
+            }
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.remove("active");
+                subPanels[i].classList.remove("active");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 101 Complete Study Guide - Zion's Chastening and Future Redemption</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section.active {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        /* Content Panels */
+        .content-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        
+        .content-panel.active {
+            max-height: none;
+            border: 1px solid #e5e7eb;
+            border-top: none;
+        }
+        
+        .panel-content {
+            padding: 30px;
+        }
+        
+        /* Typography within panels */
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 400;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+        
+        h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Scripture Quote Styling */
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        /* Highlight Boxes */
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 1px solid #d4c190;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+        
+        a:hover {
+            color: #6b8774;
+            border-bottom: 1px solid #6b8774;
+        }
+        
+        /* Lists within panels */
+        .panel-content ul li strong {
+            color: #6b8774;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 25px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .panel-content {
+                padding: 20px;
+            }
+            
+            .tab-controls {
+                justify-content: center;
+            }
+            
+            .tab-btn {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+        
+        /* Site Header Styles */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        
+        .site-nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: Georgia, serif;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .cfm-button:hover {
+            background-color: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+            color: #999;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .site-header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .site-title {
+                font-size: 1.5em;
+            }
+        }
+        
+        /* Sub-accordion styles for verse-by-verse */
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .sub-accordion.active {
+            background-color: #e5e7eb;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            color: #6b8774;
+            font-weight: bold;
+            float: right;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        .sub-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 6px 6px;
+        }
+        
+        .sub-panel.active {
+            max-height: none;
+            padding: 20px;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="#" class="cfm-button disabled" title="CFMCorner lesson coming soon">View Full Lesson</a>
+                <a href="dc98_complete.html" class="cfm-button">D&C 98</a>
+                <a href="dc99_complete.html" class="cfm-button">D&C 99</a>
+                <a href="dc100_complete.html" class="cfm-button">D&C 100</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 101</h1>
+            <div class="subtitle">Zion's Chastening and Future Redemption</div>
+            <div class="date-location">December 16-17, 1833 • Kirtland, Ohio</div>
+        </div>
+        
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Section Overview</h2>
+                
+                <h3>Basic Information</h3>
+                <p><strong>Date of Revelation:</strong> December 16 and 17, 1833</p>
+                <p><strong>Location:</strong> Kirtland, Ohio</p>
+                <p><strong>Recipients:</strong> Joseph Smith the Prophet, with other Church leaders present</p>
+                <p><strong>Section Summary:</strong> The Lord explains why the Saints in Missouri suffered persecution and were driven from Jackson County, provides the parable of the nobleman and the olive trees to illustrate their failure to build Zion properly, reveals glorious millennial promises, and instructs the Saints to seek legal redress while purchasing lands through legal means.</p>
+                
+                <h3>Key Principles</h3>
+                <p><strong>Primary Doctrinal Principle:</strong> The Lord allows His people to be chastened when they transgress His commandments, but His compassion remains, and He will ultimately redeem Zion and gather His people.</p>
+                <p><strong>Secondary Principle:</strong> The Constitution of the United States was established by God through wise men for the protection of all people's rights and moral agency.</p>
+                <p><strong>Application Principle:</strong> Saints should seek legal redress for grievances through proper governmental channels while continuing to gather and purchase lands legally to establish Zion.</p>
+                
+                <h3>Timeframe & Setting</h3>
+                
+                <h4>Circumstances Among Recipients</h4>
+                <p>The Saints had just been violently expelled from Jackson County, Missouri, in November 1833. Over 1,200 members lost homes, property, and possessions. Many were living in temporary shelters during winter, scattered across Clay and other counties. Some had been tarred and feathered, homes burned, and printing press destroyed. Church members were devastated, questioning why God allowed this to happen after commanding them to build Zion. Many had sacrificed everything to gather to Missouri, only to lose it all.</p>
+                
+                <h4>Circumstances Within the Church</h4>
+                <p>The Church faced its greatest crisis to date. The designated location for Zion seemed lost. The temple lot in Independence was abandoned. Questions arose about the permanence of revelations regarding Missouri as Zion. Some members' faith wavered, wondering if Joseph was a true prophet if his revelations about Zion could fail. The Saints needed explanation for their sufferings and direction for the future. Unity was threatened by accusations about who was to blame for the Missouri failures.</p>
+                
+                <h4>Relevant Local Circumstances</h4>
+                <p>Jackson County settlers had organized systematic persecution. Local government officials either participated in or ignored mob violence. Economic jealousy existed as Saints bought large land tracts and voted as a bloc. Religious prejudice was inflamed by local ministers. Slavery tensions emerged as Mormon immigration threatened the pro-slavery political balance. No legal protection existed for the Saints despite constitutional guarantees. Winter conditions made the refugees' situation desperate.</p>
+                
+                <h4>Relevant Global Circumstances</h4>
+                <p>The 1830s saw rising tensions over states' rights versus federal authority. Religious persecution was common despite constitutional protections. Andrew Jackson's presidency (1829-1837) emphasized limited federal intervention in state affairs. The slavery question was intensifying nationally. Economic panic of 1837 was approaching. Democratic movements worldwide were challenging traditional authority. The Second Great Awakening created religious competition and sometimes violence.</p>
+                
+                <h3>Purpose of the Revelation</h3>
+                
+                <h4>Short Term</h4>
+                <ul>
+                    <li>Explained why the Lord allowed the Missouri persecutions (Saints' transgressions)</li>
+                    <li>Provided comfort that God hadn't abandoned them despite the expulsion</li>
+                    <li>Gave specific instructions for seeking legal redress through government channels</li>
+                    <li>Directed the Saints to purchase lands legally rather than by consecration only</li>
+                    <li>Maintained hope that Zion would still be established in Missouri</li>
+                    <li>Prevented complete dissolution of the Church from discouragement</li>
+                </ul>
+                
+                <h4>Long Term</h4>
+                <ul>
+                    <li>Established eternal principles about chastening and redemption</li>
+                    <li>Provided the theological framework for understanding persecution</li>
+                    <li>Created the pattern of legal action for religious freedom that continues today</li>
+                    <li>Revealed detailed millennial promises that sustain hope through trials</li>
+                    <li>Confirmed divine approval of constitutional government and religious freedom</li>
+                    <li>Set precedent for the Church working within legal systems for protection</li>
+                </ul>
+                
+                <h3>Significance</h3>
+                
+                <h4>Short Term</h4>
+                <p>The revelation provided crucial explanations but didn't immediately solve the Missouri crisis. Saints attempted legal redress through courts and petitions to President Jackson, but received no relief. Some members struggled with the revelation's assertion that their transgressions caused the persecution. The instruction to purchase lands legally began a new approach to gathering. The parable helped Saints understand their failure to build the temple when commanded. Hope for Zion's redemption sustained the scattered Saints through winter hardships.</p>
+                
+                <h4>Long Term</h4>
+                <p>This revelation fundamentally shaped LDS theology about persecution, chastening, and redemption. The millennial promises continue to inspire faith during trials. The parable of the nobleman remains a powerful teaching about obedience and procrastination. The declaration of divine constitutional establishment influences LDS political engagement globally. The pattern of legal action for religious freedom guides Church responses to persecution worldwide. The promise that Zion "shall not be moved out of her place" maintains Missouri's significance in LDS eschatology.</p>
+                
+                <h3>Cultural Insights</h3>
+                
+                <h4>Ancient</h4>
+                <ul>
+                    <li>Parallels Old Testament patterns of covenant people being chastened then restored (Babylonian captivity)</li>
+                    <li>Echoes Abraham's testing through trials to become God's covenant people (<a href="https://www.blueletterbible.org/kjv/gen/22/1/">Genesis 22</a>)</li>
+                    <li>Reflects biblical teaching about refining through fire (<a href="https://www.blueletterbible.org/kjv/mal/3/2-3/">Malachi 3:2-3</a>)</li>
+                    <li>Parable format follows Christ's teaching method (<a href="https://www.blueletterbible.org/kjv/mat/13/1/">Matthew 13</a>)</li>
+                    <li>Millennial promises echo Isaiah's prophecies (<a href="https://www.blueletterbible.org/kjv/isa/11/1/">Isaiah 11</a>, <a href="https://www.blueletterbible.org/kjv/isa/65/1/">Isaiah 65</a>)</li>
+                    <li>Constitutional principles reflect biblical ideas of justice and freedom (<a href="https://www.blueletterbible.org/kjv/lev/25/10/">Leviticus 25:10</a>)</li>
+                </ul>
+                
+                <h4>Modern</h4>
+                <ul>
+                    <li>Addresses contemporary questions about why bad things happen to good people</li>
+                    <li>Provides framework for understanding religious persecution in secular societies</li>
+                    <li>Influences LDS engagement with legal and political systems globally</li>
+                    <li>Shapes Church's approach to property acquisition and development</li>
+                    <li>Guides response to government restrictions on religious practice</li>
+                    <li>Demonstrates balance between religious conviction and legal compliance</li>
+                    <li>Offers hope for eventual triumph despite temporary setbacks</li>
+                </ul>
+                
+                <h3>Modern Application</h3>
+                
+                <h4>Personal Application</h4>
+                <p>Examine our own "transgressions" that might prevent spiritual Zion in our lives. Seek legal remedies for discrimination while maintaining faith in ultimate divine justice. Build testimonies strong enough to endure when expectations aren't immediately fulfilled. Prepare temporally and spiritually for the Lord's coming. Trust that current trials are preparing us to be the Lord's "jewels."</p>
+                
+                <h4>Family Application</h4>
+                <p>Teach children why God allows trials and how they refine us. Build family unity to avoid the contentions that plagued Missouri Saints. Create family preparedness plans following the principle of "let all things be prepared before you." Study constitutional principles and religious freedom as a family. Share stories of faithful endurance through persecution.</p>
+                
+                <h4>Church Application</h4>
+                <p>Support the Church's legal efforts to protect religious freedom. Avoid contentions and jealousies that weaken ward unity. Follow prophetic counsel immediately rather than questioning like the parable's servants. Contribute to temple building without questioning the need. Minister to those whose faith wavers during trials.</p>
+                
+                <h4>Community Application</h4>
+                <p>Work within legal systems to protect religious rights for all. Build bridges with government officials before crises arise. Purchase and develop property following all legal requirements. Stand for constitutional principles that protect freedom. Create interfaith alliances for religious liberty.</p>
+                
+                <h4>Questions for Personal Study</h4>
+                <ol>
+                    <li>What "jarrings, contentions, envyings, and strifes" might be preventing Zion in my life?</li>
+                    <li>How do I respond when God's promises seem delayed or reversed?</li>
+                    <li>What towers (temples) has the Lord asked me to build that I've questioned?</li>
+                    <li>How can I better prepare temporally and spiritually for the Second Coming?</li>
+                    <li>What would it mean to be "pure in heart" in my current circumstances?</li>
+                    <li>How do I balance seeking legal remedies with trusting in divine justice?</li>
+                    <li>What can I do to help establish Zion "no more to be thrown down"?</li>
+                </ol>
+                
+                <h3>Key Doctrines</h3>
+                
+                <h4>Key Doctrines Highlighted</h4>
+                <ul>
+                    <li>Divine establishment of the U.S. Constitution for protecting rights and agency</li>
+                    <li>Detailed millennial conditions (no death, Satan bound, perfect knowledge)</li>
+                    <li>Legal land purchase strategy for establishing Zion</li>
+                    <li>Parable of the nobleman and olive trees explaining Zion's failure</li>
+                    <li>Pattern of escalating legal appeals from local to federal authorities</li>
+                </ul>
+                
+                <h4>Previous Doctrines Clarified</h4>
+                <ul>
+                    <li>Why God allows His people to suffer persecution (chastening for transgressions)</li>
+                    <li>The permanent location of Zion despite temporary setback</li>
+                    <li>The relationship between obedience and protection</li>
+                    <li>The gathering will continue despite opposition</li>
+                    <li>All who suffer for Christ's name will be crowned with glory</li>
+                </ul>
+                
+                <h4>Covenant Principles Explained</h4>
+                <ul>
+                    <li>Covenant people must be chastened and tried like Abraham</li>
+                    <li>Those who won't endure chastening cannot be sanctified</li>
+                    <li>The everlasting covenant makes Saints the salt of the earth</li>
+                    <li>Losing spiritual savor brings judgment</li>
+                    <li>Humility and abasement bring eventual exaltation</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Historical Context</h2>
+                
+                <h3>The November 1833 Expulsion</h3>
+                <p>Between November 4-7, 1833, mobs systematically drove all Mormons from Jackson County, Missouri. Over 1,200 Saints were forced to ferry across the Missouri River in freezing conditions. Many families were separated in the chaos. Property worth hundreds of thousands of dollars was lost or destroyed. Some Saints died from exposure during the exodus.</p>
+                
+                <div class="info-box">
+                    <h4>Key Background: What Led to the Expulsion</h4>
+                    <ul>
+                        <li>July 20, 1833: Mob destroyed the printing press preparing the Book of Commandments</li>
+                        <li>Edward Partridge and Charles Allen were tarred and feathered</li>
+                        <li>Saints signed agreement to leave by January 1834 under duress</li>
+                        <li>October 31: Mob attacks resumed despite the agreement</li>
+                        <li>November 4: Battle at the Big Blue River</li>
+                        <li>November 5: Lieutenant Governor Boggs ordered Saints to surrender arms</li>
+                        <li>November 6-7: Defenseless Saints driven from the county</li>
+                    </ul>
+                </div>
+                
+                <h3>The Saints' Acknowledged Transgressions</h3>
+                <p>The revelation specifically identified problems among the Missouri Saints:</p>
+                <ul>
+                    <li><strong>Failed to build the temple when commanded</strong> (D&C 57, 58, 84)</li>
+                    <li><strong>Contentions over land distribution</strong> and implementation of consecration</li>
+                    <li><strong>Some sought personal wealth</strong> rather than building Zion collectively</li>
+                    <li><strong>Jealousies between Missouri Saints and those from Kirtland</strong></li>
+                    <li><strong>Not caring adequately for the poor</strong> among them</li>
+                    <li><strong>"Jarrings, contentions, envyings, strifes"</strong> polluted their inheritance</li>
+                    <li><strong>"Lustful and covetous desires"</strong> among some members</li>
+                </ul>
+                
+                <h3>The Parable of the Nobleman and Olive Trees</h3>
+                <div class="highlight-box">
+                    <h4>Direct Application to Missouri (Verses 43-62)</h4>
+                    <ul>
+                        <li><strong>Nobleman:</strong> The Lord</li>
+                        <li><strong>Vineyard:</strong> Jackson County, Missouri</li>
+                        <li><strong>Twelve olive trees:</strong> Stakes of Zion to be established</li>
+                        <li><strong>Watchmen:</strong> Local Church leaders in Missouri</li>
+                        <li><strong>Tower:</strong> The temple they failed to build</li>
+                        <li><strong>Enemy:</strong> Missouri mobs</li>
+                        <li><strong>Servants' questioning:</strong> Saints doubting need for immediate temple construction</li>
+                    </ul>
+                    <p>The parable revealed that the Saints' failure to immediately build the temple when commanded left them vulnerable to their enemies.</p>
+                </div>
+                
+                <h3>Constitutional Context</h3>
+                <p>The revelation's endorsement of the Constitution came during Andrew Jackson's presidency. Despite being a Democrat championing common people's rights, Jackson refused to intervene in Missouri, citing states' rights. The revelation establishes divine approval of constitutional principles while implicitly criticizing their failed implementation.</p>
+                
+                <div class="info-box">
+                    <h4>The Lord's Declaration on the Constitution (Verses 77-80)</h4>
+                    <p>"According to the laws and constitution of the people, which I have suffered to be established, and should be maintained for the rights and protection of all flesh..."</p>
+                    <p>"I established the Constitution of this land, by the hands of wise men whom I raised up unto this very purpose..."</p>
+                </div>
+                
+                <h3>Instructions for Legal Redress</h3>
+                <p>The Lord commanded a specific pattern for seeking justice:</p>
+                <ol>
+                    <li><strong>Local magistrates and judges</strong> - First appeal</li>
+                    <li><strong>Governor of Missouri</strong> - State level appeal</li>
+                    <li><strong>President of the United States</strong> - Federal appeal</li>
+                    <li><strong>Continue importuning</strong> at all levels if necessary</li>
+                </ol>
+                
+                <h3>Millennial Promises</h3>
+                <p>Despite immediate suffering, the Lord revealed glorious millennial conditions to sustain hope:</p>
+                <ul>
+                    <li>The lamb and lion shall lie down together</li>
+                    <li>Children shall play safely with serpents</li>
+                    <li>All enmity shall cease from the earth</li>
+                    <li>Whatever is asked in faith shall be granted</li>
+                    <li>No sorrow because there is no death</li>
+                    <li>In an instant, mortals changed to immortality</li>
+                    <li>Satan bound and unable to tempt</li>
+                </ul>
+                
+                <h3>Immediate Instructions</h3>
+                <p>The revelation provided practical direction for the displaced Saints:</p>
+                <ul>
+                    <li><strong>Continue gathering to Ohio</strong> temporarily</li>
+                    <li><strong>Purchase lands in Jackson County</strong> through legal means</li>
+                    <li><strong>Appoint wise men</strong> to handle land purchases</li>
+                    <li><strong>Hold claim to Jackson County lands</strong> already purchased</li>
+                    <li><strong>Seek redress</strong> through all legal channels</li>
+                    <li><strong>Be patient</strong> in tribulation until the Lord comes</li>
+                </ul>
+                
+                <h3>Long-term Impact</h3>
+                <p>This revelation established patterns that continue today:</p>
+                <ul>
+                    <li>The Church works within legal systems for religious freedom</li>
+                    <li>Constitutional principles are defended as divinely inspired</li>
+                    <li>Property is acquired through proper legal channels</li>
+                    <li>Persecution is understood as potential chastening and refinement</li>
+                    <li>Hope for Zion's redemption sustains through trials</li>
+                    <li>Millennial promises provide eternal perspective during temporal suffering</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- VERSE-BY-VERSE ANALYSIS - CORRECTED VERSION -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE ANALYSIS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Verse-by-Verse Analysis</h2>
+                
+                <!-- Verses 1-3 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-3: Divine Acknowledgment of Affliction</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "1 Verily I say unto you, concerning your brethren who have been afflicted, and persecuted, and cast out from the land of their inheritance—<br><br>
+                        2 I, the Lord, have suffered the affliction to come upon them, wherewith they have been afflicted, in consequence of their transgressions;<br><br>
+                        3 Yet I will own them, and they shall be mine in that day when I shall come to make up my jewels."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>The Lord acknowledges the Missouri persecutions directly</li>
+                        <li>Afflictions came as consequence of transgressions, not abandonment</li>
+                        <li>Despite failures, covenant relationship remains intact</li>
+                        <li>Saints compared to precious jewels being refined</li>
+                        <li>Future ownership and glory promised despite present suffering</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"afflicted"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6031/kjv/wlc/0-1/">עָנָה (anah)</a> — "to afflict, oppress, humble"</li>
+                        <li><strong>"persecuted"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g1377/kjv/tr/0-1/">διώκω (diōkō)</a> — "to pursue, persecute"</li>
+                        <li><strong>"make up my jewels"</strong> - Reference to <a href="https://www.blueletterbible.org/kjv/mal/3/17/">Malachi 3:17</a></li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mal/3/17/">Malachi 3:17</a> — "They shall be mine...when I make up my jewels"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1pe/1/7/">1 Peter 1:7</a> — "Trial of your faith...more precious than gold"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.7">D&C 122:7</a> — "All these things shall give thee experience"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>When modern Saints face trials—whether from persecution or consequences of choices—this promise remains: God claims us as His own, refining us as precious jewels for eternal glory.</p>
+                </div>
+                
+                <!-- Verses 4-8 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 4-8: Reasons for Chastening</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "4 Therefore, they must needs be chastened and tried, even as Abraham, who was commanded to offer up his only son.<br><br>
+                        5 For all those who will not endure chastening, but deny me, cannot be sanctified.<br><br>
+                        6 Behold, I say unto you, there were jarrings, and contentions, and envyings, and strifes, and lustful and covetous desires among them; therefore by these things they polluted their inheritances.<br><br>
+                        7 They were slow to hearken unto the voice of the Lord their God; therefore, the Lord their God is slow to hearken unto their prayers, to answer them in the day of their trouble.<br><br>
+                        8 In the day of their peace they esteemed lightly my counsel; but, in the day of their trouble, of necessity they feel after me."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Chastening compared to Abraham's ultimate test of faith</li>
+                        <li>Enduring chastening is essential for sanctification</li>
+                        <li>Specific sins listed: jarrings, contentions, envyings, strifes, lustful and covetous desires</li>
+                        <li>Divine reciprocity: slowness to hearken brings delayed answers</li>
+                        <li>Pattern exposed: taking counsel lightly in prosperity, desperately seeking God in adversity</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/heb/12/6/">Hebrews 12:6</a> — "Whom the Lord loveth he chasteneth"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/gen/22/1-2/">Genesis 22:1-2</a> — Abraham commanded to sacrifice Isaac</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/95.1">D&C 95:1</a> — "Whom I love I also chasten"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>The specific sins mentioned—contentions, envyings, lustful and covetous desires—remain relevant today. When we take divine counsel lightly in good times, we may find ourselves desperately seeking God when trials come.</p>
+                </div>
+                
+                <!-- Verses 9-16 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 9-16: Promises and Instructions for the Afflicted</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "9 Verily I say unto you, notwithstanding their sins, my bowels are filled with compassion towards them. I will not utterly cast them off; and in the day of wrath I will remember mercy.<br><br>
+                        10 I have sworn, and the decree hath gone forth by a former commandment which I have given unto you, that I would let fall the sword of mine indignation in behalf of my people; and even as I have said, it shall come to pass.<br><br>
+                        11 Mine indignation is soon to be poured out without measure upon all nations; and this will I do when the cup of their iniquity is full.<br><br>
+                        12 And in that day all who are found upon the watch-tower, or in other words, all mine Israel, shall be saved."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Despite sins, God's compassion remains toward His covenant people</li>
+                        <li>Promise not to "utterly cast them off"</li>
+                        <li>Divine indignation will defend the Saints</li>
+                        <li>Warning of worldwide judgments when iniquity is full</li>
+                        <li>Those on the "watch-tower" (faithful Israel) will be saved</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/hos/11/8/">Hosea 11:8</a> — "How shall I give thee up?"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/62/6/">Isaiah 62:6</a> — "Watchmen upon thy walls"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45.31">D&C 45:31</a> — "Stand in holy places"</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 17-22 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 17-22: Instructions for Gathering and Building</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "17 Zion shall not be moved out of her place, notwithstanding her children are scattered.<br><br>
+                        18 They that remain, and are pure in heart, shall return, and come to their inheritances, they and their children, with songs of everlasting joy, to build up the waste places of Zion—<br><br>
+                        19 And all these things that the prophets might be fulfilled.<br><br>
+                        20 And, behold, there is none other place appointed than that which I have appointed; neither shall there be any other place appointed than that which I have appointed, for the work of the gathering of my saints—<br><br>
+                        21 Until the day cometh when there is found no more room for them; and then I have other places which I will appoint unto them, and they shall be called stakes, for the curtains or the strength of Zion."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Jackson County remains the appointed place for Zion</li>
+                        <li>Promise of eventual return for the pure in heart</li>
+                        <li>Return will be with "songs of everlasting joy"</li>
+                        <li>No other center place will be appointed</li>
+                        <li>Introduction of "stakes" concept for expansion</li>
+                        <li>Stakes serve as "curtains" or "strength" of Zion</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/35/10/">Isaiah 35:10</a> — "The ransomed...shall return...with songs and everlasting joy"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/54/2/">Isaiah 54:2</a> — "Lengthen thy cords, and strengthen thy stakes"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/57.1-3">D&C 57:1-3</a> — Independence as center place</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 23-32 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 23-32: Glorious Millennial Promises</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "23 And prepare for the revelation which is to come, when the veil of the covering of my temple, in my tabernacle, which hideth the earth, shall be taken off, and all flesh shall see me together.<br><br>
+                        24 And every corruptible thing, both of man, or of the beasts of the field, or of the fowls of the heavens, or of the fish of the sea, that dwells upon all the face of the earth, shall be consumed;<br><br>
+                        25 And also that of element shall melt with fervent heat; and all things shall become new, that my knowledge and glory may dwell upon all the earth.<br><br>
+                        26 And in that day the enmity of man, and the enmity of beasts, yea, the enmity of all flesh, shall cease from before my face.<br><br>
+                        27 And in that day whatsoever any man shall ask, it shall be given unto him.<br><br>
+                        28 And in that day Satan shall not have power to tempt any man.<br><br>
+                        29 And there shall be no sorrow because there is no death.<br><br>
+                        30 In that day an infant shall not die until he is old; and his life shall be as the age of a tree;<br><br>
+                        31 And when he dies he shall not sleep, that is to say in the earth, but shall be changed in the twinkling of an eye, and shall be caught up, and his rest shall be glorious."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>All flesh will see Christ together when the veil is removed</li>
+                        <li>Corruptible things will be consumed and made new</li>
+                        <li>All enmity will cease—between humans and with nature</li>
+                        <li>Whatever is asked in faith will be granted</li>
+                        <li>Satan will be bound with no power to tempt</li>
+                        <li>No sorrow because death is transformed</li>
+                        <li>Lifespan extended to "age of a tree"</li>
+                        <li>Death becomes instant translation to glory</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/11/6-9/">Isaiah 11:6-9</a> — "The wolf shall dwell with the lamb"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/20/2-3/">Revelation 20:2-3</a> — Satan bound for thousand years</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/65/20/">Isaiah 65:20</a> — "The child shall die an hundred years old"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1co/15/52/">1 Corinthians 15:52</a> — "Changed, in the twinkling of an eye"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>These millennial promises provide hope during trials, reminding us that current sufferings are temporary compared to coming glory.</p>
+                </div>
+                
+                <!-- Verses 33-42 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 33-42: Call to Righteousness and Warning</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "33 And again, verily, verily, I say unto you, and it hath gone forth in a firm decree, by the will of the Father, that mine apostles, the Twelve which were with me in my ministry at Jerusalem, shall stand at my right hand at the day of my coming in a pillar of fire, being clothed with robes of righteousness, with crowns upon their heads, in glory even as I am, to judge the whole house of Israel...<br><br>
+                        39 When men are called unto mine everlasting gospel, and covenant with an everlasting covenant, they are accounted as the salt of the earth and the savor of men;<br><br>
+                        40 They are called to be the savor of men; therefore, if that salt of the earth lose its savor, behold, it is thenceforth good for nothing only to be cast out and trodden under the feet of men."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Original Twelve Apostles will judge Israel at Second Coming</li>
+                        <li>They will appear in pillars of fire with Christ</li>
+                        <li>Covenant people are "salt of the earth"</li>
+                        <li>Warning about losing spiritual savor through sin</li>
+                        <li>Call to maintain righteousness despite persecution</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/19/28/">Matthew 19:28</a> — "Ye also shall sit upon twelve thrones, judging"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/5/13/">Matthew 5:13</a> — "Ye are the salt of the earth"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/29.12">D&C 29:12</a> — "Mine apostles...shall judge the whole house of Israel"</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 43-62: Parable Section -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 43-62: Parable of the Nobleman and Olive Trees</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "43 And now, I will show unto you a parable, that you may know my will concerning the redemption of Zion.<br><br>
+                        44 A certain nobleman had a spot of land, very choice; and he said unto his servants: Go ye unto my vineyard, even upon this very choice piece of land, and plant twelve olive trees..."
+                    </div>
+                    
+                    <h4>Parable Elements and Interpretation</h4>
+                    <ul>
+                        <li><strong>Nobleman:</strong> Jesus Christ</li>
+                        <li><strong>Very choice land:</strong> Jackson County, Missouri</li>
+                        <li><strong>Twelve olive trees:</strong> Twelve stakes/settlements of Zion</li>
+                        <li><strong>Watchmen:</strong> Priesthood leaders</li>
+                        <li><strong>Tower:</strong> Temple in Jackson County</li>
+                        <li><strong>Enemy breaking down walls:</strong> Missouri mobs</li>
+                        <li><strong>Servants questioning need for tower:</strong> Saints questioning temple building during poverty</li>
+                    </ul>
+                    
+                    <h4>Key Lessons from the Parable</h4>
+                    <ul>
+                        <li>Zion failed because Saints didn't build the temple (tower) when commanded</li>
+                        <li>They questioned the need during peaceful times</li>
+                        <li>Without the temple's protection, enemies prevailed</li>
+                        <li>The Lord will yet redeem Zion with power</li>
+                        <li>A future servant will gather the Lord's army for redemption</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/21/33-41/">Matthew 21:33-41</a> — Parable of the wicked husbandmen</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/5/1-7/">Isaiah 5:1-7</a> — Parable of the vineyard</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/103">D&C 103</a> — Zion's Camp revelation</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>When the Lord commands temple building or other sacrifices, immediate obedience brings protection. Delaying or questioning during peaceful times leaves us vulnerable when trials come.</p>
+                </div>
+                
+                <!-- Verses 63-75 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 63-75: Instructions for Seeking Legal Redress</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "63 Again, verily I say unto you, I will show unto you wisdom in me concerning all the churches, inasmuch as they are willing to be guided in a right and proper way for their salvation—<br><br>
+                        64 That the work of the gathering together of my saints may continue, that I may build them up unto my name upon holy places; for the time of harvest is come, and my word must needs be fulfilled..."
+                    </div>
+                    
+                    <h4>Pattern for Seeking Justice</h4>
+                    <ol>
+                        <li><strong>Continue gathering:</strong> Don't abandon the work despite persecution</li>
+                        <li><strong>Build up holy places:</strong> Establish stakes of Zion</li>
+                        <li><strong>Harvest time:</strong> Urgency in gathering Israel</li>
+                        <li><strong>Legal process:</strong> Use proper channels for redress</li>
+                        <li><strong>Purchase lands:</strong> Obtain property through legal means</li>
+                        <li><strong>Be wise:</strong> Act prudently in all dealings</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/13/30/">Matthew 13:30</a> — "The harvest is the end of the world"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/33.3">D&C 33:3</a> — "The field is white already to harvest"</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 76-80 (not 77-80) -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 76-80: Divine Origin of the Constitution</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "76 And again I say unto you, those who have been scattered by their enemies, it is my will that they should continue to importune for redress, and redemption, by the hands of those who are placed as rulers and are in authority over you—<br><br>
+                        77 According to the laws and constitution of the people, which I have suffered to be established, and should be maintained for the rights and protection of all flesh, according to just and holy principles;<br><br>
+                        78 That every man may act in doctrine and principle pertaining to futurity, according to the moral agency which I have given unto him, that every man may be accountable for his own sins in the day of judgment.<br><br>
+                        79 Therefore, it is not right that any man should be in bondage one to another.<br><br>
+                        80 And for this purpose have I established the Constitution of this land, by the hands of wise men whom I raised up unto this very purpose, and redeemed the land by the shedding of blood."
+                    </div>
+                    
+                    <h4>Constitutional Principles Endorsed by God</h4>
+                    <ul>
+                        <li><strong>Rights and protection for all:</strong> Universal human rights</li>
+                        <li><strong>Moral agency preserved:</strong> Freedom to choose and act</li>
+                        <li><strong>Individual accountability:</strong> Each person responsible for own sins</li>
+                        <li><strong>No bondage:</strong> Slavery and oppression condemned</li>
+                        <li><strong>Divinely inspired founders:</strong> Raised up for this purpose</li>
+                        <li><strong>Sacred sacrifice:</strong> Land redeemed through bloodshed</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/2co/3/17/">2 Corinthians 3:17</a> — "Where the Spirit of the Lord is, there is liberty"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/gal/5/1/">Galatians 5:1</a> — "Stand fast therefore in the liberty"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98.5-6">D&C 98:5-6</a> — Constitutional law justified before God</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/134.1">D&C 134:1</a> — Governments instituted of God</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>This divine endorsement of constitutional principles guides LDS civic engagement worldwide, emphasizing religious freedom, individual liberty, and opposition to oppression.</p>
+                </div>
+                
+                <!-- Verses 81-91 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 81-91: Pattern for Seeking Redress</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "81 Now, unto what shall I liken the children of Zion? I will liken them unto the parable of the woman and the unjust judge, for men ought always to pray and not to faint...<br><br>
+                        83 Let them importune at the feet of the judge;<br><br>
+                        84 And if he heed them not, let them importune at the feet of the governor;<br><br>
+                        85 And if the governor heed them not, let them importune at the feet of the president;<br><br>
+                        86 And if the president heed them not, then will the Lord arise and come forth out of his hiding place, and in his fury vex the nation..."
+                    </div>
+                    
+                    <h4>Hierarchy of Appeals</h4>
+                    <ol>
+                        <li><strong>Local judges:</strong> County and state courts</li>
+                        <li><strong>Governor:</strong> State executive (Lilburn Boggs of Missouri)</li>
+                        <li><strong>President:</strong> Federal executive (Andrew Jackson)</li>
+                        <li><strong>Divine intervention:</strong> When human justice fails</li>
+                    </ol>
+                    
+                    <h4>Important Principles</h4>
+                    <ul>
+                        <li>Exhaust all legal remedies before expecting divine intervention</li>
+                        <li>Document and present grievances properly</li>
+                        <li>Be persistent like the importuning widow</li>
+                        <li>God will eventually vindicate His people</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/18/1-8/">Luke 18:1-8</a> — Parable of the unjust judge</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/13/1-4/">Romans 13:1-4</a> — Submit to governing authorities</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/123.1-6">D&C 123:1-6</a> — Document persecutions</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 92-101 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 92-101: Instructions for Purchasing Lands</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "92 And thus let those of whom I have spoken be planted in the land of Zion, as speedily as can be, with their families, to do those things even as I have spoken.<br><br>
+                        93 And now I say unto you, Keep these things from going abroad unto the world until it is expedient in me...<br><br>
+                        99 Therefore, it is my will that my people should claim, and hold claim upon that which I have appointed unto them, though they should not be permitted to dwell thereon.<br><br>
+                        100 Nevertheless, I do not say they shall not dwell thereon; for inasmuch as they bring forth fruit and works meet for my kingdom they shall dwell thereon.<br><br>
+                        101 They shall build, and another shall not inherit it; they shall plant vineyards, and they shall eat the fruit thereof. Even so. Amen."
+                    </div>
+                    
+                    <h4>Strategic Instructions</h4>
+                    <ul>
+                        <li><strong>Purchase quietly:</strong> Don't publicize land acquisitions</li>
+                        <li><strong>Use wisdom:</strong> Act prudently to avoid mob reaction</li>
+                        <li><strong>Maintain legal claim:</strong> Keep ownership even if expelled</li>
+                        <li><strong>Future promise:</strong> Saints will eventually inhabit their lands</li>
+                        <li><strong>Build permanently:</strong> Others won't inherit what Saints build</li>
+                        <li><strong>Plant and harvest:</strong> Enjoy the fruits of their labors</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/65/21-22/">Isaiah 65:21-22</a> — "They shall build houses, and inhabit them"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/amo/9/14/">Amos 9:14</a> — "They shall plant vineyards, and drink the wine"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/63.27-31">D&C 63:27-31</a> — Instructions about purchasing lands</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>This counsel teaches patience in building Zion—maintaining hope and legal claims even when immediate occupation isn't possible. The Lord's promises are sure, though their fulfillment may require time and faithfulness.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- KEY WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">KEY WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Key Word Studies</h2>
+                
+                <h3>1. "Make Up My Jewels" (verse 3)</h3>
+                <ul>
+                    <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/">סְגֻלָּה</a> (<em>segullah</em>) - "special treasure, peculiar possession"</li>
+                    <li><strong>Latin Etymology:</strong> From <a href="https://logeion.uchicago.edu/jocale">jocale</a> meaning ornament, jewel</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/jewels">"Jewels - Precious stones; gems; any ornaments worn"</a></li>
+                    <li><strong>Etymology:</strong> Old French <a href="https://www.etymonline.com/word/jewel">jouel</a> from Latin <a href="https://logeion.uchicago.edu/jocus">jocus</a> (plaything, precious thing)</li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/mal/3/17/">Malachi 3:17</a> — "And they shall be mine, saith the LORD of hosts, in that day when I make up my jewels"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/exo/19/5/">Exodus 19:5</a> — "Ye shall be a peculiar treasure unto me"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/1pe/2/9/">1 Peter 2:9</a> — "A peculiar people"</li>
+                </ul>
+                <p><strong>Significance:</strong> Saints are precious to God, being refined through trials like jewels polished through friction. Despite current afflictions, they remain His treasured possession.</p>
+                
+                <h3>2. "Chastened" (verses 4-5)</h3>
+                <ul>
+                    <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h3256/kjv/wlc/0-1/">יָסַר</a> (<em>yasar</em>) - "to discipline, chasten, instruct"</li>
+                    <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g3811/kjv/tr/0-1/">παιδεύω</a> (<em>paideuō</em>) - "to train children, discipline, correct"</li>
+                    <li><strong>Latin Etymology:</strong> <a href="https://logeion.uchicago.edu/castigare">castigare</a> - to correct, purify</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/chasten">"To correct by punishment; to inflict pain for the purpose of reclaiming"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/12/6/">Hebrews 12:6</a> — "Whom the Lord loveth he chasteneth"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/rev/3/19/">Revelation 3:19</a> — "As many as I love, I rebuke and chasten"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/95.1">D&C 95:1</a> — "Whom I love I also chasten"</li>
+                </ul>
+                <p><strong>Significance:</strong> Divine chastening is parental correction aimed at spiritual growth, not punishment for punishment's sake. It prepares covenant people for greater blessings.</p>
+                
+                <h3>3. "Jarrings and Contentions" (verse 6)</h3>
+                <ul>
+                    <li><strong>Jarrings:</strong> From <a href="https://www.etymonline.com/word/jar">jar</a> - to strike with harsh, grating sound; discord</li>
+                    <li><strong>Contentions:</strong> Latin <a href="https://logeion.uchicago.edu/contentio">contentio</a> - striving in opposition</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/jarring">"Jarring - Shaking; discord; dispute"</a> / <a href="http://webstersdictionary1828.com/Dictionary/contention">"Contention - Strife; struggle; debate; quarrel"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/3jo/1/9/">3 John 1:9</a> — Diotrephes "loveth to have the preeminence"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/jam/3/16/">James 3:16</a> — "Where envying and strife is, there is confusion"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/136.23">D&C 136:23</a> — "Cease to contend one with another"</li>
+                </ul>
+                <p><strong>Significance:</strong> Internal discord weakens spiritual defenses. Unity is essential for Zion; contention invites spiritual vulnerability.</p>
+                
+                <h3>4. "Polluted Their Inheritances" (verse 6)</h3>
+                <ul>
+                    <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h2930/kjv/wlc/0-1/">טָמֵא</a> (<em>tame</em>) - "to defile, make unclean"</li>
+                    <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g3392/kjv/tr/0-1/">μιαίνω</a> (<em>miainō</em>) - "to stain, contaminate, defile"</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/polluted">"Polluted - Defiled; made unclean; contaminated; corrupted"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/lam/2/2/">Lamentations 2:2</a> — "He hath polluted the kingdom"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/jer/2/7/">Jeremiah 2:7</a> — "Ye entered, ye defiled my land"</li>
+                </ul>
+                <p><strong>Significance:</strong> Spiritual pollution makes sacred land common. The Saints' sins defiled what God had consecrated for holy purposes.</p>
+                
+                <h3>5. "Vineyard" and "Tower" (verses 44-45)</h3>
+                <ul>
+                    <li><strong>Vineyard:</strong> Hebrew <a href="https://www.blueletterbible.org/lexicon/h3754/kjv/wlc/0-1/">כֶּרֶם</a> (<em>kerem</em>) - cultivated land for grapes</li>
+                    <li><strong>Tower:</strong> Hebrew <a href="https://www.blueletterbible.org/lexicon/h4026/kjv/wlc/0-1/">מִגְדָּל</a> (<em>migdal</em>) - watchtower, fortress</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/vineyard">"Vineyard - A plantation of vines producing grapes"</a> / <a href="http://webstersdictionary1828.com/Dictionary/tower">"Tower - A building of more height than breadth"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/isa/5/1-7/">Isaiah 5:1-7</a> — Parable of the vineyard</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/mat/21/33/">Matthew 21:33</a> — "Planted a vineyard...built a tower"</li>
+                </ul>
+                <p><strong>Significance:</strong> The vineyard represents covenant land requiring cultivation and protection. The tower (temple) provides spiritual watchcare and defense.</p>
+                
+                <h3>6. "Constitution" (verse 77)</h3>
+                <ul>
+                    <li><strong>Latin Etymology:</strong> <a href="https://logeion.uchicago.edu/constituere">constituere</a> - to establish, set up, organize</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/constitution">"The established form of government in a state, kingdom or country"</a></li>
+                    <li><strong>Etymology:</strong> From <a href="https://www.etymonline.com/word/constitution">constitution</a> - act of establishing</li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98.5-6">D&C 98:5-6</a> — Constitutional law supporting freedom</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109.54">D&C 109:54</a> — "Have mercy, O Lord, upon all the nations"</li>
+                </ul>
+                <p><strong>Significance:</strong> Divine endorsement of constitutional government establishes religious freedom as a sacred principle, not merely political preference.</p>
+                
+                <h3>7. "Moral Agency" (verse 78)</h3>
+                <ul>
+                    <li><strong>Moral:</strong> Latin <a href="https://logeion.uchicago.edu/moralis">moralis</a> - concerning principles of right and wrong</li>
+                    <li><strong>Agency:</strong> Latin <a href="https://logeion.uchicago.edu/agere">agere</a> - to act, capacity for action</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/agency">"The quality of an agent; the office of an agent; ability or power to act"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/jos/24/15/">Joshua 24:15</a> — "Choose you this day whom ye will serve"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/29.35">D&C 29:35</a> — "I gave unto him that he should be an agent unto himself"</li>
+                </ul>
+                <p><strong>Significance:</strong> Constitutional freedom preserves divine gift of agency, enabling accountability and spiritual growth through choice.</p>
+            </div>
+        </div>
+        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Teaching Applications</h2>
+                
+                <h3>For Sunday School Teachers</h3>
+                <ul>
+                    <li><strong>Opening Activity:</strong> Discuss why God allows bad things to happen to good people using verses 1-8</li>
+                    <li><strong>Object Lesson:</strong> Use jewelry/gems to illustrate refinement through trials (verse 3)</li>
+                    <li><strong>Parable Discussion:</strong> Act out the parable of the nobleman with class participation</li>
+                    <li><strong>Application Challenge:</strong> Identify personal "towers" the Lord wants us to build</li>
+                </ul>
+                
+                <h3>For Youth Leaders</h3>
+                <ul>
+                    <li><strong>Youth Activity:</strong> Create a timeline of Missouri persecutions and discuss faithful responses</li>
+                    <li><strong>Discussion Topic:</strong> How the Constitution protects religious freedom for youth today</li>
+                    <li><strong>Service Project:</strong> Support religious freedom initiatives in the community</li>
+                    <li><strong>Personal Development:</strong> Help youth identify how trials can refine them as "jewels"</li>
+                </ul>
+                
+                <h3>For Family Study</h3>
+                <ul>
+                    <li><strong>Family Discussion:</strong> Share family stories of enduring trials with faith</li>
+                    <li><strong>Scripture Chain:</strong> Create a chain about millennial promises to build hope</li>
+                    <li><strong>Family Goal:</strong> Eliminate "jarrings and contentions" in the home</li>
+                    <li><strong>Testimony Meeting:</strong> Share how trials have strengthened testimonies</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>For Teachers and Leaders</h4>
+                    <p>Key teaching principles from Section 101:</p>
+                    <ul>
+                        <li>Help students understand that trials can be refining, not punishing</li>
+                        <li>Emphasize immediate obedience to prophetic counsel</li>
+                        <li>Teach the importance of unity in preventing spiritual vulnerability</li>
+                        <li>Connect historical persecutions to modern challenges</li>
+                        <li>Build hope through millennial promises during difficult times</li>
+                    </ul>
+                </div>
+                
+                <h3>Practical Applications for Modern Life</h3>
+                
+                <h4>When Facing Persecution</h4>
+                <ul>
+                    <li>Seek legal remedies through proper channels</li>
+                    <li>Maintain faith that God hasn't abandoned you</li>
+                    <li>Examine if any personal transgressions need addressing</li>
+                    <li>Trust in ultimate divine justice and redemption</li>
+                </ul>
+                
+                <h4>Building Modern Zion</h4>
+                <ul>
+                    <li>Eliminate contentions and jealousies in ward and stake</li>
+                    <li>Follow prophetic temple building initiatives immediately</li>
+                    <li>Care for the poor among us</li>
+                    <li>Purchase and develop property through legal means</li>
+                </ul>
+                
+                <h4>Supporting Religious Freedom</h4>
+                <ul>
+                    <li>Understand constitutional principles and rights</li>
+                    <li>Participate in civic processes</li>
+                    <li>Build interfaith alliances for religious liberty</li>
+                    <li>Teach rising generation about divine origin of freedom</li>
+                </ul>
+                
+                <h3>Addressing Common Questions</h3>
+                <p>Section 101 helps answer:</p>
+                <ul>
+                    <li>Why does God allow His people to suffer?</li>
+                    <li>How should we respond to religious persecution?</li>
+                    <li>What is the Church's position on constitutional government?</li>
+                    <li>Will Zion still be built in Missouri?</li>
+                    <li>What will the Millennium be like?</li>
+                    <li>How do we balance faith with legal action?</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Study Questions</h2>
+                
+                <h3>Understanding the Text</h3>
+                <ol>
+                    <li>What specific transgressions did the Lord identify among the Missouri Saints?</li>
+                    <li>How does the parable of the nobleman explain what happened in Missouri?</li>
+                    <li>What millennial conditions does the Lord promise?</li>
+                    <li>Why does the Lord say He established the Constitution?</li>
+                    <li>What pattern of legal redress does the Lord establish?</li>
+                </ol>
+                
+                <h3>Applying the Principles</h3>
+                <ol>
+                    <li>What "jarrings and contentions" might be preventing Zion in my ward or stake?</li>
+                    <li>How do I respond when commanded to build "towers" I don't understand?</li>
+                    <li>What can I do to support religious freedom in my community?</li>
+                    <li>How do I maintain faith when God's promises seem reversed?</li>
+                    <li>What refinement might the Lord be accomplishing through my current trials?</li>
+                </ol>
+                
+                <h3>Deeper Reflection</h3>
+                <ol>
+                    <li>Why does the Lord compare His people to jewels rather than gold or silver?</li>
+                    <li>How does being "slow to hearken" affect our prayers being answered?</li>
+                    <li>What is the relationship between moral agency and constitutional government?</li>
+                    <li>Why was building the temple so crucial for the Saints' protection?</li>
+                    <li>How do millennial promises help us endure current tribulations?</li>
+                </ol>
+                
+                <h3>Historical Context Questions</h3>
+                <ol>
+                    <li>What events led to the November 1833 expulsion from Jackson County?</li>
+                    <li>How did President Andrew Jackson respond to the Saints' appeals?</li>
+                    <li>What happened to the property Saints left behind in Missouri?</li>
+                    <li>How did this revelation affect Church members' faith in Joseph Smith?</li>
+                    <li>What long-term impact did this revelation have on Church doctrine?</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <h4>Group Discussion Prompts</h4>
+                    <ul>
+                        <li>Share experiences of being refined through trials like "jewels"</li>
+                        <li>Discuss modern applications of the parable of the nobleman</li>
+                        <li>How can we eliminate contentions that weaken spiritual unity?</li>
+                        <li>What "towers" has the Lord asked us to build in our day?</li>
+                        <li>How do we balance seeking legal remedies with trusting God?</li>
+                    </ul>
+                </div>
+                
+                <h3>Personal Study Projects</h3>
+                <ul>
+                    <li><strong>Scripture Chain:</strong> Create a chain about divine chastening and refinement</li>
+                    <li><strong>Historical Research:</strong> Study the Missouri persecutions in detail</li>
+                    <li><strong>Constitutional Study:</strong> Research the divine principles in the Constitution</li>
+                    <li><strong>Parable Analysis:</strong> Compare this parable with Christ's vineyard parables</li>
+                    <li><strong>Millennial Compilation:</strong> Gather all scriptures about millennial conditions</li>
+                </ul>
+                
+                <h3>Family Discussion Topics</h3>
+                <ul>
+                    <li>How have our family trials made us stronger?</li>
+                    <li>What can we do to avoid the contentions that plagued Missouri?</li>
+                    <li>How can we teach children about religious freedom?</li>
+                    <li>What family "towers" has the Lord asked us to build?</li>
+                    <li>How do millennial promises give our family hope?</li>
+                </ul>
+                
+                <h3>Missionary Application</h3>
+                <ul>
+                    <li>How does understanding persecution help in teaching investigators?</li>
+                    <li>What role does religious freedom play in missionary work?</li>
+                    <li>How can the millennial promises attract those seeking hope?</li>
+                    <li>How do we explain why God allows His people to suffer?</li>
+                    <li>What lessons from Missouri apply to modern mission fields?</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var content = button.nextElementSibling;
+            content.classList.toggle("active");
+        }
+        
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var content = button.nextElementSibling;
+            content.classList.toggle("active");
+        }
+        
+        function expandAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add("active");
+                panels[i].classList.add("active");
+            }
+            
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.add("active");
+                subPanels[i].classList.add("active");
+            }
+        }
+        
+        function collapseAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+                panels[i].classList.remove("active");
+            }
+            
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.remove("active");
+                subPanels[i].classList.remove("active");
+            }
+        }
+    </script>
+</body>
+</html>

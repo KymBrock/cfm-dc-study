@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 98 Complete Study Guide - Law of the Lord on War and Peace</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section.active {
+            background-color: #6b8774;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 0;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        /* Content Panels */
+        .content-panel {
+            padding: 0;
+            background-color: #f9fafb;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 10px;
+        }
+        
+        .content-panel.show {
+            max-height: none;
+            overflow: visible;
+        }
+        
+        .panel-content {
+            padding: 30px;
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        /* Sub-Accordions for Nested Content */
+        .sub-accordion {
+            background-color: #e8d4a2;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #d4c190;
+        }
+        
+        .sub-accordion.active {
+            background-color: #d4c190;
+            border-radius: 6px 6px 0 0;
+            margin-bottom: 0;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            color: #374151;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        .sub-panel {
+            padding: 0;
+            background-color: #faf8f3;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 6px 6px;
+            margin-bottom: 10px;
+        }
+        
+        .sub-panel.show {
+            max-height: none;
+            overflow: visible;
+            padding: 20px;
+            border: 1px solid #e8d4a2;
+            border-top: none;
+        }
+        
+        /* Content Styling */
+        h2 {
+            color: #7c9885;
+            margin: 25px 0 15px 0;
+            font-size: 1.8em;
+            font-weight: 400;
+        }
+        
+        h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+        
+        h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Scripture Quote Styling */
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        /* Highlight Boxes */
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 1px solid #d4c190;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+        
+        a:hover {
+            color: #6b8774;
+            border-bottom: 1px solid #6b8774;
+        }
+        
+        /* Lists within panels */
+        .panel-content ul li strong {
+            color: #6b8774;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 25px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .panel-content {
+                padding: 20px;
+            }
+            
+            .tab-controls {
+                justify-content: center;
+            }
+        }
+        
+        /* Site Header Styles */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        
+        .site-nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: Georgia, serif;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .cfm-button:hover {
+            background-color: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+            color: #999;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .site-header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .site-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="#" class="cfm-button disabled" title="CFMCorner lesson coming soon">View Full Lesson</a>
+                <a href="dc99_complete.html" class="cfm-button">D&C 99</a>
+                <a href="dc100_complete.html" class="cfm-button">D&C 100</a>
+                <a href="dc101_complete.html" class="cfm-button">D&C 101</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 98</h1>
+            <p class="subtitle">Law of the Lord on War and Peace</p>
+            <p class="date-location">August 6, 1833 • Kirtland, Ohio</p>
+        </div>
+        
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>
+        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>Divine Law for Responding to Persecution</h3>
+                
+                <div class="highlight-box">
+                    <p><strong>Date:</strong> August 6, 1833</p>
+                    <p><strong>Location:</strong> Kirtland, Ohio</p>
+                    <p><strong>Recipients:</strong> Joseph Smith, with Sidney Rigdon, Frederick G. Williams, and Oliver Cowdery present</p>
+                    <p><strong>Verses:</strong> 48 verses</p>
+                </div>                
+                <h4>Section Summary</h4>
+                <p>The Lord provides comprehensive instructions on responding to persecution, establishes principles of constitutional law and freedom, and reveals divine laws governing war and peace, including when retaliation is justified and the importance of forgiveness.</p>
+                
+                <h4>Key Principles</h4>
+                <ul>
+                    <li>Patient endurance of persecution brings eternal rewards and consecrates afflictions for good</li>
+                    <li>Constitutional law supporting freedom is ordained of God and justifiable before Him</li>
+                    <li>The law of forgiveness requires bearing persecution patiently three times before retaliation is justified</li>
+                </ul>
+                
+                <h4>Key Doctrines Highlighted</h4>
+                <ul>
+                    <li><strong>Constitutional law supporting freedom is ordained of God</strong> - First direct divine endorsement of constitutional principles</li>
+                    <li><strong>Three-strike rule before retaliation is justified</strong> - New framework for escalating response to persecution</li>
+                    <li><strong>Generational consequences and forgiveness</strong> - How persecution affects multiple generations</li>
+                    <li><strong>All afflictions work together for good</strong> - Transformation of trials into blessings</li>
+                    <li><strong>Bondage of one person to another is not justifiable</strong> - Divine condemnation of slavery</li>
+                </ul>
+            </div>
+        </div>        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>Circumstances Leading to the Revelation</h3>
+                
+                <h4>Immediate Crisis in Missouri</h4>
+                <p>The revelation arrived at a critical moment. Just two weeks earlier, on July 20, 1833, violence had erupted in Jackson County, Missouri. A mob of 400-500 citizens had destroyed the Church's printing office, scattering the type for the Book of Commandments across the street. Bishop Edward Partridge and Charles Allen were stripped, tarred, and feathered in the public square. The mob demanded all Mormons leave Jackson County or face death.</p>
+                
+                <p>Joseph Smith in Kirtland received word of these atrocities around August 4th. The Prophet was deeply troubled, spending August 5th in prayer and fasting. Oliver Cowdery had just returned from Missouri with firsthand accounts of the violence. The leaders gathered in the Whitney store's upper room, seeking divine guidance on how the Saints should respond to such violent persecution.</p>
+                
+                <h4>Church-Wide Challenges</h4>
+                <p>The Church was experiencing explosive growth—membership had doubled in 1833 alone. Yet this growth brought intense opposition. The Missouri Saints numbered over 1,200, making them a significant voting bloc in Jackson County. The Kirtland Saints were pushing forward with temple construction despite local opposition.</p>
+                
+                <p>Questions arose throughout the Church: Should Saints defend themselves with violence? Was it righteous to fight back? How could they build Zion if mobs could destroy their work? Some members, particularly Sidney Rigdon, advocated for aggressive self-defense. Others, influenced by New Testament teachings, believed in complete pacifism.</p>                
+                <h4>Local Opposition in Jackson County</h4>
+                <p>Jackson County had become a powder keg. The "old settlers" viewed Mormon immigration as an invasion. Local ministers, particularly Reverends Pixley, Johnson, and others, preached that Mormons were deluded fanatics. The July 20th "Secret Constitution" circulated by mob leaders claimed Mormons were tampering with slaves, inviting free blacks to Missouri, and planning to take over the county by force.</p>
+                
+                <p>The Saints had attempted legal redress. They hired lawyers Alexander Doniphan and David Atchison, but local judges refused to issue warrants against mob members. The county lieutenant governor, Lilburn Boggs, quietly supported the mob. Civil law had completely broken down for the Saints.</p>
+                
+                <h4>National Context</h4>
+                <p>The 1830s America was experiencing the growing pains of democracy. Andrew Jackson's presidency (1829-1837) championed the common man but also promoted states' rights over federal intervention. The Nat Turner slave rebellion (1831) had heightened fears about abolition movements. Religious revivals of the Second Great Awakening created competition and sometimes violent conflict between denominations.</p>
+                
+                <p>The concept of constitutional rights was still being defined—the Bill of Rights didn't yet apply to state actions. Religious minorities across America faced persecution with little legal recourse. The question of when violence was justified in self-defense was being debated nationwide.</p>                
+                <div class="info-box">
+                    <h4>Purpose of the Revelation</h4>
+                    
+                    <p><strong>Short Term:</strong></p>
+                    <ul>
+                        <li>Provided immediate guidance to Missouri Saints on responding to mob violence</li>
+                        <li>Established clear guidelines distinguishing justified self-defense from revenge</li>
+                        <li>Commanded Saints to seek legal redress through constitutional channels first</li>
+                        <li>Offered divine comfort that God knew their sufferings and would consecrate them</li>
+                        <li>Prevented the Church from fracturing between pacifist and militant factions</li>
+                        <li>Set boundaries on retaliation to prevent escalating violence</li>
+                    </ul>
+                    
+                    <p><strong>Long Term:</strong></p>
+                    <ul>
+                        <li>Established eternal principles for dealing with persecution across all dispensations</li>
+                        <li>Provided divine endorsement of constitutional government and rule of law</li>
+                        <li>Created a theology of suffering that transforms trials into sanctification</li>
+                        <li>Set forth the relationship between divine law and human government</li>
+                        <li>Established patterns for forgiveness that extend through generations</li>
+                        <li>Created framework for the Church's ongoing advocacy for religious freedom</li>
+                    </ul>
+                </div>                
+                <h4>Significance and Implementation</h4>
+                
+                <p><strong>Immediate Impact:</strong> The revelation provided crucial guidance but proved difficult to implement. When it reached Missouri in late August, some Saints struggled with the command to bear persecution patiently. Men who had seen their families threatened and property destroyed found it hard to "revile not again."</p>
+                
+                <p>By November 1833, the Saints were violently expelled from Jackson County despite attempts to follow the revelation's counsel. They had sought legal redress as commanded, but local courts provided no justice. The three-strike rule before retaliation meant enduring more violence than many could bear. Some viewed the expulsion as evidence the revelation had failed.</p>
+                
+                <p><strong>Lasting Legacy:</strong> This revelation fundamentally shaped LDS theology on persecution and religious freedom. It established the Church's commitment to constitutional law and legal redress that continues today. The principle of patient endurance through trials became central to Mormon identity through successive persecutions.</p>
+                
+                <p>The revelation's endorsement of the U.S. Constitution influenced the Church's political theology and civic engagement globally. Modern Church efforts in religious freedom litigation trace back to these principles. The forgiveness doctrines shape LDS approaches to conflict resolution. The promise that "all things wherewith you have been afflicted shall work together for your good" sustains members through trials worldwide.</p>
+            </div>
+        </div>        
+        <!-- VERSE-BY-VERSE ANALYSIS -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE ANALYSIS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <!-- Verses 1-3 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-3: Divine Comfort in Tribulation</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>1</strong> Verily I say unto you my friends, fear not, let your hearts be comforted; yea, rejoice evermore, and in everything give thanks;</p>
+                        <p><strong>2</strong> Waiting patiently on the Lord, for your prayers have entered into the ears of the Lord of Sabaoth, and are recorded with this seal and testament—the Lord hath sworn and decreed that they shall be granted.</p>
+                        <p><strong>3</strong> Therefore, he giveth this promise unto you, with an immutable covenant that they shall be fulfilled; and all things wherewith you have been afflicted shall work together for your good, and to my name's glory, saith the Lord.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>The Lord addresses the Saints as "friends," indicating intimate covenant relationship</li>
+                        <li>Patient waiting on the Lord is essential during trials</li>
+                        <li>God hears and records the prayers of the afflicted with divine seal</li>
+                        <li>Afflictions serve divine purposes for refinement and God's glory</li>
+                        <li>Immutable covenant ensures fulfillment of divine promises</li>
+                    </ul>                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"fear not"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/">אַל־תִּירָא (*al-tira*)</a> — "do not be afraid, do not reverence fearfully"</li>
+                        <li><strong>"Lord of Sabaoth"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6635/kjv/wlc/0-1/">יְהוָה צְבָאוֹת (*Yahweh Tseva'ot*)</a> — "Lord of hosts/armies," emphasizing divine power</li>
+                        <li><strong>"immutable covenant"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g276/kjv/tr/0-1/">ἀμετάθετος (*ametathetos*)</a> — "unchangeable, unalterable"</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/8/28/">Romans 8:28</a> — "All things work together for good"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jas/5/11/">James 5:11</a> — "The patience of Job"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/2co/4/17/">2 Corinthians 4:17</a> — "Light affliction worketh eternal weight of glory"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.7">D&C 122:7</a> — "All these things shall give thee experience"</li>
+                    </ul>
+                </div>                
+                <!-- Verses 4-8 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 4-8: The Law of the Land and Freedom</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>4</strong> And now, verily I say unto you concerning the laws of the land, it is my will that my people should observe to do all things whatsoever I command them.</p>
+                        <p><strong>5</strong> And that law of the land which is constitutional, supporting that principle of freedom in maintaining rights and privileges, belongs to all mankind, and is justifiable before me.</p>
+                        <p><strong>6</strong> Therefore, I, the Lord, justify you, and your brethren of my church, in befriending that law which is the constitutional law of the land;</p>
+                        <p><strong>7</strong> And as pertaining to law of man, whatsoever is more or less than this, cometh of evil.</p>
+                        <p><strong>8</strong> I, the Lord God, make you free, therefore ye are free indeed; and the law also maketh you free.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Divine endorsement of constitutional principles protecting freedom</li>
+                        <li>Freedom is both a divine gift and legal right</li>
+                        <li>Laws protecting human rights are justified before God</li>
+                        <li>Deviation from constitutional principles comes from evil</li>
+                        <li>True freedom comes from God and is protected by righteous law</li>
+                    </ul>                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/jhn/8/32/">John 8:32</a> — "The truth shall make you free"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/gal/5/1/">Galatians 5:1</a> — "Stand fast in the liberty wherewith Christ hath made us free"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/134.1-2">D&C 134:1-2</a> — Government instituted of God</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1.12">Articles of Faith 1:12</a> — Being subject to rulers and magistrates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        <!-- KEY WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">KEY WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>Essential Terms for Understanding D&C 98</h3>
+                
+                <div class="highlight-box">
+                    <h4>AFFLICTIONS</h4>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h6040/kjv/wlc/0-1/">עֳנִי (*oni*)</a> — "affliction, poverty, misery"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2347/kjv/tr/0-1/">θλῖψις (*thlipsis*)</a> — "pressure, affliction, tribulation"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/afflictio">afflictio</a> — "striking down, weakening"</p>
+                    <p><strong>Etymology:</strong> From Latin afflictionem "a striking down" (ad "to" + fligere "to strike") <a href="https://www.etymonline.com/word/affliction">[Etymonline]</a></p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/affliction">Affliction</a> — "The state of being afflicted; a state of pain, distress, or grief"</p>
+                    <p><strong>Significance:</strong> Afflictions serve as divine refinement tools, transforming suffering into spiritual strength.</p>
+                </div>                
+                <div class="highlight-box">
+                    <h4>CONSTITUTIONAL</h4>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g4174/kjv/tr/0-1/">πολιτεία (*politeia*)</a> — "citizenship, commonwealth, constitution"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/constitutio">constitutio</a> — "arrangement, constitution"</p>
+                    <p><strong>Etymology:</strong> From Latin constitutio "act of settling" (com- "together" + statuere "to set") <a href="https://www.etymonline.com/word/constitution">[Etymonline]</a></p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/constitutional">Constitutional</a> — "Consistent with the constitution; authorized by the constitution"</p>
+                    <p><strong>Significance:</strong> Divine endorsement of constitutional government links earthly law with heavenly principles of freedom.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>FREEDOM</h4>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h1865/kjv/wlc/0-1/">דְּרוֹר (*deror*)</a> — "liberty, freedom, release"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g1657/kjv/tr/0-1/">ἐλευθερία (*eleutheria*)</a> — "liberty, freedom from bondage"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/libertas">libertas</a> — "freedom, liberty"</p>
+                    <p><strong>Etymology:</strong> From Old English freodom "state of free will" <a href="https://www.etymonline.com/word/freedom">[Etymonline]</a></p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/freedom">Freedom</a> — "A state of exemption from the power or control of another"</p>
+                    <p><strong>Significance:</strong> Freedom is both a divine gift and a constitutional right, protected by God and righteous law.</p>
+                </div>                
+                <div class="highlight-box">
+                    <h4>WAITING PATIENTLY</h4>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h6960/kjv/wlc/0-1/">קָוָה (*qavah*)</a> — "to wait, look for, hope"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g5278/kjv/tr/0-1/">ὑπομένω (*hypomenō*)</a> — "to remain under, endure patiently"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/patientia">patientia</a> — "endurance, forbearance"</p>
+                    <p><strong>Etymology:</strong> From Latin patientia "endurance" (from pati "to suffer") <a href="https://www.etymonline.com/word/patience">[Etymonline]</a></p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/patience">Patience</a> — "The suffering of afflictions, pain, toil, calamity, without murmuring"</p>
+                    <p><strong>Significance:</strong> Patient waiting acknowledges God's perfect timing and develops spiritual strength.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>LORD OF SABAOTH</h4>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h6635/kjv/wlc/0-1/">יְהוָה צְבָאוֹת (*Yahweh Tseva'ot*)</a> — "Lord of hosts/armies"</p>
+                    <p><strong>Significance:</strong> This title emphasizes God's supreme power over all earthly and heavenly forces, assuring the Saints that their divine protector commands infinite resources.</p>
+                </div>
+            </div>
+        </div>        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>Practical Applications for Modern Life</h3>
+                
+                <h4>Personal Application</h4>
+                <ul>
+                    <li>Document instances of religious discrimination while responding with patience</li>
+                    <li>Practice the three-strike rule in personal conflicts before considering stronger responses</li>
+                    <li>Transform trials into growth opportunities through the lens of "all things work together for good"</li>
+                    <li>Study constitutional principles and become informed citizens who defend religious freedom</li>
+                    <li>Develop capacity to forgive repeatedly, even "seventy times seven"</li>
+                </ul>
+                
+                <h4>Family Application</h4>
+                <ul>
+                    <li>Teach children appropriate responses to religious bullying at school using the three-strike principle</li>
+                    <li>Create family rules for dealing with neighborhood conflicts based on patience and forgiveness</li>
+                    <li>Study the Constitution and founding documents together for Family Home Evening</li>
+                    <li>Share stories of ancestors who endured persecution faithfully</li>
+                    <li>Practice conflict resolution using the revelation's escalation guidelines</li>
+                </ul>                
+                <h4>Church Application</h4>
+                <ul>
+                    <li>Support the Church's religious freedom initiatives and legal defense efforts</li>
+                    <li>Minister to those experiencing trials, helping them see how afflictions can work for good</li>
+                    <li>Avoid contention in ward councils while still addressing necessary issues</li>
+                    <li>Build interfaith relationships to collectively defend religious liberty</li>
+                    <li>Create emergency preparedness plans that follow the principle of being prepared but not paranoid</li>
+                </ul>
+                
+                <h4>Community Application</h4>
+                <ul>
+                    <li>Advocate for religious freedom in local government and school board meetings</li>
+                    <li>Build bridges with other faiths facing similar persecution</li>
+                    <li>Use legal and peaceful methods and channels when facing discrimination</li>
+                    <li>Promote constitutional literacy in civic organizations</li>
+                    <li>Model peaceful conflict resolution while maintaining firm boundaries</li>
+                </ul>
+                
+                <div class="info-box">
+                    <h4>Modern Relevance</h4>
+                    <p>This revelation remains remarkably relevant in our modern world of social media attacks, political polarization, and religious persecution. It calls us to be examples of patient endurance, active peacemakers, and unlimited forgivers while working within constitutional frameworks to protect freedom for all.</p>
+                    
+                    <p>The generational aspects of both consequences and healing remind us that our responses to persecution affect not just ourselves but future generations. By choosing forgiveness and peace, we break cycles of violence and establish patterns of righteousness that bless our posterity.</p>
+                </div>
+            </div>
+        </div>        
+        <!-- STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h3>Questions for Personal Study and Discussion</h3>
+                
+                <h4>Understanding the Text</h4>
+                <ol>
+                    <li>What specific promises does the Lord make to those who bear persecution patiently?</li>
+                    <li>How does the Lord define constitutional law in verses 5-6?</li>
+                    <li>What is the significance of the "three-strike rule" in dealing with persecution?</li>
+                    <li>How does the Lord distinguish between justified self-defense and revenge?</li>
+                    <li>What role does forgiveness play in breaking generational cycles of violence?</li>
+                </ol>
+                
+                <h4>Personal Reflection</h4>
+                <ol>
+                    <li>How can I develop greater patience when facing unfair treatment for my beliefs?</li>
+                    <li>What afflictions in my life might God be using to work together for my good?</li>
+                    <li>How do I balance Christ's command to turn the other cheek with protecting my family?</li>
+                    <li>What constitutional principles should I actively defend in my community?</li>
+                    <li>Who in my life needs the level of forgiveness described as "seventy times seven"?</li>
+                </ol>                
+                <h4>Application Questions</h4>
+                <ol>
+                    <li>How can we "proclaim peace" in a world of contention and division?</li>
+                    <li>What does "waiting patiently on the Lord" look like in practical, daily terms?</li>
+                    <li>How do we distinguish between patience and enabling abuse?</li>
+                    <li>When does self-defense become justified according to this revelation?</li>
+                    <li>How can we apply the principle of "line upon line" learning in our gospel study?</li>
+                </ol>
+                
+                <h4>Group Discussion Topics</h4>
+                <ol>
+                    <li>Discuss how the Saints' response to persecution in 1833 provides a model for us today</li>
+                    <li>Share experiences of when afflictions have worked together for your good</li>
+                    <li>Explore the relationship between constitutional law and divine law</li>
+                    <li>Consider how the forgiveness principles in this section could heal societal divisions</li>
+                    <li>Discuss practical ways to be peacemakers in your community</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <h4>Family Study Activity</h4>
+                    <p>Create a "Peace Plan" for your family using principles from D&C 98:</p>
+                    <ul>
+                        <li>Identify potential conflicts in your neighborhood or community</li>
+                        <li>Discuss how to "lift a standard of peace" three times</li>
+                        <li>Role-play responses to religious discrimination using patience</li>
+                        <li>Practice forgiving "seventy times seven" with family members</li>
+                        <li>Study the Constitution together and identify principles that protect freedom</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script>
+        function toggleSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("show");
+        }
+        
+        function toggleSubSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("show");
+        }
+        
+        function expandAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.add("active");
+                panels[i].classList.add("show");
+            }
+            
+            // Also expand all sub-accordions
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.add("active");
+                subPanels[i].classList.add("show");
+            }
+            
+            // Update button states
+            var buttons = document.getElementsByClassName("tab-btn");
+            buttons[0].classList.add("active");
+            buttons[1].classList.remove("active");
+        }
+        
+        function collapseAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.remove("active");
+                panels[i].classList.remove("show");
+            }
+            
+            // Also collapse all sub-accordions
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.remove("active");
+                subPanels[i].classList.remove("show");
+            }
+            
+            // Update button states
+            var buttons = document.getElementsByClassName("tab-btn");
+            buttons[0].classList.remove("active");
+            buttons[1].classList.add("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 100 Complete Study Guide - Mission Promises to Joseph and Sidney</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section.active {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        /* Content Panels */
+        .content-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        
+        .content-panel.active {
+            max-height: none;
+            border: 1px solid #e5e7eb;
+            border-top: none;
+        }
+        
+        .panel-content {
+            padding: 30px;
+        }
+        
+        /* Typography within panels */
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 400;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+        
+        h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Scripture Quote Styling */
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        /* Highlight Boxes */
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 1px solid #d4c190;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+        
+        a:hover {
+            color: #6b8774;
+            border-bottom: 1px solid #6b8774;
+        }
+        
+        /* Lists within panels */
+        .panel-content ul li strong {
+            color: #6b8774;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 25px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .panel-content {
+                padding: 20px;
+            }
+            
+            .tab-controls {
+                justify-content: center;
+            }
+            
+            .tab-btn {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+        
+        /* Site Header Styles */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        
+        .site-nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: Georgia, serif;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .cfm-button:hover {
+            background-color: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+            color: #999;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .site-header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .site-title {
+                font-size: 1.5em;
+            }
+        }
+        
+        /* Sub-accordion styles for verse-by-verse */
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .sub-accordion.active {
+            background-color: #e5e7eb;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            color: #6b8774;
+            font-weight: bold;
+            float: right;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        .sub-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 6px 6px;
+        }
+        
+        .sub-panel.active {
+            max-height: none;
+            padding: 20px;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="#" class="cfm-button disabled" title="CFMCorner lesson coming soon">View Full Lesson</a>
+                <a href="dc98.html" class="cfm-button">D&C 98</a>
+                <a href="dc99_complete.html" class="cfm-button">D&C 99</a>
+                <a href="dc100_complete.html" class="cfm-button">D&C 100</a>
+                <a href="dc101_complete.html" class="cfm-button">D&C 101</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 100</h1>
+            <div class="subtitle">Mission Promises to Joseph and Sidney</div>
+            <div class="date-location">October 12, 1833 • Perrysburg, New York</div>
+        </div>
+        
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>
+        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Section Overview</h2>
+                
+                <h3>Basic Information</h3>
+                <p><strong>Date of Revelation:</strong> October 12, 1833</p>
+                <p><strong>Location:</strong> Perrysburg, New York</p>
+                <p><strong>Recipients:</strong> Joseph Smith the Prophet and Sidney Rigdon</p>
+                <p><strong>Section Summary:</strong> The Lord reassures Joseph and Sidney about their families' welfare during their mission to Canada, defines their complementary roles as revelator and spokesman, and promises that Zion will be redeemed despite temporary chastening.</p>
+                
+                <h3>Key Principles</h3>
+                <p><strong>Primary Doctrinal Principle:</strong> The Lord provides for missionaries' families and gives His servants the very words to speak in the moment they are needed.</p>
+                <p><strong>Secondary Principle:</strong> Different members of the Church have complementary spiritual gifts that work together for the building of the kingdom.</p>
+                <p><strong>Application Principle:</strong> When we follow the Lord's counsel and continue forward in faith, He is with us "even unto the end" and causes all things to work together for good.</p>
+                
+                <h3>Timeframe & Setting</h3>
+                
+                <h4>Circumstances Among Recipients</h4>
+                <p>Joseph Smith and Sidney Rigdon had been traveling for eight days on a mission to Upper Canada, leaving Kirtland on October 4, 1833. Both men felt anxious about their families—Joseph had left pregnant Emma with their young children, and Sidney had left his wife and several children. They were stopping in Perrysburg, New York, near Buffalo, when they sought the Lord about their concerns. Despite their worries, they pressed forward with their missionary duties.</p>
+                
+                <h4>Circumstances Within the Church</h4>
+                <p>The Church was experiencing simultaneous growth and severe persecution. While missionaries like Joseph and Sidney expanded the work in new areas, the Saints in Jackson County, Missouri, faced increasing violence. The July destruction of the printing press had scattered the revelations being prepared for publication. Members struggled to understand why Zion was suffering when they were trying to build it according to revelation. Questions arose about how to balance family responsibilities with missionary calls.</p>
+                
+                <h4>Relevant Local Circumstances</h4>
+                <p>Western New York and Upper Canada represented potential growth areas for the Church. The region had been influenced by religious revivalism, making some receptive to new religious messages. Transportation improvements like the Erie Canal facilitated travel but journeys still took days or weeks. Economic depression in the region created both opportunities and challenges for missionary work. Local ministers often stirred up opposition when Mormon missionaries arrived.</p>
+                
+                <h4>Relevant Global Circumstances</h4>
+                <p>The 1830s marked a period of religious experimentation and communal societies in America. Democratic ideals were spreading globally, influencing religious movements toward egalitarianism. Transportation improvements were connecting previously isolated regions. The Industrial Revolution was changing social structures, creating spiritual hunger among displaced populations. Political tensions between the United States and British Canada affected cross-border religious movements.</p>
+                
+                <h3>Purpose of the Revelation</h3>
+                
+                <h4>Short Term</h4>
+                <ul>
+                    <li>Immediately relieved Joseph and Sidney's anxiety about their families</li>
+                    <li>Clarified their distinct but complementary roles in the mission</li>
+                    <li>Promised divine inspiration for their preaching in Canada</li>
+                    <li>Assured them of success in opening an "effectual door" in the eastern regions</li>
+                    <li>Provided comfort about the situation in Missouri</li>
+                </ul>
+                
+                <h4>Long Term</h4>
+                <ul>
+                    <li>Established the principle of divine care for missionaries' families</li>
+                    <li>Set pattern for complementary spiritual gifts working together</li>
+                    <li>Demonstrated that God gives servants words in the very moment needed</li>
+                    <li>Prophesied Zion's ultimate redemption despite temporary setbacks</li>
+                    <li>Created model for receiving revelation during missionary service</li>
+                </ul>
+                
+                <h3>Significance</h3>
+                
+                <h4>Short Term</h4>
+                <p>Joseph and Sidney continued their mission with renewed confidence, successfully establishing several branches in Canada. Their families remained safe in their absence, fulfilling the Lord's promise. The defined roles helped them work more effectively—Sidney's powerful preaching complemented Joseph's revelatory gifts. Several influential converts joined the Church through their efforts. The promise about Zion's redemption provided hope as persecution in Missouri intensified.</p>
+                
+                <h4>Long Term</h4>
+                <p>This revelation continues to comfort missionaries concerned about their families. The principle of complementary spiritual gifts shapes Church organization and callings. The promise of receiving divine words "in the very hour" strengthens members facing challenging conversations about faith. The prophecy of Zion's redemption, though taking different form than expected, continues to inspire hope. The revelation demonstrates how personal concerns (family welfare) connect to larger divine purposes (salvation of souls).</p>
+                
+                <h3>Cultural Insights</h3>
+                
+                <h4>Ancient</h4>
+                <ul>
+                    <li>Echoes Christ's promise to the apostles about receiving words when brought before rulers (<a href="https://www.blueletterbible.org/kjv/mat/10/19-20/">Matthew 10:19-20</a>)</li>
+                    <li>Parallels Old Testament partnerships like Moses and Aaron, where one was the revelator and another the spokesman (<a href="https://www.blueletterbible.org/kjv/exo/4/14-16/">Exodus 4:14-16</a>)</li>
+                    <li>Reflects biblical pattern of divine care for those who seek first the kingdom (<a href="https://www.blueletterbible.org/kjv/mat/6/33/">Matthew 6:33</a>)</li>
+                    <li>Connects to prophetic promises about Zion's ultimate triumph despite temporary suffering (<a href="https://www.blueletterbible.org/kjv/isa/62/1/">Isaiah 62:1</a>)</li>
+                    <li>Fulfills pattern of the Lord being "with you always" (<a href="https://www.blueletterbible.org/kjv/mat/28/20/">Matthew 28:20</a>)</li>
+                </ul>
+                
+                <h4>Modern</h4>
+                <ul>
+                    <li>Addresses modern work-life balance concerns for those in demanding callings</li>
+                    <li>Provides framework for understanding diverse spiritual gifts in team ministry</li>
+                    <li>Guides approach to public speaking and testimony bearing in hostile environments</li>
+                    <li>Influences Church's global missionary program and family support systems</li>
+                    <li>Shapes understanding of how personal revelation comes in crucial moments</li>
+                    <li>Demonstrates divine awareness of individual family situations during Church service</li>
+                </ul>
+                
+                <h3>Modern Application</h3>
+                
+                <h4>Personal Application</h4>
+                <p>Trust the Lord with family concerns when fulfilling Church responsibilities. Recognize and develop your unique spiritual gifts. Speak boldly when prompted, trusting divine inspiration in the moment. Continue forward even when feeling anxious about those left behind. Let your heart rejoice knowing the Lord is with you in righteous endeavors.</p>
+                
+                <h4>Family Application</h4>
+                <p>Support family members called to demanding Church service. Trust the Lord's promise to care for families of those serving Him. Recognize different family members' complementary spiritual gifts. Practice speaking about faith "in solemnity of heart" and "spirit of meekness." Find comfort in promises that all things work together for good.</p>
+                
+                <h4>Church Application</h4>
+                <p>Organize callings to utilize complementary spiritual gifts effectively. Provide support systems for families of those in demanding callings. Train members to trust divine inspiration when speaking about faith. Build faith that temporary challenges don't negate eternal promises. Create partnerships that combine different strengths for kingdom building.</p>
+                
+                <h4>Community Application</h4>
+                <p>Speak about faith with solemnity and meekness in public settings. Trust that words will come when defending religious principles. Build interfaith partnerships that utilize different strengths. Maintain hope for community improvement despite temporary setbacks. Demonstrate balance between service responsibilities and family care.</p>
+                
+                <h4>Questions for Personal Study</h4>
+                <ol>
+                    <li>What family concerns hold me back from full Church service?</li>
+                    <li>How can I better trust the Lord with my loved ones' welfare?</li>
+                    <li>What is my unique spiritual gift and how does it complement others?</li>
+                    <li>When have I experienced receiving divine words "in the very moment"?</li>
+                    <li>How can I maintain hope when promised blessings seem delayed?</li>
+                    <li>What does it mean to declare things "in solemnity of heart"?</li>
+                    <li>How can I better recognize when the Lord has opened an "effectual door"?</li>
+                </ol>
+                
+                <h3>Key Doctrines</h3>
+                
+                <h4>Key Doctrines Highlighted</h4>
+                <ul>
+                    <li>Formal designation of spokesman and revelator roles</li>
+                    <li>Promise of words given "in the very hour, yea, in the very moment"</li>
+                    <li>Zion will be redeemed despite being chastened for a season</li>
+                    <li>The Lord raises up a pure people to serve in righteousness</li>
+                </ul>
+                
+                <h4>Previous Doctrines Clarified</h4>
+                <ul>
+                    <li>Divine care for missionaries' families during service</li>
+                    <li>Complementary spiritual gifts working together</li>
+                    <li>All things working together for good to the upright</li>
+                    <li>The Lord's presence with servants "even unto the end"</li>
+                </ul>
+                
+                <h4>Covenant Principles Explained</h4>
+                <ul>
+                    <li>Those who call upon the Lord and keep commandments shall be saved</li>
+                    <li>The Lord is with covenant people throughout their journey</li>
+                    <li>Temporary chastening doesn't nullify eternal promises</li>
+                    <li>Covenant people receive divine inspiration for their assignments</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Historical Context</h2>
+                
+                <h3>The Journey to Perrysburg</h3>
+                <p>Joseph Smith and Sidney Rigdon departed Kirtland, Ohio, on October 4, 1833, embarking on what would become a pivotal missionary journey to Upper Canada. Their route took them through the Western Reserve of Ohio, along the southern shore of Lake Erie, and into western New York. Eight days into their journey, they arrived in Perrysburg, a small settlement near Buffalo.</p>
+                
+                <div class="info-box">
+                    <h4>Key Background: The Freeman Nickerson Connection</h4>
+                    <p>Freeman Nickerson, a recent convert to the Church, hosted Joseph and Sidney in Perrysburg. His hospitality provided the setting for this important revelation. Freeman's son, Moses Nickerson, would later become a faithful elder through the influence of this visit.</p>
+                </div>
+                
+                <h3>Family Concerns</h3>
+                <p>Both men carried heavy hearts about their families left behind in Kirtland:</p>
+                
+                <h4>Joseph's Family Situation</h4>
+                <ul>
+                    <li><strong>Emma Smith:</strong> Six months pregnant with their fourth child (Frederick Granger Williams Smith, born June 1834)</li>
+                    <li><strong>Julia Murdock Smith:</strong> Adopted daughter, age 2½</li>
+                    <li><strong>Joseph Smith III:</strong> Almost 11 months old</li>
+                    <li><strong>Additional concerns:</strong> Emma was managing the household alone during a time of increasing local opposition</li>
+                </ul>
+                
+                <h4>Sidney's Family Situation</h4>
+                <ul>
+                    <li><strong>Phebe Rigdon:</strong> Sidney's wife, in delicate health with recurring illnesses</li>
+                    <li><strong>Children:</strong> Including Sidney Jr. (age 16), Eliza (14), and several younger children</li>
+                    <li><strong>Household management:</strong> Phebe was managing a large family without Sidney's support</li>
+                </ul>
+                
+                <h3>The Church in October 1833</h3>
+                
+                <div class="highlight-box">
+                    <h4>Critical Context: Unknown Missouri Crisis</h4>
+                    <p>As Joseph and Sidney received this revelation, they were unaware that conditions in Missouri were deteriorating rapidly. Within weeks, the Saints would be driven from Jackson County entirely. The Lord's promise that "Zion shall be redeemed" would provide crucial hope when this news reached them.</p>
+                </div>
+                
+                <h4>Temple Construction in Kirtland</h4>
+                <p>The Kirtland Temple foundation had been laid on July 23, 1833, but construction proceeded slowly due to limited resources. Local opposition to the temple was growing, with threats against workers becoming increasingly common. This added to the missionaries' concerns about their families' safety.</p>
+                
+                <h4>Doctrinal Development</h4>
+                <ul>
+                    <li>The School of the Prophets had been organized earlier in 1833</li>
+                    <li>The Word of Wisdom (D&C 89) had been revealed in February</li>
+                    <li>The missionary force was expanding throughout North America</li>
+                    <li>Plans were developing for overseas missions</li>
+                </ul>
+                
+                <h3>The Mission to Upper Canada</h3>
+                
+                <h4>Geographic and Political Context</h4>
+                <p>The mission to Canada required crossing into British territory, just twenty years after the War of 1812. Religious movements crossing the border were viewed with suspicion by both governments. Despite these challenges, the region offered significant missionary potential:</p>
+                
+                <ul>
+                    <li><strong>The "Burned-over District":</strong> Western New York had experienced so many religious revivals that people were said to be hardened to religious enthusiasm</li>
+                    <li><strong>Erie Canal influence:</strong> Completed in 1825, the canal made travel faster and cheaper</li>
+                    <li><strong>Economic conditions:</strong> Regional economic depression created both spiritual hunger and practical challenges</li>
+                    <li><strong>Religious competition:</strong> Multiple new religious movements were active in the area</li>
+                </ul>
+                
+                <h3>Complementary Roles Defined</h3>
+                
+                <div class="info-box">
+                    <h4>The Spokesman and Revelator Pattern</h4>
+                    <p>This revelation formally acknowledged what had been developing naturally in the Church leadership structure:</p>
+                    <ul>
+                        <li><strong>Joseph as Revelator:</strong> Receiving divine communications and visions</li>
+                        <li><strong>Sidney as Spokesman:</strong> Powerful preacher and scripture expositor</li>
+                    </ul>
+                    <p>This pattern would influence future Church organization, establishing the model of presidents and counselors with complementary gifts.</p>
+                </div>
+                
+                <h3>The Promise of Divine Words</h3>
+                <p>The Lord's promise that He would give them words "in the very hour, yea, in the very moment" addressed a practical concern. Joseph and Sidney would face hostile audiences, difficult questions, and educated critics. This promise echoed Christ's assurance to His apostles and would be fulfilled repeatedly during their mission.</p>
+                
+                <h3>Mission Success and Converts</h3>
+                <p>Following this revelation, Joseph and Sidney continued into Upper Canada with renewed confidence. They preached in several communities including:</p>
+                <ul>
+                    <li>Mount Pleasant</li>
+                    <li>Brantford</li>
+                    <li>Colborne</li>
+                    <li>Other settlements in Ontario</li>
+                </ul>
+                
+                <p>Several branches were established, and influential converts joined the Church. The "effectual door" mentioned in the revelation was literally fulfilled as many received their message despite opposition.</p>
+                
+                <h3>Global Context of 1833</h3>
+                
+                <h4>Religious and Social Movements</h4>
+                <ul>
+                    <li><strong>Abolition movement:</strong> Britain had just passed the Slavery Abolition Act, ending slavery in most of the British Empire including Canada</li>
+                    <li><strong>Second Great Awakening:</strong> Producing numerous new religious movements</li>
+                    <li><strong>Millerite movement:</strong> Predicting Christ's return in 1843-1844</li>
+                    <li><strong>Campbellites (Disciples of Christ):</strong> Growing rapidly, from which Sidney Rigdon had converted</li>
+                </ul>
+                
+                <h4>Transportation Revolution</h4>
+                <p>The 1830s saw dramatic improvements in transportation that facilitated missionary work:</p>
+                <ul>
+                    <li>Erie Canal connecting New York to the Great Lakes</li>
+                    <li>Steamboats becoming common on major waterways</li>
+                    <li>Road improvements allowing faster overland travel</li>
+                    <li>These advances allowed missionaries to cover more territory but also meant opposition could organize more quickly</li>
+                </ul>
+                
+                <h3>The Fulfillment of Promises</h3>
+                
+                <div class="highlight-box">
+                    <h4>Divine Promises Kept</h4>
+                    <p>The Lord's promises in this revelation were remarkably fulfilled:</p>
+                    <ul>
+                        <li><strong>Family protection:</strong> Both families remained safe during the missionaries' absence</li>
+                        <li><strong>Effectual door:</strong> Multiple branches established in Canada</li>
+                        <li><strong>Words given in the moment:</strong> Documented instances of inspired responses to critics</li>
+                        <li><strong>Hearts rejoicing:</strong> The mission strengthened both men's faith</li>
+                        <li><strong>Zion's redemption:</strong> Though delayed, the promise sustained the Saints through trials</li>
+                    </ul>
+                </div>
+                
+                <h3>Long-term Impact</h3>
+                <p>This revelation established patterns that continue in the modern Church:</p>
+                <ul>
+                    <li>Support systems for missionary families</li>
+                    <li>Recognition of complementary spiritual gifts in leadership</li>
+                    <li>Trust in divine inspiration during challenging conversations</li>
+                    <li>Faith that temporary setbacks don't negate eternal promises</li>
+                    <li>Understanding that personal concerns connect to larger divine purposes</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- VERSE-BY-VERSE ANALYSIS -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE ANALYSIS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Verse-by-Verse Analysis</h2>
+                
+                <!-- Verses 1-2 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-2: Divine Assurance for Families</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "1 Verily, thus saith the Lord unto you, my friends Sidney and Joseph, your families are well; they are in mine hands, and I will do with them as seemeth me good; for in me there is all power.<br><br>
+                        2 Therefore, follow me, and listen to the counsel which I shall give unto you."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>The Lord addresses both men as "friends," showing intimate covenant relationship</li>
+                        <li>Divine protection extends to families of those serving missions</li>
+                        <li>God's sovereignty encompasses all aspects of life</li>
+                        <li>Discipleship requires following Christ and heeding His counsel</li>
+                        <li>Trust in divine care allows focus on ministry</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"in mine hands"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/">בְּיָדִי (beyadi)</a> — "in my power, under my control"</li>
+                        <li><strong>"all power"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g1849/kjv/tr/0-1/">πᾶσα ἐξουσία (pasa exousia)</a> — "all authority, complete power"</li>
+                        <li><strong>"follow me"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g190/kjv/tr/0-1/">ἀκολουθέω (akoloutheō)</a> — "to follow, accompany as disciple"</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How does divine assurance about family welfare affect your ability to serve?</li>
+                        <li>What does it mean that God will do "as seemeth Him good" with our loved ones?</li>
+                        <li>How do we balance family concerns with gospel service?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/29-31/">Matthew 10:29-31</a> — "The very hairs of your head are all numbered"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/18/29-30/">Luke 18:29-30</a> — "No man that hath left house...for the kingdom of God's sake"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/31.2">D&C 31:2</a> — "Your family shall live"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>Missionaries and those in church service today face similar anxieties about families. This promise extends to all who sacrifice for the kingdom—God personally watches over the families of His servants.</p>
+                </div>
+                
+                <!-- Verses 3-4 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 3-4: An Effectual Door Opened</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "3 Behold, an effectual door shall be opened in the regions round about in this eastern land.<br><br>
+                        4 Therefore, I, the Lord, have suffered you to come unto this place; for thus it was expedient in me for the salvation of souls."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>God prepares missionary opportunities ("effectual doors")</li>
+                        <li>Divine timing guides missionary work</li>
+                        <li>The Lord directs His servants to specific locations</li>
+                        <li>All missionary work centers on the salvation of souls</li>
+                        <li>What seems like human choice often fulfills divine purpose</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"effectual door"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g1756/kjv/tr/0-1/">θύρα ἐνεργής (thura energēs)</a> — "active, operative, powerful door/opportunity"</li>
+                        <li><strong>"suffered"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h5414/kjv/wlc/0-1/">נָתַן (nathan)</a> — "to give, permit, allow"</li>
+                        <li><strong>"expedient"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g4851/kjv/tr/0-1/">συμφέρω (sympherō)</a> — "profitable, advantageous, beneficial"</li>
+                        <li><strong>"salvation of souls"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g4991/kjv/tr/0-1/">σωτηρία ψυχῶν (sōtēria psychōn)</a> — "deliverance of souls"</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What "effectual doors" has God opened in your life for sharing the gospel?</li>
+                        <li>How do we recognize divine expediency versus our own preferences?</li>
+                        <li>What role does geographic location play in salvation work?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/1co/16/9/">1 Corinthians 16:9</a> — "A great door and effectual is opened unto me"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/col/4/3/">Colossians 4:3</a> — "That God would open unto us a door of utterance"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/112.19">D&C 112:19</a> — "Effectual doors shall be opened for them"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>Modern technology creates "effectual doors" unknown to early Saints—social media, video calls, and online teaching open entire regions instantly. Yet the principle remains: God prepares hearts and creates opportunities according to His timeline.</p>
+                </div>
+                
+                <!-- Verses 5-6 -->                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 5-6: Divine Inspiration in Speaking</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "5 Therefore, verily I say unto you, lift up your voices unto this people; speak the thoughts that I shall put into your hearts, and you shall not be confounded before men;<br><br>
+                        6 For it shall be given you in the very hour, yea, in the very moment, what ye shall say."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Bold proclamation requires lifting voices without fear</li>
+                        <li>The Lord provides thoughts directly to speakers' hearts</li>
+                        <li>Divine protection from confusion when speaking by the Spirit</li>
+                        <li>Immediate revelation comes at the precise moment needed</li>
+                        <li>Trust in spiritual promptings overcomes natural limitations</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"lift up your voices"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h5375/kjv/wlc/0-1/">נָשָׂא קוֹל (nasa qol)</a> — "to raise, lift up voice"</li>
+                        <li><strong>"confounded"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g2617/kjv/tr/0-1/">καταισχύνω (kataischunō)</a> — "to shame, dishonor, put to confusion"</li>
+                        <li><strong>"in the very hour"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g5610/kjv/tr/0-1/">ἐν αὐτῇ τῇ ὥρᾳ (en autē tē hōra)</a> — "in that same hour"</li>
+                        <li><strong>"in the very moment"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/">ἐν τῷ καιρῷ (en tō kairō)</a> — "in the appointed time"</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How do we distinguish between our thoughts and Spirit-given thoughts?</li>
+                        <li>What prevents us from lifting our voices boldly in testimony?</li>
+                        <li>How can we develop trust in moment-by-moment revelation?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/19-20/">Matthew 10:19-20</a> — "Take no thought how or what ye shall speak"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/21/15/">Luke 21:15</a> — "I will give you a mouth and wisdom"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.85">D&C 84:85</a> — "Neither take ye thought beforehand what ye shall say"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>This promise applies in teaching callings, missionary work, and daily witnesses. When we prepare spiritually rather than relying solely on scripts, the Spirit provides words that reach specific hearts in ways our preparation alone never could.</p>
+                </div>
+                
+                <!-- Verses 7-8 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 7-8: Declaring in Solemnity and Meekness</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "7 But a commandment I give unto you, that ye shall declare whatsoever thing ye declare in my name, in solemnity of heart, in the spirit of meekness, in all things.<br><br>
+                        8 And I promise you that inasmuch as ye do this the Holy Ghost shall be shed forth in bearing record unto all things whatsoever ye shall say."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>All declarations in Christ's name require solemnity of heart</li>
+                        <li>The spirit of meekness must accompany all gospel teaching</li>
+                        <li>Comprehensive application ("in all things") leaves no exceptions</li>
+                        <li>The Holy Ghost bears witness when proper spirit is maintained</li>
+                        <li>Divine promise links attitude with spiritual manifestation</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"solemnity of heart"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3515/kjv/wlc/0-1/">כֹּבֶד לֵב (koved lev)</a> — "weightiness, gravity of heart"</li>
+                        <li><strong>"spirit of meekness"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g4240/kjv/tr/0-1/">πνεῦμα πραΰτητος (pneuma prautētos)</a> — "spirit of gentleness, humility"</li>
+                        <li><strong>"shed forth"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h8210/kjv/wlc/0-1/">שָׁפַךְ (shaphak)</a> — "to pour out, shed abundantly"</li>
+                        <li><strong>"bearing record"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g3140/kjv/tr/0-1/">μαρτυρέω (martyreō)</a> — "to testify, witness"</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How does solemnity differ from sadness in gospel teaching?</li>
+                        <li>What happens when we declare truth without meekness?</li>
+                        <li>How do we maintain proper spirit when discussing controversial topics?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/gal/6/1/">Galatians 6:1</a> — "Restore such an one in the spirit of meekness"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1pe/3/15/">1 Peter 3:15</a> — "Be ready always to give an answer...with meekness and fear"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.41-42">D&C 121:41-42</a> — "By gentleness and meekness"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>In an age of social media debates and contentious discourse, this commandment provides crucial guidance. Truth proclaimed with arrogance repels; truth shared with meekness invites the Spirit's witness.</p>
+                </div>                
+                <!-- Verses 9-12 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 9-12: Spokesman and Revelator Roles</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "9 And it is expedient in me that you, my servant Sidney, should be a spokesman unto this people; yea, verily, I will ordain you unto this calling, even to be a spokesman unto my servant Joseph.<br><br>
+                        10 And he shall be a revelator unto you, that you may know the certainty of all things pertaining to the things of my kingdom on the earth.<br><br>
+                        11 Therefore, continue your journey and let your hearts rejoice; for behold, and lo, I am with you even unto the end.<br><br>
+                        12 And verily, verily, I say unto you, I give unto you a commandment that you continue in the ministry and presidency."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Divine appointment establishes specific roles in kingdom work</li>
+                        <li>Sidney ordained as spokesman, articulating revealed truths</li>
+                        <li>Joseph designated as revelator, receiving divine communications</li>
+                        <li>Complementary gifts create unified ministry</li>
+                        <li>Christ's presence accompanies faithful servants to the end</li>
+                        <li>Continuation in called positions requires divine commandment</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"spokesman"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3887/kjv/wlc/0-1/">מֵלִיץ (melits)</a> — "interpreter, mediator, spokesman"</li>
+                        <li><strong>"ordain"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g5500/kjv/tr/0-1/">χειροτονέω (cheirotoneō)</a> — "to appoint, ordain by stretching forth the hand"</li>
+                        <li><strong>"revelator"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g601/kjv/tr/0-1/">ἀποκαλύπτω (apokalyptō)</a> — "one who unveils, reveals"</li>
+                        <li><strong>"certainty"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g803/kjv/tr/0-1/">ἀσφάλεια (asphaleia)</a> — "firmness, certainty, security"</li>
+                        <li><strong>"even unto the end"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g5056/kjv/tr/0-1/">ἕως τέλους (heōs telous)</a> — "until completion"</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How do spokesman and revelator roles complement each other?</li>
+                        <li>What modern church positions reflect these ancient patterns?</li>
+                        <li>How does certainty in spiritual things affect our journey?</li>
+                        <li>What does it mean to have the Lord with us "even unto the end"?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/exo/4/16/">Exodus 4:16</a> — "He shall be thy spokesman unto the people"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/amo/3/7/">Amos 3:7</a> — "The Lord GOD will do nothing, but he revealeth"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/21.1">D&C 21:1</a> — "A seer, a translator, a prophet"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>The pattern of revelator and spokesman continues in modern church leadership. Prophets receive revelation; counselors and apostles often serve as spokesmen, articulating and expounding revealed truths to the world.</p>
+                </div>
+                
+                <!-- Verses 13-17 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 13-17: Zion's Redemption and Final Counsel</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        "13 And I will bless him, and multiply him and give unto him an hundred-fold in this world, of fathers and mothers, brothers and sisters, houses and lands, wives and children, and crowns of eternal lives in the eternal worlds.<br><br>
+                        14 And again, verily I say unto you, a commandment I give unto all the churches, that it is expedient that they should assemble together at the Ohio; but let my enemies beware and repent of all their sins, and let them become converted, that I may heal them.<br><br>
+                        15 But if they will not, they shall be cut off from among my people, O house of Israel;<br><br>
+                        16 And I will plunge them down to hell; they shall not have right to the priesthood, nor their posterity after them from generation to generation.<br><br>
+                        17 It shall be said in days to come that these abominations were not brought upon them."
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>The Lord promises abundant blessings for faithful service</li>
+                        <li>Both temporal and eternal rewards await the obedient</li>
+                        <li>The Lord extends mercy and offers healing through repentance</li>
+                        <li>Personal spiritual growth comes through serving in the kingdom</li>
+                        <li>The gathering of Saints serves divine purposes</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"hundred-fold"</strong> - Reference to Christ's promise in <a href="https://www.blueletterbible.org/kjv/mat/19/29/">Matthew 19:29</a></li>
+                        <li><strong>"crowns of eternal lives"</strong> - Plural indicating eternal increase</li>
+                        <li><strong>"house of Israel"</strong> - Covenant identity of the Saints</li>
+                        <li>The language about spiritual consequences has been softened to emphasize personal choice and growth rather than judgment</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How do temporal blessings relate to eternal rewards?</li>
+                        <li>What does the Lord's offer of healing teach about repentance?</li>
+                        <li>How does gathering with the Saints strengthen our faith?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mar/10/29-30/">Mark 10:29-30</a> — "He shall receive an hundredfold now in this time"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/2/10/">Revelation 2:10</a> — "Be thou faithful unto death, and I will give thee a crown of life"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132.19">D&C 132:19</a> — "They shall inherit thrones, kingdoms, principalities"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>The promises of multiplication apply to modern disciples who sacrifice for the kingdom. The Lord's pattern of offering healing before consequences demonstrates His merciful nature and desire for all to come unto Him.</p>
+                </div>
+                
+                <h3>Summary of Section 100</h3>
+                <p>This revelation establishes enduring patterns for church leadership and missionary work:</p>
+                <ol>
+                    <li><strong>Divine Care:</strong> God personally watches over the families of His servants</li>
+                    <li><strong>Missionary Success:</strong> The Lord prepares "effectual doors" for gospel preaching</li>
+                    <li><strong>Inspired Speaking:</strong> The Spirit provides words in the very moment needed</li>
+                    <li><strong>Complementary Roles:</strong> Different gifts unite in building the kingdom</li>
+                    <li><strong>Lifetime Service:</strong> Church leadership constitutes a lifelong calling</li>
+                    <li><strong>Continuous Learning:</strong> Spiritual and secular education work together</li>
+                    <li><strong>Pride's Danger:</strong> Leadership positions require special vigilance against pride</li>
+                </ol>
+                <p>The revelation given to Joseph and Sidney in 1833 continues to guide modern missionaries and leaders in balancing family concerns, developing spiritual gifts, and serving with humility.</p>
+            </div>
+        </div>
+        
+        <!-- KEY WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">KEY WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Key Word Studies</h2>
+                
+                <h3>1. "Effectual Door" (verse 3)</h3>
+                <ul>
+                    <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h1817/kjv/wlc/0-1/">דֶּלֶת</a> (<em>delet</em>) - "door, gate, opening"</li>
+                    <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2374/kjv/tr/0-1/">θύρα</a> <a href="https://www.blueletterbible.org/lexicon/g1756/kjv/tr/0-1/">ἐνεργής</a> (<em>thyra energēs</em>) - "active, operative, powerful door/opportunity"</li>
+                    <li><strong>Latin Etymology:</strong> <a href="https://logeion.uchicago.edu/effectualis">effectualis</a> - producing an effect</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/effectual">"Producing an effect, or the effect desired or intended"</a></li>
+                    <li><strong>Etymology:</strong> From Latin <a href="https://logeion.uchicago.edu/effectus">effectus</a> (accomplishment) + Old English <a href="https://www.etymonline.com/word/door">duru</a> (opening, passage)</li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/1co/16/9/">1 Corinthians 16:9</a> — "A great door and effectual is opened unto me"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/2co/2/12/">2 Corinthians 2:12</a> — "A door was opened unto me of the Lord"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/rev/3/8/">Revelation 3:8</a> — "I have set before thee an open door"</li>
+                </ul>
+                <p><strong>Significance:</strong> The Lord prepares specific opportunities for gospel sharing that will produce intended results. These divinely orchestrated moments cannot be created by human effort alone. The Hebrew דֶּלֶת (delet) connects to the letter dalet (ד), symbolizing a doorway or portal between realms—fitting for missionary work opening spiritual doors.</p>
+                
+                <h3>2. "Spokesman" (verse 9)</h3>
+                <ul>
+                    <li><strong>Hebrew Parallel:</strong> <a href="https://www.blueletterbible.org/lexicon/h3887/kjv/wlc/0-1/">מֵלִיץ</a> (<em>melits</em>) - "interpreter, mediator"</li>
+                    <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h6310/kjv/wlc/0-1/">פֶּה</a> (<em>peh</em>) - "mouth" (as in Aaron being Moses's mouth)</li>
+                    <li><strong>Etymology:</strong> Old English <a href="https://www.etymonline.com/word/speak">sprecan</a> (to speak) + <a href="https://www.etymonline.com/word/man">mann</a> (person)</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/spokesman">"One who speaks for another"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/exo/4/14-16/">Exodus 4:14-16</a> — Aaron as spokesman for Moses</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/2co/5/20/">2 Corinthians 5:20</a> — "We are ambassadors for Christ"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/124.103-104">D&C 124:103-104</a> — Spokesman role in church organization</li>
+                </ul>
+                <p><strong>Significance:</strong> The spokesman role represents divine delegation—speaking on behalf of God's revelator. This pattern continues in modern Church leadership.</p>
+                
+                <h3>3. "Revelator" (verse 10)</h3>
+                <ul>
+                    <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h1540/kjv/wlc/0-1/">גָּלָה</a> (<em>galah</em>) - "to reveal, uncover"</li>
+                    <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g601/kjv/tr/0-1/">ἀποκαλύπτω</a> (<em>apokalyptō</em>) - "to unveil, reveal"</li>
+                    <li><strong>Latin Etymology:</strong> <a href="https://logeion.uchicago.edu/revelator">revelator</a> from <a href="https://logeion.uchicago.edu/revelare">revelare</a> (to unveil)</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/revelator">"One who makes a revelation; one who reveals"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/amo/3/7/">Amos 3:7</a> — "The Lord GOD will do nothing, but he revealeth his secret"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/eph/3/5/">Ephesians 3:5</a> — "Now revealed unto his holy apostles and prophets"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.92">D&C 107:92</a> — "A seer, a revelator, a translator, and a prophet"</li>
+                </ul>
+                <p><strong>Significance:</strong> The revelator receives direct divine communication, unveiling God's will for His people. This office is essential for the Church's continued guidance.</p>
+                
+                <h3>4. "In the Very Hour" / "In the Very Moment" (verse 6)</h3>
+                <ul>
+                    <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g5610/kjv/tr/0-1/">ὥρα</a> (<em>hōra</em>) - "hour, time" / <a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/">καιρός</a> (<em>kairos</em>) - "appointed time, moment"</li>
+                    <li><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/hora">hora</a> (hour) / <a href="https://logeion.uchicago.edu/momentum">momentum</a> (movement, instant)</li>
+                    <li><strong>Webster 1828:</strong> Hour - <a href="http://webstersdictionary1828.com/Dictionary/hour">"The twenty-fourth part of a natural day"</a> / Moment - <a href="http://webstersdictionary1828.com/Dictionary/moment">"A minute portion of duration"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/mat/10/19-20/">Matthew 10:19-20</a> — "It shall be given you in that same hour"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/mar/13/11/">Mark 13:11</a> — "Take no thought beforehand what ye shall speak"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/luk/12/12/">Luke 12:12</a> — "The Holy Ghost shall teach you in the same hour"</li>
+                </ul>
+                <p><strong>Significance:</strong> Divine timing is precise. The Spirit provides exactly what is needed at the exact moment it is needed, requiring faith and spiritual preparation.</p>
+                
+                <h3>5. "Solemnity of Heart" (verse 7)</h3>
+                <ul>
+                    <li><strong>Hebrew concept:</strong> <a href="https://www.blueletterbible.org/lexicon/h3515/kjv/wlc/0-1/">כֹּבֶד</a> <a href="https://www.blueletterbible.org/lexicon/h3820/kjv/wlc/0-1/">לֵב</a> (<em>koved lev</em>) - "weightiness, gravity of heart"</li>
+                    <li><strong>Latin Etymology:</strong> <a href="https://logeion.uchicago.edu/solemnitas">solemnitas</a> - religious ceremony, seriousness</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/solemnity">"A rite or ceremony annually performed with religious reverence"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/43.34">D&C 43:34</a> — "Sanctify yourselves and ye shall be endowed with power"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88.121">D&C 88:121</a> — "Cease from all your light speeches"</li>
+                </ul>
+                <p><strong>Significance:</strong> Sacred matters require sacred attitudes. Solemnity is not sadness but appropriate reverence for holy things.</p>
+                
+                <h3>6. "Spirit of Meekness" (verse 7)</h3>
+                <ul>
+                    <li><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h6038/kjv/wlc/0-1/">עֲנָוָה</a> (<em>anavah</em>) - "humility, gentleness, meekness"</li>
+                    <li><strong>Hebrew Context:</strong> Often paired with <a href="https://www.blueletterbible.org/lexicon/h2428/kjv/wlc/0-1/">חַיִל</a> (<em>chayil</em>) - "virtuous, mighty valor, strength of character" (as in "Who can find a virtuous woman?" Proverbs 31:10) - showing that biblical meekness is virtue and strength under divine control</li>
+                    <li><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g4240/kjv/tr/0-1/">πραΰτης</a> (<em>prautēs</em>) - "gentleness, meekness" - power under control</li>
+                    <li><strong>Etymology:</strong> Old Norse <a href="https://www.etymonline.com/word/meek">mjúkr</a> (soft, gentle)</li>
+                    <li><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/meekness">"Softness of temper; mildness; gentleness; forbearance under injuries"</a></li>
+                </ul>
+                <p><strong>Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/gal/6/1/">Galatians 6:1</a> — "Restore such an one in the spirit of meekness"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/2ti/2/25/">2 Timothy 2:25</a> — "In meekness instructing those that oppose themselves"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.41">D&C 121:41</a> — "By gentleness and meekness"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/num/12/3/">Numbers 12:3</a> — Moses "was very meek" (עָנָו anav) yet led with strength</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/pro/31/10/">Proverbs 31:10</a> — "A virtuous woman" (אֵשֶׁת־חַיִל eishet chayil)</li>
+                </ul>
+                <p><strong>Significance:</strong> Biblical meekness (עֲנָוָה anavah) is not weakness but rather humility combined with virtue and strength. The Hebrew חַיִל (chayil)—translated as "virtuous" in Proverbs 31:10—encompasses moral excellence, strength, and noble character. When these qualities combine with humility (anavah), it reveals that true meekness is virtuous power exercised with restraint and wisdom under God's direction. Moses exemplified this—called the meekest man yet displaying tremendous strength and leadership. It invites the Spirit's confirming witness.</p>
+            </div>
+        </div>
+        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Teaching Applications</h2>
+                
+                <h3>For Sunday School Teachers</h3>
+                <ul>
+                    <li><strong>Opening Activity:</strong> Ask class members to share experiences when they received words "in the very moment" while teaching or testifying</li>
+                    <li><strong>Object Lesson:</strong> Use complementary tools (hammer and screwdriver) to demonstrate how different spiritual gifts work together</li>
+                    <li><strong>Discussion Topic:</strong> How do we balance family responsibilities with Church service?</li>
+                    <li><strong>Application Challenge:</strong> Identify your spiritual gift and find someone with a complementary gift to serve with</li>
+                </ul>
+                
+                <h3>For Youth Leaders</h3>
+                <ul>
+                    <li><strong>Youth Activity:</strong> Practice bearing testimony with "solemnity of heart" and "spirit of meekness"</li>
+                    <li><strong>Role Play:</strong> Scenarios where youth need divine words in challenging conversations about faith</li>
+                    <li><strong>Service Project:</strong> Partner youth with different strengths for more effective service</li>
+                    <li><strong>Personal Development:</strong> Help youth identify their unique spiritual gifts</li>
+                </ul>
+                
+                <h3>For Family Study</h3>
+                <ul>
+                    <li><strong>Family Discussion:</strong> Share times when God watched over family members during separations</li>
+                    <li><strong>Scripture Chain:</strong> Create a family scripture chain about divine promises of protection (connect related verses with cross-references to create a linked study path)</li>
+                    <li><strong>Family Goal:</strong> Practice speaking about sacred things with appropriate reverence</li>
+                    <li><strong>Testimony Meeting:</strong> Share how family members' different gifts strengthen the whole family</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>For Teachers and Leaders</h4>
+                    <p>This revelation teaches the importance of:</p>
+                    <ul>
+                        <li>Trusting divine inspiration over prepared scripts</li>
+                        <li>Recognizing and utilizing complementary gifts in others</li>
+                        <li>Maintaining appropriate reverence when teaching sacred things</li>
+                        <li>Balancing meekness with boldness in testimony</li>
+                        <li>Supporting those who sacrifice family time for Church service</li>
+                    </ul>
+                </div>
+                
+                <h3>Practical Applications for Modern Life</h3>
+                
+                <h4>In Professional Settings</h4>
+                <ul>
+                    <li>Trust spiritual promptings when discussing values at work</li>
+                    <li>Partner with colleagues who have complementary strengths</li>
+                    <li>Speak about faith when professionally appropriate, maintaining solemnity, reverence, and meekness</li>
+                </ul>
+                
+                <h4>In Missionary Work</h4>
+                <ul>
+                    <li>Trust that words will come when sharing the gospel</li>
+                    <li>Recognize teaching moments as "effectual doors"</li>
+                    <li>Balance family needs with missionary opportunities</li>
+                </ul>
+                
+                <h4>In Church Callings</h4>
+                <ul>
+                    <li>Identify your spiritual gift and magnify it</li>
+                    <li>Seek partners with complementary abilities</li>
+                    <li>Trust the Lord with family welfare during demanding service</li>
+                </ul>
+                
+                <h3>Teaching the Rising Generation</h3>
+                <p>Help youth and young adults understand:</p>
+                <ul>
+                    <li>God knows and cares about their family situations</li>
+                    <li>The Spirit will provide words when they defend their faith</li>
+                    <li>Their unique gifts are needed in God's kingdom</li>
+                    <li>Meekness is not weakness but controlled strength</li>
+                    <li>Sacred things deserve sacred treatment</li>
+                </ul>
+                
+                <h3>Building Faith Through This Section</h3>
+                <p>Section 100 builds faith by showing:</p>
+                <ul>
+                    <li>God's intimate awareness of individual circumstances</li>
+                    <li>Divine orchestration of missionary opportunities</li>
+                    <li>The reliability of spiritual promptings in crucial moments</li>
+                    <li>The value of diverse spiritual gifts working together</li>
+                    <li>The Lord's presence throughout our journey of discipleship</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Study Questions</h2>
+                
+                <h3>Understanding the Text</h3>
+                <ol>
+                    <li>What specific concerns did Joseph and Sidney have that prompted this revelation?</li>
+                    <li>What does the Lord mean by an "effectual door"?</li>
+                    <li>How are the roles of spokesman and revelator different yet complementary?</li>
+                    <li>What conditions does the Lord set for receiving the Holy Ghost's witness?</li>
+                    <li>What promises does the Lord make about Zion's future?</li>
+                </ol>
+                
+                <h3>Applying the Principles</h3>
+                <ol>
+                    <li>How can I better trust the Lord with my family's welfare when duty calls me away?</li>
+                    <li>What "effectual doors" has the Lord opened in my life for sharing the gospel?</li>
+                    <li>How can I prepare spiritually to receive words "in the very moment"?</li>
+                    <li>What is my unique spiritual gift and how can I use it more effectively?</li>
+                    <li>How can I maintain solemnity and meekness when discussing sacred things?</li>
+                </ol>
+                
+                <h3>Deeper Reflection</h3>
+                <ol>
+                    <li>Why does the Lord call Joseph and Sidney His "friends" in verse 1?</li>
+                    <li>What does it mean that God will do with our families "as seemeth [Him] good"?</li>
+                    <li>How does the promise "I am with you even unto the end" change our perspective on trials?</li>
+                    <li>Why are complementary spiritual gifts essential for building the kingdom?</li>
+                    <li>How does temporary chastening relate to ultimate redemption?</li>
+                </ol>
+                
+                <h3>Historical Context Questions</h3>
+                <ol>
+                    <li>How did the situation in Missouri affect the urgency of this mission to Canada?</li>
+                    <li>What role did the Erie Canal play in facilitating this missionary journey?</li>
+                    <li>How did the recent abolition of slavery in Canada affect missionary work there?</li>
+                    <li>What was the "Burned-over District" and how did it impact receptivity to the gospel?</li>
+                    <li>How did this revelation influence future Church leadership structure?</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <h4>Group Discussion Prompts</h4>
+                    <ul>
+                        <li>Share an experience when you received divine words at the exact moment needed</li>
+                        <li>Discuss how different spiritual gifts in your ward work together</li>
+                        <li>How do we balance boldness with meekness in sharing the gospel?</li>
+                        <li>What modern "effectual doors" has technology opened for missionary work?</li>
+                        <li>How can we support families of those serving in demanding callings?</li>
+                    </ul>
+                </div>
+                
+                <h3>Personal Study Projects</h3>
+                <ul>
+                    <li><strong>Scripture Chain:</strong> Create a chain linking all scriptures about receiving divine words in the moment (find verses with similar themes and connect them through cross-references to create a topical study guide)</li>
+                    <li><strong>Gift Inventory:</strong> Identify your spiritual gifts and find scriptures about each one</li>
+                    <li><strong>Historical Research:</strong> Study the success of Joseph and Sidney's Canadian mission</li>
+                    <li><strong>Application Journal:</strong> Record experiences of receiving spiritual promptings while speaking</li>
+                    <li><strong>Comparative Study:</strong> Compare spokesman/revelator roles with other scriptural partnerships</li>
+                </ul>
+                
+                <h3>Family Discussion Topics</h3>
+                <ul>
+                    <li>How has the Lord blessed our family when parents had to be away?</li>
+                    <li>What complementary gifts do family members possess?</li>
+                    <li>How can we better support each other's Church service?</li>
+                    <li>What does it mean to speak with solemnity and meekness in our home?</li>
+                    <li>How can we recognize when the Lord opens "effectual doors" for our family?</li>
+                </ul>
+                
+                <h3>Missionary Application</h3>
+                <ul>
+                    <li>How does this revelation address common missionary concerns?</li>
+                    <li>What promises here apply specifically to missionary work?</li>
+                    <li>How can missionaries develop trust in receiving divine words?</li>
+                    <li>What "effectual doors" are opening in your mission area?</li>
+                    <li>How can companion partnerships reflect the spokesman/revelator model?</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var content = button.nextElementSibling;
+            content.classList.toggle("active");
+        }
+        
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var content = button.nextElementSibling;
+            content.classList.toggle("active");
+        }
+        
+        function expandAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add("active");
+                panels[i].classList.add("active");
+            }
+            
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.add("active");
+                subPanels[i].classList.add("active");
+            }
+        }
+        
+        function collapseAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+                panels[i].classList.remove("active");
+            }
+            
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.remove("active");
+                subPanels[i].classList.remove("active");
+            }
+        }
+    </script>
+</body>
+</html>
