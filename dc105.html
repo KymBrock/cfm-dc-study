@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 105 Complete Study Guide - Zion Cannot Be Built Without Sacrifice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+                
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .tab-btn {
+            background-color: #c6d4c8;
+            color: #374151;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }        
+        /* Accordion Styles */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section.active {
+            background-color: #5a6b5e;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }        
+        /* Content Panel */
+        .content-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .content-panel.active {
+            max-height: none;
+            margin-bottom: 20px;
+        }
+        
+        .panel-content {
+            padding: 30px;
+        }
+        
+        /* Sub-Accordion Styles */
+        .sub-accordion {
+            background-color: #e5e7eb;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            transition: 0.4s;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #d1d5db;
+        }        
+        .sub-accordion.active {
+            background-color: #9ca3af;
+            color: white;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            font-weight: bold;
+            float: right;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        .sub-panel {
+            padding: 0;
+            background-color: #f9fafb;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-left: 20px;
+            border-radius: 6px;
+        }
+        
+        .sub-panel.active {
+            max-height: none;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        
+        /* Typography */
+        h2 {
+            color: #6b8774;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 500;
+            border-bottom: 2px solid #c6d4c8;
+            padding-bottom: 10px;
+        }        
+        h3 {
+            color: #7c9885;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        h4 {
+            color: #6b7280;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Scripture Quote Styling */
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: 4px;
+        }
+                
+        /* CRITICAL: Question Section Styling - MUST INCLUDE */
+        .question-section {
+            background-color: #f9fafb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .question {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+        
+        /* Word Study Box */
+        .word-study-box {
+            background: linear-gradient(135deg, #f0f4f5 0%, #e5e7eb 100%);
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+        
+        a:hover {
+            color: #6b8774;
+            border-bottom: 1px solid #6b8774;
+        }
+        
+        /* Site Header Styles */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        
+        .site-nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .cfm-button {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 0.95em;
+        }
+        
+        .cfm-button:hover {
+            background-color: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }        
+        .cfm-button.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .reflection-prompt, .discussion-ideas, .study-suggestion, .application-ideas {
+            color: #6b7280;
+            font-style: italic;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 25px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .panel-content {
+                padding: 20px;
+            }
+            
+            .tab-controls {
+                justify-content: center;
+            }
+            
+            .tab-btn {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="#" class="cfm-button disabled" title="Full lesson coming soon">View Full Lesson</a>
+                <a href="dc104_complete.html" class="cfm-button">D&C 104</a>
+                <a href="dc106_complete.html" class="cfm-button">D&C 106</a>
+            </nav>
+        </div>
+    </div>    
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 105</h1>
+            <div class="subtitle">Zion Cannot Be Built Without Sacrifice</div>
+            <div class="date-location">June 22, 1834 • Fishing River, Missouri</div>
+        </div>
+        
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>
+        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Section Overview</h2>
+                
+                <h3>Basic Information</h3>
+                <p><strong>Date of Revelation:</strong> June 22, 1834</p>
+                <p><strong>Location:</strong> Fishing River, Missouri</p>
+                <p><strong>Recipients:</strong> Joseph Smith and Zion's Camp</p>
+                <p><strong>Verses:</strong> 41 verses</p>
+                <p><strong>Section Summary:</strong> The Lord postpones the redemption of Zion, explaining that the Saints must first receive an endowment of power from on high and learn obedience through tribulation before Zion can be established.</p>
+                
+                <h3>Key Principles</h3>
+                <p><strong>Primary Doctrinal Principle:</strong> Preparation through tribulation precedes deliverance</p>
+                <p><strong>Secondary Principle:</strong> Endowment of power necessary for Zion's redemption</p>
+                <p><strong>Application Principle:</strong> Sacrifice and obedience qualify us for divine blessings</p>                
+                <h3>Timeframe & Setting</h3>
+                
+                <h4>Circumstances Among Recipients</h4>
+                <p>Zion's Camp had marched nearly 900 miles from Ohio to Missouri, expecting to restore the Saints to their lands in Jackson County. Members were exhausted, some were discouraged by the lack of military action, and questions arose about the purpose of their sacrifice.</p>
+                
+                <h4>Circumstances Within the Church</h4>
+                <p>The Saints had been violently expelled from Jackson County in November 1833. The Missouri government initially promised assistance but withdrew support. The Church faced the challenge of establishing Zion without temporal power or political influence.</p>
+                
+                <h3>Major Doctrines</h3>
+                <ul>
+                    <li><strong>Endowment of Power:</strong> Temple endowment necessary for Zion's redemption</li>
+                    <li><strong>Law of Sacrifice:</strong> Obedience learned through tribulation</li>
+                    <li><strong>Divine Timing:</strong> "Little season" of preparation before redemption</li>
+                    <li><strong>Peace Priority:</strong> Sue for peace rather than seek revenge</li>
+                </ul>
+                
+                <h3>Cross-References</h3>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/103">D&C 103</a> - Command to organize Zion's Camp</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/38.32">D&C 38:32</a> - Promise of endowment</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/5/8">Hebrews 5:8</a> - Christ learned obedience by suffering</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/mat/5/44">Matthew 5:44</a> - Love your enemies</li>
+                </ul>
+            </div>
+        </div>        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Historical Context</h2>
+                
+                <h3>The Setting</h3>
+                <p>Zion's Camp arrived at Fishing River, Missouri, on June 19, 1834. The camp of approximately 200 men had marched from Kirtland, Ohio, with the expectation of helping restore the Saints to their lands in Jackson County. However, Missouri Governor Daniel Dunklin, who had initially promised government support, withdrew his assistance when local opposition intensified.</p>
+                
+                <h3>Key Events Leading to This Revelation</h3>
+                <ul>
+                    <li><strong>November 1833:</strong> Saints violently expelled from Jackson County</li>
+                    <li><strong>February 1834:</strong> D&C 103 commanded organization of Zion's Camp</li>
+                    <li><strong>May-June 1834:</strong> 900-mile march from Ohio to Missouri</li>
+                    <li><strong>June 19, 1834:</strong> Camp arrives at Fishing River</li>
+                    <li><strong>June 19-21, 1834:</strong> Negotiations with Missouri officials fail</li>
+                </ul>
+                
+                <h3>Immediate Circumstances</h3>
+                <p>On June 19, a mob of about 400 Missourians gathered to attack Zion's Camp. A miraculous storm scattered the mob, saving the camp from destruction. However, it became clear that military action would not restore the Saints to their lands. The camp members, exhausted and uncertain, needed divine direction about their sacrificial march.</p>
+                
+                <h3>Key People Involved</h3>
+                <ul>
+                    <li><strong>Joseph Smith:</strong> Prophet and leader of Zion's Camp</li>
+                    <li><strong>Zion's Camp Members:</strong> Approximately 200 faithful men who marched</li>
+                    <li><strong>Governor Daniel Dunklin:</strong> Missouri governor who withdrew support</li>
+                    <li><strong>Missouri Mobs:</strong> Local citizens opposing Mormon settlement</li>
+                </ul>                
+                <h3>Connection to Other Revelations</h3>
+                <ul>
+                    <li><strong>D&C 103:</strong> Commanded the organization of Zion's Camp and promised divine assistance</li>
+                    <li><strong>D&C 104:</strong> Given during preparation, organized the United Order</li>
+                    <li><strong>D&C 38:32:</strong> Earlier promise of endowment of power from on high</li>
+                    <li><strong>D&C 97:</strong> Definition of Zion as the pure in heart</li>
+                </ul>
+                
+                <h3>Aftermath and Impact</h3>
+                <p>Following this revelation, cholera struck the camp within days, claiming 14 lives. The camp was disbanded on June 24, 1834. Despite apparent failure, Zion's Camp became a crucial training ground—over 80% of early Church leadership came from its participants. The focus shifted from Missouri to completing the Kirtland Temple, where the promised endowment was received in 1836.</p>
+            </div>
+        </div>
+        
+        <!-- VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Verse-by-Verse Study Guide</h2>
+                
+                <!-- Verses 1-6 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-6: Diagnosis of Spiritual State</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>1</strong> Verily I say unto you who have assembled yourselves together that you may learn my will concerning the redemption of mine afflicted people—</p>
+                        <p><strong>2</strong> Behold, I say unto you, were it not for the transgressions of my people, speaking concerning the church and not individuals, they might have been redeemed even now.</p>
+                        <p><strong>3</strong> But behold, they have not learned to be obedient to the things which I required at their hands, but are full of all manner of evil, and do not impart of their substance, as becometh saints, to the poor and afflicted among them;</p>                        <p><strong>4</strong> And are not united according to the union required by the law of the celestial kingdom;</p>
+                        <p><strong>5</strong> And Zion cannot be built up unless it is by the principles of the law of the celestial kingdom; otherwise I cannot receive her unto myself.</p>
+                        <p><strong>6</strong> And my people must needs be chastened until they learn obedience, if it must needs be, by the things which they suffer.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Collective transgressions prevented immediate redemption (v. 2)</li>
+                        <li>Lack of consecration and care for the poor hindered Zion (v. 3)</li>
+                        <li>Unity according to celestial law is mandatory for Zion (v. 4-5)</li>
+                        <li>Chastening serves an educational purpose (v. 6)</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/42.30-31">D&C 42:30-31</a> - Law of consecration</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/heb/5/8">Hebrews 5:8</a> - Learning obedience through suffering</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/78.3-7">D&C 78:3-7</a> - United Order establishment</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 7-13 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 7-13: Requirements for Redemption</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>7</strong> I speak not concerning those who are appointed to lead my people, who are the first elders of my church, for they are not all under this condemnation;</p>
+                        <p><strong>8</strong> But I speak concerning my churches abroad—there are many who will say: Where is their God? Behold, he will deliver them in time of trouble, otherwise we will not go up unto Zion, and will keep our moneys.</p>                        <p><strong>9</strong> Therefore, in consequence of the transgressions of my people, it is expedient in me that mine elders should wait for a little season for the redemption of Zion—</p>
+                        <p><strong>10</strong> That they themselves may be prepared, and that my people may be taught more perfectly, and have experience, and know more perfectly concerning their duty, and the things which I require at their hands.</p>
+                        <p><strong>11</strong> And this cannot be brought to pass until mine elders are endowed with power from on high.</p>
+                        <p><strong>12</strong> For behold, I have prepared a great endowment and blessing to be poured out upon them, inasmuch as they are faithful and continue in humility before me.</p>
+                        <p><strong>13</strong> Therefore it is expedient in me that mine elders should wait for a little season, for the redemption of Zion.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Leadership not entirely at fault for delays (v. 7)</li>
+                        <li>Many Saints withheld consecration out of doubt (v. 8)</li>
+                        <li>Delay serves preparatory purposes (v. 9-10)</li>
+                        <li>Temple endowment prerequisite for Zion's redemption (v. 11-12)</li>
+                        <li>Divine wisdom in temporary postponement (v. 13)</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 14-21 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 14-21: Divine Promises and Instructions</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>14</strong> For behold, I do not require at their hands to fight the battles of Zion; for, as I said in a former commandment, even so will I fulfil—I will fight your battles.</p>
+                        <p><strong>15</strong> Behold, the destroyer I have sent forth to destroy and lay waste mine enemies; and not many years hence they shall not be left to pollute mine heritage, and to blaspheme my name upon the lands which I have consecrated for the gathering together of my saints.</p>                        <p><strong>16</strong> Behold, I have commanded my servant Joseph Smith, Jun., to say unto the strength of my house, even my warriors, my young men, and middle-aged, to gather together for the redemption of my people, and throw down the towers of mine enemies, and scatter their watchmen;</p>
+                        <p><strong>17</strong> But the strength of mine house have not hearkened unto my words.</p>
+                        <p><strong>18</strong> But inasmuch as there are those who have hearkened unto my words, I have prepared a blessing and an endowment for them, if they continue faithful.</p>
+                        <p><strong>19</strong> I have heard their prayers, and will accept their offering; and it is expedient in me that they should be brought thus far for a trial of their faith.</p>
+                        <p><strong>20</strong> And now, verily I say unto you, a commandment I give unto you, that as many as have come up hither, that can stay in the region round about, let them stay;</p>
+                        <p><strong>21</strong> And those that cannot stay, who have families in the east, let them tarry for a little season, inasmuch as my servant Joseph shall appoint unto them;</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>The Lord fights Israel's battles, not Israel (v. 14)</li>
+                        <li>Divine judgment coming upon enemies (v. 15)</li>
+                        <li>Many failed to respond to the call (v. 16-17)</li>
+                        <li>Faithful participants will receive endowment (v. 18)</li>
+                        <li>March served as trial of faith (v. 19)</li>
+                        <li>Specific instructions for camp members (v. 20-21)</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 22-30 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 22-30: Practical Instructions</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>22</strong> For I will counsel him concerning this matter, and all things whatsoever he shall appoint unto them shall be fulfilled.</p>
+                        <p><strong>23</strong> And let all my people who dwell in the regions round about be very faithful, and prayerful, and humble before me, and reveal not the things which I have revealed unto them, until it is wisdom in me that they should be revealed.</p>
+                        <p><strong>24</strong> Talk not of judgments, neither boast of faith nor of mighty works, but carefully gather together, as much in one region as can be, consistently with the feelings of the people;</p>
+                        <p><strong>25</strong> And behold, I will give unto you favor and grace in their eyes, that you may rest in peace and safety, while you are saying unto the people: Execute judgment and justice for us according to law, and redress us of our wrongs.</p>
+                        <p><strong>26</strong> Now, behold, I say unto you, my friends, in this way you may find favor in the eyes of the people, until the army of Israel becomes very great.</p>
+                        <p><strong>27</strong> And I will soften the hearts of the people, as I did the heart of Pharaoh, from time to time, until my servant Joseph Smith, Jun., and mine elders, whom I have appointed, shall have time to gather up the strength of my house,</p>
+                        <p><strong>28</strong> And to have sent wise men, to fulfil that which I have commanded concerning the purchasing of all the lands in Jackson county that can be purchased, and in the adjoining counties round about.</p>
+                        <p><strong>29</strong> For it is my will that these lands should be purchased; and after they are purchased that my saints should possess them according to the laws of consecration which I have given.</p>
+                        <p><strong>30</strong> And after these lands are purchased, I will hold the armies of Israel guiltless in taking possession of their own lands, which they have previously purchased with their moneys, and of throwing down the towers of mine enemies that may be upon them, and scattering their watchmen, and avenging me of mine enemies unto the third and fourth generation of them that hate me.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Prophet receives divine counsel for all matters (v. 22)</li>
+                        <li>Sacred secrecy required until proper time (v. 23)</li>
+                        <li>Humility and careful gathering strategy (v. 24)</li>
+                        <li>Legal approach to seeking justice (v. 25)</li>
+                        <li>Divine influence on public opinion (v. 26-27)</li>
+                        <li>Purchase lands legally before possession (v. 28-30)</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/exo/7/3">Exodus 7:3</a> - Pharaoh's heart</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/pro/21/1">Proverbs 21:1</a> - King's heart in Lord's hand</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98.4-7">D&C 98:4-7</a> - Constitutional law</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 31-37 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 31-37: Vision of Zion's Glory</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>31</strong> But first let my army become very great, and let it be sanctified before me, that it may become fair as the sun, and clear as the moon, and that her banners may be terrible unto all nations;</p>
+                        <p><strong>32</strong> That the kingdoms of this world may be constrained to acknowledge that the kingdom of Zion is in very deed the kingdom of our God and his Christ; therefore, let us become subject unto her laws.</p>
+                        <p><strong>33</strong> Verily I say unto you, it is expedient in me that the first elders of my church should receive their endowment from on high in my house, which I have commanded to be built unto my name in the land of Kirtland.</p>
+                        <p><strong>34</strong> And let those commandments which I have given concerning Zion and her law be executed and fulfilled, after her redemption.</p>
+                        <p><strong>35</strong> There has been a day of calling, but the time has come for a day of choosing; and let those be chosen that are worthy.</p>
+                        <p><strong>36</strong> And it shall be manifest unto my servant, by the voice of the Spirit, those that are chosen; and they shall be sanctified;</p>
+                        <p><strong>37</strong> And inasmuch as they follow the counsel which they receive, they shall have power after many days to accomplish all things pertaining to Zion.</p>
+                    </div>                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Zion's army must be sanctified and numerous (v. 31)</li>
+                        <li>World will acknowledge Zion as God's kingdom (v. 32)</li>
+                        <li>Kirtland Temple endowment essential (v. 33)</li>
+                        <li>Day of calling becomes day of choosing (v. 35)</li>
+                        <li>Spirit reveals the chosen ones (v. 36)</li>
+                        <li>Obedience brings power to establish Zion (v. 37)</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/sol/6/10">Song of Solomon 6:10</a> - Fair as moon, clear as sun</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/5/26">Isaiah 5:26</a> - Ensign to nations</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/11/15">Revelation 11:15</a> - Kingdoms become Christ's</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/dan/2/44">Daniel 2:44</a> - Kingdom that shall not be destroyed</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/22/14">Matthew 22:14</a> - Many called, few chosen</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.34-40">D&C 121:34-40</a> - Called but not chosen</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 38-41 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 38-41: Call for Peace</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>38</strong> And again I say unto you, sue for peace, not only to the people that have smitten you, but also to all people;</p>
+                        <p><strong>39</strong> And lift up an ensign of peace, and make a proclamation of peace unto the ends of the earth;</p>
+                        <p><strong>40</strong> And make proposals for peace unto those who have smitten you, according to the voice of the Spirit which is in you, and all things shall work together for your good.</p>
+                        <p><strong>41</strong> Therefore, be faithful; and behold, and lo, I am with you even unto the end. Even so. Amen.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Seek peace with enemies and all people (v. 38)</li>
+                        <li>Proclaim peace universally (v. 39)</li>
+                        <li>Spirit-guided peace proposals (v. 40)</li>
+                        <li>Divine presence assured to the faithful (v. 41)</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/5/44">Matthew 5:44</a> - Love your enemies</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/12/18">Romans 12:18</a> - Live peaceably with all</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/11/10">Isaiah 11:10</a> - Ensign to the people</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98.16">D&C 98:16</a> - Proclaim peace</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/8/28">Romans 8:28</a> - All things work together for good</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/90.24">D&C 90:24</a> - All things for your good</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/28/20">Matthew 28:20</a> - I am with you always</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/31.13">D&C 31:13</a> - Be faithful and I am with you</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        <!-- WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Key Word Studies</h2>
+                
+                <div class="word-study-box">
+                    <h3>ENDOWMENT (verses 11, 12, 18, 33)</h3>
+                    <p><strong>Hebrew Origins:</strong> <a href="https://www.blueletterbible.org/lexicon/h5068/kjv/wlc/0-1/">נָדַב (nadab)</a> - "to incite, impel, make willing"; <a href="https://www.blueletterbible.org/lexicon/h4976/kjv/wlc/0-1/">מַתָּנָה (mattanah)</a> - "gift, present"</p>
+                    <p><strong>Greek Context:</strong> <a href="https://www.blueletterbible.org/lexicon/g1746/kjv/tr/0-1/">ἐνδύω (enduo)</a> - "to clothe, put on"; <a href="https://www.blueletterbible.org/lexicon/g1431/kjv/tr/0-1/">δωρεά (dorea)</a> - "gift, bounty"; Used in <a href="https://www.blueletterbible.org/kjv/luk/24/49">Luke 24:49</a> - "endued with power from on high"</p>
+                    <p><strong><a href="http://webstersdictionary1828.com/Dictionary/endowment">Webster 1828</a>:</strong> "The act of settling a dower on a woman; that which is bestowed or settled on; gift of nature"</p>
+                    <p><strong>Theological Significance:</strong> Temple ordinance providing spiritual power; divine gift enabling Zion's redemption; clothing with power from on high; prerequisite for establishing God's kingdom.</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <h3>REDEMPTION (verses 1, 9, 13, 16, 34)</h3>
+                    <p><strong>Hebrew Origins:</strong> <a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/">גָּאַל (ga'al)</a> - "to redeem, act as kinsman"; <a href="https://www.blueletterbible.org/lexicon/h6299/kjv/wlc/0-1/">פָּדָה (padah)</a> - "to ransom, rescue, deliver"; Kinsman-redeemer concept (go'el)</p>
+                    <p><strong>Greek Context:</strong> <a href="https://www.blueletterbible.org/lexicon/g3084/kjv/tr/0-1/">λυτρόω (lutroo)</a> - "to release by paying ransom"; <a href="https://www.blueletterbible.org/lexicon/g629/kjv/tr/0-1/">ἀπολύτρωσις (apolutrosis)</a> - "redemption, deliverance"</p>
+                    <p><strong><a href="http://webstersdictionary1828.com/Dictionary/redemption">Webster 1828</a>:</strong> "Repurchase of captured goods or prisoners; deliverance from bondage, distress, or liability"</p>
+                    <p><strong>Application to Zion:</strong> Restoration to promised lands; deliverance from persecution; spiritual and temporal liberation; divine intervention in behalf of covenant people.</p>
+                </div>                
+                <div class="word-study-box">
+                    <h3>SANCTIFIED/SANCTIFICATION (verses 31, 36)</h3>
+                    <p><strong>Hebrew Origins:</strong> <a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/">קָדַשׁ (qadash)</a> - "to be set apart, consecrated, holy"</p>
+                    <p><strong>Greek Context:</strong> <a href="https://www.blueletterbible.org/lexicon/g37/kjv/tr/0-1/">ἁγιάζω (hagiazo)</a> - "to make holy, consecrate"</p>
+                    <p><strong><a href="http://webstersdictionary1828.com/Dictionary/sanctify">Webster 1828</a>:</strong> "To make holy; to set apart to a holy or religious use; to purify from corruption"</p>
+                    <p><strong>Process in D&C 105:</strong> Purification through trials; preparation for divine service; becoming "fair as the sun, and clear as the moon" (<a href="https://www.blueletterbible.org/kjv/sol/6/10">Song of Solomon 6:10</a>); qualification for Zion's establishment.</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <h3>OBEDIENT/OBEDIENCE (verses 3, 6)</h3>
+                    <p><strong>Hebrew Origins:</strong> <a href="https://www.blueletterbible.org/lexicon/h8085/kjv/wlc/0-1/">שָׁמַע (shama)</a> - "to hear, listen, obey"</p>
+                    <p><strong>Greek Context:</strong> <a href="https://www.blueletterbible.org/lexicon/g5218/kjv/tr/0-1/">ὑπακοή (hupakoe)</a> - "obedience, compliance"</p>
+                    <p><strong><a href="http://webstersdictionary1828.com/Dictionary/obedience">Webster 1828</a>:</strong> "Compliance with a command, prohibition or known law"</p>
+                    <p><strong>Learning Obedience:</strong> Through chastening and suffering; parallel to Christ's experience (<a href="https://www.blueletterbible.org/kjv/heb/5/8">Hebrews 5:8</a>); essential for Zion's establishment.</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <h3>UNITED/UNION (verse 4)</h3>
+                    <p><strong>Hebrew Origins:</strong> <a href="https://www.blueletterbible.org/lexicon/h3162/kjv/wlc/0-1/">יָחַד (yachad)</a> - "to be united, joined"; <a href="https://www.blueletterbible.org/lexicon/h259/kjv/wlc/0-1/">אֶחָד (echad)</a> - "one, unity"</p>
+                    <p><strong>Greek Context:</strong> <a href="https://www.blueletterbible.org/lexicon/g1775/kjv/tr/0-1/">ἑνότης (henotes)</a> - "unity, oneness"</p>
+                    <p><strong><a href="http://webstersdictionary1828.com/Dictionary/unity">Webster 1828</a>:</strong> "The state of being one; concord; conjunction; agreement"</p>
+                    <p><strong>Celestial Law Requirement:</strong> Unity in temporal affairs (United Order); spiritual oneness of purpose; economic equality and consecration.</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <h3>TRANSGRESSION (verses 2, 9)</h3>
+                    <p><strong>Hebrew Origins:</strong> <a href="https://www.blueletterbible.org/lexicon/h6588/kjv/wlc/0-1/">פֶּשַׁע (pesha)</a> - "rebellion, transgression, trespass"; <a href="https://www.blueletterbible.org/lexicon/h5674/kjv/wlc/0-1/">עָבַר (abar)</a> - "to pass over, transgress"</p>
+                    <p><strong>Greek Context:</strong> <a href="https://www.blueletterbible.org/lexicon/g3847/kjv/tr/0-1/">παράβασις (parabasis)</a> - "overstepping, transgression"; <a href="https://www.blueletterbible.org/lexicon/g3900/kjv/tr/0-1/">παραπτωμα (paraptoma)</a> - "false step, trespass"</p>
+                    <p><strong><a href="http://webstersdictionary1828.com/Dictionary/transgression">Webster 1828</a>:</strong> "The act of passing over or beyond any law or rule; the violation of a law or known principle"</p>
+                    <p><strong>Church vs Individual (v. 2):</strong> Collective responsibility emphasized; corporate failure in consecration; systemic issues requiring group repentance.</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <h3>CHASTENED/CHASTENING (verse 6)</h3>
+                    <p><strong>Hebrew Origins:</strong> <a href="https://www.blueletterbible.org/lexicon/h3256/kjv/wlc/0-1/">יָסַר (yasar)</a> - "to chasten, discipline, instruct"; <a href="https://www.blueletterbible.org/lexicon/h4148/kjv/wlc/0-1/">מוּסָר (musar)</a> - "discipline, correction, instruction"</p>
+                    <p><strong>Greek Context:</strong> <a href="https://www.blueletterbible.org/lexicon/g3811/kjv/tr/0-1/">παιδεύω (paideuo)</a> - "to train children, to chasten"; <a href="https://www.blueletterbible.org/lexicon/g3809/kjv/tr/0-1/">παιδεία (paideia)</a> - "training, discipline"</p>
+                    <p><strong><a href="http://webstersdictionary1828.com/Dictionary/chasten">Webster 1828</a>:</strong> "To correct by punishment; to afflict for correction and amendment; to purify from errors"</p>
+                    <p><strong>Divine Purpose:</strong> Educational rather than punitive; learning obedience through suffering; purification for divine service; preparation for greater blessings. Compare <a href="https://www.blueletterbible.org/kjv/heb/12/6">Hebrews 12:6</a> - "whom the Lord loveth he chasteneth."</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <h3>PEACE (verses 38, 39, 40)</h3>
+                    <p><strong>Hebrew Origins:</strong> <a href="https://www.blueletterbible.org/lexicon/h7965/kjv/wlc/0-1/">שָׁלוֹם (shalom)</a> - "completeness, welfare, peace"; <a href="https://www.blueletterbible.org/lexicon/h7999/kjv/wlc/0-1/">שָׁלֵם (shalem)</a> - "to be complete, sound"</p>
+                    <p><strong>Greek Context:</strong> <a href="https://www.blueletterbible.org/lexicon/g1515/kjv/tr/0-1/">εἰρήνη (eirene)</a> - "peace, harmony"; <a href="https://www.blueletterbible.org/lexicon/g1517/kjv/tr/0-1/">εἰρηνοποιέω (eirenopoieo)</a> - "to make peace"</p>
+                    <p><strong><a href="http://webstersdictionary1828.com/Dictionary/peace">Webster 1828</a>:</strong> "Freedom from war or civil commotion; freedom from agitation or disturbance; reconciliation of parties at variance"</p>
+                    <p><strong>Divine Strategy:</strong> Sue for peace with enemies; lift up ensign of peace; make proclamation to all nations; proposals guided by the Spirit. See <a href="https://www.blueletterbible.org/kjv/mat/5/9">Matthew 5:9</a> - "Blessed are the peacemakers."</p>
+                </div>
+            </div>
+        </div>        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Teaching Applications</h2>
+                
+                <h3>Personal Study Application</h3>
+                <p><strong>Topic:</strong> Learning Obedience Through Trials</p>
+                <p><strong>Key Scripture:</strong> "And my people must needs be chastened until they learn obedience, if it must needs be, by the things which they suffer" (v. 6)</p>
+                <p><strong>Study Points:</strong></p>
+                <ul>
+                    <li>Compare with <a href="https://www.blueletterbible.org/kjv/heb/5/8">Hebrews 5:8</a> - Christ's learning through suffering</li>
+                    <li>Examine personal trials as educational opportunities</li>
+                    <li>Consider the difference between punishment and instruction</li>
+                </ul>
+                <p><strong>Practical Exercise:</strong> Create a personal "trial journal" documenting lessons learned through difficulties.</p>
+                
+                <h3>Family Study Application</h3>
+                <p><strong>Topic:</strong> Unity According to Celestial Law</p>
+                <p><strong>Key Scripture:</strong> "And are not united according to the union required by the law of the celestial kingdom" (v. 4)</p>
+                <p><strong>Family Discussion Points:</strong></p>
+                <ul>
+                    <li>What does celestial unity look like in a family?</li>
+                    <li>How does economic sharing strengthen relationships?</li>
+                    <li>Why must Zion begin in the home?</li>
+                </ul>
+                <p><strong>Family Activity:</strong> Implement a family consecration project where each member contributes talents for a common goal.</p>                
+                <h3>Gospel Doctrine Class Application</h3>
+                <p><strong>Topic:</strong> The Endowment of Power</p>
+                <p><strong>Key Scripture:</strong> "And this cannot be brought to pass until mine elders are endowed with power from on high" (v. 11)</p>
+                <p><strong>Class Discussion Structure:</strong></p>
+                <ul>
+                    <li>Historical context of temple endowment</li>
+                    <li>Connection between spiritual power and temporal deliverance</li>
+                    <li>Modern applications of endowment power</li>
+                    <li>Preparing for temple blessings</li>
+                </ul>
+                
+                <h3>Youth/Young Adult Application</h3>
+                <p><strong>Topic:</strong> Day of Choosing vs. Day of Calling</p>
+                <p><strong>Key Scripture:</strong> "There has been a day of calling, but the time has come for a day of choosing; and let those be chosen that are worthy" (v. 35)</p>
+                <p><strong>Discussion Topics:</strong></p>
+                <ul>
+                    <li>Difference between being called and being chosen</li>
+                    <li>Worthiness as active preparation</li>
+                    <li>Making yourself "chooseable" for God's work</li>
+                </ul>
+                <p><strong>Activities:</strong> Create personal worthiness goals; interview returned missionaries about preparation.</p>
+                
+                <h3>Seminary Application</h3>
+                <p><strong>Topic:</strong> Peace Instead of Retaliation</p>
+                <p><strong>Key Scripture:</strong> "And lift up an ensign of peace, and make a proclamation of peace unto the ends of the earth" (v. 39)</p>
+                <p><strong>Student Activities:</strong> Write personal "proclamations of peace"; practice conflict resolution scenarios; study historical examples of peaceful resolution.</p>
+            </div>
+        </div>        
+        <!-- STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Study Questions for Personal and Family Study</h2>
+                
+                <h3>Questions for Individual Reflection</h3>
+                <div class="question-section">
+                    <p class="question">1. What "little seasons" of waiting has the Lord required in your life, and what did you learn during those times?</p>
+                    <p class="reflection-prompt">Consider: How did the waiting period prepare you for eventual blessings?</p>
+                    
+                    <p class="question">2. How have you learned obedience through the things you have suffered?</p>
+                    <p class="reflection-prompt">Consider: What trials taught you lessons that commandments alone could not?</p>
+                    
+                    <p class="question">3. What does it mean to be "united according to the union required by the law of the celestial kingdom"?</p>
+                    <p class="reflection-prompt">Consider: How can you increase unity in your ward or branch?</p>
+                    
+                    <p class="question">4. How can you "sue for peace" with those who have wronged you?</p>
+                    <p class="reflection-prompt">Consider: What specific steps can you take toward reconciliation?</p>
+                    
+                    <p class="question">5. What spiritual endowments do you need before accomplishing the Lord's work in your life?</p>
+                    <p class="reflection-prompt">Consider: How can temple worship provide power for your challenges?</p>
+                </div>                
+                <h3>Questions for Family Discussion</h3>
+                <div class="question-section">
+                    <p class="question">1. Why does the Lord sometimes delay promised blessings?</p>
+                    <p class="discussion-ideas">Discuss: Times your family has waited for answers to prayers.</p>
+                    
+                    <p class="question">2. How can our family better care for "the poor and afflicted among us"?</p>
+                    <p class="discussion-ideas">Discuss: Specific service opportunities in your community.</p>
+                    
+                    <p class="question">3. What does it mean that the Lord will "fight your battles"?</p>
+                    <p class="discussion-ideas">Discuss: Examples from family history or personal experience.</p>
+                    
+                    <p class="question">4. How can we avoid "boasting of faith or mighty works"?</p>
+                    <p class="discussion-ideas">Discuss: The difference between testimony and boasting.</p>
+                    
+                    <p class="question">5. What family "transgressions" might delay our family's spiritual progress?</p>
+                    <p class="discussion-ideas">Discuss: Areas where your family can improve unity and obedience.</p>
+                </div>
+                
+                <h3>Questions for Deeper Investigation</h3>
+                <div class="question-section">
+                    <p class="question">1. How did Zion's Camp participants later contribute to Church leadership?</p>
+                    <p class="study-suggestion">Research: Biographies of Brigham Young, Heber C. Kimball, and other camp members.</p>
+                    
+                    <p class="question">2. What happened in the Kirtland Temple after the endowment was received?</p>
+                    <p class="study-suggestion">Research: Events of March-April 1836 in Kirtland.</p>                    
+                    <p class="question">3. What is the relationship between consecration and establishing Zion?</p>
+                    <p class="study-suggestion">Research: <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/42">D&C 42</a> (Law of Consecration) and modern Church welfare principles.</p>
+                    
+                    <p class="question">4. How does learning obedience through suffering differ from learning through commandments?</p>
+                    <p class="study-suggestion">Research: <a href="https://www.blueletterbible.org/kjv/heb/5/8">Hebrews 5:8</a> and <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32">Alma 32</a> on experiential learning.</p>
+                    
+                    <p class="question">5. What does "fair as the sun, and clear as the moon" symbolize?</p>
+                    <p class="study-suggestion">Research: <a href="https://www.blueletterbible.org/kjv/sol/6/10">Song of Solomon 6:10</a> and Isaiah's prophecies about Zion.</p>
+                </div>
+                
+                <h3>Questions for Practical Application</h3>
+                <div class="question-section">
+                    <p class="question">1. How can you prepare spiritually while waiting for promised blessings?</p>
+                    <p class="application-ideas">Consider: Temple attendance, scripture study, service opportunities.</p>
+                    
+                    <p class="question">2. What specific steps can you take to become more united with fellow Saints?</p>
+                    <p class="application-ideas">Consider: Ward activities, ministering, sharing resources.</p>
+                    
+                    <p class="question">3. How can you seek peace with those who oppose your beliefs?</p>
+                    <p class="application-ideas">Consider: Dialogue strategies, finding common ground, showing respect.</p>
+                    
+                    <p class="question">4. What sacrifices is the Lord asking of you to build His kingdom?</p>
+                    <p class="application-ideas">Consider: Time, talents, resources, personal preferences.</p>                    
+                    <p class="question">5. How can you avoid the mistake of withholding consecration due to doubt?</p>
+                    <p class="application-ideas">Consider: Faith-building practices, testimony strengthening, trust exercises.</p>
+                </div>
+                
+                <h3>Cross-Reference Study Questions</h3>
+                <div class="question-section">
+                    <p class="question">1. How does D&C 105:6 relate to <a href="https://www.blueletterbible.org/kjv/heb/5/8">Hebrews 5:8</a> about Christ learning obedience?</p>
+                    
+                    <p class="question">2. Compare the promise "I will fight your battles" (v. 14) with <a href="https://www.blueletterbible.org/kjv/exo/14/14">Exodus 14:14</a>.</p>
+                    
+                    <p class="question">3. How does the command to "sue for peace" (v. 38) fulfill <a href="https://www.blueletterbible.org/kjv/mat/5/44">Matthew 5:44</a>?</p>
+                    
+                    <p class="question">4. Compare "many are called, but few are chosen" (v. 35) with <a href="https://www.blueletterbible.org/kjv/mat/22/14">Matthew 22:14</a>.</p>
+                    
+                    <p class="question">5. How does the promise of endowment (v. 11) relate to <a href="https://www.blueletterbible.org/kjv/luk/24/49">Luke 24:49</a>?</p>
+                </div>
+            </div>
+        </div>
+        
+    </div> <!-- End of container -->
+    
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        function expandAll() {
+            var sections = document.querySelectorAll('.accordion-section');
+            var panels = document.querySelectorAll('.content-panel');
+            sections.forEach(function(section) {
+                section.classList.add('active');
+            });
+            panels.forEach(function(panel) {
+                panel.classList.add('active');
+            });
+        }
+        
+        function collapseAll() {
+            var sections = document.querySelectorAll('.accordion-section');
+            var panels = document.querySelectorAll('.content-panel');
+            var subSections = document.querySelectorAll('.sub-accordion');
+            var subPanels = document.querySelectorAll('.sub-panel');
+            
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            panels.forEach(function(panel) {
+                panel.classList.remove('active');
+            });
+            subSections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            subPanels.forEach(function(panel) {
+                panel.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
