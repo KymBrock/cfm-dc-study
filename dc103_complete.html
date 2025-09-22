@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 103 Complete Study Guide - Zion's Camp and the Redemption of Zion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8474;
+        }
+        
+        .accordion-section.active {
+            background-color: #5a6d5f;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        /* Content Panels */
+        .content-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .content-panel.active {
+            max-height: none;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 15px;
+        }
+        
+        .panel-content {
+            padding: 20px;
+        }
+        
+        /* Sub-Accordions for Verses */
+        .sub-accordion {
+            background-color: #e8f0e9;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #d4e4d6;
+        }
+        
+        .sub-accordion.active {
+            background-color: #c1d9c4;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            color: #7c9885;
+            font-weight: bold;
+            float: right;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        .sub-panel {
+            padding: 0;
+            background-color: #f9fafb;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 6px 6px;
+        }
+        
+        .sub-panel.active {
+            max-height: none;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        
+        /* Typography Styles */
+        h2 {
+            color: #1e293b;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #7c9885;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #334155;
+            font-size: 1.5em;
+            margin: 20px 0 15px 0;
+        }
+        
+        h4 {
+            color: #475569;
+            font-size: 1.2em;
+            margin: 15px 0 10px 0;
+            font-weight: bold;
+        }
+        
+        /* Content Elements */
+        .scripture-quote {
+            background-color: #f0f4f8;
+            border-left: 4px solid #7c9885;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .highlight-box {
+            background-color: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .info-box {
+            background-color: #e0f2fe;
+            border: 1px solid #7dd3fc;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .question-section {
+            background-color: #f3f4f6;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .question {
+            color: #1e40af;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
+        
+        .reflection-prompt, .discussion-ideas, .study-suggestion, .application-ideas {
+            color: #64748b;
+            font-style: italic;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .sub-section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9fafb;
+            border-radius: 6px;
+        }
+        
+        /* Lists */
+        ul {
+            margin: 10px 0 10px 30px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        /* Links */
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        
+        /* Site Header Navigation */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+        
+        .cfm-button:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header-section {
+                padding: 20px;
+            }
+            
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+            
+            .tab-controls {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="index.html" class="cfm-button">Index</a>
+                <a href="https://www.cfmcorner.com/blog" class="cfm-button">View Full Lesson</a>
+                <a href="dc102_complete.html" class="cfm-button">D&C 102</a>
+                <a href="dc103_complete.html" class="cfm-button">D&C 103</a>
+                <a href="dc104_complete.html" class="cfm-button">D&C 104</a>
+                <a href="dc105_complete.html" class="cfm-button">D&C 105</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 103</h1>
+            <div class="subtitle">Zion's Camp - The Redemption of Zion Must Come by Power</div>
+            <div class="date-location">February 24, 1834 • Kirtland, Ohio</div>
+        </div>
+        
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>
+        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Section Overview</h2>
+                
+                <h3>Basic Information</h3>
+                <p><strong>Date of Revelation:</strong> February 24, 1834</p>
+                <p><strong>Location:</strong> Kirtland, Ohio</p>
+                <p><strong>Recipients:</strong> Joseph Smith, with Parley P. Pratt and Lyman Wight present as messengers from Missouri</p>
+                <p><strong>Verses:</strong> 40 verses</p>
+                <p><strong>Section Summary:</strong> A revelation calling for the organization of Zion's Camp to march to Missouri and assist the Saints who had been driven from Jackson County. The Lord promises conditional redemption of Zion through faith and sacrifice, establishes the number of volunteers needed, and gives specific instructions for the expedition.</p>
+                
+                <h3>Key Principles</h3>
+                <p><strong>Primary Doctrinal Principle:</strong> Zion must be redeemed through power, preceded by faith, sacrifice, and obedience to divine counsel.</p>
+                <p><strong>Secondary Principle:</strong> The Lord fights the battles of His Saints when they follow His commandments precisely, but chastisement comes through disobedience.</p>
+                <p><strong>Application Principle:</strong> Divine deliverance requires exact obedience, united effort, and willingness to sacrifice all things, even unto death if required.</p>
+                
+                <h3>Timeframe & Setting</h3>
+                
+                <h4>Circumstances Among Recipients</h4>
+                <p>Parley P. Pratt and Lyman Wight had just arrived from Missouri with desperate news of the Saints' expulsion from Jackson County. The Missouri Saints were refugees, having lost homes, property, and suffered violence. The Kirtland Saints were stirred with desire to help but unsure how to proceed. Many questioned whether armed resistance was appropriate for Saints.</p>
+                
+                <h4>Circumstances Within the Church</h4>
+                <p>The Church faced its first major crisis of physical persecution and property loss. Members in Missouri were scattered and suffering through winter without adequate shelter. The Church had no precedent for handling violent opposition at this scale. Questions arose about the relationship between temporal and spiritual salvation.</p>
+                
+                <h4>Relevant Local Circumstances</h4>
+                <p>Missouri mobs had violently expelled the Saints from Jackson County in November 1833. Local Missouri officials refused to enforce the law or protect the Saints. Governor Dunklin expressed sympathy but claimed inability to help without legislative support. The Saints' legal appeals were moving slowly through the system.</p>
+                
+                <h4>Relevant Global Circumstances</h4>
+                <p>American frontier justice often relied on vigilante action and militia force. The concept of states' rights limited federal intervention in local matters. Religious persecution was common, though usually not as violent as in Missouri. Military action by religious groups was viewed with suspicion following various religious conflicts in Europe.</p>
+                
+                <h3>Purpose of the Revelation</h3>
+                
+                <h4>Short Term</h4>
+                <ul>
+                    <li>Authorize and organize an armed expedition to Missouri (Zion's Camp)</li>
+                    <li>Provide specific numbers and instructions for recruitment</li>
+                    <li>Establish divine sanction for the Saints to defend themselves</li>
+                    <li>Unite the Church in a common cause of relieving the suffering Saints</li>
+                </ul>
+                
+                <h4>Long Term</h4>
+                <ul>
+                    <li>Teach principles of consecration and sacrifice for building Zion</li>
+                    <li>Establish patterns for how the Lord delivers His people</li>
+                    <li>Demonstrate that Zion is redeemed by power, not by money alone</li>
+                    <li>Prepare future leaders through the refining experience of Zion's Camp</li>
+                    <li>Show that obedience to prophetic counsel supersedes worldly wisdom</li>
+                </ul>
+                
+                <h3>Significance</h3>
+                
+                <h4>Short Term</h4>
+                <p>Zion's Camp was organized with approximately 200 men marching nearly 1,000 miles to Missouri. Though they didn't engage in battle, their presence influenced negotiations. The experience tested faith and revealed the hearts of participants. Several members apostatized, while others were strengthened. The camp provided crucial relief supplies to Missouri Saints.</p>
+                
+                <h4>Long Term</h4>
+                <p>The majority of the original Quorum of Twelve Apostles and First Quorum of Seventy were chosen from Zion's Camp participants. The experience became a proving ground for future Church leaders. Principles learned about consecration, unity, and obedience shaped Church culture. The prophecy that Zion would be redeemed "by power" continues to have future application. The revelation established precedents for Church response to persecution.</p>
+                
+                <h3>Cultural Insights</h3>
+                
+                <h4>Ancient</h4>
+                <ul>
+                    <li>Israel's Military Campaigns: Joshua leading Israel to reclaim the Promised Land (<a href="https://www.blueletterbible.org/kjv/jos/1/1-9/" target="_blank">Joshua 1:1-9</a>)</li>
+                    <li>Gideon's Army: Small, faithful force prevailing through divine power (<a href="https://www.blueletterbible.org/kjv/jdg/7/1-25/" target="_blank">Judges 7</a>)</li>
+                    <li>David's Mighty Men: Warriors consecrated to the Lord's cause (<a href="https://www.blueletterbible.org/kjv/2sa/23/8-39/" target="_blank">2 Samuel 23:8-39</a>)</li>
+                    <li>Maccabean Revolt: Religious group defending faith through military action</li>
+                </ul>
+                
+                <h4>Modern</h4>
+                <ul>
+                    <li>Demonstrates the balance between faith and works in solving problems</li>
+                    <li>Shows that God expects His people to act, not wait passively for deliverance</li>
+                    <li>Illustrates that spiritual preparation must precede temporal victory</li>
+                    <li>Reveals how trials and sacrifice prepare leaders for greater responsibilities</li>
+                    <li>Teaches that the Lord's ways often differ from human expectations</li>
+                </ul>
+                
+                <h3>Modern Application</h3>
+                
+                <h4>Personal Application</h4>
+                <p>Recognize that personal "Zions" require sacrifice and exact obedience to reclaim. Understand that the Lord may require uncomfortable actions to prove faith. Accept that divine deliverance often comes differently than expected. Prepare to sacrifice temporal things for spiritual blessings. Trust prophetic counsel even when it seems contrary to conventional wisdom.</p>
+                
+                <h4>Family Application</h4>
+                <p>Teach children about standing for truth even when it requires sacrifice. Demonstrate unity in following prophetic counsel as a family. Show how temporary trials prepare us for eternal blessings. Build faith that God will fight our battles when we're obedient. Create family traditions of supporting others in their trials.</p>
+                
+                <h4>Church Application</h4>
+                <p>Support Church initiatives even when we don't see the full picture. Unite with other Saints in common causes despite personal sacrifice. Recognize that the Lord prepares leaders through difficult experiences. Understand that building Zion requires more than good intentions. Maintain faith when divine intervention differs from expectations.</p>
+                
+                <h4>Community Application</h4>
+                <p>Stand for religious freedom and the rights of the persecuted. Organize lawful responses to injustice and oppression. Demonstrate that religious people can be good citizens while maintaining faith. Show compassion and provide practical help to refugees and displaced persons. Build bridges of understanding to prevent religious persecution.</p>
+                
+                <h3>Questions for Personal Study</h3>
+                <ol>
+                    <li>What "Zions" in your life need to be redeemed through power and sacrifice?</li>
+                    <li>How does the Lord's requirement of 500 men (later reduced) show His awareness of human capacity?</li>
+                    <li>What leadership qualities were developed through the Zion's Camp experience?</li>
+                    <li>How does this revelation balance temporal and spiritual approaches to problems?</li>
+                    <li>What does it mean that Zion cannot be built up "only by the purchase of money"?</li>
+                    <li>How do we know when to "turn the other cheek" versus when to "defend our families"?</li>
+                    <li>What modern applications exist for the principle of being "willing to lay down [our] lives"?</li>
+                </ol>
+                
+                <h3>Key Doctrines</h3>
+                
+                <h4>New Doctrines Introduced</h4>
+                <ul>
+                    <li><strong>Zion Redeemed by Power:</strong> Spiritual power combined with temporal action required</li>
+                    <li><strong>Conditional Promises:</strong> Blessings dependent on reaching specific thresholds of faith</li>
+                    <li><strong>Sacred Violence:</strong> The Lord can sanction defensive action under specific conditions</li>
+                    <li><strong>Collective Consecration:</strong> Groups covenanting together for divine purposes</li>
+                </ul>
+                
+                <h4>Previous Doctrines Clarified</h4>
+                <ul>
+                    <li><strong>Law of Consecration:</strong> Extended to include consecration of life itself if needed</li>
+                    <li><strong>Gathering of Israel:</strong> Sometimes requires physical defense of gathered places</li>
+                    <li><strong>Prophetic Authority:</strong> Includes temporal as well as spiritual direction</li>
+                    <li><strong>Divine Justice:</strong> The Lord will fight for His people when conditions are met</li>
+                </ul>
+                
+                <h4>Covenant Principles Explained</h4>
+                <ul>
+                    <li><strong>Covenant of Sacrifice:</strong> Willingness to give all, including life, for God's kingdom</li>
+                    <li><strong>Covenant of Obedience:</strong> Following divine commands precisely, not partially</li>
+                    <li><strong>Covenant of Consecration:</strong> All resources dedicated to building Zion</li>
+                    <li><strong>Covenant of Unity:</strong> Standing together as "one heart and one mind" in trials</li>
+                </ul>
+            </div>
+        </div>        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Enhanced Historical Context</h2>
+                
+                <h3>The Missouri Crisis (November 1833 - February 1834)</h3>
+                <p>In November 1833, violent mobs drove approximately 1,200 Latter-day Saints from Jackson County, Missouri. The destruction was devastating:</p>
+                <ul>
+                    <li>Over 200 homes burned or destroyed</li>
+                    <li>Thousands of acres of improved land seized</li>
+                    <li>Crops, livestock, and personal property stolen or destroyed</li>
+                    <li>Several Saints killed, many more injured</li>
+                    <li>Women and children fleeing across the frozen Missouri River in November</li>
+                </ul>
+                <p>The refugees found temporary shelter in Clay County, but many lacked adequate clothing, food, or shelter for the harsh winter.</p>
+                
+                <h3>Legal and Political Context</h3>
+                <div class="highlight-box">
+                    <h4>The Failure of Civil Authority:</h4>
+                    <ul>
+                        <li><strong>Governor Daniel Dunklin:</strong> Expressed sympathy but claimed inability to help without legislative backing</li>
+                        <li><strong>Local Courts:</strong> Refused to prosecute mob members who were often prominent citizens</li>
+                        <li><strong>State Militia:</strong> Often included the very men who participated in mob violence</li>
+                        <li><strong>Federal Government:</strong> Claimed no jurisdiction in state matters under states' rights doctrine</li>
+                    </ul>
+                </div>
+                
+                <h3>Why Zion's Camp?</h3>
+                <p>The expedition served multiple crucial purposes:</p>
+                <ol>
+                    <li><strong>Show of Strength:</strong> Demonstrate the Saints wouldn't be passive victims</li>
+                    <li><strong>Relief Mission:</strong> Bring supplies and money to destitute Missouri Saints</li>
+                    <li><strong>Political Leverage:</strong> Influence Governor Dunklin to restore lands</li>
+                    <li><strong>Leadership Training:</strong> Test and prepare future Church leaders</li>
+                    <li><strong>Fulfillment of Prophecy:</strong> The Lord had promised Zion would be redeemed</li>
+                </ol>
+                
+                <h3>The Journey (May-June 1834)</h3>
+                <div class="info-box">
+                    <h4>Zion's Camp Statistics:</h4>
+                    <ul>
+                        <li><strong>Distance:</strong> Nearly 1,000 miles from Kirtland to Missouri</li>
+                        <li><strong>Participants:</strong> Approximately 200 men, some women and children</li>
+                        <li><strong>Duration:</strong> About 45 days of marching</li>
+                        <li><strong>Daily Distance:</strong> 25-40 miles per day on foot</li>
+                        <li><strong>Conditions:</strong> Extreme heat, humidity, contaminated water, poor food, disease</li>
+                        <li><strong>Organization:</strong> Military structure with companies of tens and fifties</li>
+                    </ul>
+                </div>
+                
+                <h3>Immediate Results</h3>
+                <p>The immediate outcomes seemed disappointing to many:</p>
+                <ul>
+                    <li>No military engagement occurred (preventing bloodshed)</li>
+                    <li>Cholera struck the camp, killing 14 members</li>
+                    <li>Some participants apostatized, calling it a failure</li>
+                    <li>Missouri Saints received crucial supplies and support</li>
+                    <li>Negotiations led to temporary peace but no land restoration</li>
+                </ul>
+                
+                <h3>Long-Term Impact</h3>
+                <div class="highlight-box">
+                    <h4>Leadership Development from Zion's Camp:</h4>
+                    <ul>
+                        <li><strong>9 of the original Twelve Apostles</strong> were Zion's Camp participants</li>
+                        <li><strong>All of the First Quorum of Seventy</strong> were chosen from camp members</li>
+                        <li><strong>Future Church Presidents:</strong> Brigham Young, John Taylor, Wilford Woodruff</li>
+                        <li><strong>Key Leaders:</strong> Heber C. Kimball, Orson Hyde, Orson Pratt, and many others</li>
+                    </ul>
+                </div>
+                
+                <h3>Parley P. Pratt and Lyman Wight's Mission</h3>
+                <p>These two brethren had traveled from Missouri to Kirtland in winter conditions to:</p>
+                <ul>
+                    <li>Report the violent expulsion of the Saints</li>
+                    <li>Seek guidance from the Prophet Joseph Smith</li>
+                    <li>Obtain help for the suffering refugees</li>
+                    <li>Determine the Lord's will for reclaiming Zion</li>
+                </ul>
+                <p>Their arrival prompted this revelation, which would change Church history.</p>
+                
+                <h3>The Concept of "Redemption by Power"</h3>
+                <p>The phrase "redemption of Zion must needs come by power" (v. 15) has multiple layers:</p>
+                <ul>
+                    <li><strong>Not Military Might:</strong> Though armed, the camp's power came from consecration</li>
+                    <li><strong>Divine Power:</strong> Miracles and protection attended the faithful</li>
+                    <li><strong>Priesthood Authority:</strong> The camp operated under divine commission</li>
+                    <li><strong>Unity and Sacrifice:</strong> Power came through united consecration</li>
+                    <li><strong>Future Application:</strong> Points to the ultimate redemption of Zion in the last days</li>
+                </ul>
+                
+                <h3>Doctrinal Significance</h3>
+                <p>D&C 103 established critical precedents:</p>
+                <ul>
+                    <li>The Lord can authorize defensive action when conditions are met</li>
+                    <li>True discipleship requires willingness to sacrifice everything</li>
+                    <li>Divine deliverance comes through obedience, not human wisdom</li>
+                    <li>The Lord uses trials to prepare leaders and refine His people</li>
+                    <li>Building Zion requires both temporal and spiritual preparation</li>
+                </ul>
+            </div>
+        </div>        
+        <!-- VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Verse-by-Verse Study Guide</h2>
+                
+                <!-- Verses 1-6 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-6: The Scattering and Future Redemption of Zion</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>1</strong> Verily I say unto you, my friends, behold, I will give unto you a revelation and commandment, that you may know how to act in the discharge of your duties concerning the salvation and redemption of your brethren, who have been scattered on the land of Zion;</p>
+                        <p><strong>2</strong> Being driven and smitten by the hands of mine enemies, on whom I will pour out my wrath without measure in mine own time.</p>
+                        <p><strong>3</strong> For I have suffered them thus far, that they might fill up the measure of their iniquities, that their cup might be full;</p>
+                        <p><strong>4</strong> And that those who call themselves after my name might be chastened for a little season with a sore and grievous chastisement, because they did not hearken altogether unto the precepts and commandments which I gave unto them.</p>
+                        <p><strong>5</strong> But verily I say unto you, that I have decreed a decree which my people shall realize, inasmuch as they hearken from this very hour unto the counsel which I, the Lord their God, shall give unto them.</p>
+                        <p><strong>6</strong> Behold they shall, for I have decreed it, begin to prevail against mine enemies from this very hour.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>The Lord acknowledges the scattering and suffering of the Missouri Saints</li>
+                        <li>Divine wrath is stored up for the persecutors in the Lord's timing</li>
+                        <li>The Saints' suffering serves as chastisement for incomplete obedience</li>
+                        <li>Immediate blessings are promised for immediate obedience</li>
+                        <li>Victory over enemies begins with hearkening to counsel</li>
+                    </ul>
+                    
+                    <h3>Language & Cultural Insights</h3>
+                    <ul>
+                        <li><strong>"redemption"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/" target="_blank">גָּאַל (*ga'al*)</a> — "to redeem, act as kinsman-redeemer"</li>
+                        <li><strong>"wrath without measure"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g3709/kjv/tr/0-1/" target="_blank">ὀργή (*orge*)</a> — "anger, wrath, indignation"</li>
+                        <li><strong>"fill up the measure"</strong> - Biblical idiom for reaching the full limit of sin (<a href="https://www.blueletterbible.org/kjv/gen/15/16/" target="_blank">Genesis 15:16</a>)</li>
+                        <li><strong>"chastened"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g3811/kjv/tr/0-1/" target="_blank">παιδεύω (*paideuo*)</a> — "to train, discipline, correct"</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/heb/12/6-11/" target="_blank">Hebrews 12:6-11</a> - Whom the Lord loves He chastens</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/deu/32/35/" target="_blank">Deuteronomy 32:35</a> - Vengeance belongs to the Lord</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101.1-9" target="_blank">D&C 101:1-9</a> - Previous revelation on the Missouri persecutions</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/2th/1/6-8/" target="_blank">2 Thessalonians 1:6-8</a> - God's righteous judgment on persecutors</li>
+                    </ul>
+                    
+                    <h3>Modern Application</h3>
+                    <p>Understanding that both trials and deliverance come from God helps us maintain faith during difficult times, knowing that immediate obedience brings immediate blessings, even if full deliverance takes time.</p>
+                </div>                
+                <!-- Verses 7-15 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 7-15: Conditions for Prevailing Against Enemies</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>7</strong> And by hearkening to observe all the words which I, the Lord their God, shall speak unto them, they shall never cease to prevail until the kingdoms of the world are subdued under my feet, and the earth is given unto the saints, to possess it forever and ever.</p>
+                        <p><strong>8</strong> But inasmuch as they keep not my commandments, and hearken not to observe all my words, the kingdoms of the world shall prevail against them.</p>
+                        <p><strong>9</strong> For they were set to be a light unto the world, and to be the saviors of men;</p>
+                        <p><strong>10</strong> And inasmuch as they are not the saviors of men, they are as salt that has lost its savor, and is thenceforth good for nothing but to be cast out and trodden under foot of men.</p>
+                        <p><strong>11</strong> But verily I say unto you, I have decreed that your brethren which have been scattered shall return to the lands of their inheritances, and shall build up the waste places of Zion.</p>
+                        <p><strong>12</strong> For after much tribulation, as I have said unto you in a former commandment, cometh the blessing.</p>
+                        <p><strong>13</strong> Behold, this is the blessing which I have promised after your tribulations, and the tribulations of your brethren—your redemption, and the redemption of your brethren, even their restoration to the land of Zion, to be established, no more to be thrown down.</p>
+                        <p><strong>14</strong> Nevertheless, if they pollute their inheritances they shall be thrown down; for I will not spare them if they pollute their inheritances.</p>
+                        <p><strong>15</strong> Behold, I say unto you, the redemption of Zion must needs come by power;</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Complete obedience leads to ultimate victory over all worldly opposition</li>
+                        <li>Partial obedience results in being overcome by the world</li>
+                        <li>The Saints are called to be lights and saviors to the world</li>
+                        <li>Zion will be restored but must remain pure to avoid being thrown down again</li>
+                        <li>Redemption requires divine power, not human strength alone</li>
+                    </ul>
+                    
+                    <h3>Language & Cultural Insights</h3>
+                    <ul>
+                        <li><strong>"saviors of men"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3467/kjv/wlc/0-1/" target="_blank">מוֹשִׁיעַ (*moshia*)</a> — "deliverer, savior"</li>
+                        <li><strong>"salt that has lost its savor"</strong> - Reference to <a href="https://www.blueletterbible.org/kjv/mat/5/13/" target="_blank">Matthew 5:13</a></li>
+                        <li><strong>"waste places"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2723/kjv/wlc/0-1/" target="_blank">חָרְבָּה (*chorbah*)</a> — "desolation, ruin"</li>
+                        <li><strong>"by power"</strong> - Not by human might but by divine power (<a href="https://www.blueletterbible.org/kjv/zec/4/6/" target="_blank">Zechariah 4:6</a>)</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/5/13-14/" target="_blank">Matthew 5:13-14</a> - Salt and light of the world</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/58/12/" target="_blank">Isaiah 58:12</a> - Repairer of the breach</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101.18" target="_blank">D&C 101:18</a> - After tribulation comes blessing</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/oba/1/21/" target="_blank">Obadiah 1:21</a> - Saviors on Mount Zion</li>
+                    </ul>
+                    
+                    <h3>Modern Application</h3>
+                    <p>We must understand that building Zion—whether in our homes, communities, or the Church—requires both spiritual power and complete consecration, not partial efforts or worldly methods alone.</p>
+                </div>                
+                <!-- Verses 16-24 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 16-24: The Call for Strength and Ultimate Discipleship</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>16</strong> Therefore, let my servant Joseph Smith, Jun., say unto the strength of my house, my young men and the middle aged—Gather yourselves together unto the land of Zion, upon the lands which I have bought with money that has been consecrated unto me.</p>
+                        <p><strong>17</strong> And let all the churches send up wise men with their moneys, and purchase lands even as I have commanded them.</p>
+                        <p><strong>18</strong> And inasmuch as mine enemies come against you to drive you from my goodly land, which I have consecrated to be the land of Zion, even from your own lands after these testimonies, which ye have brought before me against them, ye shall curse them;</p>
+                        <p><strong>19</strong> And whomsoever ye curse, I will curse, and ye shall avenge me of mine enemies.</p>
+                        <p><strong>20</strong> And my presence shall be with you even in avenging me of mine enemies, unto the third and fourth generation of them that hate me.</p>
+                        <p><strong>21</strong> Let no man be afraid to lay down his life for my sake; for whoso layeth down his life for my sake shall find it again.</p>
+                        <p><strong>22</strong> And whoso is not willing to lay down his life for my sake is not my disciple.</p>
+                        <p><strong>23</strong> It is my will that my servant Sidney Rigdon shall lift up his voice in the congregations in the eastern countries, in preparing the churches to keep the commandments which I have given unto them concerning the restoration and redemption of Zion.</p>
+                        <p><strong>24</strong> It is my will that my servant Parley P. Pratt and my servant Lyman Wight should not return to the land of their brethren, until they have obtained companies to go up unto the land of Zion, by tens, or by twenties, or by fifties, or by an hundred, until they have obtained to the number of five hundred of the strength of my house.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>The Lord commands the gathering of the "strength of His house" to Zion</li>
+                        <li>Churches should continue purchasing lands legally despite persecution</li>
+                        <li>Divine authority to curse enemies when acting under the Lord's direction</li>
+                        <li>The ultimate test of discipleship is willingness to give one's life</li>
+                        <li>Specific assignments given to Church leaders for gathering volunteers</li>
+                    </ul>
+                    
+                    <h3>Language & Cultural Insights</h3>
+                    <ul>
+                        <li><strong>"strength of my house"</strong> - Military terminology for able-bodied men</li>
+                        <li><strong>"young men and the middle aged"</strong> - Approximately ages 18-45 in that era</li>
+                        <li><strong>"curse them"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h7043/kjv/wlc/0-1/" target="_blank">קָלַל (*qalal*)</a> — "to declare cursed"</li>
+                        <li><strong>"third and fourth generation"</strong> - Biblical formula from <a href="https://www.blueletterbible.org/kjv/exo/20/5/" target="_blank">Exodus 20:5</a></li>
+                        <li><strong>"by tens...by fifties"</strong> - Military organization pattern from <a href="https://www.blueletterbible.org/kjv/exo/18/21/" target="_blank">Exodus 18:21</a></li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/39/" target="_blank">Matthew 10:39</a> - He that loses his life shall find it</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jhn/15/13/" target="_blank">John 15:13</a> - Greater love hath no man</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/exo/18/21/" target="_blank">Exodus 18:21</a> - Organization by tens and fifties</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98.23-48" target="_blank">D&C 98:23-48</a> - Laws of war and retaliation</li>
+                    </ul>
+                    
+                    <h3>Modern Application</h3>
+                    <p>True discipleship requires complete consecration—of possessions, efforts, and even life if necessary. We organize effectively for righteous causes while trusting in divine protection and justice.</p>
+                </div>                
+                <!-- Verses 25-40 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 25-40: Organization and Final Instructions</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>25</strong> Behold, I say unto you, that it is my will that as many as have come up hither, that can stay in the region round about, let them stay;</p>
+                        <p><strong>26</strong> And those that cannot stay, who have families in the east, let them tarry for a little season, inasmuch as my servant Sidney shall appoint them;</p>
+                        <p><strong>27</strong> For I will counsel him concerning this matter, and all things whatever shall be made known unto them.</p>
+                        <p><strong>28</strong> And let my servant Parley P. Pratt journey with my servant Joseph Smith, Jun.</p>
+                        <p><strong>29</strong> Let my servant Lyman Wight journey with my servant Sidney Rigdon.</p>
+                        <p><strong>30</strong> Let my servant Hyrum Smith journey with my servant Frederick G. Williams.</p>
+                        <p><strong>31</strong> Let my servant Orson Hyde journey with my servant Orson Pratt, whithersoever my servant Joseph Smith, Jun., shall counsel them, in obtaining the fulfillment of these commandments which I have given unto you, and leave the residue in my hands. Even so. Amen.</p>
+                        <p><strong>32</strong> And again, verily I say unto you, if my servant Sidney will serve me and be counselor unto my servant Joseph, let him arise and come up and stand in the office of his calling, and humble himself before me.</p>
+                        <p><strong>33</strong> And if he will offer unto me an acceptable offering, and acknowledgments, and remain with my people, behold, I, the Lord your God, will heal him that he shall be healed; and he shall lift up his voice again on the mountains, and be a spokesman before my face.</p>
+                        <p><strong>34</strong> Behold, I say unto you, that it is not expedient in me that the first elders of my church should be sent forth to the land of Zion;</p>
+                        <p><strong>35</strong> For behold, they have many things to do, and many people to attend to in the region round about.</p>
+                        <p><strong>36</strong> And let all the churches send up wise men with their moneys, and purchase lands even as I have appointed them.</p>
+                        <p><strong>37-40</strong> [Repetition of verses 18-22 emphasizing the divine authority to curse enemies and the requirement of ultimate discipleship]</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Practical instructions balance kingdom duties with family obligations</li>
+                        <li>Specific missionary companionships assigned for the expedition</li>
+                        <li>Sidney Rigdon given opportunity to repent and be healed</li>
+                        <li>The presiding elders should remain in Kirtland to continue their ministry</li>
+                        <li>Repeated emphasis on divine justice and complete consecration</li>
+                    </ul>
+                    
+                    <h3>Language & Cultural Insights</h3>
+                    <ul>
+                        <li><strong>"region round about"</strong> - Areas surrounding Kirtland, Ohio</li>
+                        <li><strong>"acceptable offering"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h7522/kjv/wlc/0-1/" target="_blank">רָצוֹן (*ratson*)</a> — "favor, acceptance, will"</li>
+                        <li><strong>"spokesman"</strong> - Reference to Aaron being spokesman for Moses (<a href="https://www.blueletterbible.org/kjv/exo/4/16/" target="_blank">Exodus 4:16</a>)</li>
+                        <li><strong>"on the mountains"</strong> - Biblical imagery for proclaiming from heights (<a href="https://www.blueletterbible.org/kjv/isa/52/7/" target="_blank">Isaiah 52:7</a>)</li>
+                        <li><strong>"first elders"</strong> - The earliest ordained elders, including Joseph Smith and Oliver Cowdery</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/1co/7/20-24/" target="_blank">1 Corinthians 7:20-24</a> - Abide in your calling</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/9-10/" target="_blank">Matthew 10:9-10</a> - Instructions for missionary journeys</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/35.4" target="_blank">D&C 35:4</a> - Sidney called as spokesman</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/14/26-27/" target="_blank">Luke 14:26-27</a> - Cost of discipleship</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/2/10/" target="_blank">Revelation 2:10</a> - Be faithful unto death</li>
+                    </ul>
+                    
+                    <h3>Modern Application</h3>
+                    <p>Church leadership requires wisdom in deploying resources—both human and financial. Some are called to go while others are called to stay and strengthen the home base. All must be willing to sacrifice everything for the cause of Zion.</p>
+                </div>
+                
+            </div>
+        </div>        
+        <!-- WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Word Studies - Comprehensive Linguistic Analysis</h2>
+                
+                <h3>1. Redemption of Zion</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/" target="_blank">גָּאַל (*ga'al*)</a> — "to redeem, act as kinsman-redeemer, avenge, ransom"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g629/kjv/tr/0-1/" target="_blank">ἀπολύτρωσις (*apolutrosis*)</a> — "redemption, deliverance, release by payment of ransom"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/redemptio" target="_blank">redemptio</a> — "a buying back, ransoming, redemption"</p>
+                    <p><strong>Etymology:</strong> From Latin <a href="https://www.etymonline.com/word/redemption" target="_blank">*redemptio*</a> via Old French, literally "a buying back," from re- "back" + emere "to buy"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/redemption" target="_blank">Redemption</a> — "Repurchase of captured goods or prisoners; the liberation of an estate from mortgage"</p>
+                    <p><strong>Significance:</strong> In D&C 103, redemption encompasses both temporal (recovering lands) and spiritual (delivering the Saints) dimensions. It requires divine power, not just human effort or money, linking to the ancient Hebrew concept of the go'el (kinsman-redeemer).</p>
+                </div>
+                
+                <h3>2. Power (By Power)</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h3581/kjv/wlc/0-1/" target="_blank">כֹּחַ (*koach*)</a> — "strength, power, might, force"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g1411/kjv/tr/0-1/" target="_blank">δύναμις (*dunamis*)</a> — "power, ability, miraculous power"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/potentia" target="_blank">potentia</a> — "power, might, ability, efficacy"</p>
+                    <p><strong>Etymology:</strong> From Old French <a href="https://www.etymonline.com/word/power" target="_blank">*poeir*</a>, from Vulgar Latin *potere, from Latin potis "powerful, able"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/power" target="_blank">Power</a> — "The right to act or not to act; ability to produce or prevent"</p>
+                    <p><strong>Significance:</strong> "Redemption of Zion must needs come by power" (v. 15) refers not to military might but to divine power manifest through consecrated people. This echoes Zechariah 4:6: "Not by might, nor by power, but by my spirit."</p>
+                </div>
+                
+                <h3>3. Disciple</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h8527/kjv/wlc/0-1/" target="_blank">תַּלְמִיד (*talmid*)</a> — "scholar, learner, disciple"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g3101/kjv/tr/0-1/" target="_blank">μαθητής (*mathetes*)</a> — "learner, pupil, disciple, follower"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/discipulus" target="_blank">discipulus</a> — "student, learner, follower"</p>
+                    <p><strong>Etymology:</strong> From Latin <a href="https://www.etymonline.com/word/disciple" target="_blank">*discipulus*</a> "student, learner, follower," from discere "to learn"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/disciple" target="_blank">Disciple</a> — "A learner; one who receives or professes to receive instruction from another"</p>
+                    <p><strong>Significance:</strong> "Whoso is not willing to lay down his life for my sake is not my disciple" (v. 22, 40) defines ultimate discipleship as complete consecration, including life itself.</p>
+                </div>
+                
+                <h3>4. Curse (Divine Malediction)</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h7043/kjv/wlc/0-1/" target="_blank">קָלַל (*qalal*)</a> — "to be light, to curse, declare cursed"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2672/kjv/tr/0-1/" target="_blank">καταράομαι (*kataraomai*)</a> — "to curse, doom, imprecate evil"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/maledictio" target="_blank">maledictio</a> — "curse, imprecation, evil-speaking"</p>
+                    <p><strong>Etymology:</strong> From Old English <a href="https://www.etymonline.com/word/curse" target="_blank">*curs*</a>, of uncertain origin</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/curse" target="_blank">Curse</a> — "To utter a wish of evil against; to imprecate evil upon"</p>
+                    <p><strong>Significance:</strong> "Whomsoever ye curse, I will curse" (v. 19, 38) grants divine authority to invoke judgment on persecutors—not personal vengeance but divine justice through authorized servants.</p>
+                </div>                
+                <h3>5. Chastened/Chastisement</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h3256/kjv/wlc/0-1/" target="_blank">יָסַר (*yasar*)</a> — "to chasten, discipline, instruct, correct"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g3811/kjv/tr/0-1/" target="_blank">παιδεύω (*paideuo*)</a> — "to train children, to chasten, to instruct"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/castigatio" target="_blank">castigatio</a> — "correction, reproof, punishment"</p>
+                    <p><strong>Etymology:</strong> From Latin <a href="https://www.etymonline.com/word/chasten" target="_blank">*castigare*</a> "to correct, punish," from castus "pure" + agere "to drive"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/chasten" target="_blank">Chasten</a> — "To correct by punishment; to inflict pain for the purpose of reclaiming"</p>
+                    <p><strong>Significance:</strong> The Saints are "chastened for a little season" (v. 4) because of incomplete obedience. This divine discipline is corrective, not punitive, designed to prepare them for greater blessings.</p>
+                </div>
+                
+                <h3>6. Saviors of Men</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h3467/kjv/wlc/0-1/" target="_blank">מוֹשִׁיעַ (*moshia*)</a> — "savior, deliverer"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g4990/kjv/tr/0-1/" target="_blank">σωτήρ (*soter*)</a> — "savior, deliverer, preserver"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/salvator" target="_blank">salvator</a> — "savior, deliverer"</p>
+                    <p><strong>Etymology:</strong> From Latin <a href="https://www.etymonline.com/word/savior" target="_blank">*salvator*</a>, from salvare "to save"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/savior" target="_blank">Savior</a> — "One that saves, preserves or delivers from destruction or danger"</p>
+                    <p><strong>Significance:</strong> The Saints are called to be "saviors of men" (v. 9), participating in Christ's work of salvation. This connects to Obadiah 1:21 about "saviors on Mount Zion."</p>
+                </div>
+                
+                <h3>7. Strength of My House</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew (Strength):</strong> <a href="https://www.blueletterbible.org/lexicon/h2428/kjv/wlc/0-1/" target="_blank">חַיִל (*chayil*)</a> — "strength, might, army, wealth, valor"</p>
+                    <p><strong>Hebrew (House):</strong> <a href="https://www.blueletterbible.org/lexicon/h1004/kjv/wlc/0-1/" target="_blank">בַּיִת (*bayith*)</a> — "house, household, family, temple"</p>
+                    <p><strong>Greek (Strength):</strong> <a href="https://www.blueletterbible.org/lexicon/g2479/kjv/tr/0-1/" target="_blank">ἰσχύς (*ischus*)</a> — "strength, might, power"</p>
+                    <p><strong>Significance:</strong> "Strength of my house" (v. 16) refers to able-bodied priesthood holders willing to defend Zion. It combines military terminology with covenant language, indicating those consecrated to the Lord's service.</p>
+                </div>
+                
+                <!-- Additional word studies would continue here -->
+                
+            </div>
+        </div>        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Teaching Applications</h2>
+                
+                <h3>Sunday School Application</h3>
+                <div class="highlight-box">
+                    <p><strong>Topic:</strong> "Building Zion in Our Day"</p>
+                    <p><strong>Opening Question:</strong> What "Zions" in our lives need to be redeemed through divine power rather than human effort?</p>
+                    <p><strong>Main Points:</strong></p>
+                    <ul>
+                        <li>Identify areas where we rely too heavily on worldly solutions</li>
+                        <li>Discuss how complete consecration looks in modern times</li>
+                        <li>Explore the balance between temporal preparation and spiritual power</li>
+                        <li>Share examples of divine intervention following sacrifice</li>
+                    </ul>
+                    <p><strong>Activity:</strong> Create two columns: "By Money/Human Effort" vs. "By Divine Power" and categorize various challenges</p>
+                </div>
+                
+                <h3>Seminary Application (Youth)</h3>
+                <div class="highlight-box">
+                    <p><strong>Topic:</strong> "The Ultimate Test of Discipleship"</p>
+                    <p><strong>Attention Getter:</strong> Show images of Zion's Camp route (1,000 miles on foot)</p>
+                    <p><strong>Key Concepts for Youth:</strong></p>
+                    <ul>
+                        <li>What does "laying down your life" mean for teenagers today?</li>
+                        <li>Standing for truth when it costs friendships or popularity</li>
+                        <li>The difference between believing in Christ and being His disciple</li>
+                        <li>How small sacrifices prepare us for greater consecration</li>
+                    </ul>
+                    <p><strong>Interactive Element:</strong> "Disciple or Not?" scenarios—students determine if actions reflect true discipleship</p>
+                </div>
+                
+                <h3>Institute Application (Young Adults)</h3>
+                <div class="highlight-box">
+                    <p><strong>Topic:</strong> "When God Calls You to Your Zion's Camp"</p>
+                    <p><strong>Deep Dive Topics:</strong></p>
+                    <ul>
+                        <li>Recognizing personal calls to difficult service</li>
+                        <li>The relationship between obedience and miracles</li>
+                        <li>How trials prepare leaders (most Apostles came from Zion's Camp)</li>
+                        <li>Balancing family obligations with Church service (v. 25-26)</li>
+                        <li>The role of exact obedience in receiving promised blessings</li>
+                    </ul>
+                    <p><strong>Case Study:</strong> Research Zion's Camp participants who became Church leaders</p>
+                </div>
+                
+                <h3>Family Home Evening Application</h3>
+                <div class="highlight-box">
+                    <p><strong>For Younger Children:</strong></p>
+                    <ul>
+                        <li>Tell the story of Zion's Camp as an adventure</li>
+                        <li>Discuss how families work together to solve problems</li>
+                        <li>Practice being "saviors" by helping others</li>
+                    </ul>
+                    <p><strong>For Teenagers:</strong></p>
+                    <ul>
+                        <li>Discuss what causes are worth sacrifice</li>
+                        <li>Share family stories of standing for right</li>
+                        <li>Explore how we can be "saviors of men" (v. 9)</li>
+                    </ul>
+                    <p><strong>Family Activity:</strong> Create a "Family Zion's Camp"—identify a family goal requiring everyone's contribution and sacrifice</p>
+                </div>
+                
+                <h3>Relief Society/Elders Quorum Application</h3>
+                <div class="highlight-box">
+                    <p><strong>Topic:</strong> "Modern Zion's Camps: Answering the Call to Gather Israel"</p>
+                    <p><strong>Ministry Focus:</strong></p>
+                    <ul>
+                        <li>Supporting missionaries (financial and emotional sacrifice)</li>
+                        <li>Temple work as redemption of our dead (time sacrifice)</li>
+                        <li>Ministering to refugees and displaced persons</li>
+                        <li>Standing with those facing persecution for their faith</li>
+                        <li>Building Zion in our wards through consecrated service</li>
+                    </ul>
+                    <p><strong>Practical Application:</strong> Organize ward efforts to support specific needs; Create "strength of the house" teams for service</p>
+                </div>
+            </div>
+        </div>        
+        <!-- STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Study Questions for Personal and Family Study</h2>
+                
+                <h3>Questions for Individual Reflection</h3>
+                <div class="question-section">
+                    <p class="question">1. What areas of your life need to be "redeemed by power" rather than your own efforts?</p>
+                    <p class="reflection-prompt">Consider: Where have you been relying too heavily on worldly solutions? How can you invite divine power?</p>
+                    
+                    <p class="question">2. Are you truly a disciple, or merely a believer? What's the difference?</p>
+                    <p class="reflection-prompt">Consider: The Lord says those unwilling to lay down their lives are not His disciples. What does this mean practically?</p>
+                    
+                    <p class="question">3. How do you respond when the Lord's solutions differ from your expectations?</p>
+                    <p class="reflection-prompt">Consider: Zion's Camp didn't fight battles as expected. How do you maintain faith when God's answers surprise you?</p>
+                    
+                    <p class="question">4. What would you be willing to sacrifice if the prophet asked today?</p>
+                    <p class="reflection-prompt">Consider: The Saints were asked to march 1,000 miles. What equivalent sacrifice might you face?</p>
+                    
+                    <p class="question">5. How has the Lord used trials to prepare you for greater responsibilities?</p>
+                    <p class="reflection-prompt">Consider: Most of the Twelve Apostles came from Zion's Camp. What is your "Zion's Camp" experience?</p>
+                </div>
+                
+                <h3>Questions for Family Discussion</h3>
+                <div class="question-section">
+                    <p class="question">1. What does it mean to be "saviors of men" as a family?</p>
+                    <p class="discussion-ideas">Discuss: Temple work, missionary service, helping neighbors, standing for truth together.</p>
+                    
+                    <p class="question">2. How can our family better follow prophetic counsel even when it's difficult?</p>
+                    <p class="discussion-ideas">Discuss: Times when following the prophet required sacrifice, blessings that came from obedience.</p>
+                    
+                    <p class="question">3. What "waste places" in our family life need to be rebuilt?</p>
+                    <p class="discussion-ideas">Discuss: Broken relationships, lost habits, spiritual practices that need restoration.</p>
+                    
+                    <p class="question">4. How do we balance family needs with Church service calls?</p>
+                    <p class="discussion-ideas">Discuss: The Lord's instructions about those with families (v. 25-26), finding appropriate balance.</p>
+                    
+                    <p class="question">5. What would our family's "Zion's Camp" look like?</p>
+                    <p class="discussion-ideas">Discuss: A united family goal requiring sacrifice from everyone, working together for a righteous cause.</p>
+                </div>
+                
+                <h3>Questions for Deeper Investigation</h3>
+                <div class="question-section">
+                    <p class="question">1. Research the 200+ participants of Zion's Camp. How many became Church leaders?</p>
+                    <p class="study-suggestion">Study: Joseph Smith Papers, Church History Library, biographies of early leaders.</p>
+                    
+                    <p class="question">2. What were Governor Dunklin's real motivations and constraints?</p>
+                    <p class="study-suggestion">Study: Missouri state archives, governor's correspondence, political context of 1833-1834.</p>
+                    
+                    <p class="question">3. Compare D&C 103 with D&C 105. How did the Lord evaluate Zion's Camp?</p>
+                    <p class="study-suggestion">Study: The Lord's assessment of the expedition, lessons learned, future applications.</p>
+                    
+                    <p class="question">4. When does God authorize the use of force in scripture?</p>
+                    <p class="study-suggestion">Study: Biblical wars, Book of Mormon battles, D&C 98 laws of war, modern Church statements.</p>
+                    
+                    <p class="question">5. What does "filling up the measure of iniquities" mean throughout scripture?</p>
+                    <p class="study-suggestion">Study: Genesis 15:16, 2 Nephi 28:8, Alma 14:11, patterns of divine judgment.</p>
+                </div>
+                
+                <h3>Cross-Reference Study Questions</h3>
+                <div class="question-section">
+                    <p class="question">Compare D&C 103:15 with <a href="https://www.blueletterbible.org/kjv/zec/4/6/" target="_blank">Zechariah 4:6</a>. How is Zion built "not by might, nor by power, but by my spirit"?</p>
+                    
+                    <p class="question">Read <a href="https://www.blueletterbible.org/kjv/mat/5/13-14/" target="_blank">Matthew 5:13-14</a> alongside D&C 103:9-10. What happens when Saints fail to be "saviors of men"?</p>
+                    
+                    <p class="question">Study <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101.1-9" target="_blank">D&C 101:1-9</a> with D&C 103:4. How does chastisement prepare us for blessings?</p>
+                    
+                    <p class="question">Examine <a href="https://www.blueletterbible.org/kjv/luk/14/26-33/" target="_blank">Luke 14:26-33</a> with D&C 103:21-22. What does Christ require of true disciples?</p>
+                    
+                    <p class="question">Consider <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/56.45-48" target="_blank">Alma 56:45-48</a> with D&C 103. How do both show willingness to die for righteousness?</p>
+                </div>
+            </div>
+        </div>
+        
+    </div> <!-- End of container -->
+    
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        function expandAll() {
+            var sections = document.querySelectorAll('.accordion-section');
+            var panels = document.querySelectorAll('.content-panel');
+            sections.forEach(function(section) {
+                section.classList.add('active');
+            });
+            panels.forEach(function(panel) {
+                panel.classList.add('active');
+            });
+        }
+        
+        function collapseAll() {
+            var sections = document.querySelectorAll('.accordion-section');
+            var panels = document.querySelectorAll('.content-panel');
+            var subSections = document.querySelectorAll('.sub-accordion');
+            var subPanels = document.querySelectorAll('.sub-panel');
+            
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            panels.forEach(function(panel) {
+                panel.classList.remove('active');
+            });
+            subSections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            subPanels.forEach(function(panel) {
+                panel.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

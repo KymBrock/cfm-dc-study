@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 102 Complete Study Guide - Organization of the First High Council</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section.active {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }        
+        /* Content Panels */
+        .content-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        
+        .content-panel.active {
+            max-height: none;
+            border: 1px solid #e5e7eb;
+            border-top: none;
+        }
+        
+        .panel-content {
+            padding: 30px;
+        }
+        
+        /* Typography within panels */
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 400;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+        
+        h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }        
+        /* Scripture Quote Styling */
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        /* Highlight Boxes */
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 1px solid #d4c190;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+        
+        a:hover {
+            color: #6b8774;
+            border-bottom: 1px solid #6b8774;
+        }
+        
+        /* Lists within panels */
+        .panel-content ul li strong {
+            color: #6b8774;
+        }        
+        /* Site Header Styles */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        
+        .site-nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: Georgia, serif;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .cfm-button:hover {
+            background-color: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+            color: #999;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }        
+        /* Sub-accordion styles for verse-by-verse */
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .sub-accordion.active {
+            background-color: #e5e7eb;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            color: #6b8774;
+            font-weight: bold;
+            float: right;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        .sub-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 6px 6px;
+        }
+        
+        .sub-panel.active {
+            max-height: none;
+            padding: 20px;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            margin-bottom: 10px;
+        }
+        
+        /* Question Sections for Study Questions */
+        .question-section {
+            background-color: #f9fafb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .question {
+            color: #6b8774;
+            font-weight: 600;
+            margin: 15px 0 8px 0;
+        }
+        
+        .reflection-prompt, .discussion-ideas, .study-suggestion, .application-ideas {
+            color: #6b7280;
+            font-style: italic;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 25px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .panel-content {
+                padding: 20px;
+            }
+            
+            .tab-controls {
+                justify-content: center;
+            }
+            
+            .tab-btn {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+            
+            .site-header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .site-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="index.html" class="cfm-button">Index</a>
+                <a href="https://www.cfmcorner.com/blog" class="cfm-button">View Full Lesson</a>
+                <a href="dc102_complete.html" class="cfm-button">D&C 102</a>
+                <a href="dc103_complete.html" class="cfm-button">D&C 103</a>
+                <a href="dc104_complete.html" class="cfm-button">D&C 104</a>
+                <a href="dc105_complete.html" class="cfm-button">D&C 105</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 102</h1>
+            <div class="subtitle">Minutes of the Organization of the First High Council</div>
+            <div class="date-location">February 17, 1834 • Kirtland, Ohio</div>
+        </div>
+        
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Section Overview</h2>
+                
+                <h3>Basic Information</h3>
+                <p><strong>Date of Revelation:</strong> February 17, 1834</p>
+                <p><strong>Location:</strong> Kirtland, Ohio</p>
+                <p><strong>Recipients:</strong> The high council of the church of Christ, with Joseph Smith presiding</p>
+                <p><strong>Verses:</strong> 34 verses</p>
+                <p><strong>Section Summary:</strong> Minutes documenting the organization of the first standing high council of the Church in Kirtland, establishing the pattern for Church judicial procedures and ecclesiastical governance. This revelation outlines the structure, purpose, and procedures of high councils.</p>
+                
+                <h3>Key Principles</h3>
+                <p><strong>Primary Doctrinal Principle:</strong> Church governance through councils operates by revelation and common consent, establishing divine order for resolving difficulties.</p>
+                <p><strong>Secondary Principle:</strong> Justice and equity must guide all Church disciplinary proceedings, with both accuser and accused having equal privileges.</p>
+                <p><strong>Application Principle:</strong> Divine patterns of organization provide order, fairness, and appeal processes that protect individual rights while maintaining Church standards.</p>
+                
+                <h3>Timeframe & Setting</h3>
+                
+                <h4>Circumstances Among Recipients</h4>
+                <p>The Saints in Kirtland were experiencing growth and increasing complexity in Church administration. Local leaders needed a formal structure to handle disputes and difficulties that arose among members. Some members had questions about Church discipline and how serious matters should be handled fairly.</p>
+                
+                <h4>Circumstances Within the Church</h4>
+                <p>The Church had grown to several thousand members across multiple states. The School of the Prophets had been operating for over a year. The Kirtland Temple construction was underway, requiring increased organization. Various difficulties and disputes among members needed consistent resolution procedures.</p>
+                
+                <h4>Relevant Local Circumstances</h4>
+                <p>Kirtland was becoming the center of the Church with rapid population growth. Economic tensions existed between Church members and local residents. Legal matters occasionally arose requiring Church intervention. The community needed stable governance structures as it expanded.</p>
+                
+                <h4>Relevant Global Circumstances</h4>
+                <p>American democracy was still relatively young, with evolving concepts of due process and judicial procedures. Religious revival movements often struggled with governance and authority issues. The concept of religious councils was familiar from Presbyterian and other Protestant traditions.</p>                
+                <h3>Purpose of the Revelation</h3>
+                
+                <h4>Short Term</h4>
+                <ul>
+                    <li>Establish immediate structure for resolving Church difficulties in Kirtland</li>
+                    <li>Provide clear procedures for Church disciplinary councils</li>
+                    <li>Define roles and responsibilities of high council members</li>
+                    <li>Create a system of appeals to protect members' rights</li>
+                </ul>
+                
+                <h4>Long Term</h4>
+                <ul>
+                    <li>Set the pattern for all future stake high councils throughout the world</li>
+                    <li>Establish principles of Church judiciary that would endure through dispensations</li>
+                    <li>Create balance between local and general Church authority</li>
+                    <li>Provide a model of revelatory governance combining divine direction with council deliberation</li>
+                </ul>
+                
+                <h3>Significance</h3>
+                
+                <h4>Short Term</h4>
+                <p>The high council immediately began functioning to resolve disputes and difficulties in Kirtland. Members had a clear understanding of how Church discipline would be administered. Leaders had defined roles and procedures to follow. The Church demonstrated organized governance comparable to civil institutions.</p>
+                
+                <h4>Long Term</h4>
+                <p>Every stake throughout the world follows this pattern for high councils today. These procedures continue to guide Church disciplinary councils globally. The principles of equity and justice established here remain fundamental to Church governance. The appeal process to the First Presidency continues unchanged.</p>
+                
+                <h3>Cultural Insights</h3>
+                
+                <h4>Ancient</h4>
+                <ul>
+                    <li>Israelite Council of Seventy: Moses appointed seventy elders to help govern Israel (<a href="https://www.blueletterbible.org/kjv/num/11/16-17/" target="_blank">Numbers 11:16-17</a>)</li>
+                    <li>Sanhedrin Structure: Jewish high council with similar numerical organization and judicial functions</li>
+                    <li>Apostolic Council: Early Christian church resolved difficulties through councils (<a href="https://www.blueletterbible.org/kjv/act/15/1-35/" target="_blank">Acts 15</a>)</li>
+                    <li>Temple Court Procedures: Ancient temple courts operated with similar principles of witnesses and deliberation</li>
+                </ul>
+                
+                <h4>Modern</h4>
+                <ul>
+                    <li>Provides religious due process comparable to civil legal systems</li>
+                    <li>Demonstrates transparency in Church governance and discipline</li>
+                    <li>Offers multiple perspectives through the even/odd number system</li>
+                    <li>Ensures accountability through appeal processes</li>
+                    <li>Balances mercy and justice in ecclesiastical proceedings</li>
+                </ul>                
+                <h3>Modern Application</h3>
+                
+                <h4>Personal Application</h4>
+                <p>Understand your rights and responsibilities in Church membership. Appreciate the careful balance between justice and mercy in God's kingdom. Recognize the importance of sustaining Church leaders and councils. Prepare to serve if called to positions requiring council participation.</p>
+                
+                <h4>Family Application</h4>
+                <p>Teach children about fairness and due process using these principles. Apply council principles in family councils and decision-making. Demonstrate how revelation and discussion work together. Model respectful disagreement and consensus-building.</p>
+                
+                <h4>Church Application</h4>
+                <p>Support high council members in their challenging responsibilities. Understand the sacredness of disciplinary proceedings. Respect confidentiality of council matters. Sustain decisions while understanding appeal rights exist.</p>
+                
+                <h4>Community Application</h4>
+                <p>Demonstrate that religious organizations can have sophisticated governance. Show how revelation and deliberation complement each other. Model fair and transparent organizational procedures. Contribute to community understanding of religious liberty.</p>
+                
+                <h3>Questions for Personal Study</h3>
+                <ol>
+                    <li>How does the high council structure reflect both divine order and democratic principles?</li>
+                    <li>What protections exist in these procedures for those accused of wrongdoing?</li>
+                    <li>How does the drawing of lots demonstrate both human participation and divine direction?</li>
+                    <li>Why might the Lord require consensus rather than simple majority in serious matters?</li>
+                    <li>How do these procedures balance local autonomy with centralized Church authority?</li>
+                    <li>What can we learn about Christ's character from His attention to procedural justice?</li>
+                    <li>How might serving on such a council change one's perspective on judgment and mercy?</li>
+                </ol>
+                
+                <h3>Key Doctrines</h3>
+                
+                <h4>New Doctrines Introduced</h4>
+                <ul>
+                    <li><strong>Standing High Councils:</strong> Permanent ecclesiastical bodies with defined jurisdiction</li>
+                    <li><strong>Numerical Drawing System:</strong> Divine selection through lot-drawing for speaking order</li>
+                    <li><strong>Structured Appeal Process:</strong> Formal appeals from local councils to First Presidency</li>
+                    <li><strong>Council Consensus Requirements:</strong> Unanimous decisions required for validity</li>
+                </ul>
+                
+                <h4>Previous Doctrines Clarified</h4>
+                <ul>
+                    <li><strong>Common Consent:</strong> Expanded to include sustaining of all council members</li>
+                    <li><strong>Revelation in Governance:</strong> Presidents appointed by revelation, acknowledged by voice</li>
+                    <li><strong>Priesthood Authority:</strong> High priests given specific judicial authority</li>
+                    <li><strong>Church Discipline:</strong> Formal procedures replacing informal correction</li>
+                </ul>
+                
+                <h4>Covenant Principles Explained</h4>
+                <ul>
+                    <li><strong>Covenant of Justice:</strong> The Lord's people covenant to judge righteously</li>
+                    <li><strong>Stewardship over Members:</strong> Leaders accountable for fair treatment of Saints</li>
+                    <li><strong>Unity in Council:</strong> Covenant obligation to reach unanimous decisions</li>
+                    <li><strong>Appeal Rights:</strong> Covenant protection ensuring no unrighteous dominion</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Enhanced Historical Context</h2>
+                
+                <h3>The Need for Church Courts (February 1834)</h3>
+                <p>By early 1834, the Church had grown to several thousand members spread across multiple states. With this growth came inevitable conflicts, misunderstandings, and occasionally serious transgressions that required formal resolution. The informal methods of the early Church were no longer sufficient for the increasingly complex organization.</p>
+                
+                <h3>Kirtland as the Center Stake</h3>
+                <p>Kirtland, Ohio, had become the gathering place for the Saints and the administrative center of the Church. The School of the Prophets had been operating for over a year, and construction of the Kirtland Temple was underway. This concentration of members and activities created both opportunities and challenges that required structured governance.</p>
+                
+                <h3>Contemporary Legal Context (1834)</h3>
+                <div class="highlight-box">
+                    <h4>American Legal System in 1834:</h4>
+                    <ul>
+                        <li>Right to trial by jury (though not always impartial)</li>
+                        <li>Legal representation (if you could afford it)</li>
+                        <li>Limited and expensive appeal processes</li>
+                        <li>Often inconsistent local justice</li>
+                    </ul>
+                    
+                    <h4>The Church's Revolutionary System:</h4>
+                    <ul>
+                        <li>Impartial advocates assigned by lot</li>
+                        <li>Free representation through assigned councilors</li>
+                        <li>Accessible appeals to the First Presidency</li>
+                        <li>Consistent procedures across all locations</li>
+                    </ul>
+                </div>
+                
+                <h3>Ancient Precedents</h3>
+                <p>The high council structure draws from biblical patterns of governance:</p>
+                <ul>
+                    <li><strong>Moses's Seventy Elders:</strong> <a href="https://www.blueletterbible.org/kjv/num/11/16-17/" target="_blank">Numbers 11:16-17</a> describes how Moses appointed seventy elders to help bear the burden of governing Israel.</li>
+                    <li><strong>Jewish Sanhedrin:</strong> The great council of ancient Judaism consisted of seventy-one members who served as the supreme court in religious matters.</li>
+                    <li><strong>Jerusalem Council:</strong> <a href="https://www.blueletterbible.org/kjv/act/15/1-31/" target="_blank">Acts 15</a> provides the New Testament model of apostles and elders gathering to resolve doctrinal questions.</li>
+                    <li><strong>Heavenly Pattern:</strong> <a href="https://www.blueletterbible.org/kjv/rev/4/4/" target="_blank">Revelation 4:4</a> describes twenty-four elders around God's throne, suggesting a celestial council model.</li>
+                </ul>
+                
+                <h3>Evolution of Church Discipline</h3>
+                <div class="sub-section">
+                    <h4>Before D&C 102:</h4>
+                    <ul>
+                        <li>Informal bishop's courts with varying procedures</li>
+                        <li>Inconsistent practices across different branches</li>
+                        <li>No clear appeal process for the accused</li>
+                        <li>Potential for local prejudice or favoritism</li>
+                    </ul>
+                    
+                    <h4>After D&C 102:</h4>
+                    <ul>
+                        <li>Standardized procedures for all high councils</li>
+                        <li>Multiple levels of review and appeal</li>
+                        <li>Protected rights for both accuser and accused</li>
+                        <li>Consistent application throughout the Church</li>
+                    </ul>
+                </div>
+                
+                <h3>The First High Council Members</h3>
+                <p>The original twelve councilors included several notable figures in early Church history:</p>
+                <ul>
+                    <li><strong>Joseph Smith, Sen.</strong> - The Prophet's father</li>
+                    <li><strong>Oliver Cowdery</strong> - Second Elder of the Church</li>
+                    <li><strong>Martin Harris</strong> - One of the Three Witnesses</li>
+                    <li><strong>Orson Hyde</strong> - Future Apostle who would dedicate Palestine</li>
+                    <li><strong>Samuel H. Smith</strong> - The Prophet's brother and first missionary</li>
+                </ul>
+                
+                <h3>Lasting Impact</h3>
+                <p>The procedures established in D&C 102 continue unchanged in stake high councils today. Every stake throughout the world follows this same pattern, demonstrating the enduring nature of revealed organizational principles. The balance between divine revelation and collective wisdom, between justice and mercy, between local autonomy and church-wide unity, remains as relevant today as it was in 1834.</p>
+                
+                <h3>Doctrinal Significance</h3>
+                <p>This revelation demonstrates that God is a God of order who cares deeply about fairness, justice, and the rights of individuals. The elaborate protections for the accused, the requirement for unanimity in decisions, and the multiple levels of appeal reveal divine attributes of mercy, patience, and perfect justice. The Church's judicial system exceeded many contemporary civil protections, showing that the kingdom of God operates on higher principles than earthly governments.</p>
+            </div>
+        </div>
+        
+        <!-- VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Verse-by-Verse Study Guide</h2>
+                
+                <!-- Verses 1-6 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-6: Organization and Sustaining of the Council</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>1</strong> This day a general council of twenty-four high priests assembled at the house of Joseph Smith, Jun., by revelation, and proceeded to organize the high council of the church of Christ, which was to consist of twelve high priests, and one or three presidents as the case might require.</p>
+                        <p><strong>2</strong> The high council was appointed by revelation for the purpose of settling important difficulties which might arise in the church, which could not be settled by the church or the bishop's council to the satisfaction of the parties.</p>
+                        <p><strong>3</strong> Joseph Smith, Jun., Sidney Rigdon and Frederick G. Williams were acknowledged presidents by the voice of the council; and Joseph Smith, Sen., John Smith, Joseph Coe, John Johnson, Martin Harris, John S. Carter, Jared Carter, Oliver Cowdery, Samuel H. Smith, Orson Hyde, Sylvester Smith, and Luke Johnson, high priests, were chosen to be a standing council for the church, by the unanimous voice of the council.</p>
+                        <p><strong>4</strong> The above-named councilors were then asked whether they accepted their appointments, and whether they would act in that office according to the law of heaven, to which they all answered that they accepted their appointments, and would fill their offices according to the grace of God bestowed upon them.</p>
+                        <p><strong>5</strong> The number composing the council, who voted in the name and for the church in appointing the above-named councilors were forty-three, as follows: nine high priests, seventeen elders, four priests, and thirteen members.</p>
+                        <p><strong>6</strong> Voted: that the high council cannot have power to act without seven of the above-named councilors, or their regularly appointed successors are present.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Church councils are organized by revelation, not human wisdom</li>
+                        <li>The high council serves as an appellate court above bishop's councils</li>
+                        <li>Common consent validates divine appointments</li>
+                        <li>Council members covenant to act "according to the law of heaven"</li>
+                        <li>Specific quorum requirements ensure proper authority</li>
+                    </ul>
+                    
+                    <h3>Language & Cultural Insights</h3>
+                    <ul>
+                        <li><strong>"general council"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6098/kjv/wlc/0-1/" target="_blank">עֵצָה (*etsah*)</a> — "counsel, advice, purpose"</li>
+                        <li><strong>"twenty-four high priests"</strong> - Parallels the twenty-four elders around God's throne (<a href="https://www.blueletterbible.org/kjv/rev/4/4/" target="_blank">Revelation 4:4</a>)</li>
+                        <li><strong>"organize"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g2680/kjv/tr/0-1/" target="_blank">κατασκευάζω (*kataskeuazo*)</a> — "to prepare, establish, build"</li>
+                        <li><strong>"high council of the church of Christ"</strong> - Formal title establishing ecclesiastical authority</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/num/11/16-17/" target="_blank">Numbers 11:16-17</a> - Moses and seventy elders</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/15/1-29/" target="_blank">Acts 15:1-29</a> - Jerusalem Council</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.23-24" target="_blank">D&C 107:23-24</a> - Twelve form a quorum equal in authority</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/18/19-20/" target="_blank">Matthew 18:19-20</a> - Where two or three are gathered</li>
+                    </ul>
+                    
+                    <h3>Modern Application</h3>
+                    <p>In our stakes today, high councils continue to follow this pattern established in 1834. Understanding these procedures helps us appreciate the careful balance between revelation and administration in the Church.</p>
+                </div>                
+                <!-- Verses 7-12 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 7-12: Procedures and Authority</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>7</strong> These seven shall have power to appoint other high priests, whom they may consider worthy and capable to act in the place of absent councilors.</p>
+                        <p><strong>8</strong> Voted: that whenever any vacancy shall occur by the death, removal from office for transgression, or removal from the bounds of this church government, of any one of the above-named councilors, it shall be filled by the nomination of the president or presidents, and sanctioned by the voice of a general council of high priests, convened for that purpose, to act in the name of the church.</p>
+                        <p><strong>9</strong> The president of the church, who is also the president of the council, is appointed by revelation, and acknowledged in his administration by the voice of the church.</p>
+                        <p><strong>10</strong> And it is according to the dignity of his office that he should preside over the council of the church; and it is his privilege to be assisted by two other presidents, appointed after the same manner that he himself was appointed.</p>
+                        <p><strong>11</strong> And in case of the absence of one or both of those who are appointed to assist him, he has power to preside over the council without an assistant; and in case he himself is absent, the other presidents have power to preside in his stead, both or either of them.</p>
+                        <p><strong>12</strong> Whenever a high council of the church of Christ is regularly organized, according to the foregoing pattern, it shall be the duty of the twelve councilors to cast lots by numbers, and thereby ascertain who of the twelve shall speak first, commencing with number one and so in succession to number twelve.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Authority to act continues through proper succession</li>
+                        <li>Vacancies filled through revelation and common consent</li>
+                        <li>The prophet presides by divine appointment and church acknowledgment</li>
+                        <li>Presidency can function with flexibility based on availability</li>
+                        <li>Divine direction through lot-casting removes human bias</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 13-18 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 13-18: Rights of the Accused</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>13</strong> Whenever this council convenes to act upon any case, the twelve councilors shall consider whether it is a difficult one or not; if it is not, two only of the councilors shall speak upon it, according to the form above written.</p>
+                        <p><strong>14</strong> But if it is thought to be difficult, four shall be appointed; and if it is thought to be very difficult, six; but in no case shall more than six be appointed to speak.</p>
+                        <p><strong>15</strong> The accused, in all cases, has a right to one-half of the council, to prevent insult or injustice.</p>
+                        <p><strong>16</strong> And the councilors appointed to speak before the council are to present the case, after the evidence is examined, in its true light before the council; and every man is to speak according to equity and justice.</p>
+                        <p><strong>17</strong> Those councilors who draw even numbers, that is, 2, 4, 6, 8, 10, and 12, are the individuals who are to stand up in behalf of the accused, and prevent insult and injustice.</p>
+                        <p><strong>18</strong> In all cases the accuser and the accused shall have a privilege of speaking for themselves before the council, after the evidences are heard and the councilors who are appointed to speak on the case have finished their remarks.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>The difficulty of the case determines the number of speakers</li>
+                        <li>The accused has guaranteed protection through designated advocates</li>
+                        <li>Both sides must be represented equally</li>
+                        <li>Evidence precedes deliberation</li>
+                        <li>All parties have the right to speak for themselves</li>
+                    </ul>
+                    
+                    <h3>Language & Cultural Insights</h3>
+                    <ul>
+                        <li><strong>"equity and justice"</strong> - Hebrew: <a href="https://www.blueletterbible.org/lexicon/h4941/kjv/wlc/0-1/" target="_blank">מִשְׁפָּט (*mishpat*)</a> — "justice, judgment" and <a href="https://www.blueletterbible.org/lexicon/h6664/kjv/wlc/0-1/" target="_blank">צֶדֶק (*tsedeq*)</a> — "righteousness, equity"</li>
+                        <li><strong>"insult or injustice"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g5196/kjv/tr/0-1/" target="_blank">ὕβρις (*hubris*)</a> — "insolence, injury" and <a href="https://www.blueletterbible.org/lexicon/g93/kjv/tr/0-1/" target="_blank">ἀδικία (*adikia*)</a> — "injustice, unrighteousness"</li>
+                        <li><strong>"privilege of speaking"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g3954/kjv/tr/0-1/" target="_blank">παρρησία (*parrhesia*)</a> — "freedom of speech, boldness"</li>
+                        <li><strong>"draw even numbers"</strong> - System ensures impartial advocacy</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/deu/19/15/" target="_blank">Deuteronomy 19:15</a> - Multiple witnesses required</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/1/17/" target="_blank">Isaiah 1:17</a> - Defend the oppressed</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/pro/31/9/" target="_blank">Proverbs 31:9</a> - Judge fairly, defend the rights</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.36" target="_blank">D&C 121:36</a> - Authority maintained by righteousness</li>
+                    </ul>
+                    
+                    <h3>Modern Application</h3>
+                    <p>These protections ensure that Church disciplinary councils today operate with fairness and compassion, always seeking to help individuals return to full fellowship rather than simply punish.</p>
+                </div>
+                
+                <!-- Verses 19-24 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 19-24: Decision Process and Appeals</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>19</strong> After the evidences are heard, the councilors, accuser and accused have spoken, the president shall give a decision according to the understanding which he shall have of the case, and call upon the twelve councilors to sanction the same by their vote.</p>
+                        <p><strong>20</strong> But should the remaining councilors, who have not spoken, or any one of them, after hearing the evidences and pleadings impartially, discover an error in the decision of the president, they can manifest it, and the case shall have a re-hearing.</p>
+                        <p><strong>21</strong> And if, after a careful re-hearing, any additional light is shown upon the case, the decision shall be altered accordingly.</p>
+                        <p><strong>22</strong> But in case no additional light is given, the first decision shall stand, the majority of the council having power to determine the same.</p>
+                        <p><strong>23</strong> In case of difficulty respecting doctrine or principle, if there is not a sufficiency written to make the case clear to the minds of the council, the president may inquire and obtain the mind of the Lord by revelation.</p>
+                        <p><strong>24</strong> The high priests, when abroad, have power to call and organize a council after the manner of the foregoing, to settle difficulties, when the parties or either of them shall request it.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>The president renders initial judgment subject to council sustaining</li>
+                        <li>Errors can be corrected through re-hearing processes</li>
+                        <li>Additional light and knowledge can alter decisions</li>
+                        <li>Revelation supplements written law when needed</li>
+                        <li>Traveling high priests can organize temporary councils</li>
+                    </ul>
+                    
+                    <h3>Language & Cultural Insights</h3>
+                    <ul>
+                        <li><strong>"sanction"</strong> - Latin: <a href="https://logeion.uchicago.edu/sanctio" target="_blank">sanctio</a> — "to make sacred, ratify"</li>
+                        <li><strong>"manifest"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g5319/kjv/tr/0-1/" target="_blank">φανερόω (*phaneroo*)</a> — "to make visible, clear, known"</li>
+                        <li><strong>"additional light"</strong> - Progressive revelation principle</li>
+                        <li><strong>"mind of the Lord"</strong> - Hebrew concept of divine will</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/1co/14/29/" target="_blank">1 Corinthians 14:29</a> - Let others judge what is said</li>
+                        <li><a href="https://www.bluelettlebible.org/kjv/jam/1/5/" target="_blank">James 1:5</a> - Ask of God for wisdom</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9.8-9" target="_blank">D&C 9:8-9</a> - Study it out, then ask</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/pro/11/14/" target="_blank">Proverbs 11:14</a> - In multitude of counselors there is safety</li>
+                    </ul>
+                    
+                    <h3>Modern Application</h3>
+                    <p>The principle of seeking revelation when written guidance is insufficient continues today as Church leaders seek divine direction for new situations and challenges.</p>
+                </div>
+                
+                <!-- Verses 25-34 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 25-34: Procedural Details and Final Authority</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>25</strong> And the said council of high priests shall have power to appoint one of their own number to preside over such council for the time being.</p>
+                        <p><strong>26</strong> It shall be the duty of said council to transmit, immediately, a copy of their proceedings, with a full statement of the testimony accompanying their decision, to the high council of the seat of the First Presidency of the Church.</p>
+                        <p><strong>27</strong> Should the parties or either of them be dissatisfied with the decision of said council, they may appeal to the high council of the seat of the First Presidency of the Church, and have a re-hearing, which case shall there be conducted, according to the former pattern written, as though no such decision had been made.</p>
+                        <p><strong>28</strong> This council of high priests abroad is only to be called on the most difficult cases of church matters; and no common or ordinary case is to be sufficient to call such council.</p>
+                        <p><strong>29</strong> The traveling or located high priests abroad have power to say whether it is necessary to call such a council or not.</p>
+                        <p><strong>30</strong> There is a distinction between the high council or traveling high priests abroad, and the traveling high council composed of the twelve apostles, in their decisions.</p>
+                        <p><strong>31</strong> From the decision of the former there can be an appeal; but from the decision of the latter there cannot.</p>
+                        <p><strong>32</strong> The latter can only be called in question by the general authorities of the church in case of transgression.</p>
+                        <p><strong>33</strong> Resolved: that the president or presidents of the seat of the First Presidency of the Church shall have power to determine whether any such case, as may be appealed, is justly entitled to a re-hearing, after examining the appeal and the evidences and statements accompanying it.</p>
+                        <p><strong>34</strong> The twelve councilors then proceeded to cast lots or ballot, to ascertain who should speak first, and the following was the result, namely: 1, Oliver Cowdery; 2, Joseph Coe; 3, Samuel H. Smith; 4, Luke Johnson; 5, John S. Carter; 6, Sylvester Smith; 7, John Johnson; 8, Orson Hyde; 9, Jared Carter; 10, Joseph Smith, Sen.; 11, John Smith; 12, Martin Harris. After prayer the conference adjourned.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Records must be kept and transmitted to Church headquarters</li>
+                        <li>Appeal rights exist to the First Presidency</li>
+                        <li>Different levels of councils have different jurisdictions</li>
+                        <li>The Twelve Apostles' decisions as a body are final</li>
+                        <li>The First Presidency determines appeal validity</li>
+                        <li>Divine selection through lot-casting establishes speaking order</li>
+                    </ul>
+                    
+                    <h3>Language & Cultural Insights</h3>
+                    <ul>
+                        <li><strong>"transmit, immediately"</strong> - Accountability through documentation</li>
+                        <li><strong>"appeal"</strong> - Greek: <a href="https://www.blueletterbible.org/lexicon/g1941/kjv/tr/0-1/" target="_blank">ἐπικαλέω (*epikaleo*)</a> — "to call upon, appeal to"</li>
+                        <li><strong>"distinction"</strong> - Different keys and jurisdictions</li>
+                        <li><strong>"cast lots or ballot"</strong> - Divine selection method dating to ancient Israel</li>
+                        <li><strong>"general authorities"</strong> - First use of this term in modern dispensation</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/18/15-17/" target="_blank">Matthew 18:15-17</a> - Pattern of escalating authority</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.78-84" target="_blank">D&C 107:78-84</a> - Duties of quorum presidents</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/25/11/" target="_blank">Acts 25:11</a> - Paul appeals to Caesar</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/pro/16/33/" target="_blank">Proverbs 16:33</a> - The lot is cast, but decision is the Lord's</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/1/26/" target="_blank">Acts 1:26</a> - Apostles cast lots to choose Matthias</li>
+                    </ul>
+                    
+                    <h3>Modern Application</h3>
+                    <p>The record-keeping requirements ensure transparency and accountability in Church discipline. The appeal process continues to protect members' rights, while the distinction between councils maintains proper order and authority throughout the worldwide Church.</p>
+                </div>
+                
+            </div>
+        </div>        
+        <!-- WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Word Studies - Comprehensive Linguistic Analysis</h2>
+                
+                <h3>1. General Council</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h6098/kjv/wlc/0-1/" target="_blank">עֵצָה (*etsah*)</a> — "counsel, advice, purpose, plan"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g1012/kjv/tr/0-1/" target="_blank">βουλή (*boule*)</a> — "counsel, purpose, will"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/concilium" target="_blank">concilium</a> — "assembly, gathering, council"</p>
+                    <p><strong>Etymology:</strong> From Latin <a href="https://www.etymonline.com/word/council" target="_blank">*concilium*</a> meaning "a meeting, a gathering of people"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/council" target="_blank">Council</a> — "An assembly of men summoned or convened for consultation, deliberation and advice"</p>
+                    <p><strong>Significance:</strong> The term emphasizes both divine wisdom (counsel) and human assembly (council), showing how revelation works through organized bodies.</p>
+                </div>
+                
+                <h3>2. Twenty-four High Priests</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h3548/kjv/wlc/0-1/" target="_blank">כֹּהֵן (*kohen*)</a> — "priest, one who officiates"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2409/kjv/tr/0-1/" target="_blank">ἱερεύς (*hiereus*)</a> — "priest, one who offers sacrifices"</p>
+                    <p><strong>Biblical Pattern:</strong> The number twenty-four has profound scriptural significance:</p>
+                    <ul>
+                        <li><strong>Heavenly Council:</strong> <a href="https://www.blueletterbible.org/kjv/rev/4/4/" target="_blank">Revelation 4:4</a> describes "four and twenty elders sitting, clothed in white raiment" around God's throne</li>
+                        <li><strong>Twelve Tribes + Twelve Apostles:</strong> <a href="https://www.blueletterbible.org/kjv/rev/21/12-14/" target="_blank">Revelation 21:12-14</a> shows the New Jerusalem with twelve gates named for the twelve tribes of Israel and twelve foundations named for the twelve apostles, totaling twenty-four</li>
+                        <li><strong>Temple Service:</strong> <a href="https://www.blueletterbible.org/kjv/1ch/24/1-19/" target="_blank">1 Chronicles 24:1-19</a> records David dividing the priests into twenty-four courses for temple service</li>
+                    </ul>
+                    <p><strong>Significance:</strong> The twenty-four high priests assembled represent the union of Old and New Covenants (12 tribes + 12 apostles = 24), the pattern of heavenly government revealed to John, and the complete priesthood order. This number suggests the Kirtland high council was patterned after the celestial council, with earthly organization reflecting heavenly order. The subsequent selection of twelve councilors from the twenty-four mirrors how the Lord works through appointed representatives.</p>
+                </div>
+                
+                <h3>3. Casting Lots</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h1486/kjv/wlc/0-1/" target="_blank">גּוֹרָל (*goral*)</a> — "lot, portion, pebble used for casting"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2819/kjv/tr/0-1/" target="_blank">κλῆρος (*kleros*)</a> — "lot, portion, inheritance"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/sors" target="_blank">sors</a> — "lot, chance, fortune, oracle"</p>
+                    <p><strong>Etymology:</strong> From Old English <a href="https://www.etymonline.com/word/lot" target="_blank">*hlot*</a> meaning "object used to determine someone's share," from Proto-Germanic *hlutam</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/lot" target="_blank">Lot</a> — "That which happens without human design; that which falls or comes to one by chance or divine determination"</p>
+                    <p><strong>Significance:</strong> Casting lots was a sacred method of divine selection used throughout scripture, removing human bias and allowing God's will to manifest. In D&C 102, it determines speaking order, ensuring fairness and divine direction in council proceedings.</p>
+                </div>
+                
+                <h3>4. Equity and Justice</h3>
+                <div class="info-box">
+                    <p><strong>Hebrew (Justice):</strong> <a href="https://www.blueletterbible.org/lexicon/h4941/kjv/wlc/0-1/" target="_blank">מִשְׁפָּט (*mishpat*)</a> — "judgment, justice, ordinance, manner, law"</p>
+                    <p><strong>Hebrew (Equity):</strong> <a href="https://www.blueletterbible.org/lexicon/h3476/kjv/wlc/0-1/" target="_blank">יֹשֶׁר (*yosher*)</a> — "uprightness, equity, evenness"</p>
+                    <p><strong>Greek (Justice):</strong> <a href="https://www.blueletterbible.org/lexicon/g1343/kjv/tr/0-1/" target="_blank">δικαιοσύνη (*dikaiosune*)</a> — "righteousness, justice, the state of being right"</p>
+                    <p><strong>Greek (Equity):</strong> <a href="https://www.blueletterbible.org/lexicon/g1933/kjv/tr/0-1/" target="_blank">ἐπιεικής (*epieikes*)</a> — "fair, mild, gentle, equitable"</p>
+                    <p><strong>Latin (Justice):</strong> <a href="https://logeion.uchicago.edu/iustitia" target="_blank">iustitia</a> — "justice, righteousness, equity"</p>
+                    <p><strong>Latin (Equity):</strong> <a href="https://logeion.uchicago.edu/aequitas" target="_blank">aequitas</a> — "equality, uniformity, fairness"</p>
+                    <p><strong>Etymology (Justice):</strong> From Latin <a href="https://www.etymonline.com/word/justice" target="_blank">*iustitia*</a> meaning "righteousness, equity," from iustus "upright, just"</p>
+                    <p><strong>Etymology (Equity):</strong> From Latin <a href="https://www.etymonline.com/word/equity" target="_blank">*aequitas*</a> meaning "equality, conformity, fairness," from aequus "even, equal"</p>
+                    <p><strong>Webster 1828 (Justice):</strong> <a href="https://webstersdictionary1828.com/Dictionary/justice" target="_blank">Justice</a> — "The virtue which consists in giving to every one what is his due; impartiality"</p>
+                    <p><strong>Webster 1828 (Equity):</strong> <a href="https://webstersdictionary1828.com/Dictionary/equity" target="_blank">Equity</a> — "Justice; right; the giving to each man his due"</p>
+                    <p><strong>Significance:</strong> These paired terms appear in verse 16, establishing the divine standard for council proceedings. Justice ensures righteous judgment according to law, while equity provides fairness and mercy, balancing strict law with individual circumstances. Together they reflect God's perfect character.</p>
+                </div>
+                
+                <!-- Additional word studies would continue here -->
+                
+            </div>
+        </div>
+        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Teaching Applications</h2>
+                
+                <h3>Sunday School Application</h3>
+                <div class="highlight-box">
+                    <p><strong>Topic:</strong> "Councils in the Lord's Kingdom"</p>
+                    <p><strong>Opening Question:</strong> How do Church councils today follow the pattern established in D&C 102?</p>
+                    <p><strong>Main Points:</strong></p>
+                    <ul>
+                        <li>Show how stake high councils still follow this exact pattern</li>
+                        <li>Discuss how ward councils operate on similar principles</li>
+                        <li>Explain the role of common consent in Church governance</li>
+                    </ul>
+                    <p><strong>Activity:</strong> Role-play a simplified council discussing a ward issue (like planning a service project), demonstrating consensus-building and seeking revelation</p>
+                </div>
+                
+                <h3>Seminary Application (Youth)</h3>
+                <div class="highlight-box">
+                    <p><strong>Topic:</strong> "Fair and Just: God's System of Church Discipline"</p>
+                    <p><strong>Key Concepts for Youth:</strong></p>
+                    <ul>
+                        <li>Everyone has rights and protections in the Church</li>
+                        <li>The goal is always to help people return to full fellowship</li>
+                        <li>Leaders seek revelation, not just enforce rules</li>
+                        <li>Appeals exist if someone feels unfairly treated</li>
+                    </ul>
+                </div>
+                
+                <h3>Family Home Evening Application</h3>
+                <div class="highlight-box">
+                    <p><strong>For Younger Children:</strong> Use building blocks to show how councils "build" solutions together</p>
+                    <p><strong>For Teenagers:</strong> Discuss how family councils can use these principles</p>
+                    <p><strong>Family Activity:</strong> Hold a formal family council about a fun decision (vacation destination, family activity) using D&C 102 principles</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Study Questions for Personal and Family Study</h2>
+                
+                <h3>Questions for Individual Reflection</h3>
+                <div class="question-section">
+                    <p class="question">1. How does understanding these council procedures increase your confidence in Church discipline and governance?</p>
+                    <p class="reflection-prompt">Consider: What protections exist that you didn't know about before? How does this system reflect both divine wisdom and compassion?</p>
+                    
+                    <p class="question">2. What can you learn about Christ's character from His attention to procedural fairness and individual rights?</p>
+                    <p class="reflection-prompt">Consider: Why would the Lord care so much about process and not just outcomes? What does this reveal about divine justice?</p>
+                    
+                    <p class="question">3. How might serving on a disciplinary council change your perspective on sin, repentance, and redemption?</p>
+                    <p class="reflection-prompt">Consider: The weight of responsibility on council members and the balance between justice and mercy.</p>
+                    
+                    <p class="question">4. How do the principles of council governance apply to your personal decision-making?</p>
+                    <p class="reflection-prompt">Consider: When do you seek counsel? How do you balance personal revelation with wise counsel from others?</p>
+                    
+                    <p class="question">5. What parallels do you see between the high council structure and the councils in heaven?</p>
+                    <p class="reflection-prompt">Consider: <a href="https://www.blueletterbible.org/kjv/rev/4/4/" target="_blank">Revelation 4:4</a> and the pattern of heavenly governance.</p>
+                </div>
+                
+                <h3>Questions for Family Discussion</h3>
+                <div class="question-section">
+                    <p class="question">1. How can our family councils follow the pattern established in D&C 102?</p>
+                    <p class="discussion-ideas">Discuss: Taking turns speaking, seeking consensus, ensuring everyone has a voice, praying for guidance.</p>
+                    
+                    <p class="question">2. What does it mean that council members must act "according to the law of heaven"?</p>
+                    <p class="discussion-ideas">Discuss: The difference between earthly wisdom and heavenly principles, the role of revelation in decisions.</p>
+                    
+                    <p class="question">3. Why do you think the Lord requires unanimous decisions rather than simple majority votes?</p>
+                    <p class="discussion-ideas">Discuss: Unity, continued discussion until agreement, the role of the Spirit in achieving consensus.</p>
+                    
+                    <p class="question">4. How can understanding Church discipline procedures help us avoid judging others?</p>
+                    <p class="discussion-ideas">Discuss: The careful process involved, the goal of redemption, our lack of full information.</p>
+                    
+                    <p class="question">5. What can we learn from the way the first high council was sustained by the Church?</p>
+                    <p class="discussion-ideas">Discuss: Common consent, the role of members in Church governance, sustaining leaders.</p>
+                </div>
+                
+                <h3>Questions for Deeper Investigation</h3>
+                <div class="question-section">
+                    <p class="question">1. How did the Church's disciplinary system in 1834 compare to other religious and civil courts of the time?</p>
+                    <p class="study-suggestion">Research: Contemporary legal systems, religious courts in other denominations, unique LDS innovations.</p>
+                    
+                    <p class="question">2. How have these procedures influenced modern stake high councils worldwide?</p>
+                    <p class="study-suggestion">Research: Current Church Handbook, testimonies of high councilors, global implementation.</p>
+                    
+                    <p class="question">3. What can we learn from studying the actual minutes of early high councils?</p>
+                    <p class="study-suggestion">Research: Joseph Smith Papers, early Kirtland records, examples of cases heard.</p>
+                    
+                    <p class="question">4. How do the drawing of lots connect to ancient biblical practices?</p>
+                    <p class="study-suggestion">Research: <a href="https://www.blueletterbible.org/kjv/pro/16/33/" target="_blank">Proverbs 16:33</a>, <a href="https://www.blueletterbible.org/kjv/act/1/26/" target="_blank">Acts 1:26</a>, Urim and Thummim.</p>
+                    
+                    <p class="question">5. What role did this revelation play in establishing Zion in Missouri?</p>
+                    <p class="study-suggestion">Research: High councils in Missouri, Church governance during persecution, continuity despite challenges.</p>
+                </div>
+                
+                <h3>Questions for Practical Application</h3>
+                <div class="question-section">
+                    <p class="question">1. How can you better sustain Church leaders knowing the weight of their council responsibilities?</p>
+                    <p class="application-ideas">Consider: Prayer for leaders, avoiding criticism, understanding their burden, offering support.</p>
+                    
+                    <p class="question">2. What aspects of divine justice do you see (or could implement) in your workplace or community?</p>
+                    <p class="application-ideas">Consider: Fair hearing of grievances, protecting rights of accused, seeking consensus, appeal processes.</p>
+                    
+                    <p class="question">3. How can understanding these procedures help you minister to someone facing Church discipline?</p>
+                    <p class="application-ideas">Consider: Avoiding judgment, focusing on redemption, maintaining confidentiality, showing love.</p>
+                    
+                    <p class="question">4. What would change if your ward council followed these principles more closely?</p>
+                    <p class="application-ideas">Consider: More revelation-seeking, better consensus-building, equal voice for all, unity in decisions.</p>
+                    
+                    <p class="question">5. How can you prepare now to serve effectively if called to a council position?</p>
+                    <p class="application-ideas">Consider: Study the handbook, develop judgment and mercy, practice confidentiality, seek the Spirit.</p>
+                </div>
+                
+                <h3>Cross-Reference Study Questions</h3>
+                <div class="question-section">
+                    <p class="question">Compare D&C 102 with <a href="https://www.blueletterbible.org/kjv/mat/18/15-20/" target="_blank">Matthew 18:15-20</a>. How does the high council expand on Christ's teachings about resolving offenses?</p>
+                    
+                    <p class="question">Read <a href="https://www.blueletterbible.org/kjv/act/15/1-31/" target="_blank">Acts 15:1-31</a> (Jerusalem Council). What similarities and differences do you see with D&C 102?</p>
+                    
+                    <p class="question">Study <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.27-31" target="_blank">D&C 107:27-31</a>. How do quorum decisions relate to high council procedures?</p>
+                    
+                    <p class="question">Examine <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.36-46" target="_blank">D&C 121:36-46</a>. How do these priesthood principles apply to council service?</p>
+                    
+                    <p class="question">Consider <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/29.11" target="_blank">Mosiah 29:11</a>. How does King Mosiah's system of judges relate to high councils?</p>
+                </div>
+            </div>
+        </div>
+        
+    </div> <!-- End of container -->
+    
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        function expandAll() {
+            var sections = document.querySelectorAll('.accordion-section');
+            var panels = document.querySelectorAll('.content-panel');
+            sections.forEach(function(section) {
+                section.classList.add('active');
+            });
+            panels.forEach(function(panel) {
+                panel.classList.add('active');
+            });
+        }
+        
+        function collapseAll() {
+            var sections = document.querySelectorAll('.accordion-section');
+            var panels = document.querySelectorAll('.content-panel');
+            var subSections = document.querySelectorAll('.sub-accordion');
+            var subPanels = document.querySelectorAll('.sub-panel');
+            
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            panels.forEach(function(panel) {
+                panel.classList.remove('active');
+            });
+            subSections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            subPanels.forEach(function(panel) {
+                panel.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
