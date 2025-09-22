@@ -1,15 +1,1105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>D&C 106 Study Guide - Redirecting</title>
-    <meta http-equiv="refresh" content="0; url=https://github.com/KymBrock/cfm-dc-study/blob/main/DC_106/GitHub/README.md">
-    <script>
-        window.location.href = "https://github.com/KymBrock/cfm-dc-study/blob/main/DC_106/GitHub/README.md";
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 106 Complete Study Guide - Warren A. Cowdery's Calling</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Site Header */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+        
+        .cfm-button:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        .content-panel {
+            display: none;
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .content-panel.active {
+            display: block;
+        }
+        
+        .panel-content {
+            padding: 30px;
+            color: #374151;
+        }
+        
+        .panel-content h2 {
+            color: #7c9885;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .panel-content h3 {
+            color: #6b7280;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .panel-content h4 {
+            color: #9ca3af;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .panel-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .panel-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .panel-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* Scripture Quotes */
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background-color: #fef3c7;
+            border: 2px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: underline;
+        }
+        
+        a:hover {
+            color: #5a6b5f;
+        }
+        
+        /* Sub-accordion for verse-by-verse */
+        .sub-accordion {
+            background-color: #e8f0ea;
+            color: #374151;
+            cursor: pointer;
+            padding: 14px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            color: #7c9885;
+            font-weight: bold;
+            float: right;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        .sub-panel {
+            display: none;
+            background-color: white;
+            border-left: 3px solid #7c9885;
+            margin-left: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .sub-panel.active {
+            display: block;
+        }
+        
+        /* Question Section Styles */
+        .question-section {
+            margin: 25px 0;
+        }
+        
+        .question {
+            color: #7c9885;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .reflection-prompt {
+            color: #6b7280;
+            font-style: italic;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .header-section {
+                padding: 25px;
+            }
+            
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+            
+            .tab-controls {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>This page has moved!</h1>
-    <p>Redirecting to the new study guide location...</p>
-    <p>If not redirected, <a href="https://github.com/KymBrock/cfm-dc-study/blob/main/DC_106/GitHub/README.md">click here</a>.</p>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="https://www.cfmcorner.com/blog" class="cfm-button" target="_blank">View Full Lesson</a>
+                <a href="dc106_complete.html" class="cfm-button">D&C 106</a>
+                <a href="dc107_complete.html" class="cfm-button">D&C 107</a>
+                <a href="dc108_complete.html" class="cfm-button">D&C 108</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 106</h1>
+            <p class="subtitle">Warren A. Cowdery's Calling to Service</p>
+            <p class="date-location">November 25, 1834 • Kirtland, Ohio</p>
+        </div>
+        
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All</button>
+        </div>
+        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Section Overview</h2>
+                
+                <h3>Basic Information</h3>
+                <ul>
+                    <li><strong>Date of Revelation:</strong> November 25, 1834</li>
+                    <li><strong>Location:</strong> Kirtland, Ohio</li>
+                    <li><strong>Recipient(s):</strong> Warren A. Cowdery (older brother of Oliver Cowdery)</li>
+                    <li><strong>Section Summary:</strong> The Lord calls Warren A. Cowdery to serve as a local presiding high priest in Freedom, New York, with promises that the Second Coming draws near and that faithful service will be crowned with eternal glory.</li>
+                </ul>                
+                <h3>Key Principles</h3>
+                <ul>
+                    <li><strong>Primary Doctrinal Principle:</strong> The laborer in the Lord's vineyard is worthy of his hire, and those who seek the kingdom of heaven diligently shall receive all things necessary</li>
+                    <li><strong>Secondary Principle:</strong> The Second Coming will overtake even the children of light as a thief in the night, requiring constant spiritual vigilance</li>
+                    <li><strong>Application Principle:</strong> Faithful service in any Church calling, combined with humility, leads to divine grace and eternal crowns in the Father's mansions</li>
+                </ul>
+                
+                <h3>Timeframe & Setting (4 Layers)</h3>
+                
+                <h4>Circumstances Among Recipients</h4>
+                <p>Warren A. Cowdery, Oliver's older brother, had been serving the Church in Freedom, New York. As an older member of the Cowdery family at approximately 46 years old, Warren had shown dedication to the gospel but needed formal ordination to his calling as presiding high priest over the Freedom branch.</p>
+                
+                <h4>Circumstances Within the Church</h4>
+                <p>November 1834 found the Church in a period of rapid organization and priesthood structuring. The Kirtland Temple was under construction, with its walls rising toward completion. The School of the Prophets had been operating, and the Church was establishing more formal priesthood offices and organization patterns that would later be fully articulated in D&C 107.</p>
+                
+                <h4>Relevant Local Circumstances</h4>
+                <p>Freedom, New York, represented one of the Church's eastern branches that needed stronger local leadership. The Saints in New York were somewhat isolated from the main body in Ohio, requiring local presiding officers who could minister without constant direction from Kirtland. Economic challenges of the 1830s affected these rural communities, making temporal and spiritual leadership crucial.</p>
+                
+                <h4>Relevant Global Circumstances</h4>
+                <p>The 1830s marked a period of religious revival and millennial expectation across America. The Second Great Awakening had prepared many hearts to receive restored gospel truths. Social reform movements, including abolition and temperance, were gaining momentum, creating an atmosphere where new religious movements could find receptive audiences.</p>                
+                <h3>Purpose of the Revelation (Dual Timeline)</h3>
+                
+                <h4>Short Term</h4>
+                <ul>
+                    <li>Formally call and authorize Warren A. Cowdery as presiding high priest in Freedom</li>
+                    <li>Clarify his duties to preach the everlasting gospel in surrounding counties</li>
+                    <li>Provide assurance that his temporal needs would be met while serving</li>
+                    <li>Encourage him to overcome any personal vanity through humility</li>
+                </ul>
+                
+                <h4>Long Term</h4>
+                <ul>
+                    <li>Establish the principle that local priesthood leaders have authority in their geographic areas</li>
+                    <li>Teach that the Second Coming requires constant preparation, even for the faithful</li>
+                    <li>Demonstrate that Church service brings both temporal and eternal blessings</li>
+                    <li>Show the pattern of joy in heaven over faithful servants accepting their callings</li>
+                </ul>
+                
+                <h3>Significance (Dual Timeline)</h3>
+                
+                <h4>Short Term</h4>
+                <p>Warren A. Cowdery's ordination strengthened the Church's presence in western New York. His service helped maintain the faith of isolated Saints and provided a crucial link between the New York branches and Church headquarters in Kirtland. The revelation gave him confidence to act with authority despite being far from the Prophet.</p>
+                
+                <h4>Long Term</h4>
+                <p>This revelation establishes enduring principles about local Church leadership and the worthiness of laborers to receive support. It teaches modern Church members about the unexpected nature of the Second Coming and the need for constant spiritual preparation. The promise of crowns in the Father's mansions continues to motivate faithful service across all Church callings.</p>
+                
+                <h3>Cultural Insights (Dual Perspective)</h3>
+                
+                <h4>Ancient Patterns</h4>
+                <p>The phrase "laborer is worthy of his hire" echoes Christ's instructions to the Seventy (<a href="https://www.blueletterbible.org/kjv/luk/10/7/" target="_blank">Luke 10:7</a>). The imagery of girding up loins connects to ancient practices of tucking robes into belts for active work, used throughout scripture as a metaphor for preparation (<a href="https://www.blueletterbible.org/kjv/1pe/1/13/" target="_blank">1 Peter 1:13</a>). The concept of "children of light" versus darkness appears in Essene texts and Paul's writings (<a href="https://www.blueletterbible.org/kjv/1th/5/5/" target="_blank">1 Thessalonians 5:5</a>).</p>
+                
+                <h4>Modern Relevance</h4>
+                <p>The principle of local priesthood authority underlies the modern stake and ward organization. The teaching about the Second Coming as a thief challenges contemporary Saints to maintain daily discipleship rather than crisis-driven spirituality. The promise of temporal provision for Church service speaks to modern concerns about balancing Church callings with family responsibilities.</p>
+                
+                <h3>Modern Application (5 Components)</h3>
+                
+                <!-- Internal dropdown for Personal Application -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Personal Application</button>
+                <div class="sub-panel">
+                    <ul>
+                        <li>Seek the kingdom of heaven "diligently" in daily choices and priorities</li>
+                        <li>Prepare constantly for the Lord's coming through consistent spiritual practices</li>
+                        <li>Accept Church callings with faith that temporal needs will be met</li>
+                        <li>Practice humility to qualify for the Lord's lifting power</li>
+                    </ul>
+                </div>
+                
+                <!-- Internal dropdown for Family Application -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Family Application</button>
+                <div class="sub-panel">
+                    <ul>
+                        <li>Support family members in their Church callings, recognizing divine promises of provision</li>
+                        <li>Teach children to be "children of light" through daily scripture study and prayer</li>
+                        <li>Create a home environment of constant spiritual readiness</li>
+                        <li>Celebrate together when family members receive new callings</li>
+                    </ul>
+                </div>
+                
+                <!-- Internal dropdown for Church Application -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Church Application</button>
+                <div class="sub-panel">
+                    <ul>
+                        <li>Sustain local leaders, recognizing their divine calling and authority</li>
+                        <li>Serve faithfully in whatever calling comes, trusting in eternal rewards</li>
+                        <li>Help provide for those dedicating significant time to Church service</li>
+                        <li>Build unity between local units and general Church leadership</li>
+                    </ul>
+                </div>
+                
+                <!-- Internal dropdown for Community Application -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Community Application</button>
+                <div class="sub-panel">
+                    <ul>
+                        <li>Let your light shine in professional and civic responsibilities</li>
+                        <li>Share the everlasting gospel naturally in daily interactions</li>
+                        <li>Demonstrate that religious commitment enhances community contribution</li>
+                        <li>Build bridges between isolated members and the larger Church community</li>
+                    </ul>
+                </div>
+                
+                <!-- Internal dropdown for Questions for Personal Study -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Questions for Personal Study</button>
+                <div class="sub-panel">
+                    <ol>
+                        <li>What does it mean to seek "diligently" the kingdom of heaven versus casual seeking?</li>
+                        <li>How can I maintain spiritual alertness when the Second Coming seems distant?</li>
+                        <li>What "crafts of men" might be distracting me from eternal priorities?</li>
+                        <li>How does humility enable the Lord to "lift me up" in my current circumstances?</li>
+                        <li>What crown has the Father prepared for me if I remain faithful in my current calling?</li>
+                        <li>How can I better support those who sacrifice temporally to serve the Church?</li>
+                        <li>What would change if I truly believed the Lord could come as a thief tonight?</li>
+                    </ol>
+                </div>                
+                <h3>Key Doctrines</h3>
+                
+                <h4>New Doctrines Introduced</h4>
+                <ul>
+                    <li>Local presiding high priests have authority to minister in adjoining counties beyond their immediate area</li>
+                    <li>Joy in heaven accompanies the acceptance of priesthood callings on earth</li>
+                    <li>The Second Coming will surprise even the "children of light" with its suddenness</li>
+                </ul>
+                
+                <h4>Previous Doctrines Clarified</h4>
+                <ul>
+                    <li>The principle of laborers being worthy of their hire extends to all Church service</li>
+                    <li>Humility is prerequisite to being lifted up by the Lord</li>
+                    <li>Faithful witnesses receive prepared crowns in the Father's mansions</li>
+                </ul>
+                
+                <h4>Covenant Principles Explained</h4>
+                <ul>
+                    <li>Accepting priesthood office creates covenant obligations to preach and serve</li>
+                    <li>The Lord covenants to provide grace and assurance to those who stand faithful</li>
+                    <li>Covenant service on earth connects directly to eternal rewards in heaven</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Historical Context</h2>                
+                <h3>The Setting</h3>
+                <p>By November 1834, the Church had grown to several thousand members spread across multiple states. With this growth came inevitable conflicts, misunderstandings, and occasionally serious transgressions that required formal resolution. The informal methods of the early Church were no longer sufficient for the increasingly complex organization.</p>
+                
+                <p>Kirtland, Ohio, had become the gathering place for the Saints and the administrative center of the Church. The School of the Prophets had been operating for over a year, and construction of the Kirtland Temple was underway. This concentration of members and activities created both opportunities and challenges that required structured governance.</p>
+                
+                <h3>Key Events Leading to Revelation</h3>
+                <p>The Cowdery family had been instrumental in the Restoration. Oliver Cowdery served as scribe for the Book of Mormon translation and was one of the Three Witnesses. His older brother Warren had accepted the gospel and moved to Freedom, New York, where a branch of the Church needed leadership.</p>
+                
+                <p>The Church's rapid expansion in 1834 necessitated more formal organization. The high council had been organized in February 1834 (D&C 102), and Zion's Camp had recently returned from Missouri. These experiences highlighted the need for strong local leadership in scattered branches.</p>
+                
+                <h3>Immediate Circumstances</h3>
+                <p>Warren A. Cowdery had been serving informally in Freedom but lacked official ordination and calling. The Saints in that area needed a presiding authority who could perform ordinances, settle disputes, and provide spiritual guidance. Joseph Smith received this revelation to formally establish Warren's authority and responsibilities.</p>
+                
+                <h3>Key People Involved</h3>
+                <ul>
+                    <li><strong>Warren A. Cowdery (1788-1851):</strong> Oliver's older brother, approximately 46 years old at the time of this revelation. A dedicated convert who would serve faithfully as presiding high priest.</li>
+                    <li><strong>Oliver Cowdery:</strong> Though not directly mentioned, his influence likely helped his brother's conversion and calling.</li>
+                    <li><strong>Joseph Smith:</strong> The Prophet who received the revelation formally calling Warren to his position.</li>
+                    <li><strong>The Freedom, New York Saints:</strong> The congregation that would benefit from Warren's leadership.</li>
+                </ul>                
+                <h3>Connection to Other Revelations</h3>
+                <p>This revelation connects to several others received during this organizational period:</p>
+                <ul>
+                    <li><strong>D&C 102 (February 1834):</strong> Established the high council structure that Warren would work within</li>
+                    <li><strong>D&C 107 (March 1835):</strong> Would later fully explain the priesthood structure Warren operated under</li>
+                    <li><strong>D&C 108 (December 1835):</strong> Another individual calling revelation showing the pattern of personal ministry</li>
+                    <li><strong>D&C 42:71:</strong> Earlier establishing the principle of supporting those in full-time ministry</li>
+                </ul>
+                
+                <h3>The Freedom Branch Context</h3>
+                <p>The Freedom, New York branch represented one of several eastern congregations maintaining the faith after the main body moved to Ohio. These branches served as:</p>
+                <ul>
+                    <li>Gathering points for new converts in the eastern states</li>
+                    <li>Missionary training grounds for those called to preach</li>
+                    <li>Links to the Church's New York origins and the Hill Cumorah</li>
+                    <li>Proof that the Church could function with distributed leadership</li>
+                </ul>
+                
+                <p>Warren's calling demonstrated that the Church was maturing from a centralized charismatic movement to an organized institution with delegated priesthood authority functioning across great distances.</p>
+            </div>
+        </div>        
+        <!-- VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Verse-by-Verse Study Guide</h2>
+                
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-3: The Calling of Warren A. Cowdery</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>1</strong> It is my will that my servant Warren A. Cowdery should be appointed and ordained a presiding high priest over my church, in the land of Freedom and the regions round about;</p>
+                        <p><strong>2</strong> And should preach my everlasting gospel, and lift up his voice and warn the people, not only in his own place, but in the adjoining counties;</p>
+                        <p><strong>3</strong> And devote his whole time to this high and holy calling, which I now give unto him, seeking diligently the kingdom of heaven and its righteousness, and all things necessary shall be added thereunto; for the laborer is worthy of his hire.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Divine appointment to priesthood leadership requires both calling and ordination</li>
+                        <li>Presiding authority extends beyond immediate geographic boundaries</li>
+                        <li>Full-time Church service receives promise of temporal provision</li>
+                        <li>Seeking the kingdom first ensures all necessary things will be provided</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"presiding high priest"</strong> - A local priesthood office with authority over a specific geographic area, predecessor to modern branch presidents and bishops
+                            <ul>
+                                <li>Hebrew concept: <a href="https://www.blueletterbible.org/lexicon/h3548/kjv/wlc/0-1/" target="_blank">כֹּהֵן (*kohen*)</a> — "priest, one who mediates"</li>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g749/kjv/tr/0-1/" target="_blank">ἀρχιερεύς (*archiereus*)</a> — "chief priest, high priest"</li>
+                            </ul>
+                        </li>
+                        <li><strong>"everlasting gospel"</strong> - The unchanging message of salvation through Jesus Christ
+                            <ul>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h1309/kjv/wlc/0-1/" target="_blank">בְּשׂוֹרָה (*besorah*)</a> — "good tidings, gospel"</li>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g2098/kjv/tr/0-1/" target="_blank">εὐαγγέλιον αἰώνιον (*euaggelion aionion*)</a> — "eternal good news"</li>
+                            </ul>
+                        </li>
+                        <li><strong>"lift up his voice"</strong> - Prophetic language for bold proclamation
+                            <ul>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h5375/kjv/wlc/0-1/" target="_blank">נָשָׂא קוֹל (*nasa qol*)</a> — "to lift, carry, or raise the voice"</li>
+                            </ul>
+                        </li>
+                        <li><strong>"seeking diligently"</strong> - Intensive, persistent spiritual effort
+                            <ul>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h1875/kjv/wlc/0-1/" target="_blank">דָּרַשׁ (*darash*)</a> — "to seek with care, inquire"</li>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g2212/kjv/tr/0-1/" target="_blank">ζητέω (*zeteo*)</a> — "to seek earnestly"</li>
+                            </ul>
+                        </li>
+                        <li><strong>"the laborer is worthy of his hire"</strong> - Direct quote from <a href="https://www.blueletterbible.org/kjv/luk/10/7/" target="_blank">Luke 10:7</a>
+                            <ul>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g514/kjv/tr/0-1/" target="_blank">ἄξιος ὁ ἐργάτης (*axios ho ergates*)</a> — "worthy is the worker"</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What does it mean to "devote his whole time" to a calling in modern contexts?</li>
+                        <li>How does seeking the kingdom "diligently" differ from casual spiritual pursuit?</li>
+                        <li>What "adjoining counties" might represent in our modern ministry opportunities?</li>
+                        <li>How do we balance trusting in temporal provision with personal responsibility?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/6/33/" target="_blank">Matthew 6:33</a> - Seek first the kingdom of God</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/10/7/" target="_blank">Luke 10:7</a> - The laborer worthy of his hire</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1ti/5/18/" target="_blank">1 Timothy 5:18</a> - Scripture affirms worker's wages</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/42.71" target="_blank">D&C 42:71</a> - Elders to receive support</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.79-80" target="_blank">D&C 84:79-80</a> - Lord provides for those He sends</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>Warren's calling to "devote his whole time" challenges modern Saints to consider how we prioritize Church service amid temporal demands. The promise that "all things necessary shall be added" continues to comfort those who make sacrifices for the kingdom.</p>
+                </div>
+                
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 4-5: The Coming of the Lord</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>4</strong> And again, verily I say unto you, the coming of the Lord draweth nigh, and it overtaketh the world as a thief in the night—</p>
+                        <p><strong>5</strong> Therefore, gird up your loins, that you may be the children of light, and that day shall not overtake you as a thief.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>The Second Coming approaches with certainty but unexpected timing</li>
+                        <li>Even the righteous can be surprised if not constantly prepared</li>
+                        <li>Active preparation distinguishes children of light from the world</li>
+                        <li>Spiritual vigilance provides protection from being overtaken unprepared</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"the coming of the Lord draweth nigh"</strong> - Imminent return of Christ
+                            <ul>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g3952/kjv/tr/0-1/" target="_blank">παρουσία (*parousia*)</a> — "presence, coming, arrival"</li>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h935/kjv/wlc/0-1/" target="_blank">בּוֹα (*bo*)</a> — "to come, arrive"</li>
+                            </ul>
+                        </li>
+                        <li><strong>"as a thief in the night"</strong> - Unexpected and sudden arrival
+                            <ul>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g2812/kjv/tr/0-1/" target="_blank">κλέπτης ἐν νυκτί (*kleptes en nukti*)</a> — "thief in night"</li>
+                                <li>Echoes <a href="https://www.blueletterbible.org/kjv/1th/5/2/" target="_blank">1 Thessalonians 5:2</a> and <a href="https://www.blueletterbible.org/kjv/2pe/3/10/" target="_blank">2 Peter 3:10</a></li>
+                            </ul>
+                        </li>
+                        <li><strong>"gird up your loins"</strong> - Ancient practice of tucking robes for action
+                            <ul>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2296/kjv/wlc/0-1/" target="_blank">חָגַר מָתְנַיִם (*chagar motnayim*)</a> — "to gird the waist"</li>
+                                <li>Symbolizes readiness for work or battle</li>
+                            </ul>
+                        </li>
+                        <li><strong>"children of light"</strong> - Those who walk in spiritual illumination
+                            <ul>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g5457/kjv/tr/0-1/" target="_blank">υἱοὶ φωτός (*huioi photos*)</a> — "sons of light"</li>
+                                <li>Contrasts with darkness of the world</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How can something "overtake" even the children of light as a thief?</li>
+                        <li>What daily practices help us "gird up our loins" spiritually?</li>
+                        <li>How do we maintain urgency about the Second Coming across decades of waiting?</li>
+                        <li>What distinguishes children of light in practical daily behavior?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/1th/5/2/" target="_blank">1 Thessalonians 5:2-5</a> - Day of the Lord as a thief</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/24/43/" target="_blank">Matthew 24:43-44</a> - If the householder had known</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/12/35/" target="_blank">Luke 12:35-36</a> - Loins girded and lights burning</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/eph/5/8/" target="_blank">Ephesians 5:8</a> - Walk as children of light</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45.56-57" target="_blank">D&C 45:56-57</a> - The wise virgins</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>The warning that even "children of light" can be overtaken challenges complacency. We must maintain daily spiritual disciplines—prayer, scripture study, service—rather than assuming our Church membership alone prepares us for the Lord's coming.</p>
+                </div>
+                
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 6-7: Joy in Heaven and Divine Lifting</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>6</strong> And again, verily I say unto you, there was joy in heaven when my servant Warren bowed to my scepter, and separated himself from the crafts of men;</p>
+                        <p><strong>7</strong> Therefore, blessed is my servant Warren, for I will have mercy on him; and, notwithstanding the vanity of his heart, I will lift him up inasmuch as he will humble himself before me.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Heaven rejoices when individuals submit to divine authority</li>
+                        <li>Separating from worldly pursuits brings divine approval</li>
+                        <li>The Lord shows mercy despite human weaknesses</li>
+                        <li>Humility is the condition for divine lifting and exaltation</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <ul>
+                        <li><strong>"joy in heaven"</strong> - Celestial celebration over earthly righteousness
+                            <ul>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g5479/kjv/tr/0-1/" target="_blank">χαρὰ ἐν οὐρανῷ (*chara en ourano*)</a> — "joy in heaven"</li>
+                                <li>Echoes <a href="https://www.blueletterbible.org/kjv/luk/15/7/" target="_blank">Luke 15:7</a> about joy over one sinner repenting</li>
+                            </ul>
+                        </li>
+                        <li><strong>"bowed to my scepter"</strong> - Submission to divine authority and kingship
+                            <ul>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h7626/kjv/wlc/0-1/" target="_blank">שֵׁבֶט (*shebet*)</a> — "rod, scepter, symbol of authority"</li>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g4464/kjv/tr/0-1/" target="_blank">ῥάβδος (*rhabdos*)</a> — "rod, scepter"</li>
+                            </ul>
+                        </li>
+                        <li><strong>"crafts of men"</strong> - Worldly occupations or cunning devices
+                            <ul>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h4639/kjv/wlc/0-1/" target="_blank">מַעֲשֵׂה (*ma'aseh*)</a> — "work, deed, craft"</li>
+                                <li>Can mean both legitimate trades and deceptive practices</li>
+                            </ul>
+                        </li>
+                        <li><strong>"vanity of his heart"</strong> - Pride or empty pursuits
+                            <ul>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h1892/kjv/wlc/0-1/" target="_blank">הֶבֶל (*hebel*)</a> — "vanity, emptiness, pride"</li>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g3153/kjv/tr/0-1/" target="_blank">ματαιότης (*mataiotes*)</a> — "vanity, futility"</li>
+                            </ul>
+                        </li>
+                        <li><strong>"lift him up inasmuch as he will humble himself"</strong> - Divine paradox of humility leading to exaltation
+                            <ul>
+                                <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h5375/kjv/wlc/0-1/" target="_blank">נָשָׂא (*nasa*)</a> — "to lift up, exalt"</li>
+                                <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g5312/kjv/tr/0-1/" target="_blank">ὑψόω (*hupsoo*)</a> — "to lift up, exalt"</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What "crafts of men" might we need to separate ourselves from today?</li>
+                        <li>How does heaven's joy over our choices affect our decision-making?</li>
+                        <li>What forms of vanity might the Lord overlook in His mercy toward us?</li>
+                        <li>How does the promise "inasmuch as" create both condition and proportion?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/15/7/" target="_blank">Luke 15:7,10</a> - Joy in heaven over repentance</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jam/4/10/" target="_blank">James 4:10</a> - Humble yourselves and be lifted up</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/23/12/" target="_blank">Matthew 23:12</a> - Whoever humbles himself shall be exalted</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/ecc/1/2/" target="_blank">Ecclesiastes 1:2</a> - Vanity of vanities</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/112.3" target="_blank">D&C 112:3</a> - First be humble</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>The Lord's acknowledgment of Warren's "vanity" while still calling him teaches us that God uses imperfect people. Our weaknesses don't disqualify us from service if we approach the Lord with humility and willingness to improve.</p>
+                </div>
+                
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 8: Grace and Crown</button>
+                <div class="sub-panel">
+                    <div class="scripture-quote">
+                        <p><strong>8</strong> And I will give him grace and assurance wherewith he may stand; and if he continue to be a faithful witness and a light unto the church I have prepared a crown for him in the mansions of my Father. Even so. Amen.</p>
+                    </div>
+            </div>
+        </div>
+        
+        <!-- JavaScript for Accordion Functionality -->
+        <script>
+        // Toggle main accordion sections
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        // Toggle sub-accordion sections (verse-by-verse)
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var subPanel = button.nextElementSibling;
+            subPanel.classList.toggle("active");
+        }
+        
+        // Expand all sections
+        function expandAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add("active");
+                panels[i].classList.add("active");
+            }
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.add("active");
+                subPanels[i].classList.add("active");
+            }
+        }
+        
+        // Collapse all sections
+        function collapseAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+                panels[i].classList.remove("active");
+            }
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.remove("active");
+                subPanels[i].classList.remove("active");
+            }
+        }
+        </script>
+    </div> <!-- End of container -->
+</body>
+</html>        
+        <!-- WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Key Word Studies</h2>
+                
+                <div class="info-box">
+                    <h3>1. Presiding High Priest</h3>
+                    <p><strong>Hebrew Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/h3548/kjv/wlc/0-1/" target="_blank">כֹּהֵן גָּדוֹל (*kohen gadol*)</a> — "great priest, high priest"</p>
+                    <p><strong>Greek Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/g749/kjv/tr/0-1/" target="_blank">ἀρχιερεύς (*archiereus*)</a> — "chief priest, high priest"</p>
+                    <p><strong>Etymology:</strong> From Latin <a href="https://www.etymonline.com/word/preside" target="_blank">praesidere</a> "to sit before, guard"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/presiding" target="_blank">Presiding</a> - "Sitting in authority over others; directing"</p>
+                    <p><strong>Doctrinal Significance:</strong> This office combines spiritual authority (priest) with administrative leadership (presiding), creating a pattern for local Church governance that bridges heaven and earth.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>2. Everlasting Gospel</h3>
+                    <p><strong>Hebrew Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/h1309/kjv/wlc/0-1/" target="_blank">בְּשׂוֹרָה (*besorah*)</a> — "good tidings, news"; <a href="https://www.blueletterbible.org/lexicon/h5769/kjv/wlc/0-1/" target="_blank">עוֹלָם (*olam*)</a> — "everlasting, eternal"</p>
+                    <p><strong>Greek Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/g2098/kjv/tr/0-1/" target="_blank">εὐαγγέλιον (*euaggelion*)</a> — "good news, gospel"; <a href="https://www.blueletterbible.org/lexicon/g166/kjv/tr/0-1/" target="_blank">αἰώνιος (*aionios*)</a> — "eternal, everlasting"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/gospel" target="_blank">Gospel</a> - From Old English godspel "good news"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/gospel" target="_blank">Gospel</a> - "The history of Jesus Christ's birth, life, death, resurrection and ascension"</p>
+                    <p><strong>Doctrinal Significance:</strong> The gospel is "everlasting" because it existed before the world, continues through mortality, and extends into eternity—unchanging in its saving principles.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>3. Seeking Diligently</h3>
+                    <p><strong>Hebrew Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/h1875/kjv/wlc/0-1/" target="_blank">דָּרַשׁ (*darash*)</a> — "to seek with care, inquire diligently"</p>
+                    <p><strong>Greek Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/g2212/kjv/tr/0-1/" target="_blank">ζητέω (*zeteo*)</a> — "to seek earnestly, strive after"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/diligent" target="_blank">Diligent</a> - From Latin diligere "to value highly, love"</p>                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/diligently" target="_blank">Diligently</a> - "With steady application; with industry"</p>
+                    <p><strong>Doctrinal Significance:</strong> Diligent seeking implies consistent, focused effort rather than casual interest—a daily pursuit requiring sacrifice and prioritization.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>4. The Laborer is Worthy of His Hire</h3>
+                    <p><strong>Hebrew Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/h6467/kjv/wlc/0-1/" target="_blank">פֹּעֵל (*po'el*)</a> — "worker, laborer"; <a href="https://www.blueletterbible.org/lexicon/h7939/kjv/wlc/0-1/" target="_blank">שָׂכָר (*sakar*)</a> — "wages, hire, reward"</p>
+                    <p><strong>Greek Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/g2040/kjv/tr/0-1/" target="_blank">ἐργάτης (*ergates*)</a> — "worker, laborer"; <a href="https://www.blueletterbible.org/lexicon/g514/kjv/tr/0-1/" target="_blank">ἄξιος (*axios*)</a> — "worthy, deserving"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/labor" target="_blank">Labor</a> - From Latin labor "toil, exertion"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/worthy" target="_blank">Worthy</a> - "Deserving; having merit"</p>
+                    <p><strong>Doctrinal Significance:</strong> This principle establishes divine approval for supporting those who dedicate their lives to spiritual ministry, removing shame from receiving temporal assistance.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>5. Children of Light</h3>
+                    <p><strong>Hebrew Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/h1121/kjv/wlc/0-1/" target="_blank">בֵּן (*ben*)</a> — "son, child"; <a href="https://www.blueletterbible.org/lexicon/h216/kjv/wlc/0-1/" target="_blank">אוֹר (*or*)</a> — "light, daylight, illumination"</p>
+                    <p>Connection to <a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank">בָּנָה (*banah*)</a> — "to build" (children as builders)</p>
+                    <p><strong>Greek Foundation:</strong> <a href="https://www.blueletterbible.org/lexicon/g5207/kjv/tr/0-1/" target="_blank">υἱός (*huios*)</a> — "son, child"; <a href="https://www.blueletterbible.org/lexicon/g5457/kjv/tr/0-1/" target="_blank">φῶς (*phos*)</a> — "light, spiritual illumination"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/light" target="_blank">Light</a> - From Proto-Indo-European *leuk- "light, brightness"</p>
+                    <p><strong>Webster 1828:</strong> <a href="https://webstersdictionary1828.com/Dictionary/light" target="_blank">Light</a> - "That ethereal agent or matter which makes objects perceptible"</p>
+                    <p><strong>Doctrinal Significance:</strong> Children of light are those born of spiritual illumination who build the kingdom through enlightened action, contrasting with those who work in spiritual darkness.</p>
+                </div>
+            </div>
+        </div>        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Teaching Applications by Setting</h2>
+                
+                <div class="info-box">
+                    <h3>Sunday School Application</h3>
+                    <p><strong>Topic:</strong> "The Laborer is Worthy: Supporting Church Service"</p>
+                    <p><strong>Opening Question:</strong> How do we balance trusting the Lord's provision with personal responsibility?</p>
+                    <ul>
+                        <li>Discuss Warren Cowdery's sacrifice to serve full-time and the Lord's promise of provision</li>
+                        <li>Share modern examples of those who sacrifice career advancement for Church service</li>
+                        <li>Explore what "seeking first the kingdom" looks like in practical terms</li>
+                        <li>Consider how we can support those called to demanding Church positions</li>
+                    </ul>
+                    <p><strong>Group Activity:</strong> List modern "crafts of men" that might distract from spiritual callings and discuss how to separate ourselves while still functioning in society.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Seminary Application (Youth)</h3>
+                    <p><strong>Topic:</strong> "Being Children of Light in a Digital World"</p>
+                    <p><strong>Modern Translation:</strong> What does "gird up your loins" look like for a teenager today?</p>
+                    <ul>
+                        <li>Discuss how social media can be used to "lift up your voice" positively</li>
+                        <li>Explore being "children of light" on social platforms</li>
+                        <li>Consider career planning that allows for Church service</li>
+                        <li>Address peer pressure and separating from negative "crafts of men"</li>
+                    </ul>
+                    <p><strong>Challenge:</strong> Identify one way to be a "light" online this week—share testimony, uplift others, or defend truth.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Institute Application (Young Adults)</h3>
+                    <p><strong>Topic:</strong> "Preparing for the Lord's Coming While Building a Life"</p>
+                    <p><strong>Discussion Focus:</strong> How do we maintain urgency about the Second Coming while making long-term plans?</p>
+                    <ul>
+                        <li>Balance between spiritual preparation and temporal responsibilities</li>
+                        <li>Choosing professions that allow for meaningful Church service</li>
+                        <li>Understanding that heaven rejoices in our righteous decisions</li>
+                        <li>Developing humility while building confidence and skills</li>
+                    </ul>
+                    <p><strong>Application:</strong> Create a personal plan for daily spiritual "loins girding" that fits with school/work schedules.</p>
+                </div>                
+                <div class="info-box">
+                    <h3>Family Home Evening Application</h3>
+                    <p><strong>Activity:</strong> Create a family "spiritual preparedness kit"</p>
+                    <ul>
+                        <li>Object Lesson: Use a flashlight in darkness to teach about being children of light</li>
+                        <li>Discussion: Share how heaven rejoices when we accept callings and make righteous choices</li>
+                        <li>Role Play: Practice "lifting up our voices" by sharing testimonies with each other</li>
+                        <li>Service Project: Support a family member or ward member in their calling</li>
+                    </ul>
+                    <p><strong>For Younger Children:</strong> Act out "girding up loins" with robes or long shirts, showing how preparation helps us work better.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Relief Society/Elders Quorum Application</h3>
+                    <p><strong>Topic:</strong> "Humility and Divine Lifting in Our Callings"</p>
+                    <p><strong>Discussion Questions:</strong></p>
+                    <ul>
+                        <li>How has the Lord's grace enabled you to "stand" in difficult callings?</li>
+                        <li>What "vanity of heart" might we need to overcome in our service?</li>
+                        <li>How do we support those who sacrifice temporally for Church service?</li>
+                        <li>What does it mean that specific crowns are prepared for our individual service?</li>
+                    </ul>
+                    <p><strong>Application Challenge:</strong> Identify one way to better support local Church leaders this week through prayer, service, or encouragement.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Questions for Deeper Study</h2>
+                
+                <div class="question-section">
+                    <h3>Questions for Individual Reflection</h3>
+                    <div class="question">1. How would my approach to Church callings change if I truly believed they brought "joy in heaven"?</div>
+                    <div class="reflection-prompt">Consider the cosmic significance of accepting and magnifying callings.</div>
+                    
+                    <div class="question">2. What temporal concerns prevent me from "devoting my whole time" to the Lord's work?</div>
+                    <div class="reflection-prompt">Examine what holds you back from fuller consecration.</div>
+                    
+                    <div class="question">3. If the Savior came tonight, what would I wish I had done differently today?</div>
+                    <div class="reflection-prompt">Use this perspective to guide daily priorities.</div>
+                    
+                    <div class="question">4. What "vanity of heart" might the Lord be mercifully overlooking in me?</div>
+                    <div class="reflection-prompt">Honestly assess areas where pride might be limiting growth.</div>
+                    
+                    <div class="question">5. What kind of "crown" might the Lord be preparing for my specific faithful service?</div>
+                    <div class="reflection-prompt">Consider how your unique contributions might be eternally recognized.</div>
+                </div>                
+                <div class="question-section">
+                    <h3>Questions for Family Discussion</h3>
+                    <div class="question">1. How can our family councils follow the pattern of seeking divine guidance?</div>
+                    <div class="reflection-prompt">Discuss practical ways to invite revelation in family decisions.</div>
+                    
+                    <div class="question">2. What does it mean that heaven rejoices when we make righteous choices?</div>
+                    <div class="reflection-prompt">Help children understand the eternal impact of their decisions.</div>
+                    
+                    <div class="question">3. How can we be "children of light" in our schools, workplaces, and neighborhoods?</div>
+                    <div class="reflection-prompt">Identify specific ways family members can shine their light.</div>
+                    
+                    <div class="question">4. What family "crafts" or activities might we need to separate ourselves from?</div>
+                    <div class="reflection-prompt">Evaluate family time use against eternal priorities.</div>
+                    
+                    <div class="question">5. How can we better support each other in our Church callings?</div>
+                    <div class="reflection-prompt">Create a family plan for sustaining one another's service.</div>
+                </div>
+                
+                <div class="question-section">
+                    <h3>Questions for Deeper Investigation</h3>
+                    <div class="question">1. How did the Church's organizational structure in 1834 compare to other religious movements of the time?</div>
+                    <div class="reflection-prompt">Research contemporary religious governance to understand the unique restoration pattern.</div>
+                    
+                    <div class="question">2. What became of Warren A. Cowdery and the Freedom branch after this revelation?</div>
+                    <div class="reflection-prompt">Study Church history to see the fruits of this calling.</div>
+                    
+                    <div class="question">3. How does the concept of "children of light" appear in other ancient texts (Dead Sea Scrolls, etc.)?</div>
+                    <div class="reflection-prompt">Explore intertestamental and early Christian usage of this phrase.</div>
+                    
+                    <div class="question">4. What other revelations use the "thief in the night" metaphor, and how do they expand our understanding?</div>
+                    <div class="reflection-prompt">Cross-reference all scriptural uses of this important warning.</div>
+                    
+                    <div class="question">5. How do the priesthood offices mentioned here relate to the fuller explanation in D&C 107?</div>
+                    <div class="reflection-prompt">Study the development of priesthood organization in the early Church.</div>
+                </div>
+                
+                <div class="question-section">
+                    <h3>Questions for Practical Application</h3>
+                    <div class="question">1. Who in my ward is sacrificing to serve and needs temporal or emotional support?</div>
+                    <div class="reflection-prompt">Identify specific people and make a plan to help.</div>
+                    
+                    <div class="question">2. What one change would make me more ready for the Lord's coming?</div>
+                    <div class="reflection-prompt">Choose a specific action to implement this week.</div>
+                    
+                    <div class="question">3. How can I be both a faithful witness AND a light in my current circumstances?</div>
+                    <div class="reflection-prompt">Consider the dual role of testimony and example.</div>
+                    
+                    <div class="question">4. What does "grace and assurance wherewith to stand" look like in my calling?</div>
+                    <div class="reflection-prompt">Identify where you need divine strengthening.</div>
+                    
+                    <div class="question">5. How can I "lift up my voice" in my adjoining counties (spheres of influence)?</div>
+                    <div class="reflection-prompt">Map out your influence circles and opportunities to share the gospel.</div>
+                </div>
+                
+                <div class="question-section">
+                    <h3>Cross-Reference Study Questions</h3>
+                    <div class="question">1. Compare D&C 106:3 with <a href="https://www.blueletterbible.org/kjv/mat/6/33/" target="_blank">Matthew 6:33</a>. How does Warren's calling exemplify seeking first the kingdom?</div>
+                    <div class="reflection-prompt">Study the promise of provision in both passages.</div>
+                    
+                    <div class="question">2. Read <a href="https://www.blueletterbible.org/kjv/1th/5/1-11/" target="_blank">1 Thessalonians 5:1-11</a>. How does Paul's teaching about children of light expand on D&C 106:5?</div>
+                    <div class="reflection-prompt">Note the additional characteristics of children of light.</div>
+                    
+                    <div class="question">3. Study <a href="https://www.blueletterbible.org/kjv/luk/15/7/" target="_blank">Luke 15:7</a> alongside D&C 106:6. What causes joy in heaven?</div>
+                    <div class="reflection-prompt">Consider various righteous acts that bring heavenly celebration.</div>
+                    
+                    <div class="question">4. Compare <a href="https://www.blueletterbible.org/kjv/jam/4/10/" target="_blank">James 4:10</a> with D&C 106:7. What is the relationship between humility and exaltation?</div>
+                    <div class="reflection-prompt">Explore this divine paradox throughout scripture.</div>
+                    
+                    <div class="question">5. Read <a href="https://www.blueletterbible.org/kjv/2ti/4/6-8/" target="_blank">2 Timothy 4:6-8</a> and D&C 106:8. How do Paul's and Warren's promised crowns compare?</div>
+                    <div class="reflection-prompt">Study the various crowns promised to the faithful.</div>
+                </div>
+            </div>
+        </div>        
+        <!-- JavaScript for Accordion Functionality -->
+        <script>
+        // Toggle main accordion sections
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+        }
+        
+        // Toggle sub-accordion sections (verse-by-verse)
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var subPanel = button.nextElementSibling;
+            subPanel.classList.toggle("active");
+        }
+        
+        // Expand all sections
+        function expandAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add("active");
+                panels[i].classList.add("active");
+            }
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.add("active");
+                subPanels[i].classList.add("active");
+            }
+        }
+        
+        // Collapse all sections
+        function collapseAll() {
+            var sections = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subSections = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+                panels[i].classList.remove("active");
+            }
+            for (var i = 0; i < subSections.length; i++) {
+                subSections[i].classList.remove("active");
+                subPanels[i].classList.remove("active");
+            }
+        }
+        </script>
+    </div> <!-- End of container -->
 </body>
 </html>

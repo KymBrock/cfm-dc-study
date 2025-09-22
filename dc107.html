@@ -1,15 +1,1830 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>D&C 107 Study Guide - Redirecting</title>
-    <meta http-equiv="refresh" content="0; url=https://github.com/KymBrock/cfm-dc-study/blob/main/DC_107/GitHub/README.md">
-    <script>
-        window.location.href = "https://github.com/KymBrock/cfm-dc-study/blob/main/DC_107/GitHub/README.md";
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 107 Complete Study Guide - Priesthood Organization and Authority</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Site Header */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+        
+        .cfm-button:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .panel.show {
+            max-height: none;
+            overflow: visible;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* Content Styling */
+        h2 {
+            color: #7c9885;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #5a6b5f;
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            color: #6b7280;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .scripture-block {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: Georgia, serif;
+        }
+        
+        .word-study-box {
+            background-color: #f4e8d0;
+            border: 2px solid #e8d4a2;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box {
+            background-color: #e8f0ea;
+            border-left: 4px solid #7c9885;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Question Section */
+        .question-section {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .question-section h4 {
+            color: #7c9885;
+            margin-bottom: 15px;
+        }
+        
+        .question-section ol {
+            margin-left: 20px;
+        }
+        
+        .question-section li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #5a6b5f;
+            text-decoration: underline;
+        }
+        
+        
+        /* Nested accordion for verse sections */
+        .verse-dropdown {
+            margin: 15px 0;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            background: white;
+        }
+        
+        .verse-dropdown summary {
+            padding: 15px;
+            background: #f9fafb;
+            color: #374151;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            transition: background 0.3s ease;
+        }
+        
+        .verse-dropdown summary:hover {
+            background: #f3f4f6;
+        }
+        
+        .verse-dropdown summary::before {
+            content: '▸';
+            display: inline-block;
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .verse-dropdown[open] summary::before {
+            transform: rotate(90deg);
+        }
+        
+        .verse-dropdown summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .verse-content {
+            padding: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        /* Fix for Teaching Applications and Study Questions display */
+        #teaching, #questions {
+            display: block !important;
+            width: 100%;
+        }
+        
+        #teaching + .panel, #questions + .panel {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header-section {
+                padding: 30px 20px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .tab-controls {
+                justify-content: center;
+            }
+            
+            .tab-btn {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .site-header, .tab-controls {
+                display: none;
+            }
+            
+            .accordion-section {
+                page-break-inside: avoid;
+            }
+            
+            .panel {
+                max-height: none !important;
+                display: block !important;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>This page has moved!</h1>
-    <p>Redirecting to the new study guide location...</p>
-    <p>If not redirected, <a href="https://github.com/KymBrock/cfm-dc-study/blob/main/DC_107/GitHub/README.md">click here</a>.</p>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="#" class="cfm-button disabled" title="CFMCorner lesson coming soon">View Full Lesson</a>
+                <a href="dc106_complete.html" class="cfm-button">D&C 106</a>
+                <a href="dc107_complete.html" class="cfm-button">D&C 107</a>
+                <a href="dc108_complete.html" class="cfm-button">D&C 108</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Main Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 107</h1>
+            <p class="subtitle">Priesthood Organization and Authority</p>
+            <p class="date-location">March 28, 1835 • Kirtland, Ohio</p>
+        </div>
+
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="toggleAll(true)">Expand All</button>
+            <button class="tab-btn" onclick="toggleAll(false)">Collapse All</button>
+            <button class="tab-btn" onclick="scrollToSection('overview')">Overview</button>
+            <button class="tab-btn" onclick="scrollToSection('context')">Historical Context</button>
+            <button class="tab-btn" onclick="scrollToSection('verses')">Verse-by-Verse</button>
+            <button class="tab-btn" onclick="scrollToSection('words')">Word Studies</button>
+            <button class="tab-btn" onclick="scrollToSection('teaching')">Teaching Applications</button>
+            <button class="tab-btn" onclick="scrollToSection('questions')">Study Questions</button>
+        </div>
+        <!-- Section Overview -->
+        <button class="accordion-section" id="overview">Section Overview</button>
+        <div class="panel">
+            <h2>Section Overview</h2>
+            
+            <h3>Basic Information</h3>
+            <ul>
+                <li><strong>Date of Revelation:</strong> March 28, 1835 (with portions from November 11, 1831)</li>
+                <li><strong>Location:</strong> Kirtland, Ohio</li>
+                <li><strong>Recipient(s):</strong> The Twelve Apostles and Church leadership preparing for their first quorum mission</li>
+                <li><strong>Section Summary:</strong> A comprehensive revelation on priesthood organization, defining the two priesthoods, establishing the roles of presiding quorums (First Presidency, Twelve, Seventy), outlining bishop responsibilities, and revealing the ancient priesthood order from Adam to Noah.</li>
+            </ul>
+            
+            <h3>Key Principles</h3>
+            <ul>
+                <li><strong>Primary Doctrinal Principle:</strong> The Melchizedek Priesthood holds the keys of all spiritual blessings and presides over all offices in the Church, while the Aaronic Priesthood holds the keys of ministering angels and administers outward ordinances</li>
+                <li><strong>Secondary Principle:</strong> Priesthood quorums function in unity and equality, with decisions requiring unanimous consent when all members are present</li>
+                <li><strong>Application Principle:</strong> Every priesthood holder from deacon to apostle has sacred duties that contribute to the salvation of souls and the building of Zion</li>
+            </ul>
+            
+            <h3>Timeframe & Setting</h3>
+            
+            <h4>Circumstances Among Recipients</h4>
+            <p>March 1835 found the newly called Twelve Apostles preparing for their first quorum mission to the Eastern States. They had been ordained in February 1835 but felt inadequate for their calling. Oliver Cowdery and others had been teaching them, but they needed divine instruction about their authority and duties. The Seventy were also being organized, requiring clarity about their role relative to the Twelve.</p>
+            
+            <h4>Circumstances Within the Church</h4>
+            <p>The Church was in a critical organizational phase. The Kirtland Temple was under construction (dedicated March 1836), requiring proper priesthood authority for ordinances. The School of the Prophets was functioning, training Church leaders. Recent conflicts from Zion's Camp (1834) had tested faith, but also identified future leaders. The Church was transitioning from informal to formal priesthood structure.</p>
+            
+            <h4>Relevant Local Circumstances</h4>
+            <p>Kirtland, Ohio, served as Church headquarters with about 1,000-1,500 members in the area. Economic pressures were mounting as members sacrificed to build the temple. Religious excitement in the Western Reserve made people receptive to new revelation but also created competition among churches. The community watched skeptically as the Mormons claimed ancient priesthood authority.</p>
+            
+            <h4>Relevant Global Circumstances</h4>
+            <p>The 1830s marked the height of Jacksonian Democracy with its emphasis on common man equality—ironically paralleling the revelation's teaching about priesthood quorum equality. Religious primitivism sought to restore New Testament Christianity. The Second Great Awakening had prepared hearts for claims of restored authority. Social movements challenged traditional authority structures.</p>
+            
+            <h3>Purpose of the Revelation</h3>
+            
+            <h4>Short Term</h4>
+            <ul>
+                <li>Instruct the Twelve Apostles about their calling and authority before their mission</li>
+                <li>Establish clear priesthood hierarchy to prevent confusion and apostasy</li>
+                <li>Prepare the Church organizationally for temple ordinances</li>
+                <li>Define relationships between various priesthood offices and quorums</li>
+                <li>Provide historical precedent for priesthood authority through ancient patriarchs</li>
+            </ul>
+            
+            <h4>Long Term</h4>
+            <ul>
+                <li>Create the organizational framework that would govern the worldwide Church</li>
+                <li>Establish priesthood keys and succession patterns for all dispensations</li>
+                <li>Preserve the doctrine of priesthood authority for future generations</li>
+                <li>Define the eternal nature of priesthood councils and quorums</li>
+                <li>Connect modern Saints to ancient priesthood holders through shared ordinances</li>
+            </ul>
+            
+            <h3>Significance</h3>
+            
+            <h4>Short Term</h4>
+            <p>The revelation immediately organized the Church's leadership structure, enabling the Twelve to depart on their mission with confidence. It clarified that bishops served as common judges in Israel, resolving disputes about their role. The ancient priesthood genealogy strengthened members' faith that they were part of God's eternal work. The emphasis on unanimity in councils promoted unity during a period of potential division.</p>
+            
+            <h4>Long Term</h4>
+            <p>This revelation remains the constitutional document for LDS Church government. Every priesthood ordination, quorum organization, and Church council follows its patterns. The principle of priesthood keys prevents unauthorized ordinances and maintains order. The revelation's teaching about equal authority among quorums prevents autocracy while maintaining hierarchical order. Its genealogical records inspire family history work.</p>
+            
+            <h3>Cultural Insights</h3>
+            
+            <h4>Ancient Patterns</h4>
+            <p>The revelation reveals priesthood organization from Adam through Noah, showing that patriarchal priesthood government existed from the beginning. The pattern of three presiding quorums (First Presidency, Twelve, Seventy) mirrors ancient Israel's government structures. The role of bishops as judges parallels Old Testament judges. The emphasis on genealogy and lineage reflects Hebrew record-keeping traditions. Adam-ondi-Ahman as a gathering place establishes sacred geography patterns.</p>
+            
+            <h4>Modern Relevance</h4>
+            <p>The priesthood structure adapts to govern a global church of millions while maintaining the same basic organization revealed in 1835. Digital technology enables councils to meet and make unanimous decisions across continents. The Prophet holds all priesthood keys and is authorized to use them in righteousness. However, all apostles have been given these keys as well, ensuring continuity and orderly succession. Women's auxiliary organizations parallel priesthood structures and serve as vital appendages to God's Priesthood order and plan for the salvation of all His children. The revelation's flexibility allows for growth while maintaining doctrinal foundations.</p>
+            
+            <h3>Modern Application</h3>
+            
+            <h4>Personal Application</h4>
+            <ul>
+                <li>Understand your specific priesthood duties regardless of office held</li>
+                <li>Seek unity and unanimity in family councils as modeled by priesthood councils</li>
+                <li>Honor priesthood keys by following proper authority channels</li>
+                <li>Study ancient priesthood holders as models for personal ministry</li>
+                <li>Prepare worthily for advancing through priesthood offices</li>
+            </ul>
+            
+            <h4>Family Application</h4>
+            <ul>
+                <li>Hold family councils following the pattern of priesthood councils</li>
+                <li>Teach children about priesthood authority and keys from young ages</li>
+                <li>Share stories of ancient priesthood holders during family study</li>
+                <li>Create family traditions around priesthood ordinations and advancements</li>
+                <li>Support family members in magnifying their priesthood callings</li>
+            </ul>
+            
+            <h4>Church Application</h4>
+            <ul>
+                <li>Sustain all priesthood leaders, recognizing their divine calling</li>
+                <li>Participate actively in your priesthood quorum's work</li>
+                <li>Understand how your calling fits within the larger priesthood organization</li>
+                <li>Seek unanimity rather than mere majority in ward/stake councils</li>
+                <li>Honor the keys held by bishops, stake presidents, and general authorities</li>
+            </ul>
+            
+            <h4>Community Application</h4>
+            <ul>
+                <li>Let priesthood service inspire civic leadership and service</li>
+                <li>Apply council principles to community organizations and boards</li>
+                <li>Share the concept of organized service with non-member friends</li>
+                <li>Demonstrate that religious authority can coexist with democratic principles</li>
+                <li>Show how priesthood organization enables efficient disaster response</li>
+            </ul>
+            
+            <h3>Key Doctrines</h3>
+            
+            <h4>New Doctrines Introduced</h4>
+            <ul>
+                <li>Two distinct priesthoods with different keys and responsibilities</li>
+                <li>The Melchizedek Priesthood named to avoid overusing the Savior's name</li>
+                <li>Three presiding quorums of equal authority in their spheres</li>
+                <li>Bishops serve as common judges in Israel with specific jurisdiction</li>
+                <li>Ancient priesthood organization from Adam through Noah revealed</li>
+                <li>The Twelve hold keys equal to the First Presidency when that quorum is dissolved</li>
+                <li>Decisions require unanimity when full quorums are present</li>
+            </ul>
+            
+            <h4>Previous Doctrines Clarified</h4>
+            <ul>
+                <li>The relationship between Aaronic and Melchizedek Priesthoods defined</li>
+                <li>High priests' role as standing ministers in stakes clarified</li>
+                <li>Elders' calling as standing ministers to the Church specified</li>
+                <li>The Seventy's role as traveling ministers under the Twelve established</li>
+                <li>Priests' authority to baptize, administer sacrament, and teach confirmed</li>
+                <li>Teachers and deacons as standing ministers to watch over the Church</li>
+                <li>The principle of priesthood keys as authorization for ordinances</li>
+            </ul>
+            
+            <h4>Covenant Principles Explained</h4>
+            <ul>
+                <li>Priesthood ordination creates covenant obligations for service</li>
+                <li>Quorum membership involves covenants of brotherhood and support</li>
+                <li>Leaders covenant to judge in righteousness and holiness</li>
+                <li>The oath and covenant of the priesthood implied throughout</li>
+                <li>Ancient covenants continued through modern priesthood restoration</li>
+                <li>Priesthood holders covenant to act only within their authorized sphere</li>
+                <li>Unity and unanimity reflect celestial covenant patterns</li>
+            </ul>
+        </div>
+        <!-- Historical Context -->
+        <button class="accordion-section" id="context">Historical Context</button>
+        <div class="panel">
+            <h2>Historical Context</h2>
+            
+            <h3>March 1835: A Pivotal Moment</h3>
+            
+            <h4>The Twelve's Preparation</h4>
+            <p>In February 1835, the Twelve Apostles were chosen and ordained for the first time in this dispensation. By March, they were preparing for their first mission to the Eastern States but felt overwhelmed by their calling. Oliver Cowdery had been teaching them from the Bible about ancient apostles, but they needed divine instruction about their specific authority and duties in the restored Church.</p>
+            
+            <h4>Temple Construction Context</h4>
+            <p>The Kirtland Temple walls were rising, with dedication planned for March 1836. The Saints were sacrificing tremendously—women giving china and men working while fasting. The temple would house sacred ordinances requiring proper priesthood authority, making this revelation's timing crucial.</p>
+            
+            <h4>Organizational Challenges</h4>
+            <p>The Church faced several organizational questions:</p>
+            <ul>
+                <li>How do local leaders relate to general authorities?</li>
+                <li>What checks exist on priesthood power?</li>
+                <li>How should councils make decisions?</li>
+                <li>Who can judge Church members?</li>
+                <li>What is the relationship between the two priesthoods?</li>
+            </ul>
+            
+            <h3>Previous Revelations Setting the Stage</h3>
+            
+            <h4>Building on Earlier Instructions</h4>
+            <p>This revelation incorporated and expanded upon earlier revelations about priesthood. Portions dated back to November 11, 1831, when initial instructions about the high priesthood were given. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84" target="_blank">D&C 84</a> (September 1832) had explained priesthood lineage and the oath and covenant. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20" target="_blank">D&C 20</a> had outlined basic Church offices. Now these pieces were unified into a comprehensive constitution.</p>
+            
+            <h4>Zion's Camp's Influence</h4>
+            <p>The 1834 Zion's Camp march had tested and proven future leaders. Many of the newly called Twelve and Seventy were veterans of that march. Their shared sacrifice created bonds that would help them work in the unity this revelation required.</p>
+            
+            <h3>Contemporary Religious Context</h3>
+            
+            <h4>Restoration Movement Comparisons</h4>
+            <p>Other restoration movements of the 1830s (Campbellites, Shakers) also claimed to restore primitive Christianity but lacked claims to priesthood authority. The detailed priesthood organization in D&C 107 distinguished Mormonism's claims from other primitivist movements.</p>
+            
+            <h4>Democratic Ideals and Divine Authority</h4>
+            <p>American democratic ideals influenced how members understood priesthood councils and unanimous consent. Yet the revelation balanced democratic principles (equality of quorums) with hierarchical authority (presidency and keys), creating a unique theological-political structure.</p>
+            
+            <h3>The Revelation's Immediate Impact</h3>
+            
+            <h4>Empowering the Twelve</h4>
+            <p>Armed with this revelation, the Twelve departed on their Eastern States mission with confidence. They could now explain their authority and the Church's organization to investigators and members alike. Their success on this mission validated the organizational structure.</p>
+            
+            <h4>Resolving Authority Questions</h4>
+            <p>The revelation immediately resolved disputes about bishops' authority to judge members. It clarified that high councils and stake presidencies had specific jurisdictions. The principle of keys prevented unauthorized actions while enabling authorized service.</p>
+            
+            <h3>Long-term Historical Significance</h3>
+            
+            <h4>Succession Crisis Prevention</h4>
+            <p>When Joseph Smith was martyred in 1844, D&C 107's teachings about the Twelve's authority proved crucial. Brigham Young and the Twelve could claim equal authority to the First Presidency when that quorum was dissolved, preventing schism.</p>
+            
+            <h4>Global Church Administration</h4>
+            <p>The organizational structure revealed in 1835 for a church of a few thousand now governs a global church of millions. The principles of priesthood keys, quorum organization, and council decision-making have proven remarkably scalable.</p>
+        </div>
+        <!-- Verse-by-Verse Study -->
+        <button class="accordion-section" id="verses">Verse-by-Verse Study Guide</button>
+        <div class="panel">
+            <h2>Verse-by-Verse Study Guide</h2>
+            <p style="font-style: italic; margin-bottom: 20px;">This comprehensive study guide covers all 100 verses of D&C 107. Click on each section to expand and explore the scriptures, doctrinal insights, language studies, and reflection questions.</p>
+            
+            <!-- Verses 1-5 -->
+            <details class="verse-dropdown">
+                <summary>Verses 1-5: The Two Priesthoods Defined</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>1</strong> There are, in the church, two priesthoods, namely, the Melchizedek and Aaronic, including the Levitical Priesthood.</p>
+                        <p><strong>2</strong> Why the first is called the Melchizedek Priesthood is because Melchizedek was such a great high priest.</p>
+                        <p><strong>3</strong> Before his day it was called the Holy Priesthood, after the Order of the Son of God.</p>
+                        <p><strong>4</strong> But out of respect or reverence to the name of the Supreme Being, to avoid the too frequent repetition of his name, they, the church, in ancient days, called that priesthood after Melchizedek, or the Melchizedek Priesthood.</p>
+                        <p><strong>5</strong> All other authorities or offices in the church are appendages to this priesthood.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Two priesthoods exist in the Church: Melchizedek and Aaronic (including Levitical)</li>
+                        <li>The higher priesthood is named after Melchizedek to avoid overusing God's name</li>
+                        <li>Originally called "Holy Priesthood after the Order of the Son of God"</li>
+                        <li>All Church offices and authorities are appendages to the Melchizedek Priesthood</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"two priesthoods"</strong> - Dual priesthood structure: restoration of ancient organization</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3550/kjv/wlc/0-1/" target="_blank">כְּהֻנָּה (<em>kehunnah</em>)</a> — "priesthood"</li>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g2420/kjv/tr/0-1/" target="_blank">ἱερωσύνη (<em>hierosyne</em>)</a> — "priesthood, priestly office"</li>
+                        </ul>
+                        
+                        <p><strong>"Melchizedek"</strong> - Both a personal name and a title</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h4442/kjv/wlc/0-1/" target="_blank">מֶלֶךְ־צֶדֶק (<em>Melekh-Tzedek</em>)</a> — "King of Righteousness"</li>
+                            <li>Compound of <a href="https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/" target="_blank">מֶלֶךְ (<em>melekh</em>)</a> — "king" + <a href="https://www.blueletterbible.org/lexicon/h6664/kjv/wlc/0-1/" target="_blank">צֶדֶק (<em>tzedek</em>)</a> — "righteousness"</li>
+                            <li>King of Salem (<a href="https://www.blueletterbible.org/lexicon/h8004/kjv/wlc/0-1/" target="_blank">שָׁלֵם (<em>Shalem</em>)</a>) meaning "peace, completeness"</li>
+                        </ul>
+                        
+                        <p><strong>"Holy Priesthood, after the Order of the Son of God"</strong> - Original name revealing divine source</p>
+                        <ul>
+                            <li>Hebrew: סֵדֶר קָדוֹשׁ (<em>Seder Kadosh</em>) — "Holy Order"</li>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g5010/kjv/tr/0-1/" target="_blank">τάξις (<em>taxis</em>)</a> — "order, arrangement"</li>
+                            <li>See Alma's emphasis on this Holy Order in <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13.1-19" target="_blank">Alma 13:1-19</a></li>
+                        </ul>
+                        
+                        <p><strong>"appendages"</strong> - Like branches hanging upon a tree</p>
+                        <ul>
+                            <li>Latin: <a href="https://logeion.uchicago.edu/appendo" target="_blank">appendere</a> — "to hang upon, attach"</li>
+                            <li>Hebrew concept: <a href="https://www.blueletterbible.org/lexicon/h8328/kjv/wlc/0-1/" target="_blank">שֹׁרֶשׁ (<em>shoresh</em>)</a> — "root"</li>
+                            <li>Reflects Menorah structure—central shaft with branches extending</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>Why would ancient Saints consider it irreverent to frequently say God's name?</li>
+                        <li>What does it mean that all authorities are "appendages" to the priesthood?</li>
+                        <li>How does naming the priesthood after Melchizedek honor both him and God?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/heb/7/1/" target="_blank">Hebrews 7:1-17</a> - Paul's discourse on Melchizedek</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13.1-19" target="_blank">Alma 13:1-19</a> - Alma on the high priesthood</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.14" target="_blank">D&C 84:14</a> - Abraham received from Melchizedek</li>
+                    </ul>
+                </div>
+            </details>
+            <!-- Verses 6-12 -->
+            <details class="verse-dropdown">
+                <summary>Verses 6-12: Offices Within the Priesthoods</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>6</strong> But there are two divisions or grand heads—one is the Melchizedek Priesthood, and the other is the Aaronic, or Levitical Priesthood.</p>
+                        <p><strong>7</strong> The office of an elder belongs to the Melchizedek Priesthood.</p>
+                        <p><strong>8</strong> The Melchizedek Priesthood holds the right of presidency, and has power and authority over all the offices in the church in all ages of the world, to administer in spiritual things.</p>
+                        <p><strong>9</strong> The Presidency of the High Priesthood, after the order of Melchizedek, have a right to officiate in all the offices in the church.</p>
+                        <p><strong>10</strong> High priests after the order of the Melchizedek Priesthood have a right to officiate in their own standing, under the direction of the presidency, in administering spiritual things, and also in the office of an elder, priest (of the Levitical order), teacher, deacon, and member.</p>
+                        <p><strong>11</strong> An elder has a right to officiate in his stead when the high priest is not present.</p>
+                        <p><strong>12</strong> The high priest and elder are to administer in spiritual things, agreeable to the covenants and commandments of the church; and they have a right to officiate in all these offices of the church when there are no higher authorities present.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Two grand divisions structure all priesthood authority</li>
+                        <li>Elders belong to the Melchizedek Priesthood</li>
+                        <li>Melchizedek Priesthood presides over all Church offices</li>
+                        <li>Higher offices can officiate in all lower offices</li>
+                        <li>Authority functions hierarchically but allows for circumstantial flexibility</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"right of presidency"</strong> - Inherent authority to preside</p>
+                        <ul>
+                            <li>Latin: <a href="https://logeion.uchicago.edu/praesideo" target="_blank">praesidere</a> — "to sit before, preside, guard, watch over"</li>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h7218/kjv/wlc/0-1/" target="_blank">רֹאשׁ (<em>rosh</em>)</a> — "head, chief, leader"</li>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g4291/kjv/tr/0-1/" target="_blank">προΐστημι (<em>proistemi</em>)</a> — "to stand before, to preside, to rule"</li>
+                        </ul>
+                        
+                        <p><strong>"administer in spiritual things"</strong> - Spiritual ordinances and blessings</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g4152/kjv/tr/0-1/" target="_blank">πνευματικός (<em>pneumatikos</em>)</a> — "spiritual"</li>
+                            <li>Contrasts with temporal/outward ordinances</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>Why can higher offices function in lower offices but not vice versa?</li>
+                        <li>What "spiritual things" distinguish Melchizedek from Aaronic administration?</li>
+                        <li>How does this hierarchy maintain order while allowing flexibility?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20.38-67" target="_blank">D&C 20:38-67</a> - Duties of elders, priests, teachers</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.29-30" target="_blank">D&C 84:29-30</a> - Offices are appendages</li>
+                    </ul>
+                </div>
+            </details>
+            <!-- Verses 13-17 -->
+            <details class="verse-dropdown">
+                <summary>Verses 13-17: The Aaronic Priesthood Keys</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>13</strong> The second priesthood is called the Priesthood of Aaron, because it was conferred upon Aaron and his seed, throughout all their generations.</p>
+                        <p><strong>14</strong> Why it is called the lesser priesthood is because it is an appendage to the greater, or the Melchizedek Priesthood, and has power in administering outward ordinances.</p>
+                        <p><strong>15</strong> The bishopric is the presidency of this priesthood, and holds the keys or authority of the same.</p>
+                        <p><strong>16</strong> No man has a legal right to this office, to hold the keys of this priesthood, except he be a literal descendant of Aaron.</p>
+                        <p><strong>17</strong> But as a high priest of the Melchizedek Priesthood has authority to officiate in all the lesser offices, he may officiate in the office of bishop when no literal descendant of Aaron can be found, provided he is called and set apart and ordained unto this power by the hands of the Presidency of the Melchizedek Priesthood.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Aaronic Priesthood named after Aaron and his lineage</li>
+                        <li>Called "lesser" as an appendage to the greater priesthood</li>
+                        <li>Administers outward/preparatory ordinances</li>
+                        <li>Bishopric presides over Aaronic Priesthood</li>
+                        <li>Literal descendants of Aaron have hereditary right to preside</li>
+                        <li>High priests can serve as bishops when no Aaronite available</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"Aaron and his seed"</strong> - Hereditary priesthood pattern</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h175/kjv/wlc/0-1/" target="_blank">אַהֲרֹן (<em>Aharon</em>)</a> — Aaron</li>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2233/kjv/wlc/0-1/" target="_blank">זֶרַע (<em>zera</em>)</a> — "seed, descendants"</li>
+                        </ul>
+                        
+                        <p><strong>"outward ordinances"</strong> - External, preparatory ordinances</p>
+                        <ul>
+                            <li>Baptism, sacrament, temporal affairs</li>
+                            <li>Contrast with "spiritual things" of verse 12</li>
+                        </ul>
+                        
+                        <p><strong>"legal right"</strong> - Hereditary claim by lineage</p>
+                        <ul>
+                            <li>Reflects Old Testament Levitical patterns</li>
+                            <li>See <a href="https://www.blueletterbible.org/kjv/num/3/5/" target="_blank">Numbers 3:5-10</a></li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/exo/28/1/" target="_blank">Exodus 28:1</a> - Aaron's calling</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/68.15-21" target="_blank">D&C 68:15-21</a> - Literal descendants of Aaron</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.26-27" target="_blank">D&C 84:26-27</a> - Lesser priesthood holds keys</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <!-- Verses 18-20 -->
+            <details class="verse-dropdown">
+                <summary>Verses 18-20: Keys of Both Priesthoods</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>18</strong> The power and authority of the higher, or Melchizedek Priesthood, is to hold the keys of all the spiritual blessings of the church—</p>
+                        <p><strong>19</strong> To have the privilege of receiving the mysteries of the kingdom of heaven, to have the heavens opened unto them, to commune with the general assembly and church of the Firstborn, and to enjoy the communion and presence of God the Father, and Jesus the mediator of the new covenant.</p>
+                        <p><strong>20</strong> The power and authority of the lesser, or Aaronic Priesthood, is to hold the keys of the ministering of angels, and to administer in outward ordinances, the letter of the gospel, the baptism of repentance for the remission of sins, agreeable to the covenants and commandments.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Melchizedek Priesthood holds keys of ALL spiritual blessings</li>
+                        <li>Enables receiving mysteries, heavenly manifestations, divine communion</li>
+                        <li>Provides access to Church of the Firstborn and God's presence</li>
+                        <li>Aaronic Priesthood holds keys of angelic ministering</li>
+                        <li>Administers preparatory gospel ordinances</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"keys"</strong> - Authority to unlock or authorize</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g2807/kjv/tr/0-1/" target="_blank">κλείς (<em>kleis</em>)</a> — "key"</li>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h4668/kjv/wlc/0-1/" target="_blank">מַפְתֵּחַ (<em>maphteach</em>)</a> — "key, opening"</li>
+                            <li>Symbol of binding/loosing authority (<a href="https://www.blueletterbible.org/kjv/mat/16/19/" target="_blank">Matthew 16:19</a>)</li>
+                        </ul>
+                        
+                        <p><strong>"mysteries of the kingdom"</strong> - Sacred knowledge revealed to faithful</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g3466/kjv/tr/0-1/" target="_blank">μυστήριον (<em>mysterion</em>)</a> — "mystery, secret"</li>
+                        </ul>
+                        
+                        <p><strong>"church of the Firstborn"</strong> - Celestial church of exalted beings</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g4416/kjv/tr/0-1/" target="_blank">πρωτότοκος (<em>prototokos</em>)</a> — "firstborn"</li>
+                            <li>See <a href="https://www.blueletterbible.org/kjv/heb/12/23/" target="_blank">Hebrews 12:23</a></li>
+                        </ul>
+                        
+                        <p><strong>"ministering of angels"</strong> - Angelic visitations and guidance</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g1248/kjv/tr/0-1/" target="_blank">διακονία (<em>diakonia</em>)</a> — "ministry, service"</li>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h8334/kjv/wlc/0-1/" target="_blank">שָׁרַת (<em>sharath</em>)</a> — "to minister, serve"</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What specific "spiritual blessings" come through Melchizedek Priesthood?</li>
+                        <li>How do the keys of ministering angels function in Aaronic Priesthood?</li>
+                        <li>What is the relationship between priesthood keys and heavenly access?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.19-22" target="_blank">D&C 84:19-22</a> - Power of godliness</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/13.1" target="_blank">D&C 13:1</a> - Keys of ministering of angels</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76.51-70" target="_blank">D&C 76:51-70</a> - Church of the Firstborn</li>
+                    </ul>
+                </div>
+            </details>
+            <!-- Verses 21-26 -->
+            <details class="verse-dropdown">
+                <summary>Verses 21-26: The Three Presiding Quorums</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>21</strong> Of necessity there are presidents, or presiding officers growing out of, or appointed of or from among those who are ordained to the several offices in these two priesthoods.</p>
+                        <p><strong>22</strong> Of the Melchizedek Priesthood, three Presiding High Priests, chosen by the body, appointed and ordained to that office, and upheld by the confidence, faith, and prayer of the church, form a quorum of the Presidency of the Church.</p>
+                        <p><strong>23</strong> The twelve traveling councilors are called to be the Twelve Apostles, or special witnesses of the name of Christ in all the world—thus differing from other officers in the church in the duties of their calling.</p>
+                        <p><strong>24</strong> And they form a quorum, equal in authority and power to the three presidents previously mentioned.</p>
+                        <p><strong>25</strong> The Seventy are also called to preach the gospel, and to be especial witnesses unto the Gentiles and in all the world—thus differing from other officers in the church in the duties of their calling.</p>
+                        <p><strong>26</strong> And they form a quorum, equal in authority to that of the Twelve special witnesses or Apostles just named.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Presidents naturally emerge from ordained officers</li>
+                        <li>First Presidency consists of three Presiding High Priests</li>
+                        <li>Twelve Apostles are special witnesses of Christ's name worldwide</li>
+                        <li>The Twelve equal the First Presidency in authority and power</li>
+                        <li>Seventy are especial witnesses particularly to Gentiles</li>
+                        <li>The Seventy equal the Twelve in authority</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"special witnesses of the name of Christ"</strong> - Unique apostolic calling</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g3144/kjv/tr/0-1/" target="_blank">μάρτυς (<em>martys</em>)</a> — "witness, martyr"</li>
+                            <li>"Name" represents authority, character, and mission</li>
+                            <li>Apostles literally give their lives as witnesses</li>
+                        </ul>
+                        
+                        <p><strong>"equal in authority and power"</strong> - Balanced quorum structure</p>
+                        <ul>
+                            <li>Prevents autocracy while maintaining order</li>
+                            <li>Each quorum serves as check on others</li>
+                            <li>Pattern of councils in heaven</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/1/8/" target="_blank">Acts 1:8</a> - Witnesses unto all the earth</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18.27" target="_blank">D&C 18:27</a> - Twelve special witnesses</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/10/1/" target="_blank">Luke 10:1</a> - Christ appointed seventy</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <!-- Verses 27-32 -->
+            <details class="verse-dropdown">
+                <summary>Verses 27-32: Quorum Decision Making</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>27</strong> And every decision made by either of these quorums must be by the unanimous voice of the same; that is, every member in each quorum must be agreed to its decisions, in order to make their decisions of the same power or validity one with the other—</p>
+                        <p><strong>28</strong> A majority may form a quorum when circumstances render it impossible to be otherwise—</p>
+                        <p><strong>29</strong> Unless this is the case, their decisions are not entitled to the same blessings which the decisions of a quorum of three presidents were anciently, who were ordained after the order of Melchizedek, and were righteous and holy men.</p>
+                        <p><strong>30</strong> The decisions of these quorums, or either of them, are to be made in all righteousness, in holiness, and lowliness of heart, meekness and long-suffering, and in faith, and virtue, and knowledge, temperance, patience, godliness, brotherly kindness and charity;</p>
+                        <p><strong>31</strong> Because the promise is, if these things abound in them they shall not be unfruitful in the knowledge of the Lord.</p>
+                        <p><strong>32</strong> And in case that any decision of these quorums is made in unrighteousness, it may be brought before a general assembly of the several quorums, which constitute the spiritual authorities of the church; otherwise there can be no appeal from their decision.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Unanimous decisions required when full quorum present</li>
+                        <li>Majority can act when full assembly impossible</li>
+                        <li>Decisions must be made with specific spiritual qualities</li>
+                        <li>Unrighteous decisions can be appealed to general assembly</li>
+                        <li>Otherwise, quorum decisions are final</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"unanimous voice"</strong> - Complete unity required</p>
+                        <ul>
+                            <li>Latin: <a href="https://logeion.uchicago.edu/unanimus" target="_blank">unanimus</a> — "of one mind"</li>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h259/kjv/wlc/0-1/" target="_blank">אֶחָד (<em>echad</em>)</a> — "one, unity"</li>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g3661/kjv/tr/0-1/" target="_blank">ὁμοθυμαδόν (<em>homothumadon</em>)</a> — "with one accord"</li>
+                            <li>Reflects celestial pattern where all are one (<a href="https://www.blueletterbible.org/kjv/joh/17/21/" target="_blank">John 17:21</a>)</li>
+                        </ul>
+                        
+                        <p><strong>List of virtues in verse 30</strong></p>
+                        <ul>
+                            <li>Echoes <a href="https://www.blueletterbible.org/kjv/2pe/1/5/" target="_blank">2 Peter 1:5-7</a></li>
+                            <li>Progressive spiritual development required</li>
+                            <li>Each virtue builds on previous</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>Why does the Lord require unanimity rather than simple majority?</li>
+                        <li>How do the listed virtues enable inspired decisions?</li>
+                        <li>What protections exist against unrighteous quorum decisions?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/2pe/1/5/" target="_blank">2 Peter 1:5-8</a> - Add to faith virtue</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/18/19/" target="_blank">Matthew 18:19-20</a> - Where two or three agreed</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.41-45" target="_blank">D&C 121:41-45</a> - Priesthood principles</li>
+                    </ul>
+                </div>
+            </details>
+            <!-- Verses 33-38 -->
+            <details class="verse-dropdown">
+                <summary>Verses 33-38: Additional Quorums</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>33</strong> The Twelve are a Traveling Presiding High Council, to officiate in the name of the Lord, under the direction of the Presidency of the Church, agreeable to the institution of heaven; to build up the church, and regulate all the affairs of the same in all nations, first unto the Gentiles and secondly unto the Jews.</p>
+                        <p><strong>34</strong> The Seventy are to act in the name of the Lord, under the direction of the Twelve or the traveling high council, in building up the church and regulating all the affairs of the same in all nations, first unto the Gentiles and then to the Jews—</p>
+                        <p><strong>35</strong> The Twelve being sent out, holding the keys, to open the door by the proclamation of the gospel of Jesus Christ, and first unto the Gentiles and then unto the Jews.</p>
+                        <p><strong>36</strong> The standing high councils, at the stakes of Zion, form a quorum equal in authority in the affairs of the church, in all their decisions, to the quorum of the presidency, or to the traveling high council.</p>
+                        <p><strong>37</strong> The high council in Zion form a quorum equal in authority in the affairs of the church, in all their decisions, to the councils of the Twelve at the stakes of Zion.</p>
+                        <p><strong>38</strong> It is the duty of the traveling high council to call upon the Seventy, when they need assistance, to fill the several calls for preaching and administering the gospel, instead of any others.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Twelve are Traveling Presiding High Council under First Presidency</li>
+                        <li>Gospel goes first to Gentiles, then to Jews in this dispensation</li>
+                        <li>Twelve hold keys to open doors of nations</li>
+                        <li>Stake high councils equal traveling councils in their jurisdiction</li>
+                        <li>Seventy are primary resource for missionary work</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"Traveling Presiding High Council"</strong> - Mobile governing body</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g652/kjv/tr/0-1/" target="_blank">ἀπόστολος (<em>apostolos</em>)</a> — "one sent forth"</li>
+                            <li>From ἀπό (apo, "from") + στέλλω (stello, "to send")</li>
+                            <li>Apostles are literally "sent ones" with commission to travel</li>
+                            <li>Contrasts with "standing" high councils in stakes</li>
+                        </ul>
+                        
+                        <p><strong>"first unto the Gentiles and then unto the Jews"</strong></p>
+                        <ul>
+                            <li>Reverses Old Testament pattern</li>
+                            <li>Fulfills <a href="https://www.blueletterbible.org/kjv/rom/1/16/" target="_blank">Romans 1:16</a> pattern</li>
+                            <li>Shows dispensational shift</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/1/16/" target="_blank">Romans 1:16</a> - To Jew first, also Greek</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/5/" target="_blank">Matthew 10:5-6</a> - Go not to Gentiles</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/102" target="_blank">D&C 102:1-34</a> - High council organization</li>
+                    </ul>
+                </div>
+            </details>
+            <!-- Verses 39-52 -->
+            <details class="verse-dropdown">
+                <summary>Verses 39-52: Ancient Priesthood Order (Adam to Noah)</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>39</strong> It is the duty of the Twelve, in all large branches of the church, to ordain evangelical ministers, as they shall be designated unto them by revelation—</p>
+                        <p><strong>40</strong> The order of this priesthood was confirmed to be handed down from father to son, and rightly belongs to the literal descendants of the chosen seed, to whom the promises were made.</p>
+                        <p><strong>41</strong> This order was instituted in the days of Adam, and came down by lineage in the following manner:</p>
+                        <p><strong>42</strong> From Adam to Seth, who was ordained by Adam at the age of sixty-nine years, and was blessed by him three years previous to his (Adam's) death, and received the promise of God by his father, that his posterity should be the chosen of the Lord, and that they should be preserved unto the end of the earth;</p>
+                        <p><strong>43</strong> Because he (Seth) was a perfect man, and his likeness was the express likeness of his father, insomuch that he seemed to be like unto his father in all things, and could be distinguished from him only by his age.</p>
+                        <p><strong>44</strong> Enos was ordained at the age of one hundred and thirty-four years and four months, by the hand of Adam.</p>
+                        <p><strong>45</strong> God called upon Cainan in the wilderness in the fortieth year of his age; and he met Adam in journeying to the place Shedolamak. He was eighty-seven years old when he received his ordination.</p>
+                        <p><strong>46</strong> Mahalaleel was four hundred and ninety-six years and seven days old when he was ordained by the hand of Adam, who also blessed him.</p>
+                        <p><strong>47</strong> Jared was two hundred years old when he was ordained under the hand of Adam, who also blessed him.</p>
+                        <p><strong>48</strong> Enoch was twenty-five years old when he was ordained under the hand of Adam; and he was sixty-five and Adam blessed him.</p>
+                        <p><strong>49</strong> And he saw the Lord, and he walked with him, and was before his face continually; and he walked with God three hundred and sixty-five years, making him four hundred and thirty years old when he was translated.</p>
+                        <p><strong>50</strong> Methuselah was one hundred years old when he was ordained under the hand of Adam.</p>
+                        <p><strong>51</strong> Lamech was thirty-two years old when he was ordained under the hand of Seth.</p>
+                        <p><strong>52</strong> Noah was ten years old when he was ordained under the hand of Methuselah.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Evangelical ministers (patriarchs) ordained by the Twelve</li>
+                        <li>Priesthood passes from father to son in chosen lineage</li>
+                        <li>Adam ordained all patriarchs through Methuselah</li>
+                        <li>Each patriarch received specific blessings and promises</li>
+                        <li>Priesthood lineage preserved through flood via Noah</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"evangelical ministers"</strong> - Patriarchs who give blessings</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g2099/kjv/tr/0-1/" target="_blank">εὐαγγελιστής (<em>euaggelistes</em>)</a> — "evangelist, proclaimer"</li>
+                            <li>From εὖ (eu, "good") + ἄγγελος (angelos, "messenger")</li>
+                            <li>These are patriarchs who declare lineage and give blessings</li>
+                        </ul>
+                        
+                        <p><strong>"chosen seed"</strong> - Covenant lineage</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h977/kjv/wlc/0-1/" target="_blank">בָּחַר (<em>bachar</em>)</a> — "to choose, elect"</li>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2233/kjv/wlc/0-1/" target="_blank">זֶרַע (<em>zera</em>)</a> — "seed, posterity"</li>
+                        </ul>
+                        
+                        <p><strong>"Shedolamak"</strong> - Sacred meeting place</p>
+                        <ul>
+                            <li>Possibly related to Hebrew <a href="https://www.blueletterbible.org/lexicon/h8003/kjv/wlc/0-1/" target="_blank">שָׁלֵם (<em>shalem</em>)</a> — "complete, peace"</li>
+                            <li>Place where Cainan met Adam for ordination</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Ancient Priesthood Lineage</h4>
+                    <ul>
+                        <li><strong>Seth</strong> - ordained at 69, perfect man, express likeness of Adam</li>
+                        <li><strong>Enos</strong> - ordained at 134 years</li>
+                        <li><strong>Cainan</strong> - ordained at 87 at Shedolamak</li>
+                        <li><strong>Mahalaleel</strong> - ordained at 496 years</li>
+                        <li><strong>Jared</strong> - ordained at 200 years</li>
+                        <li><strong>Enoch</strong> - ordained at 25, translated at 430</li>
+                        <li><strong>Methuselah</strong> - ordained at 100 years</li>
+                        <li><strong>Lamech</strong> - ordained at 32 by Seth</li>
+                        <li><strong>Noah</strong> - ordained at 10 by Methuselah</li>
+                    </ul>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/gen/5/1/" target="_blank">Genesis 5:1-32</a> - Genealogy from Adam to Noah</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6" target="_blank">Moses 6:1-25</a> - Book of remembrance</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.14-16" target="_blank">D&C 84:14-16</a> - Priesthood lineage</li>
+                    </ul>
+                </div>
+            </details>
+            <!-- Verses 53-57 -->
+            <details class="verse-dropdown">
+                <summary>Verses 53-57: Adam-ondi-Ahman Council</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>53</strong> Three years previous to the death of Adam, he called Seth, Enos, Cainan, Mahalaleel, Jared, Enoch, and Methuselah, who were all high priests, with the residue of his posterity who were righteous, into the valley of Adam-ondi-Ahman, and there bestowed upon them his last blessing.</p>
+                        <p><strong>54</strong> And the Lord appeared unto them, and they rose up and blessed Adam, and called him Michael, the prince, the archangel.</p>
+                        <p><strong>55</strong> And the Lord administered comfort unto Adam, and said unto him: I have set thee to be at the head; a multitude of nations shall come of thee, and thou art a prince over them forever.</p>
+                        <p><strong>56</strong> And Adam stood up in the midst of the congregation; and, notwithstanding he was bowed down with age, being full of the Holy Ghost, predicted whatsoever should befall his posterity unto the latest generation.</p>
+                        <p><strong>57</strong> These things were all written in the book of Enoch, and are to be testified of in due time.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Adam gathered righteous posterity three years before death</li>
+                        <li>Valley of Adam-ondi-Ahman was sacred gathering place</li>
+                        <li>Lord appeared personally to the assembly</li>
+                        <li>Adam revealed as Michael, the archangel</li>
+                        <li>Adam prophesied about all future generations</li>
+                        <li>Record kept in book of Enoch</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"Adam-ondi-Ahman"</strong> - Sacred valley of gathering</p>
+                        <ul>
+                            <li>Meaning: "Adam in the presence of God" or "place where Adam dwelt with God"</li>
+                            <li>Located in Daviess County, Missouri per <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116" target="_blank">D&C 116</a></li>
+                            <li>Site of past gathering (3 years before Adam's death)</li>
+                            <li>Prophesied site of future gathering before Second Coming</li>
+                        </ul>
+                        
+                        <p><strong>"Michael, the prince, the archangel"</strong> - Adam's premortal identity</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h4317/kjv/wlc/0-1/" target="_blank">מִיכָאֵל (<em>Mikha'el</em>)</a> — "who is like God?"</li>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g743/kjv/tr/0-1/" target="_blank">ἀρχάγγελος (<em>archangelos</em>)</a> — "chief angel"</li>
+                            <li>Michael led hosts of heaven in premortal war (<a href="https://www.blueletterbible.org/kjv/rev/12/7/" target="_blank">Revelation 12:7-9</a>)</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>Why did the Lord wait until near Adam's death for this gathering?</li>
+                        <li>What is the significance of Adam being Michael the archangel?</li>
+                        <li>How will the book of Enoch be "testified of in due time"?</li>
+                        <li>What role will Adam-ondi-Ahman play in future events?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116.1" target="_blank">D&C 116:1</a> - Adam-ondi-Ahman location</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/dan/10/13/" target="_blank">Daniel 10:13,21</a> - Michael the prince</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.11" target="_blank">D&C 27:11</a> - Michael/Adam</li>
+                    </ul>
+                </div>
+            </details>
+            <!-- Verses 58-67 -->
+            <details class="verse-dropdown">
+                <summary>Verses 58-67: The Twelve Apostles' Duties and High Priesthood</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>58</strong> It is the duty of the Twelve, also, to ordain and set in order all the other officers of the church, agreeable to the revelation which says:</p>
+                        <p><strong>59</strong> To the church of Christ in the land of Zion, in addition to the church laws respecting church business—</p>
+                        <p><strong>60</strong> Verily, I say unto you, saith the Lord of Hosts, there must needs be presiding elders to preside over those who are of the office of an elder;</p>
+                        <p><strong>61</strong> And also priests to preside over those who are of the office of a priest;</p>
+                        <p><strong>62</strong> And also teachers to preside over those who are of the office of a teacher, in like manner, and also the deacons—</p>
+                        <p><strong>63</strong> Wherefore, from deacon to teacher, and from teacher to priest, and from priest to elder, severally as they are appointed, according to the covenants and commandments of the church.</p>
+                        <p><strong>64</strong> Then comes the High Priesthood, which is the greatest of all.</p>
+                        <p><strong>65</strong> Wherefore, it must needs be that one be appointed of the High Priesthood to preside over the priesthood, and he shall be called President of the High Priesthood of the Church;</p>
+                        <p><strong>66</strong> Or, in other words, the Presiding High Priest over the High Priesthood of the Church.</p>
+                        <p><strong>67</strong> From the same comes the administering of ordinances and blessings upon the church, by the laying on of the hands.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Twelve ordain and organize all Church officers</li>
+                        <li>Each priesthood office has presiding officers</li>
+                        <li>Progression from deacon through elder established</li>
+                        <li>High Priesthood is the greatest of all</li>
+                        <li>President of High Priesthood presides over all</li>
+                        <li>Ordinances administered through priesthood authority</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"set in order"</strong> - Organize and regulate</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g2676/kjv/tr/0-1/" target="_blank">κατάρτισις (<em>katartisis</em>)</a> — "complete furnishing"</li>
+                            <li>To perfect, complete, or fully equip</li>
+                        </ul>
+                        
+                        <p><strong>"severally"</strong> - Separately, individually</p>
+                        <ul>
+                            <li>Each office has distinct duties and progression</li>
+                            <li>Latin: severalis — "separate, distinct"</li>
+                        </ul>
+                        
+                        <p><strong>"High Priesthood, which is the greatest"</strong></p>
+                        <ul>
+                            <li>Supreme priesthood office</li>
+                            <li>Emphasizes hierarchical structure</li>
+                            <li>Pattern of high priest in ancient temple</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20.38-67" target="_blank">D&C 20:38-67</a> - Duties of offices</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/heb/5/4/" target="_blank">Hebrews 5:4</a> - Called of God as Aaron</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.36" target="_blank">D&C 121:36</a> - Priesthood authority</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <!-- Verses 68-75 -->
+            <details class="verse-dropdown">
+                <summary>Verses 68-75: Bishops as Judges in Israel</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>68</strong> Wherefore, the office of a bishop is not equal unto it; for the office of a bishop is in administering all temporal things;</p>
+                        <p><strong>69</strong> Nevertheless a bishop must be chosen from the High Priesthood, unless he is a literal descendant of Aaron;</p>
+                        <p><strong>70</strong> For unless he is a literal descendant of Aaron he cannot hold the keys of that priesthood.</p>
+                        <p><strong>71</strong> Nevertheless, a high priest, that is, after the order of Melchizedek, may be set apart unto the ministering of temporal things, having a knowledge of them by the Spirit of truth;</p>
+                        <p><strong>72</strong> And also to be a judge in Israel, to do the business of the church, to sit in judgment upon transgressors upon testimony as it shall be laid before him according to the laws, by the assistance of his counselors, whom he has chosen or will choose among the elders of the church.</p>
+                        <p><strong>73</strong> This is the duty of a bishop who is not a literal descendant of Aaron, but has been ordained to the High Priesthood after the order of Melchizedek.</p>
+                        <p><strong>74</strong> Thus shall he be a judge, even a common judge among the inhabitants of Zion, or in a stake of Zion, or in any branch of the church where he shall be set apart unto this ministry, until the borders of Zion are enlarged and it becomes necessary to have other bishops or judges in Zion or elsewhere.</p>
+                        <p><strong>75</strong> And inasmuch as there are other bishops appointed they shall act in the same office.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Bishops administer temporal affairs</li>
+                        <li>Must be chosen from High Priesthood unless literal descendant of Aaron</li>
+                        <li>Bishops serve as judges in Israel</li>
+                        <li>Judge transgressors according to Church laws</li>
+                        <li>Common judges among inhabitants of Zion</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"judge in Israel"</strong> - Ancient pattern of judges</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h8199/kjv/wlc/0-1/" target="_blank">שָׁפַט (<em>shaphat</em>)</a> — "to judge, govern"</li>
+                            <li>Pattern from Book of Judges</li>
+                            <li>Moses appointed judges (<a href="https://www.blueletterbible.org/kjv/exo/18/13/" target="_blank">Exodus 18:13-26</a>)</li>
+                        </ul>
+                        
+                        <p><strong>"common judge"</strong> - Judge for common people</p>
+                        <ul>
+                            <li>Not aristocratic or elite</li>
+                            <li>Accessible to all members</li>
+                            <li>Latin: communis — "common, general, public"</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58.17-18" target="_blank">D&C 58:17-18</a> - Bishops as judges</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64.40" target="_blank">D&C 64:40</a> - Bishop's court</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/exo/18/21/" target="_blank">Exodus 18:21-22</a> - Judges over Israel</li>
+                    </ul>
+                </div>
+            </details>
+            <!-- Verses 76-84 -->
+            <details class="verse-dropdown">
+                <summary>Verses 76-84: Bishop's Courts and High Councils</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>76</strong> But a literal descendant of Aaron has a legal right to the presidency of this priesthood, to the keys of this ministry, to act in the office of bishop independently, without counselors, except in a case where a President of the High Priesthood, after the order of Melchizedek, is tried, to sit as a judge in Israel.</p>
+                        <p><strong>77</strong> And the decision of either of these councils, agreeable to the commandment which says:</p>
+                        <p><strong>78</strong> Again, verily, I say unto you, the most important business of the church, and the most difficult cases of the church, inasmuch as there is not satisfaction upon the decision of the bishop or judges, it shall be handed over and carried up unto the council of the church, before the Presidency of the High Priesthood.</p>
+                        <p><strong>79</strong> And the Presidency of the council of the High Priesthood shall have power to call other high priests, even twelve, to assist as counselors; and thus the Presidency of the High Priesthood and its counselors shall have power to decide upon testimony according to the laws of the church.</p>
+                        <p><strong>80</strong> And after this decision it shall be had in remembrance no more before the Lord; for this is the highest council of the church of God, and a final decision upon controversies in spiritual matters.</p>
+                        <p><strong>81</strong> There is not any person belonging to the church who is exempt from this council of the church.</p>
+                        <p><strong>82</strong> And inasmuch as a President of the High Priesthood shall transgress, he shall be had in remembrance before the common council of the church, who shall be assisted by twelve counselors of the High Priesthood;</p>
+                        <p><strong>83</strong> And their decision upon his head shall be an end of controversy concerning him.</p>
+                        <p><strong>84</strong> Thus, none shall be exempted from the justice and the laws of God, that all things may be done in order and in solemnity before him, according to truth and righteousness.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Literal descendants of Aaron can act as bishop without counselors</li>
+                        <li>Difficult cases appealed to high council</li>
+                        <li>Presidency of High Priesthood is highest council</li>
+                        <li>Final decisions not remembered before the Lord</li>
+                        <li>No one exempt from Church councils</li>
+                        <li>Even Church President subject to council judgment</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"had in remembrance no more"</strong> - Divine forgetting</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2142/kjv/wlc/0-1/" target="_blank">זָכַר (<em>zakar</em>)</a> — "to remember"</li>
+                            <li>Compare <a href="https://www.blueletterbible.org/kjv/jer/31/34/" target="_blank">Jeremiah 31:34</a> - "remember their sin no more"</li>
+                            <li>Final earthly judgment recognized in heaven</li>
+                        </ul>
+                        
+                        <p><strong>"justice and the laws of God"</strong></p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6664/kjv/wlc/0-1/" target="_blank">צֶדֶק (<em>tsedeq</em>)</a> — "justice, righteousness"</li>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank">תּוֹרָה (<em>torah</em>)</a> — "law, instruction"</li>
+                            <li>No respecter of persons in judgment</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/102" target="_blank">D&C 102</a> - High council procedures</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/18/15/" target="_blank">Matthew 18:15-17</a> - Church discipline</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/42.80-93" target="_blank">D&C 42:80-93</a> - Laws of Church discipline</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <!-- Verses 85-92 -->
+            <details class="verse-dropdown">
+                <summary>Verses 85-92: Duties of Presidents and Prophet Like Moses</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>85</strong> And again, verily I say unto you, the duty of a president over the office of a deacon is to preside over twelve deacons, to sit in council with them, and to teach them their duty, edifying one another, as it is given according to the covenants.</p>
+                        <p><strong>86</strong> And also the duty of the president over the office of the teachers is to preside over twenty-four of the teachers, and to sit in council with them, teaching them the duties of their office, as given in the covenants.</p>
+                        <p><strong>87</strong> Also the duty of the president over the Priesthood of Aaron is to preside over forty-eight priests, and sit in council with them, to teach them the duties of their office, as is given in the covenants—</p>
+                        <p><strong>88</strong> This president is to be a bishop; for this is one of the duties of this priesthood.</p>
+                        <p><strong>89</strong> Again, the duty of the president over the office of elders is to preside over ninety-six elders, and to sit in council with them, and to teach them according to the covenants.</p>
+                        <p><strong>90</strong> This presidency is a distinct one from that of the seventy, and is designed for those who do not travel into all the world.</p>
+                        <p><strong>91</strong> And again, the duty of the President of the office of the High Priesthood is to preside over the whole church, and to be like unto Moses—</p>
+                        <p><strong>92</strong> Behold, here is wisdom; yea, to be a seer, a revelator, a translator, and a prophet, having all the gifts of God which he bestows upon the head of the church.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Specific quorum sizes: 12 deacons, 24 teachers, 48 priests, 96 elders</li>
+                        <li>Presidents teach and edify their quorum members</li>
+                        <li>Bishop presides over priests (Aaronic Priesthood)</li>
+                        <li>Elder's quorum presidency for standing (non-traveling) ministers</li>
+                        <li>President of Church like Moses: seer, revelator, translator, prophet</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>Quorum Numbers - Divine Pattern</strong></p>
+                        <ul>
+                            <li><strong>12</strong> - Tribes of Israel, Apostles of Christ</li>
+                            <li><strong>24</strong> - Twice 12, may connect to 24 elders in <a href="https://www.blueletterbible.org/kjv/rev/4/4/" target="_blank">Revelation 4:4</a></li>
+                            <li><strong>48</strong> - Four times 12</li>
+                            <li><strong>96</strong> - Eight times 12</li>
+                        </ul>
+                        
+                        <p><strong>"like unto Moses"</strong> - Prophet-leader pattern</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h4872/kjv/wlc/0-1/" target="_blank">מֹשֶׁה (<em>Mosheh</em>)</a> — "drawn out"</li>
+                            <li>Moses as archetypal prophet-lawgiver-deliverer</li>
+                            <li>See <a href="https://www.blueletterbible.org/kjv/deu/18/15/" target="_blank">Deuteronomy 18:15-18</a></li>
+                        </ul>
+                        
+                        <p><strong>"seer, revelator, translator, prophet"</strong> - Four prophetic gifts</p>
+                        <ul>
+                            <li><strong>Seer:</strong> Hebrew <a href="https://www.blueletterbible.org/lexicon/h7200/kjv/wlc/0-1/" target="_blank">רֹאֶה (<em>roeh</em>)</a> — "one who sees"</li>
+                            <li><strong>Revelator:</strong> Greek <a href="https://www.blueletterbible.org/lexicon/g601/kjv/tr/0-1/" target="_blank">ἀποκαλύπτω (<em>apokalupto</em>)</a> — "to reveal"</li>
+                            <li><strong>Translator:</strong> Greek <a href="https://www.blueletterbible.org/lexicon/g2059/kjv/tr/0-1/" target="_blank">ἑρμηνεύω (<em>hermeneuo</em>)</a> — "to interpret"</li>
+                            <li><strong>Prophet:</strong> Hebrew <a href="https://www.blueletterbible.org/lexicon/h5030/kjv/wlc/0-1/" target="_blank">נָבִיא (<em>nabi</em>)</a> — "spokesman"</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/8.13-17" target="_blank">Mosiah 8:13-17</a> - Seer greater than prophet</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/21.1" target="_blank">D&C 21:1</a> - Joseph as seer, translator</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/124.125" target="_blank">D&C 124:125</a> - Prophet, seer, revelator</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <!-- Verses 93-100 -->
+            <details class="verse-dropdown">
+                <summary>Verses 93-100: The Seventy and Final Instructions</summary>
+                <div class="verse-content">
+                    <div class="scripture-block">
+                        <p><strong>93</strong> And it is according to the vision showing the order of the Seventy, that they should have seven presidents to preside over them, chosen out of the number of the seventy;</p>
+                        <p><strong>94</strong> And the seventh president of these presidents is to preside over the six;</p>
+                        <p><strong>95</strong> And these seven presidents are to choose other seventy besides the first seventy to whom they belong, and are to preside over them;</p>
+                        <p><strong>96</strong> And also other seventy, until seven times seventy, if the labor in the vineyard of necessity requires it.</p>
+                        <p><strong>97</strong> And these seventy are to be traveling ministers, first unto the Gentiles and also unto the Jews.</p>
+                        <p><strong>98</strong> Whereas other officers of the church, who belong not unto the Twelve, neither to the Seventy, are not under the responsibility to travel among all nations, but are to travel as their circumstances shall allow, notwithstanding they may hold as high and responsible offices in the church.</p>
+                        <p><strong>99</strong> Wherefore, now let every man learn his duty, and to act in the office in which he is appointed, in all diligence.</p>
+                        <p><strong>100</strong> He that is slothful shall not be counted worthy to stand, and he that learns not his duty and shows himself not approved shall not be counted worthy to stand. Even so. Amen.</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <ul>
+                        <li>Seventy organized with seven presidents</li>
+                        <li>Can expand to seven times seventy (490) as needed</li>
+                        <li>Seventy are traveling ministers to all nations</li>
+                        <li>Other officers travel as circumstances allow</li>
+                        <li>Every man must learn and diligently perform his duty</li>
+                        <li>Slothfulness disqualifies from standing in office</li>
+                    </ul>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <div class="word-study-box">
+                        <p><strong>"seven times seventy"</strong> - Completeness in service</p>
+                        <ul>
+                            <li>490 total possible Seventies</li>
+                            <li>Seven = spiritual perfection/completeness</li>
+                            <li>Compare <a href="https://www.blueletterbible.org/kjv/mat/18/22/" target="_blank">Matthew 18:22</a> - forgive seventy times seven</li>
+                        </ul>
+                        
+                        <p><strong>"traveling ministers"</strong> vs "standing ministers"</p>
+                        <ul>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g652/kjv/tr/0-1/" target="_blank">ἀπόστολος (<em>apostolos</em>)</a> — "sent one"</li>
+                            <li>Itinerant vs local ministry patterns</li>
+                            <li>Global vs stake responsibilities</li>
+                        </ul>
+                        
+                        <p><strong>"slothful"</strong> - Spiritual laziness</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6102/kjv/wlc/0-1/" target="_blank">עָצֵל (<em>atsel</em>)</a> — "sluggish, lazy"</li>
+                            <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g3636/kjv/tr/0-1/" target="_blank">ὀκνηρός (<em>okneros</em>)</a> — "slothful, lazy"</li>
+                            <li>Disqualifies from priesthood service</li>
+                        </ul>
+                        
+                        <p><strong>"learn his duty"</strong> - Active priesthood preparation</p>
+                        <ul>
+                            <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3925/kjv/wlc/0-1/" target="_blank">לָמַד (<em>lamad</em>)</a> — "to learn, study"</li>
+                            <li>Continuous learning required</li>
+                            <li>Ignorance is not acceptable</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>Why can the Seventy expand to 490 members?</li>
+                        <li>What distinguishes traveling from standing ministers?</li>
+                        <li>How does one "learn his duty" in priesthood office?</li>
+                        <li>Why is slothfulness incompatible with priesthood service?</li>
+                    </ol>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/10/1/" target="_blank">Luke 10:1,17</a> - Jesus sent seventy</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/num/11/16/" target="_blank">Numbers 11:16-25</a> - Moses and seventy elders</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88.118" target="_blank">D&C 88:118</a> - Seek learning</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58.26-29" target="_blank">D&C 58:26-29</a> - Not be commanded in all things</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <!-- Word Studies -->
+        <button class="accordion-section" id="words">Word Studies</button>
+        <div class="panel">
+            <h2>Key Word Studies</h2>
+            
+            <h3>1. Melchizedek</h3>
+            <div class="word-study-box">
+                <h4>Hebrew Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h4442/kjv/wlc/0-1/" target="_blank">מַלְכִּי־צֶדֶק (<em>Malki-Tzedek</em>)</a> — "king of righteousness"</li>
+                    <li>Compound: <a href="https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/" target="_blank">מֶלֶךְ (<em>melek</em>)</a> — "king" + <a href="https://www.blueletterbible.org/lexicon/h6664/kjv/wlc/0-1/" target="_blank">צֶדֶק (<em>tsedeq</em>)</a> — "righteousness"</li>
+                </ul>
+                
+                <h4>Greek Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g3198/kjv/tr/0-1/" target="_blank">Μελχισέδεκ (<em>Melchisedek</em>)</a> — Transliteration of Hebrew name</li>
+                    <li>Used extensively in Hebrews 5-7</li>
+                </ul>
+                
+                <h4>Etymology</h4>
+                <ul>
+                    <li><a href="https://www.etymonline.com/search?q=melchizedek" target="_blank">Melchizedek</a> - From Hebrew "king of righteousness"</li>
+                    <li>First appears in Genesis 14:18 as king of Salem</li>
+                </ul>
+                
+                <h4>Webster 1828</h4>
+                <ul>
+                    <li><a href="https://webstersdictionary1828.com/Dictionary/melchisedec" target="_blank">Melchisedec</a> - "King of Salem and priest of the most high God"</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>Melchizedek represents the ideal priest-king who combines temporal and spiritual authority, providing the pattern for the higher priesthood that bears his name to avoid overusing Christ's sacred name.</p>
+            </div>
+            
+            <h3>2. Keys</h3>
+            <div class="word-study-box">
+                <h4>Hebrew Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h4668/kjv/wlc/0-1/" target="_blank">מַפְתֵּחַ (<em>maphteach</em>)</a> — "key, opening instrument"</li>
+                    <li>Root: <a href="https://www.blueletterbible.org/lexicon/h6605/kjv/wlc/0-1/" target="_blank">פָּתַח (<em>pathach</em>)</a> — "to open"</li>
+                </ul>
+                
+                <h4>Greek Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g2807/kjv/tr/0-1/" target="_blank">κλείς (<em>kleis</em>)</a> — "key, that which opens"</li>
+                    <li>Related: <a href="https://www.blueletterbible.org/lexicon/g2808/kjv/tr/0-1/" target="_blank">κλείω (<em>kleio</em>)</a> — "to shut, lock"</li>
+                </ul>
+                
+                <h4>Latin Foundation</h4>
+                <ul>
+                    <li><a href="https://logeion.uchicago.edu/clavis" target="_blank">clavis</a> — "key, means of access"</li>
+                    <li>Related to "claves" meaning authority or power</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>Priesthood keys represent divine authorization to open specific doors of spiritual opportunity—to perform ordinances, govern the Church, and access heavenly powers. Keys distinguish between having priesthood authority and having authorization to use it.</p>
+            </div>
+            
+            <h3>3. Quorum</h3>
+            <div class="word-study-box">
+                <h4>Hebrew Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h4557/kjv/wlc/0-1/" target="_blank">מִסְפָּר (<em>mispar</em>)</a> — "number, counting"</li>
+                    <li>מִנְיָן (<em>minyan</em>) — "counting, number, quorum" (Post-biblical Hebrew)</li>
+                    <li>From root <a href="https://www.blueletterbible.org/lexicon/h4487/kjv/wlc/0-1/" target="_blank">מָנָה (<em>manah</em>)</a> — "to count, number, appoint"</li>
+                    <li>In Jewish tradition, minyan = minimum 10 men for communal prayer</li>
+                </ul>
+                
+                <h4>Greek Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g4128/kjv/tr/0-1/" target="_blank">πλῆθος (<em>plethos</em>)</a> — "multitude, assembly, fullness"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g706/kjv/tr/0-1/" target="_blank">ἀριθμός (<em>arithmos</em>)</a> — "number, a fixed number"</li>
+                    <li>Related: <a href="https://www.blueletterbible.org/lexicon/g4864/kjv/tr/0-1/" target="_blank">συναγωγή (<em>synagoge</em>)</a> — "assembly, gathering"</li>
+                </ul>
+                
+                <h4>Latin Foundation</h4>
+                <ul>
+                    <li><a href="https://logeion.uchicago.edu/quorum" target="_blank">quorum</a> — "of whom" (genitive plural)</li>
+                    <li>Legal term: minimum number needed for valid action</li>
+                    <li>From phrase "quorum vos... unum esse volumus" (of whom we wish... one to be)</li>
+                </ul>
+                
+                <h4>Etymology</h4>
+                <ul>
+                    <li><a href="https://www.etymonline.com/word/quorum" target="_blank">Quorum</a> - From Latin phrase meaning "of whom"</li>
+                    <li>Originally referred to justices whose presence was required</li>
+                </ul>
+                
+                <h4>Webster 1828</h4>
+                <ul>
+                    <li><a href="https://webstersdictionary1828.com/Dictionary/quorum" target="_blank">Quorum</a> - "A bench of justices; such a number as is competent to transact business"</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>In priesthood context, a quorum represents both a brotherhood of holders and the minimum number required for valid decisions. The concept parallels the Jewish minyan—emphasizing that certain sacred acts require community, not just individual authority. This emphasizes collective authority rather than individual power.</p>
+            </div>
+            
+            <h3>4. Appendages</h3>
+            <div class="word-study-box">
+                <h4>Latin Foundation</h4>
+                <ul>
+                    <li><a href="https://logeion.uchicago.edu/appendo" target="_blank">appendere</a> — "to hang upon, attach to"</li>
+                    <li>From ad- "to" + pendere "to hang"</li>
+                </ul>
+                
+                <h4>Etymology</h4>
+                <ul>
+                    <li><a href="https://www.etymonline.com/word/appendage" target="_blank">Appendage</a> - Something attached to a larger or more important thing</li>
+                </ul>
+                
+                <h4>Hebrew Parallel Concept</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h8328/kjv/wlc/0-1/" target="_blank">שֹׁרֶשׁ (<em>shoresh</em>)</a> — "root" with branches</li>
+                    <li>Menorah imagery: central shaft with extending branches</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>All Church offices and authorities derive from and depend upon the Melchizedek Priesthood, like branches extending from a trunk. This emphasizes unity of authority rather than competing power centers.</p>
+            </div>            
+            <h3>5. Presidency</h3>
+            <div class="word-study-box">
+                <h4>Latin Foundation</h4>
+                <ul>
+                    <li><a href="https://logeion.uchicago.edu/praesideo" target="_blank">praesidere</a> — "to sit before, preside over"</li>
+                    <li>From prae- "before" + sedere "to sit"</li>
+                </ul>
+                
+                <h4>Greek Parallel</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g4291/kjv/tr/0-1/" target="_blank">προΐστημι (<em>proistemi</em>)</a> — "to stand before, lead"</li>
+                </ul>
+                
+                <h4>Hebrew Parallel</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h7218/kjv/wlc/0-1/" target="_blank">רֹאשׁ (<em>rosh</em>)</a> — "head, chief"</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>Presidency implies both position (sitting/standing before) and function (watching over, protecting, leading). It carries responsibility for those presided over, not just authority over them.</p>
+            </div>
+            
+            <h3>6. Holy Order</h3>
+            <div class="word-study-box">
+                <h4>Hebrew Foundation</h4>
+                <ul>
+                    <li>סֵדֶר קָדוֹשׁ (<em>Seder Qadosh</em>) — "Holy Order" (combination phrase)</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h5468/kjv/wlc/0-1/" target="_blank">סֵדֶר (<em>seder</em>)</a> — "order, arrangement, sequence"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/" target="_blank">קָדוֹשׁ (<em>qadosh</em>)</a> — "holy, sacred, set apart"</li>
+                    <li>Alternative term: <a href="https://www.blueletterbible.org/lexicon/h4941/kjv/wlc/0-1/" target="_blank">מִשְׁפָּט (<em>mishpat</em>)</a> — "manner, custom, ordinance"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h6186/kjv/wlc/0-1/" target="_blank">עָרַךְ (<em>arak</em>)</a> — "to arrange, set in order, array"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h4634/kjv/wlc/0-1/" target="_blank">מַעֲרָכָה (<em>ma'arakah</em>)</a> — "arrangement, row, rank" (as in temple showbread arrangement)</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h1700/kjv/wlc/0-1/" target="_blank">דִּבְרָה (<em>dibrah</em>)</a> — "manner, cause, order" (used in <a href="https://www.blueletterbible.org/kjv/psa/110/4/" target="_blank">Psalm 110:4</a>)</li>
+                </ul>
+                
+                <h4>Greek Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g5010/kjv/tr/0-1/" target="_blank">τάξις (<em>taxis</em>)</a> — "order, arrangement, succession"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g40/kjv/tr/0-1/" target="_blank">ἅγιος (<em>hagios</em>)</a> — "holy, sacred, consecrated"</li>
+                    <li>Alternative: <a href="https://www.blueletterbible.org/lexicon/g2937/kjv/tr/0-1/" target="_blank">κτίσις (<em>ktisis</em>)</a> — "ordinance, created order"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g1296/kjv/tr/0-1/" target="_blank">διαταγή (<em>diatage</em>)</a> — "disposition, ordinance, arrangement"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g2356/kjv/tr/0-1/" target="_blank">θρησκεία (<em>threskeia</em>)</a> — "religious worship, ceremonial observance"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g5001/kjv/tr/0-1/" target="_blank">τάγμα (<em>tagma</em>)</a> — "that which has been arranged, order, division" (used in <a href="https://www.blueletterbible.org/kjv/1co/15/23/" target="_blank">1 Corinthians 15:23</a>)</li>
+                </ul>
+                
+                <h4>Latin Foundation</h4>
+                <ul>
+                    <li><a href="https://logeion.uchicago.edu/ordo" target="_blank">ordo</a> — "order, rank, arrangement, class"</li>
+                    <li><a href="https://logeion.uchicago.edu/sanctus" target="_blank">sanctus</a> — "holy, sacred, consecrated"</li>
+                    <li>Combined: Ordo Sanctus — "Sacred Order"</li>
+                    <li><a href="https://logeion.uchicago.edu/ordinatio" target="_blank">ordinatio</a> — "ordination, appointment to office"</li>
+                    <li><a href="https://logeion.uchicago.edu/sacer" target="_blank">sacer</a> — "sacred, holy" (alternative to sanctus)</li>
+                </ul>
+                
+                <h4>Etymology</h4>
+                <ul>
+                    <li><a href="https://www.etymonline.com/word/order" target="_blank">Order</a> - From Latin ordo "row, rank, series, arrangement"</li>
+                    <li><a href="https://www.etymonline.com/word/holy" target="_blank">Holy</a> - From Old English halig "sacred, consecrated"</li>
+                    <li><a href="https://www.etymonline.com/word/ordination" target="_blank">Ordination</a> - From Latin ordinare "to put in order, arrange, dispose"</li>
+                    <li>The combination suggests a divinely appointed arrangement or succession</li>
+                </ul>
+                
+                <h4>Webster 1828</h4>
+                <ul>
+                    <li><a href="https://webstersdictionary1828.com/Dictionary/order" target="_blank">Order</a> - "Regular disposition or methodical arrangement; established process; a mandate, precept or command"</li>
+                    <li><a href="https://webstersdictionary1828.com/Dictionary/holy" target="_blank">Holy</a> - "Properly, whole, entire or perfect; hence, pure in heart, temper or dispositions; free from sin and sinful affections"</li>
+                    <li><a href="https://webstersdictionary1828.com/Dictionary/ordination" target="_blank">Ordination</a> - "The act of ordaining or appointing; the act of setting apart to an office"</li>
+                </ul>
+                
+                <h4>Cross-References</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/7/11/" target="_blank">Hebrews 7:11</a> - "after the order of Melchizedek" (Greek: κατὰ τὴν τάξιν)</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/7/17/" target="_blank">Hebrews 7:17</a> - "after the order of Melchisedec"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/5/6/" target="_blank">Hebrews 5:6</a> - "after the order of Melchisedec"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/5/10/" target="_blank">Hebrews 5:10</a> - "called of God an high priest after the order of Melchisedec"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/psa/110/4/" target="_blank">Psalm 110:4</a> - "after the order of Melchizedek" (Hebrew: עַל־דִּבְרָתִי)</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13.1-9" target="_blank">Alma 13:1-9</a> - "holy order of God"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13.6" target="_blank">Alma 13:6</a> - "ordained after the order of his Son"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.3" target="_blank">D&C 107:3</a> - "Holy Priesthood, after the Order of the Son of God"</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76.57" target="_blank">D&C 76:57</a> - "priests of the Most High, after the order of Melchizedek"</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>The "Holy Order" represents more than mere organization—it signifies a divine pattern of priesthood succession and authority that existed before the world was. The term encompasses both the sacred nature (holy/qadosh) and the structured arrangement (order/seder) of God's priesthood government. It connects earthly priesthood organization to pre-mortal councils and celestial patterns, emphasizing that this is not a human invention but a restoration of heaven's own order. The various Hebrew terms for "order" show different aspects: סֵדֶר (regular arrangement), מִשְׁפָּט (divine ordinance), עָרַךְ (battle array or temple arrangement), מַעֲרָכָה (the showbread arrangement), suggesting priesthood as both organized service and spiritual warfare arranged according to temple patterns. Alma's extensive discourse on this "holy order" in Alma 13 reveals it as the means by which individuals are prepared from the foundation of the world to teach God's commandments and enter His rest. The priesthood is literally "after" (following the pattern of) this eternal order, not merely a temporal church organization but a reflection of the very order of heaven itself.</p>
+            </div>
+        </div>
+
+        <!-- Teaching Applications -->
+        <button class="accordion-section" id="teaching">Teaching Applications</button>
+        <div class="panel">
+            <h2>Teaching Applications</h2>
+            
+            <h3>Personal Study Enhancement</h3>
+            <ul>
+                <li><strong>Priesthood Study Plan:</strong> Create a systematic study of each priesthood office mentioned, understanding your place in the organization</li>
+                <li><strong>Keys Inventory:</strong> List the priesthood keys you currently operate under (bishop, stake president, general authorities)</li>
+                <li><strong>Quorum Participation:</strong> Evaluate your contribution to quorum unity and unanimous decision-making</li>
+                <li><strong>Ancient Pattern Study:</strong> Study the patriarchal priesthood line from Adam to Noah as models for priesthood service</li>
+                <li><strong>Personal Ministry:</strong> Identify whether you're called as a "traveling" or "standing" minister in your current calling</li>
+            </ul>
+            
+            <h3>Family Home Evening Applications</h3>
+            <ul>
+                <li><strong>Activity:</strong> Create a family priesthood chart showing how each family member relates to priesthood authority</li>
+                <li><strong>Object Lesson:</strong> Use actual keys to teach about priesthood keys and authorization</li>
+                <li><strong>Discussion:</strong> Share stories of ancient priesthood holders (Adam, Enoch, Noah) and their faithfulness</li>
+                <li><strong>Role Play:</strong> Practice family councils using the pattern of unanimous decision-making</li>
+                <li><strong>Service Project:</strong> Support someone preparing for priesthood advancement or ordination</li>
+            </ul>
+            
+            <h3>Sunday School & Relief Society/Elders Quorum</h3>
+            <ul>
+                <li><strong>Discussion Question:</strong> How do the three presiding quorums provide checks and balances in Church government?</li>
+                <li><strong>Group Activity:</strong> Map out all the priesthood keys functioning in your ward/stake</li>
+                <li><strong>Testimony Sharing:</strong> When have you witnessed the power of unanimous council decisions?</li>
+                <li><strong>Application Challenge:</strong> How can we better sustain the "equal authority" of different priesthood quorums?</li>
+                <li><strong>Doctrinal Deep Dive:</strong> Explore why the priesthood is named after Melchizedek rather than Christ</li>
+            </ul>
+            
+            <h3>Seminary & Institute (Youth Focus)</h3>
+            <ul>
+                <li><strong>Modern Translation:</strong> What does it mean for young men to be "appendages" to the priesthood?</li>
+                <li><strong>Career Connections:</strong> How do priesthood organizational principles apply to future careers?</li>
+                <li><strong>Peer Discussion:</strong> How can priests and teachers minister to their quorum members?</li>
+                <li><strong>Future Preparation:</strong> Understanding the path from deacon to elder to high priest</li>
+                <li><strong>Mission Prep:</strong> How the Seventy's organization relates to missionary work</li>
+            </ul>
+            
+            <h3>Missionary Applications</h3>
+            <ul>
+                <li><strong>Authority Understanding:</strong> Explain priesthood keys and authority to investigators</li>
+                <li><strong>Teaching Tool:</strong> Use D&C 107 to show the restoration of ancient priesthood organization</li>
+                <li><strong>Finding Approach:</strong> Help people understand their need for authorized baptism</li>
+                <li><strong>Companion Unity:</strong> Apply unanimous decision-making to companionship study</li>
+                <li><strong>Mission Organization:</strong> Understand how mission presidency relates to the Seventy and Twelve</li>
+            </ul>
+            
+            <h3>Cross-References Throughout Scripture</h3>
+            
+            <div class="highlight-box">
+                <h4>Old Testament Foundations</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/gen/14/18/" target="_blank">Genesis 14:18-20</a> - Melchizedek blesses Abraham</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/psa/110/4/" target="_blank">Psalm 110:4</a> - Eternal priesthood order</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/exo/28/1/" target="_blank">Exodus 28:1</a> - Aaron's calling</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/num/17/1/" target="_blank">Numbers 17:1-13</a> - Aaron's rod confirmation</li>
+                </ul>
+                
+                <h4>New Testament Fulfillment</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/5/5/" target="_blank">Hebrews 5:5-10</a> - Christ as High Priest</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/7/1/" target="_blank">Hebrews 7:1-28</a> - Melchizedek priesthood superior</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/mat/16/19/" target="_blank">Matthew 16:19</a> - Keys given to Peter</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/luk/10/1/" target="_blank">Luke 10:1,17</a> - Seventy appointed</li>
+                </ul>
+                
+                <h4>Book of Mormon Clarifications</h4>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13.1-19" target="_blank">Alma 13:1-19</a> - Holy order of God</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11.21-22" target="_blank">3 Nephi 11:21-22</a> - Authority to baptize</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/3.1-4" target="_blank">Moroni 3:1-4</a> - Ordaining priests and teachers</li>
+                </ul>
+                
+                <h4>Modern Restoration Connections</h4>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/13.1" target="_blank">D&C 13:1</a> - Aaronic Priesthood restored</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.12-13" target="_blank">D&C 27:12-13</a> - Melchizedek Priesthood restored</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84" target="_blank">D&C 84</a> - Oath and covenant of priesthood</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110.11-16" target="_blank">D&C 110:11-16</a> - Additional keys restored</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Study Questions -->
+        <button class="accordion-section" id="questions">Study Questions</button>
+        <div class="panel">
+            <h2>Questions for Personal Study</h2>
+            
+            <div class="question-section">
+                <h4>Understanding Priesthood Authority</h4>
+                <ol>
+                    <li>Why does the Lord call it "Melchizedek Priesthood" instead of "Holy Priesthood after the Order of the Son of God"? What does this teach about reverence?</li>
+                    <li>How do the three presiding quorums balance each other's authority? What prevents any one quorum from having absolute power?</li>
+                    <li>What does it mean that decisions must be made in "righteousness, holiness, lowliness, meekness, and long-suffering"?</li>
+                    <li>How do priesthood keys differ from priesthood authority? Can you have authority without keys?</li>
+                    <li>Why must the Seventy act under the direction of the Twelve? What does this teach about order?</li>
+                </ol>
+            </div>
+            
+            <div class="question-section">
+                <h4>Ancient Priesthood Patterns</h4>
+                <ol>
+                    <li>How does understanding ancient priesthood holders from Adam to Noah strengthen your faith?</li>
+                    <li>What is the significance of Adam blessing his posterity at Adam-ondi-Ahman three years before his death?</li>
+                    <li>Why did the Lord reveal Adam's identity as Michael the archangel in this context?</li>
+                    <li>How does the patriarchal order of priesthood relate to modern Church organization?</li>
+                    <li>What can we learn from the specific ages at which ancient patriarchs were ordained?</li>
+                </ol>
+            </div>
+            
+            <div class="question-section">
+                <h4>Modern Application</h4>
+                <ol>
+                    <li>How can understanding priesthood organization help you better sustain your leaders?</li>
+                    <li>What modern challenges require the priesthood organization revealed in D&C 107?</li>
+                    <li>How can families apply the principle of unanimous councils in family decision-making?</li>
+                    <li>In what ways do you see the principle of "equal authority" functioning in today's Church?</li>
+                    <li>How does this revelation help you understand your role in building the kingdom, regardless of your calling?</li>
+                </ol>
+            </div>
+            
+            <div class="question-section">
+                <h4>Deeper Doctrinal Questions</h4>
+                <ol>
+                    <li>What does it mean that all other authorities are "appendages" to the Melchizedek Priesthood?</li>
+                    <li>How does the concept of priesthood keys relate to the sealing power?</li>
+                    <li>Why are bishops called "common judges in Israel" and what are their limits?</li>
+                    <li>How does D&C 107 establish patterns for Church succession?</li>
+                    <li>What is the relationship between priesthood quorums and the councils in heaven?</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script>
+        // Accordion functionality
+        var acc = document.getElementsByClassName("accordion-section");
+        var i;
+        
+        // Debug: Check if all sections are found
+        console.log("Found " + acc.length + " accordion sections");
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.classList.toggle("show");
+            });
+        }
+        
+        // Toggle all sections
+        function toggleAll(expand) {
+            var panels = document.getElementsByClassName("panel");
+            var sections = document.getElementsByClassName("accordion-section");
+            
+            for (var i = 0; i < panels.length; i++) {
+                if (expand) {
+                    panels[i].classList.add("show");
+                    sections[i].classList.add("active");
+                } else {
+                    panels[i].classList.remove("show");
+                    sections[i].classList.remove("active");
+                }
+            }
+        }
+        
+        // Scroll to section
+        function scrollToSection(sectionId) {
+            var element = document.getElementById(sectionId);
+            if (element) {
+                // Open the section
+                element.classList.add("active");
+                element.nextElementSibling.classList.add("show");
+                
+                // Scroll to it
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Highlight briefly
+                element.style.backgroundColor = '#5a6b5f';
+                setTimeout(function() {
+                    element.style.backgroundColor = '#7c9885';
+                }, 1000);
+            }
+        }
+        
+        // Open first section by default
+        window.onload = function() {
+            if (acc.length > 0) {
+                acc[0].classList.add("active");
+                acc[0].nextElementSibling.classList.add("show");
+            }
+        };
+    </script>
 </body>
 </html>

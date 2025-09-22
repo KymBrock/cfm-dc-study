@@ -1,15 +1,1044 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>D&C 108 Study Guide - Redirecting</title>
-    <meta http-equiv="refresh" content="0; url=https://github.com/KymBrock/cfm-dc-study/blob/main/DC_108/GitHub/README.md">
-    <script>
-        window.location.href = "https://github.com/KymBrock/cfm-dc-study/blob/main/DC_108/GitHub/README.md";
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 108 Complete Study Guide - Lyman Sherman's Forgiveness and Calling</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Site Header */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+        
+        .cfm-button:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .panel.show {
+            max-height: none;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* Content Styling */
+        h2 {
+            color: #7c9885;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #5a6b5f;
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            color: #6b7280;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .scripture-block {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: Georgia, serif;
+        }
+        
+        .word-study-box {
+            background-color: #f4e8d0;
+            border: 2px solid #e8d4a2;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box {
+            background-color: #e8f0ea;
+            border-left: 4px solid #7c9885;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Question Section */
+        .question-section {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .question-section h4 {
+            color: #7c9885;
+            margin-bottom: 15px;
+        }
+        
+        .question-section ol {
+            margin-left: 20px;
+        }
+        
+        .question-section li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #5a6b5f;
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header-section {
+                padding: 30px 20px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .tab-controls {
+                justify-content: center;
+            }
+            
+            .tab-btn {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .site-header, .tab-controls {
+                display: none;
+            }
+            
+            .accordion-section {
+                page-break-inside: avoid;
+            }
+            
+            .panel {
+                max-height: none !important;
+                display: block !important;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>This page has moved!</h1>
-    <p>Redirecting to the new study guide location...</p>
-    <p>If not redirected, <a href="https://github.com/KymBrock/cfm-dc-study/blob/main/DC_108/GitHub/README.md">click here</a>.</p>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <a href="#" class="cfm-button disabled" title="CFMCorner lesson coming soon">View Full Lesson</a>
+                <a href="dc106_complete.html" class="cfm-button">D&C 106</a>
+                <a href="dc107_complete.html" class="cfm-button">D&C 107</a>
+                <a href="dc108_complete.html" class="cfm-button">D&C 108</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Main Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 108</h1>
+            <p class="subtitle">Lyman Sherman's Forgiveness and Calling</p>
+            <p class="date-location">December 26, 1835 • Kirtland, Ohio</p>
+        </div>
+
+        <!-- Tab Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="toggleAll(true)">Expand All</button>
+            <button class="tab-btn" onclick="toggleAll(false)">Collapse All</button>
+            <button class="tab-btn" onclick="scrollToSection('overview')">Overview</button>
+            <button class="tab-btn" onclick="scrollToSection('context')">Historical Context</button>
+            <button class="tab-btn" onclick="scrollToSection('verses')">Verse-by-Verse</button>
+            <button class="tab-btn" onclick="scrollToSection('words')">Word Studies</button>
+            <button class="tab-btn" onclick="scrollToSection('teaching')">Teaching Applications</button>
+            <button class="tab-btn" onclick="scrollToSection('questions')">Study Questions</button>
+        </div>
+        <!-- Section Overview -->
+        <button class="accordion-section" id="overview">Section Overview</button>
+        <div class="panel">
+            <h2>Section Overview</h2>
+            
+            <h3>Basic Information</h3>
+            <ul>
+                <li><strong>Date of Revelation:</strong> December 26, 1835</li>
+                <li><strong>Location:</strong> Kirtland, Ohio</li>
+                <li><strong>Recipient(s):</strong> Lyman Sherman, through Joseph Smith</li>
+                <li><strong>Section Summary:</strong> The Lord forgives Lyman Sherman's sins, calls him to strengthen his brethren, preach the gospel, and promises that if he continues faithful, he will have the right to preach wherever the Lord sends him, with future ordination to the Seventy promised.</li>
+            </ul>
+            
+            <h3>Key Principles</h3>
+            <ul>
+                <li><strong>Primary Doctrinal Principle:</strong> Past sins need not prevent future service when there is genuine repentance and the Lord's voice of forgiveness</li>
+                <li><strong>Secondary Principle:</strong> Strengthening others in conversation, prayer, and exhortation represents core priesthood duty</li>
+                <li><strong>Application Principle:</strong> Patient waiting for solemn assemblies and proper ordination demonstrates faith and prepares servants for greater responsibilities</li>
+            </ul>
+            
+            <h3>Timeframe & Setting</h3>
+            
+            <h4>Circumstances Among Recipients</h4>
+            <p>Lyman Sherman had come to Joseph Smith deeply troubled about his standing before the Lord, feeling he had committed serious sins. He had previously been ordained a high priest and served faithfully, including participation in Zion's Camp (1834). His conscience was so troubled that he sought a personal revelation through the Prophet to know his status. This humble seeking occurred just three months before the Kirtland Temple dedication.</p>
+            
+            <h4>Circumstances Within the Church</h4>
+            <p>December 1835 found the Church in intense preparation for the Kirtland Temple dedication (March 1836). The School of the Prophets was meeting regularly. The Doctrine and Covenants was being prepared for publication (1835 edition). Priesthood quorums were being organized according to D&C 107 (received March 1835). The promise of a solemn assembly where endowments would be given created anticipation among faithful elders.</p>
+            
+            <h4>Relevant Local Circumstances</h4>
+            <p>Kirtland's population had swelled with gathering Saints, creating economic strain but spiritual excitement. The temple construction had required enormous sacrifice—workers often laboring while fasting, women providing china for the plaster. Opposition from Protestant ministers was increasing as the temple neared completion. Yet a spirit of unity prevailed among the Saints as they anticipated promised blessings.</p>
+            
+            <h4>Relevant Global Circumstances</h4>
+            <p>The 1830s marked increasing democratization of religion in America, with camp meetings and revivals emphasizing personal salvation experiences. The concept of continuing revelation through prophets challenged Protestant cessationism. Social reform movements, including temperance and abolition, were gaining momentum. Economic uncertainty following the Panic of 1837 was beginning to loom.</p>
+            
+            <h3>Purpose of the Revelation</h3>
+            
+            <h4>Short Term</h4>
+            <ul>
+                <li>Provide Lyman Sherman with assurance of divine forgiveness</li>
+                <li>Give him specific duties to strengthen his brethren</li>
+                <li>Promise him future ordination among the leading elders</li>
+                <li>Prepare him spiritually for the solemn assembly</li>
+                <li>Demonstrate that personal revelations could come through the Prophet</li>
+            </ul>
+            
+            <h4>Long Term</h4>
+            <ul>
+                <li>Establish the pattern that forgiven sins don't disqualify from future service</li>
+                <li>Show the importance of strengthening brethren in all forms of interaction</li>
+                <li>Demonstrate that ordinations should wait for proper assemblies</li>
+                <li>Teach that patient preparation precedes greater responsibilities</li>
+                <li>Provide comfort to all who worry about past sins limiting future service</li>
+            </ul>
+            
+            <h3>Significance</h3>
+            
+            <h4>Short Term</h4>
+            <p>Lyman Sherman received the peace he desperately sought, knowing his sins were forgiven. He was ordained to the First Quorum of Seventy on February 28, 1836, at the solemn assembly mentioned in the revelation. His service in strengthening the brethren contributed to the spiritual outpouring at the temple dedication. His faithful response validated the principle of personal revelation through the Prophet.</p>
+            
+            <h4>Long Term</h4>
+            <p>This revelation continues to comfort those who fear past sins disqualify them from service. The command to "strengthen brethren in all your conversation, in all your prayers, in all your exhortations, and in all your doings" has become a template for priesthood ministry. The pattern of waiting patiently for proper ordination maintains order in the Church. Sadly, Lyman Sherman died in 1839 at age 35, but his brief faithful service following this revelation exemplifies consecrated discipleship.</p>
+            
+            <h3>Cultural Insights</h3>
+            
+            <h4>Ancient Patterns</h4>
+            <p>The pattern of seeking prophetic assurance about one's standing before God echoes David's psalms of repentance and Old Testament figures seeking divine oracles. The command to strengthen brethren reflects the ancient role of priests teaching and encouraging Israel. The concept of solemn assemblies dates to Mosaic gatherings at the tabernacle. Waiting for proper ordination mirrors Samuel anointing David long before he became king.</p>
+            
+            <h4>Modern Relevance</h4>
+            <p>Today's members often struggle with feeling worthy after repentance, making Lyman's experience deeply relatable. The multifaceted command to strengthen others (conversation, prayers, exhortations, doings) provides a comprehensive ministry model. The principle of patient waiting for calls and ordinations helps anxious members trust in divine timing. The revelation shows that personal revelations through priesthood leaders remain available.</p>
+            
+            <h3>Modern Application</h3>
+            
+            <h4>Personal Application</h4>
+            <ul>
+                <li>Seek priesthood blessings when troubled about spiritual standing</li>
+                <li>Let go of past sins once the Lord declares forgiveness</li>
+                <li>Strengthen others in every form of interaction</li>
+                <li>Wait patiently for the Lord's timing in calls and opportunities</li>
+                <li>Trust that current faithfulness matters more than past mistakes</li>
+            </ul>
+            
+            <h4>Family Application</h4>
+            <ul>
+                <li>Create a home where family members strengthen each other constantly</li>
+                <li>Teach children that repentance truly allows fresh starts</li>
+                <li>Model patient waiting for blessings and opportunities</li>
+                <li>Use family prayers to strengthen and encourage each member</li>
+                <li>Show through actions how to strengthen others "in all doings"</li>
+            </ul>
+            
+            <h4>Church Application</h4>
+            <ul>
+                <li>Ministers should focus on strengthening rather than condemning</li>
+                <li>Leaders can give assurance to repentant members about their standing</li>
+                <li>Patient waiting for ordinations and callings demonstrates faith</li>
+                <li>Every interaction is an opportunity to strengthen fellow Saints</li>
+                <li>Past sins should not prevent members from accepting calls to serve</li>
+            </ul>
+            
+            <h4>Community Application</h4>
+            <ul>
+                <li>Strengthen non-members through positive conversation and example</li>
+                <li>Let community service be part of strengthening "in all your doings"</li>
+                <li>Show that religious people can acknowledge mistakes and move forward</li>
+                <li>Demonstrate patient faith when waiting for opportunities</li>
+                <li>Build others up in professional and civic interactions</li>
+            </ul>
+            
+            <h3>Key Doctrines</h3>
+            
+            <h4>New Doctrines Introduced</h4>
+            <ul>
+                <li>The Lord can declare through His prophet that specific individuals' sins are forgiven</li>
+                <li>Strengthening brethren encompasses all forms of interaction, not just formal teaching</li>
+                <li>Promised ordinations may require waiting for proper assemblies</li>
+                <li>Being numbered with leading elders comes through faithful continuance</li>
+            </ul>
+            
+            <h4>Previous Doctrines Clarified</h4>
+            <ul>
+                <li>Sins are forgiven through the voice of the Lord (via His servants)</li>
+                <li>Vows made to God must be observed carefully</li>
+                <li>Faithful service qualifies individuals for greater responsibilities</li>
+                <li>The right to preach comes through proper priesthood ordination</li>
+            </ul>
+            
+            <h4>Covenant Principles Explained</h4>
+            <ul>
+                <li>Repentance and forgiveness restore covenant standing</li>
+                <li>Priesthood service includes strengthening others constantly</li>
+                <li>Patient waiting demonstrates covenant faithfulness</li>
+                <li>Future blessings depend on continued faithfulness</li>
+                <li>Ordination represents covenant authorization for expanded service</li>
+            </ul>
+        </div>
+        <!-- Historical Context -->
+        <button class="accordion-section" id="context">Historical Context</button>
+        <div class="panel">
+            <h2>Historical Context</h2>
+            
+            <h3>December 1835: Temple Anticipation</h3>
+            
+            <h4>The Setting</h4>
+            <p>The day after Christmas 1835, Lyman Sherman approached Joseph Smith with a heavy heart. The Kirtland Temple stood nearly complete, its dedication just three months away. The Saints were preparing spiritually and temporally for the promised endowment of power. Into this atmosphere of anticipation came Lyman, burdened with guilt over past sins.</p>
+            
+            <h4>Lyman Sherman's Background</h4>
+            <p>Lyman Sherman was no newcomer to the faith. Born in 1804, he had joined the Church in 1832 and was ordained a high priest the same year. He served faithfully in Zion's Camp in 1834, marching with Joseph Smith to Missouri. Despite this service, something weighed heavily on his conscience—sins that made him question his worthiness before God.</p>
+            
+            <h4>The Nature of Personal Revelations</h4>
+            <p>This revelation demonstrates an important pattern: individuals could receive personal revelations through the Prophet. Joseph didn't simply offer counsel; he inquired of the Lord and received specific revelation for Lyman. This pattern would continue throughout Joseph's ministry, though few of these personal revelations were canonized.</p>
+            
+            <h3>Preparing for the Solemn Assembly</h3>
+            
+            <h4>Organizational Preparations</h4>
+            <p>The Church was organizing according to the pattern revealed in D&C 107 (March 1835). The Quorum of the Twelve had been called, the Seventy were being organized, and priesthood offices were being clarified. Lyman's promised ordination to be "numbered with" the leading elders would be fulfilled at the solemn assembly.</p>
+            
+            <h4>Spiritual Preparations</h4>
+            <p>The School of the Prophets was meeting in the temple, even before its dedication. Members were being taught the order of heaven, practicing washing of feet, and preparing for sacred ordinances. The emphasis on personal worthiness made Lyman's concerns especially poignant.</p>
+            
+            <h4>Economic Sacrifices</h4>
+            <p>Building the temple had required enormous sacrifice. Members had given money, labor, and materials. Women crushed their china to mix with plaster for the temple walls. Men worked on the temple while their farms suffered. In this context of sacrifice, Lyman worried whether his offerings were acceptable.</p>
+            
+            <h3>The Revelation's Immediate Impact</h3>
+            
+            <h4>Personal Peace</h4>
+            <p>The revelation brought Lyman immediate relief: "Your sins are forgiven you, and you are a clean man before me; therefore, lift up your head and rejoice." This divine assurance transformed his countenance and renewed his dedication to the work.</p>
+            
+            <h4>Ministry Focus</h4>
+            <p>The specific command to strengthen brethren "in all your conversation, in all your prayers, in all your exhortations, and in all your doings" gave Lyman clear direction. This wasn't just about formal teaching but infusing strengthening power into every interaction.</p>
+            
+            <h4>Fulfilled Promise</h4>
+            <p>On February 28, 1836, at the solemn assembly mentioned in verse 4, Lyman Sherman was ordained one of the Presidents of the Seventy. The Lord's promise was literally fulfilled within two months of the revelation.</p>
+            
+            <h3>Broader Historical Significance</h3>
+            
+            <h4>Pattern for Repentance</h4>
+            <p>This revelation established that past sins, once repented of and forgiven, need not disqualify individuals from significant Church service. Many early Church leaders had checkered pasts before conversion or had made mistakes after baptism. Lyman's experience showed the reality of forgiveness.</p>
+            
+            <h4>Ministry Model</h4>
+            <p>The comprehensive nature of strengthening others—in conversation, prayers, exhortations, and doings—became a model for priesthood service. It wasn't enough to teach correct doctrine; priesthood holders must strengthen others through every form of interaction.</p>
+            
+            <h4>Tragic Conclusion</h4>
+            <p>Lyman Sherman served faithfully as a Seventy until his death on January 27, 1839, at age 35, likely from consumption (tuberculosis). His widow Delcena later became a plural wife of Joseph Smith. Though his mortal ministry was brief, his revelation continues to bless those seeking assurance of divine forgiveness.</p>
+            
+            <h3>Contemporary Religious Context</h3>
+            
+            <h4>Revivalism and Personal Salvation</h4>
+            <p>The Second Great Awakening emphasized personal salvation experiences. Camp meetings featured dramatic conversions and assurances of salvation. Lyman's revelation fit this cultural pattern while adding the unique element of revelation through a prophet.</p>
+            
+            <h4>Perfectionism Movements</h4>
+            <p>Various religious groups in the 1830s taught forms of perfectionism—the idea that Christians could achieve sinless perfection. Lyman's revelation balanced this by acknowledging past sins while emphasizing moving forward in faith rather than achieving perfection.</p>
+            
+            <h3>Lessons from Lyman Sherman</h3>
+            
+            <h4>Courage to Seek</h4>
+            <p>Lyman had the courage to approach the Prophet about his spiritual concerns. Many suffer in silence, but Lyman sought divine guidance through proper channels.</p>
+            
+            <h4>Power of Forgiveness</h4>
+            <p>The Lord's declaration "you are a clean man before me" shows the completeness of divine forgiveness. Past sins need not define future service.</p>
+            
+            <h4>Patient Preparation</h4>
+            <p>Though promised ordination, Lyman had to wait for the proper solemn assembly. This patience demonstrated faith and prepared him for his calling.</p>
+        </div>
+        <!-- Verse-by-Verse Study -->
+        <button class="accordion-section" id="verses">Verse-by-Verse Study Guide</button>
+        <div class="panel">
+            <h2>Verse-by-Verse Study Guide</h2>
+            
+            <h3>Verses 1-2: Divine Forgiveness Declared</h3>
+            
+            <div class="scripture-block">
+                <p><strong>1</strong> Verily, thus saith the Lord unto you, my servant Lyman: Your sins are forgiven you, and you are a clean man before me; therefore, lift up your head and rejoice.</p>
+                <p><strong>2</strong> And let your soul be at rest concerning your spiritual standing, and resist no more my voice.</p>
+            </div>
+            
+            <h4>Doctrinal Summary</h4>
+            <ul>
+                <li>The Lord declares complete forgiveness—Lyman is "clean" before Him</li>
+                <li>Forgiveness should bring rejoicing, not continued guilt</li>
+                <li>Spiritual standing can be settled through divine declaration</li>
+                <li>Past resistance to the Spirit must cease</li>
+            </ul>
+            
+            <h4>Language & Cultural Insights</h4>
+            <div class="word-study-box">
+                <p><strong>"clean man"</strong> - Complete purification from sin</p>
+                <ul>
+                    <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2891/kjv/wlc/0-1/" target="_blank">טָהֵר (<em>taher</em>)</a> — "to be clean, pure"</li>
+                    <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g2513/kjv/tr/0-1/" target="_blank">καθαρός (<em>katharos</em>)</a> — "clean, pure, unstained"</li>
+                    <li>Levitical concept of ritual purity restored</li>
+                </ul>
+                
+                <p><strong>"lift up your head"</strong> - Ancient gesture of confidence</p>
+                <ul>
+                    <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h5375/kjv/wlc/0-1/" target="_blank">נָשָׂא (<em>nasa</em>)</a> — "to lift, bear up"</li>
+                    <li>Opposite of shame's downcast eyes</li>
+                    <li>Compare <a href="https://www.blueletterbible.org/kjv/psa/3/3/" target="_blank">Psalm 3:3</a> - "the lifter up of mine head"</li>
+                </ul>
+                
+                <p><strong>"soul be at rest"</strong> - Peace about spiritual status</p>
+                <ul>
+                    <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h5117/kjv/wlc/0-1/" target="_blank">נוּחַ (<em>nuach</em>)</a> — "to rest, settle down"</li>
+                    <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g372/kjv/tr/0-1/" target="_blank">ἀνάπαυσις (<em>anapausis</em>)</a> — "rest, relief"</li>
+                    <li>Sabbath concept of ceasing from labor (including spiritual anxiety)</li>
+                </ul>
+            </div>
+            
+            <h4>Reflection Questions</h4>
+            <ol>
+                <li>What prevents us from accepting that we are "clean" after repentance?</li>
+                <li>How does resisting God's voice relate to unworthiness feelings?</li>
+                <li>What does it mean to let our souls "be at rest" spiritually?</li>
+            </ol>
+            
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #e5e7eb;">
+            
+            <h3>Verse 3: The Command to Strengthen</h3>
+            
+            <div class="scripture-block">
+                <p><strong>3</strong> And from henceforth I appoint unto you that you should be a ruler and teacher in Zion, in my church, to strengthen them in all your conversation, in all your prayers, in all your exhortations, and in all your doings; and behold, and lo, I am with you to bless and deliver you forever. Amen.</p>
+            </div>
+            
+            <h4>Doctrinal Summary</h4>
+            <ul>
+                <li>Appointed as ruler and teacher in Zion</li>
+                <li>Comprehensive ministry in four areas: conversation, prayers, exhortations, doings</li>
+                <li>Promise of divine presence and deliverance</li>
+                <li>Ministry encompasses all interactions, not just formal teaching</li>
+            </ul>
+            
+            <h4>Language & Cultural Insights</h4>
+            <div class="word-study-box">
+                <p><strong>"strengthen"</strong> - To make strong, establish</p>
+                <ul>
+                    <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2388/kjv/wlc/0-1/" target="_blank">חָזַק (<em>chazaq</em>)</a> — "to strengthen, prevail, harden"</li>
+                    <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g4599/kjv/tr/0-1/" target="_blank">σθενόω (<em>sthenoo</em>)</a> — "to strengthen"</li>
+                    <li>Alternative: <a href="https://www.blueletterbible.org/lexicon/g4741/kjv/tr/0-1/" target="_blank">στηρίζω (<em>sterizo</em>)</a> — "to make stable, establish"</li>
+                </ul>
+                
+                <p><strong>Four Dimensions of Strengthening:</strong></p>
+                <ul>
+                    <li><strong>Conversation:</strong> Daily dialogue and interaction</li>
+                    <li><strong>Prayers:</strong> Intercessory prayer for others</li>
+                    <li><strong>Exhortations:</strong> Formal teaching and encouragement</li>
+                    <li><strong>Doings:</strong> Actions and example</li>
+                </ul>
+            </div>
+            
+            <h4>Cross-References</h4>
+            <ul>
+                <li><a href="https://www.blueletterbible.org/kjv/luk/22/32/" target="_blank">Luke 22:32</a> - "When thou art converted, strengthen thy brethren"</li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/81.5" target="_blank">D&C 81:5</a> - "Strengthen the feeble knees"</li>
+                <li><a href="https://www.blueletterbible.org/kjv/1th/5/11/" target="_blank">1 Thessalonians 5:11</a> - "Edify one another"</li>
+            </ul>
+            
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #e5e7eb;">
+            
+            <h3>Verses 4-5: Patient Preparation</h3>
+            
+            <div class="scripture-block">
+                <p><strong>4</strong> And let the residue of my servants go forth and proclaim my word unto the nations of the earth, and be ye diligent in all things that ye may be perfected in your ministry to go forth among the Gentiles for the last time, as many as the mouth of the Lord shall name, to bind up the law and seal up the testimony, and to prepare the saints for the hour of judgment which is to come;</p>
+                <p><strong>5</strong> That their souls may escape the wrath of God, the desolation of abomination which awaits the wicked, both in this world and in the world to come. Verily, I say unto you, let those who are not the first elders continue in the vineyard until the mouth of the Lord shall call them, for their time is not yet come; their garments are not clean from the blood of this generation.</p>
+            </div>
+            
+            <h4>Key Concepts</h4>
+            <ul>
+                <li>Wait patiently for the solemn assembly</li>
+                <li>Future ordination to the Seventy implied</li>
+                <li>Mission to bind up the law and seal testimony</li>
+                <li>Preparation for the hour of judgment</li>
+                <li>Cleansing from the blood of this generation</li>
+            </ul>
+            
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #e5e7eb;">
+            
+            <h3>Verses 6-8: Promise and Warning</h3>
+            
+            <div class="scripture-block">
+                <p><strong>6</strong> Abide ye in the liberty wherewith ye are made free; entangle not yourselves in sin, but let your hands be clean, until the Lord comes.</p>
+                <p><strong>7</strong> For not many days hence and the earth shall tremble and reel to and fro as a drunken man; and the sun shall hide his face, and shall refuse to give light; and the moon shall be bathed in blood; and the stars shall become exceedingly angry, and shall cast themselves down as a fig that falleth from off a fig tree.</p>
+                <p><strong>8</strong> And after your testimony cometh wrath and indignation upon the people. For after your testimony cometh the testimony of earthquakes, that shall cause groanings in the midst of her, and men shall fall upon the ground and shall not be able to stand.</p>
+            </div>
+            
+            <h4>Doctrinal Summary</h4>
+            <ul>
+                <li>Liberty from sin must be maintained</li>
+                <li>Keep hands clean until the Second Coming</li>
+                <li>Signs in heaven and earth will follow testimony</li>
+                <li>Natural disasters as testimony after human witnesses</li>
+            </ul>
+            
+            <h4>Language & Cultural Insights</h4>
+            <div class="word-study-box">
+                <p><strong>"liberty wherewith ye are made free"</strong></p>
+                <ul>
+                    <li>Greek: <a href="https://www.blueletterbible.org/lexicon/g1657/kjv/tr/0-1/" target="_blank">ἐλευθερία (<em>eleutheria</em>)</a> — "liberty, freedom"</li>
+                    <li>Compare <a href="https://www.blueletterbible.org/kjv/gal/5/1/" target="_blank">Galatians 5:1</a> - Stand fast in liberty</li>
+                    <li>Freedom from sin's bondage through forgiveness</li>
+                </ul>
+                
+                <p><strong>"clean hands"</strong> - Ritual and moral purity</p>
+                <ul>
+                    <li>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h5355/kjv/wlc/0-1/" target="_blank">נָקִי (<em>naqi</em>)</a> — "innocent, clean"</li>
+                    <li>Compare <a href="https://www.blueletterbible.org/kjv/psa/24/4/" target="_blank">Psalm 24:4</a> - "clean hands and pure heart"</li>
+                </ul>
+            </div>
+            
+            <h4>Prophetic Imagery</h4>
+            <ul>
+                <li><strong>Earth reeling:</strong> Compare <a href="https://www.blueletterbible.org/kjv/isa/24/20/" target="_blank">Isaiah 24:20</a></li>
+                <li><strong>Moon bathed in blood:</strong> Compare <a href="https://www.blueletterbible.org/kjv/joe/2/31/" target="_blank">Joel 2:31</a></li>
+                <li><strong>Stars falling:</strong> Compare <a href="https://www.blueletterbible.org/kjv/mat/24/29/" target="_blank">Matthew 24:29</a></li>
+            </ul>
+        </div>
+        <!-- Word Studies -->
+        <button class="accordion-section" id="words">Word Studies</button>
+        <div class="panel">
+            <h2>Key Word Studies</h2>
+            
+            <h3>1. Soul at Rest</h3>
+            <div class="word-study-box">
+                <h4>Hebrew Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h5315/kjv/wlc/0-1/" target="_blank">נֶפֶשׁ (<em>nephesh</em>)</a> — "soul, living being, life"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h5117/kjv/wlc/0-1/" target="_blank">נוּחַ (<em>nuach</em>)</a> — "to rest, settle down"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h8252/kjv/wlc/0-1/" target="_blank">שָׁקַט (<em>shaqat</em>)</a> — "to be quiet, at peace"</li>
+                </ul>
+                
+                <h4>Greek Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g5590/kjv/tr/0-1/" target="_blank">ψυχή (<em>psyche</em>)</a> — "soul, life"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g373/kjv/tr/0-1/" target="_blank">ἀναπαύω (<em>anapauo</em>)</a> — "to give rest, refresh"</li>
+                </ul>
+                
+                <h4>Etymology</h4>
+                <ul>
+                    <li><a href="https://www.etymonline.com/word/soul" target="_blank">Soul</a> - From Proto-Germanic *sawalo</li>
+                    <li><a href="https://www.etymonline.com/word/rest" target="_blank">Rest</a> - From Proto-Germanic *rasto</li>
+                </ul>
+                
+                <h4>Webster 1828</h4>
+                <ul>
+                    <li><a href="https://webstersdictionary1828.com/Dictionary/soul" target="_blank">Soul</a> - "The spiritual and immortal part of human beings"</li>
+                    <li><a href="https://webstersdictionary1828.com/Dictionary/rest" target="_blank">Rest</a> - "Cessation of motion or action; quiet"</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>The soul at rest concerning spiritual standing represents complete peace about one's relationship with God—not anxiety about past sins or future judgment, but confident assurance of divine acceptance.</p>
+            </div>
+            
+            <h3>2. Strengthen</h3>
+            <div class="word-study-box">
+                <h4>Hebrew Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h2388/kjv/wlc/0-1/" target="_blank">חָזַק (<em>chazaq</em>)</a> — "to strengthen, prevail, harden, be strong"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h5582/kjv/wlc/0-1/" target="_blank">סָעַד (<em>saad</em>)</a> — "to support, sustain, refresh"</li>
+                </ul>
+                
+                <h4>Greek Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g4599/kjv/tr/0-1/" target="_blank">σθενόω (<em>sthenoo</em>)</a> — "to strengthen, make strong"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g4741/kjv/tr/0-1/" target="_blank">στηρίζω (<em>sterizo</em>)</a> — "to make stable, establish, strengthen"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g1991/kjv/tr/0-1/" target="_blank">ἐπιστηρίζω (<em>episterizo</em>)</a> — "to confirm, strengthen further"</li>
+                </ul>
+                
+                <h4>Latin Foundation</h4>
+                <ul>
+                    <li><a href="https://logeion.uchicago.edu/confirmo" target="_blank">confirmare</a> — "to strengthen, establish firmly"</li>
+                    <li><a href="https://logeion.uchicago.edu/fortis" target="_blank">fortis</a> — "strong, powerful"</li>
+                </ul>
+                
+                <h4>Etymology</h4>
+                <ul>
+                    <li><a href="https://www.etymonline.com/word/strengthen" target="_blank">Strengthen</a> - From strength + -en, meaning "to make strong"</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>Strengthening others encompasses building faith, providing support, offering encouragement, and establishing others firmly in truth—through every form of interaction from casual conversation to formal teaching.</p>
+            </div>
+            
+            <h3>3. Clean Hands</h3>
+            <div class="word-study-box">
+                <h4>Hebrew Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h2891/kjv/wlc/0-1/" target="_blank">טָהֵר (<em>taher</em>)</a> — "to be clean, pure"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h5355/kjv/wlc/0-1/" target="_blank">נָקִי (<em>naqi</em>)</a> — "innocent, clean, free from guilt"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/" target="_blank">יָד (<em>yad</em>)</a> — "hand, power"</li>
+                </ul>
+                
+                <h4>Greek Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g2513/kjv/tr/0-1/" target="_blank">καθαρός (<em>katharos</em>)</a> — "clean, pure, unstained"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g5495/kjv/tr/0-1/" target="_blank">χείρ (<em>cheir</em>)</a> — "hand"</li>
+                </ul>
+                
+                <h4>Biblical Pattern</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/psa/24/4/" target="_blank">Psalm 24:4</a> - "He that hath clean hands, and a pure heart"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/jas/4/8/" target="_blank">James 4:8</a> - "Cleanse your hands, ye sinners"</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>Clean hands symbolize both ritual purity and moral innocence—actions untainted by sin, service uncorrupted by selfish motives, and works acceptable before God.</p>
+            </div>
+            
+            <h3>4. Liberty</h3>
+            <div class="word-study-box">
+                <h4>Hebrew Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h2668/kjv/wlc/0-1/" target="_blank">חֻפְשָׁה (<em>chophshah</em>)</a> — "freedom, liberty"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/h1865/kjv/wlc/0-1/" target="_blank">דְּרוֹר (<em>deror</em>)</a> — "liberty, release" (as in Jubilee)</li>
+                </ul>
+                
+                <h4>Greek Foundation</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g1657/kjv/tr/0-1/" target="_blank">ἐλευθερία (<em>eleutheria</em>)</a> — "liberty, freedom"</li>
+                    <li><a href="https://www.blueletterbible.org/lexicon/g1658/kjv/tr/0-1/" target="_blank">ἐλεύθερος (<em>eleutheros</em>)</a> — "free, at liberty"</li>
+                </ul>
+                
+                <h4>Latin Foundation</h4>
+                <ul>
+                    <li><a href="https://logeion.uchicago.edu/libertas" target="_blank">libertas</a> — "freedom, liberty"</li>
+                </ul>
+                
+                <h4>Cross-References</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/gal/5/1/" target="_blank">Galatians 5:1</a> - "Stand fast therefore in the liberty"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/jhn/8/36/" target="_blank">John 8:36</a> - "If the Son shall make you free"</li>
+                </ul>
+                
+                <h4>Significance</h4>
+                <p>Liberty in Christ means freedom from sin's bondage, guilt's burden, and Satan's power—a freedom that must be maintained through continued righteousness rather than returning to former sins.</p>
+            </div>
+        </div>
+
+        <!-- Teaching Applications -->
+        <button class="accordion-section" id="teaching">Teaching Applications</button>
+        <div class="panel">
+            <h2>Teaching Applications</h2>
+            
+            <h3>Personal Study Enhancement</h3>
+            <ul>
+                <li><strong>Forgiveness Inventory:</strong> List past sins you struggle to feel forgiven for; study this revelation's assurance</li>
+                <li><strong>Strengthening Assessment:</strong> Evaluate how you strengthen others in conversation, prayer, exhortation, and actions</li>
+                <li><strong>Voice Recognition:</strong> Identify times you've resisted God's voice and commit to greater responsiveness</li>
+                <li><strong>Patience Practice:</strong> List blessings you're waiting for; practice Lyman's patient preparation</li>
+                <li><strong>Liberty Maintenance:</strong> Identify areas where you might be returning to past bondages</li>
+            </ul>
+            
+            <h3>Family Home Evening Applications</h3>
+            <ul>
+                <li><strong>Object Lesson:</strong> Use dirty and clean hands to teach about forgiveness and fresh starts</li>
+                <li><strong>Family Activity:</strong> Practice strengthening each other through encouraging words</li>
+                <li><strong>Role Play:</strong> Act out seeking forgiveness and receiving assurance</li>
+                <li><strong>Discussion:</strong> Share times when waiting patiently led to blessings</li>
+                <li><strong>Service Project:</strong> Strengthen someone outside the family through acts of kindness</li>
+            </ul>
+            
+            <h3>Sunday School & Relief Society/Elders Quorum</h3>
+            <ul>
+                <li><strong>Discussion Question:</strong> How do we let our souls "be at rest" after repentance?</li>
+                <li><strong>Group Activity:</strong> List ways to strengthen others in all four areas mentioned</li>
+                <li><strong>Testimony Sharing:</strong> Share experiences of feeling truly forgiven</li>
+                <li><strong>Application Challenge:</strong> Strengthen someone this week in each of the four ways</li>
+                <li><strong>Doctrinal Deep Dive:</strong> Explore what it means to resist God's voice</li>
+            </ul>
+            
+            <h3>Seminary & Institute (Youth Focus)</h3>
+            <ul>
+                <li><strong>Modern Application:</strong> How do youth strengthen each other through social media?</li>
+                <li><strong>Peer Discussion:</strong> What holds us back from feeling forgiven?</li>
+                <li><strong>Future Preparation:</strong> Patience in waiting for mission calls and other opportunities</li>
+                <li><strong>Scripture Chain:</strong> Create a chain about forgiveness and fresh starts</li>
+                <li><strong>Personal Challenge:</strong> Strengthen someone at school in all four ways this week</li>
+            </ul>
+            
+            <h3>Missionary Applications</h3>
+            <ul>
+                <li><strong>Teaching Tool:</strong> Use Lyman's story to teach about complete forgiveness</li>
+                <li><strong>Finding Approach:</strong> Look for those burdened by past mistakes</li>
+                <li><strong>Companion Unity:</strong> Strengthen companion through prayer and conversation</li>
+                <li><strong>Investigator Application:</strong> Help them understand forgiveness is real and complete</li>
+                <li><strong>Member Work:</strong> Strengthen less-active members who feel unworthy</li>
+            </ul>
+            
+            <h3>Cross-References for Teaching</h3>
+            
+            <div class="highlight-box">
+                <h4>Forgiveness Scriptures</h4>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58.42-43" target="_blank">D&C 58:42-43</a> - Sins remembered no more</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/isa/1/18/" target="_blank">Isaiah 1:18</a> - Sins white as snow</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1.5-8" target="_blank">Enos 1:5-8</a> - Guilt swept away</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4.2-3" target="_blank">Mosiah 4:2-3</a> - Peace of conscience</li>
+                </ul>
+                
+                <h4>Strengthening Others</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/luk/22/32/" target="_blank">Luke 22:32</a> - Strengthen thy brethren</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/81.5" target="_blank">D&C 81:5</a> - Strengthen feeble knees</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7.45-48" target="_blank">Moroni 7:45-48</a> - Charity in action</li>
+                </ul>
+                
+                <h4>Patient Waiting</h4>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/psa/27/14/" target="_blank">Psalm 27:14</a> - Wait on the Lord</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98.2" target="_blank">D&C 98:2</a> - Waiting for the Lord</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/isa/40/31/" target="_blank">Isaiah 40:31</a> - They that wait upon the Lord</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Study Questions -->
+        <button class="accordion-section" id="questions">Study Questions</button>
+        <div class="panel">
+            <h2>Questions for Personal Study</h2>
+            
+            <div class="question-section">
+                <h4>Understanding Forgiveness</h4>
+                <ol>
+                    <li>What sins might Lyman have been concerned about that required prophetic assurance?</li>
+                    <li>How does "let your soul be at rest concerning your spiritual standing" apply when we still face consequences of past choices?</li>
+                    <li>What does it mean to be "a clean man before" the Lord?</li>
+                    <li>Why do some people struggle to accept divine forgiveness even after sincere repentance?</li>
+                    <li>How does resisting God's voice relate to feelings of unworthiness?</li>
+                </ol>
+            </div>
+            
+            <div class="question-section">
+                <h4>Ministry and Strengthening</h4>
+                <ol>
+                    <li>How does one strengthen others through conversation beyond just teaching doctrine?</li>
+                    <li>What does it mean to strengthen others "in all your prayers"? How do we pray for others effectively?</li>
+                    <li>How is "exhortation" different from regular teaching or conversation?</li>
+                    <li>What are specific ways to strengthen others through our "doings" or actions?</li>
+                    <li>Why did the Lord emphasize ALL four methods of strengthening rather than just formal teaching?</li>
+                </ol>
+            </div>
+            
+            <div class="question-section">
+                <h4>Patience and Preparation</h4>
+                <ol>
+                    <li>Why did the Lord want Lyman to wait for the solemn assembly rather than immediate ordination?</li>
+                    <li>How long should we wait patiently before wondering if a promised blessing isn't coming?</li>
+                    <li>What can we learn from Lyman being ordained exactly as promised two months later?</li>
+                    <li>How does patient waiting prepare us for greater responsibilities?</li>
+                    <li>What modern situations require similar patient waiting for proper timing?</li>
+                </ol>
+            </div>
+            
+            <div class="question-section">
+                <h4>Liberty and Maintaining Freedom</h4>
+                <ol>
+                    <li>What does "abide ye in the liberty wherewith ye are made free" mean practically?</li>
+                    <li>How do we avoid entangling ourselves in sin after being forgiven?</li>
+                    <li>What are modern "entanglements" that threaten our spiritual liberty?</li>
+                    <li>How do we keep our hands clean until the Lord comes?</li>
+                    <li>What is the connection between maintaining liberty and the Second Coming warnings?</li>
+                </ol>
+            </div>
+            
+            <div class="question-section">
+                <h4>Personal Application</h4>
+                <ol>
+                    <li>What past sins do I need to let go of and accept the Lord's forgiveness?</li>
+                    <li>Who can I strengthen this week through conversation, prayer, exhortation, and actions?</li>
+                    <li>In what areas of my life am I resisting God's voice?</li>
+                    <li>What blessings am I waiting for that require patient preparation?</li>
+                    <li>How can I better maintain the spiritual liberty I've been given?</li>
+                </ol>
+            </div>
+            
+            <div class="question-section">
+                <h4>Historical and Doctrinal Context</h4>
+                <ol>
+                    <li>How does Lyman's experience relate to other early Church leaders who overcame past mistakes?</li>
+                    <li>What does this revelation teach about the role of prophets in providing personal revelation?</li>
+                    <li>How does the pattern of forgiveness here compare with other forgiveness accounts in scripture?</li>
+                    <li>Why was this personal revelation included in the Doctrine and Covenants when most weren't?</li>
+                    <li>What can we learn from Lyman's death just three years after this revelation?</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Accordion functionality
+        var acc = document.getElementsByClassName("accordion-section");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.classList.toggle("show");
+            });
+        }
+        
+        // Toggle all sections
+        function toggleAll(expand) {
+            var panels = document.getElementsByClassName("panel");
+            var sections = document.getElementsByClassName("accordion-section");
+            
+            for (var i = 0; i < panels.length; i++) {
+                if (expand) {
+                    panels[i].classList.add("show");
+                    sections[i].classList.add("active");
+                } else {
+                    panels[i].classList.remove("show");
+                    sections[i].classList.remove("active");
+                }
+            }
+        }
+        
+        // Scroll to section
+        function scrollToSection(sectionId) {
+            var element = document.getElementById(sectionId);
+            if (element) {
+                // Open the section
+                element.classList.add("active");
+                element.nextElementSibling.classList.add("show");
+                
+                // Scroll to it
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Highlight briefly
+                element.style.backgroundColor = '#5a6b5f';
+                setTimeout(function() {
+                    element.style.backgroundColor = '#7c9885';
+                }, 1000);
+            }
+        }
+        
+        // Open first section by default
+        window.onload = function() {
+            if (acc.length > 0) {
+                acc[0].classList.add("active");
+                acc[0].nextElementSibling.classList.add("show");
+            }
+        };
+    </script>
 </body>
 </html>
