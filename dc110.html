@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 110 Complete Study Guide - Visions in the Kirtland Temple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .header-section .date-location {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Tab Controls */
+        .tab-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #374151;
+            border: 2px solid #7c9885;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background-color: #7c9885;
+            color: white;
+        }
+        
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.4s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-section:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section.active {
+            background-color: #6b8774;
+        }
+        
+        .accordion-section:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .accordion-section.active:after {
+            content: "\2212";
+        }
+        
+        /* Content Panels */
+        .content-panel {
+            padding: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        
+        .content-panel.active {
+            max-height: none;
+            border: 1px solid #e5e7eb;
+            border-top: none;
+        }
+        
+        .panel-content {
+            padding: 30px;
+        }
+        
+        /* Typography within panels */
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 400;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+        
+        h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Scripture Quote Styling */
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        /* Highlight Boxes */
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 1px solid #d4c190;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+        
+        a:hover {
+            color: #6b8774;
+            border-bottom: 1px solid #6b8774;
+        }
+        
+        /* Lists within panels */
+        .panel-content ul li strong {
+            color: #6b8774;
+        }
+        
+        /* Site Header Styles */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .site-title {
+            font-size: 2em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        
+        .site-nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: Georgia, serif;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .cfm-button:hover {
+            background-color: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+            color: #999;
+        }
+        
+        .cfm-button.disabled:hover {
+            transform: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Sub-accordion styles for verse-by-verse */
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .sub-accordion.active {
+            background-color: #e5e7eb;
+        }
+        
+        .sub-accordion:after {
+            content: '\002B';
+            color: #374151;
+            font-weight: bold;
+            float: right;
+        }
+        
+        .sub-accordion.active:after {
+            content: "\2212";
+        }
+        
+        .sub-panel {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            background-color: white;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .sub-panel.active {
+            padding: 20px;
+            max-height: none;
+        }
+        
+        /* Word Study Boxes */
+        .word-study-box {
+            background-color: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .word-study-title {
+            color: #7c9885;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <nav class="site-nav">
+                <!-- Links to OTHER SECTIONS, not menu items -->
+                <a href="#" class="cfm-button disabled" title="Full lesson coming soon">View Full Lesson</a>
+                <a href="dc109_complete.html" class="cfm-button">D&C 109</a>
+                <a href="dc111_complete.html" class="cfm-button">D&C 111</a>
+                <a href="dc112_complete.html" class="cfm-button">D&C 112</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 110</h1>
+            <div class="subtitle">Visions in the Kirtland Temple</div>
+            <div class="date-location">April 3, 1836 • Kirtland Temple, Ohio</div>
+        </div>
+        
+        <!-- Tab Controls for Expand/Collapse ONLY -->
+        <div class="tab-controls">
+            <button class="tab-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="tab-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>
+        
+        <!-- SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Section Overview</h2>
+                
+                <h3>Basic Information</h3>
+                <p><strong>Date of Revelation:</strong> April 3, 1836</p>
+                <p><strong>Location:</strong> Kirtland Temple, Ohio</p>
+                <p><strong>Recipients:</strong> Joseph Smith and Oliver Cowdery</p>
+                <p><strong>Verses:</strong> 16 verses</p>
+                <p><strong>Section Summary:</strong> The Savior accepts the Kirtland Temple, and Moses, Elias, and Elijah appear to restore priesthood keys for the gathering of Israel, the gospel of Abraham, and sealing powers respectively.</p>
+                
+                <h3>Key Principles</h3>
+                <p><strong>Primary Doctrinal Principle:</strong> Priesthood keys are essential for the administration of gospel ordinances</p>
+                <p><strong>Secondary Principle:</strong> Temple worship opens the windows of heaven for divine manifestations</p>
+                <p><strong>Application Principle:</strong> Sacred experiences often follow sacrifice and dedication</p>
+                
+                <h3>Timeframe & Setting</h3>
+                
+                <h4>Circumstances Among Recipients</h4>
+                <p>Joseph Smith and Oliver Cowdery had just participated in the solemn assembly and dedication of the Kirtland Temple one week earlier. They were in a state of spiritual preparation and readiness for divine instruction.</p>
+                
+                <h4>Circumstances Within the Church</h4>
+                <p>The Church had just completed its first temple after great sacrifice. Members had given their time, money, and labor despite poverty and persecution. The temple dedication had brought an outpouring of spiritual manifestations.</p>
+                
+                <h4>Relevant Local Circumstances</h4>
+                <p>The Kirtland community was experiencing economic challenges. Despite opposition from local residents, the Saints had succeeded in building a house of the Lord. The temple stood as a beacon of faith amidst trials.</p>
+                
+                <h4>Relevant Global Circumstances</h4>
+                <p>April 3, 1836 was Easter Sunday, and it was also the Jewish Passover season. This timing connected the restoration of keys to both Christian and Jewish sacred calendars, emphasizing themes of deliverance and resurrection.</p>
+                
+                <h3>Purpose of the Revelation</h3>
+                
+                <h4>Short Term</h4>
+                <p>To formally accept the temple, restore essential priesthood keys for gathering Israel, and empower the Church's missionary efforts with divine authority.</p>
+                
+                <h4>Long Term</h4>
+                <p>To establish the foundation for all temple work throughout the dispensation, enable the sealing of families for eternity, and prepare for the Second Coming of Christ.</p>
+                
+                <h3>Significance</h3>
+                
+                <h4>Short Term</h4>
+                <p>Immediately empowered missionary work with keys of gathering. Validated the sacrifices made to build the temple. Strengthened testimonies of Joseph Smith's divine calling.</p>
+                
+                <h4>Long Term</h4>
+                <p>Enables all temple ordinances performed today. Makes possible the sealing of all human family. Fulfills ancient prophecies about Elijah's return before the Second Coming.</p>
+                
+                <h3>Cultural Insights</h3>
+                
+                <h4>Ancient</h4>
+                <p>Elijah's return fulfilled Malachi's prophecy (Malachi 4:5-6). Moses and Elijah appeared with Christ on Mount of Transfiguration. Temple veil imagery connects to ancient temple worship. The "four corners" gathering echoes Paul's revolutionary mission to the Gentiles, when he was commanded in vision to break traditional boundaries and take the gospel to all nations (Acts 22:21). Just as Paul's commission opened the gospel to the non-Jewish world, Moses' keys open the gathering to every kindred, tongue, and people.</p>
+                
+                <h4>Modern</h4>
+                <p>Family history work accelerating worldwide. Temple building unprecedented in history. Technology enabling gathering and family connections globally.</p>
+                
+                <h3>Modern Application</h3>
+                <ul>
+                    <li><strong>Personal Application:</strong> Prepare spiritually before temple attendance; seek personal revelation in sacred spaces</li>
+                    <li><strong>Family Application:</strong> Engage in family history work; teach children about priesthood keys and temple blessings</li>
+                    <li><strong>Church Application:</strong> Support temple and missionary work; honor priesthood keys held by leaders</li>
+                    <li><strong>Community Application:</strong> Share family history resources; build bridges through genealogical connections</li>
+                    <li><strong>Questions for Personal Study:</strong>
+                        <ul>
+                            <li>How can I better prepare to receive revelation in the temple?</li>
+                            <li>What sacrifices am I willing to make for temple worship?</li>
+                            <li>How do priesthood keys bless my daily life?</li>
+                            <li>What can I do to help gather Israel?</li>
+                            <li>How can I turn my heart to my fathers and my children?</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>Key Doctrines</h3>
+                <ul>
+                    <li>Priesthood keys authorize the performance of ordinances</li>
+                    <li>Temple acceptance by deity validates sacred space</li>
+                    <li>Gathering of Israel is a key sign of the last days</li>
+                    <li>Sealing power binds on earth and in heaven</li>
+                    <li>Dispensation of the fulness of times unites all previous dispensations</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Historical Context</h2>
+                
+                <h3>The Setting</h3>
+                <p>One week after the dedication of the Kirtland Temple on March 27, 1836, Joseph Smith and Oliver Cowdery retired to the temple for prayer. It was a Sunday afternoon, coinciding with both Easter and Passover, creating a profound convergence of sacred time.</p>
+                
+                <h3>Key Events Leading to This Revelation</h3>
+                <ul>
+                    <li>March 27, 1836: Kirtland Temple dedicated with heavenly manifestations</li>
+                    <li>March 30, 1836: Washing of feet ordinance performed</li>
+                    <li>April 3, 1836 morning: Sacrament meeting held in temple</li>
+                    <li>April 3, 1836 afternoon: Joseph and Oliver pray behind temple veils</li>
+                </ul>
+                
+                <h3>Immediate Circumstances</h3>
+                <p>After assisting with the sacrament, Joseph and Oliver lowered the veils around the Melchizedek Priesthood pulpits on the west side of the temple. In this private, sacred space, they bowed in solemn, silent prayer. The veils provided both physical and symbolic separation from the world.</p>
+                
+                <h3>Key People Involved</h3>
+                <ul>
+                    <li><strong>Joseph Smith:</strong> Prophet and President of the Church, receiver of the vision</li>
+                    <li><strong>Oliver Cowdery:</strong> Second Elder, witness to the vision, scribe of the revelation</li>
+                    <li><strong>The Savior:</strong> Appeared to accept the temple and forgive sins</li>
+                    <li><strong>Moses:</strong> Restored keys of gathering of Israel</li>
+                    <li><strong>Elias:</strong> Committed dispensation of gospel of Abraham</li>
+                    <li><strong>Elijah:</strong> Restored sealing keys as prophesied by Malachi</li>
+                </ul>
+                
+                <h3>Connection to Other Revelations</h3>
+                <ul>
+                    <li>D&C 2: Moroni quotes Malachi about Elijah's mission (September 21, 1823)</li>
+                    <li>D&C 109: Dedicatory prayer asking for endowment and divine acceptance</li>
+                    <li>D&C 128:17-18: Joseph Smith explains the welding link of sealing power</li>
+                    <li>D&C 132: Further explanation of sealing powers and eternal marriage</li>
+                    <li>D&C 133: Prophecies about the gathering of Israel fulfilled through these keys</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Verse-by-Verse Study Guide</h2>
+                
+                <!-- Verses 1-4 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-4: The Savior Appears</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>1</strong> The veil was taken from our minds, and the eyes of our understanding were opened.</p>
+                        <p><strong>2</strong> We saw the Lord standing upon the breastwork of the pulpit, before us; and under his feet was a paved work of pure gold, in color like amber.</p>
+                        <p><strong>3</strong> His eyes were as a flame of fire; the hair of his head was white like the pure snow; his countenance shone above the brightness of the sun; and his voice was as the sound of the rushing of great waters, even the voice of Jehovah, saying:</p>
+                        <p><strong>4</strong> I am the first and the last; I am he who liveth, I am he who was slain; I am your advocate with the Father.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Spiritual sight requires the veil being removed from our minds</li>
+                        <li>The glorified Christ appears in His temple with divine glory</li>
+                        <li>Christ identifies Himself through His roles: Alpha/Omega, Living One, Redeemer, Advocate</li>
+                    </ul>
+                    
+                    <h3>Hebrew and Greek Terms</h3>
+                    <ul>
+                        <li><strong>Veil:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h4539/kjv/" target="_blank">macak (מָסָך)</a> "covering"; Greek: <a href="https://www.blueletterbible.org/lexicon/g2665/kjv/" target="_blank">katapetasma (καταπέτασμα)</a> "curtain"</li>
+                        <li><strong>Understanding:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h998/kjv/" target="_blank">biynah (בִּינָה)</a> "discernment"; Greek: <a href="https://www.blueletterbible.org/lexicon/g3563/kjv/" target="_blank">nous (νοῦς)</a> "mind"</li>
+                        <li><strong>Advocate:</strong> Greek: <a href="https://www.blueletterbible.org/lexicon/g3875/kjv/" target="_blank">parakletos (παράκλητος)</a> "one called alongside to help"</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/1/14-16/" target="_blank">Revelation 1:14-16</a> - John's similar vision of glorified Christ</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1jo/2/1/" target="_blank">1 John 2:1</a> - Jesus Christ as our advocate</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/76/19-24" target="_blank">D&C 76:19-24</a> - Vision of the Son on the right hand</li>
+                    </ul>
+                    
+                    <h3>Reflection Questions</h3>
+                    <ul>
+                        <li>What prevents the veil from being removed from our minds?</li>
+                        <li>How does this description of Christ compare to other scripture accounts?</li>
+                        <li>What does it mean personally that Christ is our advocate?</li>
+                    </ul>
+                    
+                    <h3>Teaching Points</h3>
+                    <ul>
+                        <li>Spiritual experiences require spiritual preparation</li>
+                        <li>Christ appears to those who build temples to His name</li>
+                        <li>The Savior's advocacy is active and ongoing</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 5-10 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 5-10: Temple Acceptance and Promises</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>5</strong> Behold, your sins are forgiven you; you are clean before me; therefore, lift up your heads and rejoice.</p>
+                        <p><strong>6</strong> Let the hearts of your brethren rejoice, and let the hearts of all my people rejoice, who have, with their might, built this house to my name.</p>
+                        <p><strong>7</strong> For behold, I have accepted this house, and my name shall be here; and I will manifest myself to my people in mercy in this house.</p>
+                        <p><strong>8</strong> Yea, I will appear unto my servants, and speak unto them with mine own voice, if my people will keep my commandments, and do not pollute this holy house.</p>
+                        <p><strong>9</strong> Yea the hearts of thousands and tens of thousands shall greatly rejoice in consequence of the blessings which shall be poured out, and the endowment with which my servants have been endowed in this house.</p>
+                        <p><strong>10</strong> And the fame of this house shall spread to foreign lands; and this is the beginning of the blessing which shall be poured out upon the heads of my people. Even so. Amen.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Temple worship brings personal forgiveness and cleansing</li>
+                        <li>The Lord formally accepts temples built by sacrifice</li>
+                        <li>Divine manifestations are conditional upon worthiness</li>
+                        <li>Temple blessings extend to countless generations</li>
+                    </ul>
+                    
+                    <h3>Hebrew and Greek Terms</h3>
+                    <ul>
+                        <li><strong>Forgiven:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h5545/kjv/" target="_blank">salach (סָלַח)</a> "to pardon"; Greek: <a href="https://www.blueletterbible.org/lexicon/g863/kjv/" target="_blank">aphiemi (ἀφίημι)</a> "to send away"</li>
+                        <li><strong>Accepted:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h7521/kjv/" target="_blank">ratsah (רָצָה)</a> "to be pleased with"; Greek: <a href="https://www.blueletterbible.org/lexicon/g1184/kjv/" target="_blank">dektos (δεκτός)</a> "acceptable"</li>
+                        <li><strong>Endowment:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3847/kjv/" target="_blank">labash (לָבַשׁ)</a> "to clothe"; Greek: <a href="https://www.blueletterbible.org/lexicon/g1746/kjv/" target="_blank">enduo (ἐνδύω)</a> "to put on"</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/2ch/7/16/" target="_blank">2 Chronicles 7:16</a> - Solomon's temple acceptance</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/24/49/" target="_blank">Luke 24:49</a> - Endued with power from on high</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/109/12-13" target="_blank">D&C 109:12-13</a> - Prayer for endowment fulfilled</li>
+                    </ul>
+                    
+                    <h3>Reflection Questions</h3>
+                    <ul>
+                        <li>What sacrifices are required for the Lord to accept our offerings?</li>
+                        <li>How can we avoid polluting holy places?</li>
+                        <li>What blessings have come to you through temple worship?</li>
+                    </ul>
+                    
+                    <h3>Teaching Points</h3>
+                    <ul>
+                        <li>Sacrifice brings forth blessings of heaven</li>
+                        <li>Temple blessings multiply across generations</li>
+                        <li>Worthiness maintains access to divine manifestations</li>
+                    </ul>
+                </div>
+                
+                <!-- Verse 11 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 11: Moses Restores Gathering Keys</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>11</strong> After this vision closed, the heavens were again opened unto us; and Moses appeared before us, and committed unto us the keys of the gathering of Israel from the four parts of the earth, and the leading of the ten tribes from the land of the north.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Moses, who led the original exodus, returns to authorize the final gathering</li>
+                        <li>Gathering keys enable worldwide missionary work</li>
+                        <li>The ten tribes will return as prophesied</li>
+                    </ul>
+                    
+                    <h3>Hebrew and Greek Terms</h3>
+                    <ul>
+                        <li><strong>Keys:</strong> Greek: <a href="https://www.blueletterbible.org/lexicon/g2807/kjv/" target="_blank">kleis (κλείς)</a> "authority to open and shut"</li>
+                        <li><strong>Gathering:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6908/kjv/" target="_blank">qabats (קָבַץ)</a> "to collect"; Greek: <a href="https://www.blueletterbible.org/lexicon/g4863/kjv/" target="_blank">sunago (συνάγω)</a> "to bring together"</li>
+                        <li><strong>Israel:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3478/kjv/" target="_blank">Yisra'el (יִשְׂרָאֵל)</a> "God prevails"</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/11/11-12/" target="_blank">Isaiah 11:11-12</a> - Gathering from four corners</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/7/1/" target="_blank">Revelation 7:1</a> - Four angels at four corners of the earth</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/10/34-35/" target="_blank">Acts 10:34-35</a> - Peter learns God accepts all nations</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/22/21/" target="_blank">Acts 22:21</a> - Paul's commission to the Gentiles</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/gal/3/28/" target="_blank">Galatians 3:28</a> - All are one in Christ (Jew, Greek, bond, free)</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jer/31/8/" target="_blank">Jeremiah 31:8</a> - Return from north country</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/133/26-34" target="_blank">D&C 133:26-34</a> - Highway for return of ten tribes</li>
+                    </ul>
+                    
+                    <h3>Reflection Questions</h3>
+                    <ul>
+                        <li>How does missionary work relate to the keys Moses restored?</li>
+                        <li>How does the gathering from "four parts of the earth" parallel Paul's mission to the Gentiles?</li>
+                        <li>What barriers need to be broken today, like Paul broke the Jew-Gentile barrier?</li>
+                        <li>What is my role in the gathering of Israel?</li>
+                        <li>How are the lost tribes being gathered today?</li>
+                    </ul>
+                    
+                    <h3>Teaching Points</h3>
+                    <ul>
+                        <li>Every convert is part of the gathering of Israel from the four corners</li>
+                        <li>Moses' keys parallel Paul's vision to include Gentiles - the gospel is for ALL nations</li>
+                        <li>The "four parts of the earth" represents universal inclusion, not limited geography</li>
+                        <li>Temple work gathers Israel on both sides of the veil</li>
+                        <li>Just as Paul broke barriers between Jew and Gentile, these keys break all national boundaries</li>
+                        <li>The gathering accelerates as the Second Coming approaches</li>
+                    </ul>
+                </div>
+                
+                <!-- Verse 12 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 12: Elias and the Gospel of Abraham</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>12</strong> After this, Elias appeared, and committed the dispensation of the gospel of Abraham, saying that in us and our seed all generations after us should be blessed.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>The Abrahamic covenant is renewed in this dispensation</li>
+                        <li>Eternal marriage and family are central to exaltation</li>
+                        <li>Through temple covenants, we become the seed of Abraham</li>
+                    </ul>
+                    
+                    <h3>Hebrew and Greek Terms</h3>
+                    <ul>
+                        <li><strong>Dispensation:</strong> Greek: <a href="https://www.blueletterbible.org/lexicon/g3622/kjv/" target="_blank">oikonomia (οἰκονομία)</a> "stewardship, administration"</li>
+                        <li><strong>Gospel:</strong> Greek: <a href="https://www.blueletterbible.org/lexicon/g2098/kjv/" target="_blank">euaggelion (εὐαγγέλιον)</a> "good news"</li>
+                        <li><strong>Seed:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2233/kjv/" target="_blank">zera (זֶרַע)</a> "offspring"; Greek: <a href="https://www.blueletterbible.org/lexicon/g4690/kjv/" target="_blank">sperma (σπέρμα)</a> "descendant"</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/gen/12/3/" target="_blank">Genesis 12:3</a> - Original Abrahamic covenant</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/gal/3/8-9/" target="_blank">Galatians 3:8-9</a> - Gospel preached to Abraham</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/132/29-33" target="_blank">D&C 132:29-33</a> - Abraham's exaltation through covenant</li>
+                    </ul>
+                    
+                    <h3>Reflection Questions</h3>
+                    <ul>
+                        <li>What is the "gospel of Abraham"?</li>
+                        <li>How do temple marriages relate to the Abrahamic covenant?</li>
+                        <li>In what ways can my family bless all nations?</li>
+                    </ul>
+                    
+                    <h3>Teaching Points</h3>
+                    <ul>
+                        <li>Temple marriage is essential to receiving Abraham's blessings</li>
+                        <li>Through faithfulness, we literally become Abraham's seed</li>
+                        <li>Our posterity inherits covenant blessings through our faithfulness</li>
+                    </ul>
+                </div>
+                
+                <!-- Verses 13-16 Sub-Accordion -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 13-16: Elijah Restores Sealing Keys</button>
+                <div class="sub-panel">
+                    <h3>Scripture Text</h3>
+                    <div class="scripture-quote">
+                        <p><strong>13</strong> After this vision had closed, another great and glorious vision burst upon us; for Elijah the prophet, who was taken to heaven without tasting death, stood before us, and said:</p>
+                        <p><strong>14</strong> Behold, the time has fully come, which was spoken of by the mouth of Malachi—testifying that he [Elijah] should be sent, before the great and dreadful day of the Lord come—</p>
+                        <p><strong>15</strong> To turn the hearts of the fathers to the children, and the children to the fathers, lest the whole earth be smitten with a curse—</p>
+                        <p><strong>16</strong> Therefore, the keys of this dispensation are committed into your hands; and by this ye may know that the great and dreadful day of the Lord is near, even at the doors.</p>
+                    </div>
+                    
+                    <h3>Doctrinal Summary Points</h3>
+                    <ul>
+                        <li>Elijah fulfills Malachi's ancient prophecy precisely</li>
+                        <li>Sealing power prevents the earth from being cursed/wasted</li>
+                        <li>Family history work is essential to God's plan</li>
+                        <li>These keys signal the approaching Second Coming</li>
+                    </ul>
+                    
+                    <h3>Hebrew and Greek Terms</h3>
+                    <ul>
+                        <li><strong>Turn:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h7725/kjv/" target="_blank">shub (שׁוּב)</a> "to return, restore"; Greek: <a href="https://www.blueletterbible.org/lexicon/g1994/kjv/" target="_blank">epistrepho (ἐπιστρέφω)</a> "to turn back"</li>
+                        <li><strong>Hearts:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3820/kjv/" target="_blank">leb (לֵב)</a> "inner man"; Greek: <a href="https://www.blueletterbible.org/lexicon/g2588/kjv/" target="_blank">kardia (καρδία)</a> "center of life"</li>
+                        <li><strong>Curse:</strong> Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2764/kjv/" target="_blank">cherem (חֵרֶם)</a> "devoted to destruction"; Greek: <a href="https://www.blueletterbible.org/lexicon/g331/kjv/" target="_blank">anathema (ἀνάθεμα)</a> "cursed"</li>
+                    </ul>
+                    
+                    <h3>Cross-References</h3>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mal/4/5-6/" target="_blank">Malachi 4:5-6</a> - Original prophecy fulfilled</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/2ki/2/11/" target="_blank">2 Kings 2:11</a> - Elijah's translation</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/2/1-3" target="_blank">D&C 2:1-3</a> - Moroni's earlier quote of Malachi</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/128/17-18" target="_blank">D&C 128:17-18</a> - Welding link explained</li>
+                    </ul>
+                    
+                    <h3>Reflection Questions</h3>
+                    <ul>
+                        <li>Why was Passover/Easter 1836 the appointed time for Elijah's return?</li>
+                        <li>How has my heart turned to my ancestors?</li>
+                        <li>What would happen to earth without sealing power?</li>
+                        <li>How do these keys prepare us for Christ's return?</li>
+                    </ul>
+                    
+                    <h3>Teaching Points</h3>
+                    <ul>
+                        <li>Family history work is not optional but essential</li>
+                        <li>Temple sealings create an unbroken chain through all dispensations</li>
+                        <li>The restoration of sealing keys marks the final dispensation</li>
+                        <li>Christ's Second Coming is "near, even at the doors"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Word Studies</h2>
+                
+                <div class="word-study-box">
+                    <div class="word-study-title">VEIL (verse 1)</div>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h4539/kjv/" target="_blank">macak (מָסָך)</a> - "covering, screen"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2665/kjv/" target="_blank">katapetasma (καταπέτασμα)</a> - "curtain, that which is spread out"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/velum" target="_blank">velum</a> - "sail, covering, curtain"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/veil" target="_blank">From Latin velum</a> meaning "sail, curtain, covering"</p>
+                    <p><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/veil" target="_blank">A cover; a disguise</a>; that which conceals</p>
+                    <p><strong>Temple Context:</strong> The removal of the veil represents transition from temporal to spiritual sight, echoing the temple veil that separated the Holy of Holies</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <div class="word-study-title">KEYS (verses 11, 16)</div>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h4668/kjv/" target="_blank">maphteach (מַפְתֵּחַ)</a> - "opener, key"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2807/kjv/" target="_blank">kleis (κλείς)</a> - "key, authority to open and close"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/clavis" target="_blank">clavis</a> - "key, means of access"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/key" target="_blank">From Old English cæg</a> meaning "key, solution"</p>
+                    <p><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/key" target="_blank">An instrument for opening</a>; that which serves to open or explain</p>
+                    <p><strong>Priesthood Context:</strong> Divine authorization to act in God's name, binding on earth and heaven</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <div class="word-study-title">DISPENSATION (verses 12, 16)</div>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h6486/kjv/" target="_blank">pequddah (פְּקֻדָּה)</a> - "oversight, charge"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g3622/kjv/" target="_blank">oikonomia (οἰκονομία)</a> - "administration, stewardship"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/dispensatio" target="_blank">dispensatio</a> - "management, distribution"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/dispensation" target="_blank">From Latin dispensare</a> meaning "to distribute by weight"</p>
+                    <p><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/dispensation" target="_blank">Distribution; the dealing of God</a> to his creatures</p>
+                    <p><strong>Gospel Context:</strong> A period of divine administration through authorized servants</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <div class="word-study-title">ENDOWMENT (verse 9)</div>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h3847/kjv/" target="_blank">labash (לָבַשׁ)</a> - "to put on, wear, clothe"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g1746/kjv/" target="_blank">enduo (ἐνδύω)</a> - "to sink into, put on, clothe"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/induo" target="_blank">induo</a> - "to put on, assume"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/endow" target="_blank">From Latin dotare</a> meaning "to endow, provide with a dowry"</p>
+                    <p><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/endow" target="_blank">To furnish with a portion</a>; to enrich with gifts</p>
+                    <p><strong>Temple Context:</strong> Spiritual power and knowledge given through sacred ordinances</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <div class="word-study-title">ADVOCATE (verse 4)</div>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h3887/kjv/" target="_blank">luwts (לוּץ)</a> - "mediator, interpreter"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g3875/kjv/" target="_blank">parakletos (παράκλητος)</a> - "one called alongside to help"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/advocatus" target="_blank">advocatus</a> - "one called to aid"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/advocate" target="_blank">From Latin advocare</a> meaning "to call to one's aid"</p>
+                    <p><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/advocate" target="_blank">One who pleads the cause</a> of another before a tribunal</p>
+                    <p><strong>Christ's Role:</strong> Our mediator who pleads our cause before the Father</p>
+                </div>
+                
+                <div class="word-study-box">
+                    <div class="word-study-title">FOUR PARTS/CORNERS (verse 11)</div>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h3671/kjv/" target="_blank">kanaph (כָּנָף)</a> - "extremity, edge, wing, corner"</p>
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g1137/kjv/" target="_blank">gonia (γωνία)</a> - "corner, quarter, secret place"</p>
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/quattuor" target="_blank">quattuor anguli</a> - "four corners"</p>
+                    <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/corner" target="_blank">From Latin cornu</a> meaning "horn, end, boundary"</p>
+                    <p><strong>Webster 1828:</strong> <a href="http://webstersdictionary1828.com/Dictionary/corner" target="_blank">The point where two lines meet</a>; an extremity</p>
+                    <p><strong>Gospel Context:</strong> Represents universal inclusion - all nations, kindreds, tongues, and peoples. Parallels Paul's revolutionary mission to break the Jewish-Gentile barrier and take salvation to every nation (Acts 22:21, Ephesians 3:6)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CROSS-REFERENCES -->
+        <button class="accordion-section" onclick="toggleSection(this)">CROSS-REFERENCES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Cross-References</h2>
+                
+                <h3>Old Testament References</h3>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/mal/4/5-6/" target="_blank">Malachi 4:5-6</a> - Prophecy of Elijah's return before the great day</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/2ki/2/11/" target="_blank">2 Kings 2:11</a> - Elijah taken to heaven in chariot of fire</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/gen/12/1-3/" target="_blank">Genesis 12:1-3</a> - Abrahamic covenant established</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/exo/19/9-11/" target="_blank">Exodus 19:9-11</a> - Moses and divine manifestation at Sinai</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/isa/11/11-12/" target="_blank">Isaiah 11:11-12</a> - Gathering from four corners of earth</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/isa/43/5-6/" target="_blank">Isaiah 43:5-6</a> - Gathering from east, west, north, and south</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/ezk/37/21/" target="_blank">Ezekiel 37:21</a> - Gathering Israel from among the nations</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/deu/30/3-4/" target="_blank">Deuteronomy 30:3-4</a> - Gathering from uttermost parts of heaven</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/jer/31/8-10/" target="_blank">Jeremiah 31:8-10</a> - Gathering from north country and earth's coasts</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/zec/10/8-10/" target="_blank">Zechariah 10:8-10</a> - Gathering and multiplying of Israel</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/2ch/7/1-3/" target="_blank">2 Chronicles 7:1-3</a> - Glory fills Solomon's temple</li>
+                </ul>
+                
+                <h3>New Testament References</h3>
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/mat/17/1-3/" target="_blank">Matthew 17:1-3</a> - Transfiguration with Moses and Elijah</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/rev/1/14-16/" target="_blank">Revelation 1:14-16</a> - John's vision of glorified Christ</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/mat/16/19/" target="_blank">Matthew 16:19</a> - Keys of the kingdom given to Peter</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/luk/24/49/" target="_blank">Luke 24:49</a> - Promise of endowment with power</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/1jo/2/1/" target="_blank">1 John 2:1</a> - Jesus Christ our advocate</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/gal/3/8-9/" target="_blank">Galatians 3:8-9</a> - Gospel preached to Abraham</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/heb/7/25/" target="_blank">Hebrews 7:25</a> - Christ's continual intercession</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/act/9/15/" target="_blank">Acts 9:15</a> - Paul chosen to bear Christ's name to Gentiles</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/act/26/16-18/" target="_blank">Acts 26:16-18</a> - Paul's commission to turn Gentiles from darkness to light</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/eph/3/6/" target="_blank">Ephesians 3:6</a> - Gentiles fellow heirs through the gospel</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/rom/1/16/" target="_blank">Romans 1:16</a> - Gospel to Jew first, also to Greek</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/col/3/11/" target="_blank">Colossians 3:11</a> - No Greek nor Jew, Christ is all</li>
+                </ul>
+                
+                <h3>Doctrine and Covenants References</h3>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/2" target="_blank">D&C 2</a> - Moroni quotes Malachi to Joseph Smith (1823)</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/109" target="_blank">D&C 109</a> - Kirtland Temple dedicatory prayer</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/128/17-18" target="_blank">D&C 128:17-18</a> - Welding link of dispensations</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/132/19" target="_blank">D&C 132:19</a> - Sealing power and eternal marriage</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/133/26-34" target="_blank">D&C 133:26-34</a> - Return of ten tribes</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/27/12-13" target="_blank">D&C 27:12-13</a> - Elijah to be revealed</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc/84/31-34" target="_blank">D&C 84:31-34</a> - Moses and priesthood</li>
+                </ul>
+                
+                <h3>Pearl of Great Price References</h3>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1/38-39" target="_blank">JS-H 1:38-39</a> - Moroni's visit quoting Malachi</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2/9-11" target="_blank">Abraham 2:9-11</a> - Abrahamic covenant</li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1/1-2" target="_blank">Moses 1:1-2</a> - Moses' vision of God</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Teaching Applications</h2>
+                
+                <h3>For Personal Study</h3>
+                <ul>
+                    <li>Study the roles of Moses, Elias, and Elijah in scripture to understand their missions</li>
+                    <li>Prepare spiritually before temple attendance to receive personal revelation</li>
+                    <li>Research family history to understand how sealing keys bless your family</li>
+                    <li>Ponder how priesthood keys affect your daily life and spiritual progress</li>
+                    <li>Study the timing (Easter/Passover) and its significance for the restoration</li>
+                </ul>
+                
+                <h3>For Family Home Evening</h3>
+                <div class="highlight-box">
+                    <h4>Activity Ideas:</h4>
+                    <ul>
+                        <li>Create a timeline showing the restoration of priesthood keys</li>
+                        <li>Share family history stories and discuss eternal families</li>
+                        <li>Role-play the appearances of heavenly messengers (reverently)</li>
+                        <li>Make a family tree showing how hearts turn to fathers</li>
+                    </ul>
+                </div>
+                
+                <h3>For Teaching Youth</h3>
+                <ul>
+                    <li>Use visual aids showing the Kirtland Temple and pulpit design</li>
+                    <li>Connect missionary work to Moses' keys of gathering</li>
+                    <li>Emphasize how temple and family history work prevents earth's curse</li>
+                    <li>Share appropriate temple experiences to build testimonies</li>
+                    <li>Discuss how youth can participate in gathering Israel</li>
+                </ul>
+                
+                <h3>For Sacrament Meeting</h3>
+                <div class="info-box">
+                    <h4>Talk Outline Suggestions:</h4>
+                    <ol>
+                        <li>Begin with the significance of April 3, 1836 (Easter/Passover)</li>
+                        <li>Explain the three messengers and their specific keys</li>
+                        <li>Share how these keys bless us today through temples and missionary work</li>
+                        <li>Bear testimony of living prophets who hold these keys</li>
+                        <li>Challenge congregation to participate in temple and family history work</li>
+                    </ol>
+                </div>
+                
+                <h3>For Missionary Work</h3>
+                <ul>
+                    <li>Explain how priesthood keys authorize baptism and other ordinances</li>
+                    <li>Teach about eternal families through sealing power</li>
+                    <li>Show how the restoration fulfills biblical prophecies</li>
+                    <li>Testify of continuing revelation through authorized servants</li>
+                </ul>
+                
+                <h3>Questions for Class Discussion</h3>
+                <ol>
+                    <li>Why do you think the Lord chose Easter/Passover for this vision?</li>
+                    <li>How do the keys restored by Moses affect missionary work today?</li>
+                    <li>How does the gathering from "four parts of the earth" connect to Paul's mission to include Gentiles in the gospel?</li>
+                    <li>What barriers existed between Jews and Gentiles that Paul had to overcome, and what barriers exist today?</li>
+                    <li>What is the "gospel of Abraham" and how does it relate to temple marriage?</li>
+                    <li>How does family history work "turn hearts" between generations?</li>
+                    <li>What evidence do we see that Christ's coming is "near, even at the doors"?</li>
+                    <li>How can we avoid "polluting" the temple as mentioned in verse 8?</li>
+                    <li>What sacrifices are we willing to make for temple worship?</li>
+                </ol>
+                
+                <h3>Practical Applications</h3>
+                <div class="highlight-box">
+                    <h4>This Week's Challenges:</h4>
+                    <ul>
+                        <li>Schedule temple attendance within the next month</li>
+                        <li>Add one ancestor to FamilySearch</li>
+                        <li>Share the gospel with one person (gathering of Israel)</li>
+                        <li>Write in your journal about a temple experience</li>
+                        <li>Teach family members about priesthood keys</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle('active');
+            const panel = button.nextElementSibling;
+            panel.classList.toggle('active');
+        }
+        
+        function toggleSubSection(button) {
+            button.classList.toggle('active');
+            const panel = button.nextElementSibling;
+            panel.classList.toggle('active');
+        }
+        
+        function expandAll() {
+            const sections = document.querySelectorAll('.accordion-section');
+            const panels = document.querySelectorAll('.content-panel');
+            sections.forEach(section => section.classList.add('active'));
+            panels.forEach(panel => panel.classList.add('active'));
+        }
+        
+        function collapseAll() {
+            const sections = document.querySelectorAll('.accordion-section');
+            const panels = document.querySelectorAll('.content-panel');
+            const subSections = document.querySelectorAll('.sub-accordion');
+            const subPanels = document.querySelectorAll('.sub-panel');
+            sections.forEach(section => section.classList.remove('active'));
+            panels.forEach(panel => panel.classList.remove('active'));
+            subSections.forEach(section => section.classList.remove('active'));
+            subPanels.forEach(panel => panel.classList.remove('active'));
+        }
+    </script>
+</body>
+</html>
