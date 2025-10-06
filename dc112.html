@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 112 Complete Study Guide - The Twelve and Their Keys</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Site Header */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+
+        .cfm-button:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+        }
+
+        .cfm-button.disabled:hover {
+            transform: none;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        /* Scripture Quote */
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        /* Expand/Collapse Buttons */
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Content Panels */
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        /* Sub-accordions for verses */
+        .sub-accordion {
+            background-color: #f0f4f0;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e2e8e2;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: #7c9885;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Sub-panels */
+        .sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        /* Typography within panels */
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .panel-content h3 {
+            color: #5a6d5f;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .panel-content h4 {
+            color: #4a5d4f;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .panel-content ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .panel-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .panel-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Scripture quotes */
+        .scripture-quote {
+            background: linear-gradient(135deg, #f7f9f7 0%, #f0f4f0 100%);
+            border-left: 4px solid #7c9885;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 1.05em;
+        }
+
+        /* Links */
+        .panel-content a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+
+        .panel-content a:hover {
+            color: #5a6d5f;
+            border-bottom: 1px solid #5a6d5f;
+        }
+
+        /* Special styling for word studies */
+        .word-study-term {
+            font-weight: 600;
+            color: #7c9885;
+            font-size: 1.1em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* Online Resources Detail Element */
+        details {
+            margin: 20px 0;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f9fafb;
+        }
+
+        details summary {
+            padding: 15px;
+            background: #7c9885;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        details .details-content {
+            padding: 20px;
+        }
+
+        details .details-content p {
+            margin-bottom: 10px;
+        }
+
+        /* Teaching sections */
+        .teaching-section {
+            background-color: #f7f9f7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .teaching-section h4 {
+            color: #7c9885;
+            margin-bottom: 15px;
+        }
+
+        /* Study Questions */
+        .study-question {
+            background: linear-gradient(135deg, #f7f9f7 0%, #f0f4f0 100%);
+            border-left: 3px solid #7c9885;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 30px 20px;
+            }
+
+            .header-section h1 {
+                font-size: 2em;
+            }
+
+            .panel-content {
+                padding: 20px;
+            }
+
+            .scripture-quote {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-section h1 {
+                font-size: 1.5em;
+            }
+
+            .site-title {
+                font-size: 1.5em;
+            }
+
+            .cfm-button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Site Header -->
+<div class="site-header">
+    <div class="site-header-content">
+        <div class="site-title">Come Follow Me Corner</div>
+    </div>
+</div>
+
+<!-- Top Navigation -->
+<div class="nav-bar">
+    <div class="nav-links">
+        <a href="index.html" class="nav-btn">Lesson Home</a>
+        <a href="dc111_complete.html" class="nav-btn">Previous: D&C 111</a>
+        <a href="dc113_complete.html" class="nav-btn">Next: D&C 113</a>
+    </div>
+    <div class="nav-links">
+        <a href="dc111_complete.html" class="nav-btn">D&C 111</a>
+        <a href="dc112_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 112</a>
+        <a href="dc113_complete.html" class="nav-btn">D&C 113</a>
+        <a href="dc114_complete.html" class="nav-btn">D&C 114</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <h1>Doctrine &amp; Covenants 112</h1>
+        <p class="subtitle">The Twelve and Their Keys: Authority Amidst Apostasy</p>
+        <div class="date-location">July 23, 1837 • Kirtland, Ohio</div>
+        <div class="scripture-highlight">
+            "Be thou humble; and the Lord thy God shall lead thee by the hand, and give thee answer to thy prayers."<br>
+            — Doctrine &amp; Covenants 112:10
+        </div>
+    </div>
+
+    <!-- Expand/Collapse All Buttons -->
+    <div class="button-container">
+        <button class="expand-button" onclick="expandAll()">Expand All</button>
+        <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+    </div>
+
+    <!-- SECTION OVERVIEW -->
+    <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+    <div class="content-panel">
+        <div class="panel-content">
+            <h2>Section Overview</h2>
+
+            <h3>Basic Information</h3>
+            <p><strong>Date of Revelation:</strong> July 23, 1837</p>
+            <p><strong>Location:</strong> Kirtland, Ohio</p>
+            <p><strong>Recipient:</strong> Thomas B. Marsh, President of the Quorum of the Twelve Apostles</p>
+            <p><strong>Section Summary:</strong> During a period of widespread apostasy in Kirtland, the Lord counsels Thomas B. Marsh on his responsibilities as President of the Twelve, defines the relationship between the Twelve and First Presidency, establishes missionary priorities, and warns of cleansing judgments beginning at God's house while affirming the eternal nature of priesthood keys in this final dispensation.</p>
+
+            <h3>Key Principles</h3>
+            <p><strong>Primary Doctrinal Principle:</strong> The keys of the kingdom held by the Twelve Apostles are essential for opening doors to all nations, working under the direction of the First Presidency who hold the keys of the dispensation.</p>
+            <p><strong>Secondary Principle:</strong> Humility and unity among Church leaders are essential for receiving divine power and avoiding apostasy during times of tribulation.</p>
+            <p><strong>Application Principle:</strong> Personal righteousness and submission to priesthood authority protect individuals and the Church from spiritual darkness covering the earth.</p>
+
+            <h3>Timeframe &amp; Setting</h3>
+
+            <h4>Circumstances Among Recipients</h4>
+            <p>Thomas B. Marsh, as President of the Twelve, was struggling with pride and feelings of being overlooked. Several members of the Quorum were in rebellion against Joseph Smith. The Kirtland Safety Society had failed, causing financial ruin for many. On this very day (July 23, 1837), Elders Heber C. Kimball and Orson Hyde were preaching their first sermon in England, unaware of the turmoil at home. Joseph Smith noted that "something new must be done for the salvation of His Church."</p>
+
+            <h4>Circumstances Within the Church</h4>
+            <p>The summer of 1837 marked the height of the Kirtland apostasy. Warren Parrish, John F. Boynton, Luke S. Johnson, and Lyman E. Johnson (three of them apostles) plotted to depose Joseph Smith. The Kirtland Safety Society's collapse in June devastated members financially. Approximately one-third of Church leadership apostatized or was excommunicated during this period. Even faithful members questioned Joseph's temporal leadership while maintaining spiritual testimony.</p>
+
+            <h4>Relevant Local Circumstances</h4>
+            <p>Kirtland's economy crashed following wild speculation and the Panic of 1837. Banks throughout Ohio failed, creating widespread poverty. Anti-Mormon sentiment increased as financial failures were blamed on Church leaders. Legal suits against Joseph Smith multiplied. The temple, dedicated just one year earlier, became a source of contention as creditors sought payment.</p>
+
+            <h4>Relevant Global Circumstances</h4>
+            <p>The Panic of 1837 was America's first great depression, lasting until 1843. Banks suspended specie payments nationwide. Unemployment reached unprecedented levels. International financial markets collapsed. Meanwhile, the British Mission was opening, with England experiencing the Industrial Revolution and religious awakening that would make it fertile missionary ground.</p>
+
+            <details>
+                <summary><strong>Online Resources: Kirtland Safety Society &amp; Panic of 1837</strong></summary>
+                <div class="details-content">
+                    <h4>Official Church Sources</h4>
+                    <p><strong>Church History Essay - Kirtland Safety Society</strong><br>
+                    <a href="https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng" target="_blank">https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng</a><br>
+                    <em>Official Church essay examining multiple factors including outside opposition, the timing coinciding with the Panic of 1837, and economic interdependence.</em></p>
+
+                    <p><strong>Joseph Smith Papers - Financial Panic of 1837</strong><br></p>
+                    <a href="https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-c-1-2-november-1838-31-july-1842/142" target="_blank">https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-c-1-2-november-1838-31-july-1842/142</a><br>
+                    <em>Educational module examining political differences regarding 1830s banking, President Jackson's policies, and the Kirtland Safety Society's development.</em></p>
+
+                    <h4>Academic &amp; Scholarly Sources</h4>
+                    <p><strong>BYU Religious Studies Center - Joseph Smith and the Kirtland Crisis, 1837</strong><br>
+                    <a href="https://rsc.byu.edu/joseph-smith-prophet-seer/joseph-smith-kirtland-crisis-1837" target="_blank">https://rsc.byu.edu/joseph-smith-prophet-seer/joseph-smith-kirtland-crisis-1837</a><br>
+                    <em>Analysis of the apostasy crisis, noting the absence of Joseph Smith's diary during this critical period.</em></p>
+
+                    <h4>Key Historical Facts from These Sources</h4>
+                    <ul>
+                        <li><strong>National Crisis:</strong> The Panic of 1837 caused over 40% of all banks to fail, with economic depression lasting until the mid-1840s</li>
+                        <li><strong>Timing Issues:</strong> Kirtland Safety Society troubles began January 1837, before the national panic hit in May</li>
+                        <li><strong>Legal Challenges:</strong> Joseph Smith and Sidney Rigdon were prosecuted under an 1816 Ohio law, though superseded by an 1824 statute</li>
+                        <li><strong>Organized Opposition:</strong> Grandison Newell orchestrated bank runs to drain the Society's reserves</li>
+                        <li><strong>Financial Impact:</strong> Joseph Smith incurred debts of $100,000, though he had equivalent value in illiquid assets</li>
+                        <li><strong>Apostasy Crisis:</strong> Approximately one-third of Church leadership apostatized or was excommunicated during this period</li>
+                    </ul>
+                </div>
+            </details>
+
+            <h3>Purpose of the Revelation</h3>
+
+            <h4>Short Term</h4>
+            <ul>
+                <li>Correct Thomas B. Marsh's pride and redirect his focus to missionary work</li>
+                <li>Clarify the relationship between the Twelve and First Presidency</li>
+                <li>Provide hope and direction during one of the darkest periods of Church history</li>
+                <li>Establish protocol for the Twelve's missionary assignments</li>
+                <li>Address the apostasy crisis by emphasizing humility and unity</li>
+            </ul>
+
+            <h4>Long Term</h4>
+            <ul>
+                <li>Define the eternal nature of priesthood keys in the dispensation of the fulness of times</li>
+                <li>Establish the pattern for apostolic ministry to all nations</li>
+                <li>Create the doctrinal foundation for prophetic succession</li>
+                <li>Prophesy the cleansing that would begin with the Church before going to the world</li>
+                <li>Connect this dispensation with all previous dispensations through priesthood keys</li>
+            </ul>
+
+            <h3>Significance</h3>
+
+            <h4>Short Term</h4>
+            <p>This revelation prevented Thomas B. Marsh from moving to Kirtland from Missouri, keeping him where the Church would soon relocate. It strengthened the faithful during the apostasy crisis by clarifying priesthood order. The promise that doors would open for missionary work was immediately fulfilled in England. The warning about cleansing beginning at God's house prepared Saints for the coming expulsion from Kirtland.</p>
+
+            <h4>Long Term</h4>
+            <p>D&C 112 became foundational for understanding apostolic authority and succession. The principle that priesthood keys would remain until Christ comes provided stability through future succession crises. The revelation's missionary emphasis launched the British Mission, which saved the Church numerically and spiritually. The pattern of the Twelve opening doors to nations continues today. The warning about judgment beginning at God's house has been cited during every major Church crisis since.</p>
+
+            <h3>Cultural Insights</h3>
+
+            <h4>Ancient Patterns</h4>
+            <p>The imagery of "gird up thy loins" (verses 7, 14) recalls ancient preparation for battle or journey. The concept of keys echoes <a href="https://www.blueletterbible.org/kjv/isa/22/22/" target="_blank">Isaiah 22:22</a> and <a href="https://www.blueletterbible.org/kjv/mat/16/19/" target="_blank">Matthew 16:19</a>, connecting modern apostles to ancient patterns. The warning voice "morning by morning" (verse 5) parallels Old Testament watchmen on towers. The pattern of cleansing beginning at the sanctuary reflects <a href="https://www.blueletterbible.org/kjv/eze/9/6/" target="_blank">Ezekiel 9:6</a>. The Twelve's role mirrors Christ's original apostles being sent to all nations.</p>
+
+            <h4>Modern Relevance</h4>
+            <p>In an era of global missionary work, this revelation's promise that doors would open in every nation where apostles send missionaries remains actively fulfilled. The principle of judgment beginning at God's house speaks to contemporary calls for institutional accountability. The warning about darkness covering the earth resonates with information age confusion. The emphasis on unity between the Twelve and First Presidency provides stability in corporate Church governance. The promise that keys will never be taken provides confidence during leadership transitions.</p>
+
+            <h3>Modern Application</h3>
+
+            <h4>Personal Application</h4>
+            <ul>
+                <li>Seek humility when given leadership responsibilities</li>
+                <li>Support priesthood leaders even during difficult times</li>
+                <li>Prepare for personal cleansing before judging others</li>
+                <li>Raise a warning voice appropriately in your sphere</li>
+                <li>Trust that the Lord leads His servants by the hand</li>
+            </ul>
+
+            <h4>Family Application</h4>
+            <ul>
+                <li>Teach children about priesthood keys and authority</li>
+                <li>Demonstrate unity even when facing challenges</li>
+                <li>Share testimonies of living apostles and prophets</li>
+                <li>Prepare family for trials through spiritual foundation</li>
+                <li>Create home environment supporting missionary work</li>
+            </ul>
+
+            <h4>Church Application</h4>
+            <ul>
+                <li>Sustain the First Presidency and Twelve as key holders</li>
+                <li>Participate enthusiastically in missionary work</li>
+                <li>Avoid criticism during times of institutional challenge</li>
+                <li>Support leaders called to difficult assignments</li>
+                <li>Recognize apostles' role in opening nations</li>
+            </ul>
+
+            <h4>Community Application</h4>
+            <ul>
+                <li>Be a warning voice against moral darkness</li>
+                <li>Support global humanitarian efforts led by Church</li>
+                <li>Build bridges for missionary work in communities</li>
+                <li>Demonstrate unity amidst religious differences</li>
+                <li>Share light in a world covered with darkness</li>
+            </ul>
+
+            <h3>Key Doctrines</h3>
+
+            <h4>New Doctrines Introduced</h4>
+            <ul>
+                <li>The Twelve hold keys to open doors in all nations</li>
+                <li>Priesthood keys in this dispensation will never be taken until Christ comes</li>
+                <li>Judgment will begin at God's house before going to the world</li>
+                <li>The dispensation of the fulness of times connects all previous dispensations</li>
+                <li>Specific authority structure between First Presidency and Twelve</li>
+            </ul>
+
+            <h4>Previous Doctrines Clarified</h4>
+            <ul>
+                <li>The role of the Twelve as special witnesses (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18" target="_blank">D&C 18</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27" target="_blank">D&C 27</a>)</li>
+                <li>The nature of priesthood keys (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/65" target="_blank">D&C 65</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/81" target="_blank">D&C 81</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/90" target="_blank">D&C 90</a>)</li>
+                <li>The gathering of Israel through missionary work (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/29" target="_blank">D&C 29</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45" target="_blank">D&C 45</a>)</li>
+                <li>The reality of apostasy among leaders (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/50" target="_blank">D&C 50</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64" target="_blank">D&C 64</a>)</li>
+                <li>The pattern of revelation through proper channels (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/28" target="_blank">D&C 28</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/43" target="_blank">D&C 43</a>)</li>
+            </ul>
+
+            <h4>Covenant Principles Explained</h4>
+            <ul>
+                <li>Those who receive the Lord's servants receive Him</li>
+                <li>Humility brings exaltation in the Lord's kingdom</li>
+                <li>Priesthood keys operate through unity and delegation</li>
+                <li>Covenant people face cleansing judgments first</li>
+                <li>The Lord leads humble servants by the hand</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- HISTORICAL CONTEXT -->
+    <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+    <div class="content-panel">
+        <div class="panel-content">
+            <h2>Historical Context</h2>
+
+            <h3>The Kirtland Apostasy Crisis of 1837</h3>
+            <p>The summer of 1837 marked one of the darkest periods in early Church history. The Kirtland Safety Society, a financial institution established by Church leaders, had failed spectacularly in June, leaving many Saints financially ruined. The national Panic of 1837, America's first great depression, had devastated the economy, with over 40% of banks failing nationwide. In this atmosphere of financial catastrophe and spiritual crisis, approximately one-third of Church leadership apostatized or was excommunicated.</p>
+
+            <h3>Thomas B. Marsh and the Twelve</h3>
+            <p>Thomas B. Marsh, serving as President of the Quorum of the Twelve Apostles, was struggling with his own pride and feelings of being overlooked by Joseph Smith. Several members of the Twelve were in open rebellion, including John F. Boynton, Luke S. Johnson, and Lyman E. Johnson. Warren Parrish, Joseph Smith's former scribe, led a faction plotting to depose the Prophet and take control of the Church.</p>
+
+            <h3>The British Mission Opens</h3>
+            <p>Remarkably, on the very day this revelation was received (July 23, 1837), Elders Heber C. Kimball and Orson Hyde were preaching their first sermon in England, in the Vauxhall Chapel in Preston. They were unaware of the turmoil back in Kirtland. This mission would prove to be the Church's salvation, bringing thousands of converts who would strengthen the Church numerically and spiritually during its most challenging period.</p>
+
+            <h3>Joseph Smith's Leadership Under Fire</h3>
+            <p>Joseph Smith faced unprecedented criticism and legal challenges. Multiple lawsuits were filed against him regarding the Safety Society's failure. Even faithful members questioned his temporal leadership while maintaining testimony of his prophetic calling. Joseph noted in his journal that "something new must be done for the salvation of His Church." This revelation represented that "something new" - a clarification of priesthood authority and a redirection toward missionary work.</p>
+
+            <h3>The Temple Becomes a Battleground</h3>
+            <p>The Kirtland Temple, dedicated just one year earlier with remarkable spiritual manifestations, became a source of contention. Creditors sought to seize it for debts. Apostate groups attempted to take control of the building. Some dissenters even held their own meetings in the temple, claiming they were the true Church. The sacred edifice that had united the Saints now witnessed their division.</p>
+
+            <h3>Economic and Social Context</h3>
+            <p>The Panic of 1837 created a perfect storm for apostasy. Banks suspended specie payments, meaning paper money became nearly worthless. Unemployment reached unprecedented levels. The Saints, many of whom had invested everything in the Safety Society and Church ventures, faced poverty and desperation. This economic pressure tested faith like never before, revealing who would remain loyal despite temporal setbacks.</p>
+
+            <h3>Significance of the Date</h3>
+            <p>July 23, 1837, represents a pivotal moment when the Lord intervened to preserve His Church. While apostasy raged in Kirtland and the British Mission opened in Preston, heaven spoke to clarify priesthood order, promise missionary success, and warn of coming judgments. The revelation's timing demonstrates divine awareness of both the immediate crisis and future opportunities.</p>
+        </div>
+    </div>
+
+    <!-- VERSE-BY-VERSE STUDY -->
+    <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE STUDY</button>
+    <div class="content-panel">
+        <div class="panel-content">
+            <h2>Verse-by-Verse Study Guide</h2>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 1: Called to Bear Testimony to All Nations</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:1</strong> — "Verily thus saith the Lord unto you my servant Thomas: I have heard thy prayers; and thine alms have come up as a memorial before me, in behalf of those, thy brethren, who were chosen to bear testimony of my name and to send it abroad among all nations, kindreds, tongues, and people, and ordained through the instrumentality of my servants."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord acknowledges Thomas B. Marsh's prayers and charitable acts ("alms") as a "memorial before me," echoing Cornelius's experience in Acts 10:4. The Twelve are identified as those "chosen to bear testimony"—not just to teach but to be special witnesses of Christ's name to every nation, kindred, tongue, and people, fulfilling the pattern established in Revelation 14:6.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p>The phrase <strong>"memorial before me"</strong> uses the Hebrew concept of <strong><a href="https://www.blueletterbible.org/lexicon/h2146/kjv/wlc/0-1/" target="_blank">zikkaron</a></strong> (זִכָּרוֹן), meaning "memorial, remembrance." In ancient Israel, memorials brought someone to God's attention for favor. The Greek equivalent <strong><a href="https://www.blueletterbible.org/lexicon/g3422/kjv/tr/0-1/" target="_blank">mnēmosynon</a></strong> (μνημόσυνον) appears in Acts 10:4 describing Cornelius's prayers.</p>
+
+                    <p>The phrase <strong>"chosen to bear testimony"</strong> combines two powerful concepts. <strong>"Chosen"</strong> comes from the Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h977/kjv/wlc/0-1/" target="_blank">bachar</a></strong> (בָּחַר), meaning "to choose, select with purpose," and the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g1588/kjv/tr/0-1/" target="_blank">eklektos</a></strong> (ἐκλεκτός), literally "called out." To <strong>"bear testimony"</strong> uses the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g3140/kjv/tr/0-1/" target="_blank">martyreo</a></strong> (μαρτυρέω), from which we get "martyr"—one who witnesses even unto death.</p>
+
+                    <p>The four-fold designation <strong>"nations, kindreds, tongues, and people"</strong> appears in Revelation and encompasses all humanity. The Hebrew terms are <strong>goy</strong> (גּוֹי), <strong>mishpachah</strong> (מִשְׁפָּחָה), <strong>lashon</strong> (לָשׁוֹן), and <strong>'am</strong> (עַם), representing political entities, family groups, linguistic communities, and cultural identities respectively.</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/10/4/" target="_blank">Acts 10:4</a> — Cornelius's prayers and alms as memorial</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/14/6-7/" target="_blank">Revelation 14:6-7</a> — Gospel to every nation, kindred, tongue, and people</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?id=4-5" target="_blank">D&C 1:4-5</a> — Warning voice to all people</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?id=28" target="_blank">D&C 18:28</a> — The Twelve called to bear testimony</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?id=62" target="_blank">D&C 84:62</a> — Testimony to be borne in all the world</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How do prayers and acts of service create a "memorial before God"?</li>
+                        <li>What does it mean to be "chosen to bear testimony" in your current circumstances?</li>
+                        <li>How does understanding the global scope ("all nations, kindreds, tongues, and people") affect your view of missionary work?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 2-3: Correction and Forgiveness Through Humility</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:2</strong> — "Verily I say unto you, there have been some few things in thine heart and with thee with which I, the Lord, was not well pleased."</p>
+                        <p><strong>D&C 112:3</strong> — "Nevertheless, inasmuch as thou hast abased thyself thou shalt be exalted; therefore, all thy sins are forgiven thee."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord gently corrects Thomas B. Marsh, acknowledging "some few things" that displeased Him—likely pride and feelings of being overlooked. Yet immediately follows the divine pattern: humility ("abased thyself") leads to exaltation and complete forgiveness. This demonstrates the Lord's mercy toward leaders who recognize their weaknesses and humble themselves.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p>The word <strong>"abased"</strong> comes from the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g5013/kjv/tr/0-1/" target="_blank">tapeinoo</a></strong> (ταπεινόω), meaning "to make low, humble, bring down." The Hebrew equivalent <strong><a href="https://www.blueletterbible.org/lexicon/h8217/kjv/wlc/0-1/" target="_blank">shaphel</a></strong> (שָׁפֵל) carries the sense of being brought low in station or pride. This isn't mere embarrassment but conscious self-humbling before God.</p>
+
+                    <p><strong>"Exalted"</strong> translates the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g5312/kjv/tr/0-1/" target="_blank">hupsoo</a></strong> (ὑψόω) and Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h7311/kjv/wlc/0-1/" target="_blank">rum</a></strong> (רוּם), both meaning "to lift up, raise high." This divine reversal—the humble lifted and proud brought low—appears throughout scripture as God's consistent pattern.</p>
+
+                    <p>The conditional <strong>"inasmuch"</strong> makes the promise proportional: to the degree one humbles himself, to that degree he will be exalted.</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/14/11/" target="_blank">Luke 14:11</a> — "He that humbleth himself shall be exalted"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jam/4/10/" target="_blank">James 4:10</a> — "Humble yourselves in the sight of the Lord, and he shall lift you up"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/23/12/" target="_blank">Matthew 23:12</a> — "Whosoever shall exalt himself shall be abased"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?id=3" target="_blank">3 Nephi 12:3</a> — "Blessed are the poor in spirit"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?id=42" target="_blank">D&C 101:42</a> — "He that exalteth himself shall be abased"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What is the relationship between self-abasement and divine exaltation?</li>
+                        <li>How does humility lead to forgiveness of sins?</li>
+                        <li>What "few things" might the Lord not be pleased with in your heart?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 4-5: Global Commission and Daily Warning</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:4</strong> — "Let thy heart be of good cheer before my face; and thou shalt bear record of my name, not only unto the Gentiles, but also unto the Jews; and thou shalt send forth my word unto the ends of the earth."</p>
+                        <p><strong>D&C 112:5</strong> — "Contend thou, therefore, morning by morning; and day after day let thy warning voice go forth; and when the night cometh let not the inhabitants of the earth slumber, because of thy speech."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>After correction comes commission. The Lord commands Thomas to be "of good cheer" and defines his apostolic mission: bearing record to both Gentiles and Jews, reaching "the ends of the earth." The intensity required—"morning by morning" and "day after day"—emphasizes continuous, persistent ministry. The warning voice must be so consistent that it prevents spiritual slumber.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Bear record"</strong> uses the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g3140/kjv/tr/0-1/" target="_blank">martyreo</a></strong> (μαρτυρέω), meaning to witness or testify. The Hebrew equivalent <strong><a href="https://www.blueletterbible.org/lexicon/h5749/kjv/wlc/0-1/" target="_blank">'ud</a></strong> (עוּד) means "to bear witness, testify, admonish."</p>
+
+                    <p>The distinction between <strong>"Gentiles"</strong> (Greek: <strong><a href="https://www.blueletterbible.org/lexicon/g1484/kjv/tr/0-1/" target="_blank">ethnos</a></strong> ἔθνος) and <strong>"Jews"</strong> (Greek: <strong><a href="https://www.blueletterbible.org/lexicon/g2453/kjv/tr/0-1/" target="_blank">Ioudaios</a></strong> Ἰουδαῖος) encompasses all humanity. In the last days, the pattern reverses from New Testament times—Gentiles receive the gospel first, then it returns to the Jews.</p>
+
+                    <p><strong>"Contend"</strong> translates the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g75/kjv/tr/0-1/" target="_blank">agonizomai</a></strong> (ἀγωνίζομαι), meaning "to struggle, fight, labor fervently." This isn't casual effort but intense spiritual wrestling.</p>
+
+                    <p>The phrase <strong>"morning by morning"</strong> (Hebrew: <strong>boqer boqer</strong> בֹּקֶר בֹּקֶר) indicates daily consistency, echoing Isaiah's prophetic pattern. The <strong>"warning voice"</strong> uses the Hebrew concept of <strong><a href="https://www.blueletterbible.org/lexicon/h2094/kjv/wlc/0-1/" target="_blank">zahar</a></strong> (זָהַר), meaning "to warn, admonish, shine."</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/1/8/" target="_blank">Acts 1:8</a> — "Witnesses unto the uttermost part of the earth"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/1/16/" target="_blank">Romans 1:16</a> — "To the Jew first, and also to the Greek"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/58/1/" target="_blank">Isaiah 58:1</a> — "Cry aloud, spare not, lift up thy voice"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/eze/3/17-19/" target="_blank">Ezekiel 3:17-19</a> — Watchman to warn the people</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/2ti/4/2/" target="_blank">2 Timothy 4:2</a> — "Be instant in season, out of season"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What does it mean to "contend" for the gospel "morning by morning"?</li>
+                        <li>How can our speech prevent spiritual slumber in others?</li>
+                        <li>Why must the gospel go to "Gentiles" and "also unto the Jews"?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 6-7: Stability and Preparation for the Work</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:6</strong> — "Let thy habitation be known in Zion, and remove not thy house; for I, the Lord, have a great work for thee to do, in publishing my name among the children of men."</p>
+                        <p><strong>D&C 112:7</strong> — "Therefore, gird up thy loins for the work. Let thy feet be shod also, for thou art chosen, and thy path lieth among the mountains, and among many nations."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord commands Thomas to maintain stability ("remove not thy house") while preparing for extensive travel. The paradox—stay put but prepare for journeys—teaches that spiritual stability enables global ministry. The imagery of girded loins and shod feet evokes ancient preparation for battle or journey, while "mountains" and "nations" define the geographic and cultural scope of apostolic work.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Gird up thy loins"</strong> reflects ancient Middle Eastern practice of tucking long robes into a belt for action. The Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h2296/kjv/wlc/0-1/" target="_blank">chagar</a></strong> (חָגַר) means "to gird, bind around." The Greek <strong><a href="https://www.blueletterbible.org/lexicon/g4024/kjv/tr/0-1/" target="_blank">perizonnumi</a></strong> (περιζώννυμι) carries the same meaning. This represents spiritual readiness for divine service.</p>
+
+                    <p><strong>"Feet be shod"</strong> uses the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g5265/kjv/tr/0-1/" target="_blank">hupodeo</a></strong> (ὑποδέω), "to bind under, put on shoes." The Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h5275/kjv/wlc/0-1/" target="_blank">na'al</a></strong> (נַעַל) refers to sandals. Ephesians 6:15 connects shod feet to "the preparation of the gospel of peace."</p>
+
+                    <p><strong>"Publishing"</strong> comes from the Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h1319/kjv/wlc/0-1/" target="_blank">basar</a></strong> (בָּשַׂר), meaning "to bear news, announce, preach." Isaiah 52:7 uses this term: "How beautiful upon the mountains are the feet of him that bringeth good tidings."</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/eph/6/14-15/" target="_blank">Ephesians 6:14-15</a> — "Having your loins girt... feet shod with preparation of gospel"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1pe/1/13/" target="_blank">1 Peter 1:13</a> — "Gird up the loins of your mind"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/52/7/" target="_blank">Isaiah 52:7</a> — "Beautiful upon the mountains are the feet"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?id=114" target="_blank">D&C 84:114</a> — "Establish house, remove not"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/10/1/" target="_blank">Luke 10:1</a> — Sent to every city and place</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>Why does the Lord command stability ("remove not thy house") before global ministry?</li>
+                        <li>What does it mean to "gird up thy loins" spiritually today?</li>
+                        <li>How do we prepare our "feet" for gospel service?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 8-9: Authority to Humble and Exalt</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:8</strong> — "And by thy word many high ones shall be brought low, and by thy word many low ones shall be exalted."</p>
+                        <p><strong>D&C 112:9</strong> — "Thy voice shall be a rebuke unto the transgressor; and at thy rebuke let the tongue of the slanderer cease its perverseness."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>The apostolic word carries power to reverse earthly status—humbling the proud and exalting the humble. This echoes Mary's Magnificat and demonstrates how gospel preaching overturns worldly hierarchies. The apostolic voice also carries authority to rebuke sin and silence slander, demonstrating the binding and loosing power given to the Twelve.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p>The reversal of <strong>"high ones"</strong> and <strong>"low ones"</strong> uses the Hebrew concepts of <strong>rum</strong> (רוּם) - "high, exalted" and <strong>shaphel</strong> (שָׁפֵל) - "low, humble." The Greek equivalents <strong>hupsoo</strong> (ὑψόω) and <strong>tapeinoo</strong> (ταπεινόω) appear throughout the New Testament describing God's reversal of human status.</p>
+
+                    <p><strong>"Rebuke"</strong> translates the Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h3198/kjv/wlc/0-1/" target="_blank">yakach</a></strong> (יָכַח), meaning "to reprove, correct, argue." The Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2008/kjv/tr/0-1/" target="_blank">epitimao</a></strong> (ἐπιτιμάω) means "to charge, rebuke with authority."</p>
+
+                    <p><strong>"Transgressor"</strong> comes from Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h6586/kjv/wlc/0-1/" target="_blank">pasha</a></strong> (פָּשַׁע), "to rebel, revolt," and Greek <strong><a href="https://www.blueletterbible.org/lexicon/g3848/kjv/tr/0-1/" target="_blank">parabates</a></strong> (παραβάτης), "one who oversteps boundaries."</p>
+
+                    <p><strong>"Slanderer"</strong> translates the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g1228/kjv/tr/0-1/" target="_blank">diabolos</a></strong> (διάβολος), literally "one who throws across," hence false accuser—the same word used for the devil.</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/1/52/" target="_blank">Luke 1:52</a> — "He hath put down the mighty from their seats, and exalted them of low degree"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/2/12/" target="_blank">Isaiah 2:12</a> — "The day of the LORD upon every one that is proud"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/2ti/4/2/" target="_blank">2 Timothy 4:2</a> — "Reprove, rebuke, exhort"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/tit/1/13/" target="_blank">Titus 1:13</a> — "Rebuke them sharply"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?id=43" target="_blank">D&C 121:43</a> — "Reproving betimes with sharpness"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How does the gospel message humble the proud and lift the humble?</li>
+                        <li>When is rebuke appropriate, and how should it be given?</li>
+                        <li>What responsibility comes with having words that can affect others so powerfully?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 10: The Promise of Divine Guidance</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:10</strong> — "Be thou humble; and the Lord thy God shall lead thee by the hand, and give thee answer to thy prayers."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>This verse presents one of scripture's most intimate promises: personal divine guidance visualized as the Lord leading by the hand. The condition is singular—humility. This promise became a scripture mastery verse because it encapsulates the relationship between humility and revelation. The imagery suggests both protection and direction, like a parent with a child.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Humble"</strong> translates the Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h3665/kjv/wlc/0-1/" target="_blank">kana'</a></strong> (כָּנַע), meaning "to be subdued, brought low," and Greek <strong><a href="https://www.blueletterbible.org/lexicon/g5013/kjv/tr/0-1/" target="_blank">tapeinoo</a></strong> (ταπεινόω). True humility isn't self-deprecation but accurate self-assessment before God.</p>
+
+                    <p><strong>"Lead thee by the hand"</strong> combines the Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h5148/kjv/wlc/0-1/" target="_blank">nachah</a></strong> (נָחָה), "to lead, guide," with <strong><a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/" target="_blank">yad</a></strong> (יָד), "hand." The Greek <strong><a href="https://www.blueletterbible.org/lexicon/g3594/kjv/tr/0-1/" target="_blank">hodegeo</a></strong> (ὁδηγέω) means "to lead on a way." This intimate guidance appears in Isaiah 42:6: "I the LORD... will hold thine hand."</p>
+
+                    <p>The promise of <strong>"answer to thy prayers"</strong> assures that humility opens communication channels with heaven, making prayers effective.</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/42/6/" target="_blank">Isaiah 42:6</a> — "I will hold thine hand, and will keep thee"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/psa/32/8/" target="_blank">Psalm 32:8</a> — "I will instruct thee and teach thee in the way"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?id=63" target="_blank">D&C 88:63</a> — "Draw near unto me and I will draw near unto you"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?id=37" target="_blank">Alma 37:37</a> — "Counsel with the Lord in all thy doings"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jam/4/10/" target="_blank">James 4:10</a> — "Humble yourselves... and he shall lift you up"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What is the connection between humility and receiving divine guidance?</li>
+                        <li>What does it mean for the Lord to "lead thee by the hand"?</li>
+                        <li>How does humility affect our ability to receive answers to prayers?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 11-13: Love Without Partiality and Healing After Tribulation</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:11</strong> — "I know thy heart, and have heard thy prayers concerning thy brethren. Be not partial towards them in love above many others, but let thy love be for them as for thyself; and let thy love abound unto all men, and unto all who love my name."</p>
+                        <p><strong>D&C 112:12</strong> — "And pray for thy brethren of the Twelve. Admonish them sharply for my name's sake, and let them be admonished for all their sins, and be ye faithful before me unto my name."</p>
+                        <p><strong>D&C 112:13</strong> — "And after their temptations, and much tribulation, behold, I, the Lord, will feel after them, and if they harden not their hearts, and stiffen not their necks against me, they shall be converted, and I will heal them."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord reveals His omniscience ("I know thy heart") and corrects Thomas's tendency toward favoritism. Love must "abound"—overflow boundaries—reaching all people, not just close associates. The paradox of loving while admonishing sharply demonstrates that correction and affection coexist. After trials, the Lord promises to "feel after" the wayward apostles with compassion, leading to conversion and healing if they remain soft-hearted.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Partial"</strong> comes from the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g4382/kjv/tr/0-1/" target="_blank">prosopolepsia</a></strong> (προσωπολήψια), meaning "respect of persons, favoritism." James 2:1 warns against this in the Church.</p>
+
+                    <p><strong>"Love abound"</strong> uses the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g26/kjv/tr/0-1/" target="_blank">agape</a></strong> (ἀγάπη) for divine love, combined with <strong><a href="https://www.blueletterbible.org/lexicon/g4052/kjv/tr/0-1/" target="_blank">perisseuo</a></strong> (περισσεύω), "to overflow, exceed." This isn't measured love but overflowing abundance.</p>
+
+                    <p><strong>"Feel after them"</strong> translates the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g5584/kjv/tr/0-1/" target="_blank">pselaphao</a></strong> (ψηλαφάω), meaning "to touch, handle, grope after." Acts 17:27 uses this word describing humanity seeking God. Here, remarkably, God seeks after His wayward servants.</p>
+
+                    <p><strong>"Harden hearts"</strong> uses Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h7185/kjv/wlc/0-1/" target="_blank">qashah</a></strong> (קָשָׁה) and Greek <strong><a href="https://www.blueletterbible.org/lexicon/g4645/kjv/tr/0-1/" target="_blank">skleruno</a></strong> (σκληρύνω). <strong>"Stiffen necks"</strong> employs the vivid Hebrew idiom <strong><a href="https://www.blueletterbible.org/lexicon/h6203/kjv/wlc/0-1/" target="_blank">'oreph</a></strong> (עֹרֶף), "back of neck," describing stubborn resistance like an ox refusing the yoke.</p>
+
+                    <p><strong>"Converted"</strong> translates Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h7725/kjv/wlc/0-1/" target="_blank">shub</a></strong> (שׁוּב) and Greek <strong><a href="https://www.blueletterbible.org/lexicon/g1994/kjv/tr/0-1/" target="_blank">epistrepho</a></strong> (ἐπιστρέφω), both meaning "to turn, return." <strong>"Heal"</strong> uses Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h7495/kjv/wlc/0-1/" target="_blank">rapha</a></strong> (רָפָא) and Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2390/kjv/tr/0-1/" target="_blank">iaomai</a></strong> (ἰάομαι), "to cure, restore to wholeness."</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/1sa/16/7/" target="_blank">1 Samuel 16:7</a> — "The LORD looketh on the heart"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jam/2/1-9/" target="_blank">James 2:1-9</a> — "Have not the faith with respect of persons"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1th/3/12/" target="_blank">1 Thessalonians 3:12</a> — "The Lord make you to increase and abound in love"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/17/27/" target="_blank">Acts 17:27</a> — "That they should seek the Lord, if haply they might feel after him"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/heb/3/8/" target="_blank">Hebrews 3:8</a> — "Harden not your hearts"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/9?id=13" target="_blank">3 Nephi 9:13</a> — "Will ye return unto me... that I may heal you?"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How do we avoid being "partial" in our love while still having close relationships?</li>
+                        <li>What does it mean that the Lord will "feel after" His wayward servants?</li>
+                        <li>How do trials either harden or soften hearts?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 14-15: Taking Up the Cross and Keys Never Removed</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:14</strong> — "Now, I say unto you, and what I say unto you, I say unto all the Twelve: Arise and gird up your loins, take up your cross, follow me, and feed my sheep."</p>
+                        <p><strong>D&C 112:15</strong> — "Exalt not yourselves; rebel not against my servant Joseph; for verily I say unto you, I am with him, and my hand shall be over him; and the keys which I have given unto him, and also to youward, shall not be taken from him till I come."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord addresses all Twelve Apostles with four imperatives: prepare for action ("gird up your loins"), accept sacrifice ("take up your cross"), maintain discipleship ("follow me"), and nurture the Church ("feed my sheep"). The warning against pride and rebellion comes during the 1837 apostasy crisis when several apostles opposed Joseph Smith. The promise that keys "shall not be taken from him till I come" provides crucial doctrine about prophetic authority and succession.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Take up your cross"</strong> uses the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g142/kjv/tr/0-1/" target="_blank">airo</a></strong> (αἴρω), "to lift, carry," with <strong><a href="https://www.blueletterbible.org/lexicon/g4716/kjv/tr/0-1/" target="_blank">stauros</a></strong> (σταυρός), "cross, execution stake." This meant accepting potential martyrdom—several of the Twelve would literally die for their testimonies.</p>
+
+                    <p><strong>"Feed my sheep"</strong> echoes Christ's thrice-repeated charge to Peter (John 21:15-17). The Greek <strong><a href="https://www.blueletterbible.org/lexicon/g1006/kjv/tr/0-1/" target="_blank">bosko</a></strong> (βόσκω) means "to feed, pasture," while <strong><a href="https://www.blueletterbible.org/lexicon/g4263/kjv/tr/0-1/" target="_blank">probaton</a></strong> (πρόβατον) refers to sheep. Apostles are shepherds of Christ's flock.</p>
+
+                    <p><strong>"Keys"</strong> translates the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2807/kjv/tr/0-1/" target="_blank">kleis</a></strong> (κλείς), from <strong>kleio</strong> (κλείω), "to shut, lock." These priesthood keys represent divine authority to direct God's work on earth. The promise they won't be taken "till I come" ensures continuous priesthood authority until the Second Coming.</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/9/23/" target="_blank">Luke 9:23</a> — "Take up his cross daily, and follow me"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jhn/21/15-17/" target="_blank">John 21:15-17</a> — "Feed my lambs... Feed my sheep"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/16/24/" target="_blank">Matthew 16:24</a> — "Let him deny himself, and take up his cross"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?id=9" target="_blank">D&C 122:9</a> — "Hold on thy way... thy God shall stand by thee"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/90?id=3" target="_blank">D&C 90:3</a> — "Keys of the kingdom... shall never be taken from thee"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What does it mean to "take up your cross" in modern discipleship?</li>
+                        <li>How do we "feed" Christ's sheep today?</li>
+                        <li>Why was it important to affirm that Joseph's keys wouldn't be taken during the apostasy crisis?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 16-21: Keys to Open Doors to All Nations</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:16</strong> — "Verily I say unto you, my servant Thomas, thou art the man whom I have chosen to hold the keys of my kingdom, as pertaining to the Twelve, abroad among all nations—"</p>
+                        <p><strong>D&C 112:17</strong> — "That thou mayest be my servant to unlock the door of the kingdom in all places where my servant Joseph, and my servant Sidney, and my servant Hyrum, cannot come;"</p>
+                        <p><strong>D&C 112:18</strong> — "For on them have I laid the burden of all the churches for a little season."</p>
+                        <p><strong>D&C 112:19</strong> — "Wherefore, whithersoever they shall send you, go ye, and I will be with you; and in whatsoever place ye shall proclaim my name an effectual door shall be opened unto you, that they may receive my word."</p>
+                        <p><strong>D&C 112:20</strong> — "Whosoever receiveth my word receiveth me, and whosoever receiveth me, receiveth those, the First Presidency, whom I have sent, whom I have made counselors for my name's sake unto you."</p>
+                        <p><strong>D&C 112:21</strong> — "And again, I say unto you, that whosoever ye shall send in my name, by the voice of your brethren, the Twelve, duly recommended and authorized by you, shall have power to open the door of my kingdom unto any nation whithersoever ye shall send them—"</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>Thomas B. Marsh receives specific keys as President of the Twelve to direct missionary work globally. The Twelve's keys complement the First Presidency's, enabling work where the Presidency cannot physically go. The promise of "effectual doors" opening wherever they proclaim Christ's name would be immediately fulfilled in the British Mission. The chain of divine reception—word→Christ→First Presidency—establishes priesthood authority structure. Missionaries sent by unanimous voice of the Twelve carry power to open nations.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Unlock the door"</strong> combines the concept of <strong>keys</strong> (Greek: <strong>kleis</strong> κλείς) with <strong>doors</strong> (Greek: <strong><a href="https://www.blueletterbible.org/lexicon/g2374/kjv/tr/0-1/" target="_blank">thura</a></strong> θύρα). The metaphor appears throughout Paul's epistles describing missionary opportunities.</p>
+
+                    <p>An <strong>"effectual door"</strong> uses the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g1756/kjv/tr/0-1/" target="_blank">energes</a></strong> (ἐνεργής), meaning "active, powerful, effective." Not just an open door but one producing results. 1 Corinthians 16:9 uses identical language: "a great door and effectual is opened unto me."</p>
+
+                    <p><strong>"Receiveth"</strong> translates the Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2983/kjv/tr/0-1/" target="_blank">lambano</a></strong> (λαμβάνω), meaning "to take, receive, accept." The chain of reception echoes Jesus' words: "He that receiveth you receiveth me" (Matthew 10:40).</p>
+
+                    <p><strong>"Duly recommended and authorized"</strong> emphasizes proper priesthood procedure. The Greek <strong><a href="https://www.blueletterbible.org/lexicon/g1381/kjv/tr/0-1/" target="_blank">dokimazo</a></strong> (δοκιμάζω) means "to test, approve after examination."</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/1co/16/9/" target="_blank">1 Corinthians 16:9</a> — "A great door and effectual is opened unto me"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/col/4/3/" target="_blank">Colossians 4:3</a> — "That God would open unto us a door of utterance"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/40/" target="_blank">Matthew 10:40</a> — "He that receiveth you receiveth me"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?id=35" target="_blank">D&C 107:35</a> — "The Twelve... to open the door by the proclamation of the gospel"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?id=36-37" target="_blank">D&C 84:36-37</a> — "He that receiveth my servants receiveth me"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What "effectual doors" has the Lord opened in modern missionary work?</li>
+                        <li>How does the chain of divine reception strengthen testimony of priesthood authority?</li>
+                        <li>What doors need "unlocking" for the kingdom today?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 22-24: Darkness Covering the Earth and Coming Vengeance</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:22</strong> — "Inasmuch as they shall humble themselves before me, and abide in my word, and hearken to the voice of my Spirit."</p>
+                        <p><strong>D&C 112:23</strong> — "Verily, verily, I say unto you, darkness covereth the earth, and gross darkness the minds of the people, and all flesh has become corrupt before my face."</p>
+                        <p><strong>D&C 112:24</strong> — "Behold, vengeance cometh speedily upon the inhabitants of the earth, a day of wrath, a day of burning, a day of desolation, of weeping, of mourning, and of lamentation; and as a whirlwind it shall come upon all the face of the earth, saith the Lord."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>Three requirements for missionary success: humility, abiding in the word, and hearkening to the Spirit. The Lord then reveals the world's spiritual state using Isaiah's imagery—physical darkness covers earth while "gross darkness" afflicts minds. This double darkness necessitates the gospel light. The warning of coming vengeance employs apocalyptic language, describing the Second Coming as a day of wrath arriving like a whirlwind—sudden and overwhelming.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Darkness covereth the earth"</strong> directly quotes Isaiah 60:2. The Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h2822/kjv/wlc/0-1/" target="_blank">choshek</a></strong> (חֹשֶׁךְ) means physical and spiritual darkness. <strong>"Gross darkness"</strong> translates <strong><a href="https://www.blueletterbible.org/lexicon/h6205/kjv/wlc/0-1/" target="_blank">'araphel</a></strong> (עֲרָפֶל), "thick darkness, heavy cloud"—so dense it can be felt.</p>
+
+                    <p><strong>"All flesh has become corrupt"</strong> echoes Genesis 6:12 before the flood. The Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h7843/kjv/wlc/0-1/" target="_blank">shachath</a></strong> (שָׁחַת) means "to destroy, corrupt, ruin."</p>
+
+                    <p><strong>"Vengeance"</strong> translates Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h5359/kjv/wlc/0-1/" target="_blank">naqam</a></strong> (נָקָם) and Greek <strong><a href="https://www.blueletterbible.org/lexicon/g1557/kjv/tr/0-1/" target="_blank">ekdikesis</a></strong> (ἐκδίκησις), meaning divine justice and retribution.</p>
+
+                    <p>The <strong>"whirlwind"</strong> (Hebrew: <strong><a href="https://www.blueletterbible.org/lexicon/h5591/kjv/wlc/0-1/" target="_blank">sa'ar</a></strong> סַעַר) symbolizes sudden, overwhelming judgment throughout scripture.</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/isa/60/2/" target="_blank">Isaiah 60:2</a> — "Darkness shall cover the earth, and gross darkness the people"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/gen/6/12/" target="_blank">Genesis 6:12</a> — "All flesh had corrupted his way upon the earth"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mal/4/1/" target="_blank">Malachi 4:1</a> — "The day cometh, that shall burn as an oven"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/joe/2/11/" target="_blank">Joel 2:11</a> — "The day of the LORD is great and very terrible"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?id=9" target="_blank">D&C 1:9</a> — "The day speedily cometh... day of wrath, burning, desolation"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What causes "gross darkness" of mind in our day?</li>
+                        <li>How do we bring light to a darkened world?</li>
+                        <li>What does the whirlwind metaphor teach about the Second Coming?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 25-29: Judgment Beginning at God's House</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:25</strong> — "And upon my house shall it begin, and from my house shall it go forth, saith the Lord;"</p>
+                        <p><strong>D&C 112:26</strong> — "First among those among you, saith the Lord, who have professed to know my name and have not known me, and have blasphemed against me in the midst of my house, saith the Lord."</p>
+                        <p><strong>D&C 112:27</strong> — "Therefore, see to it that ye trouble not yourselves concerning the affairs of my church in this place, saith the Lord."</p>
+                        <p><strong>D&C 112:28</strong> — "But purify your hearts before me; and then go ye into all the world, and preach my gospel unto every creature who has not received it;"</p>
+                        <p><strong>D&C 112:29</strong> — "And he that believeth and is baptized shall be saved, and he that believeth not, and is not baptized, shall be damned."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord establishes a sobering principle: judgment begins with His own house before extending to the world. Those who "professed to know" but "blasphemed" face judgment first—likely referring to apostate members in Kirtland. Thomas is told not to trouble himself about Kirtland's affairs but to purify his heart and focus on the global mission. The classic baptismal formula concludes this section, emphasizing salvation's requirements.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Upon my house shall it begin"</strong> fulfills 1 Peter 4:17: "judgment must begin at the house of God." The Hebrew concept appears in Ezekiel 9:6: "begin at my sanctuary." God's covenant people face higher accountability due to greater light.</p>
+
+                    <p><strong>"Blasphemed"</strong> translates Greek <strong><a href="https://www.blueletterbible.org/lexicon/g987/kjv/tr/0-1/" target="_blank">blasphemeo</a></strong> (βλασφημέω), "to speak evil of, slander, revile." In the midst of God's house suggests covenant members speaking against the Lord or His servants.</p>
+
+                    <p><strong>"Purify your hearts"</strong> uses Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2511/kjv/tr/0-1/" target="_blank">katharizo</a></strong> (καθαρίζω) and Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h2891/kjv/wlc/0-1/" target="_blank">taher</a></strong> (טָהֵר), both meaning "to cleanse, make pure."</p>
+
+                    <p><strong>"Damned"</strong> translates Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2632/kjv/tr/0-1/" target="_blank">katakrino</a></strong> (κατακρίνω), meaning "condemned, judged against." In LDS theology, this means stopped in progression rather than eternal torment.</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/1pe/4/17/" target="_blank">1 Peter 4:17</a> — "Judgment must begin at the house of God"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/eze/9/6/" target="_blank">Ezekiel 9:6</a> — "Begin at my sanctuary"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/7/22-23/" target="_blank">Matthew 7:22-23</a> — "Many will say... Lord, Lord... I never knew you"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jam/4/8/" target="_blank">James 4:8</a> — "Purify your hearts, ye double minded"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mar/16/16/" target="_blank">Mark 16:16</a> — "He that believeth and is baptized shall be saved"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>Why does judgment begin with God's house?</li>
+                        <li>How can someone profess to know the Lord but not actually know Him?</li>
+                        <li>What does it mean to "purify your hearts" before missionary work?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verses 30-34: Keys of the Final Dispensation</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+                    <div class="scripture-quote">
+                        <p><strong>D&C 112:30</strong> — "For unto you, the Twelve, and those, the First Presidency, who are appointed with you to be your counselors and your leaders, is the power of this priesthood given, for the last days and for the last time, in the which is the dispensation of the fulness of times,"</p>
+                        <p><strong>D&C 112:31</strong> — "Which power you hold, in connection with all those who have received a dispensation at any time from the beginning of the creation;"</p>
+                        <p><strong>D&C 112:32</strong> — "For verily I say unto you, the keys of the dispensation, which ye have received, have come down from the fathers, and last of all, being sent down from heaven unto you."</p>
+                        <p><strong>D&C 112:33</strong> — "Verily I say unto you, behold how great is your calling. Cleanse your hearts and your garments, lest the blood of this generation be required at your hands."</p>
+                        <p><strong>D&C 112:34</strong> — "Be faithful until I come, for I come quickly; and my reward is with me to recompense every man according as his work shall be. I am Alpha and Omega. Amen."</p>
+                    </div>
+
+                    <h4>Doctrinal Summary</h4>
+                    <p>The revelation concludes with profound doctrine about priesthood keys in the final dispensation. This is the "last days and last time"—no future apostasy will require another restoration. The keys connect modern apostles with all previous dispensations, creating an unbroken chain from Adam to the present. The greatness of this calling requires cleansed hearts and garments, lest apostles be accountable for those they fail to warn. Christ's declaration as "Alpha and Omega" affirms His eternal authority over all dispensations.</p>
+
+                    <h4>Language &amp; Cultural Insights</h4>
+                    <p><strong>"Dispensation of the fulness of times"</strong> translates the Greek phrase from Ephesians 1:10. <strong><a href="https://www.blueletterbible.org/lexicon/g3622/kjv/tr/0-1/" target="_blank">Oikonomia</a></strong> (οἰκονομία) means "administration, stewardship." <strong><a href="https://www.blueletterbible.org/lexicon/g4138/kjv/tr/0-1/" target="_blank">Pleroma</a></strong> (πλήρωμα) means "fullness, completion." <strong><a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/" target="_blank">Kairos</a></strong> (καιρός) refers to appointed times. This final dispensation gathers all previous ones.</p>
+
+                    <p><strong>"Come down from the fathers"</strong> refers to ancient prophets who held keys—Adam, Noah, Abraham, Moses, Elijah. These were literally restored through angelic visitations (D&C 110, 128:20-21).</p>
+
+                    <p><strong>"Cleanse your hearts and your garments"</strong> combines inner purity (hearts) with priesthood worthiness (garments symbolizing priesthood robes). The Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h899/kjv/wlc/0-1/" target="_blank">beged</a></strong> (בֶּגֶד) for garments often represents one's actions or stewardship.</p>
+
+                    <p><strong>"Blood... required at your hands"</strong> echoes Ezekiel's watchman warning (Ezekiel 3:18). Priesthood holders are accountable for those they fail to warn.</p>
+
+                    <p><strong>"Alpha and Omega"</strong> (Α and Ω) are the first and last letters of the Greek alphabet, signifying Christ as Beginning and End, encompassing all existence and authority.</p>
+
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/eph/1/10/" target="_blank">Ephesians 1:10</a> — "Dispensation of the fulness of times"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?id=11-16" target="_blank">D&C 110:11-16</a> — Moses, Elias, Elijah restore keys</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?id=20-21" target="_blank">D&C 128:20-21</a> — "A voice of Michael... Gabriel... Raphael... diverse angels"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/eze/3/18/" target="_blank">Ezekiel 3:18</a> — "His blood will I require at thine hand"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rev/22/12-13/" target="_blank">Revelation 22:12-13</a> — "I come quickly... I am Alpha and Omega"</li>
+                    </ul>
+
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What does it mean that this is the "last time" priesthood is given?</li>
+                        <li>How are modern key holders connected to ancient prophets?</li>
+                        <li>What makes the apostolic calling "great" according to this revelation?</li>
+                        <li>How does knowing Christ is "Alpha and Omega" affect your understanding of priesthood authority?</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -- EDIT THIS BLOCK -->
+    <!-- WORD STUDIES -->
+    <button class="accordion-section" onclick="toggleSection(this)">WORD STUDIES</button>
+    <div class="content-panel">
+        <div class="panel-content">
+            <h2>Word Studies</h2>
+            <p>Complete linguistic analysis of highlighted terms with Hebrew, Greek, Latin, Etymology, and Webster 1828 definitions.</p>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">CHOSEN / TO CHOOSE (Verses 1, 7, 16)</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+
+            <h4>Hebrew Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/h977/kjv/wlc/0-1/" target="_blank">bachar</a></strong> (בָּחַר) - "to choose, elect, select"<br>
+            Implies careful selection with purpose and divine preference<br>
+            Used of God choosing Israel (Deuteronomy 7:6)</p>
+
+            <h4>Greek Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/g1588/kjv/tr/0-1/" target="_blank">eklektos</a></strong> (ἐκλεκτός) - "chosen, elect, select"<br>
+            From ek (out of) + lego (to speak)<br>
+            Literally "called out" or "spoken out"</p>
+
+            <h4>Latin Analysis</h4>
+            <p><strong><a href="https://logeion.uchicago.edu/electus" target="_blank">electus</a></strong> - "chosen, selected, picked out"<br>
+            Past participle of eligere, "to pick out, select"</p>
+
+            <h4>Etymology</h4>
+            <p>From Old English ceosan "to choose, seek out, select"<br>
+            Proto-Germanic *keus-, from PIE root *geus- "to taste, choose"<br>
+            <a href="https://www.etymonline.com/word/choose" target="_blank">Etymonline</a></p>
+
+            <h4>Webster 1828</h4>
+            <p>"To pick out; to select; to take by way of preference from two or more things offered"<br>
+            Emphasizes deliberate selection from alternatives<br>
+            <a href="http://webstersdictionary1828.com/Dictionary/chosen" target="_blank">Webster 1828</a></p>
+
+            <h4>Doctrinal Significance</h4>
+            <p>Being "chosen" in priesthood context means divinely selected for sacred responsibility. Not arbitrary but based on foreordination, worthiness, and willingness to serve. Thomas B. Marsh was chosen to hold specific keys among the Twelve, emphasizing both divine selection and human agency in accepting the call.</p>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">BEAR TESTIMONY / BEAR RECORD (Verses 1, 4)</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+
+            <h4>Hebrew Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/h5749/kjv/wlc/0-1/" target="_blank">'ud</a></strong> (עוּד) - "to bear witness, testify, admonish"<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/h5715/kjv/wlc/0-1/" target="_blank">'eduth</a></strong> (עֵדוּת) - "testimony, witness"</p>
+
+            <h4>Greek Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/g3140/kjv/tr/0-1/" target="_blank">martyreo</a></strong> (μαρτυρέω) - "to bear witness, testify"<br>
+            Root of English "martyr" - one who witnesses unto death<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/g3143/kjv/tr/0-1/" target="_blank">martyria</a></strong> (μαρτυρία) - "witness, testimony, record"</p>
+
+            <h4>Latin Analysis</h4>
+            <p><strong><a href="https://logeion.uchicago.edu/testimonium" target="_blank">testimonium</a></strong> - "evidence, proof, testimony"<br>
+            From testis (witness) + -monium (state, condition)</p>
+
+            <h4>Etymology</h4>
+            <p>"Bear" from Old English beran "to carry, bring forth"<br>
+            "Testimony" from Latin testimonium, from testis "witness"<br>
+            <a href="https://www.etymonline.com/word/testimony" target="_blank">Etymonline</a></p>
+
+            <h4>Webster 1828</h4>
+            <p>"Bear: To support; to carry; to produce"<br>
+            "Testimony: A solemn declaration or affirmation made for the purpose of establishing or proving some fact"<br>
+            <a href="http://webstersdictionary1828.com/Dictionary/testimony" target="_blank">Webster 1828</a></p>
+
+            <h4>Doctrinal Significance</h4>
+            <p>To "bear testimony" is to carry divine witness to the world. The Twelve are special witnesses of Christ's name, literally carrying His witness to all nations. This is both a burden and privilege - they bear the weight of divine truth and deliver it faithfully.</p>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">GIRD UP THY LOINS (Verses 7, 14)</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+
+            <h4>Hebrew Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/h2296/kjv/wlc/0-1/" target="_blank">chagar</a></strong> (חָגַר) - "to gird, gird on, gird oneself"<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/h4975/kjv/wlc/0-1/" target="_blank">mothen</a></strong> (מָתְנַיִם) - "loins, waist"</p>
+
+            <h4>Greek Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/g4024/kjv/tr/0-1/" target="_blank">perizonnumi</a></strong> (περιζώννυμι) - "to gird around"<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/g3751/kjv/tr/0-1/" target="_blank">osphus</a></strong> (ὀσφῦς) - "loins, waist"</p>
+
+            <h4>Latin Analysis</h4>
+            <p><strong>cingere</strong> - "to surround, gird, encircle"<br>
+            <strong>lumbus</strong> - "loin, waist"</p>
+
+            <h4>Etymology</h4>
+            <p>"Gird" from Old English gyrdan "encircle, surround with a belt"<br>
+            "Loins" from Old French loigne, from Latin lumbus<br>
+            <a href="https://www.etymonline.com/word/gird" target="_blank">Etymonline</a></p>
+
+            <h4>Webster 1828</h4>
+            <p>"Gird: To bind around; to put on"<br>
+            "Loins: The part of man between the lower ribs and thigh"<br>
+            <a href="http://webstersdictionary1828.com/Dictionary/gird" target="_blank">Webster 1828</a></p>
+
+            <h4>Doctrinal Significance</h4>
+            <p>Ancient Middle Eastern clothing required tucking robes into belt for action - warfare, work, or travel. Spiritually represents preparation for divine service. The Twelve must prepare for spiritual battle and missionary journeys. Repeated use (verses 7, 14) emphasizes urgent readiness for the Lord's work.</p>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">LEAD THEE BY THE HAND (Verse 10)</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+
+            <h4>Hebrew Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/h5148/kjv/wlc/0-1/" target="_blank">nachah</a></strong> (נָחָה) - "to lead, guide"<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/" target="_blank">yad</a></strong> (יָד) - "hand"</p>
+
+            <h4>Greek Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/g3594/kjv/tr/0-1/" target="_blank">hodegeo</a></strong> (ὁδηγέω) - "to lead, guide, direct"<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/g5495/kjv/tr/0-1/" target="_blank">cheir</a></strong> (χείρ) - "hand"</p>
+
+            <h4>Latin Analysis</h4>
+            <p><strong>ducere</strong> - "to lead, guide"<br>
+            <strong><a href="https://logeion.uchicago.edu/manus" target="_blank">manus</a></strong> - "hand"</p>
+
+            <h4>Etymology</h4>
+            <p>"Lead" from Old English lædan "cause to go with"<br>
+            "Hand" from Old English hond, from Proto-Germanic *handuz<br>
+            <a href="https://www.etymonline.com/word/lead" target="_blank">Etymonline</a></p>
+
+            <h4>Webster 1828</h4>
+            <p>"Lead: To guide by the hand; to conduct"<br>
+            "Hand: The extremity of the human arm"<br>
+            <a href="http://webstersdictionary1828.com/Dictionary/lead" target="_blank">Webster 1828</a></p>
+
+            <h4>Doctrinal Significance</h4>
+            <p>Divine hand-holding represents intimate, personal guidance - not distant direction but close companionship. Like parent with child, the Lord personally guides humble servants. This promise follows the command to be humble, showing humility opens the door to divine guidance. The imagery suggests both protection and direction.</p>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">KEYS (Verses 15, 16, 30, 32)</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+
+            <h4>Hebrew Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/h4668/kjv/wlc/0-1/" target="_blank">maphteach</a></strong> (מַפְתֵּחַ) - "key, opening"<br>
+            From <strong>pathach</strong> (פָּתַח) - "to open"</p>
+
+            <h4>Greek Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/g2807/kjv/tr/0-1/" target="_blank">kleis</a></strong> (κλείς) - "key"<br>
+            Related to <strong>kleio</strong> (κλείω) - "to shut, lock"</p>
+
+            <h4>Latin Analysis</h4>
+            <p><strong><a href="https://logeion.uchicago.edu/clavis" target="_blank">clavis</a></strong> - "key"</p>
+
+            <h4>Etymology</h4>
+            <p>"Key" from Old English cæg "key, solution"<br>
+            <a href="https://www.etymonline.com/word/key" target="_blank">Etymonline</a></p>
+
+            <h4>Webster 1828</h4>
+            <p>"Key: An instrument for shutting or opening a lock"<br>
+            Figuratively: "That which serves to explain; power, authority"<br>
+            <a href="http://webstersdictionary1828.com/Dictionary/key" target="_blank">Webster 1828</a></p>
+
+            <h4>Doctrinal Significance</h4>
+            <p>Priesthood keys are divine authority to direct God's work on earth. The Twelve hold keys to open doors to all nations for missionary work. These keys will never be taken until Christ comes, ensuring continuity. Keys represent power to bind and loose, open and shut. The dispensation of the fulness of times has all keys from previous dispensations.</p>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">DISPENSATION OF THE FULNESS OF TIMES (Verse 30)</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+
+            <h4>Hebrew Analysis</h4>
+            <p><strong>paqad</strong> (פָּקַד) - "to attend to, visit, appoint"<br>
+            Related to divine administration<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/h4393/kjv/wlc/0-1/" target="_blank">mala'</a></strong> (מָלֵא) - "fullness, that which fills"</p>
+
+            <h4>Greek Analysis</h4>
+            <p><strong><a href="https://www.blueletterbible.org/lexicon/g3622/kjv/tr/0-1/" target="_blank">oikonomia</a></strong> (οἰκονομία) - "dispensation, stewardship, administration"<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/g4138/kjv/tr/0-1/" target="_blank">pleroma</a></strong> (πλήρωμα) - "fullness, completion"<br>
+            <strong><a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/" target="_blank">kairos</a></strong> (καιρός) - "time, season, opportunity"</p>
+
+            <h4>Latin Analysis</h4>
+            <p><strong>dispensatio</strong> - "management, administration"<br>
+            <strong>plenitudo</strong> - "fullness, completion"<br>
+            <strong>tempus</strong> - "time, season"</p>
+
+            <h4>Etymology</h4>
+            <p>"Dispensation" from Latin dispensare "distribute, administer"<br>
+            "Fullness" from Old English fylnes "completeness"<br>
+            "Times" from Old English tima "time, period"<br>
+            <a href="https://www.etymonline.com/word/dispensation" target="_blank">Etymonline</a></p>
+
+            <h4>Webster 1828</h4>
+            <p>"Dispensation: Distribution; the dealing of God to his creatures"<br>
+            "Fullness: The state of being filled so that nothing more can be added"<br>
+            <a href="http://webstersdictionary1828.com/Dictionary/dispensation" target="_blank">Webster 1828</a></p>
+
+            <h4>Doctrinal Significance</h4>
+            <p>The final gospel dispensation gathering all previous ones - the culmination of God's work on earth. All keys, powers, and authorities from past dispensations are restored and united. This is the "last days and last time" when all things are gathered in one preparatory to Christ's return. The Twelve hold keys for this grand concluding work.</p>
+                </div>
+            </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">ALPHA AND OMEGA (Verse 34)</button>
+            <div class="sub-panel">
+                <div class="sub-panel-content">
+
+            <h4>Greek Analysis</h4>
+            <p><strong>Alpha</strong> (Ἄλφα) - First letter of Greek alphabet<br>
+            <strong>Omega</strong> (Ὦμέγα) - Last letter of Greek alphabet<br>
+            <a href="https://www.blueletterbible.org/lexicon/g1/kjv/tr/0-1/" target="_blank">Blue Letter Bible: Alpha and Omega</a></p>
+
+            <h4>Hebrew Parallel</h4>
+            <p><strong>Aleph</strong> (א) - First Hebrew letter<br>
+            <strong>Tav</strong> (ת) - Last Hebrew letter<br>
+            Conceptually "from Aleph to Tav"</p>
+
+            <h4>Latin Analysis</h4>
+            <p><strong>Alpha et Omega</strong> - Direct transliteration<br>
+            Conceptually "A to Z" in Latin</p>
+
+            <h4>Etymology</h4>
+            <p>"Alpha" from Phoenician aleph "ox"<br>
+            "Omega" from Greek o mega "great O"<br>
+            <a href="https://www.etymonline.com/word/alpha" target="_blank">Etymonline</a></p>
+
+            <h4>Webster 1828</h4>
+            <p>"Alpha: The first letter in the Greek alphabet, answering to A"<br>
+            "Omega: The last letter of the Greek alphabet"<br>
+            <a href="http://webstersdictionary1828.com/Dictionary/alpha" target="_blank">Webster 1828</a></p>
+
+            <h4>Doctrinal Significance</h4>
+            <p>Christ declaring Himself "Alpha and Omega" means He is the Beginning and End, First and Last, encompassing all existence. In context of priesthood keys and dispensations, it affirms His eternal authority. He who gave the keys will return for them. All priesthood authority begins and ends with Christ. This title appears in Revelation and D&C as divine signature.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- END OF EDIT BLOCK -->
+
+    <!-- TEACHING APPLICATIONS -->
+    <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+    <div class="content-panel">
+        <div class="panel-content">
+            <h2>Teaching Applications</h2>
+
+            <h3>Personal Study Applications</h3>
+
+            <h4>For Individual Scripture Study</h4>
+            <ol>
+                <li><strong>Mark and study the progression</strong> from personal correction (verses 2-3) to global commission (verses 16-21)</li>
+                <li><strong>Create a chart</strong> comparing requirements for missionary success in verse 22</li>
+                <li><strong>Study the pattern</strong> of humility leading to divine guidance (verse 10)</li>
+                <li><strong>Reflect on areas</strong> where you might need to "abase yourself" to be exalted</li>
+                <li><strong>Identify "effectual doors"</strong> the Lord has opened in your life</li>
+                <li><strong>Consider your "warning voice"</strong> - how do you share truth appropriately?</li>
+            </ol>
+
+            <h4>Personal Reflection Activities</h4>
+            <ul>
+                <li>Journal about a time when correction led to greater responsibility</li>
+                <li>List the "sheep" you are called to feed in your current circumstances</li>
+                <li>Create a personal mission statement based on verse 5</li>
+                <li>Study each apostle mentioned and their response to this revelation</li>
+                <li>Map your own "mountains and nations" - your sphere of influence</li>
+            </ul>
+
+            <h3>Family Study Applications</h3>
+
+            <h4>Family Home Evening Ideas</h4>
+
+            <div class="teaching-section">
+                <h4>Week 1: "Keys of the Kingdom"</h4>
+                <ul>
+                    <li>Object lesson with actual keys</li>
+                    <li>Discuss what priesthood keys open</li>
+                    <li>Share testimonies of living apostles</li>
+                    <li>Activity: Make paper keys with priesthood responsibilities</li>
+                </ul>
+            </div>
+
+            <div class="teaching-section">
+                <h4>Week 2: "Feed My Sheep"</h4>
+                <ul>
+                    <li>Read verses 14-15 together</li>
+                    <li>Discuss who our family's "sheep" are</li>
+                    <li>Plan a service project</li>
+                    <li>Role-play being good shepherds</li>
+                </ul>
+            </div>
+
+            <div class="teaching-section">
+                <h4>Week 3: "Warning Voice"</h4>
+                <ul>
+                    <li>Discuss appropriate ways to share gospel</li>
+                    <li>Practice bearing testimony</li>
+                    <li>Create family social media posts with uplifting messages</li>
+                    <li>Share missionary experiences</li>
+                </ul>
+            </div>
+
+            <div class="teaching-section">
+                <h4>Week 4: "Humble Hearts"</h4>
+                <ul>
+                    <li>Read verse 10 and discuss</li>
+                    <li>Share experiences of being led by the Lord</li>
+                    <li>Practice asking for help</li>
+                    <li>Celebrate each family member's growth</li>
+                </ul>
+            </div>
+
+            <h4>Family Discussion Questions</h4>
+            <ol>
+                <li>How can our family support priesthood leaders during difficult times?</li>
+                <li>What "crosses" does our family carry together?</li>
+                <li>How can we make our home a place of refuge from darkness?</li>
+                <li>What missionary opportunities exist for our family?</li>
+                <li>How do we show love that "abounds unto all"?</li>
+            </ol>
+
+            <h3>Sunday School Applications</h3>
+
+            <h4>Class Opening Questions</h4>
+            <ul>
+                <li>"What leadership crisis was happening when this revelation was given?"</li>
+                <li>"How would you feel receiving correction like verses 2-3?"</li>
+                <li>"What does it mean that judgment begins at God's house?"</li>
+            </ul>
+
+            <h4>Key Teaching Points with Methods</h4>
+
+            <div class="teaching-section">
+                <h4>1. The Apostasy Crisis Context</h4>
+                <ul>
+                    <li>Timeline activity: Show events of 1837 Kirtland</li>
+                    <li>Discussion: How do we sustain leaders during difficult times?</li>
+                    <li>Application: Modern parallels and how to maintain faith</li>
+                </ul>
+            </div>
+
+            <div class="teaching-section">
+                <h4>2. Understanding Priesthood Keys</h4>
+                <ul>
+                    <li>Visual: Key ring showing different keys for different purposes</li>
+                    <li>Chart: First Presidency keys vs. Twelve's keys</li>
+                    <li>Discussion: How keys bless our lives today</li>
+                </ul>
+            </div>
+
+            <div class="teaching-section">
+                <h4>3. The Pattern of Correction and Commission</h4>
+                <ul>
+                    <li>Verses 2-3: Gentle correction</li>
+                    <li>Verses 4-9: Greater responsibilities</li>
+                    <li>Application: How the Lord prepares us through correction</li>
+                </ul>
+            </div>
+
+            <div class="teaching-section">
+                <h4>4. Global Missionary Vision</h4>
+                <ul>
+                    <li>Map activity: Mark where class members have served missions</li>
+                    <li>Discussion: "Effectual doors" in modern missionary work</li>
+                    <li>Share stories of apostles opening nations</li>
+                </ul>
+            </div>
+
+            <h4>Small Group Activities</h4>
+            <ul>
+                <li>Groups study different apostles' responses to this revelation</li>
+                <li>Create lists of modern "effectual doors" for sharing gospel</li>
+                <li>Discuss how to "feed sheep" in current callings</li>
+                <li>Analyze the progression of promises in verses 10-15</li>
+            </ul>
+
+            <h3>Seminary Teaching Applications</h3>
+
+            <h4>Scripture Mastery Focus: Verse 10</h4>
+            <div class="teaching-section">
+                <p><strong>"Be thou humble; and the Lord thy God shall lead thee by the hand, and give thee answer to thy prayers."</strong></p>
+                <ul>
+                    <li><strong>Memorization technique:</strong> Hand motions for each phrase</li>
+                    <li><strong>Application challenge:</strong> Practice humility in one specific way this week</li>
+                    <li><strong>Testimony builder:</strong> Share times the Lord has led you</li>
+                    <li><strong>Cross-reference chain:</strong> Link to other humility verses</li>
+                </ul>
+            </div>
+
+            <h4>Youth Activities</h4>
+            <ul>
+                <li><strong>Role play:</strong> Thomas B. Marsh receiving this revelation</li>
+                <li><strong>Debate:</strong> Is it harder to be humble when corrected or when praised?</li>
+                <li><strong>Art project:</strong> Illustrate "darkness covering the earth" vs. gospel light</li>
+                <li><strong>Social media challenge:</strong> Share verse 10 with personal application</li>
+                <li><strong>Service project:</strong> "Feed my sheep" in your community</li>
+            </ul>
+
+            <h3>Relief Society / Elders Quorum Applications</h3>
+
+            <h4>Discussion Topics</h4>
+            <ol>
+                <li><strong>Supporting leaders during crisis:</strong> How do we sustain without blind obedience?</li>
+                <li><strong>Personal apostasy prevention:</strong> What are early warning signs?</li>
+                <li><strong>Ministering without partiality:</strong> How to love equally?</li>
+                <li><strong>Raising a warning voice:</strong> Appropriate ways to share truth</li>
+                <li><strong>Humility in leadership:</strong> Balancing authority with meekness</li>
+            </ol>
+
+            <h4>Application Challenges</h4>
+            <ul>
+                <li>Identify someone who needs your "warning voice" this week</li>
+                <li>Practice "abasing yourself" in a specific situation</li>
+                <li>Minister to someone outside your normal circle (love abounding)</li>
+                <li>Support a leader going through difficulties</li>
+                <li>Create a plan to "gird up your loins" spiritually</li>
+            </ul>
+
+            <h3>Primary Teaching Applications</h3>
+
+            <h4>Simple Concepts for Children</h4>
+
+            <div class="teaching-section">
+                <h4>Verse 10 for Little Ones</h4>
+                <p>"When we are humble (not proud), Heavenly Father holds our hand and helps us!"</p>
+                <ul>
+                    <li>Activity: Hold hands and walk together</li>
+                    <li>Song: "I Am a Child of God"</li>
+                    <li>Story: Tell about a time you needed help</li>
+                </ul>
+            </div>
+
+            <h4>Object Lessons</h4>
+            <ul>
+                <li><strong>Keys:</strong> Show different keys and what they open</li>
+                <li><strong>Flashlight in darkness:</strong> Gospel light in dark world</li>
+                <li><strong>Shepherd and sheep:</strong> How shepherds care for sheep</li>
+                <li><strong>Holding hands:</strong> How the Lord guides us</li>
+            </ul>
+
+            <h4>Primary Activities</h4>
+            <ul>
+                <li>Draw pictures of the Lord leading them by the hand</li>
+                <li>Make paper sheep to remember "feed my sheep"</li>
+                <li>Practice being humble (letting others go first, saying sorry)</li>
+                <li>Sing "Lord, I Would Follow Thee"</li>
+            </ul>
+
+            <h3>Institute Teaching Applications</h3>
+
+            <h4>Deep Dive Topics</h4>
+            <ol>
+                <li><strong>The 1837 Apostasy Crisis:</strong> Historical analysis and modern parallels</li>
+                <li><strong>Priesthood Keys Doctrine:</strong> Succession, authority, and delegation</li>
+                <li><strong>The British Mission:</strong> How it saved the Church</li>
+                <li><strong>Judgment Beginning at God's House:</strong> Accountability and cleansing</li>
+                <li><strong>Dispensation of the Fulness of Times:</strong> Gathering all dispensations</li>
+            </ol>
+
+            <h4>Research Projects</h4>
+            <ul>
+                <li>Study each of the Twelve's response to this revelation</li>
+                <li>Analyze the Kirtland Safety Society failure</li>
+                <li>Research modern apostles opening nations</li>
+                <li>Compare this revelation to ancient apostolic patterns</li>
+                <li>Document fulfillment of promises in verses 16-21</li>
+            </ul>
+
+            <h3>Mission Preparation Applications</h3>
+
+            <h4>Missionary Skills from D&C 112</h4>
+            <ol>
+                <li><strong>Humility (v. 10):</strong> Essential for teaching and learning</li>
+                <li><strong>Daily dedication (v. 5):</strong> "Morning by morning" commitment</li>
+                <li><strong>Love abounding (v. 11):</strong> Love for all, not just interested people</li>
+                <li><strong>Preparation (v. 7):</strong> "Gird up thy loins" - be ready always</li>
+                <li><strong>Authority (v. 20):</strong> Understanding priesthood keys and delegation</li>
+            </ol>
+
+            <h4>Role Playing Scenarios</h4>
+            <ul>
+                <li>Teaching someone about priesthood keys</li>
+                <li>Explaining why judgment begins at God's house</li>
+                <li>Sharing verse 10 as a scripture mastery</li>
+                <li>Testifying of modern apostles</li>
+                <li>Addressing concerns about Church leadership</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDY QUESTIONS -->
+    <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+    <div class="content-panel">
+        <div class="panel-content">
+            <h2>Study Questions</h2>
+
+            <h3>Comprehension Questions</h3>
+
+            <h4>Basic Understanding</h4>
+            <ol>
+                <li>Who received this revelation and what was his calling?</li>
+                <li>What historical crisis was happening in Kirtland at this time?</li>
+                <li>What promise is given in verse 10 about humility?</li>
+                <li>According to verse 15, how long will the keys remain with Joseph Smith?</li>
+                <li>What does verse 25 say about where judgment will begin?</li>
+            </ol>
+
+            <h4>Context and Background</h4>
+            <ol>
+                <li>Why was the summer of 1837 particularly difficult for the Church?</li>
+                <li>What was happening in England on the very day this revelation was received?</li>
+                <li>Which members of the Twelve were in rebellion at this time?</li>
+                <li>How did the Panic of 1837 affect the Saints in Kirtland?</li>
+                <li>What role did the Kirtland Temple play in the apostasy crisis?</li>
+            </ol>
+
+            <h3>Application Questions</h3>
+
+            <h4>Personal Application</h4>
+            <div class="study-question">
+                How can I apply the principle in verse 10 when facing difficult decisions or challenges in my life?
+            </div>
+
+            <div class="study-question">
+                What "effectual doors" has the Lord opened for me to share the gospel, and how am I using them?
+            </div>
+
+            <div class="study-question">
+                In what areas of my life might the Lord say there are "some few things" He is not pleased with (verse 2)?
+            </div>
+
+            <div class="study-question">
+                How can I "gird up my loins" spiritually to prepare for the work the Lord has for me?
+            </div>
+
+            <h4>Family Application</h4>
+            <ol>
+                <li>How can our family support Church leaders during times of criticism or difficulty?</li>
+                <li>What does it mean for our family to "feed His sheep"?</li>
+                <li>How can we help our children understand the importance of priesthood keys?</li>
+                <li>What can we do to ensure our love "abounds unto all" and not just our close friends?</li>
+                <li>How do we teach humility while building confidence in our children?</li>
+            </ol>
+
+            <h3>Doctrinal Questions</h3>
+
+            <h4>Priesthood Keys</h4>
+            <ol>
+                <li>What is the relationship between the keys held by the First Presidency and those held by the Twelve?</li>
+                <li>How does verse 30 connect modern priesthood keys to ancient dispensations?</li>
+                <li>What does it mean that the keys will not be taken until Christ comes?</li>
+                <li>How do missionaries receive authority to "open doors" to nations?</li>
+                <li>What is the significance of keys in the "dispensation of the fulness of times"?</li>
+            </ol>
+
+            <h4>Judgment and Cleansing</h4>
+            <ol>
+                <li>Why does judgment begin at God's house rather than with the wicked world?</li>
+                <li>What does "gross darkness" covering people's minds mean in modern context?</li>
+                <li>How is the cleansing mentioned in verses 25-26 both merciful and just?</li>
+                <li>What does it mean to "blaspheme against me in the midst of my house"?</li>
+                <li>How do we "purify our hearts" before doing the Lord's work?</li>
+            </ol>
+
+            <h3>Analytical Questions</h3>
+
+            <h4>Pattern Analysis</h4>
+            <div class="study-question">
+                Trace the pattern from correction (verses 2-3) to commission (verses 4-21). What does this teach about how the Lord prepares His servants?
+            </div>
+
+            <div class="study-question">
+                How does the promise to "feel after them" (verse 13) demonstrate the Lord's mercy toward struggling apostles?
+            </div>
+
+            <div class="study-question">
+                Analyze the progression of titles used for deity throughout this revelation. What does each title emphasize?
+            </div>
+
+            <h4>Historical Analysis</h4>
+            <ol>
+                <li>How did this revelation address the specific challenges facing the Church in 1837?</li>
+                <li>What immediate impact did this revelation have on Thomas B. Marsh's decisions?</li>
+                <li>How were the promises about missionary work fulfilled in the British Mission?</li>
+                <li>Which apostles mentioned in this revelation eventually apostatized, and which remained faithful?</li>
+                <li>How has the warning in verse 25 been fulfilled in Church history?</li>
+            </ol>
+
+            <h3>Comparative Questions</h3>
+
+            <h4>Scripture Comparisons</h4>
+            <ol>
+                <li>Compare verse 10 with other scriptures about humility and divine guidance. What patterns emerge?</li>
+                <li>How does the commission to the Twelve here compare with Acts 1:8?</li>
+                <li>Compare "feed my sheep" (verse 14) with Christ's charge to Peter in John 21. What similarities and differences exist?</li>
+                <li>How does the "Alpha and Omega" declaration connect to similar statements in Revelation?</li>
+                <li>Compare the "dispensation of the fulness of times" with Ephesians 1:10. What additional insights does D&C 112 provide?</li>
+            </ol>
+
+            <h3>Pondering Questions</h3>
+
+            <div class="study-question">
+                If the Lord were to say to me, "I know thy heart, and have heard thy prayers" (verse 11), what would He know about my deepest concerns?
+            </div>
+
+            <div class="study-question">
+                How does understanding that "darkness covereth the earth" affect my responsibility to share light?
+            </div>
+
+            <div class="study-question">
+                What does it mean to me personally that Christ is "Alpha and Omega"—the beginning and end of all things?
+            </div>
+
+            <div class="study-question">
+                How can I better support priesthood leaders when they make mistakes or face criticism?
+            </div>
+
+            <div class="study-question">
+                What "cross" am I being asked to take up in my current circumstances?
+            </div>
+
+            <h3>Group Discussion Questions</h3>
+
+            <h4>For Couples</h4>
+            <ol>
+                <li>How can we apply verse 10 in our marriage relationship?</li>
+                <li>What does it mean for us to "feed His sheep" as a couple?</li>
+                <li>How do we maintain unity when one spouse struggles with Church leadership?</li>
+                <li>What "doors" can we open together for missionary work?</li>
+                <li>How do we help each other through "temptations and much tribulation" (verse 13)?</li>
+            </ol>
+
+            <h4>For Families</h4>
+            <ol>
+                <li>How can verse 10 become a family motto or guide?</li>
+                <li>What are the "sheep" our family is called to feed?</li>
+                <li>How do we teach children to sustain leaders who are imperfect?</li>
+                <li>What family traditions can help us "gird up our loins" spiritually?</li>
+                <li>How can our home be a refuge from the "darkness" covering the earth?</li>
+            </ol>
+
+            <h4>For Classes</h4>
+            <ol>
+                <li>What modern parallels exist to the 1837 Kirtland apostasy?</li>
+                <li>How do we raise a "warning voice" without being preachy or offensive?</li>
+                <li>What does this revelation teach about the nature of apostolic authority?</li>
+                <li>How can we support missionaries in opening "effectual doors"?</li>
+                <li>What does it mean that we're living in the "dispensation of the fulness of times"?</li>
+            </ol>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Toggle section function
+    function toggleSection(button) {
+        button.classList.toggle('active');
+        const panel = button.nextElementSibling;
+        panel.classList.toggle('active');
+    }
+
+    // Toggle sub-section function
+    function toggleSubSection(button) {
+        button.classList.toggle('active');
+        const panel = button.nextElementSibling;
+        panel.classList.toggle('active');
+    }
+
+    // Expand all sections
+    function expandAll() {
+        const sections = document.querySelectorAll('.accordion-section');
+        const panels = document.querySelectorAll('.content-panel');
+        const subSections = document.querySelectorAll('.sub-accordion');
+        const subPanels = document.querySelectorAll('.sub-panel');
+
+        sections.forEach(section => section.classList.add('active'));
+        panels.forEach(panel => panel.classList.add('active'));
+        subSections.forEach(section => section.classList.add('active'));
+        subPanels.forEach(panel => panel.classList.add('active'));
+    }
+
+    // Collapse all sections
+    function collapseAll() {
+        const sections = document.querySelectorAll('.accordion-section');
+        const panels = document.querySelectorAll('.content-panel');
+        const subSections = document.querySelectorAll('.sub-accordion');
+        const subPanels = document.querySelectorAll('.sub-panel');
+
+        sections.forEach(section => section.classList.remove('active'));
+        panels.forEach(panel => panel.classList.remove('active'));
+        subSections.forEach(section => section.classList.remove('active'));
+        subPanels.forEach(panel => panel.classList.remove('active'));
+    }
+</script>
+
+<!-- Bottom Navigation -->
+<div class="nav-bar" style="margin-top: 40px; border-top: 2px solid #7c9885; border-bottom: none;">
+    <div class="nav-links">
+        <a href="index.html" class="nav-btn">Lesson Home</a>
+        <a href="dc111_complete.html" class="nav-btn">Previous: D&C 111</a>
+        <a href="dc113_complete.html" class="nav-btn">Next: D&C 113</a>
+    </div>
+    <div class="nav-links">
+        <a href="dc111_complete.html" class="nav-btn">D&C 111</a>
+        <a href="dc112_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 112</a>
+        <a href="dc113_complete.html" class="nav-btn">D&C 113</a>
+        <a href="dc114_complete.html" class="nav-btn">D&C 114</a>
+    </div>
+</div>
+
+</body>
+</html>

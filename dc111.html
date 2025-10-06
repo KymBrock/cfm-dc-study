@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<!-- Updated: October 5, 2025 - Cache-bust v2 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>D&C 111 Complete Study Guide - Divine Treasures in Salem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Site Header */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+
+        .cfm-button:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        .cfm-button.active {
+            background-color: #7c9885;
+            color: white;
+            font-weight: 600;
+        }
+
+        .cfm-button.active:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+        }
+
+        .cfm-button.disabled:hover {
+            transform: none;
+        }
+
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        /* Scripture Quote */
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        /* Expand/Collapse Buttons */
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Content Panels */
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        /* Sub-accordions for verses */
+        .sub-accordion {
+            background-color: #f0f4f0;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e2e8e2;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: #7c9885;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Sub-panels */
+        .sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        /* Typography within panels */
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .panel-content h3 {
+            color: #5a6d5f;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .panel-content h4 {
+            color: #4a5d4f;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .panel-content ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .panel-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .panel-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Special boxes */
+        .info-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 2px solid #d4c190;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .word-study-box {
+            background-color: #fafafa;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        /* Scripture verses */
+        .scripture-verse {
+            background-color: #f9fafb;
+            border-left: 3px solid #7c9885;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #5a6d5f;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .header-section .subtitle {
+                font-size: 1.1em;
+            }
+
+            .panel-content {
+                padding: 20px;
+            }
+
+            .site-title {
+                font-size: 1.5em;
+            }
+
+            .cfm-button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Lesson Home</a>
+            <a href="#" class="nav-btn disabled">Previous</a>
+            <a href="dc112_complete.html" class="nav-btn">Next: D&C 112</a>
+        </div>
+        <div class="nav-links">
+            <a href="dc111_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 111</a>
+            <a href="dc112_complete.html" class="nav-btn">D&C 112</a>
+            <a href="dc113_complete.html" class="nav-btn">D&C 113</a>
+            <a href="dc114_complete.html" class="nav-btn">D&C 114</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Doctrine & Covenants 111</h1>
+            <p class="subtitle">Divine Treasures in Salem</p>
+            <div class="scripture-highlight">
+                "I have much treasure in this city for you, for the benefit of Zion, and many people in this city, whom I will gather out in due time for the benefit of Zion, through your instrumentality."
+                <br><br>— <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/111.2?lang=eng" style="color: white; font-weight: 600;">Doctrine & Covenants 111:2</a>
+            </div>
+            <div class="date-location">
+                <strong>Date:</strong> August 6, 1836 | <strong>Location:</strong> Salem, Massachusetts
+            </div>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+
+        <!-- SECTION 1: SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Basic Information</h2>
+                
+                <div class="info-box">
+                    <p><strong>Date of Revelation:</strong> August 6, 1836</p>
+                    <p><strong>Location:</strong> Salem, Massachusetts</p>
+                    <p><strong>Recipients:</strong> Joseph Smith, Sidney Rigdon, Hyrum Smith, and Oliver Cowdery</p>
+                    <p><strong>Section Summary:</strong> During a journey to Salem seeking financial relief through rumored buried treasure, the Lord lovingly redirects Joseph and his companions, revealing that the true treasure is the souls of people who will join the Church, while teaching patience and divine timing in temporal concerns.</p>
+                </div>
+
+                <h2>Key Principles</h2>
+                
+                <div class="highlight-box">
+                    <p><strong>Primary Doctrinal Principle:</strong> The greatest treasures are human souls, not material wealth—the Lord's priorities differ from worldly priorities.</p>
+                    
+                    <p><strong>Secondary Principle:</strong> The Lord can transform our "follies" and mistakes into opportunities for His purposes when we remain faithful.</p>
+                    
+                    <p><strong>Application Principle:</strong> Divine peace and power signal the Lord's will more reliably than financial success or immediate answers to prayers.</p>
+                </div>
+
+                <h2>Timeframe & Setting</h2>
+                
+                <h3>Circumstances Among Recipients</h3>
+                <p>Joseph Smith was overwhelmed with approximately $13,000 in debt following the Kirtland Temple's completion. A man named Jonathan Burgess had told Joseph about supposedly buried treasure in a Salem cellar, and Joseph—desperate for financial relief—made the risky decision to pursue this lead. His companions Sidney Rigdon, Hyrum Smith, and Oliver Cowdery joined him on this 1,200-mile round trip journey, all anxious about the Church's mounting debts.</p>
+                
+                <h3>Circumstances Within the Church</h3>
+                <p>August 1836 found the Church in a precarious position. The Kirtland Temple had been dedicated in March with great spiritual manifestations, but at tremendous financial cost. Meanwhile, Missouri Saints were facing expulsion from Jackson County, creating additional pressure. The Kirtland Safety Society (bank) would be organized in January 1837, signaling ongoing financial anxieties.</p>
+                
+                <h3>Relevant Local Circumstances</h3>
+                <p>Salem, Massachusetts, was a prosperous port city with significant merchant wealth, which may have influenced the buried treasure rumors. The city had deep Puritan roots and was famous for the 1692-1693 witch trials. Its residents were generally skeptical of new religious movements. The East India Marine Society Museum showcased global trade wealth, emphasizing temporal treasures.</p>
+                
+                <h3>Relevant Global Circumstances</h3>
+                <p>The 1830s experienced economic volatility with the Panic of 1837 looming. Treasure-seeking was culturally accepted—Nathaniel Hawthorne was writing treasure tales in Salem at this time. The Second Great Awakening's emphasis on personal religious experience created openness to new revelation. Maritime trade made Salem internationally connected and culturally diverse.</p>
+
+                <h2>Purpose of the Revelation</h2>
+                
+                <h3>Short Term</h3>
+                <ul>
+                    <li>Redirect Joseph's focus from financial concerns to missionary work and soul-saving</li>
+                    <li>Comfort the brethren regarding Church debts while teaching patience</li>
+                    <li>Prevent further treasure-seeking that might damage the Church's reputation</li>
+                    <li>Provide specific guidance about staying in Salem to preach the gospel</li>
+                    <li>Encourage research into Salem's early inhabitants (genealogy and family history work)</li>
+                </ul>
+                
+                <h3>Long Term</h3>
+                <ul>
+                    <li>Establish that missionary work and conversion of souls is the Lord's priority</li>
+                    <li>Teach that the Lord can redeem our mistakes when we remain faithful</li>
+                    <li>Provide a pattern for recognizing divine guidance through peace and power</li>
+                    <li>Demonstrate that temporal blessings come as a result of spiritual priorities</li>
+                    <li>Connect temple work and genealogy to missionary efforts</li>
+                </ul>
+
+                <h2>Significance</h2>
+                
+                <h3>Short Term</h3>
+                <p>The revelation immediately reoriented the brethren's thinking from treasure-hunting to soul-saving. Rather than sharply rebuking Joseph, the Lord showed mercy by acknowledging the journey's folly while promising future blessings. The brethren began preaching door-to-door in Salem and visiting the East India Marine Society Museum with renewed purpose.</p>
+                
+                <h3>Long Term</h3>
+                <p>This revelation proved prophetic—Salem became a significant missionary area. In 1841, Elder Erastus Snow reported remarkable success there, with the Salem Gazette noting baptisms and the Salem Register reporting that "Mormonism is advancing with a perfect rush in this city." The revelation's pattern of divine patience with human weakness encourages modern Saints.</p>
+
+                <h2>Cultural Insights</h2>
+                
+                <h3>Ancient Patterns</h3>
+                <p>The Lord's patience with Joseph mirrors His dealings with prophets like Jonah, who also pursued misguided paths before fulfilling divine purposes. The emphasis on genealogy and "ancient inhabitants" connects to Hebrew traditions of record-keeping and honoring ancestors. Jesus' teaching that "where your treasure is, there will your heart be also" (<a href="https://www.blueletterbible.org/kjv/mat/6/21/">Matthew 6:21</a>) undergirds this revelation.</p>
+                
+                <h3>Modern Relevance</h3>
+                <p>In today's consumer culture, the revelation challenges materialism and financial anxiety. The principle of recognizing God's will through "peace and power" rather than prosperity resonates in an age of prosperity gospel teachings. The Lord's promise to "order all things for your good" (verse 11) provides comfort during economic uncertainties.</p>
+
+                <h2>Modern Application</h2>
+                
+                <h3>Personal Application</h3>
+                <ul>
+                    <li>Prioritize spiritual growth and service over financial gain when making decisions</li>
+                    <li>Trust the Lord to "order all things for your good" even when plans fail</li>
+                    <li>Recognize divine guidance through feelings of peace and spiritual power</li>
+                    <li>View financial struggles as opportunities to demonstrate faith</li>
+                    <li>Engage in family history research as the Lord's "treasure hunt" for souls</li>
+                </ul>
+                
+                <h3>Family Application</h3>
+                <ul>
+                    <li>Teach children that people are more valuable than possessions</li>
+                    <li>Share stories of when family plans changed but the Lord provided better paths</li>
+                    <li>Make genealogical research a family activity, seeking spiritual "treasures"</li>
+                    <li>Practice recognizing the Spirit's peace as a family when making decisions</li>
+                    <li>Demonstrate faith during financial challenges rather than pursuing get-rich-quick schemes</li>
+                </ul>
+                
+                <h3>Church Application</h3>
+                <ul>
+                    <li>Support missionary work as the Church's primary treasure-seeking activity</li>
+                    <li>Contribute to temple and family history work, finding spiritual treasures</li>
+                    <li>Avoid judging leaders who make mistakes, recognizing the Lord's patience</li>
+                    <li>Trust Church financial stewardship rather than worrying about institutional debts</li>
+                    <li>Participate in ministering as treasure-hunting for souls needing care</li>
+                </ul>
+                
+                <h3>Community Application</h3>
+                <ul>
+                    <li>Value relationships and service over accumulation of wealth</li>
+                    <li>Share the gospel with neighbors, recognizing them as treasures</li>
+                    <li>Demonstrate integrity in business dealings despite financial pressure</li>
+                    <li>Serve in community organizations, seeking human connections over status</li>
+                    <li>Support local genealogical and historical societies as treasure-preservation efforts</li>
+                </ul>
+
+                <h2>Key Doctrines</h2>
+                
+                <h3>New Doctrines Introduced</h3>
+                <ul>
+                    <li>The Lord values souls as treasures far exceeding material wealth</li>
+                    <li>Divine guidance comes through peace and power in the soul</li>
+                    <li>The Lord can transform human folly into opportunities for His work</li>
+                    <li>Genealogical research connects to missionary work and salvation</li>
+                    <li>God orders temporal circumstances for spiritual good when we trust Him</li>
+                </ul>
+                
+                <h3>Previous Doctrines Clarified</h3>
+                <ul>
+                    <li>The worth of souls, established in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18">D&C 18:10-16</a>, reemphasized</li>
+                    <li>The pattern of divine patience with prophetic mistakes demonstrated</li>
+                    <li>Temporal concerns should yield to spiritual priorities, echoing <a href="https://www.blueletterbible.org/kjv/mat/6/33/">Matthew 6:33</a></li>
+                    <li>Recognition of the Spirit through peace confirmed from <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6">D&C 6:22-23</a></li>
+                </ul>
+                
+                <h3>Covenant Principles Explained</h3>
+                <ul>
+                    <li>Gathering Israel (verse 2) connects to Abrahamic covenant blessings</li>
+                    <li>Building Zion requires prioritizing spiritual over temporal concerns</li>
+                    <li>The Lord's promise to "deal mercifully with her [Zion]" (verse 6) demonstrates covenant faithfulness</li>
+                    <li>Seeking ancient records fulfills covenant responsibilities to ancestors</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- SECTION 2: HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>The Journey to Salem: A Desperate Mission</h2>
+                
+                <h3>Financial Crisis in Kirtland</h3>
+                <p>By summer 1836, Joseph Smith faced crushing debt. The Kirtland Temple, dedicated in March with glorious spiritual manifestations, had cost approximately $40,000—a staggering sum for the small Church. Joseph personally owed around $13,000, with additional obligations looming. Members had sacrificed extraordinarily: women donated china for temple plaster, men worked while fasting, some mortgaged their farms.</p>
+                
+                <h3>The Treasure Story</h3>
+                <p>Into this desperate situation came Jonathan Burgess with an enticing story: a large sum of money supposedly lay buried in the cellar of a house in Salem, Massachusetts. Burgess claimed knowledge of this treasure's location. Given Joseph's treasure-seeking background in his youth (see <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1">Joseph Smith—History 1:55-57</a>) and his desperate financial circumstances, he decided to investigate.</p>
+                
+                <h3>The 1,200-Mile Journey</h3>
+                <p>In late July 1836, the four men left Kirtland for Salem—a journey of approximately 600 miles each way. This represented significant time and expense for men already in debt. The journey demonstrated their desperation and willingness to pursue unlikely solutions to pressing financial problems.</p>
+
+                <h2>Salem: A City of Contrasts</h2>
+                
+                <h3>Merchant Wealth and Maritime Power</h3>
+                <p>Salem was one of America's wealthiest cities in the 1830s. Its merchants had grown rich through global trade, particularly with China and the East Indies. The East India Marine Society Museum showcased exotic treasures from around the world. This visible wealth may have made the buried treasure story seem plausible.</p>
+                
+                <h3>The Shadow of the Witch Trials</h3>
+                <p>Salem remained famous (or infamous) for the 1692-1693 witch trials, during which twenty people were executed for alleged witchcraft. This historical association with religious extremism and false accusations may have made Salem residents particularly skeptical of new religious movements like Mormonism.</p>
+                
+                <h3>Literary Connections</h3>
+                <p>While Joseph and his companions were in Salem, Nathaniel Hawthorne—who lived there—was writing tales of buried treasure. Local newspapers regularly reported treasure-seeking stories. This cultural context normalized treasure-hunting, even as it remained a speculative and often embarrassing pursuit.</p>
+
+                <h2>What Actually Happened in Salem</h2>
+                
+                <h3>The Failed Quest</h3>
+                <p>According to Joseph's August 19, 1836 letter to Emma, they were unable to rent or even access the house where the treasure supposedly lay. The owner refused them entry. The treasure hunt failed completely. This failure could have been devastating—a 1,200-mile journey, significant expense, time away from Church duties, all for nothing.</p>
+                
+                <h3>The Revelation's Timing</h3>
+                <p>On August 6, 1836—relatively early in their Salem stay—Joseph received D&C 111. The Lord did not wait for them to fail completely before redirecting their efforts. This merciful timing prevented further embarrassment and immediately reoriented their purpose. Rather than sharply rebuking them, the Lord acknowledged their "follies" while expressing that He was "not displeased" with their journey (verse 1).</p>
+                
+                <h3>The Real Treasure: People</h3>
+                <p>Following the revelation, the brethren shifted their focus to missionary work. They preached publicly, visited homes, and explored the city. On August 19, they visited the East India Marine Society Museum—not seeking financial treasures, but with new eyes to see Salem's real treasures: its people.</p>
+
+                <h2>Long-Term Fulfillment</h2>
+                
+                <h3>The 1841 Mission</h3>
+                <p>Five years later, in 1841, Elder Erastus Snow was called to serve a mission in Salem. He found remarkable success. The Salem Gazette reported: "A very worthy and respectable laboring man, and his wife, were baptized by immersion in the Mormon Faith." Six months later, the Salem Register noted: "Mormonism is advancing with a perfect rush in this city."</p>
+                
+                <h3>Many Treasures in Salem</h3>
+                <p>The Lord had promised "many people in this city, whom I will gather out in due time for the benefit of Zion" (verse 2) and "there are more treasures than one for you in this city" (verse 10). These prophecies proved true. The converts from Salem brought not only their faith but also their financial means, helping to address the very temporal concerns that had initially driven the journey.</p>
+                
+                <h3>Genealogical Research</h3>
+                <p>The Lord's instruction to "inquire diligently concerning the more ancient inhabitants and founders of this city" (verse 9) proved significant for another reason. Salem housed Essex County records, including genealogies of many early American families—including Joseph Smith's ancestors. Robert Smith, the first of the Smith family in America, had settled in Essex County. This genealogical treasure ultimately served the cause of salvation for the dead.</p>
+
+                <h2>Further Reading & Resources</h2>
+                
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Recommended Books & Articles</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h4>Salem Witch Trials</h4>
+                        <ul>
+                            <li>Mary Beth Norton — <em>In the Devil's Snare</em> (Penguin Random House)</li>
+                            <li>Richard Godbeer — <em>The Salem Witch Hunt</em> (Macmillan Learning)</li>
+                            <li>Carol F. Karlsen — <a href="https://wwnorton.com/books/The-Devil-in-the-Shape-of-a-Woman/" target="_blank"><em>The Devil in the Shape of a Woman</em></a> (W.W. Norton)</li>
+                        </ul>
+                        
+                        <h4>Salem's Founding & History</h4>
+                        <ul>
+                            <li>Sidney Perley — <a href="https://archive.org/details/historyofsalemma01perl" target="_blank"><em>The History of Salem, Massachusetts</em></a> (Internet Archive - Free Access)</li>
+                            <li>James Duncan Phillips — <em>Salem in the Eighteenth Century</em> (Internet Archive - Free Access)</li>
+                            <li>Robert Booth — <em>Death of an Empire: The Rise and Murderous Fall of Salem, America's Richest City</em> (Macmillan Publishers)</li>
+                        </ul>
+                        
+                        <h4>Puritan Context</h4>
+                        <ul>
+                            <li>Edmund S. Morgan — <em>Visible Saints: The History of a Puritan Idea</em> (Pearson)</li>
+                            <li>David D. Hall — <em>Worlds of Wonder, Days of Judgment</em> (Harvard University Press)</li>
+                        </ul>
+                        
+                        <h4>LDS Perspectives on Salem</h4>
+                        <ul>
+                            <li>Craig James Ostler — <a href="https://rsc.byu.edu/you-shall-have-my-word/treasures-witches-ancient-inhabitants-dc-111" target="_blank">"The Treasure in Salem"</a> (BYU Religious Studies Center - Free Online)</li>
+                            <li>Donald Q. Cannon — <em>Regional Studies in Latter-day Saint Church History: New York</em>, Chapter on Salem Mission (Deseret Book)</li>
+                            <li>Oliver Cowdery's Letters — <a href="https://www.josephsmithpapers.org/search?query=salem&sort=relevance&page=1&perpage=10" target="_blank">Search Joseph Smith Papers</a> for Salem references</li>
+                            <li><strong>BONUS:</strong> <a href="https://www.josephsmithpapers.org/paper-summary/revelation-6-august-1836-dc-111/1" target="_blank">D&C 111 Original Manuscript</a> (Joseph Smith Papers)</li>
+                        </ul>
+                        
+                        <h4>Primary Sources & Digital Collections</h4>
+                        <ul>
+                            <li><a href="http://salem.lib.virginia.edu/home.html" target="_blank">University of Virginia Salem Witch Trials Archive</a> — Comprehensive documentary collection</li>
+                            <li><a href="https://www.masshist.org/digital-collections" target="_blank">Massachusetts Historical Society Digital Collections</a> — Search for Salem materials</li>
+                            <li><a href="https://pem.org/" target="_blank">Peabody Essex Museum</a> — Salem maritime and cultural history</li>
+                            <li><a href="https://www.nps.gov/sama/index.htm" target="_blank">Salem Maritime National Historic Site</a> — National Park Service resources</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECTION 3: VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 1: Divine Patience with Human Folly</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:1</strong> — "I, the Lord your God, am not displeased with your coming this journey, notwithstanding your follies."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord begins with remarkable gentleness. Rather than condemning Joseph and his companions for their questionable treasure-seeking journey, He acknowledges their "follies" while expressing that He is "not displeased." This opening establishes a pattern of divine patience with human weakness—the Lord can work with imperfect servants who make mistakes when their hearts remain faithful.</p>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <p>The word "<strong>follies</strong>" in 1836 carried less moral condemnation than today. Noah Webster's 1828 dictionary defined folly as "a weak or absurd act; weakness of intellect; imbecility of mind" rather than sin or wickedness. The Lord distinguishes between foolish judgment and wicked rebellion. Joseph's decision to seek treasure was unwise, not immoral.</p>
+                    
+                    <p>The phrase "<strong>notwithstanding</strong>" signals that the Lord looks beyond human mistakes to see faithful hearts. This echoes the Lord's dealings with other prophets—Abraham's lies about Sarah, Moses' anger at Meribah, Peter's denials—all transformed by divine mercy.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/psa/103/14/">Psalm 103:14</a> — "For he knoweth our frame; he remembereth that we are dust"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1">D&C 1:24-28</a> — The Lord's declaration that He will own His servants despite their weaknesses</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/8/28/">Romans 8:28</a> — "All things work together for good to them that love God"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12">Ether 12:27</a> — The Lord gives weakness that we may be humble and turn to Him</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>When have you made a "foolish" decision that the Lord transformed into something good? How did you recognize His mercy?</li>
+                        <li>How does understanding the Lord's patience with Joseph's mistakes help you trust Him with your own weaknesses?</li>
+                        <li>What's the difference between mistakes made from weakness versus deliberate rebellion? How does the Lord respond differently to each?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 2: The True Treasure—Human Souls</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:2</strong> — "I have much treasure in this city for you, for the benefit of Zion, and many people in this city, whom I will gather out in due time for the benefit of Zion, through your instrumentality."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord dramatically redefines "treasure." Joseph came seeking buried gold; the Lord reveals the true treasure is "many people" who will be gathered to Zion. This establishes a fundamental gospel principle: human souls are infinitely more valuable than material wealth. The phrase "in due time" teaches divine timing—the Lord gathers His people according to His schedule, not ours.</p>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <p>The word "<strong>treasure</strong>" (Hebrew: owtsar אוֹצָר; Greek: thēsauros θησαυρός) typically refers to material wealth. The Lord's redefinition is revolutionary—people are treasure. The phrase "<strong>due time</strong>" emphasizes patience and divine timing, echoing the Lord's pattern throughout scripture of working according to His own schedule.</p>
+                    
+                    <p>"<strong>Through your instrumentality</strong>" indicates that Joseph and his companions would be the means of gathering these souls—their journey would ultimately serve missionary purposes despite its misguided beginning.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18">D&C 18:10</a> — "Remember the worth of souls is great in the sight of God"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/6/19-21/">Matthew 6:19-21</a> — Lay not up treasures on earth but treasures in heaven</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/15/7/">Luke 15:7</a> — Joy in heaven over one sinner that repenteth</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/26">Alma 26:37</a> — "Who can glory too much in the Lord?"</li>
+                    </ul>
+                    
+                    <h4>Prophetic Fulfillment</h4>
+                    <p>In 1841, five years after this revelation, Elder Erastus Snow served a mission in Salem with remarkable success. The Salem Gazette and Salem Register both reported significant baptisms and growth. The "many people" promised were indeed gathered, bringing both spiritual strength and temporal means to bless Zion.</p>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What "treasures" do you currently pursue? How might the Lord want to redirect your definition of success?</li>
+                        <li>Who are the "people" the Lord wants you to recognize as treasures in your life?</li>
+                        <li>When has waiting for the Lord's "due time" proven better than your desired immediate solution?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 3: Building Relationships for Divine Purposes</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:3</strong> — "Therefore, it is expedient that you should form acquaintance with men in this city, as you shall be led, and as it shall be given you."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord provides practical direction: form relationships intentionally. Rather than treasure-hunting, Joseph and his companions should network with people. The phrase "as you shall be led, and as it shall be given you" indicates that the Spirit will guide whom they should meet and teach—this is missionary work directed by revelation, not random socializing.</p>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <p>"<strong>Form acquaintance</strong>" means to intentionally build relationships. In the 1830s, this would involve visiting homes, attending public gatherings, engaging in business conversations. The Lord redirects their networking from financial gain to soul-saving purposes.</p>
+                    
+                    <p>"<strong>As you shall be led</strong>" and "<strong>as it shall be given you</strong>" both indicate divine guidance through the Holy Ghost. This is the pattern for missionary work: follow the Spirit's promptings about whom to teach.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84">D&C 84:85</a> — "Neither take ye thought beforehand what ye shall say; but treasure up in your minds... and it shall be given you"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/8/26-29/">Acts 8:26-29</a> — Philip led by the Spirit to meet the Ethiopian eunuch</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/16/6-10/">Acts 16:6-10</a> — Paul's missionary direction through vision and closed doors</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/17">Alma 17:10-11</a> — Sons of Mosiah taught as the Spirit directed them</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>This verse establishes the pattern for member missionary work: build genuine relationships, follow the Spirit's promptings about whom to teach, trust that the Lord will guide conversations toward gospel topics when appropriate.</p>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>How can you "form acquaintance" with people specifically to bless them spiritually rather than for personal benefit?</li>
+                        <li>When have you felt the Spirit guiding you to specific people for teaching or serving?</li>
+                        <li>What's the difference between strategic networking for financial gain versus relationship-building for missionary purposes?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 4: The Promise of Temporal Blessings</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:4</strong> — "And it shall come to pass in due time that I will give this city into your hands, that you shall have power over it, insomuch that they shall not discover your secret parts; and its wealth pertaining to gold and silver shall be yours."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord promises eventual temporal blessings, but only after spiritual priorities are established. "In due time" again emphasizes divine timing. The promise that Salem's "wealth pertaining to gold and silver shall be yours" would be fulfilled when converts joined the Church bringing their means—not through finding buried treasure, but through converting souls who would contribute to Zion's building.</p>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <p>"<strong>I will give this city into your hands</strong>" means the Lord will give them influence and spiritual power over Salem through successful missionary work. This echoes Joshua's conquest of Canaan—not through military might but through faith.</p>
+                    
+                    <p>"<strong>They shall not discover your secret parts</strong>" has been interpreted various ways: Some see this as protection of sacred temple ordinances (the Kirtland Temple had just been dedicated with sacred ordinances revealed); others as business affairs remaining private; most likely, it refers to the Church's financial dealings remaining undiscovered by enemies, preventing persecution.</p>
+                    
+                    <p>"<strong>Wealth pertaining to gold and silver</strong>" acknowledges their temporal needs while subordinating these to spiritual priorities. The Lord will provide—but according to His timing and methods.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/6/33/">Matthew 6:33</a> — "Seek ye first the kingdom of God... and all these things shall be added unto you"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/82">D&C 82:10</a> — "I, the Lord, am bound when ye do what I say"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/php/4/19/">Philippians 4:19</a> — "My God shall supply all your need according to his riches in glory"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/13">3 Nephi 13:33</a> — Book of Mormon parallel to Matthew 6:33</li>
+                    </ul>
+                    
+                    <h4>Fulfillment</h4>
+                    <p>The 1841 Salem converts proved this promise true. Described as "worthy and respectable" citizens, they brought both faith and financial means that helped the Church. The temporal blessings followed spiritual priorities exactly as the Lord promised.</p>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>When have you seen temporal blessings follow after you prioritized spiritual concerns?</li>
+                        <li>How does trusting the Lord's "due time" for financial relief differ from anxiously seeking immediate solutions?</li>
+                        <li>What does it mean to have "power over" a city in a spiritual sense? How do missionaries today gain this power?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 5: Releasing Anxiety About Debts</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:5</strong> — "Concern not yourselves about your debts, for I will give you power to pay them."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord directly addresses Joseph's primary anxiety: crushing debt. His command is remarkably simple: stop worrying. Rather than providing immediate financial relief, He promises "power to pay them"—capability rather than instant money. This teaches that anxiety doesn't solve problems; faith and continued service do.</p>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <p>"<strong>Concern not yourselves</strong>" echoes Jesus' Sermon on the Mount command to "take no thought for the morrow" (<a href="https://www.blueletterbible.org/kjv/mat/6/34/">Matthew 6:34</a>). The Lord doesn't say the concerns are illegitimate—debts must be paid—but that anxiety about them is counterproductive to faith.</p>
+                    
+                    <p>"<strong>Power to pay them</strong>" doesn't promise immediate money but divine enablement. Whether through converts bringing means, economic opportunities, or Church growth enabling debt service, the emphasis is on the Lord providing capability rather than dramatic bailouts.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/6/25-34/">Matthew 6:25-34</a> — Take no thought for your life, what ye shall eat or drink</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/php/4/6-7/">Philippians 4:6-7</a> — Be anxious for nothing; but in everything by prayer make your requests known</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/1pe/5/7/">1 Peter 5:7</a> — Casting all your care upon him; for he careth for you</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98">D&C 98:1-3</a> — Be patient in afflictions; all things shall work for your good</li>
+                    </ul>
+                    
+                    <h4>Historical Outcome</h4>
+                    <p>Joseph's $13,000 debt was eventually paid, though not through treasure-hunting. Church growth brought increased tithing; the Kirtland Safety Society (despite its 1837 failure) temporarily helped; and the move to Missouri/Illinois in 1838-1839 created fresh financial starts. The Lord provided power to pay over time.</p>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What financial or temporal concerns currently preoccupy your thoughts? How might worry be preventing you from recognizing spiritual solutions?</li>
+                        <li>When has the Lord given you "power" to solve a problem rather than removing the problem immediately?</li>
+                        <li>How do you distinguish between prudent financial planning and faithless worry?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 6: Releasing Anxiety About Zion</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:6</strong> — "Concern not yourselves about Zion, for I will deal mercifully with her."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord addresses the second major anxiety: Zion's troubles. Missouri Saints were being expelled from Jackson County, creating pressure on Church leadership. The Lord's counsel mirrors verse 5: stop worrying. He promises mercy for Zion—not immediate deliverance, but divine care and eventual redemption. This teaches that the Lord's work will succeed despite temporary setbacks.</p>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <p>"<strong>Zion</strong>" in 1836 referred primarily to Jackson County, Missouri, where Saints had been expelled in 1833. Joseph felt responsible for Zion's redemption but was powerless to achieve it militarily or financially. The Lord's promise that He will "deal mercifully with her" assures that despite appearances, Zion remains under divine protection.</p>
+                    
+                    <p>"<strong>Deal mercifully</strong>" doesn't promise immediate restoration but divine compassion and eventual fulfillment of promises. The Lord's mercy manifest in His own timing—ultimately through westward migration to the Salt Lake Valley where Zion would be established permanently.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101">D&C 101:1-9</a> — The Lord's explanation for Zion's afflictions</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/105">D&C 105:9-10</a> — Zion must be redeemed in the Lord's time</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/psa/46/1/">Psalm 46:1</a> — "God is our refuge and strength, a very present help in trouble"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/9">Mormon 9:27</a> — Doubt not, but be believing</li>
+                    </ul>
+                    
+                    <h4>Fulfillment</h4>
+                    <p>Zion's redemption came through the Saints' faithfulness and eventual westward migration. The mercy promised wasn't immediate military victory but the Lord's patient working through His people to establish Zion in the Salt Lake Valley—a Zion that would endure.</p>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What aspects of "Zion" (the Church, specific programs, missions) cause you anxiety? How can you trust the Lord's mercy toward these concerns?</li>
+                        <li>When has the Lord's "mercy" toward His people looked different than you expected but proven better in the long run?</li>
+                        <li>How do you balance legitimate concern for the Church's welfare with trusting that the Lord will guide His kingdom?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 7: The Command to Stay and Work</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:7</strong> — "Tarry in this place, and in the regions round about;"</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord provides direct, practical instruction: remain in Salem and surrounding areas. This redirects their mission from quick treasure-hunting to patient missionary work. "Tarry" (stay, remain) indicates they shouldn't rush back to Kirtland but should spend time building relationships and teaching the gospel in Salem.</p>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <p>"<strong>Tarry</strong>" means to remain, stay, or wait. In biblical usage, it often implies waiting for divine instruction or timing. The Lord is telling them to slow down, stop rushing, and remain where He has sent them—but for different purposes than they originally intended.</p>
+                    
+                    <p>"<strong>In the regions round about</strong>" expands their area of labor beyond Salem itself to surrounding Massachusetts communities. This suggests systematic missionary work rather than focused treasure-hunting in one location.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/luk/24/49/">Luke 24:49</a> — "Tarry ye in the city of Jerusalem, until ye be endued with power from on high"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84">D&C 84:76</a> — "Go ye into all the world, preach the gospel to every creature"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/act/16/9/">Acts 16:9</a> — Paul's vision: "Come over into Macedonia, and help us"</li>
+                    </ul>
+                    
+                    <h4>Application</h4>
+                    <p>Sometimes the Lord's direction is simply to stay where we are rather than rushing to the next opportunity. This verse teaches patience and trust that the Lord has purposes for our location and circumstances that we may not initially recognize.</p>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>When has the Lord directed you to "tarry" somewhere when you wanted to move on? What did you learn by staying?</li>
+                        <li>How do you recognize when the Lord wants you to remain in a situation versus when He's opening doors to leave?</li>
+                        <li>What missionary opportunities exist "in the regions round about" where you currently live?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 8: The Peace and Power Pattern</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:8</strong> — "And the place where it is my will that you should tarry, for the main, shall be signalized unto you by the peace and power of my Spirit, that shall flow unto you."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>This verse provides one of scripture's clearest patterns for personal revelation. Divine guidance comes through "peace and power" of the Spirit—not through dramatic signs or financial success. This teaches Saints how to recognize God's will in any situation. Peace provides reassurance; power provides strength to act. Together, they create a complete witness of divine approval.</p>
+                    
+                    <h4>Language & Cultural Insights</h4>
+                    <p>"<strong>Signalized</strong>" means indicated or made known through a signal. The signal is specifically "peace and power"—spiritual feelings rather than external circumstances.</p>
+                    
+                    <p>"<strong>Peace</strong>" (Hebrew: shalom שָׁלוֹם; Greek: eirēnē εἰρήνη) in scripture means wholeness, completeness, and right relationship with God—not merely absence of conflict. It's deep assurance that one is in God's will.</p>
+                    
+                    <p>"<strong>Power</strong>" (Hebrew: koach כֹּחַ; Greek: dynamis δύναμις) refers to spiritual strength and capability. When combined with peace, it provides both confirmation and enablement to act.</p>
+                    
+                    <p>"<strong>Flow unto you</strong>" suggests continuous guidance rather than a single moment—the Spirit's confirmation comes as sustained spiritual feeling.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6">D&C 6:22-23</a> — "Did I not speak peace to your mind? What greater witness can you have?"</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8">D&C 8:2-3</a> — "I will tell you in your mind and in your heart, by the Holy Ghost"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/jhn/14/27/">John 14:27</a> — "Peace I leave with you, my peace I give unto you"</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/col/3/15/">Colossians 3:15</a> — "Let the peace of God rule in your hearts"</li>
+                    </ul>
+                    
+                    <h4>Modern Application</h4>
+                    <p>This pattern guides modern revelation seeking. When facing decisions:</p>
+                    <ol>
+                        <li>Study options and make a tentative choice</li>
+                        <li>Present that choice to the Lord in prayer</li>
+                        <li>Watch for feelings of peace (confirming) or stupor (warning)</li>
+                        <li>Expect power (spiritual strength) to accompany correct decisions</li>
+                    </ol>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>When have you felt both "peace and power" regarding a decision? How did that influence your choice?</li>
+                        <li>How do you distinguish between spiritual peace and mere comfort or convenience?</li>
+                        <li>Why might the Lord use spiritual feelings rather than obvious signs to guide His people?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 9: Genealogical Treasures</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:9</strong> — "This place you may obtain by hire. And inquire diligently concerning the more ancient inhabitants and founders of this city;"</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord provides practical direction: rent lodging ("obtain by hire") and research Salem's early inhabitants. This command connects missionary work to family history—a crucial link in Latter-day Saint theology. The dead need ordinances performed by the living, and genealogical research enables temple work. What appears as historical curiosity is actually soul-saving work for both living and dead.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mal/4/5-6/">Malachi 4:5-6</a> — Elijah shall turn hearts of children to fathers</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng">D&C 110:13-16</a> — Elijah's 1836 return to restore sealing keys</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng">D&C 128:15-18</a> — Baptism for the dead and welding links</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>What genealogical research have you done for your ancestors? What more could you do?</li>
+                        <li>How does viewing family history as "treasure hunting" change your motivation?</li>
+                        <li>Why might the Lord connect missionary work (gathering living souls) with genealogical work (redeeming dead souls)?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 10: Multiple Treasures</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:10</strong> — "For there are more treasures than one for you in this city."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The Lord emphasizes plurality: "treasures"—not treasure. Joseph came seeking one treasure (buried gold); the Lord reveals multiple treasures exist. This includes people to convert, genealogical records to discover, missionary experiences to gain, and eventual temporal blessings. The verse teaches that God's blessings are always more abundant and diverse than our limited expectations.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/13/44/">Matthew 13:44</a> — The parable of treasure hidden in a field</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/6/20/">Matthew 6:20</a> — Lay up treasures in heaven</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?lang=eng">D&C 18:10</a> — Remember the worth of souls is great</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>When has the Lord provided different blessings than you expected, yet proved they were better?</li>
+                        <li>What "treasures" exist in your current circumstances that you might be overlooking?</li>
+                        <li>How does understanding that God's blessings are plural ("treasures") help you trust His plans?</li>
+                    </ol>
+                </div>
+                </div>
+
+            <button class="sub-accordion" onclick="toggleSubSection(this)">Verse 11: Divine Order and Progressive Blessing</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                
+                    <div class="scripture-quote">
+                        <p><strong>D&C 111:11</strong> — "Therefore, be ye as wise as serpents and yet without sin; and I will order all things for your good, as fast as ye are able to receive them. Amen."</p>
+                    </div>
+                    
+                    <h4>Doctrinal Summary</h4>
+                    <p>The revelation concludes with two powerful principles. First, disciples should exercise wisdom ("wise as serpents") while maintaining moral purity ("without sin"). Second, the Lord promises to "order all things for your good"—He orchestrates circumstances for Saints' benefit when they remain faithful. The phrase "as fast as ye are able to receive them" teaches that blessings come according to our capacity, not merely our desires.</p>
+                    
+                    <h4>Cross-References</h4>
+                    <ul>
+                        <li><a href="https://www.blueletterbible.org/kjv/mat/10/16/">Matthew 10:16</a> — Be wise as serpents, harmless as doves</li>
+                        <li><a href="https://www.blueletterbible.org/kjv/rom/8/28/">Romans 8:28</a> — All things work together for good</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng">D&C 122:7</a> — All these things shall give thee experience</li>
+                        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/28?lang=eng">2 Nephi 28:30</a> — Line upon line, precept upon precept</li>
+                    </ul>
+                    
+                    <h4>Reflection Questions</h4>
+                    <ol>
+                        <li>When have you recognized that the Lord "ordered all things for your good" in a difficult circumstance?</li>
+                        <li>How do you balance being "wise as serpents" (shrewd) with being "without sin" (maintaining integrity)?</li>
+                        <li>What blessings might you be unable to receive yet because of current capacity?</li>
+                    </ol>
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Word Studies -->
+        <!-- SECTION 4: WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <p>Complete linguistic analysis of highlighted terms with Hebrew, Greek, Latin, Etymology, and Webster 1828 definitions.</p>
+
+                <button class="sub-accordion" onclick="toggleSubSection(this)">FOLLY (Verse 1)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h4>English Definition (1836)</h4>
+                        <p>Noah Webster's 1828 dictionary defined "folly" as "a weak or absurd act; weakness of intellect; imbecility of mind; want of understanding." This was less severe than modern usage, which often implies sinful foolishness. In 1836, folly described unwise judgment rather than moral failure.</p>
+                        
+                        <h4>Hebrew Analysis</h4>
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/h200/kjv/wlc/0-1/" target="_blank">ivveleth</a></strong> (אִוֶּלֶת) — "foolishness, silliness"<br>
+                        Related to <strong><a href="https://www.blueletterbible.org/lexicon/h191/kjv/wlc/0-1/" target="_blank">evil</a></strong> (אֱוִיל), "fool, foolish"—one who rejects wisdom<br>
+                        Found frequently in Proverbs describing those who lack practical wisdom</p>
+                        
+                        <h4>Greek Analysis</h4>
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/g877/kjv/tr/0-1/" target="_blank">aphrosynē</a></strong> (ἀφροσύνη) — "foolishness, lack of sense"<br>
+                        From <strong><a href="https://www.blueletterbible.org/lexicon/g878/kjv/tr/0-1/" target="_blank">aphrōn</a></strong> (ἄφρων), "without reason, senseless"<br>
+                        Not necessarily sinful but indicating poor judgment</p>
+                        
+                        <h4>Etymology</h4>
+                        <p>From Old French <em>folie</em> "madness, stupidity," from <em>fol</em> "foolish." Ultimately from Latin <em>follis</em> "bellows, bag"—suggesting an empty-headed person, one full of air rather than wisdom.</p>
+                        
+                        <h4>Doctrinal Significance</h4>
+                        <p>The Lord's use of "folly" rather than "sin" or "transgression" signals that Joseph's treasure-seeking journey was unwise but not wicked. This distinction matters: the Lord corrects poor judgment without condemning character. He can work with foolish decisions when hearts remain faithful. This teaches that not every mistake is a sin requiring repentance—some errors simply need wisdom applied going forward.</p>
+                        
+                        <h4>Cross-References</h4>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/pro/26/11/" target="_blank">Proverbs 26:11</a> — As a dog returneth to his vomit, so a fool returneth to his folly</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/ecc/10/1/" target="_blank">Ecclesiastes 10:1</a> — Dead flies cause the ointment to send forth a stinking savour: so doth a little folly</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/2co/11/1/" target="_blank">2 Corinthians 11:1</a> — Would to God ye could bear with me a little in my folly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion" onclick="toggleSubSection(this)">TREASURE (Verses 2, 10)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h4>English Definition</h4>
+                        <p>Webster 1828: "Wealth accumulated; particularly, a stock or store of money in reserve; also, any thing valued and laid up for preservation."</p>
+                        
+                        <h4>Hebrew Analysis</h4>
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/h214/kjv/wlc/0-1/" target="_blank">Owtsar</a></strong> (אוֹצָר) — "treasure, storehouse, treasury"<br>
+                        Used of physical treasures (gold, silver) and metaphorical treasures (wisdom, knowledge)<br>
+                        Related to <strong><a href="https://www.blueletterbible.org/lexicon/h6696/kjv/wlc/0-1/" target="_blank">tsur</a></strong> (צוּר), "to bind, besiege"—treasure is bound up, secured, protected</p>
+                        
+                        <h4>Greek Analysis</h4>
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/g2344/kjv/tr/0-1/" target="_blank">Thēsauros</a></strong> (θησαυρός) — "treasure, storehouse, treasure chest"<br>
+                        Jesus uses this word extensively in the Gospels, contrasting earthly and heavenly treasures<br>
+                        The verb <strong><a href="https://www.blueletterbible.org/lexicon/g2343/kjv/tr/0-1/" target="_blank">thēsaurizō</a></strong> (θησαυρίζω) means "to store up, lay up treasure"</p>
+                        
+                        <h4>Etymology</h4>
+                        <p>From Latin <em>thesaurus</em>, from Greek <em>thēsauros</em> "store, treasure." Related to Greek <em>tithēmi</em> "to put, place"—treasure is what is carefully put away for safekeeping.</p>
+                        
+                        <h4>Doctrinal Significance</h4>
+                        <p>The Lord's revolutionary redefinition of treasure in D&C 111 lies at the heart of Restoration theology: human souls are treasures infinitely more valuable than material wealth. This principle appears throughout scripture but receives explicit articulation here. When Joseph sought buried gold, the Lord revealed "many people" as the true treasure (verse 2) and "more treasures than one" (verse 10). This teaching:</p>
+                        <ul>
+                            <li>Establishes soul-saving as the primary work of the kingdom</li>
+                            <li>Reorients priorities from temporal to eternal concerns</li>
+                            <li>Explains why missionary work receives such emphasis</li>
+                            <li>Connects treasure-seeking impulse to its proper object: souls</li>
+                            <li>Promises that temporal blessings follow spiritual priorities</li>
+                        </ul>
+                        
+                        <h4>Cross-References</h4>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/mat/6/19-21/" target="_blank">Matthew 6:19-21</a> — Lay up treasures in heaven where neither moth nor rust doth corrupt</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/mat/13/44/" target="_blank">Matthew 13:44</a> — The kingdom of heaven is like unto treasure hid in a field</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18" target="_blank">D&C 18:10</a> — Remember the worth of souls is great in the sight of God</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/2" target="_blank">Jacob 2:18-19</a> — Think of your brethren like unto yourselves... seek the kingdom of God</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion" onclick="toggleSubSection(this)">PEACE AND POWER (Verse 8)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h4>English Definitions</h4>
+                        <ul>
+                            <li><strong>Peace:</strong> Webster 1828: "A state of quiet or tranquility; freedom from disturbance or agitation; applicable to society, to individuals, or to the temper of the mind"</li>
+                            <li><strong>Power:</strong> Webster 1828: "Physical strength; force; might; ability to act, or energy of action"</li>
+                        </ul>
+                        
+                        <h4>Hebrew Analysis</h4>
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/lexicon/h7965/kjv/wlc/0-1/" target="_blank">Shalom</a></strong> (שָׁלוֹם) — "peace, completeness, safety, welfare." From <strong><a href="https://www.blueletterbible.org/lexicon/h8003/kjv/wlc/0-1/" target="_blank">shalem</a></strong> (שָׁלֵם), "to be complete, sound." More than absence of conflict—positive wholeness and right relationship with God</li>
+                            <li><strong><a href="https://www.blueletterbible.org/lexicon/h3581/kjv/wlc/0-1/" target="_blank">Koach</a></strong> (כֹּחַ) — "strength, power, might." Ability to accomplish, capacity to act. Often used of God's power enabling human action</li>
+                        </ul>
+                        
+                        <h4>Greek Analysis</h4>
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/lexicon/g1515/kjv/tr/0-1/" target="_blank">Eirēnē</a></strong> (εἰρήνη) — "peace, tranquility, prosperity." The Septuagint uses this to translate Hebrew <em>shalom</em>. Jesus uses it in <a href="https://www.blueletterbible.org/kjv/jhn/14/27/" target="_blank">John 14:27</a>: "Peace I leave with you, my peace I give unto you"</li>
+                            <li><strong><a href="https://www.blueletterbible.org/lexicon/g1411/kjv/tr/0-1/" target="_blank">Dynamis</a></strong> (δύναμις) — "power, might, strength, ability." Root of English "dynamic." Often refers to miraculous power or spiritual capability</li>
+                        </ul>
+                        
+                        <h4>Etymology</h4>
+                        <ul>
+                            <li><strong>Peace:</strong> From Latin <em>pax</em> "peace, treaty," from Proto-Indo-European root <em>*pag-</em> "to fasten"—suggesting binding together in harmony</li>
+                            <li><strong>Power:</strong> From Old French <em>poeir</em>, from Latin <em>potere</em> "to be able"—capability and authority combined</li>
+                        </ul>
+                        
+                        <h4>Doctrinal Significance</h4>
+                        <p>The combination of "peace and power" provides a dual-witness pattern for recognizing divine will:</p>
+                        <ul>
+                            <li><strong>Peace</strong> gives confirmation—the assurance that a decision is right</li>
+                            <li><strong>Power</strong> gives capability—the strength to act on that decision</li>
+                        </ul>
+                        
+                        <p>This pattern appears throughout scripture and modern revelation. When both are present, individuals can proceed with confidence. When either is absent—if one feels power without peace (potentially prideful self-will) or peace without power (perhaps comfortable complacency)—further spiritual inquiry is needed. The combination creates balanced revelation.</p>
+                        
+                        <p>The Lord specifically says these will "flow unto you" (verse 8)—suggesting a continuous stream rather than a single moment. Divine guidance isn't always dramatic but often comes as sustained, subtle spiritual feeling.</p>
+                        
+                        <h4>Cross-References</h4>
+                        <ul>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6" target="_blank">D&C 6:22-23</a> — "Did I not speak peace to your mind concerning the matter? What greater witness can you have?"</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8" target="_blank">D&C 8:2-3</a> — "I will tell you in your mind and in your heart, by the Holy Ghost"</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/rom/15/13/" target="_blank">Romans 15:13</a> — "Hope, joy, peace in believing... that ye may abound in hope, through the power of the Holy Ghost"</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/php/4/7/" target="_blank">Philippians 4:7</a> — "The peace of God, which passeth all understanding, shall keep your hearts"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion" onclick="toggleSubSection(this)">WISE AS SERPENTS (Verse 11)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h4>English Definition</h4>
+                        <p>Webster 1828: "Wise - Properly, having knowledge; hence, having the power of discerning and judging correctly, or of discriminating between what is true and what is false"</p>
+                        
+                        <h4>Hebrew Analysis</h4>
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/lexicon/h2450/kjv/wlc/0-1/" target="_blank">Chakam</a></strong> (חָכָם) — "wise, skilled, experienced." Practical wisdom applied to life situations</li>
+                            <li><strong><a href="https://www.blueletterbible.org/lexicon/h5175/kjv/wlc/0-1/" target="_blank">Nachash</a></strong> (נָחָשׁ) — "serpent, snake." The serpent in Eden was described as <strong><a href="https://www.blueletterbible.org/lexicon/h6175/kjv/wlc/0-1/" target="_blank">arum</a></strong> (עָרוּם), "shrewd, crafty, prudent"—able to observe and strategize</li>
+                        </ul>
+                        
+                        <h4>Greek Analysis</h4>
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/lexicon/g5429/kjv/tr/0-1/" target="_blank">Phronimos</a></strong> (φρόνιμος) — "wise, prudent, sensible." From <strong><a href="https://www.blueletterbible.org/lexicon/g5424/kjv/tr/0-1/" target="_blank">phrēn</a></strong> (φρήν), "mind." Practical intelligence applied to situations</li>
+                            <li><strong><a href="https://www.blueletterbible.org/lexicon/g3789/kjv/tr/0-1/" target="_blank">Ophis</a></strong> (ὄφις) — "serpent, snake." Jesus uses this exact phrase in <a href="https://www.blueletterbible.org/kjv/mat/10/16/" target="_blank">Matthew 10:16</a> when sending apostles on their mission</li>
+                        </ul>
+                        
+                        <h4>Etymology</h4>
+                        <ul>
+                            <li><strong>Wise:</strong> From Old English <em>wis</em> "learned, sagacious," from Proto-Germanic <em>*wissaz</em>, from Proto-Indo-European root <em>*weid-</em> "to see"—wisdom involves seeing clearly</li>
+                            <li><strong>Serpent:</strong> From Latin <em>serpentem</em> "creeping thing," from <em>serpere</em> "to creep"—describes movement but also cunning approach</li>
+                        </ul>
+                        
+                        <h4>Doctrinal Significance</h4>
+                        <p>The command to be "wise as serpents and yet without sin" creates intentional tension: use discernment and shrewdness in navigating the world, but maintain moral purity. This isn't permission for deception but a call to:</p>
+                        <ul>
+                            <li><strong>Observe carefully:</strong> Pay attention to people's motives and situations</li>
+                            <li><strong>Think strategically:</strong> Plan wisely rather than acting impulsively</li>
+                            <li><strong>Protect what's sacred:</strong> Don't cast pearls before swine (<a href="https://www.blueletterbible.org/kjv/mat/7/6/" target="_blank">Matthew 7:6</a>)</li>
+                            <li><strong>Maintain integrity:</strong> Never compromise truth or righteousness for advantage</li>
+                        </ul>
+                        
+                        <p>In D&C 111's context, this counsel tells Joseph and companions: learn from your treasure-seeking mistake (be wise), but don't sin or deceive in pursuit of financial relief. Use good judgment in future financial decisions while maintaining moral standards.</p>
+                        
+                        <h4>Cross-References</h4>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/mat/10/16/" target="_blank">Matthew 10:16</a> — Be ye wise as serpents, and harmless as doves</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/luk/16/8/" target="_blank">Luke 16:8</a> — The children of this world are wiser in their generation</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/pro/22/3/" target="_blank">Proverbs 22:3</a> — A prudent man foreseeth the evil, and hideth himself</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/38" target="_blank">D&C 38:30</a> — Be wise in the days of your probation</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECTION 5: TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h3>For Sunday School or Gospel Doctrine Classes</h3>
+                <h4>Opening Discussion Question</h4>
+                <p>"When has a plan that didn't work out turned into a blessing you didn't expect? How did you recognize the Lord's hand in redirecting your path?"</p>
+                
+                <h4>Key Teaching Points</h4>
+                <ol>
+                    <li><strong>The Lord's Definition of Treasure:</strong> Create a visual comparison chart showing "Worldly Treasures" vs "Eternal Treasures." Have class members contribute examples. Discuss why human souls are the greatest treasure.</li>
+                    <li><strong>Recognizing Divine Guidance:</strong> Teach the "Peace and Power" pattern from verse 8. Share examples of how this has worked in your life.</li>
+                    <li><strong>Turning Folly into Faith:</strong> Discuss how the Lord transforms our mistakes into learning opportunities. Emphasize that not every mistake is a sin—some are simply unwise choices that God can redeem.</li>
+                    <li><strong>Divine Timing:</strong> Explore "due time" (verses 2, 4) and "as fast as ye are able to receive them" (verse 11).</li>
+                </ol>
+                
+                <h3>For Youth Sunday School or Seminary</h3>
+                <h4>Connection to Youth Experience</h4>
+                <p>Youth face constant pressure about career choices, college selection, relationships, and financial success. D&C 111 provides a pattern for making decisions when anxious about the future:</p>
+                <ol>
+                    <li>The Lord cares more about who you're becoming than what you're accumulating</li>
+                    <li>Feeling peace and power is more reliable than calculating financial outcomes</li>
+                    <li>Mistakes don't disqualify you from God's love or service</li>
+                    <li>God can turn your "follies" into blessings when you remain faithful</li>
+                </ol>
+                
+                <h3>For Family Home Evening</h3>
+                <h4>Simplified Lesson for Families with Young Children</h4>
+                <ol>
+                    <li><strong>Tell the Story:</strong> "Joseph Smith needed money, so he went to Salem looking for treasure—like buried gold! But Heavenly Father said, 'Joseph, the real treasure isn't gold—it's people! I want you to teach people about Jesus.' And Joseph learned that people are more important than money."</li>
+                    <li><strong>Activity:</strong> Have children draw pictures of people who are "treasures" to them—family, friends, teachers.</li>
+                    <li><strong>Discussion:</strong> "Why are people more important than toys or money?"</li>
+                </ol>
+                
+                <h3>For Adult Scripture Study</h3>
+                <h4>Deep Dive Questions</h4>
+                <ol>
+                    <li>How does D&C 111 help us understand the relationship between temporal and spiritual blessings?</li>
+                    <li>The Lord says He's "not displeased" with their journey despite their follies. What does this teach about how God views our mistakes versus our motives?</li>
+                    <li>Verse 4 promises "wealth pertaining to gold and silver" but only after fulfilling spiritual priorities. How did this prove true?</li>
+                    <li>How does the principle of "peace and power" guide personal revelation?</li>
+                    <li>The instruction to research "ancient inhabitants" connects missionary work to genealogy. How are these two forms of treasure-seeking related?</li>
+                </ol>
+                
+                <h3>For Missionary Lessons</h3>
+                <h4>How This Revelation Supports Missionary Purposes</h4>
+                <p>D&C 111 powerfully teaches that missionary work is the Lord's supreme priority. When Joseph sought treasure, the Lord redirected him to "many people" as the true treasure.</p>
+                
+                <h3>For Personal Study and Meditation</h3>
+                <h4>Questions for Personal Reflection</h4>
+                <ol>
+                    <li>What "treasure" am I currently seeking? Is it aligned with what the Lord values most?</li>
+                    <li>When have I felt the Lord's patience with my "follies"?</li>
+                    <li>What anxieties am I carrying that the Lord wants me to release?</li>
+                    <li>How can I better recognize the Spirit's guidance through "peace and power"?</li>
+                    <li>Who are the "treasures"—the people—the Lord wants me to focus on?</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- SECTION 6: STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h3>Personal Reflection Questions</h3>
+                <ol>
+                    <li>When has the Lord redirected my plans in a way that seemed disappointing at first but proved better in the long run?</li>
+                    <li>What "treasures" am I currently seeking? How might the Lord want to redirect my definition of success?</li>
+                    <li>How do I recognize the difference between the Lord's "peace and power" versus my own desires or anxieties?</li>
+                    <li>When have I made a "foolish" decision that the Lord transformed into something good?</li>
+                    <li>What temporal concerns am I holding onto that the Lord wants me to release?</li>
+                    <li>Who are the "people treasures" in my life that the Lord wants me to focus on?</li>
+                    <li>How can I better trust the Lord's timing when He says "in due time"?</li>
+                    <li>What does it mean practically to be "wise as serpents and yet without sin" in my daily life?</li>
+                </ol>
+                
+                <h3>Family Discussion Questions</h3>
+                <ol>
+                    <li>Share a time when a family plan didn't work out but something better happened instead.</li>
+                    <li>What makes people more valuable than money or possessions?</li>
+                    <li>How does our family know when the Lord is guiding us?</li>
+                    <li>What are the most important "treasures" our family has?</li>
+                    <li>How can we help each other trust the Lord's timing when we're impatient?</li>
+                    <li>What family history work could we do to find "genealogical treasures"?</li>
+                </ol>
+                
+                <h3>Gospel Doctrine/Sunday School Questions</h3>
+                <ol>
+                    <li>How does D&C 111 help us understand the relationship between temporal and spiritual blessings?</li>
+                    <li>What does this revelation teach about how God views our mistakes versus our motives?</li>
+                    <li>How did the promise of "wealth pertaining to gold and silver" prove true in Salem's history?</li>
+                    <li>Why does the Lord sometimes allow us to pursue unwise plans before redirecting us?</li>
+                    <li>How does the "peace and power" pattern help us recognize personal revelation?</li>
+                    <li>What is the connection between missionary work and genealogical research in D&C 111?</li>
+                    <li>How can we apply the principle of valuing souls over material wealth in modern life?</li>
+                </ol>
+                
+                <h3>Youth Discussion Questions</h3>
+                <ol>
+                    <li>When has a disappointment turned into something better in your life?</li>
+                    <li>How do you know the difference between the Spirit's peace and just feeling comfortable?</li>
+                    <li>What pressures do you face to chase "treasures" that aren't really important?</li>
+                    <li>How can you be "wise" in your decisions without compromising your standards?</li>
+                    <li>Who is a "treasure" (important person) in your life that you could focus on more?</li>
+                    <li>When has waiting for the Lord's timing been hard but worth it?</li>
+                </ol>
+                
+                <h3>Application Questions</h3>
+                <ol>
+                    <li>What specific action will I take this week to prioritize people over possessions?</li>
+                    <li>How will I practice recognizing the Spirit's "peace and power" in my daily decisions?</li>
+                    <li>What anxiety about temporal concerns will I consciously release to the Lord?</li>
+                    <li>Who is one person the Lord wants me to view as a "treasure" and serve this week?</li>
+                    <li>What step will I take toward family history research to find "genealogical treasures"?</li>
+                </ol>
+
+            </div>
+        </div>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Toggle section function
+        function toggleSection(button) {
+            button.classList.toggle('active');
+            const panel = button.nextElementSibling;
+            panel.classList.toggle('active');
+        }
+
+        // Toggle sub-section function
+        function toggleSubSection(button) {
+            button.classList.toggle('active');
+            const panel = button.nextElementSibling;
+            panel.classList.toggle('active');
+        }
+
+        // Expand all sections
+        function expandAll() {
+            const sections = document.querySelectorAll('.accordion-section');
+            const panels = document.querySelectorAll('.content-panel');
+            const subSections = document.querySelectorAll('.sub-accordion');
+            const subPanels = document.querySelectorAll('.sub-panel');
+
+            sections.forEach(section => section.classList.add('active'));
+            panels.forEach(panel => panel.classList.add('active'));
+            subSections.forEach(section => section.classList.add('active'));
+            subPanels.forEach(panel => panel.classList.add('active'));
+        }
+
+        // Collapse all sections
+        function collapseAll() {
+            const sections = document.querySelectorAll('.accordion-section');
+            const panels = document.querySelectorAll('.content-panel');
+            const subSections = document.querySelectorAll('.sub-accordion');
+            const subPanels = document.querySelectorAll('.sub-panel');
+
+            sections.forEach(section => section.classList.remove('active'));
+            panels.forEach(panel => panel.classList.remove('active'));
+            subSections.forEach(section => section.classList.remove('active'));
+            subPanels.forEach(panel => panel.classList.remove('active'));
+        }
+    </script>
+
+    <!-- Bottom Navigation -->
+    <div class="nav-bar" style="margin-top: 40px; border-top: 2px solid #7c9885; border-bottom: none;">
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Lesson Home</a>
+            <span class="nav-btn disabled">Previous</span>
+            <a href="dc112_complete.html" class="nav-btn">Next: D&C 112</a>
+        </div>
+        <div class="nav-links">
+            <a href="dc111_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 111</a>
+            <a href="dc112_complete.html" class="nav-btn">D&C 112</a>
+            <a href="dc113_complete.html" class="nav-btn">D&C 113</a>
+            <a href="dc114_complete.html" class="nav-btn">D&C 114</a>
+        </div>
+    </div>
+
+</body>
+</html>

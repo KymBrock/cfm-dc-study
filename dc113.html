@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 113 Complete Study Guide - Questions on Isaiah Answered</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Site Header */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+
+        .cfm-button:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        .cfm-button.active {
+            background-color: #7c9885;
+            color: white;
+            font-weight: 600;
+        }
+
+        .cfm-button.active:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+        }
+
+        .cfm-button.disabled:hover {
+            transform: none;
+        }
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        /* Scripture Quote */
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+        /* Expand/Collapse Buttons */
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+        /* Content Panels */
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        /* Sub-accordions for verses */
+        .sub-accordion {
+            background-color: #f0f4f0;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sub-accordion:hover {
+            background-color: #e2e8e2;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: #7c9885;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Sub-panels */
+        .sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        /* Typography within panels */
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .panel-content h3 {
+            color: #5a6d5f;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .panel-content h4 {
+            color: #4a5d4f;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .panel-content ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .panel-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .panel-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Special boxes */
+        .info-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 2px solid #d4c190;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .word-study-box {
+            background-color: #fafafa;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        /* Scripture verses */
+        .scripture-verse {
+            background-color: #f9fafb;
+            border-left: 3px solid #7c9885;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #5a6d5f;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .header-section .subtitle {
+                font-size: 1.1em;
+            }
+
+            .panel-content {
+                padding: 20px;
+            }
+
+            .site-title {
+                font-size: 1.5em;
+            }
+
+            .cfm-button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Lesson Home</a>
+            <a href="dc112_complete.html" class="nav-btn">Previous: D&C 112</a>
+            <a href="dc114_complete.html" class="nav-btn">Next: D&C 114</a>
+        </div>
+        <div class="nav-links">
+            <a href="dc111_complete.html" class="nav-btn">D&C 111</a>
+            <a href="dc112_complete.html" class="nav-btn">D&C 112</a>
+            <a href="dc113_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 113</a>
+            <a href="dc114_complete.html" class="nav-btn">D&C 114</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Doctrine and Covenants 113</h1>
+            <p class="subtitle">Questions on Isaiah Answered</p>
+            <div class="scripture-highlight">
+                "Verily thus saith the Lord: It is Christ."
+                <br><br>— <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.2?lang=eng" style="color: white; font-weight: 600;">Doctrine and Covenants 113:2</a>
+            </div>
+            <div class="date-location">
+                <strong>Date:</strong> March 1838 | <strong>Location:</strong> Far West, Missouri
+            </div>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+
+        <!-- SECTION 1: SECTION OVERVIEW -->
+        <button class="accordion-section">1. Section Overview</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Basic Information</h2>
+                
+                <p><strong>Date of Revelation:</strong> March 1838</p>
+                <p><strong>Location:</strong> Far West, Missouri</p>
+                <p><strong>Recipient:</strong> The Church (answers given by Joseph Smith the Prophet)</p>
+                <p><strong>Context:</strong> Answers to questions on the writings of Isaiah</p>
+                <p><strong>Format:</strong> Question-and-answer revelation (unique format in D&C)</p>
+                <p><strong>Isaiah Passages Interpreted:</strong> <a href="https://www.blueletterbible.org/kjv/isa/11/1/">Isaiah 11:1, 10</a> and <a href="https://www.blueletterbible.org/kjv/isa/52/1/">Isaiah 52:1-2, 7-8</a></p>
+                
+                <div class="info-box">
+                    <h4>Section Summary</h4>
+                    <p>In a question-and-answer format unique among revelations, the Prophet Joseph Smith provides inspired interpretations of six Isaiah passages that had puzzled readers for centuries. These answers identify Christ as the stem of Jesse, explain priestly authority in the latter days, define the role of servants bringing good tidings to Zion, clarify the rod and root imagery, and connect ancient Messianic prophecies to the Restoration. The revelation demonstrates how scripture unfolds through prophetic interpretation and establishes Joseph Smith's role in understanding Old Testament prophecy.</p>
+                </div>
+
+                <h2>Understanding Isaiah's Prophecies</h2>
+
+                <h3>The Isaiah Passages in Focus</h3>
+                
+                <p>D&C 113 interprets two crucial passages from Isaiah:</p>
+
+                <h4>Isaiah 11:1-10 - The Branch from Jesse</h4>
+                <p>This passage envisions a future ruler from David's lineage who will judge righteously, bring peace to creation, and serve as an ensign to gather scattered peoples. Written when the Davidic kingdom appeared "cut down," Isaiah promised restoration through a righteous Branch.</p>
+
+                <h4>Isaiah 52:1-2, 7-8 - Zion's Redemption</h4>
+                <p>This passage calls Zion to arise from captivity, put on strength, and welcome messengers bringing good tidings. The watchmen see "eye to eye" when the Lord returns to Zion, and the scattered remnants return singing.</p>
+
+                <h3>Video Resources: Understanding Isaiah</h3>
+
+                <p><strong>The Bible Project - Book of Isaiah Overview</strong></p>
+                
+                <p>📺 <strong>Isaiah Part 1: Introduction and Judgment</strong> (10:33)<br>
+                <a href="https://www.youtube.com/watch?v=d0A6Uchb1F8&t=227s">https://www.youtube.com/watch?v=d0A6Uchb1F8&t=227s</a><br>
+                <em>Overview of Isaiah's historical context, message of judgment, and prophetic structure</em></p>
+
+                <p>📺 <strong>Isaiah Part 2: Servant and New Creation</strong> (9:27)<br>
+                <a href="https://www.youtube.com/watch?v=_TzdEPuqgQg&t=14s">https://www.youtube.com/watch?v=_TzdEPuqgQg&t=14s</a><br>
+                <em>Explanation of the Servant passages, Messianic prophecies, and new creation themes directly relevant to D&C 113</em></p>
+
+                <h2>Key Principles</h2>
+
+                <p><strong>Primary Doctrinal Principle:</strong> True understanding of ancient scripture comes through modern revelation to living prophets who hold keys to interpret God's word for the dispensation of the fulness of times.</p>
+
+                <p><strong>Secondary Principle:</strong> Isaiah's Messianic prophecies find dual fulfillment in both Christ's mortal ministry and His latter-day work through priesthood authority and the gathering of Israel.</p>
+
+                <p><strong>Application Principle:</strong> Seeking answers to sincere scriptural questions through proper priesthood channels brings clarifying revelation that strengthens faith and deepens doctrinal understanding.</p>
+
+                <h2>The Questions and Answers</h2>
+
+                <h3>Question 1: Who is the Stem of Jesse? (Verses 1-2)</h3>
+                <p><strong>Question:</strong> What is meant by the command in <a href="https://www.blueletterbible.org/kjv/isa/11/1/">Isaiah 11:1</a>—"There shall come forth a rod out of the stem of Jesse, and a branch shall grow out of his roots"?</p>
+                <p><strong>Answer:</strong> "Verily thus saith the Lord: It is Christ."</p>
+                <p><strong>Significance:</strong> This establishes Christ as the literal descendant of Jesse (David's father) through Mary, fulfilling the Messianic prophecy of a righteous king from David's lineage.</p>
+
+                <h3>Question 2: What is the Rod? (Verses 3-4)</h3>
+                <p><strong>Question:</strong> What is the rod spoken of in the first verse of the 11th chapter of Isaiah, that should come of the Stem of Jesse?</p>
+                <p><strong>Answer:</strong> The rod represents a servant in the hands of Christ who receives priesthood authority. Ephraim is mentioned as holding priesthood keys, being in the hands of God.</p>
+                <p><strong>Significance:</strong> This connects priesthood authority in the latter days to Christ's messianic role and shows how authority flows through proper channels.</p>
+
+                <h3>Question 3: Who is the Root of Jesse? (Verses 5-6)</h3>
+                <p><strong>Question:</strong> What is the root of Jesse spoken of in the 10th verse of the 11th chapter of <a href="https://www.blueletterbible.org/kjv/isa/11/10/">Isaiah 11:10</a>?</p>
+                <p><strong>Answer:</strong> The root of Jesse is both Christ and a descendant of Jesse (Joseph Smith Jr.) who receives priesthood power and becomes an ensign to the people.</p>
+                <p><strong>Significance:</strong> This dual interpretation shows Christ as the source (root) and Joseph Smith as a latter-day servant (also from Jesse's lineage) who raises the ensign of the Restoration.</p>
+
+                <h3>Question 4: Put On Thy Strength, O Zion (Verses 7-8)</h3>
+                <p><strong>Question from Elias Higbee:</strong> What is meant by the command in <a href="https://www.blueletterbible.org/kjv/isa/52/1/">Isaiah 52:1</a>—"Put on thy strength, O Zion"—and what people had Isaiah reference to?</p>
+                <p><strong>Answer:</strong> Zion and Jerusalem are the New Jerusalem and Old Jerusalem, and those who are left of them will be called to put on the authority of the priesthood unto which they have been ordained.</p>
+                <p><strong>Significance:</strong> This connects Isaiah's call to priesthood authority and identifies two specific cities to be established in the latter days.</p>
+
+                <h3>Question 5: Loose Thyself from Thy Bands (Verses 9-10)</h3>
+                <p><strong>Question:</strong> What are we to understand by Zion loosing herself from the bands of her neck; 2nd verse of the 52nd chapter of Isaiah (<a href="https://www.blueletterbible.org/kjv/isa/52/2/">Isaiah 52:2</a>)?</p>
+                <p><strong>Answer:</strong> The scattered remnants of Jacob are commanded to flee Babylon (spiritual captivity) and come to Zion, those who remain after being scattered and peeled.</p>
+                <p><strong>Significance:</strong> This establishes the latter-day gathering as fulfillment of Isaiah's prophecy and defines Zion as a place of covenant refuge.</p>
+
+                <h2>Purpose of the Revelation</h2>
+
+                <h3>Short Term</h3>
+                <ul>
+                    <li>Answer specific questions about Isaiah's prophecies that were puzzling Church members</li>
+                    <li>Establish Joseph Smith's prophetic authority to interpret ancient scripture through direct revelation</li>
+                    <li>Provide scriptural confirmation that Christ fulfilled Isaiah's Messianic prophecies</li>
+                    <li>Identify the "servant" and "watchmen" passages as referring to latter-day priesthood holders</li>
+                    <li>Connect the Restoration to ancient prophetic promises about Israel's gathering</li>
+                </ul>
+
+                <h3>Long Term</h3>
+                <ul>
+                    <li>Create authoritative interpretations of Isaiah for all future generations of Church members</li>
+                    <li>Establish the principle that ancient scripture is best understood through modern revelation</li>
+                    <li>Provide doctrinal foundation for understanding Christ's dual role as mortal Messiah and latter-day Redeemer</li>
+                    <li>Define how priesthood keys operate in revealing scriptural meaning</li>
+                    <li>Demonstrate the question-and-answer revelation format as a valid mode of receiving divine guidance</li>
+                </ul>
+
+                <h2>Significance</h2>
+
+                <h3>Doctrinal Significance</h3>
+                <p>This revelation provides the only authorized interpretation of these crucial Isaiah passages, establishing how Messianic prophecy applies to both Christ's mortal ministry and the latter-day Restoration. It demonstrates that prophets hold interpretive keys and that scripture often has multiple fulfillments across different dispensations.</p>
+
+                <h3>Scriptural Significance</h3>
+                <p>D&C 113 shows how the Lord unfolds ancient prophecy through modern revelation. The question-and-answer format models how to approach difficult scripture—by asking specific questions and seeking prophetic guidance rather than relying solely on human scholarship.</p>
+
+                <h3>Restoration Significance</h3>
+                <p>By identifying Joseph Smith within Isaiah's prophecies (as a descendant of Jesse and root becoming an ensign), this revelation places the Restoration in the prophetic timeline and affirms that ancient prophets foresaw and prepared for this dispensation.</p>
+
+
+                <h2>Cultural Insights</h2>
+
+                <h3>Ancient Isaiah Context (740-680 BC)</h3>
+
+                <h4>The Divided Kingdom Crisis</h4>
+                <p>Isaiah prophesied during Israel's division into northern (Israel) and southern (Judah) kingdoms, facing Assyrian conquest. The Davidic kingdom that once unified the nation appeared "cut down" like a felled tree.</p>
+
+                <h4>The Stem/Root/Rod Imagery</h4>
+                <ul>
+                    <li><strong><a href="https://www.blueletterbible.org/lexicon/h5342/kjv/wlc/0-1/">Netser</a></strong> (Stem) - A fresh shoot growing from a stump</li>
+                    <li><strong><a href="https://www.blueletterbible.org/lexicon/h8328/kjv/wlc/0-1/">Shoresh</a></strong> (Root) - The underground source that survives when the tree is cut</li>
+                    <li><strong><a href="https://www.blueletterbible.org/lexicon/h4294/kjv/wlc/0-1/">Matteh</a></strong>/<strong><a href="https://www.blueletterbible.org/lexicon/h2415/kjv/wlc/0-1/">Choter</a></strong> (Rod) - A branch symbolizing authority and rule</li>
+                </ul>
+
+                <h4>The Jesse Connection</h4>
+                <p>Jesse was King David's father (<a href="https://www.blueletterbible.org/kjv/1sa/16/1/">1 Samuel 16</a>). When Isaiah spoke of Jesse's "stem," he promised that even when David's royal line seemed destroyed, God would raise up a righteous ruler from that lineage.</p>
+
+                <h4>The Captivity Imagery</h4>
+                <p>Isaiah's call for Zion to "loose thyself from thy bands" (<a href="https://www.blueletterbible.org/kjv/isa/52/2/">Isaiah 52:2</a>) reflected Israel's literal experience of conquest and exile. Those sitting in "dust" were captives in foreign lands.</p>
+
+                <h4>The Watchmen and Messengers</h4>
+                <p>In ancient cities, watchmen stood on walls scanning for approaching messengers. Good tidings meant victory; bad news meant defeat. Isaiah envisioned watchmen seeing "eye to eye" (<a href="https://www.blueletterbible.org/kjv/isa/52/8/">Isaiah 52:8</a>)—unified in announcing the Lord's return to Zion.</p>
+
+                <h3>Modern Restoration Context</h3>
+
+                <h4>Dual Fulfillment Pattern</h4>
+                <p>D&C 113 establishes that Isaiah's prophecies have multiple fulfillments:</p>
+                <ol>
+                    <li><strong>First fulfillment:</strong> Christ's mortal ministry as the literal stem of Jesse</li>
+                    <li><strong>Second fulfillment:</strong> The Restoration through Joseph Smith (also of Jesse's lineage) and priesthood authority</li>
+                </ol>
+
+                <h4>Priesthood as the "Rod"</h4>
+                <p>The "rod" represents priesthood keys and authority given to servants in the latter days. This authority enables them to act as "watchmen" bringing good tidings of the gospel.</p>
+
+                <h4>The Ensign to Nations</h4>
+                <p>Joseph Smith, as a "root of Jesse," became an ensign (banner/standard) that gathered scattered Israel. The Church itself serves as an ensign visible to all nations.</p>
+
+                <h4>New and Old Jerusalem</h4>
+                <p>D&C 113 identifies two cities of Zion: the New Jerusalem (in America) and Old Jerusalem (in Israel), both to be established as gathering places for covenant Israel.</p>
+
+                <h4>Gathering from Babylon</h4>
+                <p>"Loosing bands" means coming out of spiritual captivity (Babylon) and gathering to Zion. This is both physical (missionary work) and spiritual (covenant living).</p>
+
+                <h2>Modern Application</h2>
+
+                <h3>Personal Application</h3>
+                <ul>
+                    <li>When encountering confusing scripture, formulate specific questions and seek answers through study, prayer, and prophetic guidance</li>
+                    <li>Recognize that you participate in prophetic fulfillment through missionary work, temple worship, and covenant living</li>
+                    <li>Understand that priesthood authority connects you to ancient prophetic promises</li>
+                    <li>Identify yourself with the "servants" bringing good tidings rather than merely reading about prophecy</li>
+                    <li>Trust that prophets hold interpretive keys to unlock scriptural meaning</li>
+                </ul>
+
+                <h3>Family Application</h3>
+                <ul>
+                    <li>Teach children that scripture study should generate questions that prompt family discussion and prayer</li>
+                    <li>Use D&C 113 to show how the Restoration connects to ancient prophecy</li>
+                    <li>Study Isaiah as a family using D&C 113's interpretations as a guide</li>
+                    <li>Help teenagers understand they fulfill Isaiah's prophecies when they serve missions</li>
+                    <li>Create family traditions around being "watchmen" who bring good tidings to others</li>
+                </ul>
+
+                <h3>Church Application</h3>
+                <ul>
+                    <li>Encourage members to bring scriptural questions to priesthood channels</li>
+                    <li>Use D&C 113 when teaching Isaiah in Sunday School and seminary</li>
+                    <li>Missionaries can confidently teach that Christ fulfilled Messianic prophecy and the Restoration represents prophetic fulfillment</li>
+                    <li>Bishops and stake presidents serve as "watchmen" bringing good tidings</li>
+                    <li>Temple worship connects to Isaiah's call for Zion to "put on strength"</li>
+                </ul>
+
+                <h3>Doctrinal Application</h3>
+                <ul>
+                    <li>Messianic prophecy has multiple fulfillments across dispensations</li>
+                    <li>Modern prophets hold keys to interpret ancient scripture</li>
+                    <li>Isaiah wrote specifically about the Restoration</li>
+                    <li>Priesthood authority flows through proper channels from Christ</li>
+                    <li>The gathering of Israel is a latter-day work with ancient roots</li>
+                    <li>Covenant people are called out of Babylon to Zion</li>
+                </ul>
+
+                <h2>Key Doctrines</h2>
+
+                <h3>New Doctrines Introduced</h3>
+                <ul>
+                    <li>The "stem of Jesse" (<a href="https://www.blueletterbible.org/kjv/isa/11/1/">Isaiah 11:1</a>) is Christ, descendant of Jesse through Mary</li>
+                    <li>The "rod" represents priesthood authority and keys given to servants in Christ's hands</li>
+                    <li>The "root of Jesse" (<a href="https://www.blueletterbible.org/kjv/isa/11/10/">Isaiah 11:10</a>) is both Christ and Joseph Smith as a descendant of Jesse</li>
+                    <li>The "root of Jesse" becoming an "ensign" refers to the latter-day servant holding priesthood keys</li>
+                    <li>"Zion" and "Jerusalem" (<a href="https://www.blueletterbible.org/kjv/isa/52/1/">Isaiah 52:1-2</a>) refer to the New and Old Jerusalem to be established</li>
+                    <li>The "servant" and "watchmen" (<a href="https://www.blueletterbible.org/kjv/isa/52/7/">Isaiah 52:7-8</a>) are priesthood holders in the latter days</li>
+                    <li>"Seeing eye to eye" means unified prophetic witness when the Lord returns to Zion</li>
+                    <li>The "scattered remnants" are covenant Israel gathered from spiritual Babylon</li>
+                </ul>
+
+                <h3>Previous Doctrines Clarified</h3>
+                <ul>
+                    <li>Messianic prophecy has multiple fulfillments—Christ's mortal ministry AND latter-day restoration (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76">D&C 76</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/77">D&C 77</a>)</li>
+                    <li>Prophets hold keys to interpret ancient scripture (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1">D&C 1:38</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/21">D&C 21:4-5</a>)</li>
+                    <li>Isaiah's prophecies apply directly to the Restoration (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/19">1 Nephi 19:23</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11">2 Nephi 11:2-8</a>)</li>
+                    <li>Priesthood authority flows through specific lineages (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84">D&C 84</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107">D&C 107</a>)</li>
+                    <li>The gathering of Israel is a latter-day work (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/29">D&C 29:7-8</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110">D&C 110:11</a>)</li>
+                    <li>Zion will be established in the last days (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45">D&C 45:66-71</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/57">D&C 57</a>)</li>
+                </ul>
+
+                <h3>Covenant Principles Explained</h3>
+                <ul>
+                    <li>Servants bringing good tidings announce salvation through covenant ordinances</li>
+                    <li>"Putting on strength" means receiving priesthood power through temple covenants</li>
+                    <li>"Breaking bands" represents liberation through covenant obedience</li>
+                    <li>Watchmen "seeing eye to eye" reflects covenant unity among priesthood leaders</li>
+                    <li>Being called out of Babylon means covenant deliverance from spiritual captivity</li>
+                    <li>The ensign to nations is raised through covenant people gathering to Zion</li>
+                    <li>Servants receiving the "rod" obtain covenant authority to act in God's name</li>
+                    <li>Zion "loosing herself" means covenant Israel shaking off spiritual bondage</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- SECTION 2: HISTORICAL CONTEXT -->
+        <button class="accordion-section">2. Historical Context</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Overview: March 1838 in Far West, Missouri</h2>
+                
+                <p>D&C 113 was received in March 1838, a pivotal moment in Church history. The Saints were rebuilding their lives and faith after the catastrophic Kirtland apostasy and forced exodus. Far West represented a fresh beginning, but questions lingered: If Joseph Smith was truly a prophet, why had faithful members suffered such devastating losses? Were they still part of God's prophetic plan? The questions about Isaiah weren't merely academic—they were deeply personal inquiries seeking confirmation that ancient prophecy still applied to their troubled present.</p>
+
+                <h2>The Kirtland Crisis and Exodus (1837-1838)</h2>
+
+                <h3>The Apostasy Crisis of 1837</h3>
+
+                <p>The year 1837 witnessed the most severe apostasy crisis in Church history. The collapse of the Kirtland Safety Society in January 1837—months before the national Panic of 1837 hit in May—devastated members financially and spiritually.</p>
+
+                <h4>The Scale of Apostasy</h4>
+                <ul>
+                    <li>Approximately one-third of Church leadership apostatized or was excommunicated</li>
+                    <li>Three members of the Quorum of the Twelve Apostles abandoned the faith</li>
+                    <li>Warren Parrish, John F. Boynton, Luke S. Johnson, and Lyman E. Johnson plotted to depose Joseph Smith</li>
+                    <li>Some former leaders attempted to organize a rival church</li>
+                    <li>Physical violence against Joseph Smith and his family became common in Kirtland</li>
+                    <li>Mob threats forced the Prophet to flee for his life in January 1838</li>
+                </ul>
+
+                <h4>The Faith Crisis</h4>
+                <p>For ordinary members, the apostasy of respected leaders created profound confusion. These weren't weak-willed recent converts—they were temple dedicators, missionaries, and revelators. If such prominent Church leaders could fall away, how could anyone be certain of truth?</p>
+
+                <h3>The Forced Exodus (Winter-Spring 1838)</h3>
+
+                <h4>The Escape from Kirtland</h4>
+                <p>Joseph Smith and Sidney Rigdon fled Kirtland on January 12, 1838, traveling 900 miles in brutal winter conditions to Far West, Missouri. They arrived March 14, 1838—just days before D&C 113 was received.</p>
+
+                <h4>The Refugee Stream</h4>
+                <p>Through late 1837 and early 1838, hundreds of faithful Saints abandoned homes, businesses, and the Kirtland Temple to relocate to Missouri. Many left with nothing but wagons and faith. The exodus was chaotic, dangerous, and heartbreaking.</p>
+
+                <h2>Far West, Missouri: A New Beginning</h2>
+
+                <h3>The Settlement's Origins</h3>
+
+                <p>Far West was founded in 1836 as a refuge for Saints after their expulsion from Jackson County in 1833. By early 1838, it represented the Church's best hope for establishing a lasting Zion community.</p>
+
+                <h4>The Physical Setting</h4>
+                <ul>
+                    <li>Located in Caldwell County, Missouri—created specifically for Mormon settlement</li>
+                    <li>Rolling prairie lands suitable for farming</li>
+                    <li>Several hundred homes by March 1838</li>
+                    <li>Town square laid out in traditional Missouri pattern</li>
+                    <li>Temple site selected (dedicated July 4, 1838)</li>
+                </ul>
+
+                <h4>The Refugee Challenge</h4>
+                <p>Kirtland refugees arriving in Far West faced immediate survival challenges. Most came with depleted resources. Housing was scarce. Winter weather made farming impossible until spring. The community struggled to absorb the influx while maintaining social cohesion.</p>
+
+                <h4>The Spiritual Climate</h4>
+                <p>Despite physical hardships, Far West buzzed with spiritual renewal. Free from Kirtland's apostasy and mob violence, members could worship without fear. The Prophet's presence restored confidence. Church organization could function properly again. Yet underlying questions remained about prophetic identity and divine purpose.</p>
+
+                <h4>The Community Challenge</h4>
+                <p>Members were rebuilding lives from nothing. Those who arrived with resources helped those who came destitute. The spirit of consecration and cooperation was essential for survival. Yet underlying questions about prophetic identity and divine purpose needed addressing.</p>
+
+                <h3>Church Organization in Far West</h3>
+
+                <h4>Leadership Structure</h4>
+                <p>Joseph Smith arrived in Far West on March 14, 1838, just days before D&C 113 was received. His presence provided renewed stability and direction. The First Presidency was reorganized with Sidney Rigdon and Hyrum Smith as counselors.</p>
+
+                <h4>The Temple Site</h4>
+                <p>Church leaders had already selected a temple site in Far West, though it wouldn't be dedicated until July 4, 1838 (four months after D&C 113). The anticipation of building another temple—after losing access to the Kirtland temple—raised questions about Zion's future and Isaiah's prophecies about Zion's redemption.</p>
+
+                <h4>Priesthood Organization</h4>
+                <p>The Quorum of the Twelve Apostles needed reconstituting after the apostasy of three members. Thomas B. Marsh, as President of the Twelve, was striving to maintain order and faith. Priesthood quorums were being reorganized as members arrived from Kirtland.</p>
+
+                <h3>Local Missouri Tensions (March 1838)</h3>
+
+                <h4>Non-Mormon Settlers' Concerns</h4>
+                <p>Missouri settlers viewed the influx of Mormon refugees with alarm. Concerns included:</p>
+                <ul>
+                    <li>Political bloc voting that could control local elections</li>
+                    <li>Economic competition from cooperative Mormon businesses</li>
+                    <li>Religious differences and claims of prophetic authority</li>
+                    <li>Fear of losing control of Caldwell County and surrounding areas</li>
+                </ul>
+
+                <h4>The Brewing Conflict</h4>
+                <p>While March 1838 was relatively peaceful, tensions were building that would explode into the 1838 Missouri Mormon War by autumn. Local citizens were organizing to resist Mormon expansion. Missouri Governor Lilburn Boggs, who would issue the infamous Extermination Order in October 1838, was already hostile to the Saints.</p>
+
+                <h4>The Saints' Perspective</h4>
+                <p>Church members believed they were fleeing persecution, not causing problems. They saw themselves as refugees seeking religious freedom. The contrast between their self-perception as God's covenant people and their status as unwelcome outsiders created cognitive dissonance that needed scriptural resolution.</p>
+
+
+                <h2>Why Isaiah? The Context for Questions</h2>
+
+                <h3>Scripture Study During Crisis</h3>
+
+                <p>During periods of crisis, Saints intensified scripture study seeking understanding and comfort. Isaiah's prophecies about Zion's redemption, scattered Israel's gathering, and the Messiah's coming naturally attracted attention during the Far West resettlement.</p>
+
+                <h4>The Specific Questions</h4>
+                <p>The questions in D&C 113 weren't random curiosity—they reflected urgent concerns:</p>
+
+                <ol>
+                    <li><strong>"Who is the stem of Jesse?"</strong> - Confirmed Christ's identity as the promised Messiah when members questioned if God had abandoned them</li>
+                    <li><strong>"What is the rod?"</strong> - Clarified priesthood authority when apostasy had shattered confidence in Church leadership</li>
+                    <li><strong>"Who is the root of Jesse?"</strong> - Affirmed Joseph Smith's prophetic role by connecting him to ancient prophecy</li>
+                    <li><strong>"What does 'put on thy strength, O Zion' mean?"</strong> - Addressed how Saints could have spiritual power when they felt weak and defeated</li>
+                    <li><strong>"What does 'loose thyself from thy bands' mean?"</strong> - Explained gathering to Zion when members had just been driven from one gathering place and were establishing another</li>
+                </ol>
+
+                <h3>The Prophetic Identity Question</h3>
+
+                <p>The deeper question underlying all these Isaiah inquiries was: <strong>"Are we still part of God's prophetic plan?"</strong></p>
+
+                <p>After the Kirtland catastrophe, members needed reassurance that:</p>
+                <ul>
+                    <li>Ancient prophecies still applied to them</li>
+                    <li>Their suffering had meaning in God's eternal purposes</li>
+                    <li>The Restoration was genuinely prophesied by ancient prophets</li>
+                    <li>Joseph Smith could still receive revelation and interpret scripture</li>
+                    <li>The gathering to Zion wasn't a failed human scheme but divine work</li>
+                </ul>
+
+                <h3>The Question-and-Answer Format</h3>
+
+                <p>D&C 113's unique Q&A format suggests these weren't Joseph's questions but came from members or investigators. The record states "answers given by Joseph Smith the Prophet," implying others asked the questions. This was practical revelation addressing real confusion and doubt.</p>
+
+                <h2>Global Context: 1838</h2>
+
+                <h3>Economic Depression</h3>
+
+                <p>The Panic of 1837's effects continued throughout 1838. Economic recovery was years away. For Church members already devastated by Kirtland's financial collapse, the national depression meant limited resources for rebuilding in Missouri. Unemployment, bank failures, and deflation created a challenging environment for establishing new farms and businesses.</p>
+
+                <h3>Political Climate</h3>
+
+                <h4>United States</h4>
+                <ul>
+                    <li>President Martin Van Buren (1837-1841) was dealing with the economic crisis</li>
+                    <li>Sectional tensions over slavery were intensifying</li>
+                    <li>The Second Seminole War (1835-1842) raged in Florida</li>
+                    <li>Western expansion was accelerating, bringing conflicts with Native Americans</li>
+                </ul>
+
+                <h4>Missouri Specifically</h4>
+                <p>Missouri was a slave state with complex political dynamics. The Mormon influx from northern states (many anti-slavery) threatened the political balance. Governor Lilburn Boggs was positioning himself against the Saints, setting the stage for the Extermination Order.</p>
+
+                <h3>Religious Climate: The Second Great Awakening</h3>
+
+                <p>The 1830s saw intense religious revivalism across America. Multiple movements claimed prophetic authority or special divine mission:</p>
+                <ul>
+                    <li>Millerite movement predicting Christ's return</li>
+                    <li>Shaker communities with their own revelations</li>
+                    <li>Transcendentalist spiritual experimentation</li>
+                    <li>Traditional Protestant denominations competing for converts</li>
+                </ul>
+
+                <h4>The Interpretive Authority Question</h4>
+                <p>In this context of competing religious claims, the question of who had authority to interpret scripture—especially prophetic scripture like Isaiah—was crucial. D&C 113 asserted that Joseph Smith held interpretive keys through revelation, not just scholarly expertise.</p>
+
+                <h2>The Timing: Why March 1838?</h2>
+
+                <h3>Immediate Triggers</h3>
+
+                <h4>Joseph Smith's Arrival in Far West (March 14, 1838)</h4>
+                <p>Joseph had just completed the difficult winter journey from Kirtland. His presence in Far West for the first time since the exodus created opportunity for sustained scripture study and revelation. Members had accumulated questions during his absence that could now be addressed.</p>
+
+                <h4>Spring Season and New Beginnings</h4>
+                <p>March represented spring planting and new beginnings. The symbolism of Isaiah's stem/root/rod imagery—agricultural metaphors about growth from seeming death—resonated with Saints planting literal crops while hoping for spiritual renewal.</p>
+
+                <h4>Temple Site Preparation</h4>
+                <p>With the temple site selected (to be dedicated July 4, 1838), Isaiah's prophecies about Zion "putting on strength" and Jerusalem being redeemed had immediate relevance. Members needed to understand how temple worship connected to ancient prophecy.</p>
+
+                <h3>Strategic Revelation Purpose</h3>
+
+                <h4>Rebuilding Prophetic Confidence</h4>
+                <p>D&C 113 demonstrated Joseph's continuing ability to receive revelation and unlock scriptural mysteries. This was essential for rebuilding confidence after the apostasy crisis.</p>
+
+                <h4>Connecting Past and Present</h4>
+                <p>By showing how ancient Isaiah prophecies applied to current Restoration events, the revelation reassured Saints they were part of an eternal prophetic plan, not victims of random persecution.</p>
+
+                <h4>Establishing Interpretive Authority</h4>
+                <p>The revelation established that prophetic interpretation comes through priesthood keys, not scholarly commentary. This was crucial for maintaining distinctive LDS identity and doctrine.</p>
+
+                <h4>Preparing for Temple Work</h4>
+                <p>The answers about "putting on strength" and priesthood authority prepared Saints for temple ordinances and covenants to be revealed more fully later.</p>
+
+                <h2>The Recipients: Who Asked These Questions?</h2>
+
+                <h3>Elias Higbee (Specifically Named)</h3>
+
+                <p>Verse 7 specifically names Elias Higbee as asking about <a href="https://www.blueletterbible.org/kjv/isa/52/1/">Isaiah 52:1</a> ("Put on thy strength, O Zion").</p>
+
+                <h4>Who Was Elias Higbee?</h4>
+                <ul>
+                    <li>Born 1795 in Gallatin County, Kentucky</li>
+                    <li>Converted to the Church in early 1830s</li>
+                    <li>Served in various Church positions</li>
+                    <li>Later sent to Washington D.C. in 1839-1840 to petition for redress after Missouri expulsion</li>
+                    <li>Member of the Kirtland High Council</li>
+                </ul>
+
+                <p>Higbee's question suggests that Church leaders were systematically studying Isaiah and seeking clarification on difficult passages. His involvement indicates these weren't casual questions but serious doctrinal inquiries from responsible priesthood holders.</p>
+
+                <h3>Other Questioners</h3>
+
+                <p>While not named, the other questions likely came from:</p>
+                <ul>
+                    <li>Members confused about Messianic prophecy and how Christ fulfilled it</li>
+                    <li>Investigators comparing LDS claims with traditional Christian Isaiah interpretations</li>
+                    <li>Priesthood leaders seeking to teach Isaiah to confused members</li>
+                    <li>Those who had lost family members to apostasy and needed scriptural confirmation</li>
+                </ul>
+
+                <h2>Summary: The Historical Context Makes the Revelation Essential</h2>
+
+                <p>D&C 113 wasn't received in a vacuum. It addressed a community in crisis:</p>
+
+                <ul>
+                    <li><strong>Physical Crisis:</strong> Refugees rebuilding from nothing in frontier Missouri</li>
+                    <li><strong>Spiritual Crisis:</strong> Recovering from the worst apostasy in Church history</li>
+                    <li><strong>Identity Crisis:</strong> Questioning their role in God's prophetic plan</li>
+                    <li><strong>Leadership Crisis:</strong> Rebuilding confidence in Joseph Smith's prophetic calling</li>
+                    <li><strong>Doctrinal Crisis:</strong> Needing to understand how ancient prophecy applied to current circumstances</li>
+                </ul>
+
+                <p>The revelation's answers provided more than intellectual clarification—they offered spiritual lifelines to a people questioning whether God still recognized them as His covenant children. By placing Joseph Smith within Isaiah's prophecies and connecting the Restoration to ancient Messianic promises, D&C 113 reassured Saints that their suffering had meaning and their prophetic identity was real.</p>
+
+            </div>
+        </div>
+
+        <!-- SECTION 3: VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section">3. Verse-by-Verse Study</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction: The Question-and-Answer Format</h2>
+                
+                <p>D&C 113 is unique among Doctrine and Covenants revelations in its question-and-answer structure. Rather than receiving a revelation unprompted, Joseph Smith was asked specific questions about Isaiah passages, and the Lord provided answers through the Prophet. This format demonstrates how revelation can come in response to sincere inquiry and how living prophets hold keys to interpret ancient scripture.</p>
+
+                <p><strong>Total Verses:</strong> 10 (Questions: 1, 3, 5, 7, 9 | Answers: 2, 4, 6, 8, 10)</p>
+
+                <!-- VERSES 1-2 SUB-ACCORDION -->
+                <button class="sub-accordion">Verses 1-2: The Stem of Jesse</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.1">Doctrine and Covenants 113:1</a></strong> — "WHO is the Stem of Jesse spoken of in the 1st, 2d, 3d, 4th, and 5th verses of the 11th chapter of Isaiah?"</p>
+                        </div>
+
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.2">Doctrine and Covenants 113:2</a></strong> — "Verily thus saith the Lord: It is Christ."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>This foundational question establishes Christ's identity as the Messianic figure prophesied by Isaiah. The answer is direct and unambiguous: the "stem of Jesse" is Jesus Christ. This confirms Christian understanding that Christ fulfilled Old Testament Messianic prophecy while adding clarity about specific Isaiah passages that had been debated for centuries.</p>
+
+                        <p>The question references <a href="https://www.blueletterbible.org/kjv/isa/11/1/">Isaiah 11:1-5</a>, which describes a ruler who will judge righteously, possess the Spirit of the Lord, and bring justice to the earth. By identifying Christ as this stem, the revelation affirms that:</p>
+
+                        <ol>
+                            <li>Christ is the literal descendant of Jesse (David's father) through Mary's lineage</li>
+                            <li>The Davidic covenant promising an eternal king from David's line finds fulfillment in Christ</li>
+                            <li>Isaiah's prophecy had both near-term application (to Judah's monarchy) and ultimate fulfillment in the Messiah</li>
+                            <li>The "stem" metaphor indicates new growth from what appeared to be a dead stump—the seemingly destroyed Davidic kingdom</li>
+                        </ol>
+
+                        <h3>Language & Cultural Insights</h3>
+
+                        <h4>Hebrew Analysis</h4>
+
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/h5342/kjv/wlc/0-1/">Netser</a></strong> (נֵצֶר) - "stem, branch, shoot"</p>
+                        <ul>
+                            <li>Root word meaning a fresh shoot or sprout growing from a tree stump</li>
+                            <li>Used in Isaiah 11:1 to indicate life arising from apparent death</li>
+                            <li>Implies both continuity (same root system) and renewal (fresh growth)</li>
+                            <li>Messianic term signifying the promised deliverer from David's line</li>
+                        </ul>
+
+                        <h4>Jesse's Significance</h4>
+                        <p>Jesse (Hebrew: <strong><a href="https://www.blueletterbible.org/lexicon/h3448/kjv/wlc/0-1/">Yishay</a></strong>, יִשַׁי) was King David's father from Bethlehem (<a href="https://www.blueletterbible.org/kjv/1sa/16/1/">1 Samuel 16:1-13</a>). By Isaiah's time (740-680 BC), the Davidic kingdom was in crisis, facing Assyrian conquest. Isaiah's prophecy that a "stem" would arise from Jesse (rather than from the current Davidic kings) suggested that the promise would be fulfilled even if the entire royal line were cut down to its roots.</p>
+
+                        <h4>Cultural Context</h4>
+                        <p>Ancient readers understood agricultural metaphors. When a tree is felled, sometimes a new shoot emerges from the stump or roots—a "stem" or "sprout." Isaiah promised that even if David's royal house were completely destroyed, God would raise up a righteous ruler from that same family line. The Jews in exile after 586 BC clung to this promise when the Davidic monarchy ended.</p>
+
+                        <h3>The Olive Tree: Isaiah's Living Metaphor</h3>
+
+                        <div class="info-box">
+                            <h4>Botanical Significance of Olive Trees</h4>
+                            <p>Isaiah's audience in ancient Israel would have been intimately familiar with olive trees (<em>Olea europaea</em>), which were central to their agricultural economy and possessed remarkable regenerative properties that made them perfect symbols for Isaiah's prophecy.</p>
+
+                            <p><strong>The Olive Tree's Unique Ability to Regenerate:</strong></p>
+                            <ul>
+                                <li><strong>Regeneration from Cut Stumps:</strong> When an olive tree is cut down, new shoots (called "suckers") emerge from the stump and root system</li>
+                                <li><strong>Extreme Longevity:</strong> Olive trees can live for thousands of years, with some in the Garden of Gethsemane estimated to be over 900 years old</li>
+                                <li><strong>Root System Vitality:</strong> The root system can survive for centuries, producing new shoots from these ancient roots</li>
+                            </ul>
+
+                            <p><strong>Doctrinal Application:</strong> When we feel spiritually "cut down" by sin, failure, or life's traumas, the olive tree/stem of Jesse imagery promises that Christ can bring new life from what appears dead. The Restoration itself mirrors this pattern: after centuries of apostasy (the tree appearing dead), new life emerged through Joseph Smith (a new "stem" from ancient roots).</p>
+                        </div>
+
+                        <h3>Cross-References</h3>
+
+                        <h4>Old Testament Messianic Prophecies</h4>
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/isa/11/1/">Isaiah 11:1</a></strong> - "And there shall come forth a rod out of the stem of Jesse, and a Branch shall grow out of his roots" - The original prophecy being interpreted</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/jer/23/5/">Jeremiah 23:5</a></strong> - "Behold, the days come, saith the LORD, that I will raise unto David a righteous Branch" - Similar branch imagery for the Messiah</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/jer/33/15/">Jeremiah 33:15</a></strong> - "I will cause the Branch of righteousness to grow up unto David" - Confirms the Davidic lineage theme</li>
+                        </ul>
+
+                        <h4>New Testament Fulfillment</h4>
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/mat/1/1/">Matthew 1:1-16</a></strong> - Christ's genealogy traces through David and Jesse, fulfilling the stem prophecy</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/luk/3/23/">Luke 3:23-32</a></strong> - Another genealogy connecting Jesus to David and Jesse through Mary's line</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/rom/15/12/">Romans 15:12</a></strong> - Paul quotes Isaiah 11:10 about the "root of Jesse" and applies it to Christ</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/rev/5/5/">Revelation 5:5</a></strong> - Christ called "the Root of David" - similar imagery to stem of Jesse</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/rev/22/16/">Revelation 22:16</a></strong> - Christ declares "I am the root and the offspring of David" - combining root and stem concepts</li>
+                        </ul>
+
+                        <h4>Latter-day Saint Scripture</h4>
+                        <ul>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11.1">1 Nephi 11:1</a></strong> - Nephi's vision shows him the interpretation of his father's dream, including Messianic symbolism</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/21.1">2 Nephi 21:1</a></strong> - Nephi quotes Isaiah 11:1 in full, showing Book of Mormon prophets understood its Messianic meaning</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/20.43">3 Nephi 20:43</a></strong> - Christ quotes Isaiah 52:7-10 to the Nephites, connecting Himself to Isaiah's prophecies</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+
+                        <ol>
+                            <li><strong>Understanding Christ's Role:</strong> How does identifying Christ as the "stem of Jesse" deepen your understanding of His mission to restore what was lost? What had been "cut down" that He came to restore?</li>
+                            <li><strong>Prophetic Fulfillment:</strong> When you read Old Testament prophecies, how does D&C 113's direct identification of Christ as the stem strengthen your faith that God fulfills His promises across centuries?</li>
+                            <li><strong>Personal Application:</strong> In what ways does the "stem from a stump" imagery apply to your own life when you feel spiritually "cut down"? How can Christ bring new life from what appears dead?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 3-4 SUB-ACCORDION -->
+                <button class="sub-accordion">Verses 3-4: The Rod and the Servant</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.3">Doctrine and Covenants 113:3</a></strong> — "What is the rod spoken of in the first verse of the 11th chapter of Isaiah, that should come of the Stem of Jesse?"</p>
+                        </div>
+
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.4">Doctrine and Covenants 113:4</a></strong> — "Behold, thus saith the Lord: It is a servant in the hands of Christ, who is partly a descendant of Jesse as well as of Ephraim, or of the house of Joseph, on whom there is laid much power."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>While verse 2 identified Christ as the stem, verses 3-4 reveal that the "rod" proceeding from that stem represents a latter-day servant who will exercise priesthood power. This servant has dual lineage—descended from both Jesse (Judah's line through David) and Ephraim (Joseph's line). This dual heritage is significant because it combines the royal (Judah/David) and birthright (Ephraim/Joseph) blessings.</p>
+
+                        <p>The phrase "in the hands of Christ" emphasizes that this servant's power is delegated authority, not independent. The servant operates under Christ's direction, wielding priesthood keys and authority on His behalf. The "much power" refers to priesthood authority to seal on earth and in heaven, gather scattered Israel, and administer saving ordinances.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+
+                        <h4>Hebrew Analysis</h4>
+
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/h4294/kjv/wlc/0-1/">Matteh</a></strong> (מַטֶּה) / <strong><a href="https://www.blueletterbible.org/lexicon/h2415/kjv/wlc/0-1/">Choter</a></strong> (חֹטֶר) - "rod, staff, branch"</p>
+                        <ul>
+                            <li>Matteh: A rod or staff representing authority, used by rulers and shepherds</li>
+                            <li>Choter: A branch or shoot, emphasizing the growth aspect</li>
+                            <li>Both terms convey authority that derives from the main stem</li>
+                            <li>In ancient contexts, a rod symbolized power to rule, judge, and protect</li>
+                        </ul>
+
+                        <p><strong>Ephraim Connection:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/h669/kjv/wlc/0-1/">Ephrayim</a></strong> (אֶפְרַיִם) - Second son of Joseph, received the birthright blessing from Jacob (<a href="https://www.blueletterbible.org/kjv/gen/48/17/">Genesis 48:17-20</a>). Jeremiah prophesied that Ephraim would be central to the latter-day gathering (<a href="https://www.blueletterbible.org/kjv/jer/31/9/">Jeremiah 31:9</a>).</p>
+
+                        <h3>Cross-References</h3>
+
+                        <ul>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.12">D&C 27:12-13</a></strong> - Restoration of priesthood keys by ancient prophets to Joseph Smith</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110.11">D&C 110:11-16</a></strong> - Moses, Elias, and Elijah restore keys for gathering Israel</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/jer/31/6/">Jeremiah 31:6-9</a></strong> - Ephraim will be central to Israel's latter-day gathering</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+
+                        <ol>
+                            <li><strong>Delegated Authority:</strong> What does it mean that the servant operates "in the hands of Christ" rather than with independent power?</li>
+                            <li><strong>Dual Lineage Significance:</strong> Why might it be important that this servant descends from both Judah (royal line) and Ephraim (birthright line)?</li>
+                            <li><strong>Personal Priesthood Exercise:</strong> If you hold priesthood office, how can you better recognize that you are a "rod" in Christ's hands?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 5-6 SUB-ACCORDION -->
+                <button class="sub-accordion">Verses 5-6: The Root of Jesse</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.5">Doctrine and Covenants 113:5</a></strong> — "What is the root of Jesse spoken of in the 10th verse of the 11th chapter?"</p>
+                        </div>
+
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.6">Doctrine and Covenants 113:6</a></strong> — "Behold, thus saith the Lord, it is a descendant of Jesse, as well as of Joseph, unto whom rightly belongs the priesthood, and the keys of the kingdom, for an ensign, and for the gathering of my people in the last days."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>This answer reveals a profound dual interpretation of Isaiah's "root of Jesse" imagery. While verse 2 identified the "stem" as Christ, verse 6 identifies the "root" as a latter-day descendant of both Jesse and Joseph who holds priesthood keys for gathering Israel.</p>
+
+                        <p>The root metaphor differs from the stem: while a stem grows upward from a root, the root itself is the underground source of life and nourishment. The "ensign" (<strong><a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/">nes</a></strong>, נֵס) was a banner or standard raised to gather an army or signal a meeting place.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/h8328/kjv/wlc/0-1/">Shoresh</a></strong> (שֹׁרֶשׁ) - "root"</p>
+                        <ul>
+                            <li>The underground portion of a plant that anchors and nourishes</li>
+                            <li>Represents source, foundation, origin</li>
+                            <li>In contrast to "stem" (visible growth), the root is hidden but essential</li>
+                            <li>Symbolizes enduring life even when visible growth is destroyed</li>
+                        </ul>
+
+                        <h3>Cross-References</h3>
+
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/isa/5/26/">Isaiah 5:26</a></strong> - The Lord will "lift up an ensign to the nations from far"</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/isa/11/12/">Isaiah 11:12</a></strong> - "He shall set up an ensign for the nations, and shall assemble the outcasts of Israel"</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110.11">D&C 110:11</a></strong> - Moses commits keys for gathering Israel</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/rev/22/16/">Revelation 22:16</a></strong> - Christ as "the root and the offspring of David"</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+
+                        <ol>
+                            <li><strong>Ensign Purpose:</strong> How does the Church serve as an "ensign to the nations" today?</li>
+                            <li><strong>Gathering Work:</strong> What does it mean to have "keys...for the gathering of my people"?</li>
+                            <li><strong>Root vs. Stem:</strong> Why does Isaiah use both "stem" and "root" imagery? What different aspects of Christ's work do these metaphors highlight?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 7-8 SUB-ACCORDION -->
+                <button class="sub-accordion">Verses 7-8: Put On Thy Strength, O Zion</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.7">Doctrine and Covenants 113:7</a></strong> — "Questions by Elias Higbee: What is meant by the command in Isaiah, 52d chapter, 1st verse, which saith: Put on thy strength, O Zion—and what people had Isaiah reference to?"</p>
+                        </div>
+
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.8">Doctrine and Covenants 113:8</a></strong> — "He had reference to those whom God should call in the last days, who should hold the power of priesthood to bring again Zion, and the redemption of Israel; and to put on her strength is to put on the authority of the priesthood, which she, Zion, has a right to by lineage; also to return to that power which she had lost."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>This question from Elias Higbee addresses <a href="https://www.blueletterbible.org/kjv/isa/52/1/">Isaiah 52:1</a>: "Awake, awake; put on thy strength, O Zion." The Lord's answer reveals that "putting on strength" means receiving and exercising priesthood authority—specifically, the authority to "bring again Zion" and accomplish "the redemption of Israel."</p>
+
+                        <p>Several profound principles emerge:</p>
+                        <ol>
+                            <li><strong>Priesthood as Strength:</strong> True spiritual power comes through priesthood authority</li>
+                            <li><strong>Right by Lineage:</strong> Those called to this work have a covenantal birthright to priesthood blessings</li>
+                            <li><strong>Restoration of Lost Power:</strong> The phrase "return to that power which she had lost" indicates ancient Israel once possessed this authority but lost it through apostasy</li>
+                            <li><strong>Gender-Inclusive Language:</strong> Though priesthood office is male, "Zion" (feminine pronoun "she") exercising priesthood authority suggests the blessings extend to all covenant Israel</li>
+                        </ol>
+
+                        <h3>Language & Cultural Insights</h3>
+
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/h5797/kjv/wlc/0-1/">Oz</a></strong> (עֹז) - "strength, might, power"</p>
+                        <ul>
+                            <li>Root meaning: boldness, security, fortress-like strength</li>
+                            <li>Not physical strength but authoritative power and protective might</li>
+                            <li>Often used in contexts of divine empowerment</li>
+                            <li>In <a href="https://www.blueletterbible.org/kjv/isa/52/1/">Isaiah 52:1</a>, paired with "beautiful garments" suggesting both power and sacred clothing</li>
+                        </ul>
+
+                        <h3>Cross-References</h3>
+
+                        <ul>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/13">D&C 13</a></strong> - Restoration of Aaronic Priesthood by John the Baptist</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.19">D&C 84:19-22</a></strong> - Power of godliness manifest through priesthood ordinances</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/82.14">D&C 82:14</a></strong> - "Zion must increase in beauty, and in holiness"</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/gen/3/21/">Genesis 3:21</a></strong> - "The LORD God made coats of skins" for Adam and Eve</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+
+                        <ol>
+                            <li><strong>Personal Strength:</strong> How do you "put on strength" through priesthood ordinances and covenants?</li>
+                            <li><strong>Lost and Restored Power:</strong> What does it mean that Zion has a right to priesthood power "by lineage" and seeks to "return to that power which she had lost"?</li>
+                            <li><strong>Beautiful Garments:</strong> How do sacred temple garments relate to Isaiah's command to "put on thy beautiful garments"?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 9-10 SUB-ACCORDION -->
+                <button class="sub-accordion">Verses 9-10: Loose Thyself from Thy Bands</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.9">Doctrine and Covenants 113:9</a></strong> — "What are we to understand by Zion loosing herself from the bands of her neck; 2d verse, 52d chapter of Isaiah?"</p>
+                        </div>
+
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/113.10">Doctrine and Covenants 113:10</a></strong> — "We are to understand that the scattered remnants are exhorted to return to the Lord from whence they have fallen; which if they do, the promise of the Lord is that he will speak to them, or give them revelation. See the 6th, 7th, and 8th verses. The bands of her neck are the curses of God upon her, or the remnants of Israel in their scattered condition among the Gentiles."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>This final question-answer pair addresses <a href="https://www.blueletterbible.org/kjv/isa/52/2/">Isaiah 52:2</a>: "Shake thyself from the dust; arise, and sit down, O Jerusalem: loose thyself from the bands of thy neck, O captive daughter of Zion." The Lord's interpretation reveals multiple layers:</p>
+
+                        <ol>
+                            <li><strong>The Scattered Remnants:</strong> Those addressed are descendants of Israel scattered among Gentile nations</li>
+                            <li><strong>The Bands:</strong> The "bands of her neck" represent "curses of God"—consequences of covenant breaking</li>
+                            <li><strong>The Call to Return:</strong> Liberation requires returning to the Lord through repentance and covenant renewal</li>
+                            <li><strong>The Promise:</strong> Those who return receive personal revelation—God will "speak to them"</li>
+                            <li><strong>The Revelation Pattern:</strong> The answer directs readers to <a href="https://www.blueletterbible.org/kjv/isa/52/6/">Isaiah 52:6-8</a></li>
+                        </ol>
+
+                        <h3>Language & Cultural Insights</h3>
+
+                        <p><strong><a href="https://www.blueletterbible.org/lexicon/h6605/kjv/wlc/0-1/">Pathach</a></strong> (פָּתַח) - "to loose, open, free"</p>
+                        <ul>
+                            <li>Root meaning: to open a door, loose bonds, set free</li>
+                            <li>Used in contexts of liberation from slavery or captivity</li>
+                            <li>Implies active participation—Israel must loose herself, not merely wait for rescue</li>
+                            <li>Connected to opening doors, revealing secrets, beginning new eras</li>
+                        </ul>
+
+                        <p>In ancient conquest, captives were bound with ropes or chains around the neck as a sign of subjugation. Isaiah's audience, having experienced or heard of Babylonian captivity, understood this imagery viscerally.</p>
+
+                        <h3>Cross-References</h3>
+
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/isa/11/11/">Isaiah 11:11-12</a></strong> - "The Lord shall set his hand again the second time to recover the remnant of his people"</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/jer/16/14/">Jeremiah 16:14-16</a></strong> - The Lord will send "fishers" and "hunters" to gather Israel</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/38.33">D&C 38:33</a></strong> - "Go ye out from among the nations, even from Babylon"</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/rev/18/4/">Revelation 18:4</a></strong> - "Come out of her, my people"</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+
+                        <ol>
+                            <li><strong>Personal Bands:</strong> What "bands" (habits, sins, false traditions, worldly attachments) bind your spiritual neck?</li>
+                            <li><strong>Scattered Condition:</strong> In what ways might you be spiritually "scattered" even while physically attending church?</li>
+                            <li><strong>Promise of Revelation:</strong> D&C 113:10 promises that those who return to the Lord will receive revelation. How have you experienced personal revelation when you've returned to the Lord after periods of spiritual distance?</li>
+                            <li><strong>Gathering Work:</strong> How does understanding that "loosing bands" is part of gathering Israel affect your view of missionary work and temple work?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <h2>Summary: The Unified Message of D&C 113</h2>
+
+                <p>While each question-answer pair in D&C 113 addresses a specific Isaiah passage, together they create a unified prophetic message:</p>
+
+                <ul>
+                    <li><strong>Christ as Foundation (verses 1-2):</strong> Everything begins with Christ—the stem of Jesse, the promised Messiah who fulfills ancient prophecy</li>
+                    <li><strong>Priesthood Authority Delegated (verses 3-4):</strong> Christ delegates power to servants holding priesthood keys, combining royal (Judah) and birthright (Ephraim) blessings</li>
+                    <li><strong>Ensign Raised for Gathering (verses 5-6):</strong> A latter-day servant with priesthood keys becomes an ensign to gather scattered Israel</li>
+                    <li><strong>Power Restored to Zion (verses 7-8):</strong> God's covenant people receive priesthood authority—their birthright power—to bring again Zion</li>
+                    <li><strong>Liberation and Revelation (verses 9-10):</strong> Scattered remnants are called to break spiritual bondage, return to the Lord, and receive personal revelation</li>
+                </ul>
+
+                <p>The pattern is consistent: prophecy → fulfillment in Christ → extension through priesthood authority → gathering of Israel → Zion redeemed.</p>
+
+            </div>
+        </div>
+
+
+        <!-- SECTION 4: WORD STUDIES -->
+        <button class="accordion-section">4. Word Studies</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction: The Importance of Hebrew in D&C 113</h2>
+                
+                <p>D&C 113 is unique in that it interprets ancient Hebrew prophecies from Isaiah. Understanding the original Hebrew terms enriches our appreciation of both Isaiah's prophecies and the revealed interpretations. Each term below receives five-layer analysis: Hebrew foundation, Greek understanding (where applicable), Latin evolution, English etymology, and Webster 1828 definition, followed by doctrinal significance.</p>
+
+                <h2>Key Hebrew Terms</h2>
+
+                <div class="word-study-box">
+                    <h3>1. NETSER (נֵצֶר) - "Stem, Branch, Shoot"</h3>
+                    
+                    <h4>Hebrew Foundation</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/h5342/kjv/wlc/0-1/">Netser</a></strong> (נֵצֶר) - Strong's H5342<br>
+                    <strong>Root:</strong> From <em>natsar</em> (H5341) meaning "to guard, watch, preserve"<br>
+                    <strong>Meaning:</strong> A fresh shoot, sprout, or branch growing from a tree stump<br>
+                    <strong>Biblical Usage:</strong> Found in <a href="https://www.blueletterbible.org/kjv/isa/11/1/">Isaiah 11:1</a> - "there shall come forth a rod out of the stem of Jesse"</p>
+
+                    <h4>Greek Understanding</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/g4491/kjv/tr/0-1/">Rhiza</a></strong> (ῥίζα, G4491) - "root"<br>
+                    <strong>Alternate:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/g395/kjv/tr/0-1/">Anatolē</a></strong> (ἀνατολή, G395) - "rising, branch, dayspring"<br>
+                    <strong>New Testament Usage:</strong> <a href="https://www.blueletterbible.org/kjv/rom/15/12/">Romans 15:12</a> quotes Isaiah 11:10</p>
+
+                    <h4>Latin Evolution</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/virga">Virga</a></strong> - "rod, staff, shoot, twig"<br>
+                    The Vulgate translates Isaiah 11:1 as "et egredietur virga de radice Iesse" (and there shall come forth a rod from the root of Jesse)</p>
+
+                    <h4>English Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/branch">Branch</a></strong> - From Old French <em>branche</em> (12c.), from Late Latin <em>branca</em> "paw, claw"<br>
+                    <strong><a href="https://www.etymonline.com/word/stem">Stem</a></strong> - From Old English <em>stemn, stefn</em> "trunk or main part of a tree"</p>
+
+                    <h4>Webster 1828</h4>
+                    <p><strong>STEM</strong> - "The principal body of a tree, shrub or plant; the main stock; the part which supports the branches."</p>
+
+                    <h4>Doctrinal Significance</h4>
+                    <p>D&C 113:2's statement "It is Christ" establishes Jesus as the fulfillment of Isaiah's stem prophecy. This confirms Christ's literal descent from Jesse through Mary's lineage, the fulfillment of the Davidic covenant, and new life arising from what appeared dead.</p>
+                </div>
+
+                <div class="word-study-box">
+                    <h3>2. SHORESH (שֹׁרֶשׁ) - "Root"</h3>
+                    
+                    <h4>Hebrew Foundation</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/h8328/kjv/wlc/0-1/">Shoresh</a></strong> (שֹׁרֶשׁ) - Strong's H8328<br>
+                    <strong>Root:</strong> From <em>sharash</em> (H8327) meaning "to root, take root, strike root"<br>
+                    <strong>Meaning:</strong> The underground part of a plant; foundation, source, origin<br>
+                    <strong>Biblical Usage:</strong> <a href="https://www.blueletterbible.org/kjv/isa/11/10/">Isaiah 11:10</a> - "in that day there shall be a root of Jesse"</p>
+
+                    <h4>Greek Understanding</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/g4491/kjv/tr/0-1/">Rhiza</a></strong> (ῥίζα, G4491) - "root"<br>
+                    <strong>New Testament:</strong> <a href="https://www.blueletterbible.org/kjv/rev/22/16/">Revelation 22:16</a> - "I am the root and the offspring of David"</p>
+
+                    <h4>Latin Evolution</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/radix">Radix</a></strong> - "root, radish; base, foundation"<br>
+                    Vulgate: "radix Iesse" (root of Jesse)</p>
+
+                    <h4>English Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/root">Root</a></strong> - From late Old English <em>rot</em>, from Old Norse <em>rot</em> "root," literally "that which is dug"</p>
+
+                    <h4>Webster 1828</h4>
+                    <p><strong>ROOT</strong> - "That part of a plant which enters the earth and is the means of supporting it in an erect position. Figuratively, the original or cause of any thing."</p>
+
+                    <h4>Doctrinal Significance</h4>
+                    <p>D&C 113:6 reveals the root of Jesse is "a descendant of Jesse, as well as of Joseph, unto whom rightly belongs the priesthood, and the keys of the kingdom, for an ensign." This creates a dual interpretation: Christ as ultimate root and Joseph Smith as latter-day root becoming an ensign.</p>
+                </div>
+
+                <div class="word-study-box">
+                    <h3>3. OZ (עֹז) - "Strength, Might, Power"</h3>
+                    
+                    <h4>Hebrew Foundation</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/h5797/kjv/wlc/0-1/">Oz</a></strong> (עֹז) - Strong's H5797<br>
+                    <strong>Meaning:</strong> Boldness, security, fortress-like strength; not physical strength but authoritative power<br>
+                    <strong>Biblical Usage:</strong> <a href="https://www.blueletterbible.org/kjv/isa/52/1/">Isaiah 52:1</a> - "Put on thy strength, O Zion"</p>
+
+                    <h4>Doctrinal Significance</h4>
+                    <p>D&C 113:8 interprets "put on thy strength" as "to put on the authority of the priesthood." This reveals that true spiritual power comes through priesthood authority, not human wisdom or worldly might. The phrase "return to that power which she had lost" indicates that ancient Israel once possessed this authority but lost it through apostasy.</p>
+                </div>
+
+                <div class="word-study-box">
+                    <h3>4. PATHACH (פָּתַח) - "To Loose, Open, Free"</h3>
+                    
+                    <h4>Hebrew Foundation</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/h6605/kjv/wlc/0-1/">Pathach</a></strong> (פָּתַח) - Strong's H6605<br>
+                    <strong>Meaning:</strong> To open a door, loose bonds, set free; implies active participation<br>
+                    <strong>Biblical Usage:</strong> <a href="https://www.blueletterbible.org/kjv/isa/52/2/">Isaiah 52:2</a> - "loose thyself from the bands of thy neck"</p>
+
+                    <h4>Doctrinal Significance</h4>
+                    <p>The command "loose thyself" emphasizes personal agency in spiritual liberation. Israel must actively participate in breaking bondage, not merely wait passively for rescue. D&C 113:10 reveals that this means the scattered remnants must "return to the Lord from whence they have fallen," receiving revelation as the promise for those who return.</p>
+                </div>
+
+                <h2>Temple and Covenant Connections</h2>
+
+                <p>These Hebrew terms connect powerfully to temple ordinances:</p>
+                <ul>
+                    <li><strong>Stem/Root imagery:</strong> Family sealing and eternal covenant connections</li>
+                    <li><strong>Rod authority:</strong> Priesthood keys that seal on earth and in heaven</li>
+                    <li><strong>Putting on strength:</strong> Receiving endowment power through temple covenants</li>
+                    <li><strong>Loosing bands:</strong> Liberation from spiritual captivity through covenant obedience</li>
+                    <li><strong>Beautiful garments:</strong> Temple clothing representing consecration and authority</li>
+                </ul>
+
+                <h2>Modern Application</h2>
+
+                <p>Understanding these Hebrew terms deepens our appreciation for:</p>
+                <ul>
+                    <li>Christ as both source (root) and growth (stem) of salvation</li>
+                    <li>Priesthood authority as delegated power "in the hands of Christ"</li>
+                    <li>Temple ordinances as the means to "put on strength"</li>
+                    <li>Personal agency in spiritual liberation ("loose thyself")</li>
+                    <li>The gathering of Israel through priesthood ensign</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!-- SECTION 5: TEACHING APPLICATIONS -->
+        <button class="accordion-section">5. Teaching Applications</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction: Teaching D&C 113 Effectively</h2>
+                
+                <p>D&C 113's question-and-answer format makes it uniquely teachable across all age groups and contexts. The revelation demonstrates how to approach difficult scripture (ask specific questions), validates prophetic authority to interpret ancient texts, and connects Old Testament prophecy to the Restoration.</p>
+
+                <h2>1. Personal Study Applications</h2>
+
+                <h3>Study Techniques</h3>
+                <ol>
+                    <li><strong>Question-Driven Study:</strong> Write specific questions about Isaiah passages before studying, following D&C 113's model</li>
+                    <li><strong>Hebrew Word Deep Dive:</strong> Select one Hebrew term each week for intensive study using Blue Letter Bible</li>
+                    <li><strong>Prophetic Fulfillment Tracking:</strong> Create charts showing multiple fulfillments of Isaiah's prophecies</li>
+                    <li><strong>Cross-Reference Web Study:</strong> Build visual webs connecting D&C 113 to related scriptures</li>
+                    <li><strong>Application Journal:</strong> Keep dedicated journal tracking how D&C 113 applies to daily life</li>
+                </ol>
+
+                <h3>Reflection Questions</h3>
+                <ul>
+                    <li>How does knowing ancient prophets saw our day strengthen your testimony?</li>
+                    <li>In what ways have you experienced "strength" through priesthood ordinances?</li>
+                    <li>What "bands" currently bind your spiritual neck?</li>
+                    <li>How can you be a personal "ensign" in your sphere?</li>
+                    <li>How are you participating in gathering scattered Israel?</li>
+                </ul>
+
+                <h2>2. Family Home Evening Applications</h2>
+
+                <h3>Opening Activity: "What's the Question?"</h3>
+                <p>Write D&C 113's five questions on slips of paper. Family members draw a question and try to answer it based on their understanding. Then read the revealed answer together. Discuss how asking good questions leads to revelation.</p>
+
+                <h3>Object Lessons</h3>
+                
+                <h4>The Tree Stump</h4>
+                <p><strong>Materials:</strong> Picture of tree stump with new growth<br>
+                <strong>Lesson:</strong> "Isaiah said a 'stem' would grow from Jesse's stump. When David's kingdom was destroyed, it looked like a cut-down tree. But Jesus came as new life from that old root! We can also have new spiritual life even after failures."</p>
+
+                <h4>The Banner/Ensign</h4>
+                <p><strong>Materials:</strong> Small flag or banner<br>
+                <strong>Lesson:</strong> "In ancient battles, soldiers followed their flag to know where to gather. The gospel is like this flag - it helps scattered Israel find their way home."</p>
+
+                <h4>The Rope and Freedom</h4>
+                <p><strong>Materials:</strong> Soft rope, scissors<br>
+                <strong>Lesson:</strong> Gently tie rope around volunteer's wrists. "Isaiah said we should 'loose ourselves' from bands. What binds us spiritually?" Discuss, then cut the rope. "Jesus helps us be free, but we have to choose to use His help."</p>
+
+                <h2>3. Sunday School Teaching Applications</h2>
+
+                <h3>Opening Questions</h3>
+                <ol>
+                    <li>"What confuses you most about the Book of Isaiah?"</li>
+                    <li>"How do we know prophets have authority to interpret ancient scripture?"</li>
+                    <li>"In what ways are we part of fulfilling Isaiah's prophecies?"</li>
+                </ol>
+
+                <h3>Key Teaching Points</h3>
+                <ul>
+                    <li>Revelation comes through sincere questions</li>
+                    <li>Isaiah's prophecies have dual fulfillment (Christ and Restoration)</li>
+                    <li>Priesthood authority connects to ancient prophetic promises</li>
+                    <li>Personal responsibility in spiritual liberation</li>
+                    <li>We participate in gathering Israel today</li>
+                </ul>
+
+                <h2>4. Seminary Teaching Applications</h2>
+
+                <h3>Daily Devotional Themes (5 Days)</h3>
+                <ul>
+                    <li><strong>Day 1:</strong> Christ as the Stem of Jesse - Messianic prophecy fulfilled</li>
+                    <li><strong>Day 2:</strong> Priesthood authority - the rod in Christ's hands</li>
+                    <li><strong>Day 3:</strong> The ensign to nations - gathering Israel</li>
+                    <li><strong>Day 4:</strong> Putting on strength through temple covenants</li>
+                    <li><strong>Day 5:</strong> Loosing bands - personal spiritual liberation</li>
+                </ul>
+
+                <h3>Youth-Relevant Discussions</h3>
+                <ul>
+                    <li>What "bands" bind teenagers today? (peer pressure, social media, worldly thinking)</li>
+                    <li>How can they be "ensigns" to their generation?</li>
+                    <li>Why does understanding prophecy strengthen testimony?</li>
+                    <li>How do they participate in gathering Israel through missions and examples?</li>
+                </ul>
+
+                <h2>5. Relief Society & Priesthood Applications</h2>
+
+                <h3>Discussion Topics</h3>
+                <ul>
+                    <li>The relationship between prophecy, priesthood keys, and authority</li>
+                    <li>Dual fulfillment of prophecy across dispensations</li>
+                    <li>Temple ordinances as "putting on strength"</li>
+                    <li>Personal responsibility in spiritual liberation</li>
+                    <li>Participating in gathering Israel through various means</li>
+                </ul>
+
+                <h2>6. Children's Teaching Ideas</h2>
+
+                <h3>Simple Concepts</h3>
+                <ul>
+                    <li>Jesus is from King David's family (show family tree)</li>
+                    <li>Prophets help us understand hard things in scriptures</li>
+                    <li>We can ask Heavenly Father questions</li>
+                    <li>The temple helps us be strong</li>
+                    <li>We can help gather people to Jesus</li>
+                </ul>
+
+                <h3>Activities</h3>
+                <ul>
+                    <li>Draw family trees showing Jesus descended from Jesse</li>
+                    <li>Create family "ensign" (banner) with values and commitments</li>
+                    <li>Plant seeds to discuss how stems grow from roots</li>
+                    <li>Practice asking questions about scriptures</li>
+                </ul>
+
+                <h2>7. Mission Applications</h2>
+
+                <h3>Teaching Principles</h3>
+                <ul>
+                    <li>Christ fulfilled Old Testament Messianic prophecy</li>
+                    <li>The Restoration was prophesied by ancient prophets</li>
+                    <li>Priesthood authority flows through proper channels</li>
+                    <li>Gathering Israel is a latter-day work</li>
+                    <li>Personal revelation available to all who return to the Lord</li>
+                </ul>
+
+                <h3>Finding Applications</h3>
+                <ul>
+                    <li>Missionaries are "servants bringing good tidings"</li>
+                    <li>The Church serves as an "ensign" visible to nations</li>
+                    <li>Helping people "loose themselves" from false traditions</li>
+                    <li>Teaching about prophetic authority and interpretation</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!-- SECTION 6: STUDY QUESTIONS -->
+        <button class="accordion-section">6. Study Questions</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction: Using These Study Questions</h2>
+                
+                <p>These questions are designed for multiple contexts: personal study, family discussion, class discussion, and small groups. Questions range from basic comprehension to deep application. Select those most relevant to your needs and spiritual development.</p>
+
+                <h2>Category 1: Understanding the Text</h2>
+
+                <h3>Basic Comprehension (Questions 1-10)</h3>
+                <ol>
+                    <li>What makes D&C 113's format unique among Doctrine and Covenants revelations?</li>
+                    <li>How many questions are asked in D&C 113, and who is specifically named as asking one?</li>
+                    <li>Which two chapters of Isaiah does D&C 113 primarily interpret?</li>
+                    <li>What are the five specific questions asked in verses 1, 3, 5, 7, and 9?</li>
+                    <li>Why might the Prophet Joseph Smith have received revelation in question-and-answer format?</li>
+                    <li>What historical context in March 1838 made these Isaiah questions particularly relevant?</li>
+                    <li>What pattern does D&C 113 establish about how we should approach confusing scripture?</li>
+                    <li>How does D&C 113 demonstrate the difference between scholarly interpretation and prophetic revelation?</li>
+                    <li>What role did Elias Higbee play in receiving this revelation?</li>
+                    <li>Why are the answers in D&C 113 considered authoritative rather than merely Joseph Smith's opinion?</li>
+                </ol>
+
+                <h3>The Specific Interpretations (Questions 11-35)</h3>
+                
+                <h4>The Stem of Jesse</h4>
+                <ol start="11">
+                    <li>According to D&C 113:2, who is the "stem of Jesse"?</li>
+                    <li>Why does Isaiah reference Jesse rather than David when prophesying about the Messiah?</li>
+                    <li>What does the agricultural metaphor of a "stem" growing from a stump teach about Christ's mission?</li>
+                    <li>How do the New Testament genealogies confirm Christ as the stem of Jesse?</li>
+                    <li>What hope would this interpretation have given the Saints in 1838?</li>
+                </ol>
+
+                <h4>The Rod</h4>
+                <ol start="16">
+                    <li>According to D&C 113:4, what is the "rod" spoken of in Isaiah 11:1?</li>
+                    <li>Why is it significant that the servant is "in the hands of Christ"?</li>
+                    <li>What does it mean that this servant is descended from both Jesse and Ephraim?</li>
+                    <li>What "much power" is laid upon this servant?</li>
+                    <li>How does the rod imagery connect to Moses' rod, Aaron's rod, or the iron rod?</li>
+                </ol>
+
+                <h4>The Root of Jesse</h4>
+                <ol start="21">
+                    <li>According to D&C 113:6, who is the "root of Jesse"?</li>
+                    <li>How can someone be both a "stem" and a "root"? What paradox does this create?</li>
+                    <li>What does it mean for the root of Jesse to "stand for an ensign"?</li>
+                    <li>What is the purpose of this ensign according to verse 6?</li>
+                    <li>How does having priesthood keys relate to being an ensign for gathering Israel?</li>
+                </ol>
+
+                <h4>Put On Thy Strength</h4>
+                <ol start="26">
+                    <li>What does "put on thy strength, O Zion" mean according to D&C 113:8?</li>
+                    <li>Who are "those whom God should call in the last days"?</li>
+                    <li>What does it mean that Zion has a "right to by lineage" to priesthood authority?</li>
+                    <li>What power had Zion lost that she needs to return to?</li>
+                    <li>How do temple ordinances relate to "putting on strength"?</li>
+                </ol>
+
+                <h4>Loose Thyself</h4>
+                <ol start="31">
+                    <li>What are "the bands of her neck" according to D&C 113:10?</li>
+                    <li>Who are the "scattered remnants" mentioned in verse 10?</li>
+                    <li>What must the scattered remnants do to have the Lord speak to them?</li>
+                    <li>What promise is given to those who return to the Lord?</li>
+                    <li>Why does verse 10 direct readers to see Isaiah 52:6-8?</li>
+                </ol>
+
+                <h2>Category 2: Personal Application</h2>
+
+                <h3>Seeking Revelation (Questions 46-50)</h3>
+                <ol start="46">
+                    <li>What confusing scriptural passages perplex you currently?</li>
+                    <li>When have you received personal revelation that clarified scripture?</li>
+                    <li>What barriers prevent you from asking sincere questions about gospel principles?</li>
+                    <li>How can you better utilize living prophets to help understand difficult doctrines?</li>
+                    <li>What question about Isaiah would you like to ask the Lord?</li>
+                </ol>
+
+                <h3>Personal Strength (Questions 51-55)</h3>
+                <ol start="51">
+                    <li>In what areas of your life do you feel spiritually weak?</li>
+                    <li>When have temple covenants provided you with spiritual power you couldn't generate yourself?</li>
+                    <li>What difference has the temple endowment made in your ability to withstand temptation?</li>
+                    <li>How often do you actively draw upon covenant power versus trying to live the gospel through willpower alone?</li>
+                    <li>What would change in your life if you more fully accessed the "strength" available through priesthood authority?</li>
+                </ol>
+
+                <h3>Personal Liberation (Questions 56-60)</h3>
+                <ol start="56">
+                    <li>What "bands" currently bind your spiritual neck?</li>
+                    <li>Why does the Lord command us to "loose thyself" rather than promising to loose us without our participation?</li>
+                    <li>What's the difference between waiting for God to change you versus actively working with Him to change?</li>
+                    <li>What specific action will you take this week to "loose yourself" from one binding band?</li>
+                    <li>Who can help you in this process?</li>
+                </ol>
+
+                <h3>Covenant Living (Questions 61-75)</h3>
+                <ol start="61">
+                    <li>How has priesthood authority blessed your life directly?</li>
+                    <li>If you hold priesthood: How do you view yourself as a "rod" in Christ's hands?</li>
+                    <li>If you don't hold priesthood office: How do you access priesthood power in your life?</li>
+                    <li>What's the relationship between priesthood keys and priesthood authority?</li>
+                    <li>How does understanding priesthood as delegated from Christ affect how it should be exercised?</li>
+                    <li>How frequently do you attend the temple? What prevents more frequent attendance?</li>
+                    <li>In what specific ways has the temple "endowed" you with power?</li>
+                    <li>How do you maintain temple covenants between temple visits?</li>
+                    <li>What would help you be more temple-focused in daily life?</li>
+                    <li>How does knowing you have "right by lineage" to priesthood blessings affect your confidence before God?</li>
+                    <li>What does your patriarchal blessing teach about your tribal designation and spiritual lineage?</li>
+                    <li>How do you participate in gathering scattered Israel?</li>
+                    <li>What can you do this week to help someone "loose themselves" from spiritual bands?</li>
+                    <li>How does D&C 113 strengthen your testimony of Joseph Smith's prophetic calling?</li>
+                    <li>In what ways are you fulfilling Isaiah's ancient prophecies through your covenant living?</li>
+                </ol>
+
+                <h2>Additional Study Resources</h2>
+
+                <ul>
+                    <li><strong>Scripture Study Tools:</strong> Blue Letter Bible for Hebrew/Greek analysis</li>
+                    <li><strong>Historical Context:</strong> <em>Saints</em> Volume 1 for the Kirtland crisis and Far West period</li>
+                    <li><strong>Isaiah Commentary:</strong> <em>Isaiah for Latter-day Saints</em> by Victor Ludlow</li>
+                    <li><strong>Gospel Study Apps:</strong> Gospel Library, ScripturePlus, Book of Mormon Central</li>
+                    <li><strong>Temple Preparation:</strong> <em>The Holy Temple</em> by Boyd K. Packer</li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div> <!-- End container -->
+
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        // Main accordion sections
+        const accordionSections = document.querySelectorAll('.accordion-section');
+        
+        accordionSections.forEach(section => {
+            section.addEventListener('click', function() {
+                // Toggle active class on clicked section
+                this.classList.toggle('active');
+                
+                // Get the next sibling (content panel)
+                const panel = this.nextElementSibling;
+                
+                // Toggle the content panel
+                panel.classList.toggle('active');
+            });
+        });
+
+        // Sub-accordions for verses
+        const subAccordions = document.querySelectorAll('.sub-accordion');
+        
+        subAccordions.forEach(subAccordion => {
+            subAccordion.addEventListener('click', function() {
+                // Toggle active class
+                this.classList.toggle('active');
+                
+                // Get the next sibling (sub-panel)
+                const subPanel = this.nextElementSibling;
+                
+                // Toggle the sub-panel
+                subPanel.classList.toggle('active');
+            });
+        });
+
+        // Expand All function
+        function expandAll() {
+            accordionSections.forEach(section => {
+                section.classList.add('active');
+                section.nextElementSibling.classList.add('active');
+            });
+            
+            subAccordions.forEach(subAccordion => {
+                subAccordion.classList.add('active');
+                subAccordion.nextElementSibling.classList.add('active');
+            });
+        }
+
+        // Collapse All function
+        function collapseAll() {
+            accordionSections.forEach(section => {
+                section.classList.remove('active');
+                section.nextElementSibling.classList.remove('active');
+            });
+            
+            subAccordions.forEach(subAccordion => {
+                subAccordion.classList.remove('active');
+                subAccordion.nextElementSibling.classList.remove('active');
+            });
+        }
+    </script>
+
+    <!-- Bottom Navigation -->
+    <div class="nav-bar" style="margin-top: 40px; border-top: 2px solid #7c9885; border-bottom: none;">
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Lesson Home</a>
+            <a href="dc112_complete.html" class="nav-btn">Previous: D&C 112</a>
+            <a href="dc114_complete.html" class="nav-btn">Next: D&C 114</a>
+        </div>
+        <div class="nav-links">
+            <a href="dc111_complete.html" class="nav-btn">D&C 111</a>
+            <a href="dc112_complete.html" class="nav-btn">D&C 112</a>
+            <a href="dc113_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 113</a>
+            <a href="dc114_complete.html" class="nav-btn">D&C 114</a>
+        </div>
+    </div>
+
+</body>
+</html>

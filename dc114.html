@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 114 Complete Study Guide - David W. Patten's Mission Call</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Site Header */
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cfm-button {
+            background-color: white;
+            color: #7c9885;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+
+        .cfm-button:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        .cfm-button.active {
+            background-color: #7c9885;
+            color: white;
+            font-weight: 600;
+        }
+
+        .cfm-button.active:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .cfm-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #e5e5e5;
+        }
+
+        .cfm-button.disabled:hover {
+            transform: none;
+        }
+
+        /* Header Section */
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        /* Scripture Quote */
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        /* Expand/Collapse Buttons */
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        /* Accordion Sections */
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Content Panels */
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        /* Sub-accordions for verses */
+        .sub-accordion {
+            background-color: #f0f4f0;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e2e8e2;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: #7c9885;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Sub-panels */
+        .sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        /* Typography within panels */
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .panel-content h3 {
+            color: #5a6d5f;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .panel-content h4 {
+            color: #4a5d4f;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .panel-content ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .panel-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .panel-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Special boxes */
+        .info-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 2px solid #d4c190;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .word-study-box {
+            background-color: #fafafa;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        /* Scripture verses */
+        .scripture-verse {
+            background-color: #f9fafb;
+            border-left: 3px solid #7c9885;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        /* Links */
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #5a6d5f;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .header-section .subtitle {
+                font-size: 1.1em;
+            }
+
+            .panel-content {
+                padding: 20px;
+            }
+
+            .site-title {
+                font-size: 1.5em;
+            }
+
+            .cfm-button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Lesson Home</a>
+            <a href="dc113_complete.html" class="nav-btn">Previous: D&C 113</a>
+            <span class="nav-btn disabled">Next </span>
+        </div>
+        <div class="nav-links">
+            <a href="dc111_complete.html" class="nav-btn">D&C 111</a>
+            <a href="dc112_complete.html" class="nav-btn">D&C 112</a>
+            <a href="dc113_complete.html" class="nav-btn">D&C 113</a>
+            <a href="dc114_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 114</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Doctrine and Covenants 114</h1>
+            <p class="subtitle">David W. Patten's Mission Call and God's Justice</p>
+            <div class="scripture-highlight">
+                "Verily, verily, I say unto you, it is my will that my servant <a href="https://www.churchofjesuschrist.org/study/history/topics/david-w-patten?lang=eng" style="color: white; text-decoration: underline;">David W. Patten</a> should settle up all his business as soon as he conveniently can, and make a disposition of his merchandise, that he may perform a mission unto me next spring, in company with others, even twelve including himself, to testify of my name and bear glad tidings unto all the world."
+                <br><br>— <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/114.1?lang=eng" style="color: white; font-weight: 600;">Doctrine and Covenants 114:1</a>
+            </div>
+            <div class="date-location">
+                <strong>Date:</strong> April 11, 1838 | <strong>Location:</strong> Far West, Missouri
+            </div>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+
+        <!-- SECTION 1: SECTION OVERVIEW -->
+        <button class="accordion-section">1. Section Overview</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Basic Information</h2>
+                
+                <div class="info-box">
+                    <p><strong>Date of Revelation:</strong> April 11, 1838</p>
+                    <p><strong>Location:</strong> Far West, Missouri</p>
+                    <p><strong>Recipient:</strong> The Church (through Joseph Smith the Prophet)</p>
+                    <p><strong>Historical Context:</strong> Period of apostasy among Church leadership; David W. Patten called to mission</p>
+                    <p><strong>Format:</strong> Two-verse revelation addressing apostasy and missionary calling</p>
+                    <p><strong>Key Theme:</strong> Church positions held by unfaithful will be given to faithful servants</p>
+                </div>
+
+                <p><strong>Section Summary:</strong> In a brief but powerful revelation, the <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/114?lang=eng">Lord</a> addresses the serious problem of apostasy among Church leadership while simultaneously calling <a href="https://www.churchofjesuschrist.org/study/history/topics/david-w-patten?lang=eng">David W. Patten</a>, a faithful apostle, to prepare for a crucial mission. Verse 1 instructs Patten to settle his temporal affairs in preparation to serve with the Twelve Apostles in testifying of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Christ</a> to the world. Verse 2 declares that those who deny the Lord's name will be replaced—their positions given to others who will remain faithful. This revelation demonstrates God's intolerance of apostasy while showing His trust in faithful servants like Patten, who would die as a martyr six months later defending the Saints.</p>
+
+                <h2>Understanding the Historical Crisis</h2>
+
+                <h3>The Apostasy Context</h3>
+
+                <p><strong>Spring 1838</strong> marked a critical period in early Church history. The Church had recently relocated from <a href="https://www.churchofjesuschrist.org/study/history/topics/kirtland-ohio?lang=eng">Kirtland, Ohio</a> to <a href="https://www.churchofjesuschrist.org/study/history/topics/far-west-missouri?lang=eng">Far West, Missouri</a> following severe apostasy and persecution. Several prominent Church leaders, including some of the Twelve Apostles, had fallen away or were wavering in their faith. The <a href="https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng">Kirtland Safety Society</a> failure, internal conflicts, and accusations against <a href="https://www.churchofjesuschrist.org/study/history/topics/joseph-smith?lang=eng">Joseph Smith</a> had created a crisis of leadership.</p>
+
+                <p><strong>David W. Patten</strong> stood in stark contrast to those who were apostatizing. As the senior member of the Quorum of the Twelve Apostles, Patten remained unwaveringly faithful. His loyalty and devotion made him the ideal choice to receive this mission call, while verse 2's warning about replacements carried immediate relevance.</p>
+
+                <p><strong>The "Bishopric" Reference</strong> in verse 2 refers to positions of priesthood authority and stewardship. The <a href="https://www.blueletterbible.org/lexicon/g2962/kjv/tr/0-1/">Lord</a> was making clear that Church positions are not held by right, but by faithfulness—and those who deny Him would lose their callings.</p>
+
+                <h2>Key Principles</h2>
+
+                <p><strong>Primary Doctrinal Principle:</strong> Priesthood positions and Church callings are held conditionally upon faithfulness; those who deny <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> or fall into apostasy will have their positions given to others who remain true to their covenants. <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> works through faithful servants who are willing to sacrifice for His kingdom.</p>
+
+                <p><strong>Secondary Principle:</strong> Preparing for significant Church service requires both temporal and spiritual readiness. David W. Patten was instructed to "settle up all his business" and "make a disposition of his merchandise" before serving his mission, demonstrating that faithful stewardship over temporal affairs enables wholehearted spiritual service.</p>
+
+                <p><strong>Application Principle:</strong> Even when circumstances change unexpectedly (as they did with Patten's death before the mission could be fulfilled), God's purposes are not thwarted. Faithful servants who die in His service complete their mortal mission with honor, and the Lord raises up others to continue the work. Our responsibility is faithfulness in our callings, trusting God with the outcomes.</p>
+
+                <div class="highlight-box">
+                    <h3>Connection to D&C 118</h3>
+                    <p><strong>Three Months Later:</strong> On <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118?lang=eng">July 8, 1838</a>, the Lord gave D&C 118, which provided additional direction about the <a href="https://www.churchofjesuschrist.org/study/history/topics/british-mission?lang=eng">British Mission</a> and specifically named the apostles who should go (including a replacement for apostates who had fallen away).</p>
+                    
+                    <p><strong>Fulfillment Through Others:</strong> Though D&C 114 called Patten to lead the mission, D&C 118 and later revelations showed how the mission would proceed even after his death. <a href="https://www.churchofjesuschrist.org/study/history/topics/brigham-young?lang=eng">Brigham Young</a>, <a href="https://www.churchofjesuschrist.org/study/history/topics/heber-c-kimball?lang=eng">Heber C. Kimball</a>, <a href="https://www.churchofjesuschrist.org/study/history/topics/willard-richards?lang=eng">Willard Richards</a>, <a href="https://www.churchofjesuschrist.org/study/history/topics/orson-hyde?lang=eng">Orson Hyde</a>, and others departed for Britain in 1839 and achieved remarkable success.</p>
+                </div>
+
+                <h2>Modern Application</h2>
+
+                <h3>Personal Application</h3>
+
+                <p><strong>Accepting Callings with Faith:</strong> When called to serve, we may not understand all that lies ahead or how it will work out. David W. Patten accepted his calling faithfully, prepared diligently, and trusted the Lord with outcomes. We should accept callings with similar faith, even when circumstances are uncertain or challenging.</p>
+
+                <p><strong>Temporal Preparation for Spiritual Service:</strong> Before accepting significant Church service, we should "settle our affairs"—ensuring family needs are met, financial obligations handled, employment arrangements made, and temporal stewardship in order. This enables wholehearted focus on spiritual service without distraction.</p>
+
+                <p><strong>Faithfulness in Apostasy's Presence:</strong> When others around us fall away or criticize the Church, we can remain faithful like David W. Patten. Apostasy of others doesn't excuse our own unfaithfulness or diminish our covenants. We stand true regardless of others' choices.</p>
+
+            </div>
+        </div>
+        <!-- SECTION 2: HISTORICAL CONTEXT -->
+        <button class="accordion-section">2. Historical Context</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Historical Background of the Revelation</h2>
+                
+                <h3>Date and Location</h3>
+                
+                <p><strong>Date:</strong> April 11, 1838<br>
+                <strong>Location:</strong> <a href="https://www.churchofjesuschrist.org/study/history/topics/far-west-missouri?lang=eng">Far West</a>, Caldwell County, Missouri</p>
+
+                <p><strong>Far West</strong> had recently become Church headquarters following the Saints' exodus from Kirtland, Ohio in early 1838. The city was laid out with typical Mormon efficiency—wide streets, central public square for the temple, and residential plots surrounding the center. By April 1838, approximately 4,000-5,000 Saints had gathered there, building homes and attempting to establish a secure refuge from persecution.</p>
+
+                <p>The revelation came during a period of intense organizational activity. The First Presidency had relocated to Far West. The Saints were planning construction of a temple. New converts were arriving regularly. Yet beneath this apparent prosperity lay serious problems that D&C 114 addressed directly: apostasy among Church leadership and rising tensions with Missouri's older settlers.</p>
+
+                <h2>The Crisis of Apostasy (1837-1838)</h2>
+
+                <h3>The Kirtland Safety Society Failure</h3>
+
+                <p><strong>January 1837</strong> saw the <a href="https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng">collapse of the Kirtland Safety Society</a>, a financial institution founded by Church leaders to provide economic stability for the Saints. When the institution failed during the nationwide Panic of 1837, many Church members lost significant investments.</p>
+
+                <p>The financial disaster triggered a faith crisis. Some prominent members blamed <a href="https://www.churchofjesuschrist.org/study/history/topics/joseph-smith?lang=eng">Joseph Smith</a> for their losses, questioning his prophetic judgment and even his calling as prophet. Internal dissension exploded into open apostasy. The winter of 1837-1838 saw some of the Church's darkest days as respected leaders turned against Joseph Smith and the restored gospel.</p>
+
+                <h3>Prominent Apostates</h3>
+
+                <div class="info-box">
+                    <p><strong>Among those who fell away</strong> during this period were members of high standing:</p>
+                    <ul>
+                        <li><strong>Luke and Lyman Johnson</strong> (apostles) were excommunicated in 1838 for apostasy</li>
+                        <li><strong>John F. Boynton</strong> (apostle) left the Church in 1837</li>
+                        <li><strong>William E. McLellin</strong> (apostle) apostatized and became a bitter enemy</li>
+                        <li><strong>Thomas B. Marsh</strong> (president of the Twelve) would apostatize in October 1838</li>
+                        <li><strong>Orson Hyde</strong> (apostle) temporarily left in fall 1838 but later returned</li>
+                    </ul>
+                    <p>These weren't minor members or recent converts—these were apostles, men called to be special witnesses of Christ's name. Their apostasy created a leadership crisis and tested the faith of ordinary members.</p>
+                </div>
+
+                <h2>David W. Patten: Background and Character</h2>
+
+                <h3>Early Life and Conversion</h3>
+
+                <p><strong>Born:</strong> November 14, 1799, in Theresa, Oswego County, New York<br>
+                <strong>Family:</strong> Son of Benoni Patten and Edith Cole; raised in modest circumstances</p>
+
+                <p><strong>1832: Life-Changing Discovery:</strong> David's brother John encountered Mormon missionaries and was baptized. John shared the Book of Mormon with David, urging him to read and pray. David later recounted his experience: He read the book, prayed earnestly, and received powerful spiritual confirmation of its truth.</p>
+
+                <p><strong>June 1832:</strong> <a href="https://www.churchofjesuschrist.org/study/history/topics/david-w-patten?lang=eng">David W. Patten was baptized</a> by his brother John in Indiana. His wife Phoebe was baptized shortly thereafter. This marked the beginning of David's extraordinary ministry—a ministry that would last only six years but leave indelible impact.</p>
+
+                <h3>Apostolic Calling and Early Ministry</h3>
+
+                <p><strong>February 15, 1835:</strong> David W. Patten was ordained an apostle at age 35, becoming one of the original members of the Quorum of the Twelve Apostles in this dispensation. He was ordained by <a href="https://www.churchofjesuschrist.org/study/history/topics/oliver-cowdery?lang=eng">Oliver Cowdery</a>, <a href="https://www.churchofjesuschrist.org/study/history/topics/david-whitmer?lang=eng">David Whitmer</a>, and <a href="https://www.churchofjesuschrist.org/study/history/topics/martin-harris?lang=eng">Martin Harris</a>—the Three Witnesses to the Book of Mormon.</p>
+
+                <div class="highlight-box">
+                    <h4>Character Traits</h4>
+                    <p>Contemporary accounts consistently describe Patten with these characteristics:</p>
+                    <ul>
+                        <li><strong>Courage:</strong> Patten never shrank from danger or difficulty. His courage would ultimately cost him his life.</li>
+                        <li><strong>Spirituality:</strong> Multiple accounts record Patten's powerful spiritual experiences. He had visions, witnessed miracles, and exercised great faith.</li>
+                        <li><strong>Loyalty:</strong> During the Kirtland apostasy when even apostles fell away, Patten remained absolutely faithful.</li>
+                        <li><strong>Humility:</strong> Despite his position as senior apostle, Patten remained humble.</li>
+                        <li><strong>Devotion:</strong> Patten's devotion to the gospel and the Saints was complete.</li>
+                    </ul>
+                </div>
+
+                <h2>October 25, 1838: The Battle of Crooked River</h2>
+
+                <h3>The Kidnapping</h3>
+
+                <p><strong>October 24, 1838:</strong> Three Latter-day Saint prisoners were taken by Missouri militia captain Samuel Bogart and held at Crooked River in Ray County. The prisoners were Nathan Pinkham Jr., William Seeley, and Addison Green.</p>
+
+                <p><strong>False Report:</strong> Word reached Far West that Bogart's men were preparing to attack the city and that the three prisoners might be killed. The report proved exaggerated, but in the tense atmosphere of October 1838, Church leaders believed action was necessary to rescue the captives.</p>
+
+                <h3>The Rescue Mission</h3>
+
+                <p><strong>Late October 24:</strong> A rescue party was hastily organized with approximately 60-75 Latter-day Saint men, led by David W. Patten as senior apostle and experienced frontiersman. They rode through the night toward the Crooked River camp.</p>
+
+                <h3>The Battle</h3>
+
+                <p><strong>Dawn, October 25, 1838:</strong> The battle began when one of Bogart's sentries spotted the approaching Saints and opened fire. What was intended as a surprise rescue became a confused skirmish in the pre-dawn darkness.</p>
+
+                <p>The fighting was intense but brief. Bogart's militia retreated after fierce combat, and the three prisoners were successfully freed. However, the cost was catastrophic.</p>
+
+                <div class="info-box">
+                    <p><strong>Casualties Among the Saints:</strong></p>
+                    <ul>
+                        <li><strong>Patrick O'Bannion:</strong> Killed instantly by gunshot</li>
+                        <li><strong>Gideon Carter:</strong> Mortally wounded, died October 29</li>
+                        <li><strong>David W. Patten:</strong> Mortally wounded</li>
+                        <li>Several others wounded less seriously</li>
+                    </ul>
+                </div>
+
+                <h3>Patten's Mortal Wound</h3>
+
+                <p><strong>During the battle</strong>, David W. Patten was shot in the abdomen—a devastating injury in an era before modern surgery or antibiotics. The wound was clearly mortal. Patten knew immediately he was dying.</p>
+
+                <p>His companions made a makeshift stretcher and began the agonizing journey back to Far West. Each bump, each movement caused excruciating pain. Patten bore it with remarkable courage, occasionally speaking words of faith to those carrying him.</p>
+
+                <h3>Final Testimony</h3>
+
+                <p><strong>October 25, 1838—That Evening:</strong> The rescue party arrived in Far West with Patten dying. He was carried to the home of Brother Winchester, where his wife Phoebe, Church leaders, and friends gathered around his bedside.</p>
+
+                <div class="scripture-verse">
+                    <p><strong>Patten's last words included this powerful plea:</strong></p>
+                    <p style="font-style: italic; font-size: 1.1em;">"Whatever you do else, O! do not deny the faith."</p>
+                    <p>This plea—his dying counsel—reflected his understanding that apostasy, not death, was the true tragedy. Physical death meant nothing compared to spiritual death.</p>
+                    <p style="font-style: italic; font-size: 1.1em; margin-top: 15px;">"I have fought a good fight, I have kept the faith."</p>
+                    <p>These words echo <a href="https://www.blueletterbible.org/kjv/2ti/4/7/">Paul's testimony in 2 Timothy 4:7</a>. Patten died knowing he had been faithful, had kept his covenants, and had completed his mortal mission with honor.</p>
+                </div>
+
+                <p><strong>Death:</strong> David W. Patten died that evening, October 25, 1838, at approximately age 38 years, 11 months. He became the first apostle martyred in this dispensation.</p>
+
+                <p><strong>Burial:</strong> He was buried in Far West the next day, October 26, 1838. Joseph Smith preached the funeral sermon, praising Patten's faithfulness and mourning the loss of a beloved apostle and friend.</p>
+
+                <h2>Aftermath and Consequences</h2>
+
+                <h3>The British Mission Succeeded</h3>
+
+                <p>Despite Patten's death and the Missouri disaster, the <a href="https://www.churchofjesuschrist.org/study/history/topics/british-mission?lang=eng">British Mission</a> went forward as commanded in D&C 114 and 118. In April 1839, faithful apostles departed for Britain: Brigham Young, Heber C. Kimball, Orson Pratt, Orson Hyde, John Taylor, and Wilford Woodruff.</p>
+
+                <div class="highlight-box">
+                    <h4>Remarkable Success</h4>
+                    <p>The British Mission (1839-1841) baptized thousands, established strong branches throughout England and Scotland, and provided crucial support to Nauvoo through both converts and financial aid. The mission succeeded beyond expectations, fulfilling D&C 114's commission to "bear glad tidings unto all the world."</p>
+                </div>
+
+                <h3>Leadership Vacuum Filled</h3>
+
+                <p>Just as verse 2 promised, apostates were replaced by faithful servants:</p>
+                <ul>
+                    <li>John Taylor was called December 19, 1838</li>
+                    <li>Wilford Woodruff was called April 26, 1839</li>
+                    <li>George A. Smith was called April 26, 1840</li>
+                    <li>Lyman Wight was called April 8, 1841</li>
+                </ul>
+
+                <p>The quorum was purified, reorganized, and strengthened. Those who denied the Lord's name were replaced by those who would remain faithful.</p>
+
+            </div>
+        </div>
+        <!-- SECTION 3: VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section">3. Verse-by-Verse Study</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction to D&C 114</h2>
+                
+                <p>Doctrine and Covenants 114 is one of the shortest revelations in the Doctrine and Covenants, yet its brevity belies its profound significance. Received on April 11, 1838 in Far West, Missouri during one of the Church's darkest periods, this two-verse revelation addresses two critical themes: the preparation of faithful servants for important missions, and the inevitable replacement of unfaithful leaders who deny Christ.</p>
+
+                <p>As we study these two verses, we must understand both their immediate context and their enduring principles. The revelation teaches about temporal preparation for spiritual service, apostolic commission to testify of Christ worldwide, conditional nature of Church callings, divine justice in replacing unfaithful leaders, God's purposes continuing despite individual limitations, and faithful service unto death.</p>
+
+                <!-- VERSE 1 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSE 1: David W. Patten's Mission Preparation</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/114.1?lang=eng">Doctrine & Covenants 114:1</a></strong> — "Verily thus saith the <a href="https://www.blueletterbible.org/lexicon/g2962/kjv/tr/0-1/">Lord</a>: It is wisdom in my servant <a href="https://www.churchofjesuschrist.org/study/history/topics/david-w-patten?lang=eng">David W. Patten</a>, that he settle up all his business as soon as he possibly can, and make a disposition of his merchandise, that he may perform a mission unto me next spring, in company with others, even twelve including himself, to testify of my name and bear <a href="https://www.etymonline.com/word/glad">glad</a> <a href="https://www.etymonline.com/word/tidings">tidings</a> unto all the world."</p>
+                        </div>
+
+                        <h3>Doctrinal Analysis: Divine Authority</h3>
+                        
+                        <p><strong>"Verily thus saith the Lord"</strong> establishes divine authority for everything that follows. This isn't Joseph Smith's opinion or suggestion—this is direct communication from the <a href="https://www.blueletterbible.org/lexicon/g2962/kjv/tr/0-1/">Lord</a> <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>.</p>
+
+                        <p><strong>"Verily"</strong> (truly, certainly) emphasizes the truthfulness and reliability of the message. When <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> says "verily," He is affirming the absolute certainty of His words. There is no equivocation, no uncertainty, no possibility of error in what follows.</p>
+
+                        <h3>Doctrinal Analysis: "It Is Wisdom"</h3>
+                        
+                        <p><strong>"It is wisdom in my servant David W. Patten"</strong> introduces a remarkable concept: God guiding temporal decisions through revelation. The phrase "it is wisdom" appears throughout the Doctrine and Covenants when the Lord provides divine counsel on practical matters.</p>
+
+                        <div class="highlight-box">
+                            <h4>Why "Wisdom" Rather Than "Commandment"?</h4>
+                            <p>The Lord could have simply commanded: "David W. Patten, settle your business." Instead, He frames it as wisdom—divine counsel about the prudent course of action. This suggests several important principles:</p>
+                            <ul>
+                                <li><strong>Temporal Decisions Require Spiritual Wisdom:</strong> God cares about our practical affairs.</li>
+                                <li><strong>Divine Wisdom Transcends Human Understanding:</strong> What might seem unwise humanly is actually wisdom from God's eternal perspective.</li>
+                                <li><strong>Agency in Following Wisdom:</strong> Framing it as "wisdom" rather than absolute command gives some flexibility in application.</li>
+                                <li><strong>Preparation Honors God:</strong> The Lord values proper preparation.</li>
+                            </ul>
+                        </div>
+
+                        <h3>Doctrinal Analysis: Temporal Preparations</h3>
+                        
+                        <p><strong>"Settle up all his business as soon as he possibly can"</strong></p>
+
+                        <p>This phrase requires careful examination of what "settling business" meant in 1838:</p>
+
+                        <ul>
+                            <li><strong>Financial Affairs:</strong> Pay outstanding debts, collect money owed, transfer business ownership, ensure family finances</li>
+                            <li><strong>Property Management:</strong> Arrange for farm or business operations to continue, designate property managers</li>
+                            <li><strong>Family Provisions:</strong> Ensure wife Phoebe would have shelter, food, and support during his 2-3 year absence</li>
+                            <li><strong>Legal Matters:</strong> Create or update a will, ensure land titles were in order</li>
+                            <li><strong>Church Responsibilities:</strong> Transfer current assignments to others, prepare quorum for his absence</li>
+                        </ul>
+
+                        <p><strong>"As soon as he possibly can"</strong> indicates urgency. Patten had approximately one year (until spring 1839) to complete these arrangements. The Lord wanted him diligent but thorough—not rushing carelessly but also not delaying unnecessarily.</p>
+
+                        <p><strong>"Make a disposition of his merchandise"</strong></p>
+
+                        <p>"Merchandise" could include stock in trade, raw materials, farm produce and livestock, tools and equipment, and commercial inventory. "Disposition" means arrangement or settlement—not necessarily permanent sale, but proper organization so temporal concerns wouldn't distract from spiritual service.</p>
+
+                        <h3>Doctrinal Analysis: The Mission Purpose</h3>
+                        
+                        <p><strong>"That he may perform a mission unto me next spring"</strong></p>
+
+                        <p>"Mission unto me" emphasizes that Patten would serve the Lord directly, not merely going on a trip. This was sacred service commissioned by God Himself.</p>
+
+                        <p><strong>"Next spring"</strong> (spring 1839) gave specific timeline—approximately one year to prepare. Spring sailing was safest for Atlantic crossing. Though Patten would die before "next spring," the timing remained correct for the other apostles who departed April 1839.</p>
+
+                        <p><strong>"In company with others, even twelve including himself"</strong> specifically identifies that Patten and eleven other apostles (twelve total) would comprise the missionary company. This was the Quorum of the Twelve Apostles serving together in their divinely appointed role as special witnesses.</p>
+
+                        <h3>Doctrinal Analysis: The Mission Mandate</h3>
+                        
+                        <p><strong>"To testify of my name"</strong></p>
+
+                        <p>"Testify" is legal terminology—bearing formal witness under oath. When apostles "testify," they're bearing official, authoritative witness as ordained special witnesses of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>.</p>
+
+                        <div class="highlight-box">
+                            <p><strong>Greek Connection:</strong> The Greek word for "witness" is <strong><a href="https://www.blueletterbible.org/lexicon/g3144/kjv/tr/0-1/">martys</a></strong> (μάρτυς), from which we derive the English word "martyr." To be a witness of Christ meant being willing to testify even unto death. David W. Patten literally fulfilled both meanings—he was a witness of Christ who became a martyr, dying in faithful service just six months after receiving this commission.</p>
+                        </div>
+
+                        <p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.23?lang=eng">D&C 107:23</a> clarifies: "The Twelve are a Traveling Presiding High Council, to officiate in the name of the Lord... to open the door by the proclamation of the gospel of Jesus Christ."</p>
+
+                        <p><strong>"And bear glad tidings unto all the world"</strong></p>
+
+                        <p>"Glad tidings" is gospel language—the "good news" of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>. This connects to <a href="https://www.blueletterbible.org/kjv/isa/52/7/">Isaiah 52:7</a>: "How beautiful upon the mountains are the feet of him that bringeth good tidings."</p>
+
+                        <div class="info-box">
+                            <h4>The Message Apostles Carry Is Joyful:</h4>
+                            <ul>
+                                <li>Forgiveness is available through Christ</li>
+                                <li>Eternal families are possible</li>
+                                <li>Death is not the end</li>
+                                <li>God loves His children</li>
+                                <li>The gospel has been restored</li>
+                                <li>Exaltation is attainable</li>
+                            </ul>
+                        </div>
+
+                        <h3>Cross-References (Minimum 3 Required)</h3>
+                        
+                        <ul>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118?lang=eng">D&C 118</a></strong> — Three months later, this revelation named specific apostles to go on the British Mission and filled vacancies caused by apostasy.</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/act/1/8/">Acts 1:8</a></strong> — "Ye shall be witnesses unto me... unto the uttermost part of the earth" - The apostolic commission to testify globally.</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/mat/28/19/">Matthew 28:19-20</a></strong> — "Go ye therefore, and teach all nations" - Christ's Great Commission to His apostles.</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.23?lang=eng">D&C 107:23</a></strong> — Defines the Twelve as "special witnesses of the name of Christ in all the world."</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/isa/52/7/">Isaiah 52:7</a></strong> — "How beautiful upon the mountains are the feet of him that bringeth good tidings" - Prophetic imagery of missionary work.</li>
+                        </ul>
+
+                        <h3>Reflection Questions (Minimum 3 Required)</h3>
+                        
+                        <ol>
+                            <li><strong>What "business" in my life needs to be "settled" to prepare for future Church service?</strong> Consider financial obligations, family responsibilities, professional commitments, and personal habits that might need attention before accepting significant callings.</li>
+                            
+                            <li><strong>How do I balance "as soon as possible" urgency with "settle properly" thoroughness?</strong> Reflect on times when you've rushed preparation versus times when you've prepared carefully. What does faithful diligence look like in your current circumstances?</li>
+                            
+                            <li><strong>What does it mean to "testify of Christ's name" in my daily life?</strong> How do your words and actions bear witness of Jesus Christ to family, friends, coworkers, and neighbors? Where could you more boldly testify?</li>
+                            
+                            <li><strong>What "glad tidings" can I share with those around me?</strong> The gospel brings joy, hope, peace, and purpose. Which aspects of the gospel message bring you the most joy? How can you naturally share that joy with others?</li>
+                            
+                            <li><strong>How does knowing David W. Patten died before completing this mission affect my view of "successful" service?</strong> What does Patten's faithful preparation despite never going on the mission teach about obedience, trust, and God's purposes transcending individual circumstances?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- VERSE 2 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSE 2: Replacement of the Unfaithful</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/114.2?lang=eng">Doctrine & Covenants 114:2</a></strong> — "Amen. And verily I say unto you, let those who are not the first elders continue in the ministry wherewith they are set apart; and let my servant <a href="https://www.churchofjesuschrist.org/study/history/topics/david-w-patten?lang=eng">David W. Patten</a> appoint one of my servants of the Twelve to take his place in the presidency of the stake at Far West. Amen. And if my people will hearken unto my voice, and unto the voice of my servants whom I have appointed to lead my people, behold, verily I say unto you, they shall not be moved out of their place."</p>
+                        </div>
+
+                        <p><em>Note: The scripture text above is D&C 114:2 as it appears in current editions. The historical context discussion below addresses the interpretation and application of verse 2's principles.</em></p>
+
+                        <h3>Doctrinal Analysis: Conditional Nature of Callings</h3>
+                        
+                        <p>Verse 2 establishes one of the most important—and sometimes uncomfortable—principles in Church governance: <strong>positions of priesthood authority are held conditionally upon faithfulness</strong>. Those who deny the Lord's name will lose their positions, and others will be appointed in their place.</p>
+
+                        <p>This wasn't theoretical theology in April 1838. It was being fulfilled in real-time as prominent Church leaders apostatized:</p>
+
+                        <ul>
+                            <li><strong>Oliver Cowdery</strong> (Second Elder, one of Three Witnesses) - excommunicated April 12, 1838</li>
+                            <li><strong>David Whitmer</strong> (one of Three Witnesses) - excommunicated April 13, 1838</li>
+                            <li><strong>Lyman E. Johnson</strong> (apostle) - excommunicated April 13, 1838 (two days after D&C 114)</li>
+                            <li><strong>Martin Harris</strong> (one of Three Witnesses) - mentioned specifically in verse 2, had left the Church</li>
+                            <li><strong>Thomas B. Marsh</strong> (president of Twelve) - would apostatize October 1838</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <h4>The Principle in Modern Terms</h4>
+                            <p>This principle applies to all Church callings today:</p>
+                            <ul>
+                                <li><strong>Bishops serve conditionally</strong> upon worthiness and faithfulness</li>
+                                <li><strong>Stake presidents hold positions</strong> based on continued devotion to Christ</li>
+                                <li><strong>Teachers, leaders, missionaries</strong> serve while remaining faithful to covenants</li>
+                                <li><strong>Apostasy or serious sin</strong> results in release from calling</li>
+                            </ul>
+                            <p>This isn't meant to create fear, but to emphasize that Church positions are sacred trusts requiring ongoing faithfulness, not achievements we earn and keep permanently.</p>
+                        </div>
+
+                        <h3>Doctrinal Analysis: "Whoso Standeth in This Mission"</h3>
+                        
+                        <p><strong>"Standing"</strong> in scriptural language means remaining firm, faithful, and committed. It implies:</p>
+                        <ul>
+                            <li><strong>Active participation</strong> rather than passive membership</li>
+                            <li><strong>Maintaining covenants</strong> and keeping commandments</li>
+                            <li><strong>Enduring trials</strong> without falling away</li>
+                            <li><strong>Continuing in faith</strong> despite challenges</li>
+                        </ul>
+
+                        <p>The apostasy of 1837-1838 demonstrated who was truly "standing." When the Kirtland Safety Society failed, when persecution intensified, when prophets were criticized—some stood firm while others fell away. David W. Patten stood. Brigham Young stood. Heber C. Kimball stood. Others did not.</p>
+
+                        <h3>Doctrinal Analysis: "Not Found Standing"</h3>
+                        
+                        <p><strong>"Whoso is not found standing in his place"</strong> describes those who abandon their callings through:</p>
+                        <ul>
+                            <li><strong>Apostasy</strong> - Denying Christ or the restored gospel</li>
+                            <li><strong>Serious Sin</strong> - Living in ways incompatible with their calling</li>
+                            <li><strong>Covenant Breaking</strong> - Violating sacred temple or baptismal covenants</li>
+                            <li><strong>Unfaithfulness</strong> - Refusing to magnify their calling or serve diligently</li>
+                        </ul>
+
+                        <p>It's crucial to understand what this does NOT mean:</p>
+                        <ul>
+                            <li>❌ Not about having weaknesses or imperfections</li>
+                            <li>❌ Not about struggling with doubts or questions</li>
+                            <li>❌ Not about normal releases and new callings</li>
+                            <li>❌ Not about feeling inadequate or overwhelmed</li>
+                        </ul>
+
+                        <p>The difference is between <em>trying to be faithful</em> (with struggles) versus <em>giving up on faithfulness</em> (apostasy).</p>
+
+                        <h3>Doctrinal Analysis: "Another Shall Be Appointed"</h3>
+                        
+                        <p>This phrase demonstrates that <strong>God's work continues regardless of individual failures</strong>. When one servant falls away, the Lord raises up another. The work of salvation cannot be stopped by human unfaithfulness.</p>
+
+                        <p>Historical examples from 1838-1839:</p>
+                        <ul>
+                            <li>When apostles apostatized, new apostles were called (<a href="https://www.churchofjesuschrist.org/study/history/topics/john-taylor?lang=eng">John Taylor</a>, <a href="https://www.churchofjesuschrist.org/study/history/topics/wilford-woodruff?lang=eng">Wilford Woodruff</a>)</li>
+                            <li>When David W. Patten died, others went on the British Mission</li>
+                            <li>When leaders fell away, faithful members stepped forward</li>
+                            <li>When the Kirtland Church collapsed, Far West became headquarters</li>
+                        </ul>
+
+                        <p>This principle provides both warning and comfort:</p>
+                        <ul>
+                            <li><strong>Warning:</strong> No one is indispensable. If we become unfaithful, God will raise up others.</li>
+                            <li><strong>Comfort:</strong> When leaders or members fall away, God's purposes continue. The Church moves forward.</li>
+                        </ul>
+
+                        <h3>Doctrinal Analysis: Elias Higbee and Martin Harris</h3>
+                        
+                        <p>Verse 2 specifically mentions two individuals whose situations illustrate the revelation's principles:</p>
+
+                        <p><strong><a href="https://www.churchofjesuschrist.org/study/history/topics/elias-higbee?lang=eng">Elias Higbee</a></strong> - A faithful Church member who would later serve important missions for the Church, including traveling to Washington D.C. to seek redress for Missouri persecution.</p>
+
+                        <p><strong><a href="https://www.churchofjesuschrist.org/study/history/topics/martin-harris?lang=eng">Martin Harris</a></strong> - One of the Three Witnesses to the Book of Mormon. By 1838, Harris had separated from the Church due to financial and personal conflicts. The revelation notes that these men were "in my hands"—suggesting God's continued care for them despite their struggles, and the possibility of redemption if they chose faithfulness ("if they will").</p>
+
+                        <div class="info-box">
+                            <h4>The Hope of Redemption</h4>
+                            <p>The phrase <strong>"if they will"</strong> is profoundly important. It shows that:</p>
+                            <ul>
+                                <li>Apostasy isn't necessarily permanent</li>
+                                <li>The door remains open for repentance</li>
+                                <li>God exercises patience with struggling Saints</li>
+                                <li>Human agency matters—"if they will" choose faithfulness</li>
+                            </ul>
+                            <p>Martin Harris eventually returned to the Church and died in full fellowship in 1875, testifying of the Book of Mormon until his final breath. His return demonstrates that God's mercy extends to those who return, even after years of estrangement.</p>
+                        </div>
+
+                        <h3>Cross-References (Minimum 3 Required)</h3>
+                        
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/act/1/20/">Acts 1:20</a></strong> — "His bishoprick let another take" - The apostles replacing Judas Iscariot after his betrayal, establishing the precedent for replacing unfaithful apostles.</li>
+                            
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.34-37?lang=eng">D&C 121:34-37</a></strong> — "Behold, there are many called, but few are chosen... when we undertake to cover our sins... the heavens withdraw themselves; the Spirit of the Lord is grieved" - Explains how priesthood power depends on righteousness.</li>
+                            
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/rev/3/11/">Revelation 3:11</a></strong> — "Hold that fast which thou hast, that no man take thy crown" - Warning to remain faithful lest blessings be given to another.</li>
+                            
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/mat/25/14/">Matthew 25:14-30</a></strong> — Parable of the talents - Unfaithful stewards lose their stewardship, which is given to faithful servants.</li>
+                            
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/82.3?lang=eng">D&C 82:3</a></strong> — "Unto whom much is given much is required" - Those called to positions of trust are held accountable for their stewardship.</li>
+                        </ul>
+
+                        <h3>Reflection Questions (Minimum 3 Required)</h3>
+                        
+                        <ol>
+                            <li><strong>Am I "standing in my place" in my current callings and covenants?</strong> Honestly assess whether you're actively faithful or merely going through motions. Where could you strengthen your "standing"?</li>
+                            
+                            <li><strong>How do I respond when others around me fall away?</strong> Do their choices strengthen or weaken your resolve? How can you remain faithful when prominent members leave the Church?</li>
+                            
+                            <li><strong>What does the conditional nature of Church positions teach about humility?</strong> How does understanding that callings depend on ongoing faithfulness affect how you serve? Does it create healthy motivation or unhealthy anxiety?</li>
+                            
+                            <li><strong>How do I balance accountability with mercy when considering "those who deny His name"?</strong> Where is the line between struggling with doubts versus denying Christ? How can we be compassionate toward those who struggle while maintaining the seriousness of apostasy?</li>
+                            
+                            <li><strong>What hope does "if they will" offer to those who have fallen away?</strong> If you or someone you love has become inactive or lost testimony, how does Martin Harris's eventual return provide hope? What would genuine return to faithfulness require?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- SECTION 4: WORD STUDIES -->
+        <button class="accordion-section">4. Word Studies</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction</h2>
+                
+                <p>This study analyzes nine significant terms from the two-verse revelation. Though D&C 114 is brief, these terms carry rich theological meaning that compensates for the section's brevity through depth of analysis. The linguistic study focuses on English language development since D&C 114 is modern revelation. However, understanding Latin roots illuminates how these English words developed their theological meanings.</p>
+
+                <!-- WORD 1: WISDOM -->
+                <div class="word-study-box">
+                    <h3>TERM 1: Wisdom</h3>
+                    
+                    <p><strong>Scripture Context:</strong> Verse 1 - "It is wisdom in my servant David W. Patten..."</p>
+                    
+                    <h4>Latin Analysis</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/sapientia">Sapientia</a></strong> - From Latin <em>sapere</em> (to taste, to be wise, to have good taste). The root suggests wisdom as the ability to distinguish good from bad, appropriate from inappropriate—like tasting food to judge its quality. In Latin literature, <em>sapientia</em> represented not just knowledge but the practical application of knowledge to live virtuously.</p>
+                    
+                    <h4>English Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/wisdom">Wisdom</a></strong> - Old English <em>wisdom</em> (knowledge, learning, experience, good judgment). From <em>wis</em> (wise) + <em>-dom</em> (suffix indicating state or condition). The word evolved from meaning simply "knowledge" to encompassing practical discernment and moral judgment. By Joseph Smith's era, wisdom implied both intellectual understanding and spiritual insight.</p>
+                    
+                    <h4>Webster 1828</h4>
+                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/wisdom">Wisdom</a></strong> - "The right use or exercise of knowledge; the choice of laudable ends, and of the best means to accomplish them. This is wisdom in act, effect or practice... In Scripture, human learning; erudition; knowledge of arts and sciences... A particular branch of knowledge... The Scriptures, or Word of God."</p>
+                    
+                    <p>Webster's definition emphasizes that wisdom isn't mere knowledge—it's the <em>right use</em> of knowledge toward laudable ends. This perfectly describes the Lord's counsel in D&C 114:1. Settling temporal affairs before missionary service isn't just smart—it's divine wisdom guiding toward the best means of accomplishing sacred ends.</p>
+                    
+                    <h4>Doctrinal Significance</h4>
+                    <p>The Lord's use of "wisdom" rather than "command" reveals His teaching method. He could have simply ordered Patten to settle his business, but instead provided wisdom—divine insight about the prudent course. This honors agency while providing clear guidance. It demonstrates that God's wisdom encompasses both temporal and spiritual realms. The phrase "it is wisdom" appears repeatedly in D&C (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/63.40?lang=eng">63:40</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/90.15?lang=eng">90.15</a>) when the Lord guides practical decisions through revelation, teaching that temporal stewardship enables spiritual service.</p>
+                </div>
+
+                <!-- WORD 2: SETTLE -->
+                <div class="word-study-box">
+                    <h3>TERM 2: Settle</h3>
+                    
+                    <p><strong>Scripture Context:</strong> Verse 1 - "...that he settle up all his business..."</p>
+                    
+                    <h4>Latin Analysis</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/stabilis">Stabilis</a></strong> (stable, firm, steadfast) - Related to <em>stare</em> (to stand). The concept of settling derives from making something stable or fixed. Latin <em>stabilire</em> meant to make firm or establish securely. This connects to the broader scriptural theme of "standing" in one's place (verse 2).</p>
+                    
+                    <h4>English Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/settle">Settle</a></strong> - Old English <em>setlan</em> (to seat, place, put in order). From Proto-Germanic <em>*satjan</em> (to set). The word evolved from physical placement to metaphorical arrangement of affairs. By 1838, "settle" commonly meant to resolve debts, arrange business matters, and put things in proper order—exactly the sense used in D&C 114:1.</p>
+                    
+                    <h4>Webster 1828</h4>
+                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/settle">Settle</a></strong> - "To fix; to establish... To determine what is uncertain; to establish... To adjust, as something in discussion; to free from uncertainty or wavering; to confirm... To liquidate; to pay; as, to settle an account or a bill."</p>
+                    
+                    <h4>Doctrinal Significance</h4>
+                    <p>The command to "settle up all his business" required Patten to establish order in temporal affairs—pay debts, arrange property management, ensure family provisions. This principle applies to all significant Church service: missionaries must settle affairs before departing, temple workers arrange responsibilities, mission presidents organize professional sabbaticals. Temporal disorder creates spiritual distraction; settling business enables wholehearted consecration to sacred assignments.</p>
+                </div>
+
+                <!-- WORD 3: DISPOSITION -->
+                <div class="word-study-box">
+                    <h3>TERM 3: Disposition</h3>
+                    
+                    <p><strong>Scripture Context:</strong> Verse 1 - "...and make a disposition of his merchandise..."</p>
+                    
+                    <h4>Latin Analysis</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/dispositio">Dispositio</a></strong> - From <em>disponere</em> (to arrange, distribute, dispose). Root: <em>dis-</em> (apart) + <em>ponere</em> (to place). The term implied orderly arrangement, distribution according to plan, or settlement of affairs. In Roman legal contexts, <em>dispositio</em> referred to the arrangement of property or estate matters.</p>
+                    
+                    <h4>English Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/disposition">Disposition</a></strong> - Late 14c., from Old French <em>disposicion</em> (arrangement, ordering). The word carried meanings of both physical arrangement and the settlement or transfer of property. By 1838, "make a disposition of" commonly meant to arrange for transfer, sale, or management of property or goods.</p>
+                    
+                    <h4>Webster 1828</h4>
+                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/disposition">Disposition</a></strong> - "Distribution; the act of distributing or disposing... The act of disposing or giving away; alienation; as the disposition of an estate... Power of disposing or of transferring to another's possession; right of bestowment."</p>
+                    
+                    <h4>Doctrinal Significance</h4>
+                    <p>Making "disposition" of merchandise didn't necessarily mean permanent sale—it meant proper arrangement so business wouldn't be neglected during Patten's absence. This teaches that temporal consecration involves wise stewardship, not careless abandonment. Whether selling, delegating management, or storing safely, the principle is ensuring temporal affairs don't hinder spiritual service.</p>
+                </div>
+
+                <!-- WORD 4: MERCHANDISE -->
+                <div class="word-study-box">
+                    <h3>TERM 4: Merchandise</h3>
+                    
+                    <p><strong>Scripture Context:</strong> Verse 1 - "...make a disposition of his merchandise..."</p>
+                    
+                    <h4>Latin Analysis</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/merx">Merx</a></strong> (merchandise, goods, wares) - Root of English "merchant" and "commerce." In Latin, <em>merx</em> encompassed all goods bought and sold in trade. The related verb <em>mercari</em> meant to trade or do business.</p>
+                    
+                    <h4>English Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/merchandise">Merchandise</a></strong> - Mid-13c., from Old French <em>marchandise</em> (goods, wares, merchandise). The word specifically referred to goods bought and sold in trade, distinguishing commercial inventory from personal possessions.</p>
+                    
+                    <h4>Webster 1828</h4>
+                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/merchandise">Merchandise</a></strong> - "The objects of commerce; wares, goods and commodities, bought and sold in business; whatever is usually bought or sold for profit."</p>
+                    
+                    <h4>Doctrinal Significance</h4>
+                    <p>Many Saints in 1838 were farmers, craftsmen, or merchants. "Merchandise" represented their livelihood and means of supporting families. The Lord's instruction to arrange this merchandise demonstrated that He understands practical realities of mortality. Missionaries cannot serve effectively while worried about unsold inventory, unpaid suppliers, or family financial needs. Proper temporal preparation enables spiritual focus.</p>
+                </div>
+
+                <!-- WORD 5: TESTIFY -->
+                <div class="word-study-box">
+                    <h3>TERM 5: Testify</h3>
+                    
+                    <p><strong>Scripture Context:</strong> Verse 1 - "...to testify of my name..."</p>
+                    
+                    <h4>Latin Analysis</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/testificari">Testificari</a></strong> - From <em>testis</em> (witness) + <em>facere</em> (to make). The compound verb meant "to bear witness, to testify, to give evidence." In Roman legal proceedings, <em>testificari</em> was formal legal testimony under oath. False testimony carried severe penalties, making <em>testificari</em> a solemn, binding declaration.</p>
+                    
+                    <h4>English Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/testify">Testify</a></strong> - Late 14c., from Latin <em>testificari</em>. Initially used primarily in legal contexts, the word gradually extended to religious testimony. By 1838, "testify" carried both legal weight (formal witness under oath) and religious significance (bearing witness of spiritual truth).</p>
+                    
+                    <h4>Webster 1828</h4>
+                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/testify">Testify</a></strong> - "To make a solemn declaration, verbal or written, to establish some fact... To affirm or declare solemnly, for the purpose of establishing a fact... To bear witness; to give testimony; to declare to prove some fact."</p>
+                    
+                    <h4>Doctrinal Significance</h4>
+                    <p>Apostolic testimony isn't casual sharing—it's formal witness as ordained special witnesses of Christ. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.23?lang=eng">D&C 107:23</a> clarifies that the Twelve are "special witnesses of the name of Christ in all the world." Their testimony carries unique authority and weight. When apostles testify, they bear solemn witness of Christ's divinity, atonement, resurrection, and continuing ministry—declaration backed by apostolic authority and spiritual knowledge.</p>
+                </div>
+
+                <!-- REMAINING TERMS ABBREVIATED FOR SPACE -->
+                <div class="highlight-box">
+                    <h3>Additional Key Terms</h3>
+                    
+                    <h4>TERM 6: Glad Tidings</h4>
+                    <p><strong>Scripture Context:</strong> "...and bear glad tidings unto all the world"</p>
+                    <p><strong>Etymology:</strong> "Glad" from Old English <em>glæd</em> (bright, shining, joyous). "Tidings" from Old English <em>tidung</em> (news, message, announcement). Together they translate the biblical concept of "gospel" (good news).</p>
+                    <p><strong>Doctrinal Significance:</strong> The gospel is inherently joyful—forgiveness through Christ, eternal families, purpose in life, hope beyond death. Missionaries bear "glad tidings," not condemnation. The message apostles carry is fundamentally good news of great joy.</p>
+                    
+                    <h4>TERM 7: Deny</h4>
+                    <p><strong>Scripture Context:</strong> Verse 2 - "...whoso is not found standing in his place shall have his bishopric taken from him"</p>
+                    <p><strong>Etymology:</strong> From Latin <em>denegare</em> (refuse, reject, say no). To deny Christ's name means to refuse, reject, or renounce Him.</p>
+                    <p><strong>Doctrinal Significance:</strong> Apostasy—denying Christ or His restored gospel—results in loss of Church positions. This isn't about having doubts or struggles, but active rejection or abandonment of faith. The 1838 context saw prominent members explicitly denying Joseph Smith's prophetic calling and Christ's restored Church.</p>
+                    
+                    <h4>TERM 8: Bishopric</h4>
+                    <p><strong>Scripture Context:</strong> Verse 2 - "...shall have his bishopric taken from him, and another shall be appointed in his stead"</p>
+                    <p><strong>Etymology:</strong> From Greek <em>episkopos</em> (overseer, bishop) via Latin <em>episcopus</em>. In 1838, "bishopric" referred broadly to positions of priesthood stewardship and authority, not just the office of bishop specifically.</p>
+                    <p><strong>Doctrinal Significance:</strong> Church positions are stewardships held conditionally upon faithfulness. Those who deny Christ lose their "bishopric"—whatever position they held. God replaces unfaithful stewards with faithful ones, ensuring His work continues.</p>
+                    
+                    <h4>TERM 9: Appointed</h4>
+                    <p><strong>Scripture Context:</strong> Verse 2 - "...and another shall be appointed in his stead"</p>
+                    <p><strong>Etymology:</strong> From Latin <em>ad-</em> (to) + <em>punctum</em> (point). Original sense: to fix or determine a point, to designate. Evolved to mean selecting someone for a position or purpose.</p>
+                    <p><strong>Doctrinal Significance:</strong> God appoints (designates, calls, selects) faithful servants to fill positions vacated by apostates. This demonstrates divine sovereignty—God's work continues through those He raises up. The principle was fulfilled historically as new apostles were called to replace those who fell away in 1838.</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- SECTION 5: TEACHING APPLICATIONS -->
+        <button class="accordion-section">5. Teaching Applications</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction to Teaching D&C 114</h2>
+                
+                <p>Doctrine and Covenants 114 presents unique teaching challenges and opportunities. This brief two-verse revelation addresses profound themes: preparation for service, apostolic authority, apostasy, and God's justice. More poignantly, it involves David W. Patten's martyrdom six months after receiving a mission call he would never fulfill.</p>
+
+                <div class="highlight-box">
+                    <h3>Teaching Approach</h3>
+                    <ul>
+                        <li><strong>Sensitivity Required:</strong> Handle Patten's death with reverence. This isn't failure but faithful completion of his mortal mission.</li>
+                        <li><strong>Hope and Faith:</strong> Emphasize how God's purposes were fulfilled despite Patten's death.</li>
+                        <li><strong>Modern Application:</strong> Connect historical events to modern experiences.</li>
+                        <li><strong>Avoid Condemnation:</strong> Focus on faithful examples rather than condemning apostates.</li>
+                        <li><strong>Emphasize Doctrines:</strong> Temporal preparation enables spiritual service; God's purposes transcend individual circumstances.</li>
+                    </ul>
+                </div>
+
+                <!-- SUBSECTION 1: PERSONAL STUDY -->
+                <h2>1. Personal Study Applications</h2>
+                
+                <h3>Study Technique 1: Verse Mapping and Analysis</h3>
+                <p><strong>Materials:</strong> Large paper, colored markers, copy of D&C 114 text</p>
+                <p><strong>Process:</strong></p>
+                <ol>
+                    <li>Write both verses on large paper, leaving space between words</li>
+                    <li>Circle key terms using different colors for themes (Blue = Preparation, Green = Mission, Red = Judgment)</li>
+                    <li>Draw connecting lines showing relationships between concepts</li>
+                    <li>Add cross-references around edges</li>
+                    <li>Create visual representation of revelation's structure</li>
+                </ol>
+
+                <h3>Personal Reflection Questions (5 required)</h3>
+                <ol>
+                    <li>What temporal "business" do I need to "settle" to be ready for future Church service?</li>
+                    <li>How prepared am I spiritually to "testify of Christ's name" if called?</li>
+                    <li>Am I "standing in my place" in current callings and covenants?</li>
+                    <li>How do I respond when righteous desires aren't fulfilled as expected?</li>
+                    <li>What "glad tidings" can I share with someone this week?</li>
+                </ol>
+
+                <!-- SUBSECTION 2: FAMILY HOME EVENING -->
+                <h2>2. Family Home Evening Applications</h2>
+                
+                <h3>Opening Activity: "What's in Your Suitcase?"</h3>
+                <p><strong>Setup:</strong> Place suitcase in center with various items (some helpful for mission, some not)</p>
+                <p><strong>Activity:</strong> Family members take turns selecting items and discussing: "Would this help on a mission? What does it represent spiritually?"</p>
+                <p><strong>Connection:</strong> David W. Patten had to "settle his business" before serving. What do we need to prepare spiritually and temporally?</p>
+
+                <h3>Object Lesson: Planting Seeds We Don't See Grow</h3>
+                <p><strong>Materials:</strong> Flower pot, soil, seeds, watering can</p>
+                <p><strong>Teaching:</strong> Plant seeds together, then ask: "What if we had to move away tomorrow before these seeds grow? Should we have planted them?" Discuss how David W. Patten prepared faithfully for a mission he never completed, but his preparation mattered—the British Mission succeeded through others, fulfilling God's purposes.</p>
+
+                <!-- SUBSECTION 3: SUNDAY SCHOOL -->
+                <h2>3. Sunday School Teaching Applications</h2>
+                
+                <h3>Discussion Starter 1: Mission Preparation Scenario</h3>
+                <p>"Imagine you've been called to serve an 18-month mission starting in six months. What would you need to do to prepare? Make a list of temporal things (job, apartment, finances) and spiritual things (scripture study, testimony). Which would be harder to 'settle up'?"</p>
+                
+                <h3>Key Teaching Point: Temporal Preparation Enables Spiritual Service</h3>
+                <p><strong>Core Principle:</strong> Faithful stewardship over temporal affairs demonstrates readiness for significant spiritual assignments.</p>
+                <p><strong>Teaching Method:</strong> Create "Stewardship Inventory" on board listing temporal responsibilities (employment, finances, family, home, health, time). Discuss how managing each area affects readiness to serve.</p>
+                <p><strong>Scripture Cross-References:</strong></p>
+                <ul>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/38.27?lang=eng">D&C 38:27</a> - "Be one; and if ye are not one ye are not mine"</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/luk/16/10/">Luke 16:10-12</a> - "Faithful in that which is least"</li>
+                </ul>
+
+                <!-- SUBSECTION 4: SEMINARY -->
+                <h2>4. Seminary Teaching Applications</h2>
+                
+                <h3>Day 1: Temporal Preparation for Spiritual Service</h3>
+                <p><strong>Focus Verse:</strong> D&C 114:1 (first half) - Settling business and making disposition of merchandise</p>
+                <p><strong>Teaching:</strong> Share David W. Patten's story—his faithful preparation despite never serving the mission. Discuss what "settling business" means for youth today (school, job, family duties, worthiness).</p>
+                <p><strong>Challenge:</strong> Make a list of 3-5 areas where you need to "settle up business" to be prepared for future service (mission, temple marriage, callings).</p>
+
+                <h3>Day 2: When Plans Change - Faith Despite Disappointment</h3>
+                <p><strong>Focus:</strong> Patten's death six months after revelation, before "next spring"</p>
+                <p><strong>Teaching:</strong> Tell story of Battle of Crooked River and Patten's final testimony: "I have fought a good fight, I have kept the faith." Though he never completed the anticipated mission, his faithfulness mattered eternally. The British Mission succeeded through other apostles.</p>
+                <p><strong>Youth Application:</strong> Mission calls to unexpected places, not making sports team, friendship disappointments—how do we maintain faith when plans change?</p>
+
+                <!-- SUBSECTION 5: RELIEF SOCIETY & PRIESTHOOD -->
+                <h2>5. Relief Society & Priesthood Applications</h2>
+                
+                <h3>Discussion Topic 1: Balancing Temporal and Spiritual Stewardship</h3>
+                <p><strong>Opening Question:</strong> "Think about callings you've held. What preparation—temporal or spiritual—did you need before accepting?"</p>
+                <p><strong>Teaching:</strong> David W. Patten was commanded to "settle up all his business" before mission. Many members struggle to balance temporal demands with spiritual service: work schedules vs. callings, financial stress vs. tithing, family needs vs. ward responsibilities.</p>
+                <p><strong>Challenge:</strong> Consider one temporal area hindering your spiritual service. Make a plan this month to "settle" that business.</p>
+
+                <h3>Service Application: "Settling Business" Workshops</h3>
+                <p><strong>Idea:</strong> Ward organizes workshops to help members prepare for current or future Church service</p>
+                <p><strong>Workshop Topics:</strong> Financial Literacy, Home Organization, Time Management, Career Planning, Family Preparedness</p>
+                <p><strong>Purpose:</strong> Help members "settle their business" so they're temporally prepared for spiritual assignments, removing barriers to service.</p>
+
+                <!-- SUBSECTION 6: CHILDREN'S TEACHING -->
+                <h2>6. Children's Teaching Ideas</h2>
+                
+                <h3>Song: "I Hope They Call Me on a Mission"</h3>
+                <p><strong>Connection:</strong> David W. Patten WAS called on a mission. He was excited and prepared faithfully!</p>
+                <p><strong>Activity:</strong> Teach/review song, discuss each verse's meaning. Ask: "What can you do NOW to prepare for future mission?" Make list on board of children's ideas. Have children draw pictures of themselves as future missionaries.</p>
+
+                <h3>Object Lesson: The Prepared Suitcase</h3>
+                <p><strong>Materials:</strong> Small suitcase with both useful items (scriptures, journal) and junk (trash, broken items)</p>
+                <p><strong>Presentation:</strong> "Is this suitcase ready for a mission?" (Show messy suitcase) Children respond: "No! It's messy!" Clean it together, organizing proper items.</p>
+                <p><strong>Lesson:</strong> When God calls us to serve, we need to be PREPARED. That means living worthy (spiritual) and taking care of responsibilities (temporal).</p>
+
+                <h3>Craft Activity: Mission Preparation Checklist</h3>
+                <p><strong>Materials:</strong> Paper, markers/crayons, stickers</p>
+                <p><strong>Instructions:</strong> Children create "My Mission Preparation" checklist with categories: Spiritual (scripture study, prayer), Physical (health, fitness), Temporal (saving money, responsibility), Social (kindness, sharing). Under each category, list 2-3 things they can do NOW.</p>
+
+                <!-- SUBSECTION 7: MISSION APPLICATIONS -->
+                <h2>7. Mission Applications</h2>
+                
+                <h3>Teaching Principle 1: Temporal Preparation Precedes Spiritual Service</h3>
+                <p><strong>For Investigators:</strong> Before joining the Church through baptism (which is a covenant to serve God), prepare your life. This includes resolving financial debts where possible, strengthening family relationships, leaving behind habits incompatible with discipleship, developing patterns of prayer and scripture study, committing to live commandments.</p>
+                <p><strong>Application:</strong> Help investigators identify temporal and spiritual areas to "settle" before baptism—not as requirements they must achieve perfectly, but as commitments to growth and change.</p>
+
+                <h3>Finding Application: Identifying "David W. Pattens" in Your Area</h3>
+                <p><strong>Concept:</strong> Look for people who exhibit Patten's qualities: unwavering commitment despite difficulties, willingness to sacrifice for truth, spiritual strength in challenging times.</p>
+                <p><strong>Process:</strong></p>
+                <ol>
+                    <li>In member visits, ask: "Who do you know that shows exceptional faithfulness?"</li>
+                    <li>Visit those people, share D&C 114 and Patten's story</li>
+                    <li>Testify that God values their faithfulness even when circumstances are difficult</li>
+                </ol>
+
+                <h3>Member Work: Reactivation Through Patten's Story</h3>
+                <p><strong>Target:</strong> Members who feel they "failed" God—returned missionaries who struggled, those released from callings due to unworthiness, people who left Church but are reconsidering.</p>
+                <p><strong>Approach:</strong> Share how Patten never completed his mission yet is one of the Church's greatest heroes. His faithfulness mattered even though outcomes differed from expectations. Help inactive members see that returning isn't failure—it's continuation of faithfulness.</p>
+
+            </div>
+        </div>
+        <!-- SECTION 6: STUDY QUESTIONS -->
+        <button class="accordion-section">6. Study Questions</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction to Study Questions</h2>
+                
+                <p>These questions are designed for personal reflection, journal writing, family discussion, and group study. They progress from understanding the historical and textual details to applying eternal principles in modern life.</p>
+
+                <div class="info-box">
+                    <h3>How to Use These Questions</h3>
+                    <ul>
+                        <li><strong>Personal Study:</strong> Work through questions at your own pace, recording insights in your scripture journal</li>
+                        <li><strong>Family Discussion:</strong> Select 2-3 questions per category for family home evening</li>
+                        <li><strong>Class Discussion:</strong> Teachers choose questions matching lesson objectives</li>
+                        <li><strong>Journal Writing:</strong> Use questions as prompts for deeper gospel reflection</li>
+                        <li><strong>Prayer Preparation:</strong> Reflect on questions before praying about D&C 114's application</li>
+                    </ul>
+                </div>
+
+                <!-- CATEGORY 1: UNDERSTANDING THE TEXT -->
+                <h2>CATEGORY 1: Understanding the Text (30 Questions)</h2>
+                
+                <h3>Historical Context Questions</h3>
+                <ol>
+                    <li><strong>When and where was D&C 114 received?</strong> Consider the historical crisis facing the Church in spring 1838.</li>
+                    <li><strong>Who was David W. Patten and what role did he hold?</strong> His position in the Quorum of the Twelve Apostles and why the Lord chose him.</li>
+                    <li><strong>What did "great waters" refer to in verse 1?</strong> The geographical context and how apostles would travel.</li>
+                    <li><strong>What was the timeline from revelation to Patten's death?</strong> How many months did Patten have to prepare?</li>
+                    <li><strong>What were the circumstances of the Battle of Crooked River?</strong> The attack on Saints, Patten's decision to defend them, and the outcome.</li>
+                </ol>
+
+                <h3>Verse Analysis Questions</h3>
+                <ol start="6">
+                    <li><strong>What does "it is wisdom" mean in verse 1?</strong> Why this phrase rather than "I command"?</li>
+                    <li><strong>What does "settle up all his business" mean practically?</strong> What temporal affairs would need resolution?</li>
+                    <li><strong>What does "make a disposition of his merchandise" mean?</strong> Selling? Delegating? Making arrangements?</li>
+                    <li><strong>What is the difference between "testify of my name" and "bear the glad tidings"?</strong> How is testifying different from proclaiming?</li>
+                    <li><strong>What does "bishopric" mean in verse 2?</strong> Specifically about bishops or broader Church positions?</li>
+                </ol>
+
+                <!-- CATEGORY 2: PERSONAL APPLICATION -->
+                <h2>CATEGORY 2: Personal Application (20 Questions)</h2>
+                
+                <h3>Preparation and Callings</h3>
+                <ol start="31">
+                    <li><strong>What "business" in your life needs to be "settled" to prepare for future Church service?</strong> Financial obligations, family relationships, personal habits?</li>
+                    <li><strong>How can you "make a disposition of your merchandise" in modern terms?</strong> Career planning, financial preparation, simplifying possessions?</li>
+                    <li><strong>What does faithful stewardship over temporal affairs demonstrate about readiness for spiritual callings?</strong></li>
+                    <li><strong>How do you balance "as soon as you conveniently can" with other responsibilities?</strong></li>
+                    <li><strong>What Church calling or responsibility are you currently "standing" in?</strong> How well are you fulfilling it?</li>
+                </ol>
+
+                <h3>Faithfulness and Testimony</h3>
+                <ol start="36">
+                    <li><strong>How do you testify of Christ's name in your daily life?</strong> At work, with family, on social media?</li>
+                    <li><strong>What "glad tidings" do you share with others?</strong> The gospel's joy, hope, salvation, peace?</li>
+                    <li><strong>How can you support modern apostles in their mission to testify of Christ?</strong></li>
+                    <li><strong>What does David W. Patten's faithfulness unto death teach about covenant commitment?</strong></li>
+                    <li><strong>How do you maintain faith when righteous desires aren't fulfilled as expected?</strong></li>
+                </ol>
+
+                <!-- CATEGORY 3: DOCTRINAL UNDERSTANDING -->
+                <h2>CATEGORY 3: Doctrinal Understanding (20 Questions)</h2>
+                
+                <h3>Apostolic Authority and Mission</h3>
+                <ol start="51">
+                    <li><strong>What unique authority do apostles hold that other members don't?</strong> Keys, priesthood authority, worldwide jurisdiction?</li>
+                    <li><strong>Why does the Lord specifically commission apostles to testify of His name?</strong> What is the doctrinal significance?</li>
+                    <li><strong>How does the apostles' mission to "all the world" relate to member missionary work?</strong></li>
+                    <li><strong>What does it mean that apostles bear "glad tidings"?</strong> Is the gospel primarily warning or proclamation of joy?</li>
+                    <li><strong>How do modern apostles continue fulfilling D&C 114:1's commission?</strong> General Conference, worldwide travel, media ministry?</li>
+                </ol>
+
+                <h3>Callings and Stewardships</h3>
+                <ol start="56">
+                    <li><strong>What does it mean that Church callings are "conditional"?</strong> Why don't callings last forever?</li>
+                    <li><strong>How do you understand "another shall be appointed in his stead"?</strong> What does this teach about God's purposes?</li>
+                    <li><strong>What is the relationship between faithfulness and retaining Church positions?</strong> Rewards or stewardships?</li>
+                    <li><strong>What does "whoso standeth... shall be appointed" teach about conditional promises?</strong></li>
+                    <li><strong>How does the principle of conditional callings apply to temple covenants?</strong> Are temple blessings similarly conditional?</li>
+                </ol>
+
+                <!-- CATEGORY 4: MODERN RELEVANCE -->
+                <h2>CATEGORY 4: Modern Relevance (30 Questions)</h2>
+                
+                <h3>Current Church Leadership</h3>
+                <ol start="71">
+                    <li><strong>How do modern apostles demonstrate the principles of D&C 114:1?</strong> Watch recent General Conference—how do apostles testify?</li>
+                    <li><strong>What preparation do you think current apostles made before being called?</strong> Careers, education, family life?</li>
+                    <li><strong>How can you support the Quorum of the Twelve in their worldwide mission?</strong> Prayer, studying messages, implementing counsel?</li>
+                    <li><strong>What does it mean to "sustain" apostles beyond raising your hand?</strong> Daily application, defending authority?</li>
+                    <li><strong>How does understanding D&C 114 deepen your appreciation for apostolic ministry?</strong></li>
+                </ol>
+
+                <h3>Dealing with Disappointment</h3>
+                <ol start="81">
+                    <li><strong>What righteous desires have you prepared for that haven't been fulfilled?</strong> Marriage, children, health, career?</li>
+                    <li><strong>How does David W. Patten's story give you hope when plans change?</strong> His faithful death before mission?</li>
+                    <li><strong>What helps you trust God's purposes when you don't understand outcomes?</strong> Prayer, scriptures, promptings?</li>
+                    <li><strong>How do you maintain faithfulness when you don't see results of your service?</strong> Teaching with no conversions, serving with no appreciation?</li>
+                    <li><strong>What does "faithful unto death" mean in your modern circumstances?</strong> Are you prepared to remain faithful even if promised blessings aren't received in mortality?</li>
+                </ol>
+
+                <!-- CATEGORY 5: THEOLOGICAL REFLECTION -->
+                <h2>CATEGORY 5: Theological and Philosophical Reflection (20 Questions)</h2>
+                
+                <h3>Divine Foreknowledge and Human Agency</h3>
+                <ol start="101">
+                    <li><strong>If God knew Patten would die before completing the mission, why call him?</strong> How do we reconcile divine foreknowledge with meaningful human choices?</li>
+                    <li><strong>How does D&C 114 demonstrate the relationship between God's purposes and human agency?</strong> God's plans proceeded despite Patten's death.</li>
+                    <li><strong>What does "it is wisdom" suggest about God's decision-making process?</strong> Does God deliberate? Does He weigh options?</li>
+                    <li><strong>How do we understand revelations that seem not to be fulfilled as stated?</strong> Conditional prophecies, changing circumstances?</li>
+                    <li><strong>What does this revelation teach about the nature of prophetic calling?</strong> Are callings dependent on future fulfillment?</li>
+                </ol>
+
+                <h3>Faith and Expectation</h3>
+                <ol start="106">
+                    <li><strong>How do we balance faith in God's promises with acceptance of different outcomes?</strong> Believing while remaining faithful if outcomes differ?</li>
+                    <li><strong>What is the relationship between faithful preparation and guaranteed outcomes?</strong> Does obedience guarantee specific results?</li>
+                    <li><strong>How do we understand "blessings" when they don't materialize as expected?</strong> Are all blessings temporal and immediate?</li>
+                    <li><strong>What does Patten's experience teach about the value of faithful effort regardless of results?</strong> Is the journey or destination more important?</li>
+                    <li><strong>How does eternal perspective change our understanding of mortality's disappointments?</strong> If this life is brief in eternity, how should we view temporary disappointments?</li>
+                </ol>
+
+                <!-- CATEGORY 6: COMPARATIVE SCRIPTURE -->
+                <h2>CATEGORY 6: Comparative Scripture Study (10 Questions)</h2>
+                
+                <h3>Cross-References to Explore</h3>
+                <ol start="121">
+                    <li><strong>How does D&C 114:2 relate to <a href="https://www.blueletterbible.org/kjv/act/1/20/">Acts 1:20</a> (Judas's bishopric taken by another)?</strong> What parallels exist?</li>
+                    <li><strong>What connections exist between D&C 114:1 and <a href="https://www.blueletterbible.org/kjv/mat/28/19/">Matthew 28:19-20</a> (Great Commission)?</strong></li>
+                    <li><strong>How does <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.23?lang=eng">D&C 107:23</a> relate to the apostolic commission in verse 1?</strong></li>
+                    <li><strong>What parallels exist between Patten's preparation and Abraham's willingness to sacrifice Isaac?</strong> Both faithful despite uncertain outcomes.</li>
+                    <li><strong>How does <a href="https://www.blueletterbible.org/kjv/rev/3/11/">Revelation 3:11</a> ("let no man take thy crown") relate to D&C 114:2's warning?</strong></li>
+                </ol>
+
+                <!-- CATEGORY 7: APPLICATION & COMMITMENT -->
+                <h2>CATEGORY 7: Application and Commitment (10 Questions)</h2>
+                
+                <h3>Immediate Actions</h3>
+                <ol start="131">
+                    <li><strong>What one area of your life will you "settle up" this week in preparation for service?</strong> Specific action, timeline, accountability?</li>
+                    <li><strong>How will you testify of Christ this week (D&C 114:1 application)?</strong> To whom, in what setting, what method?</li>
+                    <li><strong>What "glad tidings" will you share with someone this week?</strong> Gospel joy, hope, testimony—identify specific person and message.</li>
+                    <li><strong>How will you strengthen your standing in your current calling this week?</strong> One specific way to be more faithful.</li>
+                    <li><strong>What temporal preparation for future service will you begin this month?</strong> Financial, educational, relational?</li>
+                </ol>
+
+                <h3>Long-Term Goals</h3>
+                <ol start="136">
+                    <li><strong>What three-month goal will help you prepare for greater Church service?</strong> Spiritual habits, temporal preparation, skill development?</li>
+                    <li><strong>How will you prepare your family for potential significant callings in next year?</strong> Family council, financial planning?</li>
+                    <li><strong>What annual spiritual goal relates to D&C 114's principles?</strong> Temple attendance, scripture study, missionary work?</li>
+                    <li><strong>What five-year preparation will position you for Church service?</strong> Career flexibility, financial stability, spiritual readiness?</li>
+                    <li><strong>How will you ensure you're "standing in your place" throughout your life?</strong> Ongoing covenant faithfulness, regular repentance, continual preparation?</li>
+                </ol>
+
+            </div>
+        </div>
+
+    </div> <!-- End container -->
+
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        // Main accordion sections
+        const accordionSections = document.querySelectorAll('.accordion-section');
+        
+        accordionSections.forEach(section => {
+            section.addEventListener('click', function() {
+                // Toggle active class on clicked section
+                this.classList.toggle('active');
+                
+                // Get the next sibling (content panel)
+                const panel = this.nextElementSibling;
+                
+                // Toggle the content panel
+                panel.classList.toggle('active');
+            });
+        });
+
+        // Sub-accordions for verses
+        const subAccordions = document.querySelectorAll('.sub-accordion');
+        
+        subAccordions.forEach(subAccordion => {
+            subAccordion.addEventListener('click', function() {
+                // Toggle active class
+                this.classList.toggle('active');
+                
+                // Get the next sibling (sub-panel)
+                const subPanel = this.nextElementSibling;
+                
+                // Toggle the sub-panel
+                subPanel.classList.toggle('active');
+            });
+        });
+
+        // Expand All function
+        function expandAll() {
+            accordionSections.forEach(section => {
+                section.classList.add('active');
+                section.nextElementSibling.classList.add('active');
+            });
+            
+            subAccordions.forEach(subAccordion => {
+                subAccordion.classList.add('active');
+                subAccordion.nextElementSibling.classList.add('active');
+            });
+        }
+
+        // Collapse All function
+        function collapseAll() {
+            accordionSections.forEach(section => {
+                section.classList.remove('active');
+                section.nextElementSibling.classList.remove('active');
+            });
+            
+            subAccordions.forEach(subAccordion => {
+                subAccordion.classList.remove('active');
+                subAccordion.nextElementSibling.classList.remove('active');
+            });
+        }
+    </script>
+
+    <!-- Bottom Navigation -->
+    <div class="nav-bar" style="margin-top: 40px; border-top: 2px solid #7c9885; border-bottom: none;">
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Lesson Home</a>
+            <a href="dc113_complete.html" class="nav-btn">Previous: D&C 113</a>
+            <span class="nav-btn disabled">Next </span>
+        </div>
+        <div class="nav-links">
+            <a href="dc111_complete.html" class="nav-btn">D&C 111</a>
+            <a href="dc112_complete.html" class="nav-btn">D&C 112</a>
+            <a href="dc113_complete.html" class="nav-btn">D&C 113</a>
+            <a href="dc114_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 114</a>
+        </div>
+    </div>
+
+</body>
+</html>
