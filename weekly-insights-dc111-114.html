@@ -1,0 +1,2616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mummies, Witches, and Pirates - Oh My! | CFMCorner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Article Header */
+        .header-section {
+            background: linear-gradient(135deg, #7c9885 0%, #6b8774 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header-section h2 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+        
+        .header-section .scripture-focus {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        /* Featured Quote */
+        .featured-quote {
+            background-color: white;
+            border-left: 4px solid #7c9885;
+            padding: 25px 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .featured-quote p {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #4a4a4a;
+            margin-bottom: 10px;
+        }
+        
+        .featured-quote .reference {
+            text-align: right;
+            color: #6b7280;
+            font-size: 1em;
+        }
+        
+        /* Expand/Collapse Controls */
+        .controls {
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        .control-btn {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .control-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Section Dividers */
+        .section-divider {
+            margin: 50px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #7c9885, transparent);
+        }
+        
+        .section-divider-content {
+            background: #f9fafb;
+            display: inline-block;
+            padding: 0 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-divider h2 {
+            color: #7c9885;
+            font-size: 2em;
+            font-weight: 300;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .section-divider p {
+            color: #6b7280;
+            font-size: 1.1em;
+            font-style: italic;
+            margin: 10px 0 0 0;
+        }
+        
+        /* Main Accordion Sections */
+        .accordion {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .accordion:hover {
+            background-color: #6b8774;
+        }
+        
+        .accordion.active {
+            background-color: #6b8774;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        /* Activities Section - Darker Grey */
+        .activities-section .accordion {
+            background-color: #6b7280;
+        }
+        
+        .activities-section .accordion:hover {
+            background-color: #4b5563;
+        }
+        
+        .activities-section .accordion.active {
+            background-color: #4b5563;
+        }
+        
+        .accordion-arrow {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        
+        .accordion.active .accordion-arrow {
+            transform: rotate(180deg);
+        }
+        
+        /* Panel Content */
+        .panel {
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        
+        .panel.active {
+            max-height: none;
+            border: 1px solid #e5e7eb;
+            border-top: none;
+        }
+        
+        .panel-content {
+            padding: 30px;
+        }
+        
+        /* Sub-Accordions */
+        .sub-accordion {
+            background-color: #c6d4c8;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sub-accordion:hover {
+            background-color: #b5c4b8;
+        }
+        
+        .sub-accordion.active {
+            background-color: #b5c4b8;
+            border-radius: 6px 6px 0 0;
+        }
+        
+        .sub-panel {
+            background-color: #f9fafb;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-radius: 0 0 6px 6px;
+            margin-bottom: 15px;
+        }
+        
+        .sub-panel.active {
+            max-height: none;
+            border: 1px solid #c6d4c8;
+            border-top: none;
+        }
+        
+        .sub-panel-content {
+            padding: 20px;
+        }
+        
+        /* Content Styling */
+        h3 {
+            color: #7c9885;
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #c6d4c8;
+        }
+        
+        h4 {
+            color: #6b7280;
+            font-size: 1.2em;
+            margin: 20px 0 12px 0;
+        }
+        
+        p {
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            line-height: 1.7;
+        }
+        
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px solid #c6d4c8;
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            color: #6b8774;
+            border-bottom-color: #7c9885;
+        }
+        
+        strong {
+            color: #374151;
+        }
+        
+        em {
+            color: #6b7280;
+        }
+        
+        /* Blockquote */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: 4px;
+        }
+        
+        /* Info Boxes */
+        .info-box {
+            background-color: #e8f0ea;
+            border-left: 4px solid #7c9885;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .principle-box {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .action-box {
+            background-color: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .action-box strong {
+            color: #3b82f6;
+        }
+        
+        .question-box {
+            background-color: #ede9fe;
+            border-left: 4px solid #8b5cf6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        /* Timeline Styling */
+        .timeline-item {
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 3px solid #c6d4c8;
+        }
+        
+        .timeline-item strong {
+            color: #7c9885;
+        }
+        
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        
+        th {
+            background-color: #f3f4f6;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header-section {
+                padding: 25px 20px;
+            }
+            
+            .header-section h2 {
+                font-size: 1.8em;
+            }
+            
+            .section-divider h2 {
+                font-size: 1.5em;
+                letter-spacing: 2px;
+            }
+            
+            .section-divider p {
+                font-size: 0.95em;
+            }
+            
+            .accordion {
+                font-size: 1.1em;
+                padding: 15px;
+            }
+            
+            .panel-content, .sub-panel-content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h2>Mummies, Witches, and Pirates - Oh My!</h2>
+            <div class="subtitle">A Halloween-Themed Journey Through D&C 111-114</div>
+            <div class="scripture-focus">Doctrine & Covenants 111-114 • October 2025</div>
+        </div>
+
+        <div class="featured-quote">
+            <p>"The papyri weren't just ancient curiosities—they were divine catalysts that unlocked the temple ordinances we have today."</p>
+            <div class="reference">— Dr. Kerry Muhlestein, BYU Egyptologist</div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" onclick="expandAll()">Expand All Sections</button>
+            <button class="control-btn" onclick="collapseAll()">Collapse All Sections</button>
+        </div>
+
+        <!-- DIVIDER FOR WEEKLY INSIGHTS SECTION -->
+        <div class="section-divider">
+            <div class="section-divider-content">
+                <h2>✦ Part 1: Weekly Insights ✦</h2>
+                <p>Understanding the patterns: Mummies, Witches, Pirates, and Divine Convergence</p>
+            </div>
+        </div>
+
+
+        <!-- SECTION 1: THE MUMMIES -->
+        <button class="accordion">
+            <span>Section 1: The Mummies - Sacred Catalysts in Unlikely Wrapping</span>
+            <span class="accordion-arrow">▼</span>
+        </button>
+        <div class="panel">
+            <div class="panel-content">
+                <div class="principle-box">
+                    <p><strong>Central Message:</strong> The papyri weren't just ancient curiosities—they were divine catalysts that unlocked the temple ordinances and priesthood understanding we have today.</p>
+                </div>
+
+                <p>In July 1835, while the Latter-day Saints struggled with bankruptcy from building the Kirtland Temple, Joseph Smith made what seemed like a financially reckless decision: he spent <strong>$2,400</strong> (roughly <strong>$150,000</strong> today) to purchase <strong>four Egyptian mummies and two papyrus scrolls</strong> from a traveling showman.</p>
+
+                <p>But these weren't just museum pieces. Wrapped in linen beside these ancient bodies were scrolls that would become <strong>the catalyst for temple ordinances, priesthood understanding, and covenant theology</strong> as we know them today.</p>
+
+                <!-- SUB: The Miraculous Journey -->
+                <button class="sub-accordion">
+                    <span>The Miraculous Journey: More Than Coincidence</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Dr. Kerry Muhlestein, a respected Egyptologist and professor at BYU, traces the papyri's journey from <strong>Thebes, Egypt</strong> across the Mediterranean, over the Atlantic Ocean, through American exhibition halls, to Joseph Smith's home in Kirtland. The environmental challenges alone make their survival miraculous.</p>
+
+                        <p>When Jean-François Champollion—the scholar who deciphered the Rosetta Stone—opened ancient Egyptian papyri in Turin, Italy in 1828, <strong>they disintegrated upon exposure</strong> to the Mediterranean climate. Yet Joseph's papyri <strong>crossed an ocean, toured America in multiple climates</strong>, and survived.</p>
+
+                        <div class="info-box">
+                            <p>Muhlestein notes that he spent two weeks in Kirtland and was <strong>rained on 10 of those 14 days</strong>. He spent over a year in Egypt and was <strong>rained on twice</strong>. The humidity difference is staggering. The fact that these scrolls survived their journey to one of the dampest cities in America is, as Muhlestein says, <strong>"environmentally obnoxious"</strong>—and miraculous.</p>
+                            <blockquote>"It's a miracle truly that they survived environmentally. The difference in humidity is incredible." — Dr. Kerry Muhlestein</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB: Enhanced Timeline -->
+                <button class="sub-accordion">
+                    <span>Enhanced Timeline: The Convergence of 1835-1842</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>This timeline shows how God orchestrated the Egyptian papyri's journey to intersect with critical moments in Church history, temple worship development, and prophetic revelation.</p>
+
+                        <h4>1835 - THE ACQUISITION & TRANSLATION YEAR</h4>
+                        <div class="timeline-item">
+                            <strong>February 14, 1835:</strong> Quorum of the Twelve Apostles organized<br>
+                            <strong>May 1835:</strong> D&C 107 codified (priesthood authority, organizational structure)
+                        </div>
+
+                        <div class="timeline-item">
+                            <strong>July 3, 1835 (Night):</strong> Michael Chandler arrives in Kirtland with 4 mummies and papyri. Stays at Riggs Inn (2-minute walk from Joseph's home)<br>
+                            <strong>July 4, 1835:</strong> Morning - Joseph examines papyri, immediately impressed. Asks to take them home to study. Night - Joseph translates that first night at home<br>
+                            <strong>July 5, 1835:</strong> Purchase completed - $2,400 (roughly $150,000 today) during Church bankruptcy. Purchased: 4 mummies, 2 scrolls, numerous fragments. Cost raised from Joseph Coe ($800), Simeon ($800), others ($800). Mummies initially kept at Joseph's home
+                        </div>
+
+                        <div class="timeline-item">
+                            <strong>July-September 1835:</strong> Intensive translation work with Oliver Cowdery and W.W. Phelps. Oliver recopies patriarchal blessing book, adding preface language taken directly from Abraham 1 about "seeking the right of the fathers and the authority of the Holy Priesthood"<br>
+                            <strong>Mid-October 1835:</strong> Mummies moved from Joseph's home to Frederick G. Williams' home<br>
+                            <strong>October 1, 1835:</strong> Working on Egyptian Alphabet. "Principles of astronomy unfolded" (Abraham 3/Facsimile 2 content)<br>
+                            <strong>November 19-26, 1835:</strong> Most intense translation week - made "rapid progress"<br>
+                            <strong>December 31, 1835:</strong> Joseph designates west room on top floor of Kirtland Temple "for a translating room"
+                        </div>
+
+                        <h4>1836 - THE TEMPLE, SALEM, & EXHIBITION YEAR</h4>
+                        <div class="timeline-item">
+                            <strong>January 1836:</strong> First temple ordinances in Kirtland Temple (anointing ordinances, vision of celestial kingdom)<br>
+                            <strong>February 17, 1836:</strong> Mummies delivered to Joseph Coe. Exhibited at John Johnson's Inn (25¢ admission)<br>
+                            <strong>March 27, 1836:</strong> KIRTLAND TEMPLE DEDICATED - Tremendous spiritual manifestations, but at tremendous financial cost (~$13,000 debt for Joseph)<br>
+                            <strong>By August 1836:</strong> Papyri transferred to west room on top floor of Kirtland Temple - the designated "translation room"<br>
+                            <strong>August 6, 1836:</strong> D&C 111 REVEALED IN SALEM, MASSACHUSETTS - Joseph seeking "buried treasure" to solve financial crisis. Lord redirects: "I have much treasure in this city for you" (SOULS not gold). <em>Irony: Joseph possessed actual ancient scrolls in Kirtland while seeking treasure in Salem</em>
+                        </div>
+
+                        <h4>1837-1838 - THE APOSTASY & HIDING YEARS</h4>
+                        <div class="timeline-item">
+                            <strong>July 23, 1837:</strong> D&C 112 revealed during height of Kirtland apostasy - "Pirate crew" plotting against Joseph<br>
+                            <strong>November 2, 1837:</strong> Mummies/papyri confirmed still in temple. Apostasy raging around them<br>
+                            <strong>Late 1837:</strong> Some papyri cut up, mounted under glass to preserve them<br>
+                            <strong>January 12, 1838:</strong> Joseph flees Kirtland in the night, leaves mummies behind. Apostates seek to seize them: "The mob swore they would take, and then burn every one of them"<br>
+                            <strong>After January 12, 1838:</strong> Mummies hidden in homes of faithful members. "By various stratagems, we succeeded in keeping them out of their hands" - Lucy Mack Smith<br>
+                            <strong>1838 - Missouri:</strong> Joseph Sr. arranges transport: Ohio → Missouri. Joseph delivers sermons on "writings of Abraham upon the planetary system"
+                        </div>
+
+                        <h4>1838-1839 - THE EXODUS & MUMMY MUSEUM</h4>
+                        <div class="timeline-item">
+                            <strong>Winter 1838-39 - Quincy, Illinois:</strong> Mummies carted along through persecution! (4 full-sized mummies in wagons). Non-LDS family takes Lucy & Joseph Sr. in. Let them set up mummy museum in their home. 25¢ admission became family's primary income source. Sacred scrolls literally feeding the prophet's family.
+                        </div>
+
+                        <h4>1841 - THE THIRD PLEA</h4>
+                        <div class="timeline-item">
+                            <strong>End of 1841:</strong> Joseph's third request for household help:<br>
+                            • Kirtland (1835): "Need help to translate" → Had to flee<br>
+                            • Far West (1838): "Need help to translate" → Imprisoned<br>
+                            • Nauvoo (1841): "Need help to translate" → BRIGHAM YOUNG IS IN TOWN<br><br>
+                            <strong>The Critical Difference:</strong> Brigham Young immediately advertises in newspaper for help, organizes support structure around the prophet, makes it happen.
+                        </div>
+
+                        <h4>1842 - THE PUBLICATION & ENDOWMENT YEAR</h4>
+                        <div class="timeline-item">
+                            <strong>Early 1842:</strong> Household help in place, Joseph resumes translation work<br>
+                            <strong>March 1, 1842:</strong> First Book of Abraham installment published (Facsimile 1 + Abraham 1:1-2:18)<br>
+                            <strong>March 15, 1842:</strong> Second installment published (Facsimile 2 + rest of Book of Abraham text)<br>
+                            <strong>May 4, 1842:</strong> FIRST ENDOWMENT GIVEN IN NAUVOO<br>
+                            <strong>May 1842:</strong> Facsimile 3 published
+                        </div>
+
+                        <h4>1844 - THE TRAGEDY</h4>
+                        <div class="timeline-item">
+                            <strong>June 27, 1844:</strong> Joseph and Hyrum martyred. Samuel Smith (who lived in damp Times & Seasons building) rode desperately to reach them. Physical exertion + damaged lungs killed him days later.<br><br>
+                            <em>Lucy Mack Smith lost three sons that week: Joseph, Hyrum, Samuel</em>
+                        </div>
+
+                        <div class="principle-box">
+                            <p><strong>Dr. Muhlestein's observation:</strong> <em>"Every time he (Joseph) works on the Book of Abraham, he starts doing new temple ordinances. That's not a coincidence, I think."</em></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Family Museum -->
+                <button class="sub-accordion">
+                    <span>The Family Museum: Preserving Truth Through Hardship</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>It's remarkable to consider that through a period when the Saints were in such transition, moving from one place to another, <strong>they were carting along 4 mummies!</strong> Picture the logistics: fleeing persecution in Kirtland, traveling to Missouri, then to Illinois—all while transporting ancient Egyptian mummies and fragile papyri. These weren't small artifacts that fit in a wagon corner. They were full-sized mummified bodies requiring careful handling and protection from the elements.</p>
+
+                        <p>Yet this seemingly impractical burden became divine provision. After the Saints fled Kirtland persecution, a <strong>non-LDS family in Quincy, Illinois</strong> took Lucy Mack Smith and Joseph Smith Sr. into their home and <strong>let them set up a mummy museum right there</strong>, charging <strong>25 cents admission</strong>.</p>
+
+                        <p>This became Lucy and Joseph Sr.'s <strong>primary income source</strong>—sacred ancient scrolls literally <strong>feeding the prophet's family</strong> during one of the Church's darkest periods of poverty. The very objects that seemed burdensome became their means of survival.</p>
+
+                        <p>Think about that irony: While Joseph sought "treasure" in Salem (D&C 111), <strong>he already possessed actual ancient scrolls</strong> containing Abraham's revelations. While apostates plotted to steal Church leadership (D&C 112), <strong>ancient covenants traveled with the Smith family</strong>, preserved against impossible odds, waiting for the right moment <strong>to be revealed</strong>.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Physical Catalyst -->
+                <button class="sub-accordion">
+                    <span>The Physical Catalyst: Why the Papyri Mattered</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Some critics argue Joseph could have just received the Book of Abraham by revelation without the papyri. But <strong>Dr. Bennett</strong> (Kerry Muhlestein's co-presenter and co-author) emphasizes: <strong>"Possession of the papyri is essential to the translation. We paid good money for them—in fact we sold the farm for them."</strong></p>
+
+                        <p>Why does physicality matter?</p>
+
+                        <p><strong>Remember:</strong> The soul is body AND spirit combined. There's something about <strong>physical objects</strong> that reaches us on deeper levels than pure thought.</p>
+
+                        <ul>
+                            <li><strong>Book of Mormon:</strong> Joseph translated from physical gold plates (reformed Egyptian)</li>
+                            <li><strong>Joseph Smith Translation:</strong> He used a physical Bible, even though he could have received it by revelation alone</li>
+                            <li><strong>Book of Abraham:</strong> Physical papyri served as the catalyst</li>
+                        </ul>
+
+                        <p>Dr. Muhlestein explains: <em>"Maybe Joseph also just needed something real to touch. And others needed to see there was something real in order for them to also make this leap of faith."</em></p>
+
+                        <div class="info-box">
+                            <p><strong>This principle extends to temple worship:</strong> We don't just <em>think</em> about ordinances—we <strong>perform them physically</strong>. We carry physical cards with names. We make physical covenants. We touch physical symbols. <strong>Kinesthetic learning reaches us in ways pure contemplation cannot.</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Egyptian Temple Connection -->
+                <button class="sub-accordion">
+                    <span>The Egyptian Temple Connection: Sacred Imitation</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Here's where it gets profound. Dr. Muhlestein has written extensively about how <strong>ancient Egyptians intentionally imitated</strong> the original Abrahamic temple worship. They knew about Abraham—his name appears frequently in Egyptian religious texts from 200 BC to 700 AD, <strong>often interchangeable with Osiris</strong> in funerary texts.</p>
+
+                        <p>We must remember that Egypt became a major center for the Jewish community after the Babylonian exile. <strong><a href="https://www.blueletterbible.org/kjv/jer/43/1/" target="_blank">Jeremiah went there</a></strong> (Jeremiah 43). <strong>Jewish temples were built there</strong>—most notably at Elephantine and Leontopolis. The city of <strong>Alexandria</strong> had an enormous Jewish presence, with scholars estimating the Jewish population at <strong>100,000 to 200,000 people</strong>—roughly <strong>one-third of the city's total population</strong>. Two of Alexandria's five districts were predominantly Jewish. In Thebes (where the papyri originated), Jews formed a significant community as well.</p>
+
+                        <p>As a polytheistic society, the Egyptians were quick to absorb and adopt Israelite traditions. They incorporated biblical figures—especially Abraham, Moses, and Jehovah—into their religious texts, often using them interchangeably with their own deities.</p>
+
+                        <p>The irony? <strong>Pharaoh's descendants tried to copy what their ancestor rejected</strong> (Abraham 1:27). They couldn't hold real priesthood, but they <strong>imitated the forms</strong> for thousands of years. And in God's wisdom, <strong>their imitations help us to better understand the originals</strong>.</p>
+
+                        <div class="info-box">
+                            <p>One of the reasons Dr. Muhlestein says he enjoys Egyptology so much is that he can write about Egyptian temples in ways he can't publicly in relation to LDS temple practices. He can go into specific details about temple traditions and symbols, many of which share connections to LDS and Jewish traditions. By studying what the Egyptians preserved (though corrupted over time through their natural man drift), <strong>we come to understand our own temple worship better</strong>.</p>
+                        </div>
+
+                        <h4>The Circle of Restoration:</h4>
+                        <ol>
+                            <li>Egyptians imitated original Abrahamic temple patterns</li>
+                            <li>Masons copied Egyptian symbols (without understanding)</li>
+                            <li>Joseph Smith encountered Masonic symbols, <strong>restored their true theological meaning</strong></li>
+                            <li>Result: Similarities exist because truth echoes through imperfect copies until restoration makes them pure again</li>
+                        </ol>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Covenant Theology -->
+                <button class="sub-accordion">
+                    <span>The Covenant Theology: What the Papyri Restored</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>The Book of Abraham didn't just give us Abraham's story—it <strong>restored the inclusive nature</strong> of the Abrahamic covenant that had been lost.</p>
+
+                        <h4>The Covenant includes:</h4>
+                        <ul>
+                            <li>Relationship with God based on love</li>
+                            <li>Deliverance and protection</li>
+                            <li>Promised land (ultimately: where God is)</li>
+                            <li>Seeing God's face / being in His presence</li>
+                            <li>Becoming like God through degrees of holiness</li>
+                            <li><strong>Most critically:</strong> The <strong>obligation to share the covenant with everyone</strong></li>
+                        </ul>
+
+                        <p>By Jesus's day, many Jews believed it was <strong>sin to even talk to non-covenant people</strong>. The inclusive nature—the <strong>obligation to bring others into covenant</strong>—had been lost.</p>
+
+                        <div class="principle-box">
+                            <p>Dr. Muhlestein argues: <em>"If I were Satan, and I could only get ONE part of the covenant taken out and lost, I would get taken out the obligation to share the covenant with other people. Because then it doesn't matter how much of the covenant is still there. Not very many people are going to get it."</em></p>
+                        </div>
+
+                        <h4>The Book of Abraham restoration makes the covenant the most inclusive thing in the universe:</h4>
+                        <ul>
+                            <li>We do everything we can to help everyone receive it <strong>while alive</strong></li>
+                            <li>If they die, we help them receive it <strong>after death</strong></li>
+                            <li>We want <strong>everyone, dead or alive</strong>, to be part of this covenant</li>
+                            <li>The only way to not be part of it is to <strong>refuse</strong> it</li>
+                        </ul>
+
+                        <p><strong>This restored understanding is why we do temple work.</strong> It's why proxy ordinances exist. It's why we search for our ancestors' names. <strong>Without the Book of Abraham restoration, the theological framework for temple work would be incomplete.</strong></p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Grammar & Alphabet -->
+                <button class="sub-accordion">
+                    <span>The Grammar & Alphabet: Exploring the Hero's Journey of Becoming</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Those mysterious "Grammar and Alphabet" documents that Joseph, Oliver Cowdery, and W.W. Phelps created? Scholars Dan Belknap and Michael McKay discovered their primary focus wasn't translating Egyptian—<strong>it was exploring ontology:</strong> the nature of being, existence, and what it means to "be" something.</p>
+
+                        <h4>What is Ontology?</h4>
+                        <p>Ontology asks the fundamental question: <strong>"What does it mean to exist? What makes something what it is?"</strong></p>
+
+                        <p>In philosophy, ontology studies:</p>
+                        <ul>
+                            <li>The <strong>nature of being</strong> itself</li>
+                            <li>What it means to be a <strong>certain kind</strong> of being</li>
+                            <li>How beings can <strong>change</strong> from one state to another</li>
+                            <li>Whether beings have <strong>essential qualities</strong> that define them</li>
+                        </ul>
+
+                        <p>When Joseph worked on the Egyptian Alphabet and Grammar, he wasn't just translating words. He was exploring <strong>how covenant ordinances transform the very nature of human existence</strong>—how mortals become gods, how telestial beings become celestial beings, how natural men become spiritual beings.</p>
+
+                        <h4>What They Were Working Out:</h4>
+                        <ul>
+                            <li>Different <strong>degrees of holiness</strong> (levels of sanctification)</li>
+                            <li>Different <strong>degrees of glory</strong> (telestial, terrestrial, celestial)</li>
+                            <li>How <strong>priesthood ordinances change your nature of being</strong> (not just your status, but your essential self)</li>
+                            <li>How <strong>keeping covenants transforms you</strong> into a different kind of being (ontological change, not just behavioral change)</li>
+                        </ul>
+
+
+                        <p>This connects directly to revelations received around the same period:</p>
+                        <ul>
+                            <li><strong>D&C 76</strong> - Degrees of glory and kingdoms</li>
+                            <li><strong>D&C 88</strong> - Light and truth, progression through degrees</li>
+                            <li><strong>D&C 84</strong> - Oath and covenant of priesthood (becoming sons/daughters of God)</li>
+                            <li><strong>D&C 107</strong> - Priesthood organization and authority to perform transformative ordinances</li>
+                        </ul>
+
+                        <div class="principle-box">
+                            <p><strong>The papyri weren't just about Abraham's story. They were about how covenant ordinances transform human beings into celestial beings.</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SUB: Hero's Journey & Ontological Transformation -->
+                <button class="sub-accordion">
+                    <span>Hero's Journey & Ontological Transformation</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Remember the Hero's Journey framework we explored in previous lessons? (See <a href="https://www.cfmcorner.com/post/anxiously-engaged-in-a-good-cause" target="_blank">Anxiously Engaged in a Good Cause</a> and <a href="https://www.cfmcorner.com/post/my-work-shall-go-forth" target="_blank">My Work Shall Go Forth</a>)</p>
+
+                        <p>Joseph Campbell's monomyth describes a universal pattern:</p>
+
+                        <p><strong>1. The Ordinary World</strong> → <strong>2. The Call to Adventure</strong> → <strong>3. Crossing the Threshold</strong> → <strong>4. Trials and Tests</strong> → <strong>5. The Ordeal</strong> → <strong>6. The Reward</strong> → <strong>7. The Return Transformed</strong></p>
+
+                        <p>The critical insight? <strong>The hero who returns is fundamentally different from the hero who left.</strong> This isn't just about gaining knowledge or skills—it's about <strong>ontological transformation</strong>. The hero's very <strong>nature of being</strong> has changed.</p>
+
+                        <ul>
+                            <li><strong>Luke Skywalker</strong> doesn't just learn to use a lightsaber—he becomes a Jedi (a different kind of being).</li>
+                            <li><strong>Frodo Baggins</strong> doesn't just destroy a ring—he becomes a ring-bearer transformed by his burden (his nature permanently altered).</li>
+                            <li><strong>Harry Potter</strong> doesn't just defeat Voldemort—he becomes "the boy who lived" twice, master of death (fundamentally changed).</li>
+                        </ul>
+
+                        <p>The Grammar and Alphabet documents reveal that <strong>the Plan of Salvation IS the ultimate Hero's Journey</strong>—and temple ordinances are the transformative moments that help us recognize how we can change and refine our very nature of being, from carnal to celestial.</p>
+
+                        <h4>The Plan of Salvation as the Hero's Journey</h4>
+                        <p>Look at how perfectly the Plan of Salvation maps onto the Hero's Journey framework:</p>
+
+
+                        <h4>1. THE ORDINARY WORLD - Pre-mortal Existence</h4>
+                        <ul>
+                            <li>We lived as spirit children of God</li>
+                            <li>Our <strong>ontological state:</strong> Spirits without bodies, intelligence organized into individual identities</li>
+                            <li><strong>What we WERE:</strong> Children of God in embryonic state</li>
+                        </ul>
+
+                        <h4>2. THE CALL TO ADVENTURE - The Grand Council</h4>
+                        <ul>
+                            <li>"We will go down" - the invitation to mortal experience</li>
+                            <li>Agency granted, choice to follow Christ's plan</li>
+                            <li><strong>The Quest:</strong> Become like our Heavenly Parents</li>
+                        </ul>
+
+                        <h4>3. CROSSING THE THRESHOLD - The Veil of Birth</h4>
+                        <ul>
+                            <li>Leaving the presence of God</li>
+                            <li>Receiving a physical body (first major ontological change!)</li>
+                            <li>Forgetting our pre-mortal existence</li>
+                            <li>Entering a world of opposition, pain, and death</li>
+                            <li><strong>Ontological change #1:</strong> Spirit + Body = Living Soul (a NEW kind of being)</li>
+                        </ul>
+
+                        <h4>4. TRIALS AND TESTS - Mortal Life</h4>
+                        <ul>
+                            <li>Facing opposition, temptation, trials</li>
+                            <li>Making covenant choices</li>
+                            <li>Baptism (covenant to take Christ's name - identity change)</li>
+                            <li>Receiving the gift of the Holy Ghost (another being dwelling in us)</li>
+                        </ul>
+
+
+                        <p>Temple ordinances (each one transforming our nature):</p>
+                        <ul>
+                            <li><strong>Washing & Anointing</strong> → Cleansed and prepared for divine nature</li>
+                            <li><strong>Endowment</strong> → Clothed with power, receiving divine knowledge</li>
+                            <li><strong>Sealing</strong> → Bound to eternal family units, transformed from individual to eternal unit</li>
+                        </ul>
+
+                        <p><strong>Ontological changes:</strong> From natural man → spiritually reborn → adopted into God's family → sealed as eternal family units → becoming joint-heirs with Christ</p>
+
+                        <h4>5. THE ORDEAL - Death</h4>
+                        <ul>
+                            <li>The ultimate trial</li>
+                            <li>Seems like defeat, but is actually the doorway to transformation</li>
+                            <li>Physical body dies, but spirit endures</li>
+                            <li><strong>Christ's Atonement:</strong> The central ordeal that makes all transformation possible</li>
+                        </ul>
+
+                        <h4>6. THE REWARD - Resurrection</h4>
+                        <ul>
+                            <li>Body and spirit <strong>inseparably connected</strong> (D&C 93:33)</li>
+                            <li><strong>Ontological change #2:</strong> Mortal body → Immortal body (a fundamentally NEW kind of being)</li>
+                            <li>Degrees of glory based on covenant faithfulness</li>
+                            <li><strong>Telestial:</strong> Resurrected, but limited transformation</li>
+                            <li><strong>Terrestrial:</strong> Greater glory, but incomplete transformation</li>
+                            <li><strong>Celestial:</strong> Full transformation into gods</li>
+                        </ul>
+
+
+                        <h4>7. THE RETURN TRANSFORMED - Exaltation</h4>
+                        <ul>
+                            <li>Returning to God's presence <strong>fundamentally changed</strong></li>
+                            <li>Not just forgiven—<strong>transformed into celestial beings</strong></li>
+                            <li>Not just living forever—<strong>becoming gods</strong> (ontological leap to divine nature)</li>
+                            <li>Not just happy—<strong>creating worlds, having eternal increase, possessing all the Father has</strong></li>
+                            <li><strong>What we BECOME:</strong> Gods, eternal parents, creators</li>
+                        </ul>
+
+                        <div class="principle-box">
+                            <p><strong>The Grammar and Alphabet documents were exploring THIS transformation process.</strong></p>
+                        </div>
+
+                        <h4>Covenant Ordinances: The Transformative Moments</h4>
+                        <p>In the Hero's Journey, there are specific moments when the hero fundamentally changes. In the Plan of Salvation, <strong>temple ordinances teach us about and help us achieve those transformative moments.</strong></p>
+
+                        <p><strong>Baptism:</strong> Covenant to take Christ's name upon us</p>
+                        <ul>
+                            <li><strong>Ontological shift:</strong> Natural man → Disciple of Christ</li>
+                            <li>New identity, new name, new family (Church)</li>
+                        </ul>
+
+                        <p><strong>Gift of the Holy Ghost:</strong> Right to constant companionship of deity</p>
+                        <ul>
+                            <li><strong>Ontological shift:</strong> Mortal alone → Mortal + Divine presence</li>
+                            <li>A god dwelling in you, changing your nature from within</li>
+                        </ul>
+
+                        <p><strong>Temple Endowment:</strong> Clothed with power from on high</p>
+                        <ul>
+                            <li><strong>Ontological shift:</strong> Uninstructed child → Initiated adult with divine knowledge</li>
+                            <li>Receiving the "how" of returning to God's presence</li>
+                            <li>Understanding the degrees of glory and how to progress through them</li>
+                        </ul>
+
+
+                        <p><strong>Temple Sealing:</strong> Bound as eternal families</p>
+                        <ul>
+                            <li><strong>Ontological shift:</strong> Individual → Eternal family unit</li>
+                            <li>From temporal relationships → Eternal relationships</li>
+                            <li>From alone → Forever connected</li>
+                        </ul>
+
+                        <p><strong>Each ordinance doesn't just give you information—it changes WHAT YOU ARE.</strong></p>
+
+                        <p>This is why ordinances matter so much. This is why we can't just "know about" them. <strong>We must experience them</strong> because they effect <strong>ontological transformation</strong>—changes in the very nature of our being.</p>
+
+                        <h4>The Three Degrees: Stages of Transformation</h4>
+                        <p>The Grammar and Alphabet documents explored <strong>degrees</strong>—and the Book of Abraham connects this to cosmology (Abraham 3: stars, planets, governing powers).</p>
+
+                        <p><strong>Telestial Kingdom:</strong></p>
+                        <ul>
+                            <li><strong>Nature of being:</strong> Resurrected, immortal, but limited in divine attributes</li>
+                            <li><strong>The Hero who stopped short:</strong> Crossed threshold, faced some trials, but refused full transformation</li>
+                            <li>Glory like the stars (many, distant, beautiful but separate)</li>
+                            <li>Facsimile 1: Comparison to the binding of Isaac and the law of sacrifice</li>
+                        </ul>
+
+                        <p><strong>Terrestrial Kingdom:</strong></p>
+                        <ul>
+                            <li><strong>Nature of being:</strong> Greater glory, honorable, but without fullness</li>
+                            <li><strong>The Hero who went partway:</strong> Accepted the quest, made progress, but didn't complete the ultimate transformation</li>
+                            <li>Glory like the moon (reflects light, doesn't generate it)</li>
+                            <li>Facsimile 2: An ancient Egyptian representation of the zodiac and the sun's course through the heavens from the perspective of the Earth</li>
+                        </ul>
+
+
+                        <p><strong>Celestial Kingdom:</strong></p>
+                        <ul>
+                            <li><strong>Nature of being:</strong> Gods, possessing ALL the Father has</li>
+                            <li><strong>The Hero fully transformed:</strong> Completed the journey, became divine, returned home as a god</li>
+                            <li>Glory like the sun (generates light, source of life, governing power)</li>
+                            <li>Facsimile 3: Abraham's coronation and a comparison to the Holy of Holies</li>
+                        </ul>
+
+                        <p><strong>The degrees aren't just rewards—they're different KINDS of being.</strong></p>
+
+                        <p>This is what the Book of Abraham taught Joseph: <strong>We're not just trying to go to heaven. We're trying to become gods.</strong></p>
+
+                        <p>That's an ontological quest, not just a moral one.</p>
+
+                        <h4>Your Hero's Journey Right Now</h4>
+                        <p>You're in the middle of the journey. You've crossed the threshold (mortality). You're facing trials (everyday life). You're being offered transformative ordinances (covenants).</p>
+
+                        <p><strong>The question isn't:</strong> "Will I be happy in the afterlife?"</p>
+
+                        <p><strong>The question is:</strong> "What am I BECOMING?"</p>
+
+                        <p>Every covenant you make and keep is an ontological shift—a transformation in your nature of being. You're not just behaving better. You're <strong>becoming something different.</strong></p>
+
+                        <ul>
+                            <li><strong>Baptism</strong> transformed you into a disciple</li>
+                            <li><strong>Holy Ghost</strong> transformed you into a temple for deity</li>
+                            <li><strong>Endowment</strong> is transforming you into one instructed in divine knowledge</li>
+                            <li><strong>Sealing</strong> is transforming you into an eternal family unit</li>
+                        </ul>
+
+                        <p>Each ordinance changes <strong>what you are</strong>, not just <strong>what you know</strong> or <strong>what you do</strong>.</p>
+
+
+                        <h4>The Egyptian Grammar's Hidden Wisdom</h4>
+                        <p>When Joseph, Oliver, and W.W. Phelps worked on the Egyptian Grammar and Alphabet, critics dismissed it as failed translation.</p>
+
+                        <p>But what if they were doing something far more profound?</p>
+
+                        <p>What if they were receiving revelation about <strong>how ordinances transform the nature of being</strong>—how covenant people progress through degrees of holiness and glory?</p>
+
+                        <p>What if the "grammar" wasn't linguistic—it was <strong>ontological</strong>? The grammar of becoming? The alphabet of transformation?</p>
+
+                        <div class="info-box">
+                            <h4>The Book of Abraham gave us:</h4>
+                            <ul>
+                                <li>Understanding of pre-mortal existence (where the journey began)</li>
+                                <li>Knowledge of the covenant (the quest we accepted)</li>
+                                <li>Vision of the cosmos (the degrees of glory we're progressing through)</li>
+                                <li>Pattern of Abraham (the hero who became exalted)</li>
+                            </ul>
+                        </div>
+
+                        <p><strong>This is the Hero's Journey written in scripture.</strong></p>
+
+                        <p>And just like in every great story, the hero returns home <strong>fundamentally transformed</strong>—not just educated, not just experienced, but <strong>ontologically changed into a different kind of being</strong>.</p>
+
+                        <p>That's what temple ordinances do. That's what the Plan of Salvation accomplishes. That's what the Book of Abraham revealed.</p>
+
+                        <p><strong>You're not just on a journey. You're on THE journey—the transformation from mortal to god.</strong></p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: Brigham Young - The Practical Hero -->
+                <button class="sub-accordion">
+                    <span>Brigham Young: The Practical Hero Who Unlocked Scripture</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Dr. Muhlestein gets <strong>almost emotional</strong> telling this story, and once you understand the full picture, you will too.</p>
+
+                        <p>By 1841, Joseph Smith was drowning in responsibilities. As prophet, seer, and revelator, he was receiving revelations for the entire Church. As mayor of Nauvoo, he was governing one of Illinois's largest cities. As lieutenant general of the Nauvoo Legion, he commanded a militia of thousands. As husband and father, he had his own family responsibilities. As editor of the <em>Times and Seasons</em>, he managed Church publications. He was <strong>constantly</strong> fielding questions, settling disputes, preaching, teaching, performing marriages, giving blessings, counseling members, and dealing with threats from anti-Mormon enemies.</p>
+
+                        <p>Meanwhile, ancient scrolls containing Abraham's revelations sat in his home—<strong>waiting</strong>. Scrolls that had survived Egyptian tombs, crossed oceans, endured climate changes, traveled with the Smith family through persecution, been hidden from apostates' "sworn destruction," and fed his family during poverty. Scrolls that contained keys to temple ordinances the world desperately needed.</p>
+
+                        <p>But Joseph couldn't find time to translate them.</p>
+
+                        <h4>Three Times Joseph Made the Same Request:</h4>
+
+                        <p><strong>Kirtland (1835):</strong> <em>"Could we please get some people who will help me with my household duties so I can have time to translate the ancient records?"</em></p>
+                        <ul><li>Then he had to flee for his life.</li></ul>
+
+                        <p><strong>Far West, Missouri (1838):</strong> <em>"Can we please get some people to help me with stuff at home so I can have time to translate the records?"</em></p>
+                        <ul><li>Then he was imprisoned in Liberty Jail. The translation never happened.</li></ul>
+
+                        <p><strong>Nauvoo (end of 1841):</strong> <em>"We need someone to help me with my household duties so I can have time to translate the ancient records."</em></p>
+
+
+                        <p>Dr. Muhlestein notes: <strong>"There's a difference between the other two times he said this and this time. And the difference was Brigham Young was in town."</strong></p>
+
+                        <p>Here's what makes this moment so powerful—and why Muhlestein was so impressed by it:</p>
+
+                        <p><strong>Brigham Young didn't just nod sympathetically. He didn't just say "that's a good idea." He immediately took action.</strong></p>
+
+                        <p>Within days, Brigham was <strong>advertising in the Nauvoo newspaper</strong> for specific positions: people to help with household chores, people to handle administrative tasks, people to manage the mundane but necessary details that consumed Joseph's days. Brigham organized a <strong>support structure</strong> around the prophet.</p>
+
+                        <p><strong>And it happened.</strong></p>
+
+                        <p>Early 1842: The household help was in place. Joseph finally had time. The translation work resumed.</p>
+
+                        <ul>
+                            <li><strong>March 1, 1842:</strong> First installment of the Book of Abraham published</li>
+                            <li><strong>March 15, 1842:</strong> Second installment published</li>
+                            <li><strong>May 1842:</strong> Facsimile 3 published</li>
+                            <li><strong>May 4, 1842:</strong> First endowment ordinance given</li>
+                        </ul>
+
+                        <div class="principle-box">
+                            <p>Dr. Muhlestein's assessment: <strong>"If Brigham Young hadn't made it so that someone did the work around Joseph's house, then Joseph would have never published the Book of Abraham and we wouldn't have it."</strong></p>
+                        </div>
+
+                        <p>Think about that. <strong>We wouldn't have the Book of Abraham.</strong> We wouldn't have the theological framework for:</p>
+                        <ul>
+                            <li>Understanding the pre-mortal existence</li>
+                            <li>Knowing our relationship to the stars and cosmos</li>
+                            <li>Comprehending priesthood's ancient origins</li>
+                            <li>Grasping the inclusive nature of the covenant</li>
+                            <li>Seeing how Abraham's near-sacrifice prefigured Christ's atonement</li>
+                        </ul>
+
+
+                        <p><strong>We wouldn't have the complete doctrinal foundation for the endowment ordinance.</strong></p>
+
+                        <p>All because Joseph needed someone to wash dishes, sweep floors, and handle correspondence. All because he needed practical, unglamorous help.</p>
+
+                        <p>And Brigham Young—the practical, no-nonsense organizer—<strong>made it happen</strong>.</p>
+
+                        <div class="info-box">
+                            <p>Dr. Muhlestein concludes: <em>"Thank God literally for men like Brigham Young who when the prophet says, 'I need some help,' he says, 'I'll help you. I'll take care of it.' So grateful for that."</em></p>
+                        </div>
+
+                        <h4>The Lesson:</h4>
+                        <p>Revelation often requires <strong>practical support</strong>. Scripture doesn't appear in a vacuum. Translation takes <strong>time</strong>, and time requires someone handling the mundane necessities of life. Sometimes the greatest theological contributions come from people willing to do the practical work that gives prophets space to receive revelation.</p>
+
+                        <p>Brigham Young is famous for leading the Saints west, for colonizing the Great Basin, for building temples. But perhaps his most significant contribution was <strong>advertising in a newspaper for household help</strong> so Joseph Smith could translate papyri that had traveled 6,000 miles and survived 2,000 years to reach Nauvoo at precisely the right moment.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Samuel Smith Tragedy -->
+                <button class="sub-accordion">
+                    <span>The Samuel Smith Tragedy</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>There's a haunting postscript. After the Book of Abraham was printed in the <strong>Times & Seasons printing office</strong>, the press moved to a new building. <strong>Samuel Smith, Joseph's brother, moved into the old "dank" building</strong>.</p>
+
+                        <p>The humidity and dampness <strong>damaged his lungs</strong>. On June 27, 1844, when Joseph and Hyrum were martyred at Carthage, Samuel rode desperately to reach them, fleeing from mobbers. <strong>The physical exertion, combined with his already-damaged lungs, killed him.</strong></p>
+
+                        <p>Lucy Mack Smith <strong>lost three sons that week</strong>—Joseph, Hyrum, and Samuel.</p>
+
+                        <p>The building where Abraham's words first appeared in print may have contributed to Samuel's death. The papyri survived impossible environmental odds; Samuel, who lived where they were published, did not.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: Application -->
+                <button class="sub-accordion">
+                    <span>Application: What "Mummies" Are You Overlooking?</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Joseph spent $2,400 he didn't have (during bankruptcy!) on what seemed like curiosities. <strong>They proved to be priceless revelatory catalysts.</strong></p>
+
+                        <p>Meanwhile, he traveled to Salem seeking buried treasure—<strong>while already possessing ancient prophetic scrolls</strong>.</p>
+
+                        <p><strong>The irony teaches us:</strong></p>
+
+                        <div class="question-box">
+                            <p><strong>What sacred "treasures" do you already possess that you are overlooking?</strong></p>
+                            <ul>
+                                <li>Temple recommends you don't use?</li>
+                                <li>Scriptures you don't study?</li>
+                                <li>Covenant relationships you neglect?</li>
+                                <li>Priesthood keys you don't exercise?</li>
+                                <li>Talents that you don't nurture or share?</li>
+                            </ul>
+                        </div>
+
+                        <p><strong>God preserved papyri across oceans, climates, wars, and apostasy because physical catalysts matter.</strong> He orchestrated Brigham Young being in Nauvoo at precisely the right moment because <strong>human help makes divine work possible</strong>.</p>
+
+                        <p><strong>The mummies weren't just museum pieces—they were wrapped revelations waiting to unfold temple ordinances that would bless billions.</strong></p>
+
+                        <p>What's wrapped in your life, waiting for you to recognize its true value?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- SECTION 2: THE WITCHES -->
+        <button class="accordion">
+            <span>Section 2: The Witches - Salem's Redemption</span>
+            <span class="accordion-arrow">▼</span>
+        </button>
+        <div class="panel">
+            <div class="panel-content">
+                <div class="principle-box">
+                    <p><strong>Central Message:</strong> Gospel light transforms places of historical darkness—no past is too dark for redemption, no city too haunted for souls to be saved.</p>
+                </div>
+
+                <p>On August 6, 1836—just months after the Kirtland Temple's glorious dedication—Joseph Smith stood in Salem, Massachusetts, a city infamous for one of America's darkest chapters: the witch trials of 1692-1693.</p>
+
+                <p>He wasn't there for revelation. He was there seeking <strong>buried treasure</strong>.</p>
+
+                <p>It was a desperate measure during desperate times. The temple had drained Church finances. Debts were mounting. A man named Jonathan Burgess had told Joseph about gold supposedly hidden in a Salem cellar—riches that could solve all their problems.</p>
+
+                <p>So Joseph, Sidney Rigdon, Hyrum Smith, and Oliver Cowdery made the 600-mile journey to Salem, walking the same streets where, 144 years earlier, innocent people had been hanged as "witches."</p>
+
+                <p>The irony was profound: A prophet of God seeking temporal treasure in a city built on spiritual darkness, while back in Kirtland, ancient prophetic scrolls containing Abraham's revelations sat in the temple translation room.</p>
+
+                <p>But the Lord had other plans. Salem's real treasure wasn't buried gold—it was <strong>buried souls</strong> waiting for gospel light.</p>
+
+
+                <!-- SUB: The Haunting of Salem -->
+                <button class="sub-accordion">
+                    <span>The Haunting of Salem: 1692-1693</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>To understand why Salem is the perfect "witch" in our Halloween tale, you need to know its dark history.</p>
+
+                        <p><strong>Winter 1692</strong> - It began with children's fits. Nine-year-old Betty Parris and eleven-year-old Abigail Williams started having violent convulsions, screaming, throwing things, contorting their bodies in "unnatural" positions, and speaking words that seemed blasphemous.</p>
+
+                        <p>The village doctor, unable to find a physical cause, declared they were under "the Devil's hand." The witch hunt began.</p>
+
+                        <h4>The Accusations Spread:</h4>
+                        <ul>
+                            <li>The girls accused Tituba (a slave from Barbados), Sarah Good (a homeless beggar), and Sarah Osborne (an elderly woman who rarely attended church)</li>
+                            <li>Under interrogation (and likely torture), Tituba confessed to witchcraft and claimed a conspiracy of witches in Salem</li>
+                            <li>This confession triggered mass hysteria</li>
+                            <li><strong>More than 200 people were accused</strong> over the next year</li>
+                            <li>Accusations spread like wildfire: neighbors accused neighbors, children accused parents, the powerful accused the weak</li>
+                        </ul>
+
+                        <h4>The Trials:</h4>
+                        <ul>
+                            <li>"Spectral evidence" was allowed (testimony that an accused person's spirit appeared in dreams or visions)</li>
+                            <li>This meant anyone could accuse anyone based on nothing but claims of supernatural visions</li>
+                            <li>No defense was effective—denial proved guilt (witches lie), confession proved guilt (you admitted it)</li>
+                            <li><strong>19 people were hanged</strong></li>
+                            <li><strong>1 man was pressed to death</strong> (heavy stones placed on his chest until he died)</li>
+                            <li><strong>5 people died in prison</strong> awaiting trial</li>
+                        </ul>
+
+
+                        <h4>The Victims:</h4>
+                        <ul>
+                            <li>Rebecca Nurse (71 years old, deeply religious, widely respected—didn't matter)</li>
+                            <li>George Burroughs (former minister who recited the Lord's Prayer perfectly at the gallows—traditionally believed impossible for a witch, but he was hanged anyway)</li>
+                            <li>John Proctor (tried to defend his wife, was accused himself and executed)</li>
+                            <li>Giles Corey (pressed to death after refusing to enter a plea; his last words: "More weight")</li>
+                        </ul>
+
+                        <h4>What Made Salem's Witch Trials Particularly Dark:</h4>
+                        <ol>
+                            <li><strong>Community Betrayal</strong> - Neighbors testified against neighbors, children against parents, friends against friends</li>
+                            <li><strong>Religious Justification</strong> - Done in God's name, by church leaders, with prayer and scripture</li>
+                            <li><strong>Legal Authority</strong> - Courts, judges, official proceedings gave evil a veneer of legitimacy</li>
+                            <li><strong>Spectral Evidence</strong> - Impossible to disprove; anyone could be accused based on someone else's dream</li>
+                            <li><strong>Mass Hysteria</strong> - Fear feeding fear, suspicion becoming certainty, paranoia becoming policy</li>
+                            <li><strong>The Innocent Died</strong> - People who refused to lie, who maintained their integrity, were killed for it</li>
+                        </ol>
+
+                        <p>By 1836, Salem carried this haunting legacy—a city built on fear masquerading as faith, accusation masquerading as righteousness, murder masquerading as justice.</p>
+
+                        <p><strong>This was the city Joseph Smith entered seeking treasure.</strong></p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Gentle Redirect -->
+                <button class="sub-accordion">
+                    <span>August 6, 1836: The Gentle Redirect</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Picture the scene: Joseph, Sidney, Hyrum, and Oliver walking Salem's streets in summer 1836, past the <strong>East India Marine Society Museum</strong> showcasing global trade wealth—temporal treasures on full display in a prosperous port city.</p>
+
+                        <p>Joseph's motivation wasn't greed—it was <strong>desperation</strong>. The Church needed financial relief. The temple debt was crushing. Jonathan Burgess's story about buried treasure wasn't unreasonable given Salem's pirate history and maritime wealth. Treasure-seeking was culturally accepted; even Nathaniel Hawthorne was writing treasure tales in Salem at this very time.</p>
+
+                        <h4>The Lord's Response:</h4>
+                        <p>D&C 111 is one of the gentlest rebukes in scripture. The Lord doesn't condemn Joseph's treasure hunt—He <strong>redirects</strong> it:</p>
+
+                        <blockquote>
+                            <p><em>"I, the Lord your God, am not displeased with your coming this journey, notwithstanding your follies."</em> (v. 1)</p>
+                        </blockquote>
+
+                        <p><strong>Translation:</strong> "I'm not angry. I understand why you came. But let me show you what's really valuable."</p>
+
+                        <blockquote>
+                            <p><em>"I have much treasure in this city for you, for the benefit of Zion, and many people in this city, whom I will gather out in due time for the benefit of Zion, through your instrumentality."</em> (v. 2)</p>
+                        </blockquote>
+
+                        <p><strong>The Real Treasure:</strong> SOULS.</p>
+
+                        <p>People living in the shadow of witch-trial history. People in a city synonymous with religious persecution and fear. People who needed to hear that God is love, not terror; that religion brings freedom, not accusations; that the gospel offers redemption, not condemnation.</p>
+
+                        <p><strong>Salem needed the antidote to its own history.</strong></p>
+
+
+                        <h4>The Lord's Priority Realignment:</h4>
+
+                        <p><strong>Verse 5-6:</strong> <em>"Concern not yourselves about your debts, for I will give you power to pay them."</em></p>
+                        <ul><li>Stop worrying about money. I've got this.</li></ul>
+
+                        <p><strong>Verse 9:</strong> <em>"Inquire diligently concerning the more ancient inhabitants and founders of this city."</em></p>
+                        <ul><li>Study Salem's history. Understand these people. Learn what they've been through.</li></ul>
+
+                        <p><strong>Verse 11:</strong> <em>"Therefore be faithful; and my grace shall attend you, that you may be crowned with much glory."</em></p>
+                        <ul><li>The ultimate prize isn't gold—it's <strong>glory</strong> (souls saved, families sealed, Zion built).</li></ul>
+                    </div>
+                </div>
+
+
+                <!-- SUB: Five Years Later -->
+                <button class="sub-accordion">
+                    <span>Five Years Later: "With a Perfect Rush"</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Joseph left Salem without buried treasure. The revelation promised souls "in due time."</p>
+
+                        <p><strong>Five years later—1841—something remarkable happened.</strong></p>
+
+                        <p>The Church sent missionaries to Salem, and the response was explosive. <strong>The Salem Gazette & Register</strong> reported baptisms happening "<strong>with a perfect rush</strong>."</p>
+
+                        <p>Let that sink in: The newspaper in a city famous for witch trials—where religious fanaticism had led to hangings—was reporting that people were joining the "Mormons" in a "perfect rush."</p>
+
+                        <h4>The Gospel Message Salem Needed:</h4>
+                        <table>
+                            <tr>
+                                <th>Salem's Dark Legacy</th>
+                                <th>Gospel Light</th>
+                            </tr>
+                            <tr>
+                                <td>Accusation culture</td>
+                                <td>"Judge not"</td>
+                            </tr>
+                            <tr>
+                                <td>Spectral evidence (invisible spirits)</td>
+                                <td>Holy Ghost (actual divine presence)</td>
+                            </tr>
+                            <tr>
+                                <td>Fear of the Devil's power</td>
+                                <td>Christ's victory over evil</td>
+                            </tr>
+                            <tr>
+                                <td>Innocent blood shed</td>
+                                <td>Christ's innocent blood redeems</td>
+                            </tr>
+                            <tr>
+                                <td>Community betrayal</td>
+                                <td>Zion community of love</td>
+                            </tr>
+                            <tr>
+                                <td>Religious terror</td>
+                                <td>Perfect love casts out fear</td>
+                            </tr>
+                            <tr>
+                                <td>Death for integrity</td>
+                                <td>Eternal life through integrity</td>
+                            </tr>
+                            <tr>
+                                <td>Condemnation</td>
+                                <td>Redemption</td>
+                            </tr>
+                        </table>
+
+
+                        <p>Salem's witch trials taught: <strong>Be afraid. Watch your neighbor. Trust no one. Religion brings death.</strong></p>
+
+                        <p>The restored gospel taught: <strong>Be of good cheer. Love your neighbor. Trust Christ. Religion brings life.</strong></p>
+
+                        <p>The city where innocent people were hanged for supposed witchcraft became a place where <strong>people chose baptism</strong>. The city where spectral evidence condemned the guiltless became a place where <strong>the Holy Ghost testified of truth</strong>. The city where fear drove accusations became a place where <strong>love drove conversions</strong>.</p>
+
+                        <div class="principle-box">
+                            <p><strong>D&C 111's promise fulfilled:</strong> "I have much treasure in this city for you... and many people in this city, whom I will gather out in due time."</p>
+                            <p>The treasure wasn't buried in a cellar. It was walking the streets, waiting for gospel light.</p>
+                        </div>
+
+                        <h4>The Pattern: Gospel Redemption of Dark Places</h4>
+                        <p>Salem's transformation illustrates a profound principle: <strong>The gospel doesn't just save individuals—it redeems locations.</strong></p>
+
+                        <ul>
+                            <li><strong>Jerusalem:</strong> Where prophets were killed and Christ was crucified → The very site of the Atonement, where redemption was won</li>
+                            <li><strong>Nauvoo:</strong> Saints driven out, temple desecrated, prophet martyred → Beautiful temple rebuilt, thriving LDS community, sacred history honored</li>
+                            <li><strong>Missouri:</strong> Haun's Mill massacre, Saints expelled → Future gathering place, Jackson County temples prophesied</li>
+                            <li><strong>Your personal "Salems":</strong> Places of past trauma, relationships marked by betrayal, locations holding painful memories, situations where darkness seemed to win</li>
+                        </ul>
+
+                        <p><strong>The gospel pattern:</strong> God sends light precisely into darkness. He plants hope exactly where despair grew. He builds Zion on the ruins of Babylon.</p>
+
+
+                        <h4>Modern Application: The Salem Principle</h4>
+                        <p>Joseph went to Salem seeking one thing, found another, and five years later saw the prophecy fulfilled in ways he couldn't have imagined.</p>
+
+                        <p><strong>The Timeline Lesson:</strong></p>
+                        <ul>
+                            <li><strong>August 1836:</strong> Joseph seeking treasure, receives redirection</li>
+                            <li><strong>1841 (5 years later):</strong> Salem baptisms "with a perfect rush"</li>
+                            <li><strong>The principle:</strong> God's timing isn't our timing, but His promises are sure</li>
+                        </ul>
+
+                        <p>Joseph might have wondered in 1836: "Was this trip a waste?" But in 1841, the answer was clear: <strong>The journey wasn't wasted. The promise was real. The treasure was there. It just took time.</strong></p>
+
+                        <div class="question-box">
+                            <h4>Questions for Your Life:</h4>
+                            <ol>
+                                <li><strong>What "treasure" are you seeking that might be distracting from greater treasures?</strong></li>
+                                <li><strong>What's your "Salem"—a place of historical darkness in your life?</strong> (Past mistakes? Broken relationships? Painful memories?)</li>
+                                <li><strong>How is the Lord trying to redirect your treasure hunt?</strong> ("Concern not yourselves about [that worry], for I will give you power to [handle it]")</li>
+                                <li><strong>Where might gospel light transform darkness "in due time"?</strong> (A prodigal family member? A broken relationship? A personal struggle?)</li>
+                            </ol>
+                        </div>
+
+                        <p><strong>The promise:</strong> Where darkness was deepest, light can shine brightest. No past is too dark. No city too haunted. No soul too lost. No history too broken.</p>
+
+                        <p><strong>Gospel light transforms everything it touches. Even Salem, Massachusetts.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- SECTION 3: THE PIRATES -->
+        <button class="accordion">
+            <span>Section 3: The Pirates - Apostasy and Theft of Faith</span>
+            <span class="accordion-arrow">▼</span>
+        </button>
+        <div class="panel">
+            <div class="panel-content">
+                <div class="principle-box">
+                    <p><strong>Central Message:</strong> Spiritual treasures can't be stolen when sealed by priesthood authority—no apostasy can touch what God has sealed.</p>
+                </div>
+
+                <p>While Joseph sought treasure in Salem (August 1836), ancient covenants traveled with his family in the form of mummies and papyri. But within a year, a different kind of "treasure hunt" would begin in Kirtland—one where the pirates weren't after gold, but after <strong>priesthood authority</strong> itself.</p>
+
+                <p><strong>July 23, 1837</strong>—less than a year after Salem—the Lord gave D&C 112 to Thomas B. Marsh in the midst of what became known as the <strong>Kirtland apostasy</strong>. The revelation warned of pride, counseled humility, and reminded the Twelve of their sacred responsibility.</p>
+
+                <p>But by the time these words were spoken, the "pirate crew" was already assembling.</p>
+
+
+                <!-- SUB: The Kirtland Shipwreck -->
+                <button class="sub-accordion">
+                    <span>The Kirtland "Shipwreck": June 1837</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p><strong>The Kirtland Safety Society</strong>—the Church's banking institution—collapsed spectacularly in June 1837, taking members' savings and trust with it. This wasn't just a financial failure; it was a <strong>crisis of faith</strong>.</p>
+
+                        <h4>The Economic Storm:</h4>
+                        <ul>
+                            <li>The Panic of 1837 was hitting nationwide</li>
+                            <li>Banks were failing across America</li>
+                            <li>The Kirtland Safety Society, established in January 1837, lasted only months</li>
+                            <li>Members who had invested everything lost it all</li>
+                            <li>Some blamed Joseph for financial mismanagement</li>
+                            <li>Others saw conspiracy and fraud where there was only economic catastrophe</li>
+                        </ul>
+
+                        <h4>The Spiritual Shipwreck:</h4>
+                        <p>When people lose money, they often lose faith. When they lose both, they become dangerous.</p>
+
+                        <p>By July 1837, an estimated <strong>10-15% of Church members were withdrawing</strong>. But this wasn't quiet departure—it was <strong>mutiny</strong>.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Pirate Crew -->
+                <button class="sub-accordion">
+                    <span>The Pirate Crew: Men Who Would Be Captains</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p><strong>Warren Parrish</strong> - Former scribe who had helped Joseph translate the Book of Abraham, writing down words "as he claimed to receive it by direct inspiration from heaven." After the bank failed, Parrish became the ringleader of opposition. He would later pull a knife on people in the temple.</p>
+
+                        <p><strong>Luke Johnson</strong> - One of the original Twelve Apostles (called 1835). Lost money in the bank collapse. Joined the apostasy. Later excommunicated, then rebaptized.</p>
+
+                        <p><strong>John Boynton</strong> - Another of the original Twelve (called 1835). Vocal critic of Joseph. Excommunicated January 1838.</p>
+
+                        <p><strong>Lyman Johnson</strong> - Original Twelve (called 1835). Turned against Joseph. Excommunicated April 1838.</p>
+
+                        <h4>The Plot:</h4>
+                        <p>These weren't just disgruntled members leaving quietly. They were attempting <strong>mutiny</strong>—trying to seize control of the Church, the temple, and Church properties. Lucy Mack Smith recalled:</p>
+
+                        <blockquote>
+                            <p><em>"Their first movement was to sue Joseph for debt, and, with this pretense, seize upon every piece of property belonging to any of the family."</em></p>
+                        </blockquote>
+
+                        <p>They weren't just leaving the ship—they wanted to <strong>commandeer it</strong>.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Temple Confrontation -->
+                <button class="sub-accordion">
+                    <span>The Temple Confrontation: Violence in Sacred Space</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p><strong>November 1837</strong> - The situation escalated to physical violence.</p>
+
+                        <p>During a meeting in the Kirtland Temple, apostates disrupted the service. According to accounts:</p>
+
+                        <blockquote>
+                            <p><em>"Amid screams and shrieks, the policemen, in ejecting the belligerents, knocked down a stove-pipe, which fell helter-skelter among the people; but, although bowie-knives and pistols were wrested from their owners, and thrown hither and thither to prevent disastrous results, no one was hurt."</em></p>
+                        </blockquote>
+
+                        <p><strong>Bowie knives and pistols. In the temple. Where ordinances had been revealed.</strong></p>
+
+                        <p>Warren Parrish—who had written down Abraham's words about seeking priesthood authority and the blessings of the fathers—was now pulling weapons in the very building where those blessings were administered.</p>
+
+                        <p>The irony was staggering: Men seeking to <strong>steal</strong> priesthood authority in the place where it was <strong>given</strong>.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Hero Who Stayed Aboard -->
+                <button class="sub-accordion">
+                    <span>The Hero Who Stayed Aboard: David W. Patten</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>While some of the original Twelve were joining the "pirate crew," <strong>David W. Patten</strong> showed what true loyalty looked like—even unto death.</p>
+
+                        <p><strong>Called:</strong> February 15, 1835 (same time as Luke Johnson, John Boynton, and Lyman Johnson)</p>
+
+                        <p><strong>During the Kirtland Apostasy (1837-1838):</strong> While his fellow apostles Warren Parrish, Luke Johnson, John Boynton, and Lyman Johnson were plotting against Joseph, pulling weapons in the temple, and abandoning the Church, <strong>David W. Patten remained steadfast</strong>.</p>
+
+                        <h4>The Contrast:</h4>
+                        <div class="info-box">
+                            <p><strong>The Apostates' Questions:</strong></p>
+                            <ul>
+                                <li>"Where's my money?"</li>
+                                <li>"Who's to blame for the bank failure?"</li>
+                                <li>"Why should I follow Joseph?"</li>
+                                <li>"What can I gain by staying?"</li>
+                            </ul>
+
+                            <p><strong>David W. Patten's Question:</strong></p>
+                            <ul>
+                                <li>"How can I serve?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SUB: D&C 114 Mission Call -->
+                <button class="sub-accordion">
+                    <span>April 17, 1838: D&C 114 - A Mission Call</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>In Far West, Missouri—after the Kirtland apostasy had purged the unfaithful—the Lord gave a revelation specifically about David W. Patten:</p>
+
+                        <blockquote>
+                            <p><em>"Let my servant David W. Patten make preparations to settle up all his business as soon as possible, and make a disposition of his merchandise, that he may perform a mission unto me next spring, in company with others, even twelve including himself, to testify of my name and bear glad tidings unto all the world."</em> (D&C 114:1)</p>
+                        </blockquote>
+
+                        <p><strong>The Assignment:</strong> Settle your business. Prepare for a mission. Go forth in the spring with the Twelve.</p>
+
+                        <p><strong>The Expectation:</strong> A year of preparation, then service.</p>
+
+                        <p><strong>What Actually Happened:</strong> He would be dead within six months.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Battle of Crooked River -->
+                <button class="sub-accordion">
+                    <span>October 25, 1838: The Battle of Crooked River</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>The Context:</h4>
+                        <p>Missouri persecution was escalating. Governor Lilburn Boggs would issue the infamous "Extermination Order" just days later (October 27, 1838). Mobs were attacking Saints. Homes were being burned. Lives were in danger.</p>
+
+                        <h4>The Rumor:</h4>
+                        <p>Word came that three Latter-day Saints had been captured by a mob militia and were being held prisoner, possibly to be killed.</p>
+
+                        <h4>The Rescue:</h4>
+                        <p>Captain David W. Patten was asked to lead a rescue party. He didn't have to go—he was an Apostle, not a military commander by training. He had a mission call to prepare for. He had "business to settle." He could have reasonably said, "I need to prepare for my spring mission."</p>
+
+                        <p><strong>Instead, he mounted his horse.</strong></p>
+
+                        <p>Before dawn on October 25, 1838, David W. Patten led about 75 men to rescue the three prisoners at Crooked River. The battle was brief but fierce. The prisoners were freed.</p>
+
+                        <p><strong>But David W. Patten was mortally wounded</strong>—shot in the abdomen.</p>
+
+
+                        <h4>His Last Words:</h4>
+                        <p>As he lay dying, his brethren gathered around him. According to Heber C. Kimball, who was there:</p>
+
+                        <p>David said: <em>"Whatever you do, or wherever you go, do not deny the faith."</em></p>
+
+                        <p>He spoke of heaven, of going to be with God, of the beauty he was seeing. He bore testimony of the gospel's truth.</p>
+
+                        <p><strong>He died that afternoon, October 25, 1838.</strong></p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: The Mission He DID Fulfill -->
+                <button class="sub-accordion">
+                    <span>The Mission He DID Fulfill</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>D&C 114 had called him to a spring mission. He died in fall, six months before he could depart.</p>
+
+                        <p><strong>But David W. Patten's actual mission was:</strong></p>
+
+                        <h4>1. Demonstrate Loyalty During Apostasy</h4>
+                        <ul>
+                            <li>When others were abandoning ship, he stayed aboard</li>
+                            <li>When fellow apostles were pulling knives in the temple, he was defending the Saints in Missouri</li>
+                            <li>When some sought personal gain, he sought to serve</li>
+                        </ul>
+
+
+                        <h4>2. Show Christlike Self-Sacrifice</h4>
+                        <ul>
+                            <li>He didn't have to lead the rescue party</li>
+                            <li>He had legitimate reasons to decline (apostolic duties, mission preparation)</li>
+                            <li>He chose to go anyway—to save three prisoners</li>
+                        </ul>
+
+                        <h4>3. Seal His Testimony with His Blood</h4>
+                        <ul>
+                            <li>Like the martyrs before him</li>
+                            <li>Like Joseph and Hyrum would do six years later</li>
+                            <li>His death testified: "This gospel is worth dying for"</li>
+                        </ul>
+
+                        <h4>4. Inspire Future Generations</h4>
+                        <ul>
+                            <li>His last words: "Whatever you do, or wherever you go, do not deny the faith"</li>
+                            <li>That message echoes through 180+ years</li>
+                            <li>Every missionary who serves, every member who stays faithful, every Saint who endures trial—they're answering David W. Patten's charge</li>
+                        </ul>
+
+                        <h4>Joseph's Tribute:</h4>
+                        <p>At David W. Patten's funeral, Joseph Smith said:</p>
+
+                        <blockquote>
+                            <p><em>"There lies a man that has done just as he said he would—he has laid down his life for his friends."</em></p>
+                        </blockquote>
+
+                        <p><strong>Greater love hath no man.</strong></p>
+
+
+                        <h4>The Beautiful Irony:</h4>
+                        <p>D&C 114 said David W. Patten would "perform a mission unto me next spring... to testify of my name and bear glad tidings unto all the world."</p>
+
+                        <p>He died in October 1838.</p>
+
+                        <p><strong>But every April (spring!) since then:</strong></p>
+                        <ul>
+                            <li>His story is told</li>
+                            <li>His testimony echoes</li>
+                            <li>His sacrifice inspires</li>
+                            <li>His faithfulness testifies</li>
+                            <li>His name bears glad tidings</li>
+                        </ul>
+
+                        <p><strong>The mission wasn't cancelled. It was expanded.</strong> Instead of serving for one spring, <strong>he's been serving every spring for 180+ years</strong>.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: Contrast Between Pirates and Hero -->
+                <button class="sub-accordion">
+                    <span>The Two Ships: A Tale of Contrast</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>The Apostates' Ship:</h4>
+                        <ul>
+                            <li><strong>Course:</strong> Away from Joseph, away from the Church, away from covenants</li>
+                            <li><strong>Motivation:</strong> Self-preservation, financial recovery, pride</li>
+                            <li><strong>Destination:</strong> Nowhere (they never found what they sought)</li>
+                            <li><strong>Result:</strong> Lost everything they tried to save</li>
+                        </ul>
+
+
+                        <h4>David W. Patten's Ship:</h4>
+                        <ul>
+                            <li><strong>Course:</strong> Toward service, toward sacrifice, toward the Lord</li>
+                            <li><strong>Motivation:</strong> Faith, loyalty, love for the Saints</li>
+                            <li><strong>Destination:</strong> "Father, I am coming" (his words as he died)</li>
+                            <li><strong>Result:</strong> Gained everything he didn't try to keep</li>
+                        </ul>
+
+                        <p>While the apostates tried to seize authority, David W. Patten <strong>surrendered his life</strong>.</p>
+
+                        <p>Guess which one the Lord honored?</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: What Can and Cannot Be Stolen -->
+                <button class="sub-accordion">
+                    <span>What Pirates Got vs. What They Lost</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>The Apostates Successfully Took:</h4>
+                        <table>
+                            <tr>
+                                <th>What They Stole</th>
+                                <th>Result</th>
+                            </tr>
+                            <tr>
+                                <td>Money (through lawsuits and seizures)</td>
+                                <td>Spent, lost, or gained nothing lasting</td>
+                            </tr>
+                            <tr>
+                                <td>Property (attempting to claim temple and Church assets)</td>
+                                <td>Lost in the end; couldn't keep it</td>
+                            </tr>
+
+                            <tr>
+                                <td>People (convincing 10-15% to leave)</td>
+                                <td>Those who left suffered; many eventually returned broken</td>
+                            </tr>
+                            <tr>
+                                <td>Reputation (spreading rumors and accusations)</td>
+                                <td>Their own reputations were destroyed; history judges them harshly</td>
+                            </tr>
+                            <tr>
+                                <td>Peace (creating chaos and violence)</td>
+                                <td>They found no peace themselves</td>
+                            </tr>
+                        </table>
+
+                        <h4>What They Could NOT Take:</h4>
+                        <div class="info-box">
+                            <p><strong>1. Priesthood Keys</strong></p>
+                            <ul>
+                                <li>Joseph held keys given by Peter, James, and John</li>
+                                <li>Moses and Elijah had appeared in the Kirtland Temple</li>
+                                <li>These weren't transferable by vote or violence</li>
+                                <li>You can't "sue" for divine authority</li>
+                            </ul>
+
+                            <p><strong>2. Covenant Sealing Power</strong></p>
+                            <ul>
+                                <li>Temple ordinances had been revealed</li>
+                                <li>Families sealed by proper authority remained sealed</li>
+                                <li>Apostates leaving didn't unseal anyone else</li>
+                            </ul>
+
+                            <p><strong>3. Divine Approval</strong></p>
+                            <ul>
+                                <li>God had called Joseph</li>
+                                <li>No vote could reverse that call</li>
+                                <li>No lawsuit could revoke that commission</li>
+                            </ul>
+
+
+                            <p><strong>4. The Papyri's Message</strong></p>
+                            <ul>
+                                <li>Hidden in faithful members' homes</li>
+                                <li>The Book of Abraham's truths survived</li>
+                                <li>Ancient covenants preserved despite "sworn destruction"</li>
+                            </ul>
+
+                            <p><strong>5. The Restoration Itself</strong></p>
+                            <ul>
+                                <li>The gospel had been restored</li>
+                                <li>That couldn't be un-restored</li>
+                                <li>Truth doesn't cease to be true because people reject it</li>
+                            </ul>
+
+                            <p><strong>6. Faithful Hearts</strong></p>
+                            <ul>
+                                <li>David W. Patten's loyalty couldn't be stolen</li>
+                                <li>Brigham Young's faith couldn't be seized</li>
+                                <li>Heber C. Kimball's testimony couldn't be pirated</li>
+                                <li>Those who chose to stay faithful kept what the apostates lost</li>
+                            </ul>
+                        </div>
+
+                        <div class="principle-box">
+                            <p><strong>The Protection Principle:</strong> Keys that can't be pirated. Some things can't be taken—they can only be <strong>surrendered</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SUB: Joseph Flees Kirtland -->
+                <button class="sub-accordion">
+                    <span>January 12, 1838: The Prophet Flees</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>The situation in Kirtland became untenable. Apostates were plotting Joseph's death. Legal suits were mounting. The "pirates" were trying to seize everything.</p>
+
+                        <p><strong>On the night of January 12, 1838, Joseph fled Kirtland</strong>, leaving behind:</p>
+                        <ul>
+                            <li>The temple he'd sacrificed to build</li>
+                            <li>The mummies and papyri (hidden by faithful members to protect from "sworn destruction")</li>
+                            <li>Property and possessions</li>
+                            <li>The city he'd called home</li>
+                        </ul>
+
+                        <p>He fled with his life, his family, and something the apostates <strong>couldn't touch</strong>: <strong>priesthood keys</strong>.</p>
+
+                        <p>Lucy Mack Smith recalled how faithful members protected the papyri:</p>
+
+                        <blockquote>
+                            <p><em>"The mob swore they would take, and then burn every one of them. By various stratagems, we succeeded in keeping them out of their hands."</em></p>
+                        </blockquote>
+
+                        <p>While apostates tried to steal authority, faithful Saints <strong>preserved revelation</strong>. While pirates plotted mutiny, loyal crew members <strong>saved the cargo</strong>.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: Application -->
+                <button class="sub-accordion">
+                    <span>Application: What Are You Guarding?</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>The pirate metaphor asks us: <strong>What treasures are you protecting, and what are you worried about losing?</strong></p>
+
+                        <h4>Treasures That CAN Be Stolen:</h4>
+                        <ul>
+                            <li>Money and possessions</li>
+                            <li>Reputation and status</li>
+                            <li>Comfort and security</li>
+                            <li>Time and opportunities</li>
+                            <li>Health and strength</li>
+                        </ul>
+
+                        <h4>Treasures That CANNOT Be Stolen (Unless You Surrender Them):</h4>
+                        <ul>
+                            <li>Temple covenants and sealings</li>
+                            <li>Priesthood authority and keys</li>
+                            <li>Your relationship with God</li>
+                            <li>Your eternal identity as a child of God</li>
+                            <li>Knowledge of gospel truth</li>
+                            <li>The Holy Ghost's companionship</li>
+                            <li>Eternal families (sealed by proper authority)</li>
+                        </ul>
+
+                        <div class="question-box">
+                            <h4>Questions for Your Life:</h4>
+                            <ol>
+                                <li><strong>What are you spending your energy protecting?</strong> Are you guarding treasures that can be stolen (money, reputation) while neglecting treasures that can only be surrendered (covenants, relationships)?</li>
+
+                                <li><strong>What "pirates" are you worried about?</strong> Financial loss? Health decline? Reputation damage? Others' opinions? Or are you guarding against spiritual threats: pride, complacency, covenant breaking?</li>
+                                <li><strong>What would it take for you to "jump ship"?</strong> Financial hardship (like the bank collapse)? Offense or disagreement with leaders (like the apostates)? Personal pride or perceived injustice (like Thomas B. Marsh)?</li>
+                                <li><strong>What can NO ONE take from you unless you give it away?</strong> Your covenants are sealed by divine authority. Your priesthood (if you hold it) comes from God. Your temple blessings are yours unless you break them. Your eternal family is sealed unless you unseal it.</li>
+                                <li><strong>When called to serve, will you mount your horse?</strong> Like David W. Patten, even when it costs everything? Or will you calculate risk and protect yourself first?</li>
+                            </ol>
+                        </div>
+
+                        <div class="principle-box">
+                            <p><strong>David W. Patten's Last Words Apply to Us:</strong></p>
+                            <p><em>"Whatever you do, or wherever you go, <strong>do not deny the faith.</strong>"</em></p>
+                            <ul>
+                                <li>Not when the bank fails.</li>
+                                <li>Not when you lose money.</li>
+                                <li>Not when leaders disappoint.</li>
+                                <li>Not when persecution comes.</li>
+                                <li>Not when your mission changes.</li>
+                                <li>Not even when death approaches.</li>
+                            </ul>
+                            <p><strong>DO NOT DENY THE FAITH.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- SECTION 4: TIMELINE CONVERGENCE -->
+        <button class="accordion">
+            <span>Section 4: Timeline Convergence - Three Stories, One Pattern</span>
+            <span class="accordion-arrow">▼</span>
+        </button>
+        <div class="panel">
+            <div class="panel-content">
+                <div class="principle-box">
+                    <p><strong>Central Message:</strong> These aren't separate stories—they're one prophetic pattern showing how God uses temporal trials to unlock eternal treasures.</p>
+                </div>
+
+                <p>Step back and look at what we've discovered:</p>
+
+                <ul>
+                    <li><strong>Mummies</strong> carrying ancient scrolls that unlock temple ordinances</li>
+                    <li><strong>Witches</strong> haunting a city that needs gospel redemption</li>
+                    <li><strong>Pirates</strong> trying to steal what can only be surrendered</li>
+                </ul>
+
+                <p>Three seemingly random Halloween elements. Three distinct D&C sections. Three different years.</p>
+
+                <p><strong>But they're not random. They're not separate. They're one story.</strong></p>
+
+                <!-- SUB: Brief Convergence Timeline -->
+                <button class="sub-accordion">
+                    <span>The Convergence Timeline: 1835-1842</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Here's how God wove three impossible trials into one perfect pattern:</p>
+
+
+                        <div class="timeline-item">
+                            <strong>JULY 1835</strong> — Mummies purchased during bankruptcy ($2,400 they don't have)
+                        </div>
+                        <div class="timeline-item">
+                            <strong>MARCH 1836</strong> — Temple dedicated; visions, keys, debt crisis
+                        </div>
+                        <div class="timeline-item">
+                            <strong>AUGUST 1836</strong> — Salem treasure hunt; gold sought, souls promised
+                        </div>
+                        <div class="timeline-item">
+                            <strong>JUNE 1837</strong> — Bank collapses; apostasy erupts
+                        </div>
+                        <div class="timeline-item">
+                            <strong>NOVEMBER 1837</strong> — Weapons drawn in temple; papyri threatened
+                        </div>
+                        <div class="timeline-item">
+                            <strong>JANUARY 1838</strong> — Joseph flees; mummies hidden from "sworn destruction"
+                        </div>
+                        <div class="timeline-item">
+                            <strong>OCTOBER 1838</strong> — David W. Patten dies: "Do not deny the faith"
+                        </div>
+                        <div class="timeline-item">
+                            <strong>WINTER 1838-39</strong> — Mummies feed family (25¢ museum admission)
+                        </div>
+                        <div class="timeline-item">
+                            <strong>1841</strong> — Salem baptisms "with perfect rush"; Brigham organizes household help
+                        </div>
+                        <div class="timeline-item">
+                            <strong>MARCH-MAY 1842</strong> — Book of Abraham published; First endowment given
+                        </div>
+
+                        <p><strong>Seven years. Three themes. One divine orchestration.</strong></p>
+                    </div>
+                </div>
+
+
+
+                <!-- SUB: What Joseph Couldn't See - 8 Parts -->
+                <button class="sub-accordion">
+                    <span>The Pattern: What Joseph Couldn't See in Each Moment</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>Look at what Joseph <strong>couldn't see</strong> in each moment:</p>
+
+                        <h4>1. THE FOOLISH INVESTMENT (July 1835)</h4>
+                        <ul>
+                            <li><strong>What it looked like:</strong> Spending $2,400 during bankruptcy on dead bodies and old scrolls</li>
+                            <li><strong>What Joseph couldn't see yet:</strong> These scrolls would survive ocean voyages, temple violence, and apostasy to unlock the theological framework for temple ordinances that would bless billions</li>
+                        </ul>
+
+                        <h4>2. THE MISDIRECTED TREASURE HUNT (August 1836)</h4>
+                        <ul>
+                            <li><strong>What it looked like:</strong> Desperate search for buried gold in Salem's cellars</li>
+                            <li><strong>What Joseph couldn't see yet:</strong> While seeking temporal treasure in Salem, he was ignoring the actual treasure (papyri with covenant theology) sitting in Kirtland's temple. Five years later, Salem would yield its real treasure—souls saved "with a perfect rush"</li>
+                        </ul>
+
+                        <h4>3. THE FINANCIAL COLLAPSE (June 1837)</h4>
+                        <ul>
+                            <li><strong>What it looked like:</strong> Bank failure, members' savings lost, blame and apostasy</li>
+                            <li><strong>What Joseph couldn't see yet:</strong> This "catastrophe" would purge the unfaithful, test the loyal, and prepare a refined core to receive endowment ordinances</li>
+                        </ul>
+
+
+                        <h4>4. THE TEMPLE VIOLENCE (November 1837)</h4>
+                        <ul>
+                            <li><strong>What it looked like:</strong> Apostates pulling weapons in the sacred space where Christ appeared</li>
+                            <li><strong>What Joseph couldn't see yet:</strong> Within months he'd flee, leaving the temple behind—but taking the authority. Pirates would get buildings; God would preserve priesthood keys and ancient papyri</li>
+                        </ul>
+
+                        <h4>5. THE HERO'S DEATH (October 1838)</h4>
+                        <ul>
+                            <li><strong>What it looked like:</strong> David W. Patten dying before his "spring mission" could begin</li>
+                            <li><strong>What Joseph couldn't see yet:</strong> Patten's "spring mission" would fulfill for 180+ years through his sealed testimony and heroic example. His death would teach what the apostates' survival couldn't—that laying down your life matters more than preserving it</li>
+                        </ul>
+
+                        <h4>6. THE MUSEUM PROVISION (Winter 1838-39)</h4>
+                        <ul>
+                            <li><strong>What it looked like:</strong> Undignified—charging 25¢ to view mummies while living as refugees</li>
+                            <li><strong>What Joseph couldn't see yet:</strong> The "foolish" 1835 purchase was now literally feeding his family during the Church's darkest poverty. Divine provision through impossible means</li>
+                        </ul>
+
+                        <h4>7. THE PRACTICAL ENABLER (1841)</h4>
+                        <ul>
+                            <li><strong>What it looked like:</strong> Brigham Young organizing household help—mundane domestic support</li>
+                            <li><strong>What Joseph couldn't see yet:</strong> This "simple" service would finally unlock seven years of delayed translation work. Serving enables what seizing destroys</li>
+                        </ul>
+
+
+                        <h4>8. THE CONVERGENCE (March-May 1842)</h4>
+                        <ul>
+                            <li><strong>What becomes visible:</strong> Everything comes together in one glorious moment
+                                <ul>
+                                    <li>Papyri purchased during bankruptcy (1835) → Published (March 1842)</li>
+                                    <li>Salem prophecy given during failed treasure hunt (1836) → Fulfilled with baptisms (1841-42)</li>
+                                    <li>Temple keys threatened by apostasy (1837-38) → Used to give endowment (May 1842)</li>
+                                    <li>Faithful servants (not pirate mutineers) → Receiving ordinances that can't be stolen</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="principle-box">
+                            <p><strong>Dr. Muhlestein's insight:</strong> <em>"Every time he works on the Book of Abraham, he starts doing new temple ordinances. That's not a coincidence, I think."</em></p>
+                        </div>
+
+                        <p><strong>Remove any piece from 1835-1842, and the pattern breaks.</strong></p>
+
+                        <p>Every trial was necessary. Every delay had purpose. Every convergence was orchestrated.</p>
+                    </div>
+                </div>
+
+
+                <!-- SUB: Three Lessons from One Story -->
+                <button class="sub-accordion">
+                    <span>Three Lessons from One Story</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>MUMMIES TEACH:</h4>
+                        <p>Physical catalysts matter. Temporal sacrifices enable spiritual treasures. What seems foolish to the world may be essential to God. Ancient covenants preserved through impossible circumstances inform modern ordinances.</p>
+
+                        <h4>WITCHES TEACH:</h4>
+                        <p>Dark pasts can be redeemed. God sends light to darkest places. Temporal failures (no buried gold) redirect to eternal success (souls saved). Divine timing requires patient faith. "In due time" means God's schedule, not ours.</p>
+
+                        <h4>PIRATES TEACH:</h4>
+                        <p>Spiritual treasures can't be stolen, only surrendered. Serving enables while seizing destroys. Heroes lay down lives while pirates grasp for more. What we try to save, we lose; what we sacrifice, we gain. Authority comes through covenant, not conquest.</p>
+
+                        <div class="principle-box">
+                            <h4>THE COMBINED LESSON:</h4>
+                            <p>God orchestrates trials that seem random, unconnected, and catastrophic. But they're not random—they're <strong>purposeful</strong>. They're not unconnected—they're <strong>woven together</strong>. They're not catastrophic—they're <strong>catalytic</strong>.</p>
+
+                            <p><strong>Every trial in 1835-1842 was necessary:</strong></p>
+                            <ul>
+                                <li>Bankruptcy forced dependence on God</li>
+                                <li>Salem redirected priorities from gold to souls</li>
+                                <li>Bank collapse purged the unfaithful</li>
+                                <li>Apostasy revealed who truly valued covenants</li>
+                                <li>Patten's sacrifice testified of what matters</li>
+                                <li>Mummies as income showed God's provision</li>
+                                <li>Brigham's service enabled revelation</li>
+                                <li>All of it converged to unlock endowment</li>
+                            </ul>
+
+                            <p><strong>Take away any piece, and the pattern breaks.</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- SUB: Modern Application -->
+                <button class="sub-accordion">
+                    <span>Modern Application: Your Convergence</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>You're in the middle of your own convergence right now. You have:</p>
+
+                        <h4>YOUR MUMMIES:</h4>
+                        <ul>
+                            <li>Investments that seem foolish</li>
+                            <li>Purchases during scarcity</li>
+                            <li>Things you sacrificed for that others question</li>
+                            <li>Physical objects you feel prompted to acquire/keep</li>
+                            <li>Temporal decisions with spiritual implications</li>
+                        </ul>
+
+                        <h4>YOUR SALEM:</h4>
+                        <ul>
+                            <li>Misdirected treasure hunts</li>
+                            <li>Desperate attempts to solve problems your way</li>
+                            <li>Temporal worries God wants to redirect</li>
+                            <li>Cities/situations where you seek what isn't the real treasure</li>
+                            <li>Places God has greater purposes than you realize</li>
+                        </ul>
+
+                        <h4>YOUR PIRATES:</h4>
+                        <ul>
+                            <li>People trying to steal your peace, faith, authority, blessings</li>
+                            <li>Trials that make you want to abandon ship</li>
+                            <li>Financial or social pressures to compromise</li>
+                            <li>Apostasy temptations in various forms</li>
+                            <li>Choices between serving (Patten) and seizing (apostates)</li>
+                        </ul>
+
+
+                        <div class="principle-box">
+                            <p><strong>Here's what you can't see yet:</strong></p>
+                            <ul>
+                                <li>How your "mummies" will provide when you need it most</li>
+                                <li>How your "Salem" will bear fruit in God's timing</li>
+                                <li>How your "pirates" will refine who you become</li>
+                                <li>How it all converges to unlock something greater</li>
+                            </ul>
+                        </div>
+
+                        <h4>Right now, you see:</h4>
+                        <ul>
+                            <li>Separate trials</li>
+                            <li>Unconnected challenges</li>
+                            <li>Random hardships</li>
+                            <li>Confusing timing</li>
+                        </ul>
+
+                        <h4>But God sees:</h4>
+                        <ul>
+                            <li>One pattern</li>
+                            <li>Woven preparation</li>
+                            <li>Purposeful refinement</li>
+                            <li>Perfect timing</li>
+                        </ul>
+
+                        <div class="question-box">
+                            <h4>The question is: Will you:</h4>
+                            <ul>
+                                <li><strong>Spend money you don't have on what God prompts?</strong> (Like Joseph buying mummies)</li>
+                                <li><strong>Accept redirection from your treasure hunts?</strong> (Like Joseph in Salem)</li>
+                                <li><strong>Stay faithful when pirates attack?</strong> (Like David W. Patten)</li>
+                                <li><strong>Serve practically when it's needed?</strong> (Like Brigham Young)</li>
+                                <li><strong>Trust God's timing for the convergence?</strong> (Like Joseph waiting 7 years for publication)</li>
+                            </ul>
+                        </div>
+
+
+                        <h4>The Convergence You're Building Toward</h4>
+                        <p><strong>Your 1842 is coming.</strong></p>
+
+                        <p>The moment when:</p>
+                        <ul>
+                            <li>Everything you sacrificed makes sense</li>
+                            <li>Every trial you endured proves purposeful</li>
+                            <li>Every treasure hunt redirects to greater treasure</li>
+                            <li>Every pirate attack strengthens your testimony</li>
+                            <li>Every hero's choice compounds into glory</li>
+                        </ul>
+
+                        <p><strong>You won't recognize it while building toward it.</strong></p>
+
+                        <p>Joseph in 1835 buying mummies didn't see 1842 endowment.<br>
+                        Joseph in 1836 seeking treasure didn't see 1841 Salem souls.<br>
+                        Joseph in 1837 fleeing apostates didn't see 1842 publication.</p>
+
+                        <p><strong>But God saw it all.</strong></p>
+
+                        <p>He was orchestrating:</p>
+                        <ul>
+                            <li>Your mummies (foolish investments that become provision)</li>
+                            <li>Your Salem (redirected hunts that bear eternal fruit)</li>
+                            <li>Your pirates (attacks that prove what can't be stolen)</li>
+                        </ul>
+
+                        <p><strong>All of it converging toward your endowment—whatever form that takes.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- DIVIDER FOR ACTIVITIES SECTION -->
+        <div class="section-divider">
+            <div class="section-divider-content">
+                <h2>✦ Part 2: Activities & Application ✦</h2>
+                <p>Practical ways to apply the lessons of mummies, witches, and pirates</p>
+            </div>
+        </div>
+
+        <div class="activities-section">
+
+        <!-- SECTION 5: THE LESSONS -->
+        <button class="accordion">
+            <span>Section 5: The Lessons - Trick or Treat?</span>
+            <span class="accordion-arrow">▼</span>
+        </button>
+        <div class="panel">
+            <div class="panel-content">
+                <div class="principle-box">
+                    <p><strong>Central Message:</strong> This October, you get to choose: Will you treat these lessons as tricks to avoid or treats to embrace?</p>
+                </div>
+
+                <p>Halloween gives us a choice every year: trick or treat? Mischief or blessing? Fear or fun?</p>
+
+                <p>This week's Come Follow Me study (D&C 111-114) presents the same choice—but with eternal implications.</p>
+
+                <p>You can view these sections as <strong>tricks</strong> (historical oddities, irrelevant ancient problems, confusing tangents) or as <strong>treats</strong> (divine patterns revealing how God works in your life right now).</p>
+
+                <p><strong>The choice is yours.</strong></p>
+
+                <p>Let's unwrap the treats.</p>
+
+
+
+                <!-- TREAT #1 -->
+                <button class="sub-accordion">
+                    <span>Treat #1: Recognize the Treasures You Already Possess (The Mummy Principle)</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <div class="principle-box">
+                            <p><strong>The Pattern:</strong> Joseph spent $2,400 he didn't have on mummies during bankruptcy while later seeking buried treasure in Salem—<strong>missing the treasures already in his possession</strong>.</p>
+                        </div>
+
+                        <h4>INVENTORY CHECK - What sacred treasures are you overlooking?</h4>
+
+                        <p><strong>1. Your Temple Recommend</strong></p>
+                        <ul>
+                            <li>When did you last use it?</li>
+                            <li>Are you treating it like ancient papyri wrapped in linen—valuable but ignored?</li>
+                            <li>The endowment ordinance was unlocked by those very papyri. Are you accessing what they revealed?</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> Schedule a specific temple visit within the next two weeks. If you don't have a current recommend, make that a priority.</p>
+                        </div>
+
+                        <p><strong>2. Your Scriptures</strong></p>
+                        <ul>
+                            <li>Physical books gathering dust or digital apps rarely opened?</li>
+                            <li>The same God who preserved papyri across oceans wants you to study what He's preserved for you</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> Choose one verse from D&C 111-114 and do a deep study this week—look up words in 1828 Webster's dictionary, trace the Hebrew/Greek roots if biblical references are cited, find three cross-references.</p>
+                        </div>
+
+
+                        <p><strong>3. Your Covenant Relationships</strong></p>
+                        <ul>
+                            <li>Family members you take for granted?</li>
+                            <li>Sealed bonds you're neglecting?</li>
+                            <li>Temple marriages treated casually?</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> Schedule specific one-on-one time with each family member this month. Ask them about their spiritual journey, their struggles, their dreams.</p>
+                        </div>
+
+                        <p><strong>4. Your Priesthood Authority and Power</strong></p>
+                        <ul>
+                            <li>Keys you've been given but don't exercise?</li>
+                            <li>Blessings you could offer but don't?</li>
+                            <li>Service you could render but postpone?</li>
+                            <li>Callings you could magnify</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> If you hold the priesthood or have been endowed with priesthood power (endowed ladies), review what that means. Identify ways that you can magnify that power and follow through.</p>
+                        </div>
+
+                        <p><strong>5. Your Talents and Gifts</strong></p>
+                        <ul>
+                            <li>Abilities God gave you that you're not developing?</li>
+                            <li>Skills you could use to serve but keep for yourself?</li>
+                            <li>Creativity waiting to bless others?</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> Identify one talent you've been neglecting. Use it to serve someone this week or soon—teach a class, create something for someone, share your knowledge.</p>
+                        </div>
+
+
+                        <div class="question-box">
+                            <p><strong>THE MUMMY QUESTION:</strong></p>
+                            <p>"What would I spend $150,000 on if I knew it would unlock eternal treasures—and what have I ALREADY been given that I'm ignoring?"</p>
+                            <p>If Joseph's "foolish" investment in mummies ultimately enabled temple endowment for billions, what "foolish" or "wrapped" sacrifice might God be asking you to make that will bear eternal fruit?</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TREAT #2 -->
+                <button class="sub-accordion">
+                    <span>Treat #2: Redeem Your Personal "Salems" (The Witch Principle)</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <div class="principle-box">
+                            <p><strong>The Pattern:</strong> Salem's dark witch-trial history was redeemed by gospel light. Five years after Joseph's redirected treasure hunt, souls were being saved "with a perfect rush" in the very city synonymous with religious fear and persecution.</p>
+                        </div>
+
+                        <h4>REDEMPTION INVENTORY - What's your "Salem"?</h4>
+
+                        <p><strong>1. Past Mistakes You Can't Forgive Yourself For</strong></p>
+                        <ul>
+                            <li>Sins already repented of but still haunting you?</li>
+                            <li>Failures that define your self-image?</li>
+                            <li>Guilt that overshadows the Atonement's power?</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> Write down three past mistakes you're still carrying. Beside each one, write: "The Lord has much treasure in this experience for me." Then list one lesson you learned and one way you can help someone else because of what you went through.</p>
+                        </div>
+
+
+                        <p><strong>2. Relationships Marked by Betrayal</strong></p>
+                        <ul>
+                            <li>Family members who hurt you?</li>
+                            <li>Friends who abandoned you?</li>
+                            <li>Trust that was broken?</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> Choose one damaged relationship. Pray specifically about it daily this week. Ask not "How can I fix this?" but "What treasure does the Lord have for me in this situation?" You may not reconcile (that requires both parties), but you can find peace (that requires only you and God).</p>
+                        </div>
+
+                        <p><strong>3. Locations Holding Painful Memories</strong></p>
+                        <ul>
+                            <li>Places where trauma occurred?</li>
+                            <li>Cities you fled from?</li>
+                            <li>Buildings associated with grief?</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> If possible and appropriate, return to one such place with a specific gospel lens. Pray there. Look for evidence of God's hand in your survival. Claim that space for light, not darkness.</p>
+                        </div>
+
+                        <p><strong>4. Seasons of Darkness You Survived</strong></p>
+                        <ul>
+                            <li>Depression periods you barely made it through?</li>
+                            <li>Faith crises that nearly destroyed your testimony?</li>
+                            <li>Trials that felt like "witch hunts" against you?</li>
+                        </ul>
+                        <div class="action-box">
+                            <p><strong>ACTION:</strong> Journal about one dark season. Title the entry: "The Treasure I Found in [that dark season]." Focus not on the pain, but on what you learned, who you became, how God reached you. Share your insights with someone currently in a similar trial.</p>
+                        </div>
+
+
+                        <div class="question-box">
+                            <p><strong>THE SALEM QUESTION:</strong></p>
+                            <p>"What place, person, or period of my life needs gospel light to transform it from curse to blessing?"</p>
+                            <p>Remember: God told Joseph to study Salem's history—"inquire diligently concerning the more ancient inhabitants and founders of this city." What does studying your own "Salem's" history teach you about God's redemptive power?</p>
+                        </div>
+
+                        <div class="principle-box">
+                            <p><strong>The Five-Year Principle:</strong> Joseph received the Salem revelation in 1836. The baptisms happened in 1841. <strong>"In due time" meant five years.</strong> What promise are you waiting for that might still be in its "due time" period? Don't give up. The treasure is real. The timing is God's.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TREAT #3 -->
+                <button class="sub-accordion">
+                    <span>Treat #3: Guard What Can't Be Stolen (The Pirate Principle)</span>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <div class="principle-box">
+                            <p><strong>The Pattern:</strong> Kirtland apostates tried to steal priesthood authority, Church property, and sacred objects through lawsuits and violence. They got buildings but lost keys. They seized property but surrendered covenants. David W. Patten lost his life but gained eternal glory.</p>
+                        </div>
+
+                        <h4>SECURITY AUDIT - What are you protecting, and what truly needs protection?</h4>
+
+                        <p><strong>1. TREASURES THAT CAN BE STOLEN (Stop obsessing over these):</strong></p>
+
+
+                        <ul>
+                            <li><strong>Money and Possessions</strong>
+                                <div class="action-box">
+                                    <p><strong>ACTION:</strong> List your three biggest financial worries. Beside each one, write D&C 111:5 - "Concern not yourselves about your debts, for I will give you power to pay them."</p>
+                                </div>
+                            </li>
+                            <li><strong>Reputation and Status</strong>
+                                <div class="action-box">
+                                    <p><strong>ACTION:</strong> Identify one area where you're protecting your image at the cost of truth or integrity. Confess it to God. Let it go.</p>
+                                </div>
+                            </li>
+                            <li><strong>Comfort and Security</strong>
+                                <div class="action-box">
+                                    <p><strong>ACTION:</strong> Do one uncomfortable thing for the kingdom this week that scares you (share your testimony, invite someone to church, serve in a way that stretches you).</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <p><strong>2. TREASURES THAT CANNOT BE STOLEN (Unless you surrender them):</strong></p>
+                        <ul>
+                            <li><strong>Your Temple Covenants</strong>
+                                <p>These are sealed by divine authority. No financial collapse, no apostasy, no persecution can break them—only you can.</p>
+                                <div class="action-box">
+                                    <p><strong>ACTION:</strong> Review your temple covenants (endowment, sealing). Ask yourself: "Am I keeping these, or have I slowly surrendered pieces?"</p>
+                                </div>
+                            </li>
+
+                            <li><strong>Your Priesthood Authority and Power</strong>
+                                <p>No lawsuit can revoke what God ordained and endowed you with. No apostasy can steal keys you exercise faithfully.</p>
+                                <div class="action-box">
+                                    <p><strong>ACTION:</strong> Exercise your priesthood this week in a way you've been postponing.</p>
+                                </div>
+                            </li>
+                            <li><strong>Your Relationship with God</strong>
+                                <p>No one can come between you and God unless you let them. No critic, no doubter, no persecutor.</p>
+                                <div class="action-box">
+                                    <p><strong>ACTION:</strong> Have a conversation with God today about something you've been avoiding. Be honest. Listen.</p>
+                                </div>
+                            </li>
+                            <li><strong>Your Eternal Family Sealings</strong>
+                                <p>If sealed by proper authority and kept by covenant, NO external force can break it.</p>
+                                <div class="action-box">
+                                    <p><strong>ACTION:</strong> Strengthen one family relationship this week that's been strained. Don't try to fix everything—just take one step toward connection.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="question-box">
+                            <p><strong>THE PIRATE QUESTION:</strong></p>
+                            <p>"What am I spending energy protecting that could be stolen anyway, while neglecting to protect what can only be surrendered?"</p>
+                        </div>
+
+                        <div class="principle-box">
+                            <p><strong>The David W. Patten Choice:</strong> When called to serve, will you mount your horse? Or will you calculate risk and protect yourself first?</p>
+                            <p>David W. Patten could have said: "I have a spring mission to prepare for" (legitimate excuse), "I'm an apostle, not a soldier" (technically true), or "Three prisoners aren't worth risking my life" (reasonable calculation).</p>
+                            <p><strong>Instead, he mounted his horse.</strong></p>
+                            <p>What's your "Crooked River"? What call to serve are you avoiding because it costs too much?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- SECTION 6: CONCLUSION -->
+        <button class="accordion">
+            <span>Section 6: Conclusion - The Best Halloween Story You'll Hear This Year</span>
+            <span class="accordion-arrow">▼</span>
+        </button>
+        <div class="panel">
+            <div class="panel-content">
+                <h3>Better Than Fiction</h3>
+                <p>Here's what makes this the perfect Halloween tale:</p>
+
+                <p><strong>It has REAL mummies.</strong> Not movie props or Halloween decorations—actual Egyptian mummies purchased by a prophet during bankruptcy, carrying ancient scrolls preserving Abraham's wisdom. Four full-sized mummified bodies that survived ocean crossings, climate changes, and persecution to unlock temple ordinances.</p>
+
+                <p><strong>It has an ACTUAL witch-trial city.</strong> Not folklore or legend—Salem, Massachusetts, where 19 people were hanged, one was pressed to death, and hundreds were accused during 1692-1693. A city built on fear masquerading as faith, where innocent blood was shed in God's name. The real-life setting of one of America's darkest religious chapters.</p>
+
+                <p><strong>It has GENUINE pirates.</strong> Not swashbuckling Caribbean adventurers—religious mutineers who pulled bowie knives and pistols in a temple, tried to seize Church property through lawsuits, and attempted to steal priesthood authority they could never possess. Men who chose to become villains instead of heroes.</p>
+
+                <p><strong>And it has REAL HEROES.</strong> Brigham Young who got things done, taking on the mundane to pave the way for Joseph to complete these translations and provide us with sacred wisdom and blessings. David W. Patten, who stayed faithful when others fled, mounted his horse when called to serve, and died as martyr, offering his life as a witness.</p>
+
+                <p><strong>You can't make this up.</strong></p>
+
+                <p><strong>And yet somehow, it's all true.</strong></p>
+
+
+                <h3>The Twist Ending</h3>
+                <p>But here's the twist that makes this more than just an exciting story:</p>
+
+                <p><strong>These three Halloween elements aren't separate tales—they're one divine pattern.</strong></p>
+
+
+                <p><strong>The mummies Joseph bought while bankrupt</strong> ($2,400 he didn't have) <strong>unlocked the temple ordinances</strong> that would bless billions. What seemed foolish proved providential. What appeared wasteful became essential. Temporal sacrifice enabled eternal treasure.</p>
+
+                <p><strong>The Salem treasure hunt</strong> that seemed like failure (no buried gold found) <strong>redirected Joseph's priorities</strong> from temporal to eternal wealth. Five years later, souls were being saved "with a perfect rush" in the very city synonymous with religious persecution. Divine timing proved perfect. Gospel light redeemed historical darkness.</p>
+
+                <p><strong>The Kirtland apostasy</strong> where "pirates" tried to steal authority through violence and lawsuits <strong>proved what can and cannot be taken</strong>. They got buildings; Joseph kept keys. They seized property; David W. Patten gained glory. They tried to steal blessings; he laid down his life to secure them for others.</p>
+
+                <div class="principle-box">
+                    <p><strong>All three converge in 1842:</strong></p>
+                    <ul>
+                        <li>Papyri (purchased 1835) → Published and enable Endowment (May 1842)</li>
+                        <li>Salem prophecy (given 1836) → Fulfilled with baptisms (1841-1842)</li>
+                        <li>Apostasy (1837-1838) → Purged the unfaithful, proved the faithful worthy of receiving endowment</li>
+                    </ul>
+                    <p><strong>God was orchestrating the whole time.</strong></p>
+                </div>
+
+                <p>What looked like:</p>
+                <ul>
+                    <li>Financial irresponsibility (mummies)</li>
+                    <li>Failed treasure hunt (Salem)</li>
+                    <li>Catastrophic apostasy (pirates)</li>
+                </ul>
+
+                <p>Was actually:</p>
+                <ul>
+                    <li>Divine provision through physical catalysts</li>
+                    <li>Priority realignment for eternal purposes</li>
+                    <li>Refining process to prepare the worthy</li>
+                </ul>
+
+                <p><strong>The twist:</strong> Your trials aren't random either. God is weaving your mummies, Salems, and pirates into a pattern you can't see yet.</p>
+
+                <p><strong>Your 1842 is coming.</strong></p>
+
+
+
+                <h3>The Moral of Our Halloween Tale</h3>
+                <p><strong>HEAVENLY TREASURES SURVIVE EARTHLY TERRORS.</strong></p>
+
+                <p><strong>The papyri survived:</strong></p>
+                <ul>
+                    <li>Egyptian tombs (2,000+ years)</li>
+                    <li>Ocean crossings ("environmentally obnoxious")</li>
+                    <li>American tour (extreme humidity in Kirtland)</li>
+                    <li>Apostates' "sworn destruction" (hidden by faithful members)</li>
+                    <li>Financial crisis (became museum income for Smith family)</li>
+                    <li>Multiple relocations (Kirtland → Missouri → Illinois)</li>
+                </ul>
+
+                <p><strong>Because their purpose was appointed before their journey began.</strong></p>
+
+                <p><strong>Salem's dark history</strong> (witch trials, innocent blood, religious persecution) <strong>couldn't stop gospel redemption.</strong> Light penetrated darkness. Souls were saved where fear had reigned. The city's worst chapter didn't prevent its eventual conversion.</p>
+
+                <p><strong>Kirtland apostasy</strong> (weapons in temple, lawsuit attempts, violent mutiny) <strong>couldn't touch what mattered.</strong> They seized buildings; God kept the authority in Joseph's hands. They threatened papyri; God preserved them. They abandoned covenants; God honored those who kept them.</p>
+
+                <div class="principle-box">
+                    <p><strong>The pattern for your life:</strong></p>
+                    <ul>
+                        <li><strong>FINANCIAL COLLAPSE CAN'T BANKRUPT ETERNAL INHERITANCE.</strong></li>
+                        <li><strong>PERSECUTION CAN'T STEAL COVENANT BLESSINGS.</strong></li>
+                        <li><strong>APOSTASY CAN'T REVOKE DIVINE AUTHORITY.</strong></li>
+                        <li><strong>DEATH CAN'T END FAITHFUL TESTIMONY.</strong></li>
+                        <li><strong>TIME CAN'T DIMINISH SEALED ORDINANCES.</strong></li>
+                        <li><strong>PIRATES CAN'T COMMANDEER WHAT GOD HAS GIVEN.</strong></li>
+                    </ul>
+
+
+                    <p><strong>What God has sealed, no man can break—unless you surrender it.</strong></p>
+                </div>
+
+                <p>David W. Patten's message still echoes: "Whatever you do, or wherever you go, <strong>do not deny the faith.</strong>"</p>
+
+                <p>Not when the bank fails. Not when leaders disappoint. Not when darkness seems to win. Not when death approaches.</p>
+
+                <p><strong>Because heavenly treasures survive earthly terrors.</strong></p>
+
+                <p><strong>Always have. Always will.</strong></p>
+
+
+                <h3>Your Halloween Choice: Trick or Treat?</h3>
+                <p>This October, you're studying D&C 111-114 during Halloween season.</p>
+
+                <p><strong>You can treat it as a TRICK:</strong></p>
+                <ul>
+                    <li>Random historical tangents</li>
+                    <li>Confusing mummy purchases</li>
+                    <li>Failed treasure hunts</li>
+                    <li>Depressing apostasy stories</li>
+                    <li>Irrelevant to modern life</li>
+                </ul>
+
+                <p><strong>Or you can receive it as a TREAT:</strong></p>
+                <ul>
+                    <li>Divine patterns revealing God's hand</li>
+                    <li>Physical catalysts unlocking spiritual treasures</li>
+                    <li>Redirected priorities bearing eternal fruit</li>
+                    <li>Refining trials preparing you for glory</li>
+                    <li><strong>The very lessons you need right now</strong></li>
+                </ul>
+
+
+                <p><strong>The choice determines whether you:</strong></p>
+                <ul>
+                    <li>Recognize the treasures you already possess (<strong>MUMMY LESSON</strong>)</li>
+                    <li>Trust God to redeem your darkest chapters (<strong>SALEM LESSON</strong>)</li>
+                    <li>Guard what truly can't be stolen (<strong>PIRATE LESSON</strong>)</li>
+                    <li>Mount your horse when called to serve (<strong>PATTEN LESSON</strong>)</li>
+                    <li>Wait faithfully for your convergence (<strong>1842 LESSON</strong>)</li>
+                </ul>
+
+                <div class="action-box">
+                    <p><strong>This week, as you study:</strong></p>
+                    <ul>
+                        <li>Look for <strong>YOUR mummies</strong> (treasures already in your possession that you're overlooking)</li>
+                        <li>Identify <strong>YOUR Salem</strong> (dark places needing gospel light, promises waiting for "due time")</li>
+                        <li>Recognize <strong>YOUR pirates</strong> (external threats that can't touch internal treasures)</li>
+                        <li>Answer <strong>YOUR call</strong> (will you mount your horse or calculate risk?)</li>
+                        <li>Trust <strong>YOUR convergence</strong> (God is weaving trials into purpose you can't see yet)</li>
+                    </ul>
+                </div>
+
+
+                <h3>The Invitation</h3>
+                <p>Joseph Smith bought mummies he couldn't afford.</p>
+                <p><strong>You have temple recommends you may not be using.</strong></p>
+
+                <p>Joseph sought treasure in the wrong place.</p>
+                <p><strong>You might be pursuing treasures that don't matter while ignoring those that do.</strong></p>
+
+                <p>Joseph faced pirates trying to steal what couldn't be taken.</p>
+                <p><strong>You face challenges trying to steal what you alone can surrender.</strong></p>
+
+                <p>David W. Patten mounted his horse when called.</p>
+                <p><strong>What call to serve are you avoiding?</strong></p>
+
+                <p>Brigham Young made it happen when others just talked about it.</p>
+                <p><strong>What practical service can you offer that enables others' spiritual work?</strong></p>
+
+
+
+                <h3>This October, This Week, Right Now</h3>
+                <p><strong>The best Halloween story isn't fiction.</strong></p>
+
+                <p><strong>It's your story—the one you're living right now.</strong></p>
+
+                <p>God is orchestrating:</p>
+                <ul>
+                    <li>Your foolish investments into divine provision</li>
+                    <li>Your misdirected treasure hunts into eternal redirections</li>
+                    <li>Your pirate attacks into proofs of what matters</li>
+                    <li>Your separate trials into one convergent pattern</li>
+                </ul>
+
+                <p><strong>You just can't see your 1842 yet.</strong></p>
+
+                <p><strong>But it's coming.</strong></p>
+
+                <div class="principle-box">
+                    <p><strong>So this October:</strong></p>
+                    <ul>
+                        <li><strong>Unwrap the mummy</strong> (recognize treasures already given)</li>
+                        <li><strong>Redeem your Salem</strong> (trust gospel light in dark places)</li>
+                        <li><strong>Defy the pirates</strong> (guard what can't be stolen)</li>
+                        <li><strong>Mount your horse</strong> (serve when called, whatever the cost)</li>
+                        <li><strong>Wait for convergence</strong> (trust God's timing and pattern)</li>
+                    </ul>
+                    <p><strong>And whatever you do, wherever you go:</strong></p>
+                    <p style="text-align: center; font-size: 1.3em;"><strong>Do not deny the faith.</strong></p>
+                </div>
+
+                <p>Because the best Halloween treats aren't candy.</p>
+
+                <p><strong>They're covenants, keys, and eternal treasures</strong> that survive every terror the world can throw at them.</p>
+
+                <p style="text-align: center; margin-top: 30px; font-size: 1.2em;"><strong>Happy Halloween. Happy studying. Happy convergence.</strong></p>
+
+
+                <p>Your mummies are being preserved. Your Salem is waiting for redemption. Your pirates are proving what matters.</p>
+
+                <p><strong>And your 1842?</strong></p>
+
+                <p><strong>It's already being orchestrated.</strong></p>
+
+                <p>Trust the pattern. Serve instead of seizing. Guard what matters.</p>
+
+                <p><strong>The best Halloween story is the one where you stay faithful long enough to see how it all comes together.</strong></p>
+            </div>
+        </div>
+
+        </div><!-- Close activities-section -->
+
+    </div><!-- Close container -->
+
+    <script>
+        // Main accordion functionality
+        const accordions = document.querySelectorAll('.accordion');
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                panel.classList.toggle('active');
+            });
+        });
+
+        // Sub-accordion functionality
+        const subAccordions = document.querySelectorAll('.sub-accordion');
+        subAccordions.forEach(subAccordion => {
+            subAccordion.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const subPanel = this.nextElementSibling;
+                subPanel.classList.toggle('active');
+            });
+        });
+
+
+        // Expand all functionality
+        function expandAll() {
+            accordions.forEach(accordion => {
+                accordion.classList.add('active');
+                accordion.nextElementSibling.classList.add('active');
+            });
+            subAccordions.forEach(subAccordion => {
+                subAccordion.classList.add('active');
+                subAccordion.nextElementSibling.classList.add('active');
+            });
+        }
+
+        // Collapse all functionality
+        function collapseAll() {
+            accordions.forEach(accordion => {
+                accordion.classList.remove('active');
+                accordion.nextElementSibling.classList.remove('active');
+            });
+            subAccordions.forEach(subAccordion => {
+                subAccordion.classList.remove('active');
+                subAccordion.nextElementSibling.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
