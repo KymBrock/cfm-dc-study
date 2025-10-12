@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 117 Complete Study Guide - Forsaking Worldly Things</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px 15px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 5px;
+            margin: 15px 0 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        .sub-panel {
+            background-color: #fafafa;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+            padding: 20px;
+        }
+
+        .sub-panel-content h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+        }
+
+        .sub-panel-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .panel-content h2 {
+            color: #7c9885;
+            margin: 30px 0 20px 0;
+            font-size: 1.8em;
+            font-weight: 400;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        .panel-content h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+
+        h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .scripture-verse {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #7c9885;
+        }
+
+        .word-study-box {
+            background-color: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .word-study-box h4 {
+            color: #7c9885;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header-section {
+                padding: 20px;
+            }
+
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .panel-content {
+                padding: 15px;
+            }
+
+            .expand-button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="../../index.html" class="nav-btn">⌂ Home</a>
+            <a href="../DC_116/HTML/dc116_complete.html" class="nav-btn">◄ Previous: D&C 116</a>
+            <a href="../DC_118/HTML/dc118_complete.html" class="nav-btn">Next: D&C 118 ►</a>
+        </div>
+        <div class="nav-links">
+            <a href="../DC_115/HTML/dc115_complete.html" class="nav-btn">D&C 115</a>
+            <a href="../DC_116/HTML/dc116_complete.html" class="nav-btn">D&C 116</a>
+            <a href="dc117_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 117</a>
+            <a href="../DC_118/HTML/dc118_complete.html" class="nav-btn">D&C 118</a>
+            <a href="../DC_119/HTML/dc119_complete.html" class="nav-btn">D&C 119</a>
+            <a href="../DC_120/HTML/dc120_complete.html" class="nav-btn">D&C 120</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Doctrine & Covenants 117</h1>
+            <div class="subtitle">Forsaking Worldly Things and Coming to Zion</div>
+            <div class="date-location">July 8, 1838 • Far West, Missouri</div>
+            <div class="scripture-highlight">
+                "What is property unto me? saith the Lord." — D&C 117:4
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+
+        <!-- Section 1: Section Overview -->
+        <button class="accordion-section" onclick="toggleSection(this)">1. SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Basic Information</h2>
+                <p><strong>Date of Revelation:</strong> July 8, 1838</p>
+                <p><strong>Location:</strong> Far West, Missouri</p>
+                <p><strong>Recipients:</strong> William Marks, Newel K. Whitney, and Oliver Granger (with general principles for all Saints)</p>
+                <p><strong>Context:</strong> Calling leaders still in Kirtland to leave temporal concerns and join Saints in Missouri</p>
+                <p><strong>Section Summary:</strong> In this pointed revelation, the Lord addresses three men who remain in Kirtland, Ohio, settling business affairs while the rest of the Saints have gathered to Missouri. The Lord challenges William Marks and Newel K. Whitney to repent of covetousness, asking the piercing question "What is property unto me?" He reminds them that He controls all creation and can make "solitary places to bud and blossom." The revelation commends Oliver Granger's faithful service and promises his name will be remembered forever. D&C 117 confronts the tension between temporal security and spiritual calling, teaching that God values sacrifice more than increase and that His servants must forsake "littleness of soul" to inherit eternal blessings.</p>
+
+                <h2>Key Principles</h2>
+                <p><strong>Primary Doctrinal Principle:</strong> God owns all things—"the fowls of heaven, the fish of the sea, the beasts of the mountains"—and therefore His servants should not covet temporal possessions, for "what is property unto me?" saith the Lord.</p>
+                <p><strong>Secondary Principle:</strong> The Lord values sacrifice and faithful service more than material increase; Oliver Granger's "sacrifice shall be more sacred unto me than his increase," demonstrating that how we serve matters more than visible results.</p>
+                <p><strong>Application Principle:</strong> When faced with choosing between temporal security and spiritual calling, disciples must forsake "littleness of soul," trust God's ownership of all resources, and obey divine commands with urgency, knowing that delayed obedience often becomes disobedience.</p>
+
+                <h2>Purpose of the Revelation</h2>
+                <h3>Short Term</h3>
+                <ul>
+                    <li>Command William Marks and Newel K. Whitney to leave Kirtland immediately, before winter</li>
+                    <li>Rebuke their covetous attachment to temporal things</li>
+                    <li>Clarify that God owns all property and can provide abundantly</li>
+                    <li>Provide specific assignments: Marks to preside in Far West, Whitney to be a bishop</li>
+                    <li>Commend Oliver Granger's faithful service despite limited material success</li>
+                    <li>Assure Granger his sacrifice would be remembered eternally</li>
+                </ul>
+
+                <h3>Long Term</h3>
+                <ul>
+                    <li>Establish doctrinal principle that God owns all things and therefore His servants shouldn't covet</li>
+                    <li>Teach that sacrifice pleases God more than material increase</li>
+                    <li>Create pattern for choosing spiritual calling over temporal security</li>
+                    <li>Demonstrate God's awareness of individual faithfulness even when results seem small</li>
+                    <li>Provide scriptural basis for valuing faithfulness over visible success</li>
+                </ul>
+
+                <h2>Key Doctrines</h2>
+                <ul>
+                    <li>God owns all creation—fowls, fish, beasts, the earth itself—and therefore can provide for His servants anywhere (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.6?lang=eng">verse 6</a>)</li>
+                    <li>God values sacrifice more than material increase; faithful service matters more than visible results (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.13?lang=eng">verse 13</a>)</li>
+                    <li>Faithful servants' names will be held in sacred remembrance "from generation to generation, forever and ever" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.12?lang=eng">verse 12</a>)</li>
+                    <li>"Olaha Shinehah" is identified as another name for the land where Adam dwelt (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.8?lang=eng">verse 8</a>)</li>
+                    <li>True discipleship means being a servant "not in name but in deed" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.11?lang=eng">verse 11</a>)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 2: Historical Context -->
+        <button class="accordion-section" onclick="toggleSection(this)">2. HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">                <h2>The Kirtland Situation (July 1838)</h2>
+                
+                <h3>Kirtland's Decline After the Exodus</h3>
+                <p>By July 1838, Kirtland, Ohio, was a shadow of its former self. At its peak (1836-1837), Kirtland housed 3,000-4,000 Saints. By summer 1838, only 100-200 members remained. The Kirtland Temple, where <a href="https://www.blueletterbible.org/kjv/mat/17/1/">Christ</a>, <a href="https://www.blueletterbible.org/kjv/mal/3/1/">Moses</a>, <a href="https://www.blueletterbible.org/kjv/luk/1/17/">Elias</a>, and <a href="https://www.blueletterbible.org/kjv/mal/4/5/">Elijah</a> had appeared (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng">D&C 110</a>), was now controlled by apostates.</p>
+
+                <p>The collapse of the Kirtland Safety Society (1837) and the continuing Panic of 1837 economic depression left Kirtland's economy in ruins. Properties worth thousands in 1836 could barely be sold for pennies on the dollar. Lawsuits proliferated against former Church leaders, and creditors sought to seize any Mormon-owned property.</p>
+
+                <h3>Why Were Leaders Still in Kirtland?</h3>
+                
+                <h4>William Marks' Situation</h4>
+                <p>William Marks served as president of the Kirtland Stake—essentially the senior local Church leader after Joseph Smith's departure. His responsibilities included managing remaining faithful members, attempting to resolve property disputes, and organizing assistance for Saints still preparing to leave. However, Marks owned substantial property in Kirtland, and leaving meant abandoning assets or selling at devastating losses. The revelation would specifically challenge him about "covetousness"—suggesting he was prioritizing property preservation over obedience to gathering.</p>
+
+                <h4>Newel K. Whitney's Situation</h4>
+                <p>Newel K. Whitney was one of the Church's most prominent leaders and successful businessmen. As Bishop in Kirtland since 1831 and member of the First Presidency's inner circle, Whitney owned "N. K. Whitney & Co.," Kirtland's largest general mercantile store. His business had supplied Church members on credit, leaving him with substantial accounts receivable. Walking away meant financial ruin. The revelation specifically charges Whitney with covetousness, suggesting he was delaying obedience while attempting to salvage his financial position.</p>
+
+                <h4>Oliver Granger's Different Story</h4>
+                <p>Unlike Marks and Whitney, Oliver Granger receives only commendation in the revelation. Granger had remained in Kirtland not from covetousness but to serve the Church's interests—acting as Joseph Smith's legal agent, attempting to settle Church debts, and protecting Church interests in a hostile legal environment. The revelation praises his service: "his sacrifice shall be more sacred unto me than his increase" (v. 13)—contrasting his faithful sacrifice with Marks' and Whitney's reluctance. Granger suffered from poor health, and his work in Kirtland's harsh climate would contribute to his early death in 1841 at age 48.</p>
+
+                <h2>The Missouri Context (July 8, 1838)</h2>
+                
+                <h3>Far West's Rapid Growth</h3>
+                <p>While Kirtland declined, Far West, Missouri, flourished as the new Church headquarters. The city was laid out in 1836-1837 and grew rapidly as Saints relocated from Kirtland and other areas. By July 1838, Far West housed approximately 5,000 Saints—far exceeding Kirtland's peak population. Joseph Smith directed all Church operations from Far West, new revelations came there (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115?lang=eng">D&C 115</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116?lang=eng">116</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117?lang=eng">117</a>), and temple construction was commanded there.</p>
+
+                <h3>Adam-ondi-Ahman's Recent Identification</h3>
+                <p>Just two months before D&C 117 (May 1838), Joseph Smith received <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116?lang=eng">D&C 116</a> identifying Adam-ondi-Ahman. Verse 8 of D&C 117 references "the mountains of Adam-ondi-Ahman" and "the plains of Olaha Shinehah, or the land where Adam dwelt." This sacred geography was being revealed and settled. The Lord contrasted this prophetically significant land with Kirtland's dwindling properties—why covet "that which is but the drop" when vast sacred lands awaited?</p>
+
+                <h3>The Urgency: "Before Winter"</h3>
+                <p>The Lord commanded Marks and Whitney to leave "before I, the Lord, send again the snows upon the earth" (verse 1). This wasn't casual counsel but urgent command. Winter travel in 1838 was dangerous, sometimes impossible. The window for safe departure was closing. Delayed obedience would mean months of additional separation from the Saints and potential winter hardship.</p>
+
+                <h2>Historical Significance</h2>
+                
+                <p><strong>The Kirtland-to-Missouri Transition:</strong> D&C 117 represents the final prophetic word on Kirtland. The Lord was closing the Kirtland chapter of Church history and fully establishing Missouri as Zion. Those who refused to make this transition—whether from covetousness, fear, or any other reason—were refusing to participate in the Lord's work going forward.</p>
+
+                <p><strong>The Test of Obedience:</strong> This revelation tested whether leaders would choose temporal security or spiritual calling. Marks and Whitney faced a clear choice: preserve property or preserve covenant relationship. The Lord's commands removed any middle ground—they must "settle up their business speedily" and leave, trusting divine provision rather than human wisdom.</p>
+
+                <p><strong>Eternal Principles Established:</strong> The revelation established principles extending far beyond 1838: God owns everything, sacrifice matters more than success, delayed obedience equals disobedience, and faithful servants will be remembered eternally even when their work produces little visible "increase."</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Verse-by-Verse Study -->
+        <button class="accordion-section" onclick="toggleSection(this)">3. VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+
+                <!-- Verses 1-3 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSES 1-3: The Urgent Command to Leave Kirtland</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.1?lang=eng">D&C 117:1</a></strong> — "Verily thus saith the Lord unto my servant William Marks, and also unto my servant Newel K. Whitney, let them settle up their business speedily and journey from the land of Kirtland, before I, the Lord, send again the snows upon the earth."
+                        </div>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.2?lang=eng">D&C 117:2</a></strong> — "Let them awake, and arise, and come forth, and not tarry, for I, the Lord, command it."
+                        </div>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.3?lang=eng">D&C 117:3</a></strong> — "Therefore, if they tarry it shall not be well with them."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>These opening verses establish divine urgency through escalating commands. The Lord addresses William Marks (Kirtland stake president) and Newel K. Whitney (prominent bishop and merchant) with a direct, non-negotiable command: leave Kirtland immediately and join the gathering in Missouri. The timing is specific—"before I, the Lord, send again the snows upon the earth"—creating a deadline of approximately four months.</p>
+
+                        <p>The progression of imperatives demonstrates increasing urgency: "settle up...speedily" (v. 1) → "awake, and arise, and come forth, and not tarry" (v. 2) → "if they tarry it shall not be well with them" (v. 3). The phrase "awake, and arise, and come forth" echoes prophetic calls throughout scripture where the Lord rouses His servants from spiritual slumber. The warning "it shall not be well with them" indicates both temporal and spiritual consequences.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Settle up their business speedily"</strong> — The phrase "settle up" meant concluding financial affairs, paying debts where possible, and making arrangements for what couldn't be immediately resolved. "Speedily" modified the normal business practice of the era, which would take months or years. The Lord commanded quick conclusion rather than perfect resolution—suggesting that some financial loss was acceptable to achieve obedience.</p>
+
+                        <p><strong>"Before I, the Lord, send again the snows upon the earth"</strong> — Winter travel from Ohio to Missouri (approximately 900 miles) was extremely dangerous in the 1830s. Poor roads became impassable, river crossings froze or flooded, and exposure killed travelers. The Lord's "before winter" deadline was both urgent command and merciful protection.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/gen/19/15/">Genesis 19:15-17</a> — Angels urgently command Lot to flee Sodom: "Arise, take thy wife...Escape for thy life; look not behind thee...lest thou be consumed." Both involve urgent divine command to leave a doomed location before a deadline, leaving property and possessions behind.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/luk/9/59/">Luke 9:59-62</a> — Jesus rejects excuses for delayed discipleship: "Let the dead bury their dead: but go thou and preach the kingdom of God." Both passages refuse to accept reasonable-sounding excuses as justification for delayed obedience.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/hag/1/2/">Haggai 1:2-4</a> — The Lord rebukes those who delay His work while attending to personal comfort: "Is it time for you...to dwell in your cieled houses, and this house lie waste?" Ancient Israel delayed temple building while improving personal homes; Marks and Whitney delayed joining Missouri gathering while managing Kirtland business.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>When have I delayed obedience to spiritual promptings while attending to "reasonable" temporal concerns? The Lord's command to leave "speedily" challenges the natural tendency to wait for perfect timing.</li>
+                            <li>What "business" in my life needs to be "settled speedily" to enable fuller obedience to God's will? For modern disciples, "business" might be career ambitions, financial plans, social commitments, or any temporal concern that delays spiritual obedience.</li>
+                            <li>How do I distinguish between wise planning and "tarrying" in procrastination or fear? The Lord's "speedily" and "not tarry" suggest that when divine direction is clear, lengthy deliberation becomes disobedience.</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Verses 4-5 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSES 4-5: Repent of Covetousness and Release Property</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.4?lang=eng">D&C 117:4</a></strong> — "Let them repent of all their sins, and of all their covetous desires, before me, saith the Lord; for what is property unto me? saith the Lord."
+                        </div>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.5?lang=eng">D&C 117:5</a></strong> — "Let the properties of Kirtland be turned out for debts, saith the Lord. Let them go, saith the Lord, and whatsoever remaineth, let it remain in your hands, saith the Lord."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>These verses diagnose the spiritual condition preventing Marks' and Whitney's obedience: covetousness. The Lord doesn't merely command action (leave Kirtland) but addresses the heart condition that produces delayed obedience. Covetousness isn't simply wanting what belongs to others—it's inordinate attachment to possessions, prioritizing temporal security over spiritual obedience.</p>
+
+                        <p>The rhetorical question "what is property unto me?" is devastating in its simplicity. The Lord who owns all creation is utterly indifferent to human property claims. This question reframes the entire situation: Marks and Whitney were agonizing over losing property that was never theirs in any ultimate sense. Verse 5 provides practical instruction: use property to satisfy legitimate debts where possible, then "let them go"—both permission and command to release emotional attachment.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Covetous desires"</strong> — The Greek word underlying "covet" in biblical texts is <em>pleonexia</em> (πλεονεξία), meaning "a greedy desire to have more." It appears in the Ten Commandments (<a href="https://www.blueletterbible.org/kjv/exo/20/17/">Exodus 20:17</a>) and is consistently condemned as idolatry (<a href="https://www.blueletterbible.org/kjv/col/3/5/">Colossians 3:5</a>). The Lord's diagnosis wasn't accusing them of stealing but identifying their inordinate attachment to property as spiritual sickness requiring repentance.</p>
+
+                        <p><strong>"Turned out for debts"</strong> — In 19th-century terminology, "turned out" meant liquidated or sold to pay debts. The Lord authorized selling Kirtland properties to satisfy debts, even at significant loss. This was merciful permission—they needn't preserve property value at all costs.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/exo/20/17/">Exodus 20:17</a> — The Tenth Commandment: "Thou shalt not covet thy neighbour's house...nor any thing that is thy neighbour's." When desire for possessions overrides obedience to God, it becomes covetousness.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/luk/12/15/">Luke 12:15</a> — Jesus warns: "Take heed, and beware of covetousness: for a man's life consisteth not in the abundance of the things which he possesseth." Marks and Whitney were acting like the rich fool who built bigger barns.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/psa/50/10/">Psalm 50:10-12</a> — "For every beast of the forest is mine, and the cattle upon a thousand hills...the world is mine, and the fulness thereof." This provides theological foundation for "what is property unto me?"</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>What possessions or financial concerns am I "covetously" attached to in ways that limit my spiritual obedience? Even devoted disciples can develop inordinate attachments.</li>
+                            <li>How does believing "what is property unto me? saith the Lord" change my relationship to money, possessions, and financial security? If we truly internalized divine indifference to property, how would our decisions change?</li>
+                            <li>When have I needed to "let go" of perfect resolution of temporal affairs to obey spiritual promptings? Sometimes obedience requires accepting incomplete resolution, financial loss, or unfinished business.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Verses 6-7 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSES 6-7: Divine Ownership and Providence</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.6?lang=eng">D&C 117:6</a></strong> — "For have I not the fowls of heaven, and also the fish of the sea, and the beasts of the mountains? Have I not made the earth? Do I not hold the destinies of all the armies of the nations of the earth?"
+                        </div>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.7?lang=eng">D&C 117:7</a></strong> — "Therefore, will I not make solitary places to bud and to blossom, and to bring forth in abundance? saith the Lord."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>These verses expand the theology of divine ownership. The Lord moves from rhetorical question about property to comprehensive assertion of ownership over all creation. The progression encompasses sky creatures ("fowls of heaven"), sea creatures ("fish of the sea"), land creatures ("beasts of the mountains"), the earth itself, and finally human affairs ("destinies of all the armies").</p>
+
+                        <p>The pattern echoes Genesis 1's creation account, reminding readers that the Creator owns His creation. Having established ownership, verse 7 presents the logical conclusion: "will I not make solitary places to bud and to blossom?" The God who owns and created everything can certainly provide for His servants anywhere—including Missouri's "solitary places" compared to established Kirtland.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Fowls...fish...beasts"</strong> — This threefold categorization represents totality of animal creation. By invoking Genesis 1 categorization (sky, sea, land), the Lord reminds readers of creation week when God spoke and all things came into being.</p>
+
+                        <p><strong>"Solitary places"</strong> — The Hebrew concept of wilderness appears in prophetic literature as locations of both testing and divine provision. Israel wandered 40 years in wilderness—both judgment and preparation. The Lord was calling Marks and Whitney from civilization (Kirtland) to wilderness (Missouri frontier), promising to make that wilderness productive.</p>
+
+                        <p><strong>"Bud and blossom"</strong> — This agricultural imagery echoes <a href="https://www.blueletterbible.org/kjv/isa/35/1/">Isaiah 35:1-2</a>: "The wilderness and the solitary place shall be glad...the desert shall rejoice, and blossom as the rose." Isaiah's restoration prophecy applied to Missouri's settling.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/mat/6/25/">Matthew 6:25-34</a> — "Behold the fowls of the air...your heavenly Father feedeth them. Are ye not much better than they?" Both use bird imagery to teach divine provision and challenge disciples to prioritize kingdom over material security.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/isa/35/1/">Isaiah 35:1-2</a> — "The wilderness and the solitary place shall be glad...and blossom as the rose." The Lord applies Isaiah's restoration prophecy to Missouri frontier.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/psa/50/10/">Psalm 50:10-12</a> — "Every beast of the forest is mine...the world is mine." Forms direct precedent for D&C 117:6's ownership claims.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>When have I doubted God's ability to provide in "solitary places" or difficult circumstances? Marks and Whitney doubted whether Missouri could support them as well as Kirtland.</li>
+                            <li>How does believing God "holds the destinies of all the armies" change my relationship to political, economic, or social powers? If military and political power are under divine control, trusting those systems more than God is foolish.</li>
+                            <li>What "solitary places" in my life is God asking me to trust Him to make "bud and blossom"? These might be literal moves or metaphorical "wilderness" experiences—difficult callings, challenging relationships, career changes, health trials, financial setbacks.</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Verse 8 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 8: Sacred Geography and Misplaced Priorities</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.8?lang=eng">D&C 117:8</a></strong> — "Is there not room enough on the mountains of Adam-ondi-Ahman, and on the plains of Olaha Shinehah, or the land where Adam dwelt, that you should covet that which is but the drop, and neglect the more weighty matters?"
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>This verse represents one of the most theologically rich statements in D&C 117, introducing revealed names for sacred geography while challenging priorities. The Lord contrasts Kirtland property ("the drop") with Missouri's sacred landscape ("more weighty matters"), arguing that clinging to insignificant Kirtland possessions while neglecting participation in gathering to Adam's ancient homeland represents catastrophically inverted priorities.</p>
+
+                        <p>"Mountains of Adam-ondi-Ahman" references the May 1838 revelation (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116?lang=eng">D&C 116</a>) identifying the Grand River valley where Adam gathered his posterity. "Plains of Olaha Shinehah" introduces new revealed terminology—the land where Adam dwelt. The contrast between "the drop" and "more weighty matters" echoes Jesus's rebuke of Pharisees who tithed herbs while neglecting "weightier matters of the law" (<a href="https://www.blueletterbible.org/kjv/mat/23/23/">Matthew 23:23</a>).</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Adam-ondi-Ahman"</strong> — Revealed in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53</a> (1835) and geographically located in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116?lang=eng">D&C 116</a> (May 1838). Joseph Smith taught it meant "the place or land of God where Adam dwelt." This was the sacred site where Adam blessed his posterity and prophesied "unto the latest generation."</p>
+
+                        <p><strong>"Olaha Shinehah"</strong> — Appears only here in scripture. May mean "land of the sun" or simply be the proper name for the plains near Adam-ondi-Ahman. The immediate gloss "the land where Adam dwelt" suggests this was the broader region where Adam lived.</p>
+
+                        <p><strong>"The drop"</strong> — Suggests insignificance. In biblical usage, a "drop" from a bucket is nothing compared to the bucket's contents (<a href="https://www.blueletterbible.org/kjv/isa/40/15/">Isaiah 40:15</a>). Kirtland property was utterly insignificant compared to the blessings awaiting in Missouri.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53-57</a> — Adam's gathering at Adam-ondi-Ahman: "Three years previous to the death of Adam, he called Seth, Enos, Cainan...and there bestowed upon them his last blessing." The Lord asked if there was "room enough" there—land where humanity's father had prophesied about the "latest generation."</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/mat/23/23/">Matthew 23:23-24</a> — Jesus rebukes misplaced priorities: "Ye pay tithe of mint and anise and cummin, and have omitted the weightier matters of the law." Pharisees scrupulously tithed herbs (trivial) while neglecting justice (weighty). Marks and Whitney managed Kirtland property (trivial) while neglecting gathering (weighty).</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a> — Prophecy of the Ancient of Days (Adam) convening council before Christ's coming. LDS theology identifies this as describing a future council at Adam-ondi-Ahman where Adam will convene all who have held priesthood keys.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>What "drops" am I clinging to while neglecting "weightier matters" in my spiritual life? What consumes attention and worry that is actually insignificant compared to relationships, spiritual growth, and preparing for Christ's return?</li>
+                            <li>How does knowing the sacred history of places change my relationship to geography and gathering? Understanding that temples, Church history sites, or places where God has worked in our personal lives are sacred helps us recognize divine action.</li>
+                            <li>When have I used "reasonable" concerns to avoid obedience to "weightier matters"? Marks and Whitney had genuinely reasonable concerns, but these became rationalizations for avoiding weightier spiritual obligations.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Verses 9-10 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSES 9-10: The Call and Promise</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.9?lang=eng">D&C 117:9</a></strong> — "Therefore, come up hither unto the land of my people, even Zion."
+                        </div>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.10?lang=eng">D&C 117:10</a></strong> — "Let my servant William, or, if he will not be obedient to my commandments, let him be removed from his place, and let my servant Newel K. Whitney be appointed and ordained unto the same power. Amen."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>After establishing divine ownership, rebuking covetousness, and contrasting trivial Kirtland property with sacred Missouri land, the Lord issues direct command: "come up hither unto the land of my people, even Zion." This identifies Missouri as Zion—the gathering place where the Lord's people dwell. The imperative "come up" suggests both geographical elevation and spiritual ascension.</p>
+
+                        <p>Verse 10 contains both promise and warning. William Marks is called to significant responsibility ("ordained unto the same power"), but with conditional language: "if he will not be obedient...let him be removed from his place." This demonstrates that callings depend on worthiness and obedience. The Lord will find someone else if Marks refuses. Newel K. Whitney is positioned as backup—he too receives calling, but Marks is given first opportunity.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Come up hither"</strong> — The phrase suggests both geographical movement (traveling to Missouri) and spiritual elevation. In biblical usage, "coming up" to Jerusalem or the temple implied spiritual ascension. The Lord presents Missouri gathering as ascending to Zion.</p>
+
+                        <p><strong>"Land of my people, even Zion"</strong> — Identifies Missouri as Zion. Since 1831, the Lord had designated Missouri as the land of Zion (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/57?lang=eng">D&C 57</a>). This reaffirms that identification and emphasizes that Zion is where "my people" gather—not scattered in Kirtland.</p>
+
+                        <p><strong>"If he will not be obedient"</strong> — Direct conditional language. The Lord doesn't guarantee Marks will obey. The calling is offered, but acceptance depends on Marks' choice. This reveals divine respect for agency even while commanding obedience—a paradox of freedom and obligation in discipleship.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/57?lang=eng">D&C 57</a> — Missouri designated as land of Zion (1831): "The land of Missouri...is the land which I have appointed and consecrated for the gathering of the saints." Seven years later, the Lord reaffirms this designation.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/psa/122/1/">Psalm 122:1-4</a> — "I was glad when they said unto me, Let us go into the house of the LORD...Jerusalem is builded as a city that is compact together: Whither the tribes go up." Ancient Israel's gathering to Jerusalem parallels Latter-day Saints' gathering to Missouri Zion.</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64.33?lang=eng">D&C 64:33-34</a> — "Let the Saints remember the Lord their God...I have commanded them to build...Zion must increase in beauty, and in holiness." Gathering builds Zion; scattered Saints cannot fulfill this mandate.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>When has the Lord called me to "come up hither" to a higher spiritual level, and how did I respond? The call to Zion wasn't just geographical but spiritual—ascending to higher consecration and community.</li>
+                            <li>How do I respond to conditional callings where obedience determines whether I retain the assignment? The Lord's "if he will not be obedient" warns that callings depend on worthiness.</li>
+                            <li>What does it mean for me to gather to "Zion" in my current circumstances? Physical gathering isn't always possible, but spiritual gathering—increased consecration, stronger covenant community participation—always is.</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Verses 11-12 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSES 11-12: Littleness of Soul and Oliver Granger</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.11?lang=eng">D&C 117:11</a></strong> — "Let them repent of all their sins, and of all their covetous desires, before me, saith the Lord; for what is property unto me? saith the Lord."
+                        </div>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.12?lang=eng">D&C 117:12</a></strong> — "Let my servant Oliver Granger stand in the office and appointment whereunto I have appointed him, and let him be in mine house from generation to generation, forever and ever."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>Verse 11 introduces the concept of "littleness of soul"—small thinking, limited faith, inability to envision God's expansive purposes. This "littleness" must be forsaken to receive blessings. Marks and Whitney were thinking small—obsessing over Kirtland property losses rather than trusting God's power to provide abundantly in Missouri. The command to be servants "not in name but in deed" challenges nominal discipleship—claiming to serve God while prioritizing temporal concerns.</p>
+
+                        <p>Verse 12 shifts to commendation of Oliver Granger. Unlike Marks and Whitney, Granger receives only praise. His name will be "had in sacred remembrance from generation to generation, forever and ever." This represents one of scripture's highest promises—eternal remembrance for faithful service. Granger's legacy demonstrates that God honors those who sacrifice without counting cost, who serve faithfully regardless of visible success.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Littleness of soul"</strong> — Suggests small-minded thinking, limited vision, inability to trust God's promises. Opposite of magnanimity (greatness of soul). In biblical thought, "soul" (Hebrew <em>nephesh</em>, Greek <em>psyche</em>) represents one's entire being—mind, will, emotions. "Littleness of soul" means the entirety of one's being is operating from fear, doubt, and limited perspective rather than faith, trust, and God's expansive vision.</p>
+
+                        <p><strong>"Not in name but in deed"</strong> — Distinguishes between nominal and actual service. Marks and Whitney were servants "in name"—they held positions, had responsibilities—but were they servants "in deed"? Their delay suggested actions didn't match professions. James teaches similarly: "faith without works is dead" (<a href="https://www.blueletterbible.org/kjv/jam/2/26/">James 2:26</a>).</p>
+
+                        <p><strong>"From generation to generation, forever and ever"</strong> — Hebraic repetition for emphasis. Granger's name wouldn't just be remembered for a time but eternally. This promise has been literally fulfilled—his name appears in scripture (D&C 117), ensuring perpetual remembrance.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/mat/25/21/">Matthew 25:21</a> — Parable of talents: "Well done, thou good and faithful servant: thou hast been faithful over a few things, I will make thee ruler over many things." Granger was faithful over "a few things" (seemingly small Kirtland tasks), earning eternal reward.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/1sam/16/7/">1 Samuel 16:7</a> — "The LORD seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart." Man saw Granger's limited material success; God saw his pure heart and sacrificial service.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/jam/2/14/">James 2:14-17</a> — "Faith without works is dead." Being servants "in deed" means faith demonstrated through action, not mere profession.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>Where do I exhibit "littleness of soul"—thinking too small about God's promises or power? In what areas do I need to expand my vision to match God's perspective?</li>
+                            <li>Am I a servant "in name" or "in deed"? Do my actions match my professions of discipleship? When have I claimed to serve God while prioritizing temporal concerns?</li>
+                            <li>How does the promise that Oliver Granger's name would be remembered "forever and ever" comfort me when my faithful service seems to produce little visible success? God judges hearts and sacrifice, not worldly measures of success.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Verses 13-14 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSES 13-14: Sacrifice More Than Increase</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.13?lang=eng">D&C 117:13</a></strong> — "And I will bless him with a multiplicity of blessings, in bringing souls unto me, inasmuch as his strength will permit. His sacrifice shall be more sacred unto me than his increase, saith the Lord."
+                        </div>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.14?lang=eng">D&C 117:14</a></strong> — "Therefore, let him contend earnestly for the redemption of the First Presidency of my Church, saith the Lord; and when he falls he shall rise again, for his sacrifice shall be more sacred unto me than his increase, saith the Lord. Amen."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>These verses contain one of scripture's most profound principles: God values sacrifice more than material increase. Granger's "sacrifice shall be more sacred unto me than his increase"—repeated twice for emphasis—establishes that how we serve matters more to God than visible results. In worldly terms, Granger's Kirtland mission produced little "increase"—properties sold at losses, debts remained partially unpaid, legal battles continued. But his sacrifice—faithful service regardless of outcomes—was "sacred" to the Lord.</p>
+
+                        <p>The Lord promises Granger "a multiplicity of blessings, in bringing souls unto me, inasmuch as his strength will permit." This acknowledges Granger's physical limitations while promising spiritual success proportionate to his capacity. The phrase "when he falls he shall rise again" prophesies both literal stumbling (from weakness) and spiritual resilience—Granger would face setbacks but ultimately succeed in his mission.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Sacrifice...more sacred than...increase"</strong> — "Sacrifice" refers to what Granger gave up—health, comfort, financial security, time with family. "Increase" refers to visible results—properties sold, debts paid, legal victories won. The Lord judges sacrifice (input) more significant than increase (output). This inverts worldly values that judge success by results regardless of cost.</p>
+
+                        <p><strong>"Inasmuch as his strength will permit"</strong> — Acknowledges Granger's poor health and physical limitations. The Lord doesn't demand what Granger cannot give, but promises blessings proportionate to his capacity. This demonstrates divine mercy—God knows our frames, remembers we are dust (<a href="https://www.blueletterbible.org/kjv/psa/103/14/">Psalm 103:14</a>).</p>
+
+                        <p><strong>"Contend earnestly for the redemption of the First Presidency"</strong> — "Contend earnestly" translates Greek <em>epagonizomai</em> (ἐπαγωνίζομαι), meaning "to struggle, fight intensely." Granger's mission was to defend Joseph Smith's reputation and financial interests in hostile Kirtland—a spiritual battle requiring intense effort.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/mar/12/41/">Mark 12:41-44</a> — Widow's mites: "And Jesus...said unto them, Verily I say unto you, That this poor widow hath cast more in, than all they which have cast into the treasury." Jesus values her sacrifice (giving from poverty) more than others' increase (giving from abundance). Same principle as D&C 117:13.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/1cor/3/6/">1 Corinthians 3:6-8</a> — "I have planted, Apollos watered; but God gave the increase...every man shall receive his own reward according to his own labour." Paul distinguishes between human labor (planting, watering) and divine increase (growth). God rewards labor (sacrifice), not just results (increase).</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/psa/103/14/">Psalm 103:14</a> — "For he knoweth our frame; he remembereth that we are dust." God's acknowledgment of Granger's strength limitations reflects divine mercy toward human weakness.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>When have I measured my service to God by visible "increase" rather than by the sacrifice I offered? How does this principle—that sacrifice matters more than increase—change how I evaluate my faithfulness?</li>
+                            <li>What does it mean that God promises blessings "inasmuch as [my] strength will permit"? How does this demonstrate divine mercy toward my limitations?</li>
+                            <li>In what areas of my life am I "contending earnestly" for God's purposes, even when visible success seems unlikely? How can Granger's example encourage me to continue faithful service regardless of outcomes?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Verses 15-16 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSES 15-16: Final Promise and Commission</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.15?lang=eng">D&C 117:15</a></strong> — "Therefore, let no man despise my servant Oliver Granger; but let the blessings of my people be on him forever and ever."
+                        </div>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117.16?lang=eng">D&C 117:16</a></strong> — "And again, verily I say unto you, my servant George Miller is without guile; he may be trusted because of the integrity of his heart; and for the love which he has to my testimony I, the Lord, love him."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>Verse 15 commands respect for Oliver Granger—"let no man despise" him. This suggests some may have criticized or looked down on Granger for his limited material success or humble circumstances. The Lord defends His servant, commanding the Saints to honor him with "blessings...forever and ever." This establishes a principle: God's servants deserve honor regardless of worldly measures of success.</p>
+
+                        <p>Verse 16 introduces George Miller, commending his integrity and love for God's testimony. "Without guile" means honest, sincere, free from deception—the same quality Jesus praised in Nathanael (<a href="https://www.blueletterbible.org/kjv/joh/1/47/">John 1:47</a>). Miller's trustworthiness stemmed from "integrity of his heart"—internal moral consistency. The Lord declares His love for Miller because of Miller's love for divine testimony.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Let no man despise"</strong> — Greek <em>kataphroneo</em> (καταφρονέω) means "to look down on, think little of, despise." The command prohibits contempt toward Granger based on worldly judgments of his success or status. God defends those the world undervalues.</p>
+
+                        <p><strong>"Without guile"</strong> — Greek <em>adolos</em> (ἄδολος) means "without deceit, guileless, sincere." Positive term indicating integrity. Jesus used this describing Nathanael: "an Israelite indeed, in whom is no guile" (<a href="https://www.blueletterbible.org/kjv/joh/1/47/">John 1:47</a>). Being "without guile" means operating from pure motives, free from manipulation or hidden agendas.</p>
+
+                        <p><strong>"Integrity of his heart"</strong> — "Integrity" from Latin <em>integer</em> (whole, complete). Integrity means internal consistency—one's private character matches public profession. Heart-level integrity is deeper than mere external honesty—it's moral coherence at the core of one's being.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/1tim/4/12/">1 Timothy 4:12</a> — "Let no man despise thy youth; but be thou an example of the believers." Paul commands Timothy not to let others look down on him. Similarly, the Lord commands Saints not to despise Granger.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/joh/1/47/">John 1:47</a> — Jesus on Nathanael: "Behold an Israelite indeed, in whom is no guile!" Same commendation given to George Miller—freedom from deception, operating from pure motives.</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/1chr/29/17/">1 Chronicles 29:17</a> — "I know also, my God, that thou triest the heart, and hast pleasure in uprightness." God tests hearts and delights in integrity—exactly what He praises in George Miller.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>When have I been tempted to "despise" or undervalue someone whose faithful service produces little visible success? How does the Lord's defense of Oliver Granger challenge worldly measures of worth?</li>
+                            <li>What does it mean to be "without guile"—completely honest, sincere, and free from deception? In what areas of my life do I operate with mixed motives or hidden agendas rather than pure integrity?</li>
+                            <li>How does the Lord's love for George Miller "because of the integrity of his heart" and "the love which he has to my testimony" instruct me about what God values most in His servants?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section 4: Word Studies -->
+        <button class="accordion-section" onclick="toggleSection(this)">4. WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <p><strong>Linguistic Analysis:</strong> This section provides in-depth study of key terms from D&C 117, examining Hebrew, Greek, Latin roots, etymology, and doctrinal significance.</p>
+
+                <div class="word-study-box">
+                    <h4>COVET / COVETOUSNESS</h4>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h2530/kjv/wlc/0-1/">Chamad</a> (חָמַד) - "To desire, delight in, take pleasure in, covet." Related to <em>chemda</em> (desirable thing). The root emphasizes intense desire or longing, which can be neutral or sinful depending on context. Appears in the Tenth Commandment (<a href="https://www.blueletterbible.org/kjv/exo/20/17/">Exodus 20:17</a>).</p>
+                    
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g4124/kjv/tr/0-1/">Pleonexia</a> (πλεονεξία) - "Greediness, avarice, insatiable desire to have more." Components: <em>pleon</em> (more) + <em>echo</em> (to have) = "having-more-ness." Paul calls covetousness "idolatry" (<a href="https://www.blueletterbible.org/kjv/col/3/5/">Colossians 3:5</a>).</p>
+                    
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/cupiditas">Cupiditas</a> - "Desire, longing, greed"; <a href="https://logeion.uchicago.edu/avaritia">Avaritia</a> - "Greed, avarice." Became one of the Seven Deadly Sins in medieval theology.</p>
+                    
+                    <p><strong>Etymology:</strong> From Latin <em><a href="https://www.etymonline.com/word/covet">cupere</a></em> (to desire) through Old French <em>coveitier</em> (to desire eagerly). Originally neutral "strong desire," acquired exclusively negative connotation by 1400s.</p>
+                    
+                    <p><strong>Webster 1828:</strong> "To desire inordinately; to desire that which it is unlawful to obtain or possess...applied to an inordinate desire of wealth or avarice."</p>
+                    
+                    <p><strong>Doctrinal Significance:</strong> The Lord diagnoses Marks and Whitney's delayed obedience as stemming from "covetous desires" (v. 4). Their attachment to Kirtland property prevented obedience—a textbook case of covetousness as idolatry (valuing property above God's will). The antidote: trusting God's ownership and providence (verses 6-7).</p>
+                </div>
+
+                <div class="word-study-box">
+                    <h4>SACRIFICE</h4>
+                    <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h2077/kjv/wlc/0-1/">Zebach</a> (זֶבַח) - "Sacrifice, offering, slaughtered animal." From <em>zabach</em> (to slaughter for sacrifice). Related terms: <em>korban</em> (offering, bringing near to God), <em>olah</em> (burnt offering, ascending to God).</p>
+                    
+                    <p><strong>Greek:</strong> <a href="https://www.blueletterbible.org/lexicon/g2378/kjv/tr/0-1/">Thusia</a> (θυσία) - "Sacrifice, offering, the act of offering." Paul teaches spiritual sacrifice: "Present your bodies a living sacrifice" (<a href="https://www.blueletterbible.org/kjv/rom/12/1/">Romans 12:1</a>).</p>
+                    
+                    <p><strong>Latin:</strong> <a href="https://logeion.uchicago.edu/sacrificium">Sacrificium</a> - "Sacrifice, offering." From <em>sacer</em> (sacred) + <em>facere</em> (to make) = "to make sacred, consecrate."</p>
+                    
+                    <p><strong>Etymology:</strong> From Latin <em><a href="https://www.etymonline.com/word/sacrifice">sacrificium</a></em> through Old French. Literally "making sacred"—transforming something ordinary into something holy through offering.</p>
+                    
+                    <p><strong>Webster 1828:</strong> "An offering made to God by killing and burning some animal upon an altar...anything consecrated and offered to God."</p>
+                    
+                    <p><strong>Doctrinal Significance:</strong> "His sacrifice shall be more sacred unto me than his increase" (v. 13, repeated in v. 14). Oliver Granger's sacrifice—faithful service regardless of outcomes—was "sacred" to the Lord, even though his Kirtland mission produced little material "increase." God values what we give up (sacrifice/input) more than visible results (increase/output). This inverts worldly values that judge success by results alone.</p>
+                </div>
+
+                <div class="word-study-box">
+                    <h4>LITTLENESS OF SOUL</h4>
+                    <p><strong>Concept:</strong> "Littleness of soul" (v. 11) suggests small-minded thinking, limited vision, inability to trust God's promises. Opposite of magnanimity (greatness of soul).</p>
+                    
+                    <p><strong>Hebrew Parallel:</strong> <a href="https://www.blueletterbible.org/lexicon/h5315/kjv/wlc/0-1/">Nephesh</a> (נֶפֶשׁ) - "Soul, self, life, person." Represents one's entire being—mind, will, emotions. "Littleness of nephesh" means the entirety of one's being operating from fear, doubt, and limited perspective.</p>
+                    
+                    <p><strong>Greek Parallel:</strong> <a href="https://www.blueletterbible.org/lexicon/g5590/kjv/tr/0-1/">Psyche</a> (ψυχή) - "Soul, life, self." Jesus taught about losing one's <em>psyche</em> to save it (<a href="https://www.blueletterbible.org/kjv/mat/16/25/">Matthew 16:25</a>).</p>
+                    
+                    <p><strong>Doctrinal Significance:</strong> Marks and Whitney were thinking small—obsessing over Kirtland property losses rather than trusting God's power to provide abundantly in Missouri. "Littleness" manifests as believing God's promises won't work for us, doubting His ability to provide, clinging to security over faith. The command to forsake "littleness of soul" challenges us to expand our vision to match God's perspective.</p>
+                </div>
+
+                <p><strong>Note:</strong> For complete word studies including Latin, etymology, and full doctrinal analysis of all key terms, see the full study guide markdown files.</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Teaching Applications -->
+        <button class="accordion-section" onclick="toggleSection(this)">5. TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Personal Study Applications</h2>
+                <ul>
+                    <li><strong>Examine covetousness:</strong> Ask yourself honestly, "What property/possessions/positions am I unwilling to surrender if God asked?" Identify attachments that might prevent obedience.</li>
+                    <li><strong>Evaluate delayed obedience:</strong> Are you postponing spiritual promptings for temporal reasons? Is "being responsible" actually masking fear or lack of faith?</li>
+                    <li><strong>Trust divine ownership:</strong> Practice affirming "The Lord owns everything I have; I'm merely a steward." How does this shift decision-making?</li>
+                    <li><strong>Value sacrifice over success:</strong> When faithful service produces modest visible results, remember God values your sacrifice more than worldly measures of increase.</li>
+                    <li><strong>Forsake "littleness of soul":</strong> Identify areas where you think too small about God's promises. Where do you need to expand faith?</li>
+                </ul>
+
+                <h2>Family Home Evening Applications</h2>
+                <ul>
+                    <li><strong>Teach divine ownership:</strong> Help children understand everything belongs to God—our homes, cars, money, even our bodies and talents. We're stewards, not owners.</li>
+                    <li><strong>Model sacrifice:</strong> Let children see you sacrificing for kingdom building—serving in callings despite inconvenience, paying tithing despite tight budgets, accepting assignments despite costs.</li>
+                    <li><strong>Discuss calling vs. career:</strong> With youth facing college/career decisions, study D&C 117 together. How do we balance temporal preparation with spiritual priorities?</li>
+                    <li><strong>Recognize faithful service:</strong> Praise family members whose Church service produces no visible "increase"—the compassionate service minister whose visits seem unappreciated, the Primary teacher whose class seems unruly. God sees their sacrifice.</li>
+                    <li><strong>Practice urgent obedience:</strong> When the Spirit prompts action ("apologize to your sibling," "share testimony with friend"), teach immediate response rather than "later."</li>
+                </ul>
+
+                <h2>Teaching in Church Settings</h2>
+                <ul>
+                    <li><strong>Sunday School:</strong> Use D&C 117 to discuss the tension between temporal security and spiritual calling. What does "What is property unto me?" mean for our financial decisions?</li>
+                    <li><strong>Relief Society/Priesthood:</strong> Honor "Oliver Grangers"—members whose faithful service produces little visible success. Help ward members see that God values sacrifice more than increase.</li>
+                    <li><strong>Youth Classes:</strong> Teach about "littleness of soul." What does it mean to think too small about God's promises? How can we expand our vision?</li>
+                    <li><strong>Seminary:</strong> Explore the principle that delayed obedience equals disobedience. When the Lord commands, what excuses do we make? What does "speedily" mean?</li>
+                </ul>
+
+                <h2>Questions for Reflection</h2>
+                <ol>
+                    <li>If God asked me to leave my current situation (home, job, location) to serve Him elsewhere, what would I struggle most to surrender? Why? Is that attachment righteous stewardship or covetousness?</li>
+                    <li>How does truly believing God owns and controls everything change how I approach financial decisions, career planning, and resource allocation?</li>
+                    <li>Can I identify a time when my faithful service produced little visible success? How does "his sacrifice shall be more sacred unto me than his increase" help me view that experience differently?</li>
+                    <li>Where do I exhibit "littleness of soul"—thinking too small about God's promises or power? In what areas do I need to expand my vision?</li>
+                    <li>When have I delayed obeying a spiritual prompting, rationalizing the delay as responsible planning? What was the outcome? How does "if they tarry it shall not be well with them" inform future responses?</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Section 6: Study Questions -->
+        <button class="accordion-section" onclick="toggleSection(this)">6. STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <p><em>These comprehensive questions are designed for deep scriptural study, personal reflection, and teaching applications. Use them individually or in groups to explore D&C 117's teachings about divine ownership, covetousness, and faithful service.</em></p>
+
+                <!-- Understanding the Text: Basic Comprehension -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Understanding the Text: Basic Comprehension (35 Questions)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <ol>
+                            <li>On what date was D&C 117 received?</li>
+                            <li>Where was Joseph Smith when this revelation was received?</li>
+                            <li>Who are the three men specifically named in this revelation?</li>
+                            <li>What were William Marks and Newel K. Whitney commanded to do?</li>
+                            <li>According to verse 1, what is the deadline for their departure?</li>
+                            <li>What specific sin does the Lord identify in Marks and Whitney in verse 4?</li>
+                            <li>What rhetorical question does the Lord ask about property in verse 4?</li>
+                            <li>According to verse 5, what should happen to the properties of Kirtland?</li>
+                            <li>What creatures does the Lord mention as being His in verse 6?</li>
+                            <li>According to verse 7, what can the Lord cause "solitary places" to do?</li>
+                            <li>What is the alternate name given for the land where Adam dwelt in verse 8?</li>
+                            <li>What mountains are mentioned in verse 8?</li>
+                            <li>What does the Lord call Marks and Whitney to forsake in verse 11?</li>
+                            <li>Complete this phrase from verse 11: "be a servant of servants, and not in name but in ___"</li>
+                            <li>What position is William Marks promised in verse 10?</li>
+                            <li>What does the Lord say about Oliver Granger's sacrifice compared to his increase in verse 13?</li>
+                            <li>How will Oliver Granger's name be remembered according to verse 12?</li>
+                            <li>What phrase does the Lord use in verse 15 about not despising Oliver Granger?</li>
+                            <li>According to verse 16, what are the Saints commanded to do to the Lord's house?</li>
+                            <li>What metaphor from Jesus' ministry does verse 16 reference?</li>
+                            <li>What consequence is mentioned in verse 3 if Marks and Whitney "tarry"?</li>
+                            <li>In verse 8, what does the Lord ask about having "room enough" on?</li>
+                            <li>How does verse 8 describe the property concerns in Kirtland?</li>
+                            <li>What does the Lord call "more weighty matters" in verse 8?</li>
+                            <li>In verse 11, what does the Lord say will happen to those who are faithful over few things?</li>
+                            <li>What role did Oliver Granger play according to verse 12?</li>
+                            <li>According to verse 13, whose word will Oliver Granger's word be like?</li>
+                            <li>What does verse 2 command Marks and Whitney to do regarding awakening?</li>
+                            <li>In verse 5, what does the Lord say about what remains after debts are paid?</li>
+                            <li>What verb does the Lord use three times in verse 5?</li>
+                            <li>What attitude toward Kirtland properties does verse 5 express?</li>
+                            <li>According to verse 9, why should the Saints come up to the land of Adam-ondi-Ahman?</li>
+                            <li>What question does the Lord ask in verse 6 about making the earth?</li>
+                            <li>What phrase in verse 4 indicates Marks and Whitney need to do before the Lord?</li>
+                            <li>Complete this phrase from verse 13: "his sacrifice shall be more sacred unto me than his ___"</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Understanding the Text: Deeper Analysis -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Understanding the Text: Deeper Analysis (35 Questions)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <ol>
+                            <li>Why do you think the Lord gave this revelation on the same day as D&C 118 and D&C 119?</li>
+                            <li>What does the "before winter" deadline reveal about the Lord's awareness of practical circumstances?</li>
+                            <li>How does the command to "awake, and arise, and come forth" suggest Marks and Whitney were spiritually asleep?</li>
+                            <li>What is significant about the Lord calling covetousness a sin requiring repentance even when directed toward Church property?</li>
+                            <li>How does "what is property unto me?" challenge fundamental assumptions about wealth and security?</li>
+                            <li>What does verse 5's permission to "let them go" reveal about God's priorities?</li>
+                            <li>Why does the Lord enumerate His ownership of birds, fish, and beasts when addressing property concerns?</li>
+                            <li>What does "Have I not made the earth?" imply about God's ability to provide?</li>
+                            <li>How does the phrase "solitary places to bud and to blossom" apply to Missouri's frontier?</li>
+                            <li>What is the significance of introducing the name "Olaha Shinehah" in this context?</li>
+                            <li>Why does the Lord contrast Kirtland property ("the drop") with the Missouri gathering ("more weighty matters")?</li>
+                            <li>What does "littleness of soul" mean, and how does it relate to covetousness?</li>
+                            <li>What does it mean to be "a servant of servants...not in name but in deed"?</li>
+                            <li>Why does the Lord promise William Marks he will be "ruler over many things" after calling him to forsake property?</li>
+                            <li>What is the doctrinal significance of "his sacrifice shall be more sacred unto me than his increase"?</li>
+                            <li>Why does the Lord emphasize that Oliver Granger's name will be remembered "forever and ever"?</li>
+                            <li>What does it mean that Oliver Granger "contended earnestly for the redemption of the First Presidency"?</li>
+                            <li>Why would the Lord command "let no man despise my servant Oliver"?</li>
+                            <li>What is the relationship between Granger's limited material success and the Lord's high regard?</li>
+                            <li>How does verse 14 indicate conditional promises despite high commendation?</li>
+                            <li>What does the command to "make holy" the Lord's house mean beyond physical temple building?</li>
+                            <li>Why does the Lord reference "overthrowing the moneychangers" in this revelation?</li>
+                            <li>What is significant about the phrase "in their own time and in their own season"?</li>
+                            <li>How does this revelation demonstrate that delayed obedience often equals disobedience?</li>
+                            <li>What does the three-fold structure of verse 5 emphasize about divine authority?</li>
+                            <li>Why might Marks and Whitney have rationalized staying in Kirtland as "responsible stewardship"?</li>
+                            <li>How does this revelation show that God's commands sometimes require accepting financial loss?</li>
+                            <li>What does the comparison between "the drop" and "more weighty matters" teach about relative value?</li>
+                            <li>Why does the Lord ask rhetorical questions rather than simply commanding?</li>
+                            <li>What does verse 9 mean by "as much as is needful, whereof I, the Lord, will judge"?</li>
+                            <li>How does this revelation establish a pattern for choosing spiritual calling over temporal security?</li>
+                            <li>What is the relationship between covetousness and "littleness of soul"?</li>
+                            <li>Why does the Lord give both rebuke and commendation in the same revelation?</li>
+                            <li>How does this revelation address the tension between gathering temporally vs. spiritually?</li>
+                            <li>What does this section teach about God's awareness of individual faithfulness even when results seem small?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Personal Application Questions -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Personal Application: Self-Reflection (35 Questions)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <ol>
+                            <li>What possessions am I covetously attached to that might prevent obedience to spiritual promptings?</li>
+                            <li>When have I delayed obeying a spiritual prompting while "settling business affairs"?</li>
+                            <li>If the Lord commanded me to leave my current situation "before winter," what would I struggle most to surrender?</li>
+                            <li>How do I respond to the question "what is property unto me?"</li>
+                            <li>In what areas do I prioritize "the drop" over "more weighty matters"?</li>
+                            <li>Have I ever rationalized delayed obedience as "responsible stewardship"?</li>
+                            <li>Where in my life do I exhibit "littleness of soul"?</li>
+                            <li>Am I a servant of the Lord "not in name but in deed"?</li>
+                            <li>When have I seen God cause "solitary places to bud and blossom" after obedience?</li>
+                            <li>What "business" needs to be "settled speedily" to enable fuller obedience?</li>
+                            <li>How do I distinguish between wise planning and "tarrying" in procrastination?</li>
+                            <li>What would change if I truly believed God owns everything I have?</li>
+                            <li>When has faithful service in my life produced limited visible "increase"?</li>
+                            <li>How does "his sacrifice shall be more sacred unto me than his increase" speak to times when my efforts seemed unsuccessful?</li>
+                            <li>What spiritual promptings am I currently "tarrying" on?</li>
+                            <li>If I knew my name would be "had in sacred remembrance" regardless of visible results, how would that change my approach?</li>
+                            <li>In what ways do I seek to be "ruler over many things" without first being "faithful over a few things"?</li>
+                            <li>What does it mean for me to "awake, and arise, and come forth" from spiritual complacency today?</li>
+                            <li>How has covetousness manifested in my life in subtle ways?</li>
+                            <li>What would it mean for me to "let them go" regarding possessions I'm clinging to?</li>
+                            <li>When have I experienced that God can provide from 90% with blessing more than from 100% without it?</li>
+                            <li>How do I respond when obedience would require accepting financial loss?</li>
+                            <li>Where am I acting like Marks and Whitney (delaying) vs. Oliver Granger (serving faithfully)?</li>
+                            <li>What "moneychangers" need to be overthrown in my personal temple?</li>
+                            <li>How do I make my home "holy" as commanded in verse 16?</li>
+                            <li>What does "faithfulness over a few things" look like in my current circumstances?</li>
+                            <li>When have I seen the principle that "it shall not be well with them" who delay obedience?</li>
+                            <li>How does understanding God owns everything change my decision-making?</li>
+                            <li>What specific action can I take this week to demonstrate trust in God's ownership?</li>
+                            <li>In what relationships am I being a "servant of servants not in name but in deed"?</li>
+                            <li>How do I typically respond to divine urgency—with immediate obedience or delayed response?</li>
+                            <li>What would it look like for me to value sacrifice over visible increase?</li>
+                            <li>How can I cultivate a heart that asks "what does the Lord want?" rather than "what will I lose?"</li>
+                            <li>When facing decisions between temporal security and spiritual calling, which typically wins?</li>
+                            <li>What "little ones" and "littleness of soul" do I need to forsake?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Modern Relevance Questions -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Modern Relevance & Application (Summary Questions)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>Contemporary Issues</h4>
+                        <ul>
+                            <li>How does D&C 117's teaching about covetousness address modern consumer culture and materialism?</li>
+                            <li>What does this revelation teach about the "prosperity gospel" that claims faithfulness leads to wealth?</li>
+                            <li>How does "sacrifice more sacred than increase" challenge modern emphasis on measurable success?</li>
+                            <li>What does D&C 117 teach about delayed obedience in an age when we can rationalize postponing anything?</li>
+                            <li>How does this revelation address modern tensions between career advancement and Church service?</li>
+                            <li>What does "what is property unto me?" teach about retirement planning and financial security?</li>
+                            <li>How does D&C 117 speak to modern decisions about accepting callings that interfere with professional advancement?</li>
+                            <li>What does this section teach about modern emphasis on building "personal brands" vs. serving in obscurity?</li>
+                            <li>How does D&C 117 address modern questions about whether business success indicates divine approval?</li>
+                            <li>What does this revelation teach about modern decisions regarding full-time Church employment vs. higher-paying careers?</li>
+                        </ul>
+
+                        <h4>Doctrinal Connections</h4>
+                        <ul>
+                            <li>How does D&C 117:4 connect to <a href="https://www.blueletterbible.org/kjv/psa/50/10/">Psalm 50:10-12</a> about divine ownership?</li>
+                            <li>What relationship exists between D&C 117:11 and Jesus' parable in <a href="https://www.blueletterbible.org/kjv/mat/25/21/">Matthew 25:21-23</a>?</li>
+                            <li>How does D&C 117:13 connect to the widow's mite in <a href="https://www.blueletterbible.org/kjv/mar/12/41/">Mark 12:41-44</a>?</li>
+                            <li>What relationship exists between D&C 117 and Jesus' teaching in <a href="https://www.blueletterbible.org/kjv/luk/14/26/">Luke 14:26-33</a> about counting the cost?</li>
+                            <li>How does D&C 117 relate to Paul's teaching in <a href="https://www.blueletterbible.org/kjv/php/3/7/">Philippians 3:7-8</a> about counting all things loss?</li>
+                        </ul>
+
+                        <h4>Future Application</h4>
+                        <ul>
+                            <li>How should D&C 117 affect your long-term career planning and retirement goals?</li>
+                            <li>What does "sacrifice more sacred than increase" teach about legacy planning?</li>
+                            <li>How should this revelation shape your decisions about when to retire and how to spend retirement years?</li>
+                            <li>What does D&C 117 teach about preparing children to respond promptly to future spiritual promptings?</li>
+                            <li>How should this section affect your ultimate life priorities and what you're building your life around?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("active");
+            
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        function toggleSubSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("active");
+            
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        function expandAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.add("active");
+                var panel = accordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.add("active");
+                var panel = subAccordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        function collapseAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].classList.remove("active");
+                panels[i].style.maxHeight = "0";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < subPanels.length; i++) {
+                subPanels[i].classList.remove("active");
+                subPanels[i].style.maxHeight = "0";
+            }
+        }
+    </script>
+</body>
+</html>

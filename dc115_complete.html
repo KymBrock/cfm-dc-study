@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 115 Complete Study Guide - The Name of the Church</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .navigation-bar {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0 30px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-button {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            border-bottom: none;
+        }
+
+        .nav-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+            }
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        .sub-accordion {
+            background-color: #f0f4f0;
+            color: #374151;
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e2e8e2;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: #7c9885;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        .sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .panel-content h2 {
+            color: #7c9885;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .panel-content h3 {
+            color: #5a6d5f;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .panel-content h4 {
+            color: #4a5d4f;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .panel-content ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .panel-content ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .panel-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .panel-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .info-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box {
+            background-color: #f4e8d0;
+            border: 2px solid #d4c190;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .word-study-box {
+            background-color: #fafafa;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .scripture-verse {
+            background-color: #f9fafb;
+            border-left: 3px solid #7c9885;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #5a6d5f;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+            .header-section .subtitle {
+                font-size: 1.1em;
+            }
+            .panel-content {
+                padding: 20px;
+            }
+            .site-title {
+                font-size: 1.5em;
+            }
+        }
+
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="../../index.html" class="nav-btn">⌂ Home</a>
+            <a href="../DC_116/HTML/dc116_complete.html" class="nav-btn">Next: D&C 116 ►</a>
+        </div>
+        <div class="nav-links">
+            <a href="dc115_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 115</a>
+            <a href="../DC_116/HTML/dc116_complete.html" class="nav-btn">D&C 116</a>
+            <a href="../DC_117/HTML/dc117_complete.html" class="nav-btn">D&C 117</a>
+            <a href="../DC_118/HTML/dc118_complete.html" class="nav-btn">D&C 118</a>
+            <a href="../DC_119/HTML/dc119_complete.html" class="nav-btn">D&C 119</a>
+            <a href="../DC_120/HTML/dc120_complete.html" class="nav-btn">D&C 120</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Doctrine and Covenants 115</h1>
+            <p class="subtitle">The Name of the Church and Building the House of the Lord</p>
+            <div class="scripture-highlight">
+                "For thus shall my church be called in the last days, even The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/" style="color: white; text-decoration: underline;">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/" style="color: white; text-decoration: underline;">Christ</a> of Latter-day Saints."
+                <br><br>— <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.4?lang=eng" style="color: white; font-weight: 600;">Doctrine and Covenants 115:4</a>
+            </div>
+            <div class="date-location">
+                <strong>Date:</strong> April 26, 1838 | <strong>Location:</strong> <a href="https://www.churchofjesuschrist.org/study/history/topics/far-west-missouri?lang=eng" style="color: white; text-decoration: underline;">Far West, Missouri</a>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+
+        <!-- SECTION 1: SECTION OVERVIEW -->
+        <button class="accordion-section">1. Section Overview</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Basic Information</h2>
+                
+                <div class="info-box">
+                    <p><strong>Date of Revelation:</strong> April 26, 1838</p>
+                    <p><strong>Location:</strong> <a href="https://www.churchofjesuschrist.org/study/history/topics/far-west-missouri?lang=eng">Far West</a>, Missouri</p>
+                    <p><strong>Recipient:</strong> <a href="https://www.churchofjesuschrist.org/study/history/topics/joseph-smith?lang=eng">Joseph Smith</a> and the Church</p>
+                    <p><strong>Context:</strong> Construction of the Far West temple and church organization</p>
+                </div>
+
+                <p><strong>Section Summary:</strong> In this revelation, the <a href="https://www.blueletterbible.org/lexicon/g2962/kjv/tr/0-1/">Lord</a> formally declares the official name of the Church—"The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints"—establishing divine ownership and identity. The Lord commands the Saints to build a temple in Far West with specific construction timelines and protocols, calls them to faithfulness despite persecution, and promises that those who remain steadfast will see the downfall of their enemies.</p>
+
+                <h2>Key Principles</h2>
+
+                <p><strong>Primary Doctrinal Principle:</strong> The Church belongs to <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>, bears His name by divine command, and exists as His latter-day organization to prepare for His Second Coming.</p>
+
+                <p><strong>Secondary Principle:</strong> Building temples demonstrates faith in <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> promises and commitment to covenant worship, even when external circumstances appear hostile to such sacred work.</p>
+
+                <p><strong>Application Principle:</strong> Taking Christ's name upon us through baptism and covenant worship requires us to stand with courage, build His kingdom through action, and trust His promises despite opposition.</p>
+
+                <h2>Timeframe & Setting</h2>
+
+                <h3>Circumstances Among Recipients</h3>
+
+                <p>By April 1838, Far West had become the new Church headquarters after the Saints' expulsion from Kirtland, Ohio. Thousands of faithful members had relocated to Caldwell County, Missouri, creating a thriving community of approximately 5,000 Saints. They had established homes, businesses, and civic order, with Joseph Smith arriving in March 1838 to lead the growing settlement.</p>
+
+                <p>The Saints had fled Kirtland after intense apostasy, financial collapse of the <a href="https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng">Kirtland Safety Society</a>, and violent persecution. Many arrived in Missouri impoverished, having abandoned property and possessions. Despite hardships, they exhibited remarkable faith and industry.</p>
+
+                <h3>Circumstances Within the Church</h3>
+
+                <p>The Church had experimented with different names since its organization in 1830, including "The Church of Christ," "The Church of the Latter Day Saints," and variations combining these elements. This lack of consistent identity created confusion about the Church's true nature and mission. Meanwhile, apostasy in Kirtland had shaken confidence, with prominent leaders leaving and taking followers with them.</p>
+
+                <p>As members left the Church, some formed splinter groups claiming to be the "true" restoration. The need for an official, divinely revealed name became urgent to distinguish the Lord's Church from imitators and to establish clear identity.</p>
+
+                <h2>Purpose of the Revelation</h2>
+
+                <h3>Short Term</h3>
+                <ul>
+                    <li>Settle the question of the Church's official name with divine authority</li>
+                    <li>Command construction of the Far West temple with specific instructions and timeline</li>
+                    <li>Reorganize and strengthen Church leadership after Kirtland apostasy</li>
+                    <li>Encourage the Saints amid persecution and displacement</li>
+                    <li>Establish Far West as the new Church headquarters</li>
+                </ul>
+
+                <h3>Long Term</h3>
+                <ul>
+                    <li>Establish the Church's permanent identity centered on <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a></li>
+                    <li>Create doctrinal foundation for temple building as an ongoing work in all dispensations</li>
+                    <li>Demonstrate that persecution cannot stop the Lord's purposes</li>
+                    <li>Set pattern for Church expansion through gathering, building, and enduring</li>
+                    <li>Provide prophetic witness that God's covenant people will prevail over opposition</li>
+                </ul>
+
+                <h2>Modern Application</h2>
+
+                <h3>Personal Application</h3>
+                <p><strong>Name and Identity:</strong> When you take Christ's name through baptism and renew that covenant through the sacrament, recognize you represent Him in all your actions and words.</p>
+
+                <p><strong>Building Faith:</strong> Like the Saints who built temples amid opposition, strengthen your faith by "building"—setting goals, establishing righteous patterns, creating covenant homes.</p>
+
+                <p><strong>Enduring Opposition:</strong> When facing criticism or opposition for Church membership, remember the Lord promises protection and ultimate vindication to the faithful.</p>
+
+                <h3>Key Doctrines</h3>
+                <ul>
+                    <li>The Church's official name is "The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints" by divine revelation</li>
+                    <li>The Church takes Christ's name because it is built upon His gospel and He is its head</li>
+                    <li>The designation "Latter-day Saints" distinguishes this dispensation from former-day saints</li>
+                    <li>The Lord requires specific obedience in temple building, including timeline and ceremonial procedures</li>
+                    <li>Those who remain faithful amid persecution will witness their enemies' downfall while remaining safe</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- SECTION 2: HISTORICAL CONTEXT -->
+        <button class="accordion-section">2. Historical Context</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Historical Background</h2>
+                
+                <p><strong>Date:</strong> April 26, 1838<br>
+                <strong>Location:</strong> <a href="https://www.churchofjesuschrist.org/study/history/topics/far-west-missouri?lang=eng">Far West</a>, Caldwell County, Missouri</p>
+
+                <p>Far West had recently become Church headquarters following the Saints' exodus from Kirtland, Ohio in early 1838. The city was laid out with typical Mormon efficiency—wide streets, central public square for the temple, and residential plots surrounding the center. By April 1838, approximately 4,000-5,000 Saints had gathered there, building homes and attempting to establish a secure refuge from persecution.</p>
+
+                <h2>The Crisis of Apostasy (1837-1838)</h2>
+
+                <h3>The Kirtland Safety Society Failure</h3>
+
+                <p>January 1837 saw the <a href="https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng">collapse of the Kirtland Safety Society</a>, a financial institution founded by Church leaders to provide economic stability for the Saints. When the institution failed during the nationwide Panic of 1837, many Church members lost significant investments.</p>
+
+                <p>The financial disaster triggered a faith crisis. Some prominent members blamed <a href="https://www.churchofjesuschrist.org/study/history/topics/joseph-smith?lang=eng">Joseph Smith</a> for their losses, questioning his prophetic judgment and even his calling as prophet. Internal dissension exploded into open apostasy. The winter of 1837-1838 saw some of the Church's darkest days as respected leaders turned against Joseph Smith and the restored gospel.</p>
+
+                <h3>Prominent Apostates</h3>
+
+                <div class="info-box">
+                    <p><strong>Among those who fell away</strong> during this period were members of high standing:</p>
+                    <ul>
+                        <li><strong>Luke and Lyman Johnson</strong> (apostles) were excommunicated in 1838 for apostasy</li>
+                        <li><strong>John F. Boynton</strong> (apostle) left the Church in 1837</li>
+                        <li><strong>William E. McLellin</strong> (apostle) apostatized and became a bitter enemy</li>
+                        <li><strong>Thomas B. Marsh</strong> (president of the Twelve) would apostatize in October 1838</li>
+                    </ul>
+                </div>
+
+                <h2>The Need for Official Church Name</h2>
+
+                <p>Since the Church's organization in 1830, various names had been used informally: "The Church of Christ," "The Church of the Latter Day Saints," and combinations thereof. This created confusion and allowed splinter groups to claim legitimacy. The revelation provided divine authority for the official name, resolving identity questions and distinguishing the Lord's Church from imitators.</p>
+
+                <h2>The Far West Temple Command</h2>
+
+                <p>Commanding temple construction when the Saints were impoverished refugees facing mounting opposition demonstrated faith over circumstances. The pattern had ancient precedent: Israel received tabernacle instructions while wandering in the wilderness, and returned exiles rebuilt Jerusalem's temple amid fierce opposition.</p>
+
+                <p>Tragically, the Far West temple was never completed. Cornerstones were laid July 4, 1838, but construction never progressed beyond excavation before the Saints were expelled from Missouri during the 1838 Mormon War. However, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/124.49?lang=eng">D&C 124:49-51</a> later clarified that when enemies prevent temple completion, the Lord accepts the Saints' offerings.</p>
+
+            </div>
+        </div>
+
+        <!-- SECTION 3: VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section">3. Verse-by-Verse Study</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction</h2>
+                
+                <p>D&C 115 addresses two fundamental questions that troubled the Far West Saints in April 1838: What is the Church's official name? Should they build another temple after losing Kirtland? The revelation provides direct, authoritative answers that established the Church's permanent identity and commanded sacred work despite external opposition.</p>
+
+                <p><strong>Total Verses:</strong> 19 | <strong>Verses in this document:</strong> 19 ✓</p>
+
+                <!-- VERSES 1-3 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSES 1-3: Personal Address and Church Naming</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.1?lang=eng">D&C 115:1</a></strong> — "VERILY I say unto you, my servant <a href="https://www.churchofjesuschrist.org/study/history/topics/joseph-smith?lang=eng">Joseph Smith</a>, Jun., and also my servant <a href="https://www.churchofjesuschrist.org/study/history/topics/sidney-rigdon?lang=eng">Sidney Rigdon</a>, and also my servant <a href="https://www.churchofjesuschrist.org/study/history/topics/hyrum-smith?lang=eng">Hyrum Smith</a>, and your counselors who are and shall be appointed hereafter;"</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.2?lang=eng">D&C 115:2</a></strong> — "And also unto you, my servant <a href="https://www.churchofjesuschrist.org/study/history/topics/edward-partridge?lang=eng">Edward Partridge</a>, and his counselors;"</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.3?lang=eng">D&C 115:3</a></strong> — "And also unto my faithful servants who are of the high council of my church in Zion, for thus it shall be called, and unto all the elders and people of my Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints, scattered abroad in all the world;"</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>The <a href="https://www.blueletterbible.org/lexicon/g2962/kjv/tr/0-1/">Lord</a> begins with personal address, naming specific leaders and then expanding to all Church members "scattered abroad in all the world." This pattern demonstrates divine awareness of individuals while addressing universal principles. Verse 3 contains the crucial declaration of the Church's official name: "The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints."</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        
+                        <p><strong>"My servant"</strong> - Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h5650/kjv/wlc/0-1/">ebed</a></strong> (עֶבֶד) means "servant, slave, worshiper." It implies covenant relationship, not mere employment. Moses, Joshua, David, and the prophets were all called God's servants.</p>
+
+                        <p><strong>"Zion"</strong> - Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h6726/kjv/wlc/0-1/">Tsiyown</a></strong> (צִיּוֹן), originally the name of the Jebusite fortress David conquered, became synonymous with Jerusalem, God's holy city. In Latter-day Saint theology, Zion represents both a physical location and a spiritual condition ("the pure in heart," <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/97.21?lang=eng">D&C 97:21</a>).</p>
+
+                        <p><strong>"Saints"</strong> - Greek <strong><a href="https://www.blueletterbible.org/lexicon/g40/kjv/tr/0-1/">hagios</a></strong> (ἅγιος) means "holy ones, set apart." The designation "Latter-day Saints" claims continuity with ancient Christians while acknowledging a distinct dispensation.</p>
+
+                        <h3>Cross-References</h3>
+                        
+                        <ul>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20.1?lang=eng">D&C 20:1</a></strong> — Earlier reference to the Church's organization, using "Church of Christ" before the full name was revealed</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27.7?lang=eng">3 Nephi 27:7-8</a></strong> — Christ's teaching that His Church must bear His name</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/acts/11/26/">Acts 11:26</a></strong> — "The disciples were called Christians first in Antioch"</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        
+                        <ol>
+                            <li>What does it mean that the Lord addresses both leaders "by name" and also "all the elders and people"?</li>
+                            <li>When you introduce yourself as a member of "The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints," how does the full name shape your understanding?</li>
+                            <li>How does this phrase apply to modern Saints who may feel isolated from other members?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- VERSE 4 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSE 4: The Reason for the Name</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.4?lang=eng">D&C 115:4</a></strong> — "For thus shall my church be called in the last days, even The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>This verse provides the theological rationale for the Church's name. Three critical elements emerge:</p>
+                        
+                        <p><strong>1. "My church"</strong> - Possessive language establishes ownership. This is not Joseph Smith's church, but Christ's Church.</p>
+                        
+                        <p><strong>2. "In the last days"</strong> - Temporal designation distinguishing this dispensation from previous ones.</p>
+                        
+                        <p><strong>3. "Even The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints"</strong> - The definite article "The" asserts unique identity.</p>
+
+                        <h3>Cross-References</h3>
+                        
+                        <ul>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7.62?lang=eng">Moses 7:62</a></strong> — Enoch's vision of the latter-day restoration</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/dan/2/44/">Daniel 2:44</a></strong> — Prophecy of God's kingdom in the last days</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1.30?lang=eng">D&C 1:30</a></strong> — The Lord's declaration of the Church's unique status</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 5-6 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSES 5-6: Standing Fast Despite Opposition</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.5?lang=eng">D&C 115:5</a></strong> — "Verily I say unto you all: Arise and shine forth, that thy light may be a standard for the nations;"</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.6?lang=eng">D&C 115:6</a></strong> — "And that the gathering together upon the land of Zion, and upon her stakes, may be for a defense, and for a refuge from the storm, and from wrath when it shall be poured out without mixture upon the whole earth."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>These verses transition from identity (name) to mission (purpose). The Lord commands "Arise and shine forth"—active verbs requiring response. The Saints aren't merely to exist but to actively radiate light that becomes "a standard for the nations."</p>
+
+                        <p><strong>"Standard"</strong> carries military and spiritual connotations. Anciently, military standards (banners, flags) marked rallying points for armies. The Church and its members become reference points by which others can orient themselves toward truth.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        
+                        <p><strong>"Arise and shine forth"</strong> - Echoes <a href="https://www.blueletterbible.org/kjv/isa/60/1/">Isaiah 60:1</a>: "Arise, shine; for thy light is come." Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h6965/kjv/wlc/0-1/">quwm</a></strong> (קוּם) means "arise, stand up" and <strong><a href="https://www.blueletterbible.org/lexicon/h215/kjv/wlc/0-1/">'owr</a></strong> (אוֹר) means "shine."</p>
+
+                        <p><strong>"Standard"</strong> - Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/">nes</a></strong> (נֵס) refers to a military banner or ensign lifted high for troops to rally around.</p>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 7-10 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSES 7-10: The Temple Command</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.7?lang=eng">D&C 115:7</a></strong> — "Let the city, Far West, be a holy and consecrated land unto me; and it shall be called most holy, for the ground upon which thou standest is holy."</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.8?lang=eng">D&C 115:8</a></strong> — "Therefore, I command you to build a house unto me, for the gathering together of my saints, that they may worship me."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>These verses contain the temple-building command. Verse 7 declares Far West "holy and consecrated land," echoing the Lord's words to Moses: "The place whereon thou standest is holy ground" (<a href="https://www.blueletterbible.org/kjv/exo/3/5/">Exodus 3:5</a>).</p>
+
+                        <p>Verse 8's command is direct: "build a house unto me." This marks the second temple commanded in the Restoration. The pattern emerges: wherever Saints gather, they build temples. Temple-building defines covenant people.</p>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 11-14 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSES 11-14: Temple Timeline and Divine Warning</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.11?lang=eng">D&C 115:11</a></strong> — "And inasmuch as my people build a house unto me in the name of the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a>, and do not suffer any unclean thing to come into it, that it be not defiled, my glory shall rest upon it;"</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.12?lang=eng">D&C 115:12</a></strong> — "Yea, and my presence shall be there, for I will come into it, and all the pure in heart that shall come into it shall see <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/">God</a>."</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.13?lang=eng">D&C 115:13</a></strong> — "But if it be defiled I will not come into it, and my glory shall not be there; for I will not come into unholy temples."</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.14?lang=eng">D&C 115:14</a></strong> — "And now, behold, if Zion do these things she shall prosper, and spread herself and become very glorious, very great, and very terrible."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>These verses establish critical conditions and promises regarding temple worship. The Lord promises two profound blessings if Saints build the temple properly and keep it holy:</p>
+                        
+                        <p><strong>1. Divine Glory:</strong> "My glory shall rest upon it" (verse 11). This echoes the Shekinah glory that filled Solomon's temple (<a href="https://www.blueletterbible.org/kjv/1ki/8/10/">1 Kings 8:10-11</a>) and Moses' tabernacle (<a href="https://www.blueletterbible.org/kjv/exo/40/34/">Exodus 40:34-35</a>).</p>
+                        
+                        <p><strong>2. Divine Presence:</strong> "My presence shall be there, for I will come into it" (verse 12). The Lord promises personal visitation to properly consecrated temples.</p>
+                        
+                        <p><strong>3. Theophany:</strong> "All the pure in heart that shall come into it shall see <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/">God</a>" (verse 12). This remarkable promise indicates that the pure in heart can experience divine manifestations in temples.</p>
+                        
+                        <p>However, verse 13 provides equally strong warning: if the temple is defiled, <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/">God</a> will not enter it, His glory will depart, and He "will not come into unholy temples." Temple sanctity requires constant vigilance.</p>
+                        
+                        <p>Verse 14's promise that Zion will "prosper, and spread herself and become very glorious, very great, and very terrible" depends on faithful temple worship. The repetition of "very" three times emphasizes the magnitude of promised blessings.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        
+                        <p><strong>"Suffer any unclean thing"</strong> - Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h2930/kjv/wlc/0-1/">tame</a></strong> (טָמֵא) means "unclean, defiled." In Israelite law, ritual impurity prevented temple entry. Here it extends beyond ritual to moral and spiritual purity.</p>
+                        
+                        <p><strong>"Glory"</strong> - Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h3519/kjv/wlc/0-1/">kavod</a></strong> (כָּבוֹד) literally means "weight, heaviness," metaphorically representing <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/">God's</a> weighty presence and manifest splendor. Greek <strong><a href="https://www.blueletterbible.org/lexicon/g1391/kjv/tr/0-1/">doxa</a></strong> (δόξα) means "glory, splendor, brightness."</p>
+                        
+                        <p><strong>"Pure in heart"</strong> - Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h1249/kjv/wlc/0-1/">bar</a></strong> (בַּר) means "pure, clean" and <strong><a href="https://www.blueletterbible.org/lexicon/h3824/kjv/wlc/0-1/">levav</a></strong> (לֵבָב) means "heart, inner man." Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2513/kjv/tr/0-1/">katharos</a></strong> (καθαρός) means "clean, pure" combined with <strong><a href="https://www.blueletterbible.org/lexicon/g2588/kjv/tr/0-1/">kardia</a></strong> (καρδία) "heart." Purity of heart implies moral integrity, sincere devotion, and freedom from duplicity.</p>
+                        
+                        <p><strong>"Terrible"</strong> - Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/">yare</a></strong> (יָרֵא) means "fearful, awesome, to be feared." This isn't "terrible" in the negative sense but "awe-inspiring, commanding reverence." Zion will inspire reverent fear in her enemies.</p>
+
+                        <h3>Cross-References</h3>
+                        
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/1ki/8/10/">1 Kings 8:10-11</a></strong> — "The cloud filled the house of the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a>, So that the priests could not stand to minister because of the cloud: for the glory of the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> had filled the house of the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a>" — Solomon's temple filled with divine glory</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/mat/5/8/">Matthew 5:8</a></strong> — "Blessed are the pure in heart: for they shall see <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a>" — Promise paralleling D&C 115:12</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/97.15?lang=eng">D&C 97:15-17</a></strong> — Zion is the pure in heart; when they build temples and remain pure, the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord's</a> glory rests upon them</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110.7?lang=eng">D&C 110:7</a></strong> — The <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> accepting the Kirtland Temple: "I have accepted this house, and my name shall be here; and I will manifest myself to my people in mercy in this house"</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        
+                        <ol>
+                            <li><strong>Personal Purity:</strong> What does it mean to you personally to be "pure in heart"? What specific changes could you make to better prepare yourself to "see <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/">God</a>" in the temple?</li>
+                            <li><strong>Temple Reverence:</strong> How can you ensure you never "suffer any unclean thing" to enter the temple through your thoughts, attitudes, or preparations before attending?</li>
+                            <li><strong>Spiritual Experiences:</strong> Have you experienced the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord's</a> presence or glory in the temple? What conditions preceded those experiences?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 15-16 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSES 15-16: The July 4th Cornerstone Ceremony</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.15?lang=eng">D&C 115:15</a></strong> — "And verily I say unto you, let this house be built unto my name, that I may reveal mine ordinances therein unto my people;"</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.16?lang=eng">D&C 115:16</a></strong> — "For I deign to reveal unto my church things which have been kept hid from before the foundation of the world, things that pertain to the dispensation of the fulness of times."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>These verses explain the profound purpose behind temple-building: revelation of ordinances. The <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> promises to "reveal mine ordinances therein unto my people" (verse 15) and to "reveal unto my church things which have been kept hid from before the foundation of the world" (verse 16).</p>
+                        
+                        <p>The temple isn't merely a building for meetings but a revelation space. Once constructed, the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> will progressively reveal ordinances within its sacred walls. This promise was fulfilled in Nauvoo, where Joseph Smith received and administered the endowment, eternal marriage sealings, and other ordinances not yet revealed in 1838.</p>
+                        
+                        <p>Verse 16's phrase "kept hid from before the foundation of the world" parallels <a href="https://www.blueletterbible.org/kjv/eph/3/9/">Ephesians 3:9</a>, "the mystery, which from the beginning of the world hath been hid in <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a>," and <a href="https://www.blueletterbible.org/kjv/mat/13/35/">Matthew 13:35</a>, "I will utter things which have been kept secret from the foundation of the world." These aren't new inventions but restoration of ancient truths preserved through all dispensations.</p>
+                        
+                        <p>The phrase "dispensation of the fulness of times" (<a href="https://www.blueletterbible.org/kjv/eph/1/10/">Ephesians 1:10</a>) indicates that this final dispensation receives all previous dispensations' keys, knowledge, and authority.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        
+                        <p><strong>"Deign"</strong> - Means "to condescend, to stoop to give." The <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a>, in His majesty, condescends to reveal sacred things to mortals. This word emphasizes the gift nature of revelation—we don't earn or demand it; <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> graciously grants it.</p>
+                        
+                        <p><strong>"Kept hid"</strong> - Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2928/kjv/tr/0-1/">krupto</a></strong> (κρύπτω) means "to hide, conceal, to be hid, escape notice." The passive voice indicates these truths were deliberately concealed by <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> until the proper time for revelation. <a href="https://www.blueletterbible.org/kjv/dan/12/4/">Daniel 12:4</a> prophesied: "Seal the book, even to the time of the end."</p>
+                        
+                        <p><strong>"Dispensation of the fulness of times"</strong> - Greek <strong><a href="https://www.blueletterbible.org/lexicon/g3622/kjv/tr/0-1/">oikonomia</a></strong> (οἰκονομία) "administration/stewardship" + <strong><a href="https://www.blueletterbible.org/lexicon/g4138/kjv/tr/0-1/">pleroma</a></strong> (πλήρωμα) "fullness" + <strong><a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/">kairos</a></strong> (καιρός) "appointed times." This phrase from <a href="https://www.blueletterbible.org/kjv/eph/1/10/">Ephesians 1:10</a> describes <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> plan to "gather together in one all things in <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>." The final dispensation gathers all previous revelations, keys, and authorities.</p>
+
+                        <h3>Cross-References</h3>
+                        
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/eph/3/3/">Ephesians 3:3-9</a></strong> — "How that by revelation he made known unto me the mystery... which in other ages was not made known unto the sons of men... To make all men see what is the fellowship of the mystery, which from the beginning of the world hath been hid in <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a>" — Paul's language about hidden mysteries now revealed mirrors D&C 115:16</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/124.40?lang=eng">D&C 124:40-41</a></strong> — "For there is not a place found on earth that he may come to and restore again that which was lost unto you... For a baptismal font there is not upon the earth" — The Nauvoo temple revelation explaining what ordinances require temple space</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/mat/13/34/">Matthew 13:34-35</a></strong> — "I will utter things which have been kept secret from the foundation of the world" — <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> revealing hidden truths</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/amo/3/7/">Amos 3:7</a></strong> — "Surely the <a href="https://www.blueletterbible.org/lexicon/h136/kjv/wlc/0-1/">Lord</a> <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/">GOD</a> will do nothing, but he revealeth his secret unto his servants the prophets" — The principle of revelation through prophets</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        
+                        <ol>
+                            <li><strong>Progressive Temple Revelation:</strong> If the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> reveals ordinances progressively in temples, what additional temple knowledge might be revealed in the future? How can you prepare to receive it?</li>
+                            <li><strong>Hidden from Foundation:</strong> Why would <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> keep certain truths "hid from before the foundation of the world" until the dispensation of the fulness of times? What does this teach about <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> timing and our readiness to receive truth?</li>
+                            <li><strong>Temple as Revelation Space:</strong> Have you experienced the temple as a place where the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> reveals personal understanding and knowledge? How can you better position yourself to receive revelation in the temple?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- VERSES 17-19 SUB-ACCORDION -->
+                <button class="sub-accordion">VERSES 17-19: Final Promises and Reassurance</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.17?lang=eng">D&C 115:17</a></strong> — "And verily I say unto you, let the house be built in my name, that the ordinance of baptizing for the dead, may be performed for those who are dead; who may, in the hour of their final tribulation, call upon my name in their behalf, and receive forgiveness of their sins, yea, even unto those who stand in the very door of the celestial kingdom."</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.18?lang=eng">D&C 115:18</a></strong> — "And it shall be built fifty-five by sixty-five feet in the inner court thereof."</p>
+                            
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115.19?lang=eng">D&C 115:19</a></strong> — "And a deacon shall be appointed to stand at the door of the house to keep the place, that there may be no disturbance."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>Verse 17 provides one of the most comforting doctrines in scripture: the deceased can call upon the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord's</a> name "in the hour of their final tribulation" and receive forgiveness of sins through proxy ordinances performed in temples. This verse establishes several critical principles:</p>
+                        
+                        <p><strong>1. Agency in the Spirit World:</strong> The dead maintain moral agency. They can "call upon my name in their behalf"—actively seeking salvation rather than passively receiving it.</p>
+                        
+                        <p><strong>2. Repentance Beyond Death:</strong> The phrase "receive forgiveness of their sins" indicates that repentance occurs in the spirit world. <a href="https://www.blueletterbible.org/kjv/1pe/3/18/">1 Peter 3:18-20</a> confirms <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> preached to spirits in prison, offering them opportunity to repent.</p>
+                        
+                        <p><strong>3. Final Tribulation:</strong> The "hour of their final tribulation" may refer to the spirit world period before final judgment—a time of anguish as they recognize their sins and long for forgiveness but lack bodies to perform ordinances.</p>
+                        
+                        <p><strong>4. Proximity to Celestial Glory:</strong> The phrase "even unto those who stand in the very door of the celestial kingdom" suggests the dead can progress to the threshold of exaltation but require earthly proxy work to enter.</p>
+                        
+                        <p>Verse 18 provides specific dimensions: "fifty-five by sixty-five feet in the inner court." This practical detail demonstrates the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord's</a> involvement in even mundane architectural specifics.</p>
+                        
+                        <p>Verse 19's instruction for "a deacon... to keep the place, that there may be no disturbance" emphasizes temple sanctity. Sacred space requires protection from disruption.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+                        
+                        <p><strong>"Call upon my name"</strong> - Hebrew <strong><a href="https://www.blueletterbible.org/lexicon/h7121/kjv/wlc/0-1/">qara</a></strong> (קָרָא) + <strong><a href="https://www.blueletterbible.org/lexicon/h8034/kjv/wlc/0-1/">shem</a></strong> (שֵׁם) means "to call on the name," a phrase used throughout scripture for invoking <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> in worship, prayer, or seeking salvation (<a href="https://www.blueletterbible.org/kjv/gen/4/26/">Genesis 4:26</a>, <a href="https://www.blueletterbible.org/kjv/psa/116/4/">Psalm 116:4</a>, <a href="https://www.blueletterbible.org/kjv/rom/10/13/">Romans 10:13</a>). The dead retain this privilege and capacity.</p>
+                        
+                        <p><strong>"Hour of their final tribulation"</strong> - Greek <strong><a href="https://www.blueletterbible.org/lexicon/g2347/kjv/tr/0-1/">thlipsis</a></strong> (θλῖψις) means "pressure, affliction, tribulation, distress." The spirit world period between death and resurrection brings tribulation as spirits recognize their need for ordinances they can't personally perform.</p>
+                        
+                        <p><strong>"Stand in the very door"</strong> - Vivid imagery of being at the threshold but unable to enter without help. Ancient Near Eastern doors had symbolic significance—thresholds marked boundaries between sacred and common space. The deceased may be worthy but lack the "key" (ordinances) to open the door.</p>
+
+                        <h3>Cross-References</h3>
+                        
+                        <ul>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/1pe/3/18/">1 Peter 3:18-20</a>; <a href="https://www.blueletterbible.org/kjv/1pe/4/6/">1 Peter 4:6</a></strong> — "For <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> also hath once suffered for sins... he went and preached unto the spirits in prison... For for this cause was the gospel preached also to them that are dead" — Biblical foundation for gospel preached to the dead</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng">D&C 138</a></strong> — Joseph F. Smith's vision of the spirit world, showing organized work among the dead to teach and prepare them for ordinances</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/heb/11/39/">Hebrews 11:39-40</a></strong> — "And these all... received not the promise: <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> having provided some better thing for us, that they without us should not be made perfect" — Ancient faithful waiting for work to be done for them</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/1co/15/29/">1 Corinthians 15:29</a></strong> — "Else what shall they do which are baptized for the dead, if the dead rise not at all?" — Paul's reference to proxy baptism practiced in early Christianity</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        
+                        <ol>
+                            <li><strong>Agency of the Dead:</strong> How does understanding that the deceased can "call upon <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ's</a> name" and repent in the spirit world affect your view of ancestors who died without the gospel? Does this doctrine give you hope for specific relatives?</li>
+                            <li><strong>At the Door:</strong> Imagine standing at the celestial kingdom's door, able to see inside, knowing you belong there, but unable to enter because no one on earth has performed your ordinances. How does this image motivate your temple and family history work?</li>
+                            <li><strong>Sacred Space Protection:</strong> Verse 19 commands a deacon to prevent "disturbance" in the temple. What "disturbances" (irreverent thoughts, worldly concerns, rushing) might you need to guard against in your own temple worship to maintain sacred space?</li>
+                        </ol>
+
+                        <div class="info-box">
+                            <p><strong>Historical Note:</strong> The cornerstone ceremony was held as commanded on July 4, 1838, but persecution prevented the temple's completion. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/124.49?lang=eng">D&C 124:49-51</a> later clarified that when enemies prevent temple completion, the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> accepts the Saints' offerings.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECTION 4: WORD STUDIES -->
+        <button class="accordion-section">4. Word Studies</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction</h2>
+                
+                <p>D&C 115 establishes the Church's official name and commands temple building. While the revelation uses modern English, it extensively references biblical passages. This word study analyzes key terms using the full 5-layer approach: Hebrew, Greek, Latin, Etymology, and Webster 1828.</p>
+
+                <!-- WORD 1: CHURCH -->
+                <div class="word-study-box">
+                    <h3>TERM 1: "Church"</h3>
+                    
+                    <h4>Hebrew Analysis</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/h6951/kjv/wlc/0-1/">Qahal</a></strong> (קָהָל) - "assembly, congregation, gathered community." Used throughout Old Testament for Israel's religious assembly. Implies covenant community, not casual gathering.</p>
+                    
+                    <h4>Greek Analysis</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/g1577/kjv/tr/0-1/">Ekklesia</a></strong> (ἐκκλησία) - "called out ones, assembly, church." From ek (out) + kaleo (to call). New Testament: those called out from the world into covenant relationship with Christ. Used 115 times in New Testament.</p>
+                    
+                    <h4>Latin Analysis</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/ecclesia">Ecclesia</a></strong> - Direct borrowing from Greek ekklesia. In Christian Latin: the Church as institution and spiritual body.</p>
+                    
+                    <h4>Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/church">Church</a></strong> - Old English cirice, from Greek kyriake (oikia), "Lord's (house)." Emphasis on belonging to the Lord, not merely gathering.</p>
+                    
+                    <h4>Webster 1828</h4>
+                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/church">CHURCH</a></strong> - "A house consecrated to the worship of God... The collective body of Christians... A particular number of Christians, united under one form of ecclesiastical government."</p>
+                    
+                    <h4>Doctrinal Significance</h4>
+                    <p>When the Lord declares "my Church" (verse 4), He claims ownership using possessive language that echoes His covenant with Israel. The etymology reveals that "church" fundamentally means "belonging to the Lord"—it belongs to Him, not to any human founder.</p>
+                </div>
+
+                <!-- WORD 2: SAINTS -->
+                <div class="word-study-box">
+                    <h3>TERM 2: "Saints"</h3>
+                    
+                    <h4>Hebrew Analysis</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/">Qadosh</a></strong> (קָדוֹשׁ) - "holy one, saint, sacred." From root qadash (to be set apart, consecrated, holy). Implies separation from common to sacred purposes.</p>
+                    
+                    <h4>Greek Analysis</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/g40/kjv/tr/0-1/">Hagios</a></strong> (ἅγιος) - "holy, set apart, saints." Most common New Testament term for believers. Not moral perfection but covenantal set-apartness.</p>
+                    
+                    <h4>Latin Analysis</h4>
+                    <p><strong><a href="https://logeion.uchicago.edu/sanctus">Sanctus</a></strong> - "holy, sacred, consecrated." Root: sancio (to make sacred, confirm solemnly). Source of English "saint," "sanctify," "sanctuary."</p>
+                    
+                    <h4>Etymology</h4>
+                    <p><strong><a href="https://www.etymonline.com/word/saint">Saint</a></strong> - From Latin sanctus, "holy, consecrated." Restoration usage returns to New Testament broad application to all covenant members.</p>
+                    
+                    <h4>Doctrinal Significance</h4>
+                    <p>D&C 115's designation "Latter-day Saints" reclaims the New Testament practice of calling all covenant members "saints." This isn't a claim to moral perfection but to covenant relationship—being "set apart" for sacred purposes. The term distinguishes this dispensation's saints from "former-day saints" (ancient Christians).</p>
+                </div>
+
+                <!-- WORD 3: ZION -->
+                <div class="word-study-box">
+                    <h3>TERM 3: "Zion"</h3>
+                    
+                    <h4>Hebrew Analysis</h4>
+                    <p><strong><a href="https://www.blueletterbible.org/lexicon/h6726/kjv/wlc/0-1/">Tsiyown</a></strong> (צִיּוֹן) - Originally the Jebusite fortress David conquered, became synonymous with Jerusalem, God's holy city, the place of His dwelling.</p>
+                    
+                    <h4>Doctrinal Significance</h4>
+                    <p>In verse 3, "Zion" represents both physical location (initially Independence, Missouri) and spiritual condition ("the pure in heart," <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/97.21?lang=eng">D&C 97:21</a>). Temple connection: Zion is where God's people gather to His house for covenant worship.</p>
+                </div>
+
+                <!-- ADDITIONAL TERMS SUMMARY -->
+                <div class="highlight-box">
+                    <h3>Additional Key Terms</h3>
+                    
+                    <p><strong>"Standard"</strong> - Hebrew <a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/">nes</a> (נֵס), military banner lifted high for rallying troops. The Church becomes the prophesied ensign for nations.</p>
+                    
+                    <p><strong>"Holy"</strong> - Hebrew <a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/">qodesh</a> (קֹדֶשׁ), "apartness, holiness, sacredness." Far West designated "most holy" like the Holy of Holies in Israel's temple.</p>
+                    
+                    <p><strong>"House"</strong> - Hebrew <a href="https://www.blueletterbible.org/lexicon/h1004/kjv/wlc/0-1/">bayith</a> (בַּיִת), "house, dwelling, temple." God's house is where He dwells among His people through covenant relationship and ordinances.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECTION 5: TEACHING APPLICATIONS -->
+        <button class="accordion-section">5. Teaching Applications</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction</h2>
+                
+                <p>D&C 115 addresses two foundational questions: What is the Church's official name? Why build temples amid persecution? These teaching applications provide practical ways to help learners understand and apply D&C 115's profound truths about identity, purpose, and covenant worship.</p>
+
+                <h2>1. Personal Study Applications</h2>
+                
+                <h3>Name-Centered Study</h3>
+                <p>Study the Church's official name systematically over five days:</p>
+                <ul>
+                    <li><strong>Day 1:</strong> Study "The Church" - Why "the" (definite article) matters</li>
+                    <li><strong>Day 2:</strong> Study "of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>" - Ownership and foundation</li>
+                    <li><strong>Day 3:</strong> Study "Latter-day" - This dispensation's unique role</li>
+                    <li><strong>Day 4:</strong> Study "Saints" - Covenant people set apart</li>
+                    <li><strong>Day 5:</strong> Put it all together - How the name shapes your identity</li>
+                </ul>
+
+                <h3>Temple Timeline Study</h3>
+                <p>Create a personal timeline connecting you to temple blessings:</p>
+                <ul>
+                    <li>Research when temples were built near your family line</li>
+                    <li>Identify when your ancestors received temple ordinances</li>
+                    <li>Note when you received your own temple ordinances</li>
+                    <li>Project future temple ordinances (mission, marriage, children)</li>
+                    <li>Share this timeline with family</li>
+                </ul>
+
+                <h2>2. Family Home Evening Applications</h2>
+                
+                <h3>Opening Activity: "What's in a Name?"</h3>
+                <p><strong>Setup:</strong> Write the full Church name on a large poster board, breaking it into parts.</p>
+                <p><strong>Activity:</strong> Family members take turns explaining what each part means. Discuss: "Why did the Lord reveal the official name? What does each word teach us?"</p>
+                <p><strong>Connection:</strong> The name shows we belong to <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>, live in the latter days, and are set apart as His people.</p>
+
+                <h3>Object Lesson: Building Blocks</h3>
+                <p><strong>Materials:</strong> Building blocks or LEGOs</p>
+                <p><strong>Teaching:</strong> Start building a structure, then have someone knock it down partway through. Discuss: "The Saints were building homes in Far West, and the Lord commanded them to build a temple. Then persecutors drove them away. Did God's plan fail?"</p>
+                <p><strong>Answer:</strong> No! Though they couldn't finish the Far West temple, they built others (Nauvoo, Salt Lake, and hundreds worldwide). God's work continues despite opposition.</p>
+
+                <h2>3. Sunday School Teaching Applications</h2>
+                
+                <h3>Discussion Starter</h3>
+                <p>"Imagine someone asks you, 'Why does your church have such a long name?' How would you explain that each part of the name teaches important doctrine?"</p>
+
+                <h3>Key Teaching Point</h3>
+                <p><strong>Core Principle:</strong> The Church belongs to <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>, not to any human organization or leader.</p>
+                <p><strong>Teaching Method:</strong> Create a visual showing different church names people use: "LDS Church," "Mormon Church," etc. Discuss why the full, revealed name matters.</p>
+
+                <h2>4. Seminary Teaching Applications</h2>
+                
+                <h3>Day 1: Identity in Christ</h3>
+                <p><strong>Focus:</strong> Verse 4 - The revealed name</p>
+                <p><strong>Youth Application:</strong> How does being a member of "The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>" shape your identity at school, work, and with friends?</p>
+                <p><strong>Challenge:</strong> This week, use the full Church name when introducing yourself to others.</p>
+
+                <h3>Day 2: Temple Building Shows Faith</h3>
+                <p><strong>Focus:</strong> Verses 7-8 - Temple command</p>
+                <p><strong>Teaching:</strong> The Saints were refugees with little money, yet God commanded them to build a temple. What does this teach about spiritual priorities versus material comfort?</p>
+                <p><strong>Application:</strong> What "temples" (sacred goals, spiritual patterns) should you build in your life despite challenges?</p>
+
+                <h2>5. Relief Society & Priesthood Applications</h2>
+                
+                <h3>Discussion Topic: Standing as a Witness</h3>
+                <p><strong>Opening Question:</strong> "How do you respond when someone uses nicknames for the Church instead of the full, revealed name?"</p>
+                <p><strong>Teaching:</strong> Verse 5 commands us to "arise and shine forth." Using the Lord's revealed name is one way we shine forth as His covenant people.</p>
+                <p><strong>Practical Application:</strong> Practice polite ways to correct misunderstandings: "We're actually called The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints because Christ is the head of the Church."</p>
+
+                <h2>6. Mission Applications</h2>
+                
+                <h3>Teaching Principle: Christ's Church, Not Man's</h3>
+                <p><strong>For Investigators:</strong> Help them understand the significance of the revealed name. This isn't Joseph Smith's church or any other human's organization—it belongs to <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>.</p>
+                <p><strong>Scripture:</strong> Read verse 4 together. Ask: "Why do you think the Lord cares so much about what His Church is called?"</p>
+
+            </div>
+        </div>
+
+        <!-- SECTION 6: STUDY QUESTIONS -->
+        <button class="accordion-section">6. Study Questions</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction</h2>
+                
+                <p>These questions are designed for personal reflection, journal writing, family discussion, and group study. They progress from understanding historical and textual details to applying eternal principles in modern life.</p>
+
+                <h2>Understanding the Text (10 Questions)</h2>
+                
+                <ol>
+                    <li>When and where was D&C 115 received? What was happening in Church history at this time?</li>
+                    <li>Why was an official Church name needed in 1838? What confusion existed before this revelation?</li>
+                    <li>What does each part of the Church's name teach? ("The," "Church," "of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a>," "Latter-day," "Saints")</li>
+                    <li>What temple did the Lord command the Saints to build? Was it completed? Why or why not?</li>
+                    <li>What does "arise and shine forth" mean in verse 5? How does the Church become a "standard for the nations"?</li>
+                    <li>What promises did the Lord make to faithful Saints in verses 6 and 16?</li>
+                    <li>Why did the Lord call Far West "holy" and "most holy" in verse 7?</li>
+                    <li>What is the significance of "sufficient time" in verse 11?</li>
+                    <li>How does verse 6 describe Zion and her stakes as refuge from the storm?</li>
+                    <li>What warnings did the Lord give about consequences if the Saints didn't follow His commands?</li>
+                </ol>
+
+                <h2>Personal Application (10 Questions)</h2>
+                
+                <ol start="11">
+                    <li>How does knowing the Church's name came by revelation (not human choice) affect how you respond when others criticize it?</li>
+                    <li>What difference does it make that this is Christ's Church rather than a human organization?</li>
+                    <li>When you introduce yourself as a member of "The Church of <a href="https://www.blueletterbible.org/lexicon/g2424/kjv/tr/0-1/">Jesus</a> <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/">Christ</a> of Latter-day Saints," how does the full name shape your testimony?</li>
+                    <li>How can you "arise and shine forth" in your daily life to be a standard for others?</li>
+                    <li>What responsibilities come with being "latter-day" saints in the final dispensation?</li>
+                    <li>How have you experienced your ward or stake as a "refuge from the storm" during difficult times?</li>
+                    <li>What "temples" (sacred goals, spiritual patterns) should you build in your life despite challenges?</li>
+                    <li>How does understanding that temples are essential for exalting ordinances affect your temple worship?</li>
+                    <li>When facing opposition for Church membership, how do verses 6 and 16 give you hope?</li>
+                    <li>What does taking Christ's name upon you through baptism require in practical daily choices?</li>
+                </ol>
+
+                <h2>Doctrinal Understanding (10 Questions)</h2>
+                
+                <ol start="21">
+                    <li>Why must the Church be called by Christ's name according to verse 4 and <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=eng">3 Nephi 27</a>?</li>
+                    <li>What does "latter-day" mean theologically? How does it differ from "former-day"?</li>
+                    <li>What makes someone a "saint" in scriptural terminology? Is it moral perfection or covenant relationship?</li>
+                    <li>Why are temples essential rather than optional for God's covenant people?</li>
+                    <li>How does D&C 115 connect to <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng">D&C 110</a> (Kirtland Temple manifestations)?</li>
+                    <li>What does it mean that Far West was "holy" ground? How does ground become holy?</li>
+                    <li>How do stakes function as "refuge" and "defense" in modern Church organization?</li>
+                    <li>What is the relationship between the Church's name and its mission to prepare for Christ's Second Coming?</li>
+                    <li>How does baptism connect believers to Christ's name and covenant people?</li>
+                    <li>What does D&C 115 teach about God's purposes continuing despite human failure or opposition?</li>
+                </ol>
+
+                <h2>Modern Relevance (10 Questions)</h2>
+                
+                <ol start="31">
+                    <li>How do you respond when people use "Mormon Church" or "LDS Church" instead of the full name?</li>
+                    <li>Why has the Church emphasized using the full, revealed name in recent years?</li>
+                    <li>How does your ward or stake serve as a "standard" (example) in your community?</li>
+                    <li>What opposition do modern Saints face for Church membership? How is it similar to or different from 1838?</li>
+                    <li>How can members create "refuge from the storm" for each other during trials?</li>
+                    <li>What does it mean to shine forth as Latter-day Saints in the age of social media?</li>
+                    <li>How does temple building continue to demonstrate faith amid opposition today?</li>
+                    <li>When have you seen God's promises fulfilled despite circumstances that seemed impossible?</li>
+                    <li>How do modern apostates and critics parallel those who left the Church in 1838?</li>
+                    <li>What can you learn from the Saints who faithfully prepared for a temple they never got to complete?</li>
+                </ol>
+
+            </div>
+        </div>
+
+    </div> <!-- End container -->
+
+    <!-- Bottom Navigation -->
+    <div class="nav-bar" style="margin-top: 40px; border-top: 2px solid #7c9885; border-bottom: none;">
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Lesson Home</a>
+            <a href="dc114_complete.html" class="nav-btn">Previous: D&C 114</a>
+            <a href="dc116_complete.html" class="nav-btn">Next: D&C 116</a>
+        </div>
+        <div class="nav-links">
+            <a href="dc115_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 115</a>
+            <a href="dc116_complete.html" class="nav-btn">D&C 116</a>
+            <a href="dc117_complete.html" class="nav-btn">D&C 117</a>
+            <a href="dc118_complete.html" class="nav-btn">D&C 118</a>
+            <a href="dc119_complete.html" class="nav-btn">D&C 119</a>
+            <a href="dc120_complete.html" class="nav-btn">D&C 120</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        const accordionSections = document.querySelectorAll('.accordion-section');
+        
+        accordionSections.forEach(section => {
+            section.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                panel.classList.toggle('active');
+            });
+        });
+
+        const subAccordions = document.querySelectorAll('.sub-accordion');
+        
+        subAccordions.forEach(subAccordion => {
+            subAccordion.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const subPanel = this.nextElementSibling;
+                subPanel.classList.toggle('active');
+            });
+        });
+
+        function expandAll() {
+            accordionSections.forEach(section => {
+                section.classList.add('active');
+                section.nextElementSibling.classList.add('active');
+            });
+            
+            subAccordions.forEach(subAccordion => {
+                subAccordion.classList.add('active');
+                subAccordion.nextElementSibling.classList.add('active');
+            });
+        }
+
+        function collapseAll() {
+            accordionSections.forEach(section => {
+                section.classList.remove('active');
+                section.nextElementSibling.classList.remove('active');
+            });
+            
+            subAccordions.forEach(subAccordion => {
+                subAccordion.classList.remove('active');
+                subAccordion.nextElementSibling.classList.remove('active');
+            });
+        }
+    </script>
+
+</body>
+</html>

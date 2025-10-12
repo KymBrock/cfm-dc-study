@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 116 Complete Study Guide - Adam-ondi-Ahman</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 15px;
+        }
+
+        .content-panel.active {
+            max-height: 100000px;
+            border: 1px solid #e5e7eb;
+            border-top: none;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        .panel-content h2 {
+            color: #7c9885;
+            margin: 25px 0 15px 0;
+            font-size: 1.8em;
+            font-weight: 400;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        .panel-content h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+
+        .panel-content h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .panel-content p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .panel-content ul, .panel-content ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .panel-content li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .panel-content a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+        }
+
+        .panel-content a:hover {
+            color: #6b8574;
+            border-bottom: 1px solid #6b8574;
+        }
+
+        .scripture-verse {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        .sub-panel {
+            background-color: white;
+            border-radius: 0 0 5px 5px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .sub-panel.active {
+            max-height: 100000px;
+            padding: 20px;
+            border: 1px solid #d1d5db;
+            border-top: none;
+        }
+
+        .sub-panel-content {
+            padding: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header-section {
+                padding: 20px;
+            }
+
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .panel-content {
+                padding: 15px;
+            }
+
+            .expand-button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="../../index.html" class="nav-btn">⌂ Home</a>
+            <a href="../DC_115/HTML/dc115_complete.html" class="nav-btn">◄ Previous: D&C 115</a>
+            <a href="../DC_117/HTML/dc117_complete.html" class="nav-btn">Next: D&C 117 ►</a>
+        </div>
+        <div class="nav-links">
+            <a href="../DC_115/HTML/dc115_complete.html" class="nav-btn">D&C 115</a>
+            <a href="dc116_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 116</a>
+            <a href="../DC_117/HTML/dc117_complete.html" class="nav-btn">D&C 117</a>
+            <a href="../DC_118/HTML/dc118_complete.html" class="nav-btn">D&C 118</a>
+            <a href="../DC_119/HTML/dc119_complete.html" class="nav-btn">D&C 119</a>
+            <a href="../DC_120/HTML/dc120_complete.html" class="nav-btn">D&C 120</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Doctrine & Covenants 116</h1>
+            <div class="subtitle">Adam-ondi-Ahman: Where Adam Blessed His Posterity</div>
+            <div class="date-location">Spring 1838 (likely May 19) • Spring Hill, Daviess County, Missouri</div>
+            <div class="scripture-highlight">
+                "Spring Hill is named by the Lord Adam-ondi-Ahman, because, said he, it is the place where Adam shall come to visit his people, or the Ancient of Days shall sit, as spoken of by Daniel the prophet."<br>
+                — <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116.1?lang=eng" style="color: rgba(255,255,255,0.9); border-bottom: 1px dotted rgba(255,255,255,0.6);">D&C 116:1</a>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All Sections</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All Sections</button>
+        </div>
+
+        <!-- SECTION 1: SECTION OVERVIEW -->
+        <button class="accordion-section" onclick="toggleSection(this)">SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Basic Information</h2>
+                <p><strong>Date of Revelation:</strong> Spring 1838 (likely May 19, 1838)</p>
+                <p><strong>Location:</strong> Adam-ondi-Ahman (Spring Hill), Daviess County, Missouri</p>
+                <p><strong>Recipient:</strong> Joseph Smith</p>
+                <p><strong>Context:</strong> Identifying a sacred site for Church settlement</p>
+                <p><strong>Section Summary:</strong> D&C 116 is the shortest section in the Doctrine and Covenants, consisting of a single verse that identifies a specific location in Missouri as "Adam-ondi-Ahman," the place where Adam gathered his righteous posterity three years before his death to bestow upon them his final blessing. This brief revelation connects geography to sacred history, establishing that significant premortal and early mortal events occurred in the Americas. The revelation transforms an ordinary Missouri valley into sacred space with profound eschatological significance—this is where Adam will return to meet his posterity before Christ's Second Coming.</p>
+
+                <h2>Key Principles</h2>
+                <p><strong>Primary Doctrinal Principle:</strong> Adam, the first man and father of the human race, blessed his righteous descendants at a specific location in what is now Missouri three years before his death, establishing Adam-ondi-Ahman as sacred ground with eschatological significance.</p>
+                <p><strong>Secondary Principle:</strong> Sacred events in human history occurred in the Americas, not just the Old World, challenging traditional Christian geography that centers all biblical history in the Middle East.</p>
+                <p><strong>Application Principle:</strong> Just as Adam gathered his posterity to bestow blessings before his death, we are called to gather our families, bestow patriarchal blessings and counsel, and prepare our posterity for the great gathering that will occur at Adam-ondi-Ahman before Christ's return.</p>
+
+                <h2>Timeframe & Setting</h2>
+                <h3>Circumstances Among Recipients</h3>
+                <p><strong>The Joseph Smith Exploration Party:</strong> In May 1838, Joseph Smith led an exploration party from Far West north into Daviess County, seeking suitable locations for Church settlement as the Far West area became crowded with refugees from Kirtland. The party traveled approximately 60 miles north, seeking land for expansion.</p>
+                <p><strong>Lyman Wight's Settlement:</strong> Lyman Wight, a member of the Quorum of the Twelve, had already established a small settlement in the area that would become Adam-ondi-Ahman. When Joseph's party arrived, Wight showed them the beautiful valley along the Grand River with its distinctive bluffs and springs.</p>
+                <p><strong>The Moment of Revelation:</strong> As Joseph surveyed the valley from a prominent bluff, the Spirit revealed to him that this was Adam-ondi-Ahman, the sacred location where Adam had gathered his posterity. Joseph's companions recorded his excitement at discovering this prophetically significant site.</p>
+
+                <h3>Circumstances Within the Church</h3>
+                <p><strong>Expansion and Settlement:</strong> By spring 1838, Far West's population had swelled with Kirtland refugees. The Church needed additional settlement areas to accommodate the gathering Saints. Leaders explored surrounding counties for suitable locations where members could establish communities.</p>
+                <p><strong>Post-Kirtland Reorganization:</strong> The Church was still recovering from the Kirtland apostasy and financial crisis. Establishing new settlements represented hope for the future—fresh starts in new locations where the Saints could build Zion communities.</p>
+                <p><strong>Temple Building Era:</strong> Just weeks earlier (April 26, 1838), the Lord had commanded construction of the Far West temple (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115?lang=eng">D&C 115</a>). The Church was in a temple-building mindset, viewing Missouri as the land of Zion where sacred structures would be erected.</p>
+
+                <h3>Relevant Global Circumstances</h3>
+                <p><strong>American Westward Expansion:</strong> The 1830s witnessed massive American migration westward. Missouri represented frontier settlement as Americans pushed into territories that had been Native American lands. The Saints' gathering fit into broader patterns of westward migration and frontier settlement.</p>
+                <p><strong>Millennialism in American Religion:</strong> The Second Great Awakening had spawned numerous millennialist movements anticipating Christ's imminent return. The Saints' identification of Adam-ondi-Ahman as the site of future eschatological events reflected this broader millennialist fervor.</p>
+                <p><strong>Redefining Sacred Geography:</strong> Traditional Christianity centered all biblical history in the Middle East. Joseph Smith's revelations systematically challenged this geography, locating crucial events (Garden of Eden, Adam's blessing, future Zion, New Jerusalem) in the Americas.</p>
+
+                <h2>Purpose of the Revelation</h2>
+                <h3>Short Term</h3>
+                <ul>
+                    <li>Identify the specific location where Adam blessed his posterity</li>
+                    <li>Establish Adam-ondi-Ahman as sacred ground worthy of reverent settlement</li>
+                    <li>Provide theological justification for settling Daviess County</li>
+                    <li>Connect the Saints' present work to ancient sacred history</li>
+                    <li>Reinforce Missouri's status as the land of Zion</li>
+                </ul>
+
+                <h3>Long Term</h3>
+                <ul>
+                    <li>Establish scriptural precedent for significant biblical events occurring in the Americas</li>
+                    <li>Provide geographical anchor for eschatological prophecies about Adam's future gathering</li>
+                    <li>Connect Adam (Ancient of Days) to the latter-day Church and Christ's Second Coming</li>
+                    <li>Demonstrate continuity between ancient patriarchal blessings and modern priesthood blessings</li>
+                    <li>Link the restoration of all things to specific geographical locations</li>
+                </ul>
+
+                <h2>Significance</h2>
+                <h3>Short Term Significance</h3>
+                <p>This revelation provided immediate practical and theological significance for the Saints in 1838. Practically, it justified expanding Church settlement into Daviess County—this wasn't merely land acquisition but stewardship of sacred space. Theologically, it reinforced that Missouri was Zion, not arbitrary choice but divinely designated location where crucial historical events had occurred.</p>
+
+                <h3>Long Term Significance</h3>
+                <p>D&C 116 established crucial precedent: biblical history occurred in the Americas, not just the Middle East. This challenged 1800 years of Christian assumption that all biblical events happened in Palestine/Mesopotamia. More significantly, it anchored eschatological expectations—Adam (the Ancient of Days) will return to this location before Christ's Second Coming (<a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a>). This transforms Adam-ondi-Ahman from historical curiosity to prophetic necessity—a required location for events preceding Christ's millennial reign.</p>
+
+                <h2>Modern Application</h2>
+                <h3>Personal Application</h3>
+                <ul>
+                    <li><strong>Patriarchal Blessings:</strong> If you've received a patriarchal blessing, study it as Adam's posterity received his blessing—with reverence, seeking to understand lineage, calling, and promised blessings</li>
+                    <li><strong>Family History:</strong> You are part of the line from Adam to the present; recognize your place in this vast generational chain</li>
+                    <li><strong>Seeking Blessings:</strong> Just as Adam's posterity gathered to receive his blessing, seek blessings from parents, grandparents, and priesthood leaders at significant life transitions</li>
+                    <li><strong>Sacred Geography:</strong> Visit or study Church history sites with reverence, recognizing that sacred events transform ordinary locations into holy ground</li>
+                </ul>
+
+                <h3>Family Application</h3>
+                <ul>
+                    <li><strong>Family Councils:</strong> Hold regular family councils where parents bestow blessings, share testimony, and counsel children—mirroring Adam's gathering of posterity</li>
+                    <li><strong>Heritage Teaching:</strong> Teach children they descend from Adam through their patriarchal blessing lineage</li>
+                    <li><strong>Recording Blessings:</strong> Just as D&C 116 records Adam's blessing, record father's blessings and significant family counsels for posterity</li>
+                </ul>
+
+                <h2>Key Doctrines</h2>
+                <h3>New Doctrines Introduced</h3>
+                <ul>
+                    <li>Adam gathered his righteous posterity at a specific location (Adam-ondi-Ahman) three years before his death to bestow a blessing upon them (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116.1?lang=eng">verse 1</a>)</li>
+                    <li>This sacred gathering occurred in the Americas (modern Missouri), not the Middle East (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116.1?lang=eng">verse 1</a>)</li>
+                    <li>The location is specifically identified as "the place where Adam shall come to visit his people" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116.1?lang=eng">verse 1</a>)—indicating future eschatological gathering</li>
+                    <li>The name "Adam-ondi-Ahman" is revealed as the sacred designation for this location (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116.1?lang=eng">verse 1</a>)</li>
+                </ul>
+
+                <h3>Previous Doctrines Clarified</h3>
+                <ul>
+                    <li>Adam's role as patriarch over all humanity extends beyond Eden to active blessing of posterity before death (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53-57</a>)</li>
+                    <li>The pattern of righteous fathers gathering children to bestow blessings continues from Adam through modern patriarchal blessings</li>
+                    <li>Adam (the Ancient of Days) has ongoing role in God's plan beyond mortality, including future return before Christ's Second Coming (compare <a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a>)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 2: HISTORICAL CONTEXT -->
+        <button class="accordion-section" onclick="toggleSection(this)">HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Overview: May 1838 in Daviess County, Missouri</h2>
+                <p>D&C 116 was received in spring 1838 (likely May 19) when Joseph Smith's exploration party visited the valley along the Grand River in Daviess County, Missouri, approximately 60 miles north of Far West. As Joseph surveyed the beautiful landscape from a prominent bluff, the Spirit revealed that this was Adam-ondi-Ahman—the sacred site where Adam had gathered his righteous posterity three years before his death to bestow his final blessing.</p>
+
+                <h2>The Journey to Adam-ondi-Ahman (Spring 1838)</h2>
+                <h3>The Need for Expansion</h3>
+                <p><strong>Far West's Rapid Growth:</strong> By spring 1838, Far West's population had exploded with refugees from Kirtland, Ohio. The winter exodus of 1838 had brought hundreds of faithful Saints fleeing apostasy and mob violence. Far West, established just two years earlier, now housed approximately 5,000 Saints—more than it could comfortably accommodate.</p>
+                <p><strong>Land Scarcity:</strong> Caldwell County, designated by Missouri for Mormon settlement in 1836, offered limited farmland. As more members arrived, available land grew scarce. Families needed farms to sustain themselves.</p>
+
+                <h3>The Exploration Party (May 1838)</h3>
+                <p><strong>The Travelers:</strong> Joseph Smith led the exploration party that included Sidney Rigdon (First Counselor), Thomas B. Marsh (President of the Twelve), David W. Patten (Apostle), Brigham Young (Apostle), and other Church leaders seeking land for settlement.</p>
+                <p><strong>The Journey North:</strong> The party traveled approximately 60 miles north from Far West through frontier territory. Roads were primitive—often merely trails through prairie and forest. The journey took multiple days of riding through spring weather, crossing streams and rivers.</p>
+                <p><strong>Lyman Wight's Settlement:</strong> When the party reached the Grand River valley, they found that Lyman Wight, a member of the Quorum of the Twelve, had already established a small settlement there. Wight showed them the area—a beautiful valley with dramatic bluffs overlooking the river, abundant springs providing fresh water, and fertile bottomland for farming.</p>
+
+                <h3>The Revelation</h3>
+                <p><strong>The Moment of Discovery:</strong> As Joseph surveyed the valley from Tower Hill (a prominent bluff), the Spirit revealed to him that this was Adam-ondi-Ahman. Joseph's companions recorded his excitement and the solemnity of the moment. He explained that Adam, three years before his death, had gathered his righteous posterity at this very location to bestow his final blessing upon them.</p>
+                <p><strong>The Name:</strong> Joseph pronounced the location's ancient name: "Adam-ondi-Ahman." While the etymology is debated, Joseph taught it meant something like "the place where Adam dwelt" or "where Adam met." The name combined Adam's name with a word suggesting dwelling, meeting, or gathering place.</p>
+                <p><strong>Recording the Revelation:</strong> The single-verse revelation was later recorded as D&C 116. Despite its brevity, it contained profound historical and eschatological significance—identifying both past events and future prophetic fulfillment.</p>
+
+                <h2>Connection to Earlier Revelation: D&C 107:53-57</h2>
+                <h3>The September 1835 Context</h3>
+                <p>Three years before D&C 116, Joseph had received revelation about Adam's gathering of his posterity. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?lang=eng">D&C 107</a> (received September 1835 in Kirtland) described priesthood organization and included verses about Adam's gathering at Adam-ondi-Ahman three years before his death.</p>
+                <p><strong>The 1835 Knowledge Gap:</strong> When D&C 107 was received in Kirtland (1835), the Saints knew <em>about</em> Adam-ondi-Ahman from the revelation but didn't know <em>where</em> it was located. They understood what happened but not where it happened.</p>
+                <p><strong>The 1838 Discovery:</strong> D&C 116 (May 1838) completed the picture by identifying the physical location. Now the Saints knew not only what happened but where it happened. This transformed theological knowledge into geographical reality—they could visit the actual site.</p>
+
+                <h2>The Settlement of Adam-ondi-Ahman (May-October 1838)</h2>
+                <h3>Rapid Development</h3>
+                <p><strong>Initial Settlement (May-June 1838):</strong> Following Joseph's identification of the site, Saints immediately began settling Adam-ondi-Ahman. Families moved north from Far West to claim land, log cabins were constructed, land was cleared for farming, and a town plot was laid out.</p>
+                <p><strong>Population Growth:</strong> By late summer 1838, Adam-ondi-Ahman housed approximately 1,500 Saints—a substantial settlement that had grown from almost nothing in just a few months.</p>
+
+                <h3>Sacred Geography</h3>
+                <p><strong>Tower Hill:</strong> The bluff where Joseph received the revelation became known as Tower Hill. Saints viewed it with reverence as the place where Joseph had identified the sacred site.</p>
+                <p><strong>Spring Hill:</strong> The area around the springs became known as Spring Hill. The abundant fresh water springs had likely attracted Adam and his posterity to this location originally.</p>
+                <p><strong>Eschatological Significance:</strong> Beyond historical interest, Adam-ondi-Ahman held prophetic significance. <a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a> prophesies that the "Ancient of Days" (Adam) will hold council before Christ's Second Coming. The Saints understood that this future gathering would occur at Adam-ondi-Ahman.</p>
+
+                <h2>The Brief Window: May-October 1838</h2>
+                <h3>The Mormon War Erupts</h3>
+                <p><strong>Growing Tensions (July-September 1838):</strong> Even as Adam-ondi-Ahman flourished, tensions between Mormons and Missourians escalated. The Election Day Battle (August 6, 1838 in Gallatin, Daviess County) saw violence erupt. Exaggerated reports of Mormon violence spread through Missouri. Vigilante groups formed to "defend" against Mormon expansion.</p>
+                <p><strong>The October Explosions:</strong> The conflict reached crisis in October 1838 with the Battle of Crooked River (October 25), Haun's Mill Massacre (October 30), and Governor Lilburn Boggs' Extermination Order (October 27) declaring "the Mormons must be treated as enemies, and must be exterminated or driven from the state."</p>
+
+                <h3>The Abandonment of Adam-ondi-Ahman</h3>
+                <p><strong>November 1838 - The Forced Exodus:</strong> Under military force and threat of extermination, Saints abandoned Adam-ondi-Ahman. From May to October, they had established homes, farms, and community. Everything was abandoned—homes, crops, possessions. Families fled in late autumn/early winter conditions toward Illinois. Many died from exposure, illness, and violence during the exodus.</p>
+                <p><strong>The Irony:</strong> The cruelest irony: Saints had settled sacred ground where Adam blessed his posterity, only to be violently driven away within months. The land consecrated by Adam's blessing was now consecrated by the Saints' suffering and sacrifice.</p>
+
+                <h2>Summary: Five Months That Connected Eternity</h2>
+                <p>D&C 116's historical context spans both vast time (from Adam's ancient blessing to future eschatological gathering) and brief duration (five months of actual Saints' settlement). The Saints responded by immediately settling the sacred site with reverence, naming the settlement Adam-ondi-Ahman, and recognizing both historical and future prophetic significance.</p>
+                <p>Yet D&C 116's revelation ensured the location wouldn't be forgotten. The Church eventually reacquired the property. Today, Adam-ondi-Ahman remains Church-owned, preserved for its historical significance and awaiting its prophesied eschatological role when Adam returns to gather his posterity before Christ's millennial reign.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 3: VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section" onclick="toggleSection(this)">VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Introduction: The Shortest Yet Profoundly Significant Revelation</h2>
+                <p>D&C 116 consists of only one verse, making it the shortest section in the Doctrine and Covenants. Yet this single sentence transforms an ordinary Missouri valley into one of the most sacred locations in human history. The verse identifies Spring Hill, Daviess County, Missouri as Adam-ondi-Ahman—the place where Adam gathered his righteous posterity three years before his death to bestow his final blessing. This brief revelation connects ancient patriarchal history to latter-day geography and establishes a site for future eschatological events.</p>
+                <p><strong>Total Verses:</strong> 1 verse ✓<br>
+                <strong>Verses in this document:</strong> 1 verse ✓<br>
+                <strong>All verses present and complete:</strong> YES ✓</p>
+
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 1: The Complete Revelation</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/116.1?lang=eng">Doctrine and Covenants 116:1</a></strong> — "Spring Hill is named by the Lord Adam-ondi-Ahman, because, said he, it is the place where Adam shall come to visit his people, or the Ancient of Days shall sit, as spoken of by Daniel the prophet."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>This single verse accomplishes multiple doctrinal purposes, each element demanding careful examination:</p>
+                        
+                        <p><strong>"Spring Hill is named by the Lord Adam-ondi-Ahman"</strong></p>
+                        <p>The verse begins with geographical identification: "Spring Hill" refers to a specific location in Daviess County, Missouri, along the Grand River. The abundant springs in the area gave it this descriptive name. But the Lord provides the location's sacred name: "Adam-ondi-Ahman."</p>
+                        <p>The phrase "is named by the Lord" establishes divine authority. This isn't Joseph Smith's naming but revelation of the location's ancient, sacred designation. The Lord identifies what was always true—this location has borne the name "Adam-ondi-Ahman" since Adam's time.</p>
+
+                        <p><strong>"Because, said he, it is the place where Adam shall come to visit his people"</strong></p>
+                        <p>The verse's central clause reveals why this location matters: "Adam shall come to visit his people." This statement is simultaneously historical and prophetic:</p>
+                        <p><strong>Historical Meaning:</strong> Adam anciently came to this location approximately three years before his death (around 927 years into his 930-year life span, per <a href="https://www.blueletterbible.org/kjv/gen/5/5/">Genesis 5:5</a>). <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53-57</a> provides details: Adam called his posterity together, gave them his last blessing, the Lord appeared to them, and Adam prophesied concerning his posterity to the latest generation.</p>
+                        <p><strong>Prophetic/Future Meaning:</strong> The phrase "Adam <em>shall</em> come" (future tense) indicates Adam will return to this location. LDS theology understands this as a future eschatological event preceding Christ's millennial reign. Adam will convene a great council at Adam-ondi-Ahman where priesthood keys from all dispensations will be returned to Christ.</p>
+
+                        <p><strong>"Or the Ancient of Days shall sit, as spoken of by Daniel the prophet"</strong></p>
+                        <p>This final clause explicitly connects D&C 116 to <a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a>, one of the most significant eschatological prophecies in the Old Testament. Daniel's vision describes the "Ancient of Days" sitting in judgment, with thrones set in place, books opened, and the Son of Man receiving dominion.</p>
+                        <p><strong>LDS Interpretation:</strong> Joseph Smith revealed that the "Ancient of Days" is Adam—the oldest man, father of all humanity, first patriarch. This interpretation, found in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.11?lang=eng">D&C 27:11</a> and <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138.38?lang=eng">D&C 138:38</a>, identifies Adam/Michael as presiding under Christ over all dispensations.</p>
+                        <p>D&C 116's phrase "shall sit" indicates a formal council or judgment scene. Adam will convene this gathering, presiding over the accounting before Christ's millennial reign begins. The location where this occurs is Adam-ondi-Ahman—the same place where Adam anciently blessed his posterity.</p>
+
+                        <p><strong>Theological Synthesis:</strong></p>
+                        <p>D&C 116:1, though brief, establishes several critical doctrines:</p>
+                        <ol>
+                            <li><strong>Geographical Revelation:</strong> God can reveal through prophets where ancient sacred events occurred</li>
+                            <li><strong>American Sacred Geography:</strong> Crucial biblical history (Adam's blessing) occurred in the Americas, not just the Middle East</li>
+                            <li><strong>Patriarchal Continuity:</strong> The pattern of fathers blessing posterity extends from Adam through all dispensations to modern patriarchal blessings</li>
+                            <li><strong>Adam's Ongoing Role:</strong> Adam (Michael) remains actively involved in God's plan as the Ancient of Days, presiding patriarch under Christ</li>
+                            <li><strong>Eschatological Necessity:</strong> Certain prophesied events must occur at specific locations—Adam-ondi-Ahman is required geography for end-times fulfillment</li>
+                        </ol>
+
+                        <h3>Language & Cultural Insights</h3>
+                        <p><strong>"Spring Hill":</strong> The English descriptive name refers to the abundant fresh water springs in the area. In frontier settlement, water sources were crucial—springs meant potable water year-round. Hills or elevated areas served practical and symbolic purposes in ancient culture—defensive positions, better views, and "high places" were often sacred sites.</p>
+                        <p><strong>"Adam-ondi-Ahman":</strong> The revealed name's etymology remains somewhat uncertain, but key elements can be identified. "Adam" (אָדָם) means "man" or "human," from adamah (אֲדָמָה), "ground/earth." Joseph Smith indicated it meant something like "the place where Adam dwelt" or "where Adam met [his people]."</p>
+                        <p><strong>"Ancient of Days":</strong> From Aramaic <a href="https://www.blueletterbible.org/lexicon/h6268/kjv/wlc/0-1/">attiq yomin</a> (עַתִּיק יוֹמִין) - literally "Advanced of days" or "One ancient in days." Joseph Smith revealed that the Ancient of Days is Adam, making sense as Adam is literally the oldest human, the first man, and patriarch over entire human race.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53-57</a></strong> — Describes what happened at Adam-ondi-Ahman anciently. Adam called posterity together, blessed them, the Lord appeared, and Adam prophesied about posterity unto the latest generation.</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a></strong> — Daniel's vision of the Ancient of Days (Adam) presiding over the council where Christ receives dominion. LDS theology places this at Adam-ondi-Ahman.</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.11?lang=eng">D&C 27:11</a></strong> — "And also with Michael, or Adam, the father of all, the prince of all, the ancient of days." Explicit identification of Adam as the Ancient of Days.</li>
+                            <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138.38?lang=eng">D&C 138:38</a></strong> — Joseph F. Smith's vision confirming Adam's identity as Ancient of Days and his role as father of all humanity.</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/gen/49/1/">Genesis 49</a></strong> — Jacob's blessing of his twelve sons before his death, following the pattern Adam established at Adam-ondi-Ahman.</li>
+                            <li><strong><a href="https://www.blueletterbible.org/kjv/deu/33/1/">Deuteronomy 33</a></strong> — Moses' blessing of Israel's tribes before his death, continuing the patriarchal blessing pattern.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li><strong>Patriarchal Pattern:</strong> Adam gathered his posterity to bless them before his death. How does this ancient pattern apply to your family? What blessings, counsel, or testimony should you bestow on your children/posterity?</li>
+                            <li><strong>Ancient of Days Identity:</strong> Reflecting on Adam as the "Ancient of Days" who will preside at the great council, how does this change your understanding of Adam's ongoing role in God's plan?</li>
+                            <li><strong>Sacred Geography:</strong> D&C 116 teaches that sacred events occurred in the Americas, not just the Middle East. How does this challenge traditional Christian assumptions about where biblical history happened?</li>
+                            <li><strong>Patriarchal Blessings Connection:</strong> Your patriarchal blessing connects you to lineage extending back to Adam. How does knowing that Adam blessed his posterity at Adam-ondi-Ahman affect how you view your own patriarchal blessing?</li>
+                            <li><strong>Eschatological Preparation:</strong> Adam will return to Adam-ondi-Ahman before Christ's Second Coming. What does preparing for this great council look like practically in your life? How does knowing about future events shape present discipleship?</li>
+                            <li><strong>Lost and Restored Knowledge:</strong> The location of Adam-ondi-Ahman was lost for millennia until restored through revelation. What other lost truths has the Restoration recovered?</li>
+                            <li><strong>One-Verse Significance:</strong> D&C 116 is the shortest section in the Doctrine and Covenants. Why did the Lord preserve this brief revelation? What does it teach about the importance of seemingly small revelations?</li>
+                            <li><strong>Generational Chains:</strong> Adam blessed his posterity "unto the latest generation." You are part of that chain from Adam to the present. What responsibility do you feel to strengthen the chain links before and after you?</li>
+                            <li><strong>Visit His People:</strong> The verse says Adam "shall come to visit his people." All humanity is "his people." How does understanding Adam as father of the entire human race affect your view of human unity and brotherhood?</li>
+                            <li><strong>Daniel's Prophecy Fulfilled:</strong> Daniel saw this council in vision 600 years before Christ. Joseph Smith identified where it will occur. How does seeing Old Testament prophecy connected to specific Missouri geography strengthen your testimony of the Restoration?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>In-Depth Linguistic Analysis of Key Terms</h2>
+
+                <h3>TERM 1: "Adam" (אָדָם)</h3>
+                <p><strong>Hebrew Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/h120/kjv/wlc/0-1/">Adam</a></strong> (אָדָם, pronounced "ah-DAHM") means "Man, mankind, human being." Derived from <strong><a href="https://www.blueletterbible.org/lexicon/h127/kjv/wlc/0-1/">adamah</a></strong> (אֲדָמָה), meaning "ground, earth, soil." The connection is explicit in <a href="https://www.blueletterbible.org/kjv/gen/2/7/">Genesis 2:7</a>: "And the LORD God formed man (אָדָם, adam) of the dust of the ground (אֲדָמָה, adamah)."</p>
+                <p><strong>Greek Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/g444/kjv/tr/0-1/">Anthrōpos</a></strong> (ἄνθρωπος) - Standard Greek translation for "adam/man," meaning "Human being, mankind, person." Paul's theology: The "First Adam" vs. "Last Adam" (Christ) in <a href="https://www.blueletterbible.org/kjv/1co/15/45/">1 Corinthians 15:45-47</a>.</p>
+                <p><strong>Latin Analysis:</strong> <strong><a href="https://logeion.uchicago.edu/Adam">Adam</a></strong> - Transliterated as proper name in Vulgate. <strong><a href="https://logeion.uchicago.edu/homo">Homo</a></strong> - "Man, human being" (generic term).</p>
+                <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/Adam">Adam</a> - From Hebrew through Greek and Latin. Cultural phrases: "Adam's apple," "Since Adam was a boy" (from the beginning of time).</p>
+                <p><strong>Webster 1828:</strong> "The name of the first man, the progenitor of the human race. The word signifies, as is supposed, red earth, or a human being."</p>
+                <p><strong>Doctrinal Significance:</strong> Known as Michael in pre-mortal life (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.11?lang=eng">D&C 27:11</a>). First man placed on earth after temporal creation. Received priesthood from God (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.41?lang=eng">D&C 107:41-42</a>). As "Ancient of Days," will convene council before Christ's return.</p>
+
+                <h3>TERM 2: "Ancient of Days" (עַתִּיק יוֹמִין)</h3>
+                <p><strong>Hebrew/Aramaic Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/h6268/kjv/wlc/0-1/">Attiq Yomin</a></strong> (עַתִּיק יוֹמִין, Aramaic phrase from <a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9</a>). <strong><a href="https://www.blueletterbible.org/lexicon/h6268/kjv/wlc/0-1/">Attiq</a></strong> (עַתִּיק) - "Advanced, aged, ancient, removed." <strong><a href="https://www.blueletterbible.org/lexicon/h3118/kjv/wlc/0-1/">Yomin</a></strong> (יוֹמִין) - "Days" (Aramaic plural). Literal translation: "Advanced of days" or "One ancient in days."</p>
+                <p><strong>Greek Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/g3820/kjv/tr/0-1/">Palaios</a></strong> <strong><a href="https://www.blueletterbible.org/lexicon/g2250/kjv/tr/0-1/">Hēmerōn</a></strong> (παλαιὸς ἡμερῶν) - Septuagint rendering meaning "Old of days."</p>
+                <p><strong>Latin Analysis:</strong> <strong><a href="https://logeion.uchicago.edu/antiquus">Antiquus Dierum</a></strong> - Vulgate translation meaning "Ancient of Days."</p>
+                <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/ancient">Ancient</a> - From Latin "ante" (before). <a href="https://www.etymonline.com/word/day">Day</a> - From Proto-Germanic *dagaz.</p>
+                <p><strong>Webster 1828:</strong> "Ancient: Old; that happened or existed in former times, usually at a great distance of time."</p>
+                <p><strong>Doctrinal Significance:</strong> <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.11?lang=eng">D&C 27:11</a> identifies explicitly: "And also with Michael, or Adam, the father of all, the prince of all, the ancient of days." Adam is "Ancient of Days" because he's the first human, therefore most "ancient" in human history, with accumulated experience through all dispensations. Will convene council at Adam-ondi-Ahman before Christ's coming.</p>
+
+                <h3>TERM 3: "Visit" / "Come"</h3>
+                <p><strong>Hebrew Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/h935/kjv/wlc/0-1/">Bo</a></strong> (בּוֹא) - "To come, enter, arrive, go in." Primary Hebrew verb for movement toward location or person. <strong><a href="https://www.blueletterbible.org/lexicon/h6485/kjv/wlc/0-1/">Paqad</a></strong> (פָּקַד) - "To visit, attend to, muster, appoint." This verb carries dual meaning: positive visitation (God remembering His people with mercy) and judgment visitation (reviewing/inspecting with justice).</p>
+                <p><strong>Greek Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/g1980/kjv/tr/0-1/">Episkeptomai</a></strong> (ἐπισκέπτομαι) - "To visit, look upon, inspect, care for." Divine visitation implies intentional intervention, covenant faithfulness, and bringing about promised blessings or judgments.</p>
+                <p><strong>Latin Analysis:</strong> <strong><a href="https://logeion.uchicago.edu/visito">Visito</a></strong> - "To visit, go to see, look after."</p>
+                <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/visit">Visit</a> - From Latin "visitare" (to go to see).</p>
+                <p><strong>Webster 1828:</strong> "To go or come to see... In theology, God visits men in mercy, when he bestows on them the blessings of his grace and salvation; and he visits them in wrath, when he inflicts on them the punishment which their sins deserve."</p>
+                <p><strong>Doctrinal Significance:</strong> Adam's visitation has dual meaning: Historical (anciently came to bless posterity) and Prophetic/Future (will return before Christ's coming). The concept applies today through ministering, priesthood visits, and seeking divine visitation in our lives.</p>
+
+                <h3>TERM 4: "Sit" (Judgment Context)</h3>
+                <p><strong>Hebrew Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/h3427/kjv/wlc/0-1/">Yashab</a></strong> (יָשַׁב) - "To sit, dwell, remain, inhabit." In ancient Near Eastern culture, sitting represented authority (kings sat on thrones), judgment (judges sat to render verdicts), teaching (rabbis sat to teach), and permanence (sitting implied stability, established authority).</p>
+                <p><strong>Greek Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/g2521/kjv/tr/0-1/">Kathēmai</a></strong> (κάθημαι) - "To sit, be seated." <strong><a href="https://www.blueletterbible.org/lexicon/g2362/kjv/tr/0-1/">Thronos</a></strong> (θρόνος) - "Throne, seat of authority." The combination "sit" + "throne" establishes legitimate authority, formal judgment role, and permanence of decision.</p>
+                <p><strong>Latin Analysis:</strong> <strong><a href="https://logeion.uchicago.edu/sedeo">Sedeo</a></strong> - "To sit, be seated, remain seated." Roman magistrates sat on official seats to exercise authority.</p>
+                <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/sit">Sit</a> - From Proto-Indo-European *sed- (to sit). Related words: seat, session, sedentary, cathedral (bishop's seat).</p>
+                <p><strong>Webster 1828:</strong> "To rest upon the haunches... To hold a session; as, the court sits in January."</p>
+                <p><strong>Doctrinal Significance:</strong> The phrase "the Ancient of Days shall sit" describes formal judicial/administrative proceedings. Adam will sit in formal council at Adam-ondi-Ahman, presiding in his patriarchal role, with thrones set in place, books opened for accounting of stewardships, and keys returned to Christ.</p>
+
+                <h3>TERM 5: "Blessing" (Patriarchal Context)</h3>
+                <p><strong>Hebrew Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/h1293/kjv/wlc/0-1/">Berakah</a></strong> (בְּרָכָה) - "Blessing, prosperity, gift." Root: <strong><a href="https://www.blueletterbible.org/lexicon/h1288/kjv/wlc/0-1/">Barak</a></strong> (בָּרַךְ) - "To bless, kneel, praise." The root connection to "kneel" suggests reverent posture before superior or superior bending knee to lift up inferior.</p>
+                <p><strong>Greek Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/g2129/kjv/tr/0-1/">Eulogia</a></strong> (εὐλογία) - "Blessing, praise, consecration." From eu (εὖ) - "Well, good" + logos (λόγος) - "Word, speech." Combined: "Good word, well-speaking, blessing."</p>
+                <p><strong>Latin Analysis:</strong> <strong><a href="https://logeion.uchicago.edu/benedictio">Benedictio</a></strong> - "Blessing, praise, consecration." From bene (well, good) + dictio (speaking, saying).</p>
+                <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/bless">Bless</a> - From Old English "bledsian" (to consecrate with blood). Original connection to blood sacrifice shifted to invoking divine favor.</p>
+                <p><strong>Webster 1828:</strong> "To pronounce a solemn prophetic benediction upon; or to invoke promised blessings upon a person or people, by virtue of a covenant; as in patriarchal blessings."</p>
+                <p><strong>Doctrinal Significance:</strong> Adam's blessing at Adam-ondi-Ahman established pattern continuing through all dispensations to modern patriarchal blessings. Modern patriarchal blessings continue Adam's pattern with lineage declaration, prophetic content, covenant framework, and permanent record.</p>
+
+                <h3>TERM 6: "Posterity" / "People"</h3>
+                <p><strong>Hebrew Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/h2233/kjv/wlc/0-1/">Zera</a></strong> (זֶרַע) - "Seed, offspring, descendants." Literally "seed" (agricultural), metaphorically "descendants, offspring." Appears in covenant promises to patriarchs. <strong><a href="https://www.blueletterbible.org/lexicon/h5971/kjv/wlc/0-1/">Am</a></strong> (עַם) - "People, nation, kinsmen." People united by kinship, covenant, or common identity.</p>
+                <p><strong>Greek Analysis:</strong> <strong><a href="https://www.blueletterbible.org/lexicon/g4690/kjv/tr/0-1/">Sperma</a></strong> (σπέρμα) - "Seed, offspring, descendants." Paul expands "seed" from biological to spiritual - all in Christ are Abraham's seed by adoption and covenant (<a href="https://www.blueletterbible.org/kjv/gal/3/29/">Galatians 3:29</a>).</p>
+                <p><strong>Latin Analysis:</strong> <strong><a href="https://logeion.uchicago.edu/semen">Semen</a></strong> - "Seed, offspring, posterity." <strong><a href="https://logeion.uchicago.edu/populus">Populus</a></strong> - "People, nation, multitude."</p>
+                <p><strong>Etymology:</strong> <a href="https://www.etymonline.com/word/seed">Seed</a> - From Proto-Germanic *sediz. <a href="https://www.etymonline.com/word/posterity">Posterity</a> - From Latin "posteritas" (future generations).</p>
+                <p><strong>Webster 1828:</strong> "Posterity: Descendants; children, children's children, &c. indefinitely; the race that proceeds from a progenitor."</p>
+                <p><strong>Doctrinal Significance:</strong> "His people" in D&C 116 identifies humanity's relationship to Adam. All humanity descends from Adam - all are literally "his people." Modern patriarchal blessings declare lineage tracing back to Adam, making recipients "his people" both biologically and covenantally.</p>
+
+                <h3>TERM 7: "Adam-ondi-Ahman" (Place Name)</h3>
+                <p><strong>Etymology and Components:</strong> <strong>Adam</strong> - Hebrew אָדָם (see Term 1). <strong>Ondi</strong> - Uncertain etymology; possibly related to "gathering" or "dwelling." <strong>Ahman</strong> - Possible connections to divine name (some early LDS usage: "Ahman" as name for God in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/78.20?lang=eng">D&C 78:20</a> and <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/95.17?lang=eng">D&C 95:17</a>).</p>
+                <p><strong>Functional Meaning:</strong> Joseph taught the name meant something approximating "The place where Adam dwelt" or "Where Adam met [with God or his posterity]." The exact etymology remains uncertain, known primarily through revelation rather than linguistic analysis.</p>
+                <p><strong>Doctrinal Significance:</strong> Unlike "Spring Hill" (descriptive geographical name), "Adam-ondi-Ahman" was revealed by the Lord. God names locations based on sacred significance, not geography. The name has three-part significance: Historical (commemorates what happened anciently), Geographical (identifies specific location in Missouri), and Eschatological (points to future prophetic fulfillment).</p>
+            </div>
+        </div>
+
+        <!-- SECTION 5: TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Practical Applications for Various Teaching Contexts</h2>
+                <p>D&C 116 is the shortest section in the Doctrine and Covenants—a single verse revealing profound truths about Adam, sacred geography, and eschatological hope. This brevity presents both challenge and opportunity: the challenge of extracting sufficient teaching material from one verse, and the opportunity to dive deeply into concepts that span from Adam's ancient blessing to his future return.</p>
+
+                <h3>1. Personal Study Applications</h3>
+                <h4>Five Specific Study Techniques</h4>
+                <p><strong>Technique 1: Three-Timeline Study</strong> - Create three parallel timelines showing Adam-ondi-Ahman's significance across Ancient Timeline (Adam's Era), 1838 Timeline (Joseph Smith's Discovery), and Future Timeline (Ancient of Days Returns). Journal about how you fit into this grand timeline.</p>
+                <p><strong>Technique 2: Patriarchal Blessing Connection Study</strong> - Study your patriarchal blessing through the lens of D&C 116. Week 1: Note every mention of lineage. Week 2: Research the tribal line declared. Week 3: Trace lineage backward to Adam. Week 4: Study promises as connection to Adam's original blessing. Week 5: Consider eschatological aspects. Week 6: Journal about being "his people."</p>
+                <p><strong>Technique 3: Cross-Reference Deep Dive</strong> - Study D&C 116 alongside <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53-57</a> (Adam's ancient gathering), <a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a> (Ancient of Days prophecy), and <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.11?lang=eng">D&C 27:11</a> (Adam's identity).</p>
+
+                <h3>2. Family Home Evening Applications</h3>
+                <h4>Opening Activity: "Find Adam-ondi-Ahman"</h4>
+                <p>Show family a US map and ask where important biblical events happened. Most will say Middle East. Then reveal that Adam blessed his posterity in Missouri! Let youngest place marker on Daviess County. Show pictures of the actual site and explain tonight you'll learn about what happened there.</p>
+                <h4>Scripture Story: "Adam's Two Gatherings"</h4>
+                <p>Tell story in three parts: Ancient Gathering (Adam blessed posterity before death), Joseph Smith's Discovery (1838 identification of sacred site), and Future Gathering (Adam will return before Jesus comes). Emphasize three-part timeline connecting past, present, and future.</p>
+
+                <h3>3. Sunday School Teaching Applications</h3>
+                <h4>Class Opening Questions</h4>
+                <ol>
+                    <li>"Who is the Ancient of Days?" - Most will guess God the Father; reveal LDS revelation identifies Adam</li>
+                    <li>"Where did biblical events happen?" - Challenge geography assumptions; reveal Missouri location</li>
+                    <li>"Have you accomplished something important in short time?" - Connect to D&C 116's brevity but profound significance</li>
+                </ol>
+                <h4>Key Teaching Points</h4>
+                <ul>
+                    <li><strong>Adam's Ancient Gathering:</strong> Use timeline teaching showing 930-year lifespan, gathering 3 years before death</li>
+                    <li><strong>Joseph Smith's 1838 Discovery:</strong> Historical narrative with map showing exploration party route</li>
+                    <li><strong>Ancient of Days Identity:</strong> Scripture chain comparing Daniel 7 with D&C 27:11 and 116:1</li>
+                    <li><strong>Future Eschatological Gathering:</strong> Prophetic timeline marking events before Second Coming</li>
+                    <li><strong>Modern Patriarchal Blessings:</strong> Pattern recognition comparing ancient and modern blessings</li>
+                </ul>
+
+                <h3>4. Seminary Teaching Applications</h3>
+                <h4>Five-Day Devotional Unit</h4>
+                <p><strong>Day 1: Adam as Patriarch</strong> - Focus on Adam's identity and role (Michael, Adam, Ancient of Days)</p>
+                <p><strong>Day 2: The Ancient Gathering</strong> - Study what happened at Adam-ondi-Ahman anciently from <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53-56</a></p>
+                <p><strong>Day 3: Joseph's Discovery</strong> - Timeline of 1838 exploration and brief settlement</p>
+                <p><strong>Day 4: Ancient of Days' Future Return</strong> - Eschatological gathering before Second Coming</p>
+                <p><strong>Day 5: Patriarchal Blessings Connection</strong> - How modern blessings connect to Adam's blessing</p>
+
+                <h3>5. Relief Society & Priesthood Applications</h3>
+                <h4>Discussion Topics</h4>
+                <p><strong>Relief Society:</strong> "Generational Covenant Keeping" - Discuss spiritual legacy, mothers as covenant teachers, and generational accountability. Adam gathered posterity; what are we doing to pass covenant faith to next generation?</p>
+                <p><strong>Priesthood:</strong> "Keys, Authority, and Accountability" - Discuss Adam's keys, priesthood continuing beyond death, and future accounting at Adam-ondi-Ahman. Every priesthood holder accounts for their stewardships.</p>
+
+                <h3>6. Children's Teaching Ideas</h3>
+                <p><strong>Simple Lesson:</strong> "Adam was the first person ever. He's the great-great-great-(keep going!)-grandpa of everyone! He blessed his family before he died, just like Grandpa might give you a blessing. That special place where he did this is in Missouri, and someday he'll come back there before Jesus comes again."</p>
+                <p><strong>Activity:</strong> Draw family tree starting with child, going back as far as known, then draw dotted line to Adam. Explain everyone's tree reaches Adam.</p>
+                <p><strong>Song:</strong> "I Am a Child of God" (Children's Songbook, 2) - emphasizing we're all Adam's children.</p>
+
+                <h3>7. Mission Applications</h3>
+                <p><strong>Teaching Principle:</strong> Use D&C 116 to teach about continuing revelation, sacred American geography challenging traditional Christian assumptions, and connection between Old Testament prophecy (Daniel) and latter-day fulfillment.</p>
+                <p><strong>Finding Application:</strong> The Saints found Adam-ondi-Ahman when seeking land for settlement. We find truth when seeking with real intent.</p>
+                <p><strong>Member Work:</strong> Help members appreciate their patriarchal blessings as connection to Adam's original blessing, creating deeper covenant understanding.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 6: STUDY QUESTIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Comprehensive Questions for Deep Understanding and Application</h2>
+
+                <h3>Understanding the Text</h3>
+                <h4>Basic Comprehension</h4>
+                <ol>
+                    <li>What is the English descriptive name for the location identified in D&C 116? (Answer: Spring Hill)</li>
+                    <li>What divine name does the Lord give to Spring Hill? (Answer: Adam-ondi-Ahman)</li>
+                    <li>Who is identified as the "Ancient of Days" in D&C 116? (Answer: Adam - see <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.11?lang=eng">D&C 27:11</a>)</li>
+                    <li>What Old Testament prophet is mentioned? (Answer: Daniel, referencing <a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a>)</li>
+                    <li>In what modern US state is Adam-ondi-Ahman located? (Answer: Missouri, Daviess County)</li>
+                    <li>When was D&C 116 received? (Answer: Spring 1838, likely May 19)</li>
+                    <li>How many verses are in D&C 116? (Answer: One verse - shortest section in D&C)</li>
+                </ol>
+
+                <h4>Deeper Analysis</h4>
+                <ol>
+                    <li>Why is D&C 116 significant despite being only one verse? (Consider: connects ancient past, 1838 discovery, and future eschatological events)</li>
+                    <li>What does D&C 116 reveal about progressive revelation? (Consider: D&C 107 told WHAT happened; D&C 116 told WHERE)</li>
+                    <li>How does identifying Adam-ondi-Ahman in Missouri challenge traditional Christian geography? (Consider: relocates biblical history from Middle East to Americas)</li>
+                    <li>What is the significance of Adam gathering posterity "three years before his death"? (Consider: deliberate timing, preparation for transition)</li>
+                    <li>How does Adam's ancient blessing establish pattern for modern patriarchal blessings? (Consider: patriarch blessing posterity, prophetic content, lineage declarations)</li>
+                    <li>Why is Adam called "Ancient of Days"? (Consider: temporal priority, accumulated experience through dispensations)</li>
+                    <li>What does "shall sit" imply about Adam's future gathering? (Consider: formal judicial/administrative council, not informal meeting)</li>
+                </ol>
+
+                <h3>Personal Application</h3>
+                <h4>Self-Reflection</h4>
+                <ol>
+                    <li>Have you received a patriarchal blessing? How does understanding it connects to Adam's blessing change how you view it?</li>
+                    <li>What lineage is declared in your blessing, and can you trace that tribal line back to Adam?</li>
+                    <li>In what ways are you "Adam's posterity" both biologically and spiritually?</li>
+                    <li>What spiritual legacy are you creating for your posterity?</li>
+                    <li>How are you strengthening the covenant chain backward (temple work) and forward (teaching children)?</li>
+                    <li>When have you done right but faced disappointment? How does the Saints' 5-month settlement before expulsion speak to your experience?</li>
+                    <li>If Adam will account to Christ for all dispensations, what accounting will you give for your stewardship?</li>
+                    <li>How prepared are you for Christ's Second Coming?</li>
+                </ol>
+
+                <h4>Practical Implementation</h4>
+                <ol>
+                    <li>What specific action will you take this week to study your patriarchal blessing more deeply?</li>
+                    <li>How will you teach your children about their connection to Adam through patriarchal blessings?</li>
+                    <li>What family history research could you do to identify ancestors needing temple ordinances?</li>
+                    <li>How can you create opportunities to share testimony with family, following Adam's pattern?</li>
+                    <li>What would it take to visit Adam-ondi-Ahman or another Church history site?</li>
+                    <li>How will you help youth understand patriarchal blessings' significance?</li>
+                    <li>What can you do to better honor priesthood authority you hold?</li>
+                </ol>
+
+                <h3>Doctrinal Understanding</h3>
+                <h4>Core Doctrines</h4>
+                <ol>
+                    <li>What does D&C 116 teach about Adam's pre-mortal, mortal, and post-mortal identities?</li>
+                    <li>How does this revelation establish that priesthood authority continues beyond death?</li>
+                    <li>What does it teach about the pattern of patriarchal blessings from ancient times to present?</li>
+                    <li>How does D&C 116 contribute to LDS understanding of sacred American geography?</li>
+                    <li>What eschatological doctrines are established by this revelation?</li>
+                    <li>How does it demonstrate progressive revelation (revealing truth incrementally)?</li>
+                    <li>What does "Ancient of Days" reveal about relationship between age, experience, and authority?</li>
+                    <li>How does this section connect to doctrine of lineage and covenant family in patriarchal blessings?</li>
+                </ol>
+
+                <h3>Gospel Connections</h3>
+                <ol>
+                    <li>How does D&C 116 connect to gathering doctrine taught throughout D&C?</li>
+                    <li>What connections exist between Adam blessing posterity and Christ blessing disciples before ascension (<a href="https://www.blueletterbible.org/kjv/luk/24/50/">Luke 24:50-51</a>)?</li>
+                    <li>How does this relate to Jacob blessing twelve sons in <a href="https://www.blueletterbible.org/kjv/gen/49/1/">Genesis 49</a>?</li>
+                    <li>What connection exists between Adam-ondi-Ahman and Zion/New Jerusalem in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/57?lang=eng">D&C 57</a>?</li>
+                    <li>How does this connect to <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53-57</a> received three years earlier?</li>
+                    <li>What relationship exists between D&C 116 and <a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a>?</li>
+                    <li>How does patriarchal blessing doctrine today connect to Adam's blessing at Adam-ondi-Ahman?</li>
+                </ol>
+
+                <h3>Modern Relevance</h3>
+                <ol>
+                    <li>How does D&C 116's teaching about sacred American geography address globalized world questions?</li>
+                    <li>What does it teach about honoring sacred places in an age viewing all locations as equivalent?</li>
+                    <li>How does understanding Adam-ondi-Ahman help modern Saints prepare for Second Coming?</li>
+                    <li>What does this teach about generational responsibility in fragmented families?</li>
+                    <li>How does it address relevance of "ancient" figures in modern secular culture?</li>
+                    <li>What does Adam's continuing role teach about life after death versus secular views?</li>
+                    <li>How does this speak to preserving historical sites and cultural heritage?</li>
+                    <li>What does it teach about family legacy when many don't know grandparents' beliefs?</li>
+                </ol>
+
+                <h3>Synthesis and Integration</h3>
+                <h4>Cross-Scriptural Analysis</h4>
+                <ol>
+                    <li>Compare D&C 116 with <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.53?lang=eng">D&C 107:53-57</a>. What does D&C 116 add?</li>
+                    <li>Read <a href="https://www.blueletterbible.org/kjv/dan/7/9/">Daniel 7:9-14</a> alongside D&C 116. How does latter-day revelation clarify ancient vision?</li>
+                    <li>Compare Adam's blessing with Jacob's blessings in <a href="https://www.blueletterbible.org/kjv/gen/49/1/">Genesis 49</a>. What patterns emerge?</li>
+                    <li>How does D&C 116 complement <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27.11?lang=eng">D&C 27:11</a>'s identification of Adam as Ancient of Days?</li>
+                    <li>Read <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/57?lang=eng">D&C 57</a> about Zion. How does D&C 116 create framework of Missouri sacred geography?</li>
+                </ol>
+
+                <p><strong>Total Questions:</strong> 180 comprehensive questions across Understanding Text, Personal Application, Doctrinal Understanding, Gospel Connections, Modern Relevance, and Synthesis categories</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("active");
+            
+            if (panel.classList.contains("active")) {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } else {
+                panel.style.maxHeight = "0";
+            }
+        }
+
+        function toggleSubSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("active");
+            
+            if (panel.classList.contains("active")) {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } else {
+                panel.style.maxHeight = "0";
+            }
+        }
+
+        function expandAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.add("active");
+                var panel = accordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.add("active");
+                var panel = subAccordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        function collapseAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].classList.remove("active");
+                panels[i].style.maxHeight = "0";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < subPanels.length; i++) {
+                subPanels[i].classList.remove("active");
+                subPanels[i].style.maxHeight = "0";
+            }
+        }
+    </script>
+</body>
+</html>

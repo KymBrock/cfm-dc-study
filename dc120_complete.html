@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 120 Complete Study Guide - Council on the Disposition of Tithes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px 15px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 5px;
+            margin: 15px 0 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        .sub-panel {
+            background-color: #fafafa;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+        }
+
+        .sub-panel-content {
+            padding: 20px;
+        }
+
+        .panel-content h2 {
+            color: #7c9885;
+            margin: 25px 0 15px 0;
+            font-size: 1.6em;
+            border-bottom: 2px solid #c6d4c8;
+            padding-bottom: 8px;
+        }
+
+        .panel-content h3 {
+            color: #6b8574;
+            margin: 20px 0 12px 0;
+            font-size: 1.3em;
+        }
+
+        .panel-content h4 {
+            color: #5a6d5f;
+            margin: 15px 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        .panel-content p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .panel-content ul, .panel-content ol {
+            margin: 12px 0 12px 30px;
+        }
+
+        .panel-content li {
+            margin: 8px 0;
+            line-height: 1.7;
+        }
+
+        .panel-content a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+            transition: all 0.2s ease;
+        }
+
+        .panel-content a:hover {
+            color: #6b8574;
+            border-bottom: 1px solid #6b8574;
+        }
+
+        .panel-content strong {
+            color: #5a6d5f;
+            font-weight: 600;
+        }
+
+        .panel-content em {
+            font-style: italic;
+            color: #6b8574;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header-section {
+                padding: 25px 20px;
+            }
+
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .site-title {
+                font-size: 1.5em;
+            }
+
+            .accordion-section {
+                font-size: 1em;
+                padding: 14px;
+            }
+
+            .panel-content {
+                padding: 20px;
+            }
+
+            .expand-button {
+                font-size: 0.95em;
+                padding: 10px 18px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="../../index.html" class="nav-btn">⌂ Home</a>
+            <a href="../DC_119/HTML/dc119_complete.html" class="nav-btn">◄ Previous: D&C 119</a>
+        </div>
+        <div class="nav-links">
+            <a href="../DC_115/HTML/dc115_complete.html" class="nav-btn">D&C 115</a>
+            <a href="../DC_116/HTML/dc116_complete.html" class="nav-btn">D&C 116</a>
+            <a href="../DC_117/HTML/dc117_complete.html" class="nav-btn">D&C 117</a>
+            <a href="../DC_118/HTML/dc118_complete.html" class="nav-btn">D&C 118</a>
+            <a href="../DC_119/HTML/dc119_complete.html" class="nav-btn">D&C 119</a>
+            <a href="dc120_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 120</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Doctrine & Covenants 120</h1>
+            <div class="subtitle">Council on the Disposition of Tithes</div>
+            <div class="date-location">July 8, 1838 • Far West, Missouri</div>
+            <div class="scripture-highlight">
+                "The disposition of the properties which have been tithed shall be disposed of by a council, composed of the First Presidency of my Church, and of the bishop and his council, and by my high council; and by mine own voice unto them, saith the Lord."<br>
+                — <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/120.1?lang=eng" style="color: rgba(255,255,255,0.9); border-bottom: 1px dotted rgba(255,255,255,0.6);">D&C 120:1</a>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+
+        <!-- Section 1: Section Overview -->
+        <button class="accordion-section" onclick="toggleSection(this)">1. SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Basic Information</h2>
+                <p><strong>Date of Revelation:</strong> July 8, 1838</p>
+                <p><strong>Location:</strong> Far West, Caldwell County, Missouri</p>
+                <p><strong>Recipients:</strong> The Church of Jesus Christ of Latter-day Saints; specifically addressing financial stewardship through appointed councils</p>
+                <p><strong>Historical Summary:</strong> Given the same day as <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng">D&C 119</a> (the law of tithing), D&C 120 establishes the Council on the Disposition of Tithes—defining who has authority to manage tithing funds and how decisions should be made. This brief but critical revelation creates accountability structures and collective governance for sacred finances, protecting against mismanagement or individual control of Church resources.</p>
+
+                <h2>Key Principles</h2>
+                
+                <h3>Primary Principles:</h3>
+                <ul>
+                    <li><strong>Council-Based Governance:</strong> Sacred resources require collective wisdom, not individual control</li>
+                    <li><strong>Stewardship Accountability:</strong> Those who manage must answer to God and proper authority</li>
+                    <li><strong>Divine Oversight:</strong> "By mine own voice unto them"—the Lord participates in financial decisions through revelation</li>
+                </ul>
+
+                <h3>Secondary Principles:</h3>
+                <ul>
+                    <li><strong>Transparency Through Structure:</strong> Public revelation of management system creates trust</li>
+                    <li><strong>Checks and Balances:</strong> Multiple perspectives (prophetic, administrative, deliberative) ensure wisdom</li>
+                    <li><strong>Sacred Stewardship:</strong> Tithing is the Lord's property requiring sacred handling</li>
+                </ul>
+
+                <h3>Application Principles:</h3>
+                <ul>
+                    <li><strong>Seek Counsel:</strong> Important decisions benefit from multiple perspectives</li>
+                    <li><strong>Build Accountability:</strong> Personal stewardships improve with oversight and counsel</li>
+                    <li><strong>Invite Divine Guidance:</strong> Financial decisions should involve prayer and revelation</li>
+                </ul>
+
+                <h2>Timeframe & Setting (4 Layers)</h2>
+                
+                <h3>Layer 1: Recipients' Circumstances</h3>
+                <p>Joseph Smith and Church leaders were establishing the Church in Missouri after fleeing persecution in Ohio. The Church had experienced significant financial difficulties (Kirtland Safety Society collapse, mounting debts, property losses). The law of tithing (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng">D&C 119</a>) had just been revealed, creating the need for a system to manage incoming funds properly. Previous financial mismanagement and accusations of impropriety made transparent, accountable systems essential.</p>
+
+                <h3>Layer 2: Church Context</h3>
+                <p>The Church was growing rapidly but lacked established financial infrastructure. Members were gathering to Missouri, requiring resources for settlement. Temple building in Far West had been announced. The need for funds was great, but so was the need for trust—members needed confidence that their tithes would be used wisely and sacredly. Previous financial challenges had created skepticism about Church financial management.</p>
+
+                <h3>Layer 3: Local/Regional Context</h3>
+                <p>Missouri was a frontier region with limited banking infrastructure and economic instability. Anti-Mormon sentiment was rising, with accusations against Joseph Smith including financial impropriety. The Church needed to establish legitimacy and demonstrate responsible financial stewardship. Local opposition made transparency and accountability even more critical to maintain member confidence and counter external criticism.</p>
+
+                <h3>Layer 4: Global Context</h3>
+                <p>1838 saw economic depression affecting much of the United States (Panic of 1837 continuing). Religious organizations across America were experiencing financial scandals and leadership failures. The broader context of religious and financial instability made D&C 120's establishment of accountability structures particularly timely and necessary.</p>
+
+                <h2>Purpose of Revelation</h2>
+                
+                <h3>Short-Term Purpose:</h3>
+                <ul>
+                    <li>Establish clear authority structure for managing tithing funds</li>
+                    <li>Create accountability to prevent mismanagement or accusations thereof</li>
+                    <li>Define which councils/leaders have stewardship over Church finances</li>
+                    <li>Provide divine sanction for financial decision-making structures</li>
+                </ul>
+
+                <h3>Long-Term Purpose:</h3>
+                <ul>
+                    <li>Create enduring pattern of council-based financial governance</li>
+                    <li>Establish principle that sacred funds require collective wisdom and divine guidance</li>
+                    <li>Protect the Church from financial abuse or autocratic control</li>
+                    <li>Demonstrate God's concern for proper temporal administration, not just spiritual matters</li>
+                </ul>
+
+                <h2>Significance</h2>
+                
+                <h3>Immediate Significance:</h3>
+                <p>Provided immediate clarity on who could authorize spending of tithing funds. Created trust among members that their contributions would be managed responsibly. Protected Joseph Smith from accusations of unilateral financial control. Established formal structure where none had existed, bringing order to Church finances.</p>
+
+                <h3>Enduring Significance:</h3>
+                <p>The Council on the Disposition of Tithes continues to function today exactly as outlined in D&C 120. The principle of council-based financial governance has protected the Church from the financial scandals that have plagued other religious organizations. The revelation demonstrates that God cares about organizational systems and structures, not just doctrinal teachings. It establishes the pattern that sacred resources require sacred, accountable management.</p>
+
+                <h2>Cultural Insights</h2>
+                
+                <h3>Original Context:</h3>
+                <p>In 1838 America, religious financial scandals were common. Many ministers enriched themselves from congregational funds. Banking was unstable, with frequent failures. Frontier communities operated largely on trust and reputation. The establishment of formal councils for financial oversight was unusually progressive—most churches gave pastors or bishops unilateral financial control. Joseph Smith's willingness to subject financial decisions to council review was counter-cultural and demonstrated genuine commitment to accountability.</p>
+
+                <h3>Modern Parallels:</h3>
+                <p>Modern non-profit organizations are required by law to have boards of directors with financial oversight—a secular version of D&C 120's council principle. Corporate governance emphasizes checks and balances, collective decision-making, and accountability structures similar to what D&C 120 established for the Church in 1838. The revelation's principles are now recognized as best practices in organizational management, though they were revelatory in their time.</p>
+
+                <h2>Modern Application (5 Areas)</h2>
+                
+                <h3>Personal Application:</h3>
+                <p>Establish personal accountability in financial decisions. Consult spouse/trusted advisors before major purchases or investments. Create family councils for significant financial decisions. Recognize that even personal finances are stewardships from God requiring prayerful, wise management.</p>
+
+                <h3>Family Application:</h3>
+                <p>Hold regular family councils to discuss finances openly and collectively. Teach children principles of stewardship and accountability. Model the pattern of seeking multiple perspectives before decisions. Create transparency in family finances appropriate to children's ages/maturity.</p>
+
+                <h3>Church Community Application:</h3>
+                <p>Support and sustain Church leaders who oversee finances. Trust the council-based system rather than demanding unilateral control or detailed public accounting. Serve in callings involving resource management with integrity and accountability. Participate meaningfully in ward council when financial needs are discussed.</p>
+
+                <h3>Local Community Application:</h3>
+                <p>Apply council principles in community organizations, non-profits, and boards. Advocate for transparency and accountability in local government finances. Model responsible financial stewardship in business dealings. Promote collective decision-making over autocratic control in organizations you lead or participate in.</p>
+
+                <h3>Global Application:</h3>
+                <p>Support international transparency initiatives and anti-corruption efforts. Recognize that D&C 120's principles—accountability, council governance, transparency—are universal principles that benefit all societies. Advocate for checks and balances in global financial institutions. Pray for leaders worldwide to govern with integrity and wisdom.</p>
+
+                <h2>Key Doctrines</h2>
+                
+                <h3>Doctrine 1: Council-Based Governance</h3>
+                <p>God's pattern for governing His kingdom involves councils, not individual autocrats. The Council on the Disposition of Tithes includes the First Presidency (prophetic leadership), Presiding Bishopric (administrative expertise), and high council representatives (deliberative wisdom). This three-part structure ensures balanced, informed decision-making. The principle extends throughout the Church: ward councils, stake councils, quorum presidencies, family councils—all reflect the divine pattern of collective wisdom under divine guidance.</p>
+
+                <h3>Doctrine 2: Sacred Stewardship of Temporal Resources</h3>
+                <p>Tithing funds are not merely Church revenue but sacred consecrations belonging to the Lord. Their "disposition" (arrangement, management, allocation) requires the same reverence as administering spiritual ordinances. God cares how His resources are managed—financial administration is spiritual work. Leaders are stewards, not owners; managers, not proprietors. Accountability to God and His people is essential.</p>
+
+                <h3>Doctrine 3: Divine Participation in Temporal Administration</h3>
+                <p>"By mine own voice unto them" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/120.1?lang=eng">D&C 120:1</a>) indicates the Lord actively participates in financial decision-making through revelation. Temporal matters are not beneath God's concern—He guides both spiritual and temporal affairs. The Council on the Disposition of Tithes doesn't operate on human wisdom alone but seeks divine direction. This principle elevates financial stewardship from mere administration to an act of receiving and following revelation.</p>
+            </div>
+        </div>
+
+        <!-- Section 2: Historical Context -->
+        <button class="accordion-section" onclick="toggleSection(this)">2. HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Immediate Historical Context</h2>
+                <p>D&C 120 was revealed on July 8, 1838, the same day as <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng">D&C 119</a>. The pairing is deliberate and significant: the Lord first establishes what members should give (tithing), then immediately establishes how those sacred funds should be managed (council disposition). This twin revelation addresses both the giving and stewardship sides of consecration.</p>
+
+                <h2>The Kirtland Financial Crisis</h2>
+                <p>To understand D&C 120's significance, one must understand what preceded it. In Kirtland, Ohio (1837), the Church experienced devastating financial crisis:
+
+The Kirtland Safety Society (a quasi-bank) failed, causing significant losses to members who had invested
+Church leaders, including Joseph Smith, faced accusations of financial mismanagement
+Debts mounted from temple construction and other Church projects
+Internal apostasy and external persecution intensified, partly fueled by financial grievances
+The Church was forced to flee Kirtland under threat of violence, leaving property and debts behind</p>
+
+                <p>This context made D&C 120 essential. The Church needed to rebuild financial trust and establish clear, accountable systems for managing resources. Members needed confidence that their contributions wouldn't be mismanaged. Critics needed evidence that Joseph Smith wouldn't control finances unilaterally.</p>
+
+                <h2>The Missouri Period</h2>
+                <p>By July 1838, the Church was establishing Far West, Missouri as its new center. The Saints were building homes, planning a temple, and organizing Church government in a new location. Financial needs were substantial:
+
+Settlement costs for displaced families from Ohio
+Temple construction requiring significant funds
+Supporting the poor and needy among the Saints
+Maintaining Church operations during rapid growth
+Responding to ongoing persecution requiring legal defenses and potential relocations</p>
+
+                <p>The law of tithing (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng">D&C 119</a>) provided a sustainable funding model, replacing the more demanding law of consecration. But with new funds coming in, clear governance was essential.</p>
+
+                <h2>The Council System Established</h2>
+                <p>D&C 120 names three bodies to compose the Council on the Disposition of Tithes:
+
+<strong>1. The First Presidency:</strong> Joseph Smith and counselors Sidney Rigdon and Hyrum Smith (Frederick G. Williams had been replaced by Hyrum in November 1837). The First Presidency provided prophetic direction and oversight of all Church affairs.
+
+<strong>2. "The bishop and his council":</strong> Edward Partridge was Presiding Bishop (first bishop in the Church, called in D&C 41). "His council" refers to the Presiding Bishopric—the bishop and his counselors. The Presiding Bishopric managed temporal affairs, received tithing, and administered welfare. Their practical financial expertise was essential for wise allocation.
+
+<strong>3. "My high council":</strong> The high council in Far West (there was also a high council in Kirtland, but by 1838, Far West was Church headquarters). High councils served as deliberative bodies, representing broader Church leadership. Their involvement ensured representative wisdom beyond just presidency and bishopric.</p>
+
+                <h2>Why This Structure?</h2>
+                <p>The three-part council creates balanced governance:</p>
+
+                <ul>
+                    <li><strong>Prophetic Vision (First Presidency):</strong> Ensures financial decisions align with revealed priorities and divine will</li>
+                    <li><strong>Administrative Competence (Presiding Bishopric):</strong> Provides practical financial wisdom and expertise in temporal management</li>
+                    <li><strong>Representative Deliberation (High Council):</strong> Brings diverse perspectives and serves as check against concentration of power</li>
+                </ul>
+
+                <p>No single entity controls finances. Decisions require consensus across three bodies, each bringing different strengths and perspectives.</p>
+
+                <h2>Implementation and Evolution</h2>
+                <p>The Council on the Disposition of Tithes functioned throughout Joseph Smith's life and continues today. The specific composition has evolved while maintaining the pattern:</p>
+
+                <ul>
+                    <li><strong>First Presidency:</strong> Continues unchanged</li>
+                    <li><strong>Presiding Bishopric:</strong> Continues unchanged (though Presiding Bishop is now typically a high priest holding Melchizedek Priesthood, set apart to preside over Aaronic Priesthood and temporal affairs)</li>
+                    <li><strong>High Council:</strong> Now typically understood as the Quorum of the Twelve Apostles (the traveling high council) rather than local stake high councils</li>
+                </ul>
+
+                <p>Modern practice: The Council on the Disposition of Tithes consists of the First Presidency, Presiding Bishopric, and Quorum of the Twelve Apostles. They meet regularly to review and approve Church budget and major financial decisions.</p>
+
+                <h2>Contrast with Previous Practice</h2>
+                <p>Before D&C 120, Church financial decisions were less formally structured. Joseph Smith often made decisions with counselors but without defined council system. This led to:</p>
+
+                <ul>
+                    <li>Accusations that Joseph controlled funds unilaterally</li>
+                    <li>Confusion about who had authority to authorize spending</li>
+                    <li>Lack of clear accountability structures</li>
+                    <li>Vulnerability to internal/external criticism</li>
+                </ul>
+
+                <p>D&C 120 formalized financial governance, creating clarity, accountability, and protection for both leaders and members.</p>
+
+                <h2>Scriptural Precedents</h2>
+                <p>While D&C 120's specific structure was new revelation, the principle of council-based financial governance has biblical precedent:</p>
+
+                <ul>
+                    <li><a href="https://www.blueletterbible.org/kjv/num/11/16-17/">Numbers 11:16-17</a>: Moses' burden shared with seventy elders</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/exo/18/13-26/">Exodus 18:13-26</a>: Jethro's counsel to Moses to delegate judgment/governance</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/act/6/1-7/">Acts 6:1-7</a>: Apostles delegating temporal concerns to seven men</li>
+                    <li><a href="https://www.blueletterbible.org/kjv/act/15/1-29/">Acts 15</a>: Jerusalem Council making collective decisions</li>
+                </ul>
+
+                <p>The pattern: important decisions, especially those affecting the whole community, benefit from collective wisdom and formal council structures rather than individual decree.</p>
+
+                <h2>Long-Term Impact</h2>
+                <p>D&C 120 has profoundly shaped Church financial culture:</p>
+
+                <ul>
+                    <li><strong>Accountability Culture:</strong> Leaders at all levels understand they're stewards, not owners, of Church resources</li>
+                    <li><strong>Transparency:</strong> The system itself is public (revealed in scripture), creating trust even when specific financial details aren't disclosed</li>
+                    <li><strong>Resistance to Corruption:</strong> Multi-person council oversight makes financial abuse extremely difficult</li>
+                    <li><strong>Professionalization:</strong> The Presiding Bishopric's role evolved into sophisticated financial administration with professional staff, auditing departments, investment management, etc.—all under council governance</li>
+                    <li><strong>Member Confidence:</strong> Knowing tithing is managed by revelation-guided council rather than individual leaders strengthens trust and willingness to contribute</li>
+                </ul>
+
+                <p>The revelation's genius is its simplicity and durability. The basic structure established in 1838 still functions nearly 200 years later, adapted to Church growth but unchanged in principle.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 3: VERSE-BY-VERSE STUDY -->
+        <button class="accordion-section" onclick="toggleSection(this)">3. VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Introduction</h2>
+                
+                <p>D&C 120 is the shortest section in the Doctrine and Covenants—consisting of only one verse that establishes the Council on the Disposition of the Tithes. This revelation was received the same day as D&C 119 (the law of tithing), demonstrating God's immediate concern for proper stewardship and accountability of sacred funds. While brief, this section has profound implications for Church financial governance that continue to the present day.</p>
+
+                <p><strong>Total Verses:</strong> 1 | <strong>Verses in this document:</strong> 1 ✓</p>
+
+                <!-- VERSE 1 SUB-ACCORDION -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 1: The Council on the Disposition of Tithes</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Scripture Text</h3>
+                        
+                        <div class="scripture-verse">
+                            <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/120.1?lang=eng">D&C 120:1</a></strong> — "VERILY, thus saith the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a>, the time is now come, that it shall be disposed of by a council, composed of the First Presidency of my Church, and of the bishop and his council, and by my high council; and by mine own voice unto them, saith the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a>. Even so. Amen."</p>
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        
+                        <p>This revelation establishes the Council on the Disposition of the Tithes, creating a formal system of financial accountability and collective governance for managing sacred Church funds. The council consists of three key bodies: the First Presidency (prophetic leadership), the Presiding Bishopric (temporal administration), and the High Council (representative wisdom from the Quorum of the Twelve Apostles).</p>
+
+                        <p>The phrase "disposed of" means "managed, distributed, or stewarded"—emphasizing that these leaders are stewards, not owners, of tithing funds. The addition "by mine own voice unto them" indicates the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> Himself will guide this council through revelation, making their decisions divinely directed rather than merely administrative.</p>
+
+                        <p>This system protects against financial abuse through multi-person oversight while maintaining divine guidance through revelation. It demonstrates that God cares about both spiritual principles and practical institutional structures.</p>
+
+                        <h3>Language & Cultural Insights</h3>
+
+                        <h4>Key Terms Analysis</h4>
+
+                        <p><strong>"Time is now come"</strong> - This phrase signals divine timing. The law of tithing had just been revealed (D&C 119), creating immediate need for proper management systems. God doesn't just give principles—He provides implementation structures.</p>
+
+                        <p><strong>"Disposed of"</strong> - In 1838, <a href="https://webstersdictionary1828.com/Dictionary/dispose">Webster's 1828 defines "dispose"</a> as "to arrange, set in order, distribute, manage." The term implies careful stewardship and intentional distribution according to proper principles, not careless spending or personal ownership.</p>
+
+                        <p><strong>"Council"</strong> - The Hebrew concept of <strong><a href="https://www.blueletterbible.org/lexicon/h5475/kjv/wlc/0-1/">sod</a></strong> (סוֹד) means "council, assembly, confidential discussion." It implies not just a meeting but intimate counsel where wisdom is shared and decisions are made collectively. The Greek <strong><a href="https://www.blueletterbible.org/lexicon/g4824/kjv/tr/0-1/">sumboulion</a></strong> (συμβούλιον) similarly means "counsel together, deliberation, consultation."</p>
+
+                        <p><strong>"First Presidency"</strong> - The prophetic leadership bringing revelation and overall spiritual guidance to financial decisions.</p>
+
+                        <p><strong>"Bishop and his council"</strong> - The Presiding Bishopric, responsible for temporal affairs and practical administration of Church resources.</p>
+
+                        <p><strong>"High council"</strong> - In 1838 context, this referred to both local stake high councils and the traveling high council (Quorum of the Twelve). Modern practice interprets this as primarily the Quorum of the Twelve Apostles who work with the First Presidency and Presiding Bishopric.</p>
+
+                        <p><strong>"Mine own voice unto them"</strong> - The <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> promises to guide this council through revelation, making their decisions divinely directed. This elevates financial administration from mere business to sacred stewardship under God's guidance.</p>
+
+                        <h3>Cross-References</h3>
+
+                        <ul>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng">D&C 119</a> — The law of tithing revealed the same day, creating the need for this governance structure. Together these sections show God's pattern: establish principle, then establish accountability.</li>
+                            
+                            <li><a href="https://www.blueletterbible.org/kjv/exo/18/13-26/">Exodus 18:13-26</a> — Jethro counsels Moses to delegate judgment through a council system rather than bearing all burdens alone. Biblical precedent for distributed governance under prophetic leadership.</li>
+                            
+                            <li><a href="https://www.blueletterbible.org/kjv/act/6/1-7/">Acts 6:1-7</a> — The Apostles delegate temporal concerns (including financial distribution) to seven men, creating accountability while maintaining spiritual oversight. The pattern: collective wisdom for managing sacred resources.</li>
+                            
+                            <li><a href="https://www.blueletterbible.org/kjv/num/11/16-17/">Numbers 11:16-17</a> — The <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> commands Moses to gather seventy elders to share the burden of governance, demonstrating God's preference for council-based decision making.</li>
+                            
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/104.13-18?lang=eng">D&C 104:13-18</a> — Stewardship principles: leaders are stewards, not owners, of sacred resources. All things belong to God; we manage them according to His will.</li>
+                            
+                            <li><a href="https://www.blueletterbible.org/kjv/1co/4/1-2/">1 Corinthians 4:1-2</a> — Paul teaches that leaders are "stewards of the mysteries of <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a>," and stewards must be found faithful. Council governance creates institutional faithfulness.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+
+                        <ol>
+                            <li><strong>On Council Governance:</strong> Why would God establish a multi-person council instead of simply directing the prophet alone to manage tithing? What does this teach about God's view of concentrated power versus distributed wisdom? How does this principle apply to your own major life decisions—do you seek counsel from multiple trusted sources, or do you make important decisions independently?</li>
+                            
+                            <li><strong>On Sacred Stewardship:</strong> D&C 120 establishes that tithing funds are "the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord's</a>" and must be "disposed of" (managed) by His appointed council. How does this understanding affect your attitude toward paying tithing? When you pay tithing, are you giving to an organization or returning sacred funds to God?</li>
+                            
+                            <li><strong>On Accountability:</strong> The council system creates institutional accountability—no single person controls Church finances. How can you build similar accountability into your own financial stewardship? Who in your life helps hold you accountable to righteous financial principles?</li>
+                            
+                            <li><strong>On Divine Guidance:</strong> The phrase "by mine own voice unto them" promises the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> will guide this council through revelation. How does knowing that Church financial decisions are made under divine guidance affect your trust in Church leadership? How can you invite similar divine guidance into your own financial decisions?</li>
+                            
+                            <li><strong>On Timing:</strong> This revelation came the same day as D&C 119 (tithing law). God didn't wait to establish accountability systems—He provided them immediately. What does this teach about the importance of establishing proper systems and safeguards when implementing new principles in your own life?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECTION 4: WORD STUDIES -->
+        <button class="accordion-section" onclick="toggleSection(this)">4. WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>In-Depth Linguistic Analysis of Key Terms</h2>
+                
+                <p>D&C 120, though consisting of only one verse, contains several theologically significant terms that deserve careful examination. Understanding the Hebrew, Greek, Latin, etymological, and historical contexts of these words enriches our comprehension of God's design for financial stewardship in His Church.</p>
+
+                <!-- TERM 1: DISPOSED/DISPOSITION -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">TERM 1: "Disposed/Disposition" (Management, Stewardship)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <div class="word-study-box">
+                            <h3>Hebrew Analysis</h3>
+                            
+                            <p><strong><a href="https://www.blueletterbible.org/lexicon/h6485/kjv/wlc/0-1/">Paqad</a></strong> (פָּקַד, pronounced "pah-KAD")</p>
+                            
+                            <p><strong>Root Meaning:</strong> "To attend to, visit, muster, appoint, oversee, care for, number, deposit"</p>
+                            
+                            <p><strong>Etymology within Hebrew:</strong> A highly versatile root carrying the fundamental meaning of "paying attention to" something—either for blessing (attending with care) or judgment (visiting with punishment). The term encompasses oversight and supervision, appointment of officers, accounting and numbering, entrusting something to someone's care, and visiting with attention/intention.</p>
+                            
+                            <p><strong>Related Terms:</strong></p>
+                            <ul>
+                                <li><strong><a href="https://www.blueletterbible.org/lexicon/h6486/kjv/wlc/0-1/">Pekuddat</a></strong> (פְּקֻדָּת) - "Oversight, charge, office, care, custody"</li>
+                                <li><strong><a href="https://www.blueletterbible.org/lexicon/h6496/kjv/wlc/0-1/">Paqid</a></strong> (פָּקִיד) - "Overseer, officer, one given charge"</li>
+                            </ul>
+                            
+                            <p><strong>Usage in Scripture:</strong></p>
+                            <ul>
+                                <li><a href="https://www.blueletterbible.org/kjv/gen/39/4/">Genesis 39:4-5</a> - Potiphar "made him overseer (פָּקַד, paqad) over his house, and all that he had he put into his hand"</li>
+                                <li><a href="https://www.blueletterbible.org/kjv/num/1/3/">Numbers 1:3</a> - "From twenty years old and upward...number (פָּקַד, paqad) them by their armies"</li>
+                                <li><a href="https://www.blueletterbible.org/kjv/jer/23/2/">Jeremiah 23:2</a> - "Ye have not visited (פָּקַד, paqad) them; behold, I will visit (פָּקַד, paqad) upon you the evil of your doings"</li>
+                                <li><a href="https://www.blueletterbible.org/kjv/exo/3/16/">Exodus 3:16</a> - "I have surely visited (פָּקַד, paqad) you, and seen that which is done to you in Egypt"</li>
+                            </ul>
+                            
+                            <p><strong>Theological Significance:</strong> The Hebrew concept of <em>paqad</em> emphasizes that oversight/disposition is not merely administrative but relational—<a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">God</a> "visits" His people with both blessing and accountability. Stewardship involves divine attention, not just human management.</p>
+                        </div>
+
+                        <div class="word-study-box">
+                            <h3>Greek Analysis</h3>
+                            
+                            <p><strong><a href="https://www.blueletterbible.org/lexicon/g3622/kjv/tr/0-1/">Oikonomia</a></strong> (οἰκονομία, pronounced "oy-ko-no-MEE-ah")</p>
+                            
+                            <p><strong>Root Meaning:</strong> "Administration, stewardship, management of household affairs, dispensation"</p>
+                            
+                            <p><strong>Components:</strong></p>
+                            <ul>
+                                <li><strong><a href="https://www.blueletterbible.org/lexicon/g3624/kjv/tr/0-1/">Oikos</a></strong> (οἶκος) - "House, household, dwelling"</li>
+                                <li><strong><a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/">Nomos</a></strong> (νόμος) - "Law, custom, principle of arrangement"</li>
+                                <li><strong>Combined:</strong> "House-law" or "household management/arrangement"</li>
+                            </ul>
+                            
+                            <p><strong>Related Greek Terms:</strong></p>
+                            <ul>
+                                <li><strong><a href="https://www.blueletterbible.org/lexicon/g3623/kjv/tr/0-1/">Oikonomos</a></strong> (οἰκονόμος) - "Steward, manager, administrator"</li>
+                                <li><strong><a href="https://www.blueletterbible.org/lexicon/g1299/kjv/tr/0-1/">Diatasso</a></strong> (διατάσσω) - "To arrange, appoint, ordain, give order, command"</li>
+                            </ul>
+                            
+                            <p><strong>Usage in New Testament:</strong></p>
+                            <ul>
+                                <li><a href="https://www.blueletterbible.org/kjv/luk/16/2/">Luke 16:2-4</a> - The unjust steward must "give an account of thy stewardship (οἰκονομία, oikonomia)"</li>
+                                <li><a href="https://www.blueletterbible.org/kjv/1co/9/17/">1 Corinthians 9:17</a> - "A dispensation (οἰκονομία, oikonomia) of the gospel is committed unto me"</li>
+                                <li><a href="https://www.blueletterbible.org/kjv/eph/1/10/">Ephesians 1:10</a> - "The dispensation (οἰκονομία, oikonomia) of the fulness of times"</li>
+                                <li><a href="https://www.blueletterbible.org/kjv/col/1/25/">Colossians 1:25</a> - "According to the dispensation (οἰκονομία, oikonomia) of <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> which is given to me for you"</li>
+                            </ul>
+                            
+                            <p><strong>Paul's Stewardship Theology:</strong> Paul consistently presents ministry as stewardship—leaders are <em>oikonomoi</em> (household managers) of <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> mysteries (<a href="https://www.blueletterbible.org/kjv/1co/4/1/">1 Corinthians 4:1</a>), accountable for faithful disposition of what's entrusted, not for ownership.</p>
+                        </div>
+
+                        <div class="word-study-box">
+                            <h3>Latin Analysis</h3>
+                            
+                            <p><strong><a href="https://logeion.uchicago.edu/dispensatio">Dispensatio</a></strong> - "Management, stewardship, distribution, arrangement"</p>
+                            
+                            <p><strong>Etymology:</strong> From <em>dispensare</em> (to distribute, manage, arrange), intensive form of <em>dispendere</em> (to weigh out, pay out)</p>
+                            
+                            <p><strong>Components:</strong></p>
+                            <ul>
+                                <li><em>Dis-</em> (apart, asunder, in different directions)</li>
+                                <li><em>Pendere</em> (to weigh, pay, consider)</li>
+                                <li><strong>Combined:</strong> "to weigh out, distribute carefully, manage allocation"</li>
+                            </ul>
+                            
+                            <p><strong>Vulgate Usage:</strong> Jerome used <em>dispensatio</em> for Greek <em>oikonomia</em>, emphasizing the careful distribution and arrangement of resources. The term carried connotations of wise allocation according to need, systematic arrangement/organization, accountability to the owner, and faithful execution of assigned duties.</p>
+                        </div>
+
+                        <div class="word-study-box">
+                            <h3>Etymology</h3>
+                            
+                            <p><strong><a href="https://www.etymonline.com/word/dispose">Dispose</a></strong> - From Latin through French</p>
+                            
+                            <p><strong>Development:</strong></p>
+                            <ul>
+                                <li><strong>Latin:</strong> <em>disponere</em> (to arrange, distribute, set in order) — <em>Dis-</em> (apart) + <em>ponere</em> (to place, put)</li>
+                                <li><strong>Old French:</strong> <em>disposer</em> (to arrange, order, regulate)</li>
+                                <li><strong>Middle English:</strong> <em>disposen</em> (to arrange, set in order, manage, regulate)</li>
+                                <li><strong>Modern:</strong> dispose (to arrange, deal with, manage; to incline, make willing)</li>
+                            </ul>
+                            
+                            <p><strong>Key Semantic Shift:</strong> By the 1600s, "disposition" developed psychological meaning (natural temperament/inclination) alongside administrative meaning (arrangement/management). Both senses share root concept: "how something is arranged/ordered."</p>
+                        </div>
+
+                        <div class="word-study-box">
+                            <h3>Webster 1828</h3>
+                            
+                            <p><strong><a href="https://webstersdictionary1828.com/Dictionary/dispose">Dispose:</a></strong> "To arrange; to set in order; to distribute into proper classes, division or order. The rest of the effects were disposed in the following manner. To apply to particular purposes; to set apart; to bestow in the manner desired; to give or employ for a particular use. The prince was about to dispose a part of his army in Thrace. To incline the mind; to give a tendency or propension; to adapt. Composition, temperament, or natural fitness disposes substances to certain actions. The grace of <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> alone can dispose the heart to virtue. To regulate; to adjust; to settle or determine. <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> is the sole disposer of events, and in his hands are life and death."</p>
+                            
+                            <p><strong><a href="https://webstersdictionary1828.com/Dictionary/disposition">Disposition:</a></strong> "The act of disposing, or state of being disposed; arrangement; distribution; a putting or setting in order; as the disposition of the trees in an orchard. Disposal; the power of distributing or bestowing. We leave it to your disposition. Natural fitness or tendency; as the disposition of plants to grow in a particular direction."</p>
+                        </div>
+
+                        <div class="word-study-box">
+                            <h3>Doctrinal Significance</h3>
+                            
+                            <p><strong>In D&C 120 Context:</strong> D&C 120 addresses "the disposition of the properties tithed" through council-based stewardship. The revelation establishes that sacred funds require sacred disposition—not arbitrary spending, but prayerful, accountable, collective management under divine direction.</p>
+                            
+                            <p><strong>The Sacred Trust Principle:</strong> Tithing is not merely revenue but consecrated offering. Its disposition therefore requires:</p>
+                            
+                            <ol>
+                                <li><strong>Divine Ownership Recognition:</strong> Tithing belongs to the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> ("mine own voice unto them"); disposition is stewardship, not ownership; leaders are trustees, not proprietors; accountability to <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a>, not just members</li>
+                                
+                                <li><strong>Collective Wisdom:</strong> Not individual discretion but council deliberation; First Presidency + Presiding Bishopric + High Council; multiple perspectives ensure wise allocation; protects against arbitrary or unilateral decisions</li>
+                                
+                                <li><strong>Divine Guidance:</strong> "By mine own voice unto them"—the council acts under revelation; financial decisions are spiritual matters requiring prophetic direction</li>
+                                
+                                <li><strong>Accountability Structure:</strong> Council system creates institutional checks against misuse; no single person controls funds; transparency through scriptural revelation of the system itself</li>
+                            </ol>
+                        </div>
+
+                    </div>
+                </div>
+
+                <p class="info-box"><strong>Note:</strong> D&C 120 references three governing bodies—First Presidency, Presiding Bishopric, and High Council. Understanding the Hebrew, Greek, and Latin foundations of "council," "bishop," and "presidency" enriches our appreciation of God's divinely inspired governance structure for managing sacred resources.</p>
+
+            </div>
+        </div>
+
+        <!-- SECTION 5: TEACHING APPLICATIONS -->
+        <button class="accordion-section" onclick="toggleSection(this)">5. TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Council Governance and Sacred Stewardship</h2>
+                
+                <p>D&C 120 is brief but profound—it establishes the Council on the Disposition of the Tithes, creating a system of accountability and collective wisdom for managing sacred funds. This revelation demonstrates <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> concern for proper stewardship, transparency, and protection against financial abuse through council-based decision making.</p>
+
+                <!-- Personal Study Applications -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">1. Personal Study Applications</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Study Context</h3>
+                        <p>D&C 120 establishes the Council on the Disposition of the Tithes, creating a system of accountability and collective wisdom for managing sacred funds. This revelation demonstrates <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> concern for proper stewardship, transparency, and protection against financial abuse through council-based decision making.</p>
+
+                        <h3>5 Study Techniques</h3>
+                        <ol>
+                            <li><strong>Cross-Reference Analysis:</strong> Compare <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/120.1?lang=eng">D&C 120:1</a> with <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng">D&C 119</a> to understand how revelation on tithing (119) was immediately followed by revelation on how to manage those funds (120). Notice the divine pattern: establish a principle, then establish accountability. Also examine <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/104.13-18?lang=eng">D&C 104:13-18</a> on stewardship principles.</li>
+                            
+                            <li><strong>Historical Deep Dive:</strong> Study the historical context of July 1838 when this revelation was received. The Church was establishing itself in Far West, Missouri, had experienced significant financial challenges, and needed clear guidance on managing increasing tithing funds.</li>
+                            
+                            <li><strong>Structural Analysis:</strong> Create a visual diagram of the three-part council system: First Presidency (prophetic leadership), Presiding Bishopric (temporal administration), and High Council (representative wisdom). Analyze why each component is essential.</li>
+                            
+                            <li><strong>Word Study - "Dispose":</strong> Examine the meaning of "dispose" in verse 1. In 1838, "dispose" meant "to arrange, distribute, or manage." Study how this word implies careful stewardship, not ownership.</li>
+                            
+                            <li><strong>Modern Application Journaling:</strong> Write personal reflections on how council-based decision making in your own life (family councils, personal councils with advisors) improves your decisions.</li>
+                        </ol>
+
+                        <h3>5 Personal Reflection Questions</h3>
+                        <ol>
+                            <li><strong>On Council Governance:</strong> The <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> could have simply commanded Joseph Smith to manage tithing funds alone. Why did He establish a council instead? What does this teach about <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> view of concentrated power versus distributed wisdom?</li>
+                            
+                            <li><strong>On Sacred Stewardship:</strong> D&C 120 makes clear that tithing funds are "the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord's</a>" and not the Church's possession. How does this distinction matter? When you pay tithing, are you giving to an organization or returning sacred funds to <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a>?</li>
+                            
+                            <li><strong>On Transparency and Trust:</strong> This revelation was given publicly and recorded in scripture—making the financial management system transparent to all Church members. What does this teach about <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> values regarding financial transparency?</li>
+                            
+                            <li><strong>On Checks and Balances:</strong> The three-part council (prophetic, administrative, representative) creates institutional checks and balances. Why would <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> design a system with built-in accountability rather than simply inspiring leaders moment-by-moment?</li>
+                            
+                            <li><strong>On Revelation in Administration:</strong> D&C 120 is a revelation about administrative procedure. What does it mean that <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> gives revelation about organizational systems, not just doctrinal teachings?</li>
+                        </ol>
+
+                        <h3>4 Practical Exercises</h3>
+                        <ol>
+                            <li><strong>Personal Council Establishment:</strong> Create your own "council system" for major life decisions. Identify 3-5 trusted individuals who represent different perspectives and commit to consulting this informal council before making major financial, career, or family decisions.</li>
+                            
+                            <li><strong>Financial Accountability Audit:</strong> Conduct a personal "stewardship audit" of your finances. Create a simple document showing income sources, expense categories, debt, savings, and charitable giving. Present this to your spouse or trusted advisor for accountability.</li>
+                            
+                            <li><strong>Tithing Testimony Strengthening:</strong> Study all the tithing promises across scripture: <a href="https://www.blueletterbible.org/kjv/mal/3/8/">Malachi 3:8-12</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64.23?lang=eng">D&C 64:23</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng">D&C 119</a>. Then write your personal testimony of how the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> has blessed you through tithing obedience.</li>
+                            
+                            <li><strong>Council Practice:</strong> For your next major family decision, implement a formal family council using D&C 120 principles: gather input from multiple family members, seek consensus through discussion, invite revelation through prayer.</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- Family Home Evening Applications -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">2. Family Home Evening Applications</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Opening Activity</h3>
+                        <p><strong>"Council Decision Game":</strong> Present the family with a hypothetical scenario (e.g., "We have $100 to spend. Should we buy toys, save it, or donate to charity?"). Have each family member give input, then make a collective decision. Discuss how councils work better than one person deciding alone.</p>
+
+                        <h3>Scripture Story Presentation</h3>
+                        <p>Tell the story of D&C 120 in simple terms: "In 1838, the Saints were paying tithing (like when we give money to help the Church). But they needed to know: Who decides how to use this money? The <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> answered with this short revelation—just one sentence! He said three groups of leaders would work together as a council to decide. Why three groups instead of one person? Because councils help us make better decisions."</p>
+
+                        <h3>Discussion Points for Families</h3>
+                        <ul>
+                            <li>Why does <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> care about how we manage money?</li>
+                            <li>What's the difference between owning something and being a steward of it?</li>
+                            <li>How does our family make important decisions? Do we use a "council" approach?</li>
+                            <li>Why is it good to have more than one person making big decisions?</li>
+                        </ul>
+
+                        <h3>Object Lesson</h3>
+                        <p><strong>"Three-Legged Stool":</strong> Show a three-legged stool and explain how each leg is necessary for stability. Remove one leg and the stool falls. Compare to the council in D&C 120—three groups (First Presidency, Presiding Bishopric, High Council) working together creates stable, wise decisions.</p>
+
+                        <h3>Family Activity</h3>
+                        <p><strong>Family Council Practice:</strong> Hold an official family council to make an upcoming decision (vacation plans, service project, family rules). Follow D&C 120 principles: everyone gives input, seek consensus, pray for guidance together.</p>
+
+                    </div>
+                </div>
+
+                <!-- Sunday School Teaching Applications -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">3. Sunday School Teaching Applications</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Class Opening Questions</h3>
+                        <ol>
+                            <li>"D&C 120 is the shortest section we'll study. Can anyone guess how many verses it contains?" (Let them guess, then reveal: just ONE verse!)</li>
+                            <li>"If the Church receives millions of dollars in tithing, who should decide how to spend it—one person or a group? Why?"</li>
+                            <li>"What's the difference between managing your own money versus managing money someone trusted you with?"</li>
+                        </ol>
+
+                        <h3>Key Teaching Points</h3>
+                        <ul>
+                            <li><strong>Council Principle:</strong> <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> prefers collective wisdom over individual authority. Draw diagram showing three councils.</li>
+                            <li><strong>Stewardship vs. Ownership:</strong> Leaders don't own Church funds—they're stewards. Discuss what stewardship means.</li>
+                            <li><strong>Divine Guidance:</strong> "By mine own voice unto them"—financial decisions are made under revelation, not just business principles.</li>
+                            <li><strong>Transparency:</strong> The system itself is revealed in scripture, creating trust even when specific financial details aren't public.</li>
+                        </ul>
+
+                        <h3>Small Group Activity</h3>
+                        <p>Divide into groups. Give each group a scenario: "Your group has been given $10,000 for the Church. How would you decide how to use it?" After 5 minutes, have groups share their decision-making process. Discuss: Did you use a council approach? Did you pray for guidance?</p>
+
+                    </div>
+                </div>
+
+                <!-- Seminary Teaching Applications -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">4. Seminary Teaching Applications</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Daily Devotional Theme (Day 1)</h3>
+                        <p><strong>"Why Councils Matter":</strong> Discuss Proverbs 11:14 ("in the multitude of counsellors there is safety") and <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37.37?lang=eng">Alma 37:37</a> ("counsel with the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> in all thy doings"). Connect to D&C 120's council structure.</p>
+
+                        <h3>Youth-Relevant Discussion</h3>
+                        <p><strong>"Trust Issues":</strong> Ask: "How many of you wonder where your tithing goes?" Explain that D&C 120 creates transparency and accountability. The system is revealed in scripture—we know exactly who decides and under what principles. This builds trust.</p>
+
+                        <h3>Interactive Activity</h3>
+                        <p><strong>"Council Simulation":</strong> Create a mock "Council on the Disposition of Seminary Funds." Give the class $1,000 (hypothetical) and have them form three councils to decide how to use it for youth activities. Debrief: Was it harder or easier with multiple groups? Why?</p>
+
+                    </div>
+                </div>
+
+                <!-- Relief Society & Priesthood Applications -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">5. Relief Society & Priesthood Applications</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Discussion Topics</h3>
+                        <ul>
+                            <li><strong>Personal Financial Stewardship:</strong> How can we apply D&C 120's accountability principles to our personal finances?</li>
+                            <li><strong>Supporting Church Leadership:</strong> Understanding the Council on Disposition of Tithes strengthens trust. How does this knowledge affect your testimony?</li>
+                            <li><strong>Council in Marriage:</strong> How can couples use council principles in financial decisions?</li>
+                        </ul>
+
+                        <h3>Service Application</h3>
+                        <p>Form a service council to plan a ward service project. Practice D&C 120 principles: multiple perspectives, collective wisdom, seeking revelation together.</p>
+
+                    </div>
+                </div>
+
+                <!-- Children's Teaching Ideas -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">6. Children's Teaching Ideas</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Simple Object Lesson</h3>
+                        <p><strong>"Three Friends Carrying Something Heavy":</strong> Have three children work together to carry something heavy (like a large book or box). Then have one child try alone. Explain: "Just like it's easier to carry heavy things with three people, the Church uses three groups of leaders to make important decisions about tithing. They work together!"</p>
+
+                        <h3>Song</h3>
+                        <p>Sing "I'm Glad to Pay a Tithing" (Children's Songbook, 150) and explain that D&C 120 tells us how our tithing is used wisely.</p>
+
+                        <h3>Coloring Activity</h3>
+                        <p>Create a simple coloring page showing three groups of people (labeled "Council 1," "Council 2," "Council 3") sitting together with a thought bubble saying "How should we help people with tithing money?"</p>
+
+                    </div>
+                </div>
+
+                <!-- Mission Applications -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">7. Mission Applications</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Teaching Principle</h3>
+                        <p>When investigators ask about tithing ("Where does the money go?"), explain the Council on the Disposition of Tithes. Emphasize: (1) It's managed by multiple leaders, not one person; (2) They seek <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> guidance; (3) The system is transparent (revealed in scripture); (4) Leaders are stewards, not owners.</p>
+
+                        <h3>Finding Application</h3>
+                        <p>Use companionship councils to make finding decisions. Practice the D&C 120 principle: two perspectives are better than one. Pray together for guidance.</p>
+
+                        <h3>Member Work</h3>
+                        <p>Help ward councils function better by understanding D&C 120 principles: collective wisdom, seeking revelation, accountability to <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a>.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section 6: Study Questions -->
+        <button class="accordion-section" onclick="toggleSection(this)">6. STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>Comprehensive Questions for Deep Understanding</h2>
+                <p class="info-box"><strong>Note:</strong> D&C 120 contains only ONE verse, making it one of the shortest sections in the Doctrine and Covenants. Despite its brevity, this revelation establishes crucial principles about council governance and financial accountability. These questions facilitate deep study of this important section.</p>
+
+                <p><strong>Verse Count:</strong> D&C 120 = 1 verse | Questions organized by theme</p>
+
+                <!-- Basic Comprehension -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Basic Comprehension (15 Questions)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <ol>
+                            <li>What is the exact text of <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/120.1?lang=eng">D&C 120:1</a>?</li>
+                            <li>How many verses comprise D&C 120? (Answer: ONE verse)</li>
+                            <li>When was D&C 120 received? (Answer: July 8, 1838)</li>
+                            <li>Who received this revelation? (Answer: Joseph Smith)</li>
+                            <li>Where was this revelation received? (Answer: Far West, Missouri)</li>
+                            <li>What revelation immediately precedes D&C 120? (Answer: <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng">D&C 119</a> - the law of tithing)</li>
+                            <li>What is the relationship between D&C 119 and D&C 120?</li>
+                            <li>How many councils are named in D&C 120? (Answer: Three)</li>
+                            <li>What is the first council named? (Answer: The First Presidency)</li>
+                            <li>What is the second council named? (Answer: The Presiding Bishopric)</li>
+                            <li>What is the third council named? (Answer: The high council)</li>
+                            <li>What does the word "disposition" mean in this context?</li>
+                            <li>What does "to wit" mean in D&C 120:1? (Answer: "Namely" or "that is to say")</li>
+                            <li>Whose properties are being discussed? (Answer: The <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord's</a> - "properties of my church")</li>
+                            <li>What verb does the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> use to describe establishing this system? (Answer: "I have appointed")</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- Doctrinal Understanding -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Doctrinal Understanding & Application (25 Questions)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <h3>Council Governance</h3>
+                        <ol>
+                            <li>Why did the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> establish a three-part council instead of giving authority to one person?</li>
+                            <li>What does this teach about <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> view of concentrated power versus distributed wisdom?</li>
+                            <li>How does the council system create accountability and prevent abuse?</li>
+                            <li>What biblical precedents exist for council-based governance?</li>
+                        </ol>
+
+                        <h3>Stewardship Principles</h3>
+                        <ol start="5">
+                            <li>What is the difference between stewardship and ownership in managing Church funds?</li>
+                            <li>How does D&C 120 establish that tithing funds belong to the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a>, not the Church?</li>
+                            <li>What does it mean that leaders "dispose of" sacred funds rather than "own" them?</li>
+                        </ol>
+
+                        <h3>Modern Application</h3>
+                        <ol start="8">
+                            <li>How does the Council on the Disposition of Tithes function in the modern Church?</li>
+                            <li>Who currently comprises this council? (First Presidency, Presiding Bishopric, Quorum of the Twelve)</li>
+                            <li>How does understanding this system strengthen trust in Church financial management?</li>
+                            <li>How can families apply D&C 120's council principles to major financial decisions?</li>
+                            <li>What does D&C 120 teach about seeking multiple perspectives before important decisions?</li>
+                            <li>How can we implement accountability structures in our personal stewardship?</li>
+                        </ol>
+
+                        <h3>Historical Context</h3>
+                        <ol start="14">
+                            <li>What financial challenges prompted the need for D&C 120 in 1838?</li>
+                            <li>How had previous lack of formal financial structure caused problems?</li>
+                            <li>What does the timing (same day as D&C 119) teach about <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> concern for accountability?</li>
+                        </ol>
+
+                        <h3>Personal Reflection</h3>
+                        <ol start="17">
+                            <li>When have I seen the benefits of making decisions through council rather than alone?</li>
+                            <li>How does faithful tithing payment reflect my trust in <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> appointed system?</li>
+                            <li>What financial accountability structures do I have in my own life?</li>
+                            <li>How can I better involve my spouse/family in financial decision-making as a "council"?</li>
+                            <li>What does D&C 120 teach me about <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> attention to institutional details?</li>
+                            <li>How does this revelation demonstrate that <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> gives revelation about systems, not just doctrine?</li>
+                            <li>When facing criticism about Church finances, how does D&C 120 provide answers?</li>
+                            <li>How can I teach my children about the Council on Disposition of Tithes?</li>
+                            <li>What does this revelation teach about transparency in financial management?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- Discussion Prompts -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">Discussion Prompts for Group Study</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <ul>
+                            <li><strong>On Trust:</strong> How does knowing about the Council on Disposition of Tithes affect your confidence in Church financial management?</li>
+                            <li><strong>On Councils:</strong> Share an experience when seeking counsel from multiple people led to a better decision than you would have made alone.</li>
+                            <li><strong>On Accountability:</strong> Why is it significant that this financial system is revealed in scripture (publicly known) rather than kept private?</li>
+                            <li><strong>On Stewardship:</strong> What's the difference between managing your own money versus managing money entrusted to you by someone else?</li>
+                            <li><strong>On Modern Application:</strong> How can we apply D&C 120's principles to ward councils, family councils, and personal decision-making?</li>
+                            <li><strong>On Divine Guidance:</strong> What does "by mine own voice unto them" teach about revelation in administrative matters?</li>
+                        </ul>
+
+                        <h3>For Comprehensive Study:</h3>
+                        <p>The complete 06_Study_Questions.md markdown file (414 lines) provides additional questions organized by deeper analysis, historical context, scriptural connections, and practical applications. This HTML version presents core questions suitable for most study settings.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div> <!-- Close container -->
+
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+            
+            if (panel.classList.contains("active")) {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } else {
+                panel.style.maxHeight = "0";
+            }
+        }
+
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            panel.classList.toggle("active");
+            
+            if (panel.classList.contains("active")) {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } else {
+                panel.style.maxHeight = "0";
+            }
+        }
+
+        function expandAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.add("active");
+                var panel = accordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.add("active");
+                var panel = subAccordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        function collapseAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].classList.remove("active");
+                panels[i].style.maxHeight = "0";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < subPanels.length; i++) {
+                subPanels[i].classList.remove("active");
+                subPanels[i].style.maxHeight = "0";
+            }
+        }
+    </script>
+</body>
+</html>

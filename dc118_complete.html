@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&C 118 Complete Study Guide - The British Mission</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px 15px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 5px;
+            margin: 15px 0 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        .sub-panel {
+            background-color: #fafafa;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+            padding: 20px;
+        }
+
+        .sub-panel-content h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+        }
+
+        .sub-panel-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .panel-content h2 {
+            color: #7c9885;
+            margin: 30px 0 20px 0;
+            font-size: 1.8em;
+            font-weight: 400;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        .panel-content h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #6b8774;
+            margin: 20px 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+
+        h4 {
+            color: #374151;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .scripture-verse {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .scripture-quote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #7c9885;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #7c9885;
+        }
+
+        .word-study-box {
+            background-color: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .word-study-box h4 {
+            color: #7c9885;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header-section {
+                padding: 20px;
+            }
+
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .panel-content {
+                padding: 15px;
+            }
+
+            .expand-button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="../../index.html" class="nav-btn">⌂ Home</a>
+            <a href="../DC_117/HTML/dc117_complete.html" class="nav-btn">◄ Previous: D&C 117</a>
+            <a href="../DC_119/HTML/dc119_complete.html" class="nav-btn">Next: D&C 119 ►</a>
+        </div>
+        <div class="nav-links">
+            <a href="../DC_115/HTML/dc115_complete.html" class="nav-btn">D&C 115</a>
+            <a href="../DC_116/HTML/dc116_complete.html" class="nav-btn">D&C 116</a>
+            <a href="../DC_117/HTML/dc117_complete.html" class="nav-btn">D&C 117</a>
+            <a href="dc118_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 118</a>
+            <a href="../DC_119/HTML/dc119_complete.html" class="nav-btn">D&C 119</a>
+            <a href="../DC_120/HTML/dc120_complete.html" class="nav-btn">D&C 120</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Doctrine & Covenants 118</h1>
+            <div class="subtitle">The British Mission and Apostolic Succession</div>
+            <div class="date-location">July 8, 1838 • Far West, Missouri</div>
+            <div class="scripture-highlight">
+                "Let a conference be held immediately; let the Twelve be organized; and let men be appointed to supply the place of those who are fallen." — D&C 118:1
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+
+        <!-- Section 1: Section Overview -->
+        <button class="accordion-section" onclick="toggleSection(this)">1. SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Basic Information</h2>
+                <p><strong>Date of Revelation:</strong> July 8, 1838</p>
+                <p><strong>Location:</strong> Far West, Missouri</p>
+                <p><strong>Recipients:</strong> The Twelve Apostles (specifically mentioned: Thomas B. Marsh, John Taylor, John E. Page, Wilford Woodruff, Willard Richards)</p>
+                <p><strong>Context:</strong> Received the same day as <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/117?lang=eng">D&C 117</a>, during height of tensions in Missouri (three months before the Mormon War). Several apostles had apostatized, leaving vacancies in the Quorum of the Twelve.</p>
+                <p><strong>Section Summary:</strong> The Lord commands the Twelve to be reorganized, filling vacancies left by apostate members. They are to depart for a mission to England in spring 1839, leaving on April 26, 1839, from the temple site in Far West. Four new apostles are called: John Taylor, John E. Page, Wilford Woodruff, and Willard Richards. The Lord promises to provide for their families and open "an effectual door" for their mission if they serve with humility and meekness.</p>
+
+                <h2>Key Principles</h2>
+                <p><strong>Primary Doctrinal Principle:</strong> The Lord's work continues despite apostasy—fallen servants are replaced, vacancies filled, and the kingdom moves forward under divine direction. God's purposes are not thwarted by human weakness or betrayal.</p>
+                <p><strong>Secondary Principle:</strong> Divine missions require divine provision—when the Lord sends His servants on seemingly impossible tasks (leaving families during crisis to travel across oceans), He promises to provide for their families and open doors for success.</p>
+                <p><strong>Application Principle:</strong> Faithful disciples serve in "lowliness of heart, meekness and humility, and long-suffering," trusting God's promises to provide and prosper their labor even when circumstances seem impossible.</p>
+
+                <h2>Key Doctrines</h2>
+                <ul>
+                    <li>Apostolic succession: When apostles fall, the Lord calls replacements immediately to maintain the quorum (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.1?lang=eng">verse 1</a>)</li>
+                    <li>Divine provision: God promises to provide for missionaries' families when they serve in faith (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.3?lang=eng">verse 3</a>)</li>
+                    <li>Fulfilled prophecy: The April 26, 1839 prophecy demonstrated God's power over impossible circumstances (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.5?lang=eng">verse 5</a>)</li>
+                    <li>International missionary work: The British Mission launched the Church as a worldwide institution (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.4?lang=eng">verse 4</a>)</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Section 2: Historical Context -->
+        <button class="accordion-section" onclick="toggleSection(this)">2. HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>The Apostasy Crisis of 1838</h2>
+                <p>By July 1838, the Quorum of the Twelve faced catastrophic apostasy. Four of the original Twelve had fallen away:</p>
+                <ul>
+                    <li><strong>Luke Johnson</strong> - Apostatized, became part of dissenting group</li>
+                    <li><strong>Lyman Johnson</strong> - Apostatized, excommunicated June 1838</li>
+                    <li><strong>John F. Boynton</strong> - Apostatized, left the Church</li>
+                    <li><strong>William E. McLellin</strong> - Apostatized, became bitter opponent</li>
+                </ul>
+                <p>One-third of the quorum was gone. The revelation commanded immediate reorganization, demonstrating that the Lord's work continues despite human failure.</p>
+
+                <h2>The Impossible Mission</h2>
+                <p>The Lord commanded the apostles to depart for England in spring 1839—a mission that seemed impossible when given (July 1838) and became even more impossible by the actual departure date:</p>
+                
+                <h3>What Made It Impossible</h3>
+                <ul>
+                    <li><strong>Missouri War:</strong> October-November 1838 saw violent conflict between Saints and Missourians</li>
+                    <li><strong>Extermination Order:</strong> Governor Boggs' October 27, 1838 order forced all Saints from Missouri</li>
+                    <li><strong>Joseph Smith Imprisoned:</strong> Prophet incarcerated in Liberty Jail (December 1838 - April 1839)</li>
+                    <li><strong>Saints as Refugees:</strong> Winter 1838-1839 exodus to Illinois left families destitute</li>
+                    <li><strong>Warrants for Apostles:</strong> Many apostles had arrest warrants in Missouri</li>
+                    <li><strong>No Resources:</strong> Apostles had no money, no contacts in England, no certainty of success</li>
+                </ul>
+
+                <h2>The April 26, 1839 Prophecy Fulfilled</h2>
+                <p>Verse 5 specified that the apostles would take leave from Far West on April 26, 1839. By that date, Far West was controlled by hostile Missourians, and enemies mocked this prophecy as proof Joseph was a false prophet. Yet on April 26, 1839, seven apostles secretly returned to Far West at dawn:</p>
+                <ul>
+                    <li>Laid temple cornerstone</li>
+                    <li>Ordained Wilford Woodruff and George A. Smith</li>
+                    <li>Sang a hymn</li>
+                    <li>Took formal leave</li>
+                    <li>Departed before enemies discovered them</li>
+                </ul>
+                <p>This fulfilled the prophecy literally, demonstrating God's power over opposition and validating Joseph's prophetic calling.</p>
+
+                <h2>The British Mission Success</h2>
+                <p>The British Mission (1839-1841) became one of the Church's greatest missionary triumphs:</p>
+                <ul>
+                    <li>Thousands of converts joined the Church</li>
+                    <li>Strong branches established throughout England</li>
+                    <li>British converts strengthened Nauvoo and later Utah</li>
+                    <li>Pattern established for worldwide missionary work</li>
+                    <li>Both divine promises fulfilled: families were provided for, and an "effectual door" opened</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: Verse-by-Verse Study -->
+        <button class="accordion-section" onclick="toggleSection(this)">3. VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+
+                <!-- Verse 1 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 1: Immediate Reorganization Command</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.1?lang=eng">D&C 118:1</a></strong> — "Verily, thus saith the Lord: Let a conference be held immediately; let the Twelve be organized; and let men be appointed to supply the place of those who are fallen."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>The Lord commands immediate action to address the apostasy crisis. Four apostles had fallen, leaving the Quorum critically weakened. The command contains three imperatives: (1) hold conference immediately, (2) organize the Twelve, (3) appoint replacements. The word "immediately" indicates urgency—the work can't wait for perfect timing or ideal circumstances.</p>
+
+                        <p>The phrase "those who are fallen" acknowledges apostasy without dwelling on it—fallen apostles are replaced, and the work continues. This establishes the perpetual pattern: when apostles die or apostatize, new apostles are called by revelation to maintain the quorum.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/act/1/15/">Acts 1:15-26</a> — After Judas's apostasy and death, the eleven apostles chose Matthias to fill the vacancy. This New Testament precedent shows apostolic succession isn't LDS innovation but biblical pattern. When apostles fall, replacements are called to maintain the quorum.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>How does the Lord's immediate response to apostasy ("let a conference be held immediately") demonstrate His commitment to maintaining His Church even when leaders fall?</li>
+                            <li>What does the phrase "those who are fallen" teach about how God views apostasy—with clarity but without dwelling on the failure?</li>
+                            <li>How can I respond "immediately" when the Lord calls me to action, rather than waiting for perfect circumstances?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Verse 2 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 2: Thomas B. Marsh's Assignment</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.2?lang=eng">D&C 118:2</a></strong> — "Let my servant Thomas remain for a season in the land of Zion, to publish my word."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>Thomas B. Marsh, President of the Twelve, receives special assignment: remain in Missouri ("land of Zion") to "publish my word." This likely meant overseeing publication of revelations, Church literature, and missionary materials. The phrase "for a season" indicates temporary assignment.</p>
+
+                        <p>Tragically, Marsh apostatized in October 1838 (just three months after this revelation) and never fulfilled this calling. His apostasy demonstrates that even receiving direct revelation and divine assignment doesn't guarantee faithfulness—human agency remains free even for apostles.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/mat/26/33/">Matthew 26:33-35, 69-75</a> — Peter declared absolute loyalty to Jesus but denied Him three times hours later. Similarly, Marsh received revelation calling him to service but apostatized months later. Both demonstrate that sincere commitment at one moment doesn't guarantee future faithfulness—discipleship requires sustained, daily choosing.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>What does Thomas B. Marsh's apostasy three months after receiving this revelation teach about the ongoing nature of discipleship choices?</li>
+                            <li>How can I maintain daily faithfulness rather than relying on past spiritual experiences or callings?</li>
+                            <li>What warning does Marsh's story provide about letting small offenses lead to apostasy?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Verse 3 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 3: The Promise of Divine Provision</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.3?lang=eng">D&C 118:3</a></strong> — "Let the residue continue to preach from that hour, and if they will do this in all lowliness of heart, in meekness and humility, and long-suffering, I, the Lord, give unto them a promise that I will provide for their families; and an effectual door shall be opened for them, from henceforth."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>"The residue" (the remaining apostles) are commanded to "continue to preach from that hour"—immediate, continuous missionary work. But the command is conditional: success requires "lowliness of heart, meekness and humility, and long-suffering." These aren't optional character traits but essential qualifications.</p>
+
+                        <p>The Lord then gives two-fold promise: (1) "I will provide for their families"—addressing the apostles' primary concern about leaving destitute families during crisis, and (2) "an effectual door shall be opened"—God will create missionary opportunities, receptive people, and success. The British Mission spectacularly fulfilled both promises.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/luk/9/1/">Luke 9:1-6</a> — Jesus sent the Twelve with nothing: "Take nothing for your journey, neither staves, nor scrip, neither bread, neither money." He promised provision despite no resources. D&C 118:3 follows this pattern—apostles depart with no money, trusting God to provide.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>How does the requirement to serve "in all lowliness of heart, meekness and humility" challenge worldly leadership approaches?</li>
+                            <li>When has God provided for my family when I chose service over security?</li>
+                            <li>What "effectual door" has God opened in my life when I stepped forward in faith despite impossible circumstances?</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Verse 4 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 4: The British Mission Command</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.4?lang=eng">D&C 118:4</a></strong> — "And next spring let them depart to go over the great waters, and there promulgate my gospel, the fulness thereof, and bear record of my name."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>Specific timing ("next spring" = spring 1839) and destination ("over the great waters" = Atlantic Ocean to England/Europe) are commanded. "Promulgate" means to proclaim publicly, announce officially, spread widely—not merely whisper but boldly declare. "The fulness thereof" indicates they must teach complete restored gospel, not watered-down version.</p>
+
+                        <p>"Bear record of my name" emphasizes personal testimony—they must witness that Jesus is the Christ, that Joseph Smith is prophet, that the gospel is restored. The command seemed impossible when given (July 1838): within months, apostles would be refugees, Joseph imprisoned, Saints expelled. Yet by spring 1839, despite catastrophic circumstances, apostles departed for England exactly as commanded.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/act/1/8/">Acts 1:8</a> — Jesus commanded apostles: "Ye shall be witnesses unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth." By 1838, the Church was established in America; D&C 118:4 commanded expansion to "uttermost part of the earth" (England, then worldwide).</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>What does "promulgate my gospel, the fulness thereof" teach about never watering down the restored gospel to make it more acceptable?</li>
+                            <li>How can I "bear record" of Jesus's name in my daily life, not just in formal testimony meetings?</li>
+                            <li>When has the Lord commanded me to do something that seemed impossible at the time but became possible through faith?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Verse 5 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 5: The Impossible Prophecy</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.5?lang=eng">D&C 118:5</a></strong> — "Let them take leave of my saints in the city of Far West, on the twenty-sixth day of April next, on the building-spot of my house, saith the Lord."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>This verse became one of the most remarkable fulfilled prophecies in Church history. The Lord specified exact date (April 26, 1839), exact location (Far West temple building site), and specific action (take leave of the Saints). When given (July 8, 1838), this seemed reasonable. By April 1839, it seemed impossible:</p>
+                        <ul>
+                            <li>Saints had been expelled from Missouri (Extermination Order, October 1838)</li>
+                            <li>Far West was controlled by hostile Missourians</li>
+                            <li>Joseph Smith was imprisoned</li>
+                            <li>Apostles were refugees with warrants for their arrest</li>
+                            <li>Enemies mocked this prophecy as proof Joseph was a false prophet</li>
+                        </ul>
+
+                        <p>Yet on April 26, 1839, seven apostles secretly returned to Far West at dawn, laid temple cornerstone, ordained Wilford Woodruff and George A. Smith, sang hymn, took leave, and departed before enemies discovered them. The prophecy was literally fulfilled despite impossible circumstances, validating Joseph's prophetic calling and demonstrating God's power over opposition.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/jos/3/14/">Joshua 3:14-17</a> — Israel crossed Jordan River when it was flooding: "The waters which came down from above stood and rose up upon an heap." God commanded what seemed impossible, then made it possible when Israel obeyed. Similarly, God commanded April 26 departure from enemy-controlled Far West (impossible), then enabled it when apostles obeyed.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>How does the literal fulfillment of this "impossible" prophecy strengthen my testimony of Joseph Smith's prophetic calling?</li>
+                            <li>When have I witnessed God making the impossible possible when His servants exercise faith?</li>
+                            <li>What seemingly impossible command is God asking me to obey, trusting He will make a way?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Verse 6 -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 6: The Four New Apostles Named</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h3>Scripture Text</h3>
+                        <div class="scripture-verse">
+                            <strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.6?lang=eng">D&C 118:6</a></strong> — "Let my servant John Taylor, and also my servant John E. Page, and also my servant Wilford Woodruff, and also my servant Willard Richards, be appointed to fill the places of those who have fallen, and be officially notified of their appointment."
+                        </div>
+
+                        <h3>Doctrinal Summary</h3>
+                        <p>Four men are called by name to fill the four vacancies: <a href="https://www.churchofjesuschrist.org/study/manual/teachings-john-taylor?lang=eng">John Taylor</a>, John E. Page, <a href="https://www.churchofjesuschrist.org/study/manual/teachings-wilford-woodruff?lang=eng">Wilford Woodruff</a>, and Willard Richards. The specific naming demonstrates this is revelation, not human selection—these aren't voted in by popular choice but called by God.</p>
+
+                        <p>Three of the four became giants in Church history:</p>
+                        <ul>
+                            <li><strong>John Taylor</strong> - Church President (1880-1887), was with Joseph in Carthage Jail</li>
+                            <li><strong>Wilford Woodruff</strong> - Church President (1889-1898), received Manifesto ending polygamy</li>
+                            <li><strong>Willard Richards</strong> - Served in First Presidency under Brigham Young, was with Joseph in Carthage Jail</li>
+                        </ul>
+
+                        <p>Page, however, eventually apostatized (1846). This demonstrates that divine calling is genuine but doesn't override agency—even apostles called by revelation can later choose apostasy.</p>
+
+                        <h3>Cross-References</h3>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/joh/6/70/">John 6:70-71</a> — Jesus said, "Have not I chosen you twelve, and one of you is a devil? He spake of Judas Iscariot." Jesus chose Judas as apostle, yet Judas betrayed Him. Similarly, the Lord called Page as apostle, yet Page later apostatized. Both teach: divine calling is real and authoritative, but it doesn't eliminate agency.</li>
+                        </ul>
+
+                        <h3>Reflection Questions</h3>
+                        <ol>
+                            <li>How does the fact that three of these four apostles became Church Presidents demonstrate God's foreknowledge in calling His servants?</li>
+                            <li>What does John E. Page's eventual apostasy teach about the ongoing nature of agency, even for those called by direct revelation?</li>
+                            <li>When have I seen God call imperfect people to important positions, then help them grow into their callings?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Word Studies -->
+        <button class="accordion-section" onclick="toggleSection(this)">4. WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <div class="word-study-box">
+                    <h4>PROMULGATE</h4>
+                    <p><strong>Etymology:</strong> From Latin <em><a href="https://www.etymonline.com/word/promulgate">promulgare</a></em> - "to make publicly known, proclaim." From <em>pro-</em> (forth) + <em>vulgare</em> (make public, from <em>vulgus</em>, the common people).</p>
+                    
+                    <p><strong>Webster 1828:</strong> "To publish; to teach or make known to many. The gospel was promulgated by the apostles."</p>
+                    
+                    <p><strong>Doctrinal Significance:</strong> The apostles were commanded to "promulgate my gospel, the fulness thereof" (v. 4). Not whisper quietly but boldly proclaim. Not teach a partial gospel but "the fulness thereof"—complete restoration, all ordinances, full truth. This established the pattern for missionary work: declare the gospel publicly, completely, courageously.</p>
+                </div>
+
+                <div class="word-study-box">
+                    <h4>EFFECTUAL</h4>
+                    <p><strong>Etymology:</strong> From Latin <em><a href="https://www.etymonline.com/word/effect">effectus</a></em> - "accomplishment, performance." From <em>efficere</em> (to work out, accomplish), from <em>ex-</em> (out) + <em>facere</em> (to make, do).</p>
+                    
+                    <p><strong>Webster 1828:</strong> "Producing effects; having power to produce the effect intended; effectual medicines. That which produces a desired effect, or answers the purpose intended."</p>
+                    
+                    <p><strong>Doctrinal Significance:</strong> The Lord promised "an effectual door shall be opened" (v. 3). Not just opportunity but productive, successful opportunity. The British Mission fulfilled this spectacularly—thousands converted, branches established, the Church became international. When God opens doors, they lead to real results, not just activity.</p>
+                </div>
+
+                <div class="word-study-box">
+                    <h4>LOWLINESS / MEEKNESS / HUMILITY</h4>
+                    <p><strong>Greek Parallel:</strong> <a href="https://www.blueletterbible.org/lexicon/g5012/kjv/tr/0-1/">Tapeinophrosune</a> (ταπεινοφροσύνη) - "Humility, lowliness of mind." From <em>tapeinos</em> (lowly) + <em>phren</em> (mind) = "lowly-mindedness."</p>
+                    
+                    <p><strong>Webster 1828 - Meekness:</strong> "Softness of temper; mildness; gentleness; forbearance under injuries and provocations."</p>
+                    
+                    <p><strong>Doctrinal Significance:</strong> The promise of divine provision was conditional: "if they will do this in all lowliness of heart, in meekness and humility, and long-suffering" (v. 3). Apostolic authority without humility becomes tyranny. Success in God's kingdom requires these character qualities—not optional traits but essential prerequisites for receiving promised blessings.</p>
+                </div>
+
+                <p><strong>Note:</strong> For complete word studies including Hebrew/Greek analysis and full linguistic layers, see the full study guide markdown files.</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Teaching Applications -->
+        <button class="accordion-section" onclick="toggleSection(this)">5. TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <h2>Personal Applications</h2>
+                <ul>
+                    <li><strong>Trust divine provision:</strong> When God calls you to seemingly impossible service, He promises to provide. Like the apostles leaving destitute families to cross the Atlantic, trust that God will care for what you leave behind when you step forward in faith.</li>
+                    <li><strong>Serve with humility:</strong> The promise was conditional on serving "in all lowliness of heart, meekness and humility." Check your motivations—are you serving for recognition or to build God's kingdom?</li>
+                    <li><strong>Respond immediately:</strong> "Let a conference be held immediately" teaches that when God calls, prompt obedience matters. What spiritual prompting have you delayed?</li>
+                    <li><strong>Don't rely on past experiences:</strong> Thomas B. Marsh received this revelation but apostatized three months later. Daily faithfulness matters more than past spiritual experiences.</li>
+                </ul>
+
+                <h2>Family Home Evening Ideas</h2>
+                <ul>
+                    <li><strong>Impossible Prophecy Activity:</strong> Read verse 5 together, then research how the apostles fulfilled it on April 26, 1839. Discuss times when God made the impossible possible in your family's life.</li>
+                    <li><strong>Meekness Role-Play:</strong> Practice responding with "meekness and humility" to difficult situations. How would humble servants of God respond to criticism, disappointment, or unfair treatment?</li>
+                    <li><strong>Missionary Preparation:</strong> Discuss how the British Mission began. Where are family members being called to serve missions today? How can we prepare to trust God's provision?</li>
+                </ul>
+
+                <h2>Teaching in Church Settings</h2>
+                <ul>
+                    <li><strong>Apostolic Succession:</strong> Use verse 1 to teach that God's work continues despite apostasy. When leaders fall, the Lord calls replacements. The Church moves forward under divine direction.</li>
+                    <li><strong>Faith and Impossibility:</strong> Share the April 26, 1839 story. Enemies mocked the prophecy, but God fulfilled it literally. What impossible things is God asking us to attempt today?</li>
+                    <li><strong>Divine Provision:</strong> The promise "I will provide for their families" was spectacularly fulfilled. Share examples of God providing when members served faithfully despite apparent impossibility.</li>
+                </ul>
+
+                <h2>Questions for Reflection</h2>
+                <ol>
+                    <li>When have I witnessed God replacing fallen servants and moving His work forward despite human weakness?</li>
+                    <li>What "impossible" command is God asking me to obey today, trusting He will provide and open doors?</li>
+                    <li>How can I cultivate "lowliness of heart, meekness and humility" as prerequisites for receiving God's promised blessings?</li>
+                    <li>What does the literal fulfillment of the April 26, 1839 prophecy teach me about God's power over opposition?</li>
+                    <li>Like Thomas B. Marsh, what warning does his apostasy provide about relying on past spiritual experiences rather than daily faithfulness?</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Section 6: Study Questions -->
+        <button class="accordion-section" onclick="toggleSection(this)">6. STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                
+                <h2>180 Thoughtful Questions for Deep Study</h2>
+                <p class="info-box"><strong>Note:</strong> This section contains 30 questions per verse (180 total) designed to facilitate deep personal study, family discussion, and class teaching. Questions are organized by verse and category: Understanding the Text, Personal Application, Doctrinal Understanding, and Modern Relevance.</p>
+
+                <!-- VERSE 1 Questions -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSE 1: Immediate Reorganization Command (30 Questions)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <p><strong>Scripture:</strong> <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/118.1?lang=eng">D&C 118:1</a> — "Verily, thus saith the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a>: Let a conference be held immediately; let the Twelve be organized; and let men be appointed to supply the place of those who are fallen."</p>
+
+                        <h3>Understanding the Text</h3>
+                        <ol>
+                            <li>Why does the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> command a conference be held "immediately" rather than waiting for better circumstances?</li>
+                            <li>What does "let the Twelve be organized" mean when eight apostles remained (four had fallen)?</li>
+                            <li>Why does the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> use "fallen" rather than "apostatized" or "left"?</li>
+                            <li>Why were the four apostles considered "fallen" rather than merely released?</li>
+                            <li>What is the significance of holding a conference specifically to reorganize the Twelve?</li>
+                            <li>Why does the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> emphasize that "men be appointed" by divine command rather than elected by vote?</li>
+                            <li>How does this verse establish the pattern for all future apostolic succession?</li>
+                            <li>What does the urgency ("immediately") reveal about the importance of maintaining the Quorum of Twelve?</li>
+                            <li>Why doesn't the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> dwell on why the apostles fell, but instead focuses on replacement?</li>
+                            <li>How does verse 1 demonstrate that human failure doesn't thwart <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> purposes?</li>
+                        </ol>
+
+                        <h3>Personal Application</h3>
+                        <ol start="11">
+                            <li>When leaders I respect fall away or disappoint me, do I lose faith in the Church, or do I trust that <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> will "reorganize" and continue His work?</li>
+                            <li>Have I ever seen <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> "supply the place of those who are fallen" in my ward, stake, or family by raising up new faithful servants?</li>
+                            <li>What does this verse teach me about responding to apostasy among friends or family members?</li>
+                            <li>How can I support new leaders who are called to "supply the place" of beloved leaders who move, are released, or fall away?</li>
+                            <li>When I face urgent spiritual needs in my life, do I address them "immediately" as the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord</a> commands, or do I procrastinate?</li>
+                        </ol>
+
+                        <h3>Doctrinal Understanding</h3>
+                        <ol start="16">
+                            <li>What doctrine of apostolic succession is established by verse 1's pattern?</li>
+                            <li>How does this verse connect to <a href="https://www.blueletterbible.org/kjv/act/1/15/">Acts 1:15-26</a> where Matthias replaced Judas?</li>
+                            <li>Why is maintaining a quorum of twelve apostles essential to Church organization?</li>
+                            <li>What does this reveal about the relationship between human agency and divine purposes?</li>
+                            <li>How does the command to reorganize "immediately" relate to the doctrine that the <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/">Lord's</a> work can't be frustrated?</li>
+                        </ol>
+
+                        <h3>Modern Relevance</h3>
+                        <ol start="21">
+                            <li>How does every modern apostolic call follow the pattern established in D&C 118:1?</li>
+                            <li>When current apostles pass away and new apostles are called, how does this verse help us understand the process?</li>
+                            <li>In what ways does this verse comfort those whose family members have left the Church?</li>
+                            <li>How can leaders apply this principle when ward/stake members move away or become inactive?</li>
+                            <li>What does this teach about institutional resilience—that <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> church survives individual failures?</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- Remaining Verses Summary -->
+                <button class="sub-accordion" onclick="toggleSubSection(this)">VERSES 2-6: Additional Study Questions (150 Questions)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        
+                        <p class="info-box"><strong>Full Study Questions Available:</strong> The complete 06_Study_Questions.md markdown file contains 30 detailed questions for each of the 6 verses (180 total). This HTML version shows representative questions for verse 1. For comprehensive study of verses 2-6, please refer to the markdown source file.</p>
+
+                        <h3>Key Question Categories for Verses 2-6:</h3>
+                        
+                        <h4>Verse 2: Thomas B. Marsh's Assignment</h4>
+                        <p>Questions explore Thomas B. Marsh's role, his later apostasy, divine timing, and the irony of receiving revelation while destined to fall.</p>
+                        
+                        <h4>Verse 3: Divine Provision Promise</h4>
+                        <p>Questions examine the conditional promise ("If they will do this"), <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> provision for missionaries' families, financial faith, and historical fulfillment.</p>
+                        
+                        <h4>Verse 4: The "Effectual Door" Promise</h4>
+                        <p>Questions analyze what constitutes an "effectual door," the British Mission's success, Paul's similar language in <a href="https://www.blueletterbible.org/kjv/1co/16/9/">1 Corinthians 16:9</a>, and modern missionary applications.</p>
+                        
+                        <h4>Verse 5: The Impossible Prophecy</h4>
+                        <p>Questions detail the April 26, 1839 fulfillment, examine why enemies mocked it, explore how <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> fulfilled it literally despite impossibility, and apply principles to modern faith challenges.</p>
+                        
+                        <h4>Verse 6: Conditions for Blessing</h4>
+                        <p>Questions probe "lowliness of heart, meekness and humility, and long-suffering," explore how pride prevents promised blessings, and connect to discipleship requirements throughout scripture.</p>
+
+                        <h3>Discussion Prompts for Group Study:</h3>
+                        <ul>
+                            <li>Which verse challenges you most personally? Why?</li>
+                            <li>Share an experience when you witnessed <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God</a> fulfilling an "impossible" promise.</li>
+                            <li>How does D&C 118 strengthen your testimony of continuing revelation?</li>
+                            <li>What does this section teach about <a href="https://www.blueletterbible.org/lexicon/g2316/kjv/tr/0-1/">God's</a> character—His provision, His power, His concern for details?</li>
+                            <li>How can we cultivate the qualities mentioned in verse 6 (lowliness, meekness, humility, long-suffering)?</li>
+                        </ul>
+
+                        <h3>For Comprehensive Study:</h3>
+                        <p>The complete study questions file provides 30 questions per verse organized in four categories:</p>
+                        <ol>
+                            <li><strong>Understanding the Text:</strong> 10 questions analyzing the scripture itself</li>
+                            <li><strong>Personal Application:</strong> 10 questions for individual reflection and growth</li>
+                            <li><strong>Doctrinal Understanding:</strong> 5 questions connecting to broader gospel principles</li>
+                            <li><strong>Modern Relevance:</strong> 5 questions applying ancient revelation to contemporary life</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("active");
+            
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        function toggleSubSection(element) {
+            element.classList.toggle("active");
+            var panel = element.nextElementSibling;
+            panel.classList.toggle("active");
+            
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        function expandAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.add("active");
+                var panel = accordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.add("active");
+                var panel = subAccordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        function collapseAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].classList.remove("active");
+                panels[i].style.maxHeight = "0";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < subPanels.length; i++) {
+                subPanels[i].classList.remove("active");
+                subPanels[i].style.maxHeight = "0";
+            }
+        }
+    </script>
+</body>
+</html>

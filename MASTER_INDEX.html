@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come Follow Me D&C Study Guides | Enhanced Scripture Study</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #7c9885 0%, #6b8774 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            font-weight: 300;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.85;
+            font-style: italic;
+        }
+        
+        .intro {
+            background: white;
+            padding: 35px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid #7c9885;
+        }
+        
+        .intro h2 {
+            color: #7c9885;
+            font-size: 1.9em;
+            margin-bottom: 18px;
+        }
+        
+        .intro p {
+            line-height: 1.9;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .intro ul {
+            margin-left: 30px;
+            margin-top: 15px;
+            line-height: 2;
+        }
+        
+        .section-group {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .section-group h3 {
+            color: #7c9885;
+            font-size: 1.6em;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .study-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .study-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(124,152,133,0.15);
+            border-color: #7c9885;
+        }
+        
+        .study-card h4 {
+            color: #7c9885;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .study-card .verse-count {
+            color: #6b7280;
+            font-size: 0.95em;
+            margin-bottom: 12px;
+        }
+        
+        .study-card .section-title {
+            color: #4b5563;
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            font-style: italic;
+            min-height: 48px;
+        }
+        
+        .study-button {
+            display: inline-block;
+            background-color: #7c9885;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.05em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+        
+        .study-button:hover {
+            background-color: #6b8774;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            padding: 40px 30px;
+            margin-top: 50px;
+            border-top: 2px solid #e5e7eb;
+        }
+        
+        .footer p {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        
+        .footer a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px solid #7c9885;
+        }
+        
+        .footer a:hover {
+            color: #6b8774;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .study-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Come Follow Me D&C Study Guides</h1>
+            <p>Enhanced Scripture Study for 2025</p>
+            <p class="subtitle">Verse-by-Verse Analysis | Word Studies | Cross-References | Teaching Applications</p>
+        </div>
+
+        <div class="intro">
+            <h2>Welcome to CFM Corner Study Guides</h2>
+            <p>These comprehensive scripture study guides provide in-depth analysis of Doctrine & Covenants sections, designed for individual study, family home evening, Sunday School teaching, and seminary lessons.</p>
+            <p><strong>Each study guide includes:</strong></p>
+            <ul>
+                <li>Complete scripture text with proper citations</li>
+                <li>Hebrew and Greek word studies with Blue Letter Bible links</li>
+                <li>Historical and cultural context</li>
+                <li>Cross-references across all standard works</li>
+                <li>Teaching applications for multiple contexts</li>
+                <li>Reflection questions for personal study</li>
+                <li>Mobile-responsive design with expand/collapse features</li>
+            </ul>
+        </div>
+
+        <!-- D&C 106-108 -->
+        <div class="section-group">
+            <h3>D&C 106-108 | Week 38: September 8-14, 2025</h3>
+            <div class="study-grid">
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 106</h4>
+                        <p class="verse-count">8 verses</p>
+                        <p class="section-title">Warren A. Cowdery Called as Presiding Elder</p>
+                    </div>
+                    <a href="dc106.html" class="study-button">Study D&C 106</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 107</h4>
+                        <p class="verse-count">100 verses</p>
+                        <p class="section-title">Priesthood Organization and Authority</p>
+                    </div>
+                    <a href="dc107.html" class="study-button">Study D&C 107</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 108</h4>
+                        <p class="verse-count">8 verses</p>
+                        <p class="section-title">Lyman Sherman's Personal Revelation</p>
+                    </div>
+                    <a href="dc108.html" class="study-button">Study D&C 108</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- D&C 109-110 -->
+        <div class="section-group">
+            <h3>D&C 109-110 | Week 40: September 22-28, 2025</h3>
+            <div class="study-grid">
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 109</h4>
+                        <p class="verse-count">80 verses</p>
+                        <p class="section-title">Kirtland Temple Dedicatory Prayer</p>
+                    </div>
+                    <a href="dc109.html" class="study-button">Study D&C 109</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 110</h4>
+                        <p class="verse-count">16 verses</p>
+                        <p class="section-title">Visions in the Kirtland Temple</p>
+                    </div>
+                    <a href="dc110.html" class="study-button">Study D&C 110</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- D&C 111-114 -->
+        <div class="section-group">
+            <h3>D&C 111-114 | Week 41: September 29 - October 5, 2025</h3>
+            <div class="study-grid">
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 111</h4>
+                        <p class="verse-count">16 verses</p>
+                        <p class="section-title">Salem Revelation - Treasure and Spiritual Wealth</p>
+                    </div>
+                    <a href="dc111.html" class="study-button">Study D&C 111</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 112</h4>
+                        <p class="verse-count">34 verses</p>
+                        <p class="section-title">Revelation to Thomas B. Marsh - Apostolic Responsibility</p>
+                    </div>
+                    <a href="dc112.html" class="study-button">Study D&C 112</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 113</h4>
+                        <p class="verse-count">10 verses</p>
+                        <p class="section-title">Questions on Isaiah Answered</p>
+                    </div>
+                    <a href="dc113.html" class="study-button">Study D&C 113</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 114</h4>
+                        <p class="verse-count">2 verses</p>
+                        <p class="section-title">Revelation to David W. Patten and the Twelve</p>
+                    </div>
+                    <a href="dc114.html" class="study-button">Study D&C 114</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- D&C 115-120 - NEW SECTION -->
+        <div class="section-group">
+            <h3>D&C 115-120 | Week 42: October 6-12, 2025</h3>
+            <div class="study-grid">
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 115</h4>
+                        <p class="verse-count">19 verses</p>
+                        <p class="section-title">The Name of the Church and Building the House of the Lord</p>
+                    </div>
+                    <a href="dc115_complete.html" class="study-button">Study D&C 115</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 116</h4>
+                        <p class="verse-count">1 verse</p>
+                        <p class="section-title">Adam-ondi-Ahman - Where Adam Shall Visit His People</p>
+                    </div>
+                    <a href="dc116_complete.html" class="study-button">Study D&C 116</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 117</h4>
+                        <p class="verse-count">16 verses</p>
+                        <p class="section-title">Rebuke and Counsel - Forsaking Babylon</p>
+                    </div>
+                    <a href="dc117_complete.html" class="study-button">Study D&C 117</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 118</h4>
+                        <p class="verse-count">6 verses</p>
+                        <p class="section-title">Call of the Twelve to England - Foreign Missions Begin</p>
+                    </div>
+                    <a href="dc118_complete.html" class="study-button">Study D&C 118</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 119</h4>
+                        <p class="verse-count">7 verses</p>
+                        <p class="section-title">The Law of Tithing - Temporal Salvation of Zion</p>
+                    </div>
+                    <a href="dc119_complete.html" class="study-button">Study D&C 119</a>
+                </div>
+
+                <div class="study-card">
+                    <div>
+                        <h4>D&C 120</h4>
+                        <p class="verse-count">1 verse</p>
+                        <p class="section-title">Disposition of Tithing - Sacred Stewardship</p>
+                    </div>
+                    <a href="dc120_complete.html" class="study-button">Study D&C 120</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Total: 324 verses across 16 sections currently available</strong></p>
+            <p style="margin-top: 20px;">New study guides added weekly following the Come Follow Me schedule</p>
+            <p style="margin-top: 20px; font-size: 0.95em;">These study guides are designed for individual study, family home evening, Sunday School teaching, seminary lessons, and other gospel learning contexts.</p>
+            <p style="margin-top: 20px; font-size: 0.95em;">Visit <a href="https://www.cfmcorner.com" target="_blank">CFMCorner.com</a> for more resources including weekly video compilations and teaching materials</p>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #9ca3af;">Last Updated: October 11, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
