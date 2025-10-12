@@ -410,6 +410,71 @@
                 text-align: center;
             }
         }
+    
+        /* Navigation Styles */
+        .section-navigation {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 3px solid #7c9885;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav-link {
+            background: #7c9885;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background: #6b8774;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-link.index {
+            background: #5a6d5f;
+        }
+
+        .nav-link.index:hover {
+            background: #4a5d4f;
+        }
+
+        .nav-disabled {
+            background: #d1d5db;
+            color: #9ca3af;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            display: inline-block;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-link, .nav-disabled {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1187,6 +1252,16 @@
             });
         }
     </script>
+
+
+    <!-- Section Navigation -->
+    <div class="section-navigation">
+        <div class="nav-container">
+            <a href="dc114.html" class="nav-link">← D&C 114</a>
+            <a href="MASTER_INDEX.html" class="nav-link index">📚 Study Guide Index</a>
+            <a href="dc116_complete.html" class="nav-link">D&C 116 →</a>
+        </div>
+    </div>
 
 </body>
 </html>

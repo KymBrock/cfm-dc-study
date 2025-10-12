@@ -433,6 +433,71 @@
                 text-align: center;
             }
         }
+    
+        /* Navigation Styles */
+        .section-navigation {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 3px solid #7c9885;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav-link {
+            background: #7c9885;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background: #6b8774;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-link.index {
+            background: #5a6d5f;
+        }
+
+        .nav-link.index:hover {
+            background: #4a5d4f;
+        }
+
+        .nav-disabled {
+            background: #d1d5db;
+            color: #9ca3af;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            display: inline-block;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-link, .nav-disabled {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -448,13 +513,13 @@
         <div class="nav-links">
             <a href="index.html" class="nav-btn">Lesson Home</a>
             <a href="#" class="nav-btn disabled">Previous</a>
-            <a href="dc112.html" class="nav-btn">Next: D&C 112</a>
+            <a href="dc112_complete.html" class="nav-btn">Next: D&C 112</a>
         </div>
         <div class="nav-links">
-            <a href="dc111.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 111</a>
-            <a href="dc112.html" class="nav-btn">D&C 112</a>
-            <a href="dc113.html" class="nav-btn">D&C 113</a>
-            <a href="dc114.html" class="nav-btn">D&C 114</a>
+            <a href="dc111_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 111</a>
+            <a href="dc112_complete.html" class="nav-btn">D&C 112</a>
+            <a href="dc113_complete.html" class="nav-btn">D&C 113</a>
+            <a href="dc114_complete.html" class="nav-btn">D&C 114</a>
         </div>
     </div>
 
@@ -1449,13 +1514,23 @@
         <div class="nav-links">
             <a href="index.html" class="nav-btn">Lesson Home</a>
             <span class="nav-btn disabled">Previous</span>
-            <a href="dc112.html" class="nav-btn">Next: D&C 112</a>
+            <a href="dc112_complete.html" class="nav-btn">Next: D&C 112</a>
         </div>
         <div class="nav-links">
-            <a href="dc111.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 111</a>
-            <a href="dc112.html" class="nav-btn">D&C 112</a>
-            <a href="dc113.html" class="nav-btn">D&C 113</a>
-            <a href="dc114.html" class="nav-btn">D&C 114</a>
+            <a href="dc111_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 111</a>
+            <a href="dc112_complete.html" class="nav-btn">D&C 112</a>
+            <a href="dc113_complete.html" class="nav-btn">D&C 113</a>
+            <a href="dc114_complete.html" class="nav-btn">D&C 114</a>
+        </div>
+    </div>
+
+
+    <!-- Section Navigation -->
+    <div class="section-navigation">
+        <div class="nav-container">
+            <a href="dc110.html" class="nav-link">← D&C 110</a>
+            <a href="MASTER_INDEX.html" class="nav-link index">📚 Study Guide Index</a>
+            <a href="dc112.html" class="nav-link">D&C 112 →</a>
         </div>
     </div>
 
