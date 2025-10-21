@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctrine & Covenants 121 Complete Study Guide - Liberty Jail Revelation on God's Compassion and Priesthood Power</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px 15px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 5px;
+            margin: 15px 0 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        .sub-panel {
+            background-color: #fafafa;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+        }
+
+        .sub-panel-content {
+            padding: 20px;
+        }
+
+        .panel-content h2 {
+            color: #7c9885;
+            margin: 25px 0 15px 0;
+            font-size: 1.6em;
+            border-bottom: 2px solid #c6d4c8;
+            padding-bottom: 8px;
+        }
+
+        .panel-content h3 {
+            color: #6b8574;
+            margin: 20px 0 12px 0;
+            font-size: 1.3em;
+        }
+
+        .panel-content h4 {
+            color: #5a6d5f;
+            margin: 15px 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        .panel-content p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .panel-content ul, .panel-content ol {
+            margin: 12px 0 12px 30px;
+        }
+
+        .panel-content li {
+            margin: 8px 0;
+            line-height: 1.7;
+        }
+
+        .panel-content a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+            transition: all 0.2s ease;
+        }
+
+        .panel-content a:hover {
+            color: #6b8574;
+            border-bottom: 1px solid #6b8574;
+        }
+
+        .panel-content strong {
+            color: #5a6d5f;
+            font-weight: 600;
+        }
+
+        .panel-content em {
+            font-style: italic;
+            color: #6b8574;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header-section {
+                padding: 25px 20px;
+            }
+
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .site-title {
+                font-size: 1.5em;
+            }
+
+            .accordion-section {
+                font-size: 1em;
+                padding: 14px;
+            }
+
+            .panel-content {
+                padding: 20px;
+            }
+
+            .expand-button {
+                font-size: 0.95em;
+                padding: 10px 18px;
+                margin: 5px;
+            }
+        }
+    
+        .section-navigation {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 3px solid #7c9885;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav-link {
+            background: #7c9885;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background: #6b8774;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-link.index {
+            background: #5a6d5f;
+        }
+
+        .nav-link.index:hover {
+            background: #4a5d4f;
+        }
+
+        .nav-disabled {
+            background: #d1d5db;
+            color: #9ca3af;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            display: inline-block;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-link, .nav-disabled {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="MASTER_INDEX.html" class="nav-btn">⌂ Home</a>
+            <a href="dc120_complete.html" class="nav-btn">◄ Previous: D&C 120</a>
+        </div>
+        <div class="nav-links">
+            <a href="dc121_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 121</a>
+            <a href="dc122_complete.html" class="nav-btn">D&C 122</a>
+            <a href="dc123_complete.html" class="nav-btn">D&C 123</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header-section">
+            <h1>Doctrine & Covenants 121</h1>
+            <div class="subtitle">Liberty Jail Revelation on God's Compassion and Priesthood Power</div>
+            <div class="date-location">March 20, 1839 • Liberty Jail, Clay County, Missouri</div>
+            <div class="scripture-highlight">
+                "No power or influence can or ought to be maintained by virtue of the priesthood, only by persuasion, by long-suffering, by gentleness and meekness, and by love unfeigned."<br>
+                — <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.41?lang=eng" style="color: rgba(255,255,255,0.9); border-bottom: 1px dotted rgba(255,255,255,0.6);">D&C 121:41</a>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">1. SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>D&C 121: Section Overview</h2>
+<h3>Liberty Jail Revelation on God's Compassion and Priesthood Power</h3>
+
+
+<h3>Basic Information</h3>
+<br>
+<strong>Date of Revelation:</strong> March 20, 1839<br>
+<strong>Location:</strong> Liberty Jail, Clay County, Missouri<br>
+<strong>Recipients:</strong> Joseph Smith, Hyrum Smith, Sidney Rigdon, Lyman Wight, Alexander McRae, Caleb Baldwin, and the scattered Church of Jesus Christ of Latter-day Saints<br>
+<strong>Section Summary:</strong> During the Saints' fiercest persecution, Joseph Smith cried out from Liberty Jail for deliverance. The Lord answered with assurance of His awareness, promised eventual justice, unfolded expansive teachings on the nature of priesthood power, and offered a heavenly perspective on adversity and divine timing.
+
+<p>This revelation captures the transition from pleading lament (verses 1-6) to a divine epistolary response (verses 7-46). The Lord acknowledges suffering, reaffirms the future gathering of promised knowledge, and codifies the governing principles of righteous priesthood leadership—persuasion, gentleness, meekness, and love unfeigned. These teachings continue to define Latter-day Saint leadership, resilience, and hope.</p>
+
+
+<h3>Key Principles</h3>
+<br>
+<strong>Primary Doctrinal Principle:</strong> Priesthood power is inseparably connected to the powers of heaven and is exercised only through righteousness, charity, and pure motives (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.34-46?lang=eng">D&C 121:34-46</a>).<br>
+<strong>Secondary Principle:</strong> God hears the anguished petitions of His covenant people and, in His time, delivers, sustains, and exalts them beyond their present afflictions (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.7-8?lang=eng">D&C 121:7-8</a>).<br>
+<strong>Application Principle:</strong> Faithful Saints discipline their hearts, reject unrighteous dominion, and cultivate Christlike attributes so heaven can pour down knowledge and favor upon them (verses 26-45).
+
+
+<h3>Timeframe & Setting</h3>
+
+<h4>Circumstances Among Recipients</h4>
+<p>Joseph Smith and his companions had endured nearly four months of winter confinement in Liberty Jail. The dungeon-like lower room measured roughly 14 by 14 feet with a 6½-foot ceiling, little natural light, and constant damp chill. They survived on sparse, sometimes poisoned food and suffered physical illness. Joseph's correspondence reveals alternating anguish, yearning, and prophetic confidence. The Saints outside were scattered across blizzards, forced from their homes, and desperate for direction. Joseph's immediate audience therefore consisted of exhausted men striving to sustain one another while pleading for divine aid.</p>
+
+<h4>Circumstances Within the Church</h4>
+<p>By March 1839, the Church had been legally and militarily expelled from Missouri under Governor Lilburn Boggs's extermination order. Many leaders were displaced; the Twelve Apostles had been commanded to depart on missions from Far West but were in hiding. The Saints were migrating toward Quincy, Illinois, where residents offered temporary refuge. Organizational structures were fragile: quorum meetings were sporadic, communication was perilous, and morale was severely tested. Joseph's words needed to steady leadership, reaffirm divine oversight, and prevent widespread apostasy.</p>
+
+<h4>Relevant Local Circumstances</h4>
+<p>Clay County officials held Joseph and his companions on charges of treason after a series of legally questionable court-martials. Local militias patrolled the area, mobs guarded the jail, and civil authority often colluded with vigilante violence. The Liberty Jail letter responded to a climate of intimidation: property confiscation, incarcerations without due process, and an economy disrupted by forced evacuations. The jail itself sat within a community divided over Mormon presence, amplifying tension and fear for both prisoners and their families.</p>
+
+<h4>Relevant Global Circumstances</h4>
+<p>The world of 1839 wrestled with revolutions, religious revivals, and contested notions of liberty. The United States grappled with slavery expansion, Native American displacement, and debates over states' rights. Globally, monarchies negotiated the aftermath of the Napoleonic era while industrialization accelerated social change. For the Latter-day Saints, the persecution in Missouri became a case study in religious discrimination during a century that championed Enlightenment ideals yet often denied them in practice. The Liberty Jail revelations therefore speak to universal struggles for conscience, governance, and divine justice.</p>
+
+
+<h3>Purpose of the Revelation</h3>
+
+<h4>Short-Term Purpose</h4>
+<ul>
+<li>Comfort Joseph Smith and fellow prisoners amid hopeless circumstance.</li>
+<li>Reassure scattered Saints that the Lord remained aware and guiding events.</li>
+<li>Command patience, forgiveness, and hope while legal appeals stalled.</li>
+<li>Clarify why relief had not yet come and promise eventual vindication.</li>
+<li>Give actionable counsel for sustaining priesthood leadership despite incarceration.</li>
+
+</ul>
+<h4>Long-Term Purpose</h4>
+<ul>
+<li>Codify the eternal law governing priesthood authority and stewardship.</li>
+<li>Teach generations of Saints how adversity refines leaders and unlocks revelation.</li>
+<li>Establish a doctrine of righteous governance contrasted with worldly dominion.</li>
+<li>Promise future dispensations of knowledge, empowering the Restoration's momentum.</li>
+<li>Anchor Latter-day Saint theology in a God who transforms suffering into sanctifying experience.</li>
+
+
+</ul>
+<h3>Significance</h3>
+
+<h4>Immediate Significance</h4>
+<ul>
+<li>Reframed the Liberty Jail ordeal from senseless persecution to a sanctifying "small moment" preparing Joseph for greater service.</li>
+<li>Unified displaced Saints through published excerpts that circulated in Far West, Quincy, and Nauvoo.</li>
+<li>Neutralized apostate narratives by affirming Joseph's divine appointment and prophetic insight.</li>
+<li>Provided a doctrinal charter for how church leaders should minister under duress.</li>
+
+</ul>
+<h4>Enduring Significance</h4>
+<ul>
+<li>D&C 121 remains the Restoration's most comprehensive treatise on priesthood character, widely cited in modern general conference addresses.</li>
+<li>The revelation undergirds contemporary policies on ministering, discipline, and leadership development.</li>
+<li>It models faithful lament—honest petitions that transition into trust, a pattern adopted in personal and institutional crises.</li>
+<li>The prophetic promise that knowledge will "distil as the dews from heaven" fuels modern temple work, continuing revelation, and global outreach.</li>
+
+
+</ul>
+<h3>Cultural Insights</h3>
+
+<h4>Ancient Context</h4>
+<p>Joseph's language invokes biblical lament tradition. Phrases like "O God, where art thou?" echo <a href="https://www.blueletterbible.org/kjv/psa/10/1/">Psalm 10:1</a> and <a href="https://www.blueletterbible.org/kjv/psa/13/1-2/">Psalm 13:1-2</a>, wherein righteous sufferers appeal to God's justice. References to "the pavilion" and "hiding place" mirror imagery from <a href="https://www.blueletterbible.org/kjv/psa/27/5/">Psalm 27:5</a> and <a href="https://www.blueletterbible.org/kjv/psa/31/20/">Psalm 31:20</a>, signaling Joseph's scriptural literacy. The Lord's response engages apocalyptic motifs—"times and seasons," "thrones and dominions"—linking Liberty Jail with ancient prophetic assurances that heavens remain ordered even when earth descends into chaos.</p>
+
+<h4>Modern Parallels</h4>
+<p>Modern Saints confront institutional distrust, power abuses, and societal polarization. D&C 121 equips believers to resist authoritarian impulses, promote compassionate leadership, and advocate for religious liberty. The Liberty Jail narrative parallels contemporary stories of unjust incarceration, displacement, and refugees seeking safe haven. By highlighting divine empathy and covenant accountability, the revelation informs humanitarian advocacy and conflict transformation in the twenty-first century.</p>
+
+
+<h3>Modern Application</h3>
+
+<h4>Personal Application</h4>
+<ul>
+<li>Identify "small moments" of distress and invite the Lord to sanctify them into learning experiences.</li>
+<li>Examine personal motives for influence; replace ambition with sincere charity before acting.</li>
+<li>Seek revelation that "distils as the dew" through quiet, consistent discipleship.</li>
+<li>Keep a Liberty Jail journal: record laments, inspirations, and delivered answers to build spiritual resilience.</li>
+<li>Memorize key verses (e.g., D&C 121:7-8, 41-46) to invoke during trials or leadership opportunities.</li>
+
+</ul>
+<h4>Family Application</h4>
+<ul>
+<li>Hold a family council reviewing how adversity can knit hearts together, using Liberty Jail as case study.</li>
+<li>Role-play scenarios of righteous correction in the home that balance "sharpness" and "love unfeigned."</li>
+<li>Create a family service plan that channels frustration into ministering for others in distress.</li>
+<li>Teach children to identify unrighteous dominion and to stand courageously for conscience.</li>
+<li>Build a Liberty Jail diorama or timeline to visualize the story and cultivate empathy.</li>
+
+</ul>
+<h4>Church Application</h4>
+<ul>
+<li>Train presidencies and councils to evaluate decisions through the lens of persuasion, long-suffering, and kindness.</li>
+<li>Integrate D&C 121 into leadership interviews, emphasizing accountability to heaven before exercising authority.</li>
+<li>Use the revelation to guide disciplinary councils toward restorative, not retributive, outcomes.</li>
+<li>Encourage quorums and organizations to compile modern "knowledge from heaven"—documented miracles, revelations, and lessons learned.</li>
+<li>Develop ministering routes that prioritize those enduring Liberty Jail-like isolation (caregivers, marginalized members, incarcerated individuals).</li>
+
+</ul>
+<h4>Community Application</h4>
+<ul>
+<li>Advocate for humane treatment of prisoners, referencing the indignities endured by Liberty Jail inmates.</li>
+<li>Partner with interfaith coalitions to defend religious liberty and combat mob-style persecution.</li>
+<li>Offer support groups for community members facing systemic injustice, using D&C 121 as an empowerment text.</li>
+<li>Promote civility and kindness initiatives that counteract unrighteous dominion in civic spaces.</li>
+<li>Document community history, ensuring injustices are remembered so healing initiatives can be targeted effectively.</li>
+
+</ul>
+<h4>Global Application</h4>
+<ul>
+<li>Inspire international Latter-day Saints to confront corruption and abuse of power with Christlike courage.</li>
+<li>Use D&C 121 as theological rationale for engaging in global human rights work and refugee protection.</li>
+<li>Encourage worldwide Saints to gather data on persecution, echoing future instructions in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/123?lang=eng">D&C 123</a>.</li>
+<li>Promote cross-cultural leadership exchanges that model persuasion-based governance.</li>
+<li>Support global mental health initiatives that validate lament while pointing to hope in Christ.</li>
+
+</ul>
+<h4>Questions for Personal Study</h4>
+<p>1. When have I felt that God was distant, and how did He eventually "pierce" my situation with light?</p>
+<p style="margin-top: 1em;">2. Which attributes listed in D&C 121:41-44 most need development in my stewardship right now?</p>
+<p style="margin-top: 1em;">3. How can I ensure that power I hold—in family, church, or profession—remains inseparably connected to heaven?</p>
+
+
+<h3>Key Doctrines</h3>
+
+<ul>
+<li><strong>Priesthood Stewardship:</strong> Authority is valid only when exercised in alignment with heaven's principles (verses 34-46).</li>
+<li><strong>Divine Empathy:</strong> God hears and responds to the heartfelt cries of His servants, even when outward deliverance tarries (verses 1-11).</li>
+<li><strong>Justice and Mercy:</strong> The wicked who persecute Zion will face equitable judgment; God's timing preserves agency while ensuring accountability (verses 12-25).</li>
+<li><strong>Revelatory Abundance:</strong> The dispensation of the fulness of times opens reservoirs of knowledge promised to ancient prophets (verses 26-33).</li>
+<li><strong>Sanctifying Opposition:</strong> Trials refine rather than destroy when endured with faith—echoing Christ's descent below all things (verse 7 and <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.8?lang=eng">D&C 122:8</a>).</li>
+<li><strong>Charity as Binding Power:</strong> Charity toward all and virtue-garnished thoughts elevate confidence before God and secure lasting dominion (verses 45-46).</li>
+<li><strong>Nature of Leadership:</strong> Righteous governance rejects compulsion, functioning instead through kindness, pure knowledge, and unfeigned love (verses 41-42).</li>
+
+
+
+</ul>
+            </div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">2. HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>D&C 121: Historical Context</h2>
+<h3>Liberty Jail, Missouri – December 1838 to April 1839</h3>
+
+
+<h3>1. Historical Setting</h3>
+
+<p>The winter of 1838-1839 marked the nadir of the Latter-day Saint experience in Missouri. Following the escalation of the "Mormon War" in late October 1838, Governor Lilburn W. Boggs issued Executive Order 44—the infamous extermination order—authorizing state militia to expel or exterminate the Saints. Days later, the Haun's Mill massacre left 17 Saints dead, intensifying the sense of crisis. Joseph Smith and other leaders surrendered at Far West on October 31 under promises of safety that were swiftly broken. They were subjected to a court-martial in Richmond without legal counsel and charged with treason, murder, and arson.</p>
+<p style="margin-top: 1em;">Liberty Jail became the holding site for Joseph Smith, Hyrum Smith, Sidney Rigdon, Lyman Wight, Alexander McRae, and Caleb Baldwin beginning December 1, 1838. The jail—constructed of double walls with a rubble infill, creating an 8-foot-thick barrier—was intended to prevent escape by both physical and psychological intimidation. Prisoners were confined in the lower chamber, accessible only via a trapdoor. The ceiling allowed little room to stand, and light filtered through two small grated windows. Winter winds penetrated the cracks, keeping the room perpetually cold. In Joseph's words, the space was "as dark almost as midnight." Food brought by guards was frequently poisoned or contaminated; Joseph once vomited violently after tasting a meal and then forbade the others from eating.</p>
+<p style="margin-top: 1em;">While incarcerated, Joseph drafted several letters to the Saints. The March 20, 1839 missive—later canonized as D&C 121-123—combined petition, doctrinal exposition, and administrative instruction. Contextually, the revelation served as a spiritual turning point: Joseph reframed the crisis from unmitigated tragedy to divinely supervised probation. By couching his lament in biblical language, he aligned the Saints' suffering with Israel's covenant history.</p>
+<p style="margin-top: 1em;">Beyond the jail, thousands of Saints evacuated in midwinter across the frozen Mississippi River into Quincy, Illinois. Local residents welcomed them with supplies, shelter, and legal advocacy, contrasting sharply with Missouri's hostility. The exodus strained families; women and children traveled with limited food, encountering sickness and exposure. News of Joseph's imprisonment intensified feelings of abandonment and uncertainty. The Liberty Jail letters therefore functioned as a lifeline between prophet and people, offering theological explanations and practical directives.</p>
+
+
+<h3>2. Key Figures</h3>
+
+<h4>Joseph Smith Jr.</h4>
+<p>At 33, Joseph faced spiritual isolation yet displayed prophetic clarity. His letters reveal repeated efforts to comfort the Saints, instruct leaders, and petition government officials. The Liberty Jail period crystallized Joseph's theology of suffering and priesthood governance. Despite physical weakness, he mentored fellow prisoners, led communal prayer, and bore testimony of divine oversight. His ability to transform anguish into revelation underscores his prophetic calling.</p>
+
+<h4>Hyrum Smith</h4>
+<p>Joseph's older brother and trusted counselor provided emotional steadiness. Hyrum's letters to his family emphasized patience and faith. He served as a spiritual anchor inside the jail, reinforcing the message that God would vindicate them. Hyrum's presence also manifested the familial cost of persecution—Emma Smith and Mary Fielding Smith shouldered parallel burdens of displacement and caretaking.</p>
+
+<h4>Sidney Rigdon</h4>
+<p>A counselor in the First Presidency, Rigdon endured severe illness during imprisonment. His health deteriorated to the point that guards eventually allowed him to seek bail. His rhetorical skills and legal knowledge had earlier aided the Church, but in Liberty Jail he grappled with depression, foreshadowing later struggles. D&C 121 indirectly addresses leaders like Rigdon by outlining how priesthood influence must adhere to heavenly law.</p>
+
+<h4>Lyman Wight, Alexander McRae, Caleb Baldwin</h4>
+<p>These leaders represented the broader leadership body. Wight, an outspoken defender of the Saints, provided detailed journal accounts of jail conditions. McRae and Baldwin's testimonies later aided Joseph's legal appeals. Their participation in the revelation's reception confirms that the Lord addressed the entire leadership quorum, not Joseph alone.</p>
+
+<h4>Emma Hale Smith</h4>
+<p>Outside the prison, Emma executed an arduous balancing act: caring for children, managing property seizures, and advocating for incarcerated loved ones. Her letters to Joseph conveyed updates and yearning, while she navigated hostile mobs and scarce resources. Emma traveled to Liberty in January 1839, braving winter storms to spend brief visits through the iron grates. Her resilience symbolized the sacrifice of Latter-day Saint women.</p>
+
+<h4>Governor Lilburn W. Boggs & General John B. Clark</h4>
+<p>As architects of the extermination order, Boggs and Clark personified civil betrayal. Their decisions legitimized mob violence and signaled that state protection was unavailable. D&C 121's condemnation of those who "lift up the heel against mine anointed" speaks directly to officials who weaponized governmental power to oppress religious minorities.</p>
+
+
+<h3>3. Cultural and Religious Context</h3>
+
+<p>The United States in the 1830s experienced the Second Great Awakening's fervor: camp meetings, itinerant preachers, and theological experimentation proliferated. Americans wrestled with questions about authority, scripture, and communal structures. Latter-day Saints, with claims of new scripture and modern prophets, elicited fascination and fear. Their rapid growth in Missouri threatened established religious communities who perceived the Saints as economic and political rivals.</p>
+<p style="margin-top: 1em;">Anti-Mormon literature circulated widely. Newspapers like the <em>Missouri Argus</em> depicted the Saints as fanatics seeking domination. Religious pluralism in theory clashed with sectarian competition in practice. Liberty Jail thus epitomized the broader struggle for religious freedom: the Saints appealed to constitutional ideals, yet local prejudice often overruled legal protections.</p>
+<p style="margin-top: 1em;">The cultural hierarchy in frontier Missouri privileged older settlers and slaveholding elites. Latter-day Saints, many from northern states and opposition to slavery, clashed with pro-slavery sentiments. Their bloc voting behavior intensified accusations that they intended to control local elections. Religious rhetoric merged with political fear-mongering, culminating in violent vigilantism masked as community defense.</p>
+<p style="margin-top: 1em;">Within the Church, the Kirtland apostasy of 1837-1838 had already shaken confidence. Some former leaders—including David Whitmer and John Whitmer—publicly opposed Joseph. D&C 121's teachings about unrighteous dominion respond to these internal fractures, warning that aspiring to the "honors of men" disqualifies individuals from divine trust. The revelation reasserted that priesthood legitimacy rests on celestial rather than popular approval.</p>
+
+
+<h3>4. Political and Social Dynamics</h3>
+
+<p>Missouri's political climate was volatile. Frontier justice, vigilante committees, and militia interventions blurred lines between legal authority and mob rule. Local leaders like Boggs exploited anti-Mormon sentiment for political gain, portraying the Saints as insurrectionists. Courts showed bias; grand juries indicted Joseph on dubious evidence, while crimes against Saints rarely received prosecution. Property confiscations, burning of farms, and threats of extermination became socially accepted tools of suppression.</p>
+<p style="margin-top: 1em;">Social stratification intensified conflict. Many Missourians feared economic displacement as Latter-day Saints purchased land and established thriving communities. The communal nature of Mormon migration—distinct speech, dress, worship, and cooperative labor—fueled xenophobic reactions. The panic of 1837 left the Missouri economy fragile, amplifying competition for resources.</p>
+<p style="margin-top: 1em;">On the Saints' side, diplomacy and petitions sought redress. Delegations traveled to Jefferson City and Washington, D.C., to appeal for federal intervention. Their requests highlighted a tension in American federalism: the national government hesitated to override state jurisdiction, leaving vulnerable groups without remedy. The Liberty Jail letter therefore addressed a community disillusioned with secular institutions. D&C 121's promise that God sees and will judge becomes a theological answer when civil systems fail.</p>
+
+
+<h3>5. Geographic Context</h3>
+
+<p>Liberty Jail stood in Clay County's seat, Liberty, perched near the Missouri River. The jail's proximity to major waterways facilitated guard rotations but complicated rescue attempts. Far West—once the Church's headquarters—lay about 30 miles north. After the siege, Far West was largely abandoned, with Saints ordered to leave by spring 1839. Quincy, Illinois, the new gathering point, resided across the Mississippi River approximately 200 miles east. The physical distance between Joseph and the migrating Saints heightened communication delays: letters required trusted couriers traveling dangerous routes.</p>
+<p style="margin-top: 1em;">The jail's architecture shaped the revelation's metaphor. Walls several feet thick blocked sunlight, inspiring imagery of "pavilions" and "hiding places." A fireplace smoked constantly, blackening the ceiling. Straw beds on the stone floor rarely dried out in winter humidity. Joseph's descriptions of "hellish" conditions were more than figurative—they mirrored bodily suffering. Yet the close quarters also fostered communal devotion: prisoners prayed in unison, sang hymns, and recorded visions. The geographical confinement became a crucible for collective revelation.</p>
+
+
+<h3>6. Timeline of Events</h3>
+
+<ul>
+<li><strong>October 25, 1838:</strong> Battle of Crooked River results in militia mobilization against the Saints.</li>
+<li><strong>October 27, 1838:</strong> Governor Boggs issues Executive Order 44, authorizing the extermination or expulsion of Latter-day Saints.</li>
+<li><strong>October 30, 1838:</strong> Haun's Mill massacre occurs.</li>
+<li><strong>October 31, 1838:</strong> Joseph Smith and leaders surrender at Far West, expecting protection.</li>
+<li><strong>November 1-3, 1838:</strong> Courts-martial at Far West; General Samuel Lucas sentences Joseph and others to death, but General Alexander Doniphan refuses to carry out the illegal order.</li>
+<li><strong>November 13-28, 1838:</strong> Prisoners endure harsh treatment en route to Richmond and Liberty. Parley P. Pratt and others are held in Richmond jail.</li>
+<li><strong>December 1, 1838:</strong> Joseph and companions confined in Liberty Jail.</li>
+<li><strong>January 1839:</strong> Emma Smith visits Liberty Jail; reports of attempted poisonings surface.</li>
+<li><strong>February 1839:</strong> Sidney Rigdon released on bail due to illness; Joseph begins drafting extended letters.</li>
+<li><strong>March 20, 1839:</strong> Joseph writes the extended epistle that becomes D&C 121-123.</li>
+<li><strong>April 6, 1839:</strong> The Twelve Apostles (defying threats) meet at Far West in obedience to earlier command to depart on a mission.</li>
+<li><strong>April 6-16, 1839:</strong> Prisoners transferred from Liberty under the pretext of moving to Boone County for trial. Guards allow them to "escape" near Yellow Creek, Missouri—likely a tacit arrangement recognizing flimsy charges.</li>
+<li><strong>April 22, 1839:</strong> Joseph reunites with the Saints in Quincy, Illinois.</li>
+<li><strong>May 1839:</strong> Saints begin gathering to Commerce, Illinois (later Nauvoo).</li>
+<li><strong>July 1839:</strong> Selected excerpts from the Liberty Jail letter published in the <em>Times and Seasons</em>, spreading the revelation widely.</li>
+
+
+</ul>
+<h3>Primary Sources & Scholarly References</h3>
+
+<ul>
+<li>Joseph Smith's Liberty Jail correspondence, published in <em>History of the Church</em>, vol. 3.</li>
+<li><em>The Joseph Smith Papers</em>, Documents, Volume 6 (May 1838–August 1839), which reproduces the March 20 letter with commentary.</li>
+<li>Alexander L. Baugh, <em>A Call to Arms: The 1838 Mormon Defense of Northern Missouri</em> (BYU Studies, 2000).</li>
+<li>Stephen C. LeSueur, <em>The 1838 Mormon War in Missouri</em> (University of Missouri Press, 1987).</li>
+<li>Richard L. Anderson, "The Impact of the First Liberty Jail Letter," <em>Ensign</em>, September 1971.</li>
+
+
+
+</ul>
+            </div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">3. VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>Introduction</h2>
+<p>This verse-by-verse study provides complete scripture text, doctrinal commentary, linguistic insights, cross-references, and reflection questions for each segment of D&C 121.</p>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-6: A Prophet's Lament</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.1?lang=eng">Doctrine & Covenants 121:1</a></strong> — "O God, where art thou? And where is the pavilion that covereth thy hiding place?"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.2?lang=eng">Doctrine & Covenants 121:2</a></strong> — "How long shall thy hand be stayed, and thine eye, yea thy pure eye, behold from the eternal heavens the wrongs of thy people and of thy servants, and thine ear be penetrated with their cries?"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.3?lang=eng">Doctrine & Covenants 121:3</a></strong> — "Yea, O Lord, how long shall they suffer these wrongs and unlawful oppressions, before thine heart shall be softened toward them, and thy bowels be moved with compassion toward them?"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.4?lang=eng">Doctrine & Covenants 121:4</a></strong> — "O Lord God Almighty, maker of heaven, earth, and seas, and of all things that in them are, and who controllest and subjectest the devil, and the dark and benighted dominion of Sheol—stretch forth thy hand; let thine eye pierce; let thy pavilion be taken up; let thy hiding place no longer be covered; let thine ear be inclined; let thine heart be softened, and thy bowels moved with compassion toward us."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.5?lang=eng">Doctrine & Covenants 121:5</a></strong> — "Let thine anger be kindled against our enemies; and, in the fury of thine heart, with thy sword avenge us of our wrongs."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.6?lang=eng">Doctrine & Covenants 121:6</a></strong> — "Remember thy suffering saints, O our God; and thy servants will rejoice in thy name forever."
+
+<h4>Doctrinal Summary</h4>
+<p>Joseph's opening plea models sacred lament. Rather than masking anguish, he brings his distress before God, echoing the Psalms. The prophet acknowledges God's omnipotence while wondering why deliverance tarries. The language of "pavilion" and "hiding place" conveys Joseph's perception that heaven is veiled, not absent. By recounting God's power over creation and Sheol, Joseph asserts faith even as he questions timing. True discipleship permits honest petitions without forsaking reverence.</p>
+<p style="margin-top: 1em;">The cry for justice recognizes that righteous anger can coexist with charity. Joseph longs for God to "stretch forth" His hand and avenge the oppressed, yet he frames vengeance as belonging to the Lord. Verse 6 pivots from imprecation to praise: if God will remember His suffering Saints, they will rejoice forever. Lament thus becomes an act of covenant loyalty—trusting that God hears and will act.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/h5521/kjv/wlc/0-1/">sukkâh</a></strong> (סֻכָּה) — "pavilion, booth." Joseph draws on Hebrew imagery where God's presence is described as a pavilion shielding His glory (<a href="https://www.blueletterbible.org/kjv/psa/27/5/">Psalm 27:5</a>). The plea for the pavilion to be lifted requests renewed revelatory access.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/h7355/kjv/wlc/0-1/">racham</a></strong> (רָחַם) — "to have compassion." In verse 3, Joseph asks that God's "bowels be moved" with compassion, reflecting Hebrew idiom where the womb (racham) symbolizes tender mercy.</li>
+<li><strong><a href="https://logeion.uchicago.edu/Sheol">Sheol</a></strong> — transliterated Hebrew term for the underworld. Joseph's reference bridges ancient Israelite cosmology with Restoration understanding of spiritual realms.</li>
+<li>Cultural note: Ancient petitioners often reminded deity of His attributes as part of covenant prayer. Joseph employs the same structure, demonstrating immersion in biblical patterns.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/psa/13/1-2/">Psalm 13:1-2</a> — David's refrain "How long, O LORD?" parallels Joseph's repeated question.</li>
+<li><a href="https://www.blueletterbible.org/kjv/isa/63/15/">Isaiah 63:15</a> — Isaiah asks God to look down from heaven and recognize Israel's suffering, matching Joseph's appeal to divine sight.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109.49-50?lang=eng">Doctrine & Covenants 109:49-50</a> — The Kirtland Temple dedicatory prayer similarly pleads for deliverance from enemies.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. What does Joseph's honesty teach me about how I can pray when God feels distant?</p>
+<p style="margin-top: 1em;">2. How can remembering God's past deliverances strengthen my faith during present delays?</p>
+<p style="margin-top: 1em;">3. In what ways can I channel righteous indignation into faithful petition rather than personal retaliation?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 7-10: Heaven's Assurance</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.7?lang=eng">Doctrine & Covenants 121:7</a></strong> — "My son, peace be unto thy soul; thine adversity and thine afflictions shall be but a small moment;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.8?lang=eng">Doctrine & Covenants 121:8</a></strong> — "And then, if thou endure it well, God shall exalt thee on high; thou shalt triumph over all thy foes."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.9?lang=eng">Doctrine & Covenants 121:9</a></strong> — "Thy friends do stand by thee, and they shall hail thee again with warm hearts and friendly hands."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.10?lang=eng">Doctrine & Covenants 121:10</a></strong> — "Thou art not yet as Job; thy friends do not contend against thee, neither charge thee with transgression, as they did Job."
+
+<h4>Doctrinal Summary</h4>
+<p>The Lord responds tenderly, calling Joseph "My son." Divine peace does not erase affliction but reframes it as brief compared to eternal reward. Exaltation is promised conditionally—"if thou endure it well"—highlighting agency amid suffering. Verses 9-10 remind Joseph of earthly support: true friends remain loyal, unlike Job's companions. The Lord simultaneously consoles and calibrates Joseph's perspective, acknowledging pain while orienting him toward ultimate triumph.</p>
+<p style="margin-top: 1em;">These verses demonstrate God's personal awareness. He knows Joseph's relationships, future reunions, and emotional needs. Afflictions become "a small moment" not because they are trivial, but because God's eternal timeline dwarfs temporal agony. The Lord invites Joseph to measure his story against Job's archetypal endurance, assuring him he has not been abandoned by his community or God.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g1515/kjv/tr/0-1/">eirênê</a></strong> (εἰρήνη) — Greek for "peace." New Testament usage links peace with Christ's calming presence (<a href="https://www.blueletterbible.org/kjv/jhn/14/27/">John 14:27</a>); the Lord extends that same covenantal peace to Joseph.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g5281/kjv/tr/0-1/">hypomonē</a></strong> (ὑπομονή) — "Patient endurance." The phrase "endure it well" reflects this virtue central to early Christian discipleship.</li>
+<li>Cultural note: Comparing Joseph to Job situates him within the wisdom tradition, suggesting that righteous suffering refines faith and yields divine commendation.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.7-8?lang=eng">Doctrine & Covenants 121:7-8</a> cross-reference with <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.7-9?lang=eng">Doctrine & Covenants 122:7-9</a> — both promise sanctifying experience.</li>
+<li><a href="https://www.blueletterbible.org/kjv/jas/5/11/">James 5:11</a> — Job's patience is celebrated, connecting Joseph's comparison.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98.1-3?lang=eng">Doctrine & Covenants 98:1-3</a> — Saints are told to give thanks in tribulations because God avenges their wrongs.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. What does it mean for me to "endure it well" rather than merely endure?</p>
+<p style="margin-top: 1em;">2. How do loyal friends help me recognize God's sustaining hand?</p>
+<p style="margin-top: 1em;">3. In what ways does remembering Job's story recalibrate my perspective on trials?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 11-15: Divine Justice Against Persecutors</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.11?lang=eng">Doctrine & Covenants 121:11</a></strong> — "And they who do charge thee with transgression, their hope shall be blasted, and their prospects shall melt away as the hoar frost melteth before the burning rays of the rising sun;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.12?lang=eng">Doctrine & Covenants 121:12</a></strong> — "And also that God hath set his hand and seal to change the times and seasons, and to blind their minds, that they may not understand his marvelous workings; that he may prove them also and take them in their own craftiness;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.13?lang=eng">Doctrine & Covenants 121:13</a></strong> — "Also because their hearts are corrupted, and the things which they are willing to bring upon others, and love to have others suffer, may come upon themselves to the very uttermost;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.14?lang=eng">Doctrine & Covenants 121:14</a></strong> — "That they may be disappointed also, and their hopes may be cut off;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.15?lang=eng">Doctrine & Covenants 121:15</a></strong> — "And not many years hence, that they and their posterity shall be swept from under heaven, saith God, that not one of them is left to stand by the wall."
+
+<h4>Doctrinal Summary</h4>
+<p>God pledges that false accusers will see their schemes evaporate like morning frost. The Lord has "set his hand" to advance His purposes; persecutors who resist are blinded to His marvelous works. Divine justice is reciprocal: those who delight in others' suffering will experience the consequences they engineered. The sweeping language of verse 15 warns of generational impacts—when families perpetuate violence, they risk collective downfall.</p>
+<p style="margin-top: 1em;">This passage reassures the Saints that God's justice may be delayed but not denied. Rather than commanding the Saints to retaliate, the Lord promises to expose craftiness and overturn oppression. Joseph learns that opposition cannot frustrate God's timetable; those who attempt to halt Zion's progress will ultimately fail. The imagery anchors hope in God's sovereignty over history.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/">kairos</a></strong> (καιρός) — "appointed time." The Lord references "times and seasons," resonating with New Testament language about God's ordained moments (<a href="https://www.blueletterbible.org/kjv/act/1/7/">Acts 1:7</a>).</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g3834/kjv/tr/0-1/">panourgia</a></strong> (πανουργία) — "craftiness, unscrupulous cunning." Paul uses the term in <a href="https://www.blueletterbible.org/kjv/1co/3/19/">1 Corinthians 3:19</a>; the Lord echoes Paul's assurance that God catches the wise in their craftiness.</li>
+<li>Cultural note: Ancient covenant law of retaliation (lex talionis) emphasized measured justice. Here, God adapts the principle spiritually: the harm persecutors plot rebounds upon them under divine supervision.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/1co/3/19-20/">1 Corinthians 3:19-20</a> — Paul states that God catches the wise in their craftiness, matching verse 12.</li>
+<li><a href="https://www.blueletterbible.org/kjv/pro/26/27/">Proverbs 26:27</a> — He that digs a pit shall fall into it, paralleling divine reciprocity.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/3.1-3?lang=eng">Doctrine & Covenants 3:1-3</a> — God's work cannot be frustrated, reinforcing that opposition will fail.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. How does trusting God's timetable free me from seeking personal revenge?</p>
+<p style="margin-top: 1em;">2. When have I seen harmful plots collapse under their own weight?</p>
+<p style="margin-top: 1em;">3. How can I ensure my own heart stays free from the corruption described in verse 13?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 16-21: Consequences for False Accusation</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.16?lang=eng">Doctrine & Covenants 121:16</a></strong> — "Cursed are all those that shall lift up the heel against mine anointed, saith the Lord, and cry they have sinned when they have not sinned before me, saith the Lord, but have done that which was meet in mine eyes, and which I commanded them."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.17?lang=eng">Doctrine & Covenants 121:17</a></strong> — "But those who cry transgression do it because they are the servants of sin, and are the children of disobedience themselves."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.18?lang=eng">Doctrine & Covenants 121:18</a></strong> — "And those who swear falsely against my servants, that they might bring them into bondage and death—"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.19?lang=eng">Doctrine & Covenants 121:19</a></strong> — "Wo unto them; because they have offended my little ones they shall be severed from the ordinances of mine house."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.20?lang=eng">Doctrine & Covenants 121:20</a></strong> — "Their basket shall not be full, their houses and their barns shall perish, and they themselves shall be despised by those that flattered them."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.21?lang=eng">Doctrine & Covenants 121:21</a></strong> — "They shall not have right to the priesthood, nor their posterity after them from generation to generation."
+
+<h4>Doctrinal Summary</h4>
+<p>God condemns those who falsely accuse His anointed servants. Lifting up the heel evokes betrayal, reminiscent of <a href="https://www.blueletterbible.org/kjv/psa/41/9/">Psalm 41:9</a>. Accusers project their own sinfulness onto the righteous. Such slanderers risk excommunication from sacred ordinances, loss of temporal prosperity, and forfeiture of priesthood authority. The penalty extends generationally when posterity inherits traditions of rebellion.</p>
+<p style="margin-top: 1em;">These verses warn that opposing God's servants carries spiritual peril. The Lord defends agency yet emphasizes accountability. Those who weaponize legal systems to destroy the innocent sever themselves from the blessings they once enjoyed. The repetition of "saith the Lord" underscores divine certainty—these are not Joseph's retaliatory wishes but God's pronouncements.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/h4899/kjv/wlc/0-1/">māšîaḥ</a></strong> (מָשִׁיחַ) — "anointed one." Though D&C uses English, the biblical concept frames called leaders as consecrated by God.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g5576/kjv/tr/0-1/">pseudomartyreō</a></strong> (ψευδομαρτυρέω) — "to bear false witness." Christ condemned such acts in <a href="https://www.blueletterbible.org/kjv/mat/19/18/">Matthew 19:18</a>; Joseph's persecutors exemplified it.</li>
+<li>Agriculture imagery (basket, barns) reflects covenant curses listed in <a href="https://www.blueletterbible.org/kjv/deu/28/">Deuteronomy 28</a>, suggesting divine withdrawal of prosperity from the wicked.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/psa/105/15/">Psalm 105:15</a> — "Touch not mine anointed," echoing verse 16.</li>
+<li><a href="https://www.blueletterbible.org/kjv/isa/29/21/">Isaiah 29:21</a> — Those who make a man an offender for a word are cut off, similar to verse 19.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/85.8?lang=eng">Doctrine & Covenants 85:8</a> — God warns of those who steady the ark and lose priesthood standing.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. How do I guard my words to ensure I never falsely accuse God's servants?</p>
+<p style="margin-top: 1em;">2. What safeguards can I build so I do not inherit patterns of rebellion in my family line?</p>
+<p style="margin-top: 1em;">3. How does reverence for priesthood authority coexist with the need for accountability and sustaining righteousness?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 22-25: Wo to Oppressors</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.22?lang=eng">Doctrine & Covenants 121:22</a></strong> — "It had been better for them that a millstone had been hanged about their necks, and they drowned in the depth of the sea."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.23?lang=eng">Doctrine & Covenants 121:23</a></strong> — "Wo unto all those that discomfort my people, and drive, and murder, and testify against them, saith the Lord of Hosts; a generation of vipers shall not escape the damnation of hell."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.24?lang=eng">Doctrine & Covenants 121:24</a></strong> — "Behold, mine eyes see and know all their works, and I have in reserve a swift judgment in the season thereof, for them all;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.25?lang=eng">Doctrine & Covenants 121:25</a></strong> — "For there is a time appointed for every man, according as his works shall be."
+
+<h4>Doctrinal Summary</h4>
+<p>The Lord borrows imagery from <a href="https://www.blueletterbible.org/kjv/mat/18/6/">Matthew 18:6</a>: drowning with a millstone is preferable to harming the innocent. Those who "discomfort" (cause distress to) God's people face wo—covenantal denunciation. Yet judgment remains timed according to God's season; He watches, records, and will act when the appointed time arrives. This assures the Saints that injustice will not go unnoticed even when earthly courts fail.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g4624/kjv/tr/0-1/">skandalizō</a></strong> (σκανδαλίζω) — "to cause to stumble." Christ's warning against offending "little ones" parallels verse 22.</li>
+<li><strong>"Generation of vipers"</strong><br>
+recalls John the Baptist's critique (<a href="https://www.blueletterbible.org/kjv/mat/3/7/">Matthew 3:7</a>), signaling hypocrisy and venomous opposition.</li>
+<li>The phrase "time appointed" reflects Hebrew idiom <em>moed</em> (appointed feast), suggesting God has calendared justice.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/mat/18/6-7/">Matthew 18:6-7</a> — Direct parallel to verse 22.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1.2-3?lang=eng">Doctrine & Covenants 1:2-3</a> — God's eyes see all; nothing remains hidden.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/14.11?lang=eng">Alma 14:11</a> — Alma and Amulek learn that the Lord allows martyrdom for wise purposes but promises justice.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. How does the Lord's awareness of injustice change the way I respond to persecution?</p>
+<p style="margin-top: 1em;">2. In what ways can I ensure I never "discomfort" the vulnerable in my community?</p>
+<p style="margin-top: 1em;">3. What lessons can I learn from God's timing when justice seems delayed?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 26-33: Promised Revelation in the Dispensation of the Fulness of Times</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.26?lang=eng">Doctrine & Covenants 121:26</a></strong> — "God shall give unto you knowledge by his Holy Spirit, yea, by the unspeakable gift of the Holy Ghost, that has not been revealed since the world was until now;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.27?lang=eng">Doctrine & Covenants 121:27</a></strong> — "Which our forefathers have awaited with anxious expectation to be revealed in the last times, which their minds were pointed to by the angels, as held in reserve for the fulness of their glory;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.28?lang=eng">Doctrine & Covenants 121:28</a></strong> — "A time to come in the which nothing shall be withheld, whether there be one God or many gods, they shall be manifest."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.29?lang=eng">Doctrine & Covenants 121:29</a></strong> — "All thrones and dominions, principalities and powers, shall be revealed and set forth upon all who have endured valiantly for the gospel of Jesus Christ."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.30?lang=eng">Doctrine & Covenants 121:30</a></strong> — "And also, if there be bounds set to the heavens or to the seas, or to the dry land, or to the sun, moon, or stars—"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.31?lang=eng">Doctrine & Covenants 121:31</a></strong> — "All the times of their revolutions, all the appointed days, months, and years, and all the days of their days, months, and years, and all their glories, laws, and set times, shall be revealed in the days of the dispensation of the fulness of times—"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.32?lang=eng">Doctrine & Covenants 121:32</a></strong> — "According to that which was ordained in the midst of the Council of the Eternal God of all other gods before this world was, that should be reserved unto the finishing and the end thereof, when every man shall enter into his eternal presence and into his immortal rest."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.33?lang=eng">Doctrine & Covenants 121:33</a></strong> — "How long can rolling waters remain impure? What power shall stay the heavens? As well might man stretch forth his puny arm to stop the Missouri river in its decreed course, or to turn it up stream, as to hinder the Almighty from pouring down knowledge from heaven upon the heads of the Latter-day Saints."
+
+<h4>Doctrinal Summary</h4>
+<p>In the midst of prison walls, God promises unprecedented revelation. The unspeakable gift of the Holy Ghost will unveil knowledge withheld since the world's foundation. Ancient prophets longed for this dispensation; angels pointed mortals toward the fulness of times when nothing pertaining to God or celestial governance would remain hidden. These verses assert that faithful Saints will participate in God's council, learning about thrones, dominions, and cosmic laws.</p>
+<p style="margin-top: 1em;">Joseph's imagery shifts from lament to triumph. God's work is unstoppable; human attempts to dam revelation are as futile as reversing the Missouri River. The passage anticipates temple ordinances, sealing power, and eventual endowment of heavenly mysteries. Knowledge is portrayed not as abstract speculation but as covenant inheritance for those who endure valiantly.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g3875/kjv/tr/0-1/">paraklētos</a></strong> (παράκλητος) — "comforter, advocate." The "unspeakable gift" refers to the Holy Ghost promised by Christ, aligning Restoration blessings with New Testament assurances.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g3466/kjv/tr/0-1/">mystērion</a></strong> (μυστήριον) — "secret, mystery." Paul speaks of the "mystery" revealed in Christ (<a href="https://www.blueletterbible.org/kjv/eph/1/9-10/">Ephesians 1:9-10</a>), paralleled here with dispensation-level revelation.</li>
+<li>Cultural note: Ancient Near Eastern kings held councils to decree cosmic order. The "Council of the Eternal God" situates the Saints within divine governance, fulfilling <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng">Abraham 3</a> themes.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/eph/1/9-10/">Ephesians 1:9-10</a> — God gathers all things in the dispensation of the fulness of times.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76.70-80?lang=eng">Doctrine & Covenants 76:70-80</a> — Celestial heirs receive thrones, dominions, and principalities.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107.18-19?lang=eng">Doctrine & Covenants 107:18-19</a> — The Melchizedek Priesthood reveals the mysteries of the kingdom and the presence of God.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. How do I qualify daily for the "unspeakable gift" promised in verse 26?</p>
+<p style="margin-top: 1em;">2. What knowledge has God already poured out in this dispensation, and how am I stewarding it?</p>
+<p style="margin-top: 1em;">3. How does the imagery of unstoppable rivers inspire my confidence in continuing revelation?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 34-36: Few Are Chosen</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.34?lang=eng">Doctrine & Covenants 121:34</a></strong> — "Behold, there are many called, but few are chosen. And why are they not chosen?"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.35?lang=eng">Doctrine & Covenants 121:35</a></strong> — "Because their hearts are set so much upon the things of this world, and aspire to the honors of men, that they do not learn this one lesson—"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.36?lang=eng">Doctrine & Covenants 121:36</a></strong> — "That the rights of the priesthood are inseparably connected with the powers of heaven, and that the powers of heaven cannot be controlled nor handled only upon the principles of righteousness."
+
+<h4>Doctrinal Summary</h4>
+<p>God explains the chasm between calling and chosenness. The barrier is misdirected desire: hearts fixated on worldliness and human accolades cannot receive priesthood power. Heavenly authority operates only on principles of righteousness; it is not a transferable franchise. Priesthood is less about status than stewardship aligned with heaven.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g2564/kjv/tr/0-1/">kaleō</a></strong> (καλέω) — "to call, invite." Christ used the phrase "many are called, but few chosen" in <a href="https://www.blueletterbible.org/kjv/mat/22/14/">Matthew 22:14</a>; Joseph applies it to priesthood stewardship.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g5092/kjv/tr/0-1/">timē</a></strong> (τιμή) — "honor, price." Aspiring to honors of men contrasts with honoring God, revealing the heart's valuation system.</li>
+<li>Cultural note: Ancient religious offices often conferred social status. God rejects that transactional model in favor of covenantal fidelity.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/mat/22/14/">Matthew 22:14</a> — Many are called, few chosen.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/95.5-6?lang=eng">Doctrine & Covenants 95:5-6</a> — The Lord withdraws when Saints seek worldly things more than Zion.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/12.3?lang=eng">Helaman 12:3</a> — Prosperity leads many to forget the Lord, echoing the danger of heart-set worldliness.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. What desires currently compete with my ability to be "chosen"?</p>
+<p style="margin-top: 1em;">2. How can I realign my heart so heavenly power can trust me fully?</p>
+<p style="margin-top: 1em;">3. When have I seen worldly honor undermine spiritual authority?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 37-40: The Peril of Unrighteous Dominion</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.37?lang=eng">Doctrine & Covenants 121:37</a></strong> — "That they may be conferred upon us, it is true; but when we undertake to cover our sins, or to gratify our pride, our vain ambition, or to exercise control or dominion or compulsion upon the souls of the children of men, in any degree of unrighteousness, behold, the heavens withdraw themselves; the Spirit of the Lord is grieved; and when it is withdrawn, Amen to the priesthood or the authority of that man."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.38?lang=eng">Doctrine & Covenants 121:38</a></strong> — "Behold, ere he is aware, he is left unto himself, to kick against the pricks, to persecute the saints, and to fight against God."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.39?lang=eng">Doctrine & Covenants 121:39</a></strong> — "We have learned by sad experience that it is the nature and disposition of almost all men, as soon as they get a little authority, as they suppose, they will immediately begin to exercise unrighteous dominion."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.40?lang=eng">Doctrine & Covenants 121:40</a></strong> — "Hence many are called, but few are chosen."
+
+<h4>Doctrinal Summary</h4>
+<p>Priesthood authority can be conferred ceremonially, but heaven withdraws power when leaders abuse stewardship. Covering sins, gratifying pride, or compelling others grieves the Spirit. When the Spirit departs, authority effectively ends, even if outward office remains. Verse 39 is a sobering sociological observation: fallen human nature tends toward domination when given "a little authority."</p>
+<p style="margin-top: 1em;">The Lord warns that unchecked ego leads individuals to "kick against the pricks"—resisting divinely appointed direction—ultimately opposing God. Therefore, chosenness requires constant humility and self-examination. The repetition of verse 40 ties this warning back to the earlier lesson: aspiration to worldly honors derails divine trust.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g2634/kjv/tr/0-1/">katakurieuō</a></strong> (κατακυριεύω) — "to lord over, exercise dominion." Christ warned against this kind of leadership in <a href="https://www.blueletterbible.org/kjv/mat/20/25-28/">Matthew 20:25-28</a>.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g4124/kjv/tr/0-1/">pleonexia</a></strong> (πλεονεξία) — "covetousness" or insatiable desire; pride and vain ambition manifest this disposition.</li>
+<li>The idiom "kick against the pricks" references oxen resisting the goad—a known metaphor in Greek and Jewish contexts (<a href="https://www.blueletterbible.org/kjv/act/26/14/">Acts 26:14</a>).</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/mat/20/25-28/">Matthew 20:25-28</a> — Christ teaches servant leadership, countering unrighteous dominion.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/23.7?lang=eng">Mosiah 23:7</a> — Alma refuses to be a king to prevent unrighteous dominion.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64.39-40?lang=eng">Doctrine & Covenants 64:39-40</a> — The Lord warns that those who seek to cover sins lose their blessings.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. What checks and balances help me avoid unrighteous dominion in my stewardships?</p>
+<p style="margin-top: 1em;">2. How do I respond when corrected—do I kick against pricks or submit to the Spirit?</p>
+<p style="margin-top: 1em;">3. What practices keep me aware that authority is a trust, not a personal entitlement?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 41-46: The Law of Righteous Influence</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.41?lang=eng">Doctrine & Covenants 121:41</a></strong> — "No power or influence can or ought to be maintained by virtue of the priesthood, only by persuasion, by long-suffering, by gentleness and meekness, and by love unfeigned;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.42?lang=eng">Doctrine & Covenants 121:42</a></strong> — "By kindness, and pure knowledge, which shall greatly enlarge the soul without hypocrisy, and without guile—"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.43?lang=eng">Doctrine & Covenants 121:43</a></strong> — "Reproving betimes with sharpness, when moved upon by the Holy Ghost; and then showing forth afterwards an increase of love toward him whom thou hast reproved, lest he esteem thee to be his enemy;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.44?lang=eng">Doctrine & Covenants 121:44</a></strong> — "That he may know that thy faithfulness is stronger than the cords of death."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.45?lang=eng">Doctrine & Covenants 121:45</a></strong> — "Let thy bowels also be full of charity towards all men, and to the household of faith, and let virtue garnish thy thoughts unceasingly; then shall thy confidence wax strong in the presence of God; and the doctrine of the priesthood shall distil upon thy soul as the dews from heaven."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.46?lang=eng">Doctrine & Covenants 121:46</a></strong> — "The Holy Ghost shall be thy constant companion, and thy scepter an unchanging scepter of righteousness and truth; and thy dominion shall be an everlasting dominion, and without compulsory means it shall flow unto thee forever and ever."
+
+<h4>Doctrinal Summary</h4>
+<p>God provides a positive code for priesthood influence: persuasion, patience, gentleness, meekness, and sincere love. Effective leaders blend kindness with "pure knowledge"—revelatory insight devoid of hypocrisy. Correction, when necessary, must be Spirit-directed and immediately followed by increased love so relationships remain intact. Righteous stewardship produces unwavering loyalty; those corrected know the leader's faithfulness surpasses death's bonds.</p>
+<p style="margin-top: 1em;">Verses 45-46 outline the blessings of interior holiness. Charity toward all, virtuous thoughts, and confidence before God invite continual revelation. The Holy Ghost becomes a constant companion, and dominion flows without compulsion—authority rooted in righteousness rather than coercion. God promises an "unchanging scepter" of truth to those who lead like Christ.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g3982/kjv/tr/0-1/">peithō</a></strong> (πείθω) — "to persuade." In Greek rhetoric, persuasion relies on evidence and character; here, moral influence supersedes force.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g3115/kjv/tr/0-1/">makrothymia</a></strong> (μακροθυμία) — "long-suffering, patience." The term describes God's forbearance (<a href="https://www.blueletterbible.org/kjv/rom/2/4/">Romans 2:4</a>); leaders mirror divine patience.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g26/kjv/tr/0-1/">agapē anupokritos</a></strong> (ἀγάπη ἀνυπόκριτος) — "love unfeigned." Paul uses this exact phrase in <a href="https://www.blueletterbible.org/kjv/rom/12/9/">Romans 12:9</a>, emphasizing sincerity.</li>
+<li>Cultural note: The imagery of dew recalls <a href="https://www.blueletterbible.org/kjv/deu/32/2/">Deuteronomy 32:2</a>, where doctrine distils like rain—gentle yet life-sustaining.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/jhn/13/34-35/">John 13:34-35</a> — Love is the defining mark of Christlike leadership.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18.21?lang=eng">Mosiah 18:21</a> — Alma teaches unity, love, and peace among believers.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/50.26-30?lang=eng">Doctrine & Covenants 50:26-30</a> — True leadership is servant-oriented, guided by the Spirit.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. Which attribute in verse 41 do I need to cultivate most diligently?</p>
+<p style="margin-top: 1em;">2. How do I correct others while ensuring they feel increased love afterward?</p>
+<p style="margin-top: 1em;">3. What daily practices help virtue garnish my thoughts and keep the Spirit as my companion?</p>
+
+
+</div>
+</div>
+            </div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">4. WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content"><h2>D&C 121: Word Studies</h2>
+<h3>Linguistic and Doctrinal Analysis of Key Liberty Jail Terms</h3>
+
+
+<h3>Introduction</h3>
+
+<p>D&C 121 introduces vocabulary that defines righteous leadership and covenant resilience. The terms analyzed below appear in the revelation's climactic discourse (verses 26-46) and its opening lament. Each entry follows the mandated six-layer framework: Hebrew and Greek roots (via Blue Letter Bible), Latin development (Logeion), English etymology (Etymonline), Webster's 1828 definition, and doctrinal significance within the Restoration. Twelve terms are presented to provide comprehensive coverage of the section's core concepts.</p>
+<br>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 1: Priesthood</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h3550/kjv/wlc/0-1/">kehunnâ</a></strong> (כְּהֻנָּה) — Refers to priestly office and service in the Hebrew Bible, emphasizing consecrated stewardship and covenant fidelity.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g2406/kjv/tr/0-1/">hierōsynē</a></strong> (ἱερωσύνη) — Denotes priestly office; used in Hebrews to compare Levitical and Melchizedek priesthoods.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/sacerdotium">sacerdotium</a></strong> — Latin for priesthood, highlighting holy office (<em>sacer</em> = sacred) plus agentive suffix <em>-dotium</em> (act of giving or endowment).
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/priesthood">Priesthood</a></strong> — From Old English <em>prēosthād</em>, combining "priest" (religious elder) with "-hood" (state/condition).
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/priesthood">Priesthood</a></strong> — "The office or character of a priest; the order of men set apart for sacred offices." Webster notes its application to both Aaronic and Melchizedek orders.
+
+<h4>Doctrinal Significance</h4>
+<p>D&C 121 teaches that priesthood rights are inseparably connected to heavenly power (verses 36-37). Priesthood is less a status than a conduit for God's authority, contingent on righteousness, charity, and avoidance of compulsion.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 2: Dominion</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h4467/kjv/wlc/0-1/">mamlākâ</a></strong> (מַמְלָכָה) — Kingdom, reign, or dominion; conveys governance derived from covenant covenant.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g2904/kjv/tr/0-1/">kratos</a></strong> (κράτος) — Strength, power, dominion; used in doxologies to praise God's might.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/dominium">dominium</a></strong> — Ownership, sovereignty; root of "dominion" signifying lawful control.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/dominion">Dominion</a></strong> — From Old French <em>dominion</em>, Latin <em>dominium</em> "lordship, right of ownership."
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/dominion">Dominion</a></strong> — "Sovereign authority; the power of governing; supreme jurisdiction."
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 46 promises "an everlasting dominion" that flows without compulsion. True dominion in the priesthood context is persuasive, Christlike, and rooted in righteousness rather than coercion.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 3: Persuasion</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h6601/kjv/wlc/0-1/">pāthâ</a></strong> (פָּתָה) — "To open, entice, persuade"; in positive contexts, it indicates gentle influence.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g3982/kjv/tr/0-1/">peithō</a></strong> (πείθω) — "To persuade, win confidence"; central to apostolic ministry in Acts.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/persu%C4%81sio">persuāsiō</a></strong> — Persuasion, conviction through rhetoric and character.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/persuade">Persuade</a></strong> — From Latin <em>persuadere</em>, "to bring over by talking," combining <em>per-</em> (thoroughly) + <em>suadere</em> (advise, urge).
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/persuade">Persuade</a></strong> — "To influence by argument, advice, or reason"; implies gentle invitation, not force.
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 41 declares that priesthood influence operates "only by persuasion." Leaders win hearts through testimony and example, not compulsion. Persuasion aligns with the Savior's invitation to "Come, follow me."</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 4: Long-Suffering</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h750/kjv/wlc/0-1/">’erekh ’appayim</a></strong> (אֶרֶךְ אַפַּיִם) — "Slow to anger"; literally "long of nose," symbolizing patient restraint.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g3115/kjv/tr/0-1/">makrothymia</a></strong> (μακροθυμία) — Patience, endurance of offenses without retaliation.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/longanimitas">longanimitās</a></strong> — Long-suffering, patient endurance (from <em>longus</em> + <em>animus</em>).
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/long-suffering">Long-suffering</a></strong> — Combination of "long" (extended) + "suffering" (enduring pain); used in English Bibles to translate Hebrew/Greek patience.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/long-suffering">Long-suffering</a></strong> — "Bearing injuries or provocation for a long time; patient; not easily provoked."
+
+<h4>Doctrinal Significance</h4>
+<p>Priesthood authority must be "maintained" by long-suffering (verse 41). Leaders mirror God's own patience, allowing space for growth and repentance, especially in times of offense or disagreement.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 5: Gentleness</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h6035/kjv/wlc/0-1/">‘ānāw</a></strong> (עָנָו) — Humble, meek; often translated "gentle" in contexts describing Moses or the Messiah.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g4240/kjv/tr/0-1/">praütēs</a></strong> (πραΰτης) — Meekness, gentleness; fruit of the Spirit in <a href="https://www.blueletterbible.org/kjv/gal/5/22-23/">Galatians 5:22-23</a>.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/mansuetud%C5%8D">mansuētūdō</a></strong> — Gentleness, mildness; root of "mansuetude."
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/gentle">Gentle</a></strong> — From Latin <em>gentilis</em> (of the same clan), later meaning courteous, noble-minded.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/gentle">Gentle</a></strong> — "Soft, mild, docile; treating with mildness."
+
+<h4>Doctrinal Significance</h4>
+<p>Gentleness anchors the priesthood leader's demeanor (verse 41). It tempers correction, fosters trust, and reflects Christ's invitation: "Learn of me; for I am meek and lowly in heart" (<a href="https://www.blueletterbible.org/kjv/mat/11/29/">Matthew 11:29</a>).</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 6: Meekness</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h6038/kjv/wlc/0-1/">‘ănāwâ</a></strong> (עֲנָוָה) — Humility, meekness; associated with covenant fidelity.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g4239/kjv/tr/0-1/">praüs</a></strong> (πραΰς) — Gentle, meek; used in the Beatitudes (<a href="https://www.blueletterbible.org/kjv/mat/5/5/">Matthew 5:5</a>).
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/humilitas">humilitās</a></strong> — Though literally "humility," classical Latin uses it for meekness, contrasting with pride.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/meek">Meek</a></strong> — Old Norse <em>mjúkr</em> "soft, gentle," entering English via Scandinavian influence.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/meekness">Meekness</a></strong> — "Softness of temper; mildness; forbearance under injuries."
+
+<h4>Doctrinal Significance</h4>
+<p>Meekness prevents leaders from insisting on personal agendas. D&C 121 asserts that meekness invites heavenly power; without it, authority shifts into unrighteous dominion.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 7: Love Unfeigned</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h160/kjv/wlc/0-1/">’ahăbâ</a></strong> (אַהֲבָה) — Covenant love or affection; denotes loyal devotion.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g26/kjv/tr/0-1/">agapē anupokritos</a></strong> (ἀγάπη ἀνυπόκριτος) — "Love without hypocrisy"; Paul exhorts Saints to genuine charity (<a href="https://www.blueletterbible.org/kjv/rom/12/9/">Romans 12:9</a>).
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/caritas">caritās sincera</a></strong> — Charitable love (<em>caritas</em>) joined with sincerity (<em>sincera</em>), indicating purity of motive.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/unfeigned">Unfeigned</a></strong> — From Old French <em>fain</em> (make, contrive); "un-feigned" means not pretend, genuine.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/unfeigned">Unfeigned</a></strong> — "Not counterfeit; sincere; real."
+
+<h4>Doctrinal Significance</h4>
+<p>Love unfeigned assures followers that correction arises from covenant loyalty, not manipulation. It is the relational bond that keeps priesthood leaders and members united even amid rebuke.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 8: Virtue</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h2428/kjv/wlc/0-1/">ḥayil</a></strong> (חַיִל) — Strength, valor, virtue; used of Ruth's moral excellence.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g703/kjv/tr/0-1/">aretē</a></strong> (ἀρετή) — Virtue, moral excellence; Peter invites believers to add virtue to faith (<a href="https://www.blueletterbible.org/kjv/2pe/1/5/">2 Peter 1:5</a>).
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/virtus">virtūs</a></strong> — Courage, excellence; root of "virtue" linking morality with strength.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/virtue">Virtue</a></strong> — From Latin <em>virtus</em>, "manliness, excellence," from <em>vir</em> "man."
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/virtue">Virtue</a></strong> — "Moral goodness," including chastity, strength, and power to produce effects.
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 45 commands virtue to "garnish" thoughts. Virtue protects the mind, ensuring revelation distils and priesthood confidence remains strong. It encompasses purity, integrity, and moral courage.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 9: Charity</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/">chesed</a></strong> (חֶסֶד) — Loving-kindness, covenant mercy.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g26/kjv/tr/0-1/">agapē</a></strong> (ἀγάπη) — Selfless love; King James translators often rendered it "charity."
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/caritas">caritās</a></strong> — Dearness, affection; Christian Latin for divine love.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/charity">Charity</a></strong> — From Old French <em>charité</em>, Latin <em>caritas</em> "dearness, high price." The sense shifted to benevolent love.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/charity">Charity</a></strong> — "Love, benevolence, good will... the highest Christian grace." Includes forgiveness and long-suffering.
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 45 bids leaders to fill their bowels with charity toward all. Charity enables leaders to see those they serve as God sees them, transforming correction into covenant nurturing.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 10: Confidence</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h982/kjv/wlc/0-1/">bāṭaḥ</a></strong> (בָּטַח) — To trust, be secure; indicates bold reliance on God.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g3954/kjv/tr/0-1/">parrēsia</a></strong> (παρρησία) — Boldness, confident access; used in Hebrews regarding entering God's presence.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/fidentia">fidentia</a></strong> — Confidence, trust; from <em>fidere</em> "to trust."
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/confidence">Confidence</a></strong> — From Latin <em>confidere</em>, "to have full trust" (<em>com-</em> + <em>fidere</em>).
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/confidence">Confidence</a></strong> — "A trusting or reliance; boldness; assurance in any affair."
+
+<h4>Doctrinal Significance</h4>
+<p>D&C 121:45 links virtuous thought to confidence before God. Confidence here is covenantal—a fearless approach to God's presence born of integrity and companionship with the Holy Ghost.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 11: Knowledge</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h1847/kjv/wlc/0-1/">da‘at</a></strong> (דַּעַת) — Knowledge, awareness; often tied to covenantal understanding.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g1108/kjv/tr/0-1/">gnōsis</a></strong> (γνῶσις) — Knowledge; in the New Testament sometimes contrasted with charity if misused.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/scientia">scientia</a></strong> — Knowledge, understanding; basis of "science."
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/knowledge">Knowledge</a></strong> — From Old English <em>cnawan</em> (to know) + suffix <em>-leċe</em> (noun-forming); denotes familiarity gained by experience.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/knowledge">Knowledge</a></strong> — "A clear and certain perception of that which exists... learning, illumination." Webster distinguishes divine from human knowledge.
+
+<h4>Doctrinal Significance</h4>
+<p>Verses 26-27 promise knowledge by the Holy Spirit—the unspeakable gift reserved for the fulness of times. Knowledge in this context is revelatory, unveiling eternal councils and cosmic laws to covenant-keeping Saints.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 12: Scepter</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h7626/kjv/wlc/0-1/">shevet</a></strong> (שֵׁבֶט) — Rod, staff, scepter; symbolizes tribal authority or royal rule.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g4464/kjv/tr/0-1/">rhabdos</a></strong> (ῥάβδος) — Rod, staff; used in Hebrews to describe ruling authority (<a href="https://www.blueletterbible.org/kjv/heb/1/8/">Hebrews 1:8</a>).
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/sceptrum">sceptrum</a></strong> — Royal staff; borrowed from Greek <em>skēptron.</em>
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/scepter">Scepter</a></strong> — Via Old French <em>ceptre</em>, from Latin <em>sceptrum</em>, "royal rod."
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/scepter">Scepter</a></strong> — "A staff of office or royal power; emblem of government."
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 46 promises an "unchanging scepter of righteousness and truth." In covenant terms, the scepter represents sustained, eternal authority granted to those who rule in Christlike fashion. Unlike worldly scepters enforced by force, this one flows through voluntary allegiance born of love and virtue.</p>
+</div>
+</div></div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">5. TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>D&C 121: Teaching Applications</h2>
+<h3>Implementing Liberty Jail Principles Across Gospel Settings</h3>
+
+
+<h3>1. Personal Study Applications</h3>
+
+<h4>Study Techniques (Use all five during the week)</h4>
+<ul>
+<li><strong>Liberty Jail Lament Journal:</strong> Write personal "How long, O Lord?" petitions next to verses 1-6; record subsequent impressions that answer them.</li>
+<li><strong>Attribute Mapping:</strong> Create a table of leadership attributes in verses 41-46 and evaluate current strengths and growth areas.</li>
+<li><strong>Cross-Reference Immersion:</strong> Trace each cross-reference cited in verses 7-33, noting patterns about divine timing and revelation.</li>
+<li><strong>Word Study Focus:</strong> Select three terms from the Word Studies document (e.g., persuasion, meekness, scepter) and summarize insights for personal application.</li>
+<li><strong>Visualization Exercise:</strong> Sketch the Liberty Jail layout while reading historical context to internalize physical suffering that framed the revelation.</li>
+
+</ul>
+<h4>Reflective Questions for Journaling</h4>
+<p>1. When have I felt the Lord say, "Peace be unto thy soul" (verse 7), and what conditions surrounded that experience?</p>
+<p style="margin-top: 1em;">2. Which worldly honors tempt me to divert attention from being "chosen" (verses 34-35)?</p>
+<p style="margin-top: 1em;">3. How do I respond when leadership stewardships feel confining, like Liberty Jail walls?</p>
+<p style="margin-top: 1em;">4. In what ways can I help God "pour down knowledge" (verse 33) into my home and ward?</p>
+<p style="margin-top: 1em;">5. What examples have I seen of priesthood authority operating through compulsion versus persuasion?</p>
+
+<h4>Experiential Exercises</h4>
+<ul>
+<li><strong>De-escalation Practice:</strong> Role-play a recent conflict and rework the conversation using persuasion, gentleness, and love unfeigned.</li>
+<li><strong>Intercession Project:</strong> Choose someone facing affliction, pray using Joseph's lament pattern, and follow the Spirit to deliver relief.</li>
+<li><strong>Knowledge Inventory:</strong> Catalogue revelations received in the past year, distinguishing between "dew" impressions and "downpour" moments.</li>
+<li><strong>Virtue Audit:</strong> Conduct a media and thought inventory to ensure virtue garnishes daily inputs; remove one distraction immediately.</li>
+
+
+</ul>
+<h3>2. Family Home Evening Applications</h3>
+
+<h4>Opening Elements</h4>
+<ul>
+<li>Sing "Where Can I Turn for Peace?" to mirror Joseph's plea (verses 1-6).</li>
+<li>Invite a family member to share a recent challenge; offer a collective prayer for peace.</li>
+
+</ul>
+<h4>Storytelling & Discussion</h4>
+<ul>
+<li>Retell the Liberty Jail narrative emphasizing Emma Smith's support and the Saints' exodus. Use questions: "How did they show faith?" "What would we do in similar situations?"</li>
+<li>Read verses 7-10 aloud. Ask each family member to identify a phrase that brings them comfort and explain why.</li>
+
+</ul>
+<h4>Object Lessons</h4>
+<ul>
+<li><strong>Pavilion Removal:</strong> Use a blanket over a lamp to represent God's "hiding place" and remove it as you discuss revelation piercing darkness.</li>
+<li><strong>River of Knowledge:</strong> Pour water down a gentle incline (or use a marble run) to illustrate God pouring knowledge that cannot be stopped (verse 33).</li>
+
+</ul>
+<h4>Activities & Commitments</h4>
+<ul>
+<li>Create "priesthood principles" flashcards (persuasion, long-suffering, kindness, etc.) and play a matching game with real-life examples.</li>
+<li>Assign a family service challenge: identify someone experiencing a "Liberty Jail" moment and deliver a meal, letter, or prayer visit.</li>
+<li>Memorize verses 45-46 together, setting it to a simple rhythm or melody.</li>
+
+
+</ul>
+<h3>3. Sunday School Teaching Applications</h3>
+
+<h4>Suggested Opening Questions</h4>
+<p>1. "Why do you think the Lord allowed Liberty Jail to last so long, and how does His answer shape our view of prolonged trials?"</p>
+<p style="margin-top: 1em;">2. "What difference do you see between being called and being chosen in your own discipleship?"</p>
+<p style="margin-top: 1em;">3. "How can D&C 121 help us respond to leadership mistakes without abandoning faith?"</p>
+
+<h4>Key Discussion Points</h4>
+<ul>
+<li>Explore the structure of lament → assurance → doctrinal discourse. Discuss how this pattern can help disciples navigate crises.</li>
+<li>Analyze verses 34-40 as a diagnostic for modern leadership challenges; invite class members to share examples of righteous influence they have witnessed.</li>
+<li>Connect verses 26-33 to temple worship and ongoing revelation, highlighting modern fulfillments (Restoration of sealing keys, continuous revelation).</li>
+
+</ul>
+<h4>Interactive Activities</h4>
+<ul>
+<li><strong>Group Case Study:</strong> Present scenarios (e.g., dealing with criticism, balancing correction and love) and let small groups apply verses 41-46 to propose responses.</li>
+<li><strong>Timeline Mapping:</strong> Have the class assemble a Liberty Jail timeline using provided cards; tie each event to doctrinal insights from the revelation.</li>
+
+</ul>
+<h4>Reinforcement Tools</h4>
+<ul>
+<li>Provide take-home bookmark listing the seven leadership traits in verse 41-42 along with weekly challenges to practice each.</li>
+<li>Encourage class members to send a message of support to someone in bondage—physical or emotional—this week.</li>
+
+
+</ul>
+<h3>4. Seminary Teaching Applications</h3>
+
+<h4>Five-Day Lesson Sequence</h4>
+<p>1.<br>
+<strong>Day 1 – Historical Immersion:</strong> Use maps, primary source quotes, and photos of Liberty Jail replica to set context; assign students to write a modern lament.</p>
+<p style="margin-top: 1em;">2.<br>
+<strong>Day 2 – Verses 1-15:</strong> Discuss righteous petition and divine justice; compare Joseph's lament with Psalms. Invite students to compose a Psalm of trust.</p>
+<p style="margin-top: 1em;">3.<br>
+<strong>Day 3 – Verses 26-33:</strong> Explore promised knowledge; create a chart of Restoration revelations that fulfill these verses. Introduce Scripture Mastery (D&C 121:34-36).</p>
+<p style="margin-top: 1em;">4.<br>
+<strong>Day 4 – Verses 34-40:</strong> Conduct a self-assessment on motives for leadership. Role-play situations involving unrighteous dominion and how to course-correct.</p>
+<p style="margin-top: 1em;">5.<br>
+<strong>Day 5 – Verses 41-46:</strong> Practice "increase of love" conversations. Students write letters to someone they need to correct, emphasizing love unfeigned.</p>
+
+<h4>Seminary-Specific Activities</h4>
+<ul>
+<li><strong>Scripture Mastery Drill:</strong> Memorize D&C 121:45-46 using call-and-response and movement to lock in key phrases.</li>
+<li><strong>Object Lesson:</strong> Use two magnets—one labeled "Compulsion" (repelling) and another "Persuasion" (attracting)—to illustrate how influence operates.</li>
+<li><strong>Assessment:</strong> Have students illustrate the dew metaphor by misting plants, discussing how daily small drops nourish the soul.</li>
+
+</ul>
+<h4>Student Invitations</h4>
+<ul>
+<li>Challenge students to identify and eliminate one source of unrighteous dominion in their spheres (online interactions, sibling dynamics).</li>
+<li>Encourage daily entry in a "Knowledge Dew" journal noting subtle impressions from the Spirit.</li>
+
+
+</ul>
+<h3>5. Relief Society & Priesthood Applications</h3>
+
+<h4>Discussion Themes</h4>
+<ul>
+<li><strong>Leading Like the Savior:</strong> Evaluate how presidencies can embody persuasion, kindness, and pure knowledge in ministering interviews.</li>
+<li><strong>Supporting the Afflicted:</strong> Brainstorm ways to stand with members enduring Liberty Jail moments—meals, childcare, advocacy, employment assistance.</li>
+<li><strong>Guarding Against Prestige:</strong> Explore practical ways to keep callings free from worldly honors (shared responsibilities, transparent budgeting, mentoring).</li>
+
+</ul>
+<h4>Service and Development Plans</h4>
+<ul>
+<li>Launch a "Peace Be Unto Thy Soul" initiative: companions visit isolated members with handwritten notes quoting verses 7-8.</li>
+<li>Organize training on conflict resolution rooted in verse 43—practicing Spirit-directed correction followed by love.</li>
+<li>Schedule quarterly councils to review whether quorum/class culture reflects verse 45's charity and virtue.</li>
+
+</ul>
+<h4>Leadership Reflection</h4>
+<ul>
+<li>Invite leaders to commit to weekly self-evaluation using the seven traits in verse 41. Provide a simple checklist or digital form.</li>
+<li>Encourage sharing of experiences where gentle leadership restored trust, reinforcing the revelation's promises.</li>
+
+
+</ul>
+<h3>6. Children's Teaching Ideas</h3>
+
+<h4>Music & Memory</h4>
+<ul>
+<li>Teach "A Child's Prayer" focusing on the line "Heavenly Father, are you really there?" Connect to Joseph's question in verse 1.</li>
+<li>Create hand motions for the attributes in verse 41 and practice during singing time.</li>
+
+</ul>
+<h4>Visual & Hands-On Activities</h4>
+<ul>
+<li><strong>Liberty Jail Diorama:</strong> Build a small jail using blocks or containers; place paper figures of Joseph and his companions inside while discussing God's answers.</li>
+<li><strong>Dew Drop Blessings:</strong> Spray plants with water as children list ways God sends knowledge like dew.</li>
+
+</ul>
+<h4>Object Lessons</h4>
+<ul>
+<li><strong>Flashlight Pavilion:</strong> Cover a flashlight with cloth to show how prayers invite light to pierce darkness.</li>
+<li><strong>Scepter of Righteousness:</strong> Craft paper scepters labeled "Kindness," "Love," "Truth" and discuss how true power comes from these qualities.</li>
+
+</ul>
+<h4>Crafts & Take-Home</h4>
+<ul>
+<li>Create bookmarks with D&C 121:45 illustrated. Encourage children to tell their families about keeping thoughts virtuous.</li>
+<li>Provide a "Peace Jar" where children add paper drops each time they feel the Holy Ghost bring comfort.</li>
+
+</ul>
+<h4>Teaching Tips</h4>
+<ul>
+<li>Use role-play (e.g., correcting a friend kindly) to practice verse 43 principles at age-appropriate levels.</li>
+<li>Emphasize that God hears children's prayers just as He heard Joseph's.</li>
+
+
+</ul>
+<h3>7. Mission Applications</h3>
+
+<h4>Teaching Principles</h4>
+<ul>
+<li>Share verse 7 when investigators face trials; testify that Christ offers peace amid adversity.</li>
+<li>Use verses 41-46 to describe how church leadership differs from worldly authority, countering misconceptions about hierarchy.</li>
+<li>Explain verses 26-33 to present Restoration theology of continuing revelation and councils in heaven.</li>
+
+</ul>
+<h4>Finding & Member Work</h4>
+<ul>
+<li>Invite members to identify friends experiencing "small moment" trials and accompany missionaries in ministering visits.</li>
+<li>Develop lessons where members recount modern "knowledge poured down" stories, strengthening investigator faith in living prophets.</li>
+
+</ul>
+<h4>Companion Unity & Leadership</h4>
+<ul>
+<li>Companions review verses 41-43 weekly, evaluating how persuasion and love guide companionship councils.</li>
+<li>Mission leaders incorporate D&C 121 in zone conferences, modeling correction followed by love to maintain unity.</li>
+<li>Encourage missionaries to keep a Liberty Jail gratitude list—documenting blessings received during difficult areas.</li>
+
+</ul>
+<h4>Follow-Up Strategies</h4>
+<ul>
+<li>Assign investigators to read D&C 121:45-46 and report how they feel when inviting the Spirit into their homes.</li>
+<li>Utilize the millstone imagery (verse 22) carefully to explain God's protection of the innocent and His justice against persecutors.</li>
+
+
+
+</ul>
+            </div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">6. STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>D&C 121: Study Questions</h2>
+<h3>Guided Inquiry for Liberty Jail Revelations</h3>
+
+
+<h3>Personal Application (12 Questions)</h3>
+<p>1. How can recognizing my trials as "a small moment" (verse 7) change my emotional response this week?</p>
+<p style="margin-top: 1em;">2. Which attribute from verses 41-42 would most bless my relationships if I cultivated it daily?</p>
+<p style="margin-top: 1em;">3. When did I last feel tempted to seek "the honors of men" (verse 35), and how can I redirect that desire toward God?</p>
+<p style="margin-top: 1em;">4. What practical steps will help virtue garnish my thoughts unceasingly (verse 45)?</p>
+<p style="margin-top: 1em;">5. How do I discern when to ask God "How long?" and when to wait patiently for His answer?</p>
+<p style="margin-top: 1em;">6. What spiritual knowledge do I feel God is ready to pour down if I create space to receive it?</p>
+<p style="margin-top: 1em;">7. Where can I show love unfeigned after offering needed correction?</p>
+<p style="margin-top: 1em;">8. How has enduring adversity well in the past prepared me for present responsibilities?</p>
+<p style="margin-top: 1em;">9. In what ways do I cover my sins instead of confessing and forsaking them (verse 37)?</p>
+<p style="margin-top: 1em;">10. What does a "constant companion" Holy Ghost look like in my daily routine?</p>
+<p style="margin-top: 1em;">11. How can I ensure my influence in the home is persuasive rather than compulsory?</p>
+<p style="margin-top: 1em;">12. What invitation from the Spirit have I received recently that I have yet to act on?</p>
+
+
+<h3>Doctrinal Understanding (11 Questions)</h3>
+<p>1. What does it mean that the rights of the priesthood are "inseparably connected" with the powers of heaven (verse 36)?</p>
+<p style="margin-top: 1em;">2. How do verses 26-33 expand our understanding of the dispensation of the fulness of times?</p>
+<p style="margin-top: 1em;">3. Why does God allow the wicked to accuse or persecute His servants before intervening (verses 11-15)?</p>
+<p style="margin-top: 1em;">4. What is the doctrinal relationship between charity, virtue, and confidence before God (verse 45)?</p>
+<p style="margin-top: 1em;">5. How do priesthood ordinances depend on love unfeigned to remain effective (verses 41-42)?</p>
+<p style="margin-top: 1em;">6. Why does the Lord compare attempts to hinder revelation to stopping the Missouri River (verse 33)?</p>
+<p style="margin-top: 1em;">7. What principles does the Lord use to measure when justice will be released (verses 24-25)?</p>
+<p style="margin-top: 1em;">8. How do verses 37-39 illustrate the link between agency and spiritual authority?</p>
+<p style="margin-top: 1em;">9. Why is heavenly knowledge reserved for those who "endure valiantly" (verse 29)?</p>
+<p style="margin-top: 1em;">10. How does D&C 121 connect with the oath and covenant of the priesthood in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng">D&C 84</a>?</p>
+<p style="margin-top: 1em;">11. What do these verses teach about the nature of God's empathy toward suffering Saints?</p>
+
+
+<h3>Historical Context (10 Questions)</h3>
+<p>1. How did the physical layout of Liberty Jail influence the metaphors Joseph used in verses 1-6?</p>
+<p style="margin-top: 1em;">2. In what ways did Emma Smith's support impact Joseph's ability to receive this revelation?</p>
+<p style="margin-top: 1em;">3. How did the extermination order amplify the Saints' need for the doctrine recorded in D&C 121?</p>
+<p style="margin-top: 1em;">4. Why were loyal friends such as Alexander McRae crucial to Joseph's morale (verse 9)?</p>
+<p style="margin-top: 1em;">5. How did the Saints' migration to Quincy, Illinois, shape the reception of this letter?</p>
+<p style="margin-top: 1em;">6. What legal injustices during the Missouri conflicts does the Lord address in verses 16-21?</p>
+<p style="margin-top: 1em;">7. How did earlier experiences like Zion's Camp prepare Joseph for Liberty Jail endurance?</p>
+<p style="margin-top: 1em;">8. Which elements of the Liberty Jail timeline (October 1838–April 1839) illuminate specific phrases in the revelation?</p>
+<p style="margin-top: 1em;">9. How did publication of the letter in <em>Times and Seasons</em> influence early Nauvoo culture?</p>
+<p style="margin-top: 1em;">10. What parallels exist between Liberty Jail and other scriptural prisons (e.g., Alma and Amulek, Paul and Silas)?</p>
+
+
+<h3>Cross-Reference Exploration (9 Questions)</h3>
+<p>1. How do Psalms of lament (e.g., Psalm 13) inform your reading of verses 1-6?</p>
+<p style="margin-top: 1em;">2. In what ways does <a href="https://www.blueletterbible.org/kjv/jas/1/5/">James 1:5</a> connect with Joseph's request for divine wisdom in Liberty Jail?</p>
+<p style="margin-top: 1em;">3. How does <a href="https://www.blueletterbible.org/kjv/mat/20/25-28/">Matthew 20:25-28</a> reinforce the leadership model in verses 41-42?</p>
+<p style="margin-top: 1em;">4. What insights emerge by comparing verse 33 with <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/90.24?lang=eng">Doctrine & Covenants 90:24</a>?</p>
+<p style="margin-top: 1em;">5. How do verses 7-8 harmonize with <a href="https://www.blueletterbible.org/kjv/rom/8/17-18/">Romans 8:17-18</a>?</p>
+<p style="margin-top: 1em;">6. Which parallels between verses 26-33 and <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng">Doctrine & Covenants 76</a> deepen understanding of heavenly councils?</p>
+<p style="margin-top: 1em;">7. How does verse 45 echo <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10.32-33?lang=eng">Moroni 10:32-33</a>?</p>
+<p style="margin-top: 1em;">8. What does <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/23.7-14?lang=eng">Mosiah 23:7-14</a> add to the warning against unrighteous dominion?</p>
+<p style="margin-top: 1em;">9. How does comparing verse 22 with <a href="https://www.blueletterbible.org/kjv/mat/18/6/">Matthew 18:6</a> refine our understanding of divine protection?</p>
+
+
+<h3>Teaching & Discussion (10 Questions)</h3>
+<p>1. How can a ward council use verses 41-46 to evaluate meeting culture and ministering plans?</p>
+<p style="margin-top: 1em;">2. What examples from modern Church history demonstrate the fulfillment of verses 26-33?</p>
+<p style="margin-top: 1em;">3. How might youth leaders introduce the concept of "love unfeigned" during correction moments?</p>
+<p style="margin-top: 1em;">4. How can Relief Society or elders quorum lessons leverage verses 9-10 to strengthen friendship networks?</p>
+<p style="margin-top: 1em;">5. What training might bishoprics provide to help newly called leaders avoid unrighteous dominion?</p>
+<p style="margin-top: 1em;">6. How can mission leaders incorporate verses 7-9 when counseling missionaries facing discouragement?</p>
+<p style="margin-top: 1em;">7. What visuals or object lessons best illustrate the unstoppable flow of revelation promised in verse 33?</p>
+<p style="margin-top: 1em;">8. How does acknowledging communal suffering (verses 5-6) prepare classes to minister better?</p>
+<p style="margin-top: 1em;">9. How can seminary classes role-play verse 43 to practice Spirit-led correction and follow-up love?</p>
+<p style="margin-top: 1em;">10. What commitments can a Sunday School class make to "pour down knowledge" within the ward community?</p>
+
+
+<h3>Reflection & Meditation (9 Questions)</h3>
+<p>1. What emotions surface when reading Joseph's "O God, where art thou?" and how does the Spirit address them?</p>
+<p style="margin-top: 1em;">2. How does imagining the Council of the Eternal God (verse 32) change your sense of identity and destiny?</p>
+<p style="margin-top: 1em;">3. What does the image of Missouri River waters teach about resisting the Restoration (verse 33)?</p>
+<p style="margin-top: 1em;">4. How does the phrase "faithfulness stronger than the cords of death" (verse 44) resonate with covenants I've made?</p>
+<p style="margin-top: 1em;">5. When have I sensed the Holy Ghost as a "constant companion" (verse 46)?</p>
+<p style="margin-top: 1em;">6. What personal "craftiness" must I relinquish to stay aligned with God's purposes (verse 12)?</p>
+<p style="margin-top: 1em;">7. How does meditating on divine patience influence the way I wait on promised blessings?</p>
+<p style="margin-top: 1em;">8. In silent prayer, what does the Lord counsel me about my current stewardship through these verses?</p>
+<p style="margin-top: 1em;">9. How do I balance lament and praise in my worship after reading D&C 121?</p>
+
+
+<h3>Modern Application (10 Questions)</h3>
+<p>1. What current global injustices mirror the Saints' experiences, and how can D&C 121 guide my response?</p>
+<p style="margin-top: 1em;">2. How can I advocate for religious liberty today using the principles outlined in this revelation?</p>
+<p style="margin-top: 1em;">3. In what ways should Church leaders address systemic abuses of power in light of verses 37-39?</p>
+<p style="margin-top: 1em;">4. How can Latter-day Saint professionals embody persuasion and kindness in secular leadership roles?</p>
+<p style="margin-top: 1em;">5. What does verse 25 teach about accountability in an age of social media and instant exposure?</p>
+<p style="margin-top: 1em;">6. How can families use verses 7-8 to counsel children facing online bullying or social isolation?</p>
+<p style="margin-top: 1em;">7. How might humanitarian efforts be shaped by the command to remember "suffering saints" (verse 6)?</p>
+<p style="margin-top: 1em;">8. How do these verses inform my approach to civic engagement and protecting marginalized groups?</p>
+<p style="margin-top: 1em;">9. What practices help wards and stakes become reservoirs where knowledge distils like dew (verse 45)?</p>
+<p style="margin-top: 1em;">10. How can international congregations apply these teachings amid political instability or persecution?</p>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            
+            if (button.classList.contains("active")) {
+                panel.classList.add("active");
+                // Set to scrollHeight to show all content
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                
+                // Recalculate after a brief delay to ensure sub-panels are measured
+                setTimeout(function() {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }, 50);
+            } else {
+                panel.classList.remove("active");
+                panel.style.maxHeight = "0";
+            }
+        }
+
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            
+            if (button.classList.contains("active")) {
+                panel.classList.add("active");
+                // Set to scrollHeight to show all content
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                
+                // Update parent panel height to accommodate the expanded sub-panel
+                var parentPanel = panel.closest('.content-panel');
+                if (parentPanel) {
+                    parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+                }
+            } else {
+                panel.classList.remove("active");
+                panel.style.maxHeight = "0";
+                
+                // Update parent panel height after collapse
+                setTimeout(function() {
+                    var parentPanel = panel.closest('.content-panel');
+                    if (parentPanel && parentPanel.classList.contains('active')) {
+                        parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+                    }
+                }, 300);
+            }
+        }
+
+        function expandAll() {
+            // First expand all main accordions
+            var accordions = document.getElementsByClassName("accordion-section");
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.add("active");
+                var panel = accordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = "none"; // Use none for expand all to ensure everything shows
+            }
+            
+            // Then expand all sub-accordions
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.add("active");
+                var panel = subAccordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = "none"; // Use none for expand all
+            }
+        }
+
+        function collapseAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].classList.remove("active");
+                panels[i].style.maxHeight = "0";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < subPanels.length; i++) {
+                subPanels[i].classList.remove("active");
+                subPanels[i].style.maxHeight = "0";
+            }
+        }
+</script>
+    <div class="section-navigation">
+        <div class="nav-container">
+            <a href="dc120_complete.html" class="nav-link">← D&C 120</a>
+            <a href="MASTER_INDEX.html" class="nav-link index">📚 Study Guide Index</a>
+            <a href="dc122_complete.html" class="nav-link">D&C 122 →</a>
+        </div>
+    </div>
+</body>
+</html>

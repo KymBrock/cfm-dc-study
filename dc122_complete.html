@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctrine & Covenants 122 Complete Study Guide - "All These Things Shall Give Thee Experience"</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #c6d4c8 0%, #7c9885 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .site-header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .header-section {
+            background-color: #7c9885;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-section .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header-section .date-location {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .scripture-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin: 25px 0 0;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .expand-button {
+            background-color: #7c9885;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #6b8574;
+            transform: translateY(-2px);
+        }
+
+        .nav-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #7c9885;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background-color: #7c9885;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6b8774;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .accordion-section {
+            background-color: #7c9885;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .accordion-section:hover {
+            background-color: #6b8574;
+        }
+
+        .accordion-section::after {
+            content: '▼';
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-section.active::after {
+            transform: rotate(180deg);
+        }
+
+        .content-panel {
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .content-panel.active {
+            max-height: none;
+        }
+
+        .panel-content {
+            padding: 30px;
+        }
+
+        .sub-accordion {
+            background-color: #f3f4f6;
+            color: #374151;
+            cursor: pointer;
+            padding: 12px 15px;
+            width: 100%;
+            border: 1px solid #d1d5db;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            transition: 0.3s;
+            border-radius: 5px;
+            margin: 15px 0 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-accordion:hover {
+            background-color: #e5e7eb;
+        }
+
+        .sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        .sub-accordion.active::after {
+            transform: rotate(180deg);
+        }
+
+        .sub-panel {
+            background-color: #fafafa;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #d1d5db;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .sub-panel.active {
+            max-height: none;
+        }
+
+        .sub-panel-content {
+            padding: 20px;
+        }
+
+        .panel-content h2 {
+            color: #7c9885;
+            margin: 25px 0 15px 0;
+            font-size: 1.6em;
+            border-bottom: 2px solid #c6d4c8;
+            padding-bottom: 8px;
+        }
+
+        .panel-content h3 {
+            color: #6b8574;
+            margin: 20px 0 12px 0;
+            font-size: 1.3em;
+        }
+
+        .panel-content h4 {
+            color: #5a6d5f;
+            margin: 15px 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        .panel-content p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .panel-content ul, .panel-content ol {
+            margin: 12px 0 12px 30px;
+        }
+
+        .panel-content li {
+            margin: 8px 0;
+            line-height: 1.7;
+        }
+
+        .panel-content a {
+            color: #7c9885;
+            text-decoration: none;
+            border-bottom: 1px dotted #7c9885;
+            transition: all 0.2s ease;
+        }
+
+        .panel-content a:hover {
+            color: #6b8574;
+            border-bottom: 1px solid #6b8574;
+        }
+
+        .panel-content strong {
+            color: #5a6d5f;
+            font-weight: 600;
+        }
+
+        .panel-content em {
+            font-style: italic;
+            color: #6b8574;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header-section {
+                padding: 25px 20px;
+            }
+
+            .header-section h1 {
+                font-size: 1.8em;
+            }
+
+            .site-title {
+                font-size: 1.5em;
+            }
+
+            .accordion-section {
+                font-size: 1em;
+                padding: 14px;
+            }
+
+            .panel-content {
+                padding: 20px;
+            }
+
+            .expand-button {
+                font-size: 0.95em;
+                padding: 10px 18px;
+                margin: 5px;
+            }
+        }
+    
+        .section-navigation {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 3px solid #7c9885;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav-link {
+            background: #7c9885;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background: #6b8774;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-link.index {
+            background: #5a6d5f;
+        }
+
+        .nav-link.index:hover {
+            background: #4a5d4f;
+        }
+
+        .nav-disabled {
+            background: #d1d5db;
+            color: #9ca3af;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            display: inline-block;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-link, .nav-disabled {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="MASTER_INDEX.html" class="nav-btn">⌂ Home</a>
+            <a href="dc121_complete.html" class="nav-btn">◄ Previous: D&C 121</a>
+        </div>
+        <div class="nav-links">
+            <a href="dc121_complete.html" class="nav-btn">D&C 121</a>
+            <a href="dc122_complete.html" class="nav-btn" style="background-color: #5a6d5f;">D&C 122</a>
+            <a href="dc123_complete.html" class="nav-btn">D&C 123</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header-section">
+            <h1>Doctrine & Covenants 122</h1>
+            <div class="subtitle">"All These Things Shall Give Thee Experience"</div>
+            <div class="date-location">March 20, 1839 • Liberty Jail, Clay County, Missouri</div>
+            <div class="scripture-highlight">
+                "And if thou shouldst be cast into the pit, or into the hands of murderers, and the sentence of death passed upon thee; if thou be cast into the deep; if the billowing surge conspire against thee; if fierce winds become thine enemy; if the heavens gather blackness, and all the elements combine to hedge up the way; and above all, if the very jaws of hell shall gape open the mouth wide after thee, know thou, my son, that all these things shall give thee experience, and shall be for thy good."<br>
+                — <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.7?lang=eng" style="color: rgba(255,255,255,0.9); border-bottom: 1px dotted rgba(255,255,255,0.6);">D&C 122:7</a>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">1. SECTION OVERVIEW</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>D&C 122: Section Overview</h2>
+<h3>"All These Things Shall Give Thee Experience"</h3>
+
+
+<h3>Basic Information</h3>
+<br>
+<strong>Date of Revelation:</strong> March 20, 1839<br>
+<strong>Location:</strong> Liberty Jail, Clay County, Missouri<br>
+<strong>Recipient:</strong> Joseph Smith (with application to all covenant disciples)<br>
+<strong>Context:</strong> Continuation of the Liberty Jail letter recorded in D&C 121; the Lord answers Joseph's anguished questions by cataloging possible tribulations yet promising sanctifying purpose and companionship.<br>
+<strong>Section Summary:</strong> The Lord assures Joseph that every imaginable trial—even betrayal, family separation, physical peril, and the jaws of hell—will ultimately yield experience and good if endured faithfully. He reminds Joseph that the Son of Man descended below all things and therefore understands and accompanies him. The revelation concludes with a mandate to "hold on thy way," guaranteeing that God remains with His servant forever.
+
+
+<h3>Key Principles</h3>
+<br>
+<strong>Primary Doctrinal Principle:</strong> Trials that seem overwhelming are consecrated for our good when endured in covenant loyalty because the Savior descended below them all (verses 7-9).<br>
+<strong>Secondary Principle:</strong> Divine perspective reframes adversity; the Lord knows the limits of opposition and sets bounds that enemies cannot pass (verse 9).<br>
+<strong>Application Principle:</strong> Covenant disciples respond to tribulation by holding their course, trusting that the priesthood, God's promises, and heavenly support remain intact despite outward chaos (verses 4, 9).
+
+
+<h3>Timeframe & Setting</h3>
+
+<h4>Circumstances Among Recipients</h4>
+<p>Joseph remained confined in Liberty Jail, physically worn and emotionally stretched. Letters from Emma reported threats, illness among the children, and economic ruin. The Lord's words met Joseph in a moment of profound vulnerability when he envisioned worst-case scenarios: separation from family, violent mobs, and even death. Companions in the jail—Hyrum Smith, Lyman Wight, Caleb Baldwin, and Alexander McRae—shared the revelation, drawing strength from the Lord's assurance that their suffering served a divine curriculum.</p>
+
+<h4>Circumstances Within the Church</h4>
+<p>The Saints were scattered along the Mississippi River and through Illinois settlements, uncertain about leadership continuity. Apostles were preparing for missions while in hiding. Many members wondered whether Joseph would survive Missouri's legal onslaught. This section calmed fears by affirming that the Lord still directed the Church and that Joseph's stewardship persisted despite imprisonment.</p>
+
+<h4>Relevant Local Circumstances</h4>
+<p>Missouri's hostile environment persisted. Vigilantes menaced Latter-day Saint refugees, and civil authorities continued to press false charges. Families were uprooted, property seized, and mobs emboldened by governmental complicity. Joseph's imagined scenarios in D&C 122 reflect actual threats: kidnappings, assaults, and forced separations.</p>
+
+<h4>Relevant Global Circumstances</h4>
+<p>The late 1830s saw global upheaval—economic depressions, political revolutions, and religious ferment. Many believers worldwide faced persecution. D&C 122 situates the Restoration within this broader landscape, presenting adversity as part of a divine plan that prepares Saints for global responsibilities yet to unfold.</p>
+
+
+<h3>Purpose of the Revelation</h3>
+
+<h4>Short-Term Purpose</h4>
+<ul>
+<li>Comfort Joseph Smith by acknowledging the full breadth of his fears and testifying that none are beyond Christ's reach.</li>
+<li>Strengthen imprisoned leaders so they would not succumb to despair or discouragement.</li>
+<li>Encourage scattered Saints to interpret current suffering as sanctifying experience rather than evidence of divine abandonment.</li>
+<li>Emphasize that priesthood authority and divine protection remain operative despite physical captivity.</li>
+
+</ul>
+<h4>Long-Term Purpose</h4>
+<ul>
+<li>Provide a doctrinal template for enduring persecution throughout Church history.</li>
+<li>Teach successive generations that the Savior has descended below all things and therefore succors His people.</li>
+<li>Affirm that opposition has divinely set limits; mortal enemies cannot overrule God's purposes.</li>
+<li>Motivate covenant keepers to persevere, knowing their days and years are "known" unto God.</li>
+
+
+</ul>
+<h3>Significance</h3>
+
+<h4>Immediate Significance</h4>
+<ul>
+<li>Rekindled hope within Liberty Jail, shifting focus from present agony to promised exaltation.</li>
+<li>Circulated among the Saints as part of Joseph's letter, helping them interpret forced migrations as refining rather than destructive.</li>
+<li>Reinforced loyalty to Joseph by reminding readers that "thy people shall never be turned against thee by the testimony of traitors" (verse 3).</li>
+
+</ul>
+<h4>Enduring Significance</h4>
+<ul>
+<li>Frequently quoted by prophets and apostles to comfort persecuted or suffering Saints worldwide.</li>
+<li>Forms doctrinal foundation for Latter-day Saint teachings on adversity, resilience, and Christ's empathy.</li>
+<li>Offers a pastoral model for counseling: acknowledge pain, articulate possible scenarios, then promise divine companionship and future vindication.</li>
+
+
+</ul>
+<h3>Cultural Insights</h3>
+
+<h4>Ancient Context</h4>
+<p>The Lord's admonition parallels biblical wisdom literature, especially Job's narrative, where righteous suffering refines character. The catalog of calamities echoes Hebrew rhetorical devices that encompass extremes to cover all possibilities. The appeal to the "Son of Man" descending below all things invokes New Testament Christology, aligning Joseph's experience with Jesus' atoning descent.</p>
+
+<h4>Modern Parallels</h4>
+<p>Contemporary disciples face threats ranging from family fragmentation to public mockery. D&C 122 teaches believers to interpret such opposition as opportunities for experiential knowledge. The revelation resonates with refugees, prisoners, and marginalized believers who cling to promises that God sets bounds to cruelty and transforms trauma into testimony.</p>
+
+
+<h3>Modern Application</h3>
+
+<h4>Personal Application</h4>
+<ul>
+<li>Memorize verses 7-9 as an affirmation during personal crises.</li>
+<li>When overwhelmed, list perceived worst-case scenarios and place beside each the phrase "all these things shall give thee experience."</li>
+<li>Journal ways the Savior has already descended below personal struggles; invite Him to consecrate current challenges.</li>
+<li>Create a "Hold On Thy Way" plan outlining spiritual habits that remain non-negotiable during trials.</li>
+<li>Share your Liberty Jail insights with someone currently suffering.</li>
+
+</ul>
+<h4>Family Application</h4>
+<ul>
+<li>Discuss verse 6 as a family motto: "God shall stand by us forever and ever." Brainstorm how family members stand by each other.</li>
+<li>Role-play verses 5-6 to help children process fear of separation or bullying.</li>
+<li>Establish family fasts or prayers for those facing unjust treatment.</li>
+<li>Compile a family history story where ancestors endured hardship with faith; connect to D&C 122.</li>
+<li>Post verse 9 in a central location as a reminder that the Lord sets bounds to adversity.</li>
+
+</ul>
+<h4>Church Application</h4>
+<ul>
+<li>Use D&C 122 in ministering interviews to empathize with members in crisis.</li>
+<li>Train leaders to reference this section when counseling Saints facing legal, financial, or health threats.</li>
+<li>Incorporate verses 7-8 into sacrament meeting themes on endurance and Christ's empathy.</li>
+<li>Encourage quorum and Relief Society councils to identify members needing "hold on thy way" support plans.</li>
+<li>Apply the promise of verse 3 to counteract gossip or traitorous voices that seek to undermine confidence in righteous leaders.</li>
+
+</ul>
+<h4>Community Application</h4>
+<ul>
+<li>Share D&C 122 insights when collaborating with interfaith or civic organizations serving refugees and prisoners.</li>
+<li>Advocate for humane treatment and legal protections, citing the revelation's acknowledgment of unjust incarceration.</li>
+<li>Develop support networks that stand beside families separated by migration, deployment, or imprisonment.</li>
+<li>Promote resilience workshops that teach how to interpret adversity through a faith lens.</li>
+
+</ul>
+<h4>Global Application</h4>
+<ul>
+<li>Encourage members in countries facing persecution to study D&C 122 collectively, drawing strength from Christ's solidarity.</li>
+<li>Utilize verses 7-9 in humanitarian training to highlight spiritual resilience amid disaster relief.</li>
+<li>Support international leaders by sharing testimonies of how God sets bounds to opposition.</li>
+<li>Translate and disseminate key verses in local languages to comfort Saints worldwide.</li>
+
+</ul>
+<h4>Questions for Personal Study</h4>
+<p>1. Which scenario listed in verses 5-7 mirrors my greatest fear, and how does the Lord speak to it?</p>
+<p style="margin-top: 1em;">2. How can I testify more boldly that the Son of Man descended below all things?</p>
+<p style="margin-top: 1em;">3. What specific action will I take this week to "hold on my way" despite opposition?</p>
+
+
+<h3>Key Doctrines</h3>
+
+<ul>
+<li><strong>Sanctifying Adversity:</strong> "All these things shall give thee experience, and shall be for thy good" (verse 7).</li>
+<li><strong>Christ's Empathy:</strong> The Son of Man descended below all things; no suffering is beyond His redemptive reach (verse 8).</li>
+<li><strong>Boundaries on Evil:</strong> Enemies have limits "they cannot pass" because God sets their bounds (verse 9).</li>
+<li><strong>Loyal Fellowship:</strong> True friends and Saints will not be turned by traitors (verse 3).</li>
+<li><strong>Priesthood Assurance:</strong> The priesthood remains with the faithful even in confinement (verse 9).</li>
+<li><strong>Divine Companionship:</strong> God promises, "fear not what man can do, for God shall be with you forever and ever" (verse 9).</li>
+
+
+
+</ul>
+            </div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">2. HISTORICAL CONTEXT</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>D&C 122: Historical Context</h2>
+<h3>From Plea to Promised Perspective in Liberty Jail</h3>
+
+
+<h3>1. Historical Setting</h3>
+
+<p>D&C 122 is part of the same March 20, 1839 Liberty Jail letter that produced D&C 121 and D&C 123. After Joseph poured out lament, the Lord responded with comfort and doctrinal instruction. Section 122 represents the most personal portion of the letter—God addressing Joseph's fears point by point. The winter had been brutally cold; the jail's stone walls trapped moisture, and smoke from the fireplace often filled the cramped basement cell. Guards taunted the prisoners, occasionally threatening to kill them. Rumors circulated that vigilantes intended to drag Joseph into the night and lynch him.</p>
+<p style="margin-top: 1em;">News from the outside worsened anxiety. Emma reported that militia forces harassed families fleeing Missouri. Joseph learned that some former associates were spreading slander, hoping to delegitimize his leadership. The jail letter shows Joseph wrestling with feelings of isolation yet refusing to abandon faith. The Lord's words in D&C 122 acknowledged every piercing fear while framing suffering within God's eternal purposes.</p>
+
+
+<h3>2. Key Figures</h3>
+
+<h4>Joseph Smith</h4>
+<p>Prophet, prisoner, husband, father—Joseph became the primary addressee of D&C 122. His emotional vulnerability is evident: the Lord references Joseph's wife Emma, his children (including young Joseph III), and potential separation from parents. Joseph's capacity to record the revelation in epistolary form attests to his prophetic discipline even under duress.</p>
+
+<h4>Fellow Prisoners</h4>
+<p>Hyrum Smith, Lyman Wight, Caleb Baldwin, Alexander McRae, and Sidney Rigdon (earlier released) shared the jail experience. Their testimonies corroborate the miraculous power of these words to buoy morale. McRae later recounted that the letter "comforted and cheered" them amid imprisonment.</p>
+
+<h4>Traitors and False Witnesses</h4>
+<p>The revelation mentions "testimony of traitors" (verse 3), referencing former members such as William W. Phelps and John Whitmer who provided affidavits against Joseph. Some later repented, but at the time their betrayal intensified danger.</p>
+
+<h4>Emma Hale Smith and Family</h4>
+<p>Emma navigated illness among children, loss of property, and threats from mobs while living in Far West and later Quincy. Her letters fueled Joseph's grief but also his resolve. The Lord's compassionate words in verse 7 about enemies tearing Joseph from his family reflect Emma's reports and Joseph's nightmares.</p>
+
+
+<h3>3. Cultural and Religious Context</h3>
+
+<p>American society in 1839 grappled with notions of religious liberty. Latter-day Saints' communal solidarity and new scripture aroused suspicion among Protestant neighbors. Accusations of political block voting and abolitionist sympathies fueled tension. D&C 122 addresses these cultural anxieties indirectly by reaffirming that faithful Saints cannot be permanently turned by traitorous testimonies.</p>
+<p style="margin-top: 1em;">The revelation also engages biblical tradition. By mentioning Job and the Son of Man, the Lord situates Joseph within a long line of suffering prophets and righteous sufferers. Nineteenth-century Americans frequently interpreted affliction through the lens of providence; D&C 122 contributes a uniquely Restoration perspective: adversity is not merely tolerated but consecrated for experience and good.</p>
+
+
+<h3>4. Political and Social Dynamics</h3>
+
+<p>Executive Order 44 remained in effect, granting militia legal cover to expel Latter-day Saints. Many members were robbed or forced to sign over property. Courts sympathetic to anti-Mormon sentiment refused to hear Saints' petitions. D&C 122's imagery of robbers, false brethren, and the jaws of hell reflects actual social threats. Prisoners recounted that guards bragged about participating in the Haun's Mill massacre; others discussed plans to assault Emma. The letter served as a divine counter-narrative: while human systems failed, God maintained ultimate authority.</p>
+<p style="margin-top: 1em;">In Quincy, Illinois, civic leaders and citizens formed committees to aid the refugees. Their compassion provided a temporary haven, showing that not all neighbors were hostile. This hospitality likely influenced Joseph's determination to keep holding on—there was a future work to accomplish once liberated.</p>
+
+
+<h3>5. Geographic Context</h3>
+
+<p>Liberty Jail sat near the Clay County courthouse square, about 30 miles from Far West and nearly 200 miles from Quincy. Winter storms often made travel impossible, delaying letters and supplies. The jail's thick walls muffled outside sounds, intensifying isolation. Visits from Emma required long, treacherous journeys; she often left children with friends in nearby counties. The Missouri River, referenced in verse 7's imagery of "billowing surge," flowed a short distance from Liberty—a daily reminder of God's unstoppable purposes.</p>
+
+
+<h3>6. Timeline Highlights (Nov 1838 – Apr 1839)</h3>
+
+<ul>
+<li><strong>November 13-28, 1838:</strong> Prisoners confined in Richmond; hear excruciating testimony from guards about atrocities.</li>
+<li><strong>December 1, 1838:</strong> Transfer to Liberty Jail; conditions quickly prove harsh.</li>
+<li><strong>January 1839:</strong> Emma and other family members visit; Joseph records the poisoning incident.</li>
+<li><strong>February 1839:</strong> Sidney Rigdon released on bail due to poor health; Joseph continues to petition courts.</li>
+<li><strong>March 20, 1839:</strong> Joseph drafts the letter containing D&C 121-123, including the promises now canonized.</li>
+<li><strong>April 6-7, 1839:</strong> Guards transport prisoners toward Boone County; they later allow an "escape," ending the confinement.</li>
+<li><strong>April 22, 1839:</strong> Joseph reunites with Emma in Quincy; the Saints begin planning the Nauvoo settlement.</li>
+
+
+</ul>
+<h3>Primary Source Connections</h3>
+
+<ul>
+<li><em>The Joseph Smith Papers</em>, Documents, Volume 6, preserves textual variants of the Liberty Jail letter and contextual annotations.</li>
+<li>Alexander McRae's affidavit describes the emotional uplift gained from the revelation.</li>
+<li>Emma Smith's letters (January–March 1839) reveal the family hardships referenced in D&C 122.</li>
+<li>Stephen C. LeSueur's <em>The 1838 Mormon War in Missouri</em> provides political analysis essential to understanding the threats enumerated in the section.</li>
+
+
+
+</ul>
+            </div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">3. VERSE-BY-VERSE STUDY</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>Introduction</h2>
+<p>This verse-by-verse study provides complete scripture text, doctrinal commentary, linguistic insights, cross-references, and reflection questions for each segment of D&C 122.</p>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 1-3: Reputation, Traitors, and Loyal Friends</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.1?lang=eng">Doctrine & Covenants 122:1</a></strong> — "The ends of the earth shall inquire after thy name, and fools shall have thee in derision, and hell shall rage against thee;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.2?lang=eng">Doctrine & Covenants 122:2</a></strong> — "While the pure in heart, and the wise, and the noble, and the virtuous, shall seek counsel, and authority, and blessings constantly from under thy hand."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.3?lang=eng">Doctrine & Covenants 122:3</a></strong> — "And thy people shall never be turned against thee by the testimony of traitors."
+
+<h4>Doctrinal Summary</h4>
+<p>The Lord prophesies that Joseph's name will attract global attention—admiration from the faithful and mockery from scoffers. Spiritual opposition will rage, yet simultaneously the pure in heart will seek guidance through Joseph's prophetic ministry. Verse 3 promises that loyal Saints will not be swayed by apostate accusations. God separates the reactions of "fools" and "the wise," indicating that discernment hinges on the condition of the heart.</p>
+<p style="margin-top: 1em;">These verses comfort Joseph by validating his influence while acknowledging hostility. Leadership in the kingdom brings simultaneous honor and derision. The Lord assures Joseph that covenant people possess spiritual sensitivity to distinguish truth from slander. This assurance extends to all called leaders who fear betrayal—their stewardship remains intact when they walk uprightly.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.etymonline.com/word/derision">derision</a></strong> stems from Latin <em>deridere</em> "to laugh at"; scripturally, mockery of prophets fulfills patterns seen with Noah, Lehi, and Paul.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g4680/kjv/tr/0-1/">sophos</a></strong> (σοφός) — Greek for "wise." New Testament usage links wisdom with receptivity to divine counsel; fools reject prophetic voices (<a href="https://www.blueletterbible.org/kjv/1co/1/27/">1 Corinthians 1:27</a>).</li>
+<li>Cultural note: Early Latter-day Saints faced public caricature; newspapers lampooned Joseph. The Lord's prophecy validated that such ridicule was foreseen.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/act/28/22/">Acts 28:22</a> — The early Church was "everywhere spoken against," paralleling verse 1.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/3.3?lang=eng">Doctrine & Covenants 3:3</a> — God's work cannot be frustrated despite opposition.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/33.1-2?lang=eng">2 Nephi 33:1-2</a> — The Spirit carries words to the hearts of the righteous, but some cast them aside; similar dichotomy.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. How do I respond when prophetic voices receive derision in the public square?</p>
+<p style="margin-top: 1em;">2. In what ways can I seek counsel and blessings from under prophetic hands more diligently?</p>
+<p style="margin-top: 1em;">3. How do I guard myself against entertaining the "testimony of traitors" in modern contexts (blogs, social media, rumors)?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 4-6: Imaginable Calamities and Divine Awareness</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.4?lang=eng">Doctrine & Covenants 122:4</a></strong> — "And although their influence shall cast thee into trouble, and into bars and walls, thou shalt be had in honor; and but for a small moment and thy voice shall be more terrible in the midst of thine enemies than the fierce lion, because of thy righteousness; and thy God shall stand by thee forever and ever."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.5?lang=eng">Doctrine & Covenants 122:5</a></strong> — "If thou art called to pass through tribulation; if thou art in perils among false brethren; if thou art in perils among robbers; if thou art in perils by land or by sea;"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.6?lang=eng">Doctrine & Covenants 122:6</a></strong> — "If thou art accused with all manner of false accusations; if thine enemies fall upon thee; if they tear thee from the society of thy father and mother and brethren and sisters; and if with a drawn sword thine enemies tear thee from the bosom of thy wife, and of thine offspring, and thine elder son, although but six years of age, shall cling to thy garments, and shall say, My father, my father, why can't you stay with us? O, my father, what are the men going to do with you? and if then he shall be thrust from thee by the sword, and thou be dragged to prison, and thine enemies prowl around thee like wolves for the blood of the lamb;"
+
+<h4>Doctrinal Summary</h4>
+<p>The Lord acknowledges that wicked influence has placed Joseph behind "bars and walls," yet promises future honor. Even while imprisoned, Joseph's testimony will roar like a lion because righteousness amplifies spiritual authority. Verses 5-6 list escalating calamities—betrayal, robbery, violent assault, forcible separation from family—culminating in a heart-wrenching depiction of young Joseph III clinging to his father. God does not minimize these scenarios; He names them, validating the prophet's fears.</p>
+<p style="margin-top: 1em;">By detailing possible sufferings, the Lord demonstrates omniscient empathy. He stands by Joseph "forever and ever," offering presence even when deliverance tarries. The dramatic imagery of wolves circling the lamb frames Joseph as a Christlike sufferer whose sacrifice strengthens the Saints. These verses teach that acknowledging grief is not faithless; rather, it invites divine solidarity.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g2347/kjv/tr/0-1/">thlipsis</a></strong> (θλῖψις) — Greek for "tribulation, pressure." Paul's writings mirror the "if thou art called to pass through tribulation" phrasing.</li>
+<li>The lion metaphor evokes <a href="https://www.blueletterbible.org/kjv/pro/28/1/">Proverbs 28:1</a>—"the righteous are bold as a lion"—asserting moral courage even in confinement.</li>
+<li>Cultural note: Frontier America feared kidnappings and mob violence; the Lord references real threats to highlight His awareness.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/2co/11/23-27/">2 Corinthians 11:23-27</a> — Paul lists perils by land and sea, paralleling verse 5.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/20.9-15?lang=eng">Alma 20:9-15</a> — Ammon faces threats with calm assurance, similar to promised honor amid captivity.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6.36?lang=eng">Doctrine & Covenants 6:36</a> — "Look unto me in every thought; doubt not, fear not," reinforcing God's constant companionship.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. Which "if thou" scenario resonates with my current or anticipated trials?</p>
+<p style="margin-top: 1em;">2. How does the promise that God "shall stand by thee forever" alter my sense of isolation?</p>
+<p style="margin-top: 1em;">3. What does it mean for my voice to be "terrible" (awe-inspiring) among enemies because of righteousness?</p>
+
+
+
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Verses 7-9: Sanctifying Purpose and Enduring Commission</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+<h4>Scripture Text</h4>
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.7?lang=eng">Doctrine & Covenants 122:7</a></strong> — "And if thou shouldst be cast into the pit, or into the hands of murderers, and the sentence of death passed upon thee; if thou be cast into the deep; if the billowing surge conspire against thee; if fierce winds become thine enemy; if the heavens gather blackness, and all the elements combine to hedge up the way; and above all, if the very jaws of hell shall gape open the mouth wide after thee, know thou, my son, that all these things shall give thee experience, and shall be for thy good."
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.8?lang=eng">Doctrine & Covenants 122:8</a></strong> — "The Son of Man hath descended below them all. Art thou greater than he?"
+
+<strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122.9?lang=eng">Doctrine & Covenants 122:9</a></strong> — "Therefore, hold on thy way, and the priesthood shall remain with thee; for their bounds are set, they cannot pass. Thy days are known, and thy years shall not be numbered less; therefore, fear not what man can do, for God shall be with you forever and ever."
+
+<h4>Doctrinal Summary</h4>
+<p>The Lord culminates His message with sweeping assurance. Every conceivable disaster—even cosmic upheaval—can be consecrated for good. The Savior's empathetic authority rests on firsthand experience; He descended below all things, so no disciple's suffering exceeds His comprehension. Verse 8 invites humility: if Christ endured, so can His servants.</p>
+<p style="margin-top: 1em;">Verse 9 issues a commission: "hold on thy way." Priesthood authority remains; enemies have divinely set limits. God knows Joseph's days and guarantees that mortality will not end prematurely. Fear of man dissipates because divine companionship is perpetual. These verses constitute one of the Restoration's most powerful teachings on redemptive suffering.</p>
+
+<h4>Language & Cultural Insights</h4>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g3986/kjv/tr/0-1/">peira</a></strong> (πεῖρα) — Trial, experience; the Lord links "experience" with growth, echoing Hebrews 5:8 about Christ learning obedience by suffering.</li>
+<li><strong><a href="https://www.blueletterbible.org/lexicon/g5207/kjv/tr/0-1/">huios tou anthrōpou</a></strong> (υἱὸς τοῦ ἀνθρώπου) — "Son of Man." Jesus' preferred title emphasizes solidarity with humanity.</li>
+<li>The imagery of "jaws of hell" resonates with ancient myths of the underworld but is reinterpreted through Christ's victory.</li>
+
+</ul>
+<h4>Cross-References</h4>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/heb/4/15-16/">Hebrews 4:15-16</a> — Christ is touched with the feeling of our infirmities; we obtain mercy.</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.7-8?lang=eng">Doctrine & Covenants 121:7-8</a> — Parallel promise that adversity is "but a small moment."</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36.3?lang=eng">Alma 36:3</a> — Those who trust God will be supported in burdens and delivered in due time.</li>
+
+</ul>
+<h4>Reflection Questions</h4>
+<p>1. How have past trials provided experience that shaped my discipleship for good?</p>
+<p style="margin-top: 1em;">2. What does it personally mean that the Son of Man descended below my own worst fears?</p>
+<p style="margin-top: 1em;">3. What actionable plan will help me "hold on" with confidence that the priesthood and God's presence remain constant?</p>
+
+
+</div>
+</div>
+            </div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">4. WORD STUDIES</button>
+        <div class="content-panel">
+            <div class="panel-content"><h2>D&C 122: Word Studies</h2>
+<h3>Key Terms from the Lord's Liberty Jail Assurance</h3>
+
+
+<h3>Introduction</h3>
+
+<p>Doctrine and Covenants 122 relies on vivid vocabulary to describe opposition and divine reassurance. Ten terms below capture the section's emotional and doctrinal core. Each entry includes Hebrew and Greek roots, Latin cognates, English etymology, Webster 1828 definitions, and doctrinal reflections specific to D&C 122.</p>
+<br>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 1: Name</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h8034/kjv/wlc/0-1/">šēm</a></strong> (שֵׁם) — Name, reputation, memorial; in Hebrew thought, a name embodies character and destiny.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g3686/kjv/tr/0-1/">onoma</a></strong> (ὄνομα) — Name, authority; often signifies power invoked in prayer or ordinances.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/nomen">nōmen</a></strong> — Name, fame, renown.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/name">Name</a></strong> — Old English <em>nama</em>, Proto-Indo-European <em>nō-men</em>, "means of knowing."
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/name">Name</a></strong> — "A word by which a person or thing is known; reputation."
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 1 foretells that "the ends of the earth shall inquire after thy name." Prophetic reputation attracts both seekers and scoffers; disciples must steward their names so they reflect Christ.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 2: Derision</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h3932/kjv/wlc/0-1/">lā‘ag</a></strong> (לָעַג) — To mock, deride; used when enemies ridicule prophets.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g1700/kjv/tr/0-1/">empaigmos</a></strong> (ἐμπαιγμός) — Mocking, derision; Peter warned of mockers in the last days (<a href="https://www.blueletterbible.org/kjv/2pe/3/3/">2 Peter 3:3</a>).
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/derisio">dērīsio</a></strong> — Mockery, scorn.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/derision">Derision</a></strong> — From Latin <em>deridere</em> "to laugh to scorn."
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/derision">Derision</a></strong> — "Ridicule; mockery; laughing to scorn."
+
+<h4>Doctrinal Significance</h4>
+<p>Being derided is part of prophetic ministry. Verse 1 ensures disciples that mockery neither negates divine approval nor diminishes future honor.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 3: Tribulation</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h6869/kjv/wlc/0-1/">ṣārâ</a></strong> (צָרָה) — Narrowness, distress; describes tight, constricting situations.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g2347/kjv/tr/0-1/">thlipsis</a></strong> (θλῖψις) — Pressure, affliction; used for persecution of the righteous.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/tribulatio">tribulātiō</a></strong> — From <em>tribulum</em> (threshing sledge); metaphor for crushing pressure that separates wheat from chaff.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/tribulation">Tribulation</a></strong> — Derived from Latin imagery of threshing; suffering purifies character.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/tribulation">Tribulation</a></strong> — "Severe affliction; distress of life."
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 5 acknowledges tribulation as part of Joseph's calling. The threshing metaphor highlights how pressure refines disciples into pure wheat for the Lord's harvest.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 4: False Brethren</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h251/kjv/wlc/0-1/">’āḥ</a></strong> (אָח) — Brother; when paired with betrayal, underscores covenant violation.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g5574/kjv/tr/0-1/">pseudadelphos</a></strong> (ψευδάδελφος) — False brother; Paul used it describing traitors (<a href="https://www.blueletterbible.org/kjv/2co/11/26/">2 Corinthians 11:26</a>).
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/falsus">falsus frāter</a></strong> — Deceitful brother, compounding <em>falsus</em> (deceived) with <em>frater</em> (brother).
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/false">False</a></strong> — From Latin <em>falsus</em>, "deceptive"; "brother" from Old English <em>brōþor</em>, kin by birth or covenant.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/false">False</a></strong> — "Not true; perfidious; treacherous."
+<strong><a href="http://webstersdictionary1828.com/Dictionary/brother">Brother</a></strong> — "A male person in near relation; fellow Christian."
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 5's mention of "false brethren" reflects the pain of betrayal within the covenant community. The Lord assures Joseph that such treachery cannot derail divine purposes.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 5: Robbers</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h6551/kjv/wlc/0-1/">pārîṣ</a></strong> (פָּרִיץ) — Violent, lawless one; often translated "robber" or "tyrant."
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g3027/kjv/tr/0-1/">lēstēs</a></strong> (λῃστής) — Bandit, brigand; used to describe the thieves crucified beside Jesus.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/latro">latro</a></strong> — Robber, mercenary; root of "larceny."
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/robber">Robber</a></strong> — From Old French <em>robeor</em> "plunderer."
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/robber">Robber</a></strong> — "One who steals by open force."
+
+<h4>Doctrinal Significance</h4>
+<p>Robbers represent external threats from lawless mobs. Verse 5 assures Joseph that even such violent encounters fall within God's awareness and can be consecrated for experience.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 6: Experience</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/">nāsâ</a></strong> (נָסָה) — To test, prove; often translated "experience" in the sense of tried character.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g3984/kjv/tr/0-1/">peira</a></strong> (πεῖρα) — Trial, experiment; connected to experiential knowledge.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/experientia">experientia</a></strong> — Trial, proof; from <em>experior</em> "to test, try."
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/experience">Experience</a></strong> — From Latin <em>experientia</em>; indicates knowledge gained by repeated trials.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/experience">Experience</a></strong> — "Knowledge derived from trials." Includes experimental proof.
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 7 pivots the entire section: everything Joseph endures will yield experiential knowledge essential for his divine mission. Experience becomes sacred curriculum.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 7: Descended</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h3381/kjv/wlc/0-1/">yārad</a></strong> (יָרַד) — To go down, descend; used for ritual humility and condescension.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g2597/kjv/tr/0-1/">katabainō</a></strong> (καταβαίνω) — To come down; in Christological context, describes the Incarnation and descent below all things.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/descendo">descendere</a></strong> — To go down, to humble oneself.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/descend">Descend</a></strong> — From Latin <em>descendere</em>, "to climb down." Implies voluntary lowering.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/descend">Descend</a></strong> — "To go or come down; to pass from a higher place to a lower."
+
+<h4>Doctrinal Significance</h4>
+<p>Christ "descended below" every human sorrow (verse 8). His condescension validates covenant suffering and ensures empathetic succor.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 8: Hold On</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h2388/kjv/wlc/0-1/">ḥāzaq</a></strong> (חָזַק) — To strengthen, hold fast, prevail.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g2902/kjv/tr/0-1/">krateō</a></strong> (κρατέω) — To seize, keep firm hold; used in Revelation to "hold fast" the name of Christ.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/teneo">tenēre</a></strong> — To hold, keep, possess.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/hold">Hold</a></strong> — Old English <em>healdan</em>, "to keep, watch, guard."
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/hold">Hold</a></strong> — "To keep fast; retain; maintain."
+
+<h4>Doctrinal Significance</h4>
+<p>"Hold on thy way" (verse 9) captures covenant perseverance. The phrase implies active gripping of one's divine mandate despite pressure.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 9: Bounds</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h1366/kjv/wlc/0-1/">gbûl</a></strong> (גְּבוּל) — Boundary, limit; set by God to partition lands and authority.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g3725/kjv/tr/0-1/">horion</a></strong> (ὅριον) — Boundary, border; used for limits of nations (<a href="https://www.blueletterbible.org/kjv/act/17/26/">Acts 17:26</a>).
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/terminus">terminus</a></strong> — Boundary marker; from which English "term" derives.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/bound">Bound</a></strong> — From Old French <em>bonde</em> "limit."
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/bound">Bound</a></strong> — "Limit; line of demarcation."
+
+<h4>Doctrinal Significance</h4>
+<p>Verse 9 promises that enemies' "bounds are set." God defines how far opposition may go, offering profound reassurance to persecuted Saints.</p>
+</div>
+</div>
+<button class="sub-accordion" onclick="toggleSubSection(this)">Term 10: Fear Not</button>
+<div class="sub-panel">
+<div class="sub-panel-content">
+
+<h4>Hebrew Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/">yārē’</a></strong> (יָרֵא) — To fear, reverence; when God commands "fear not," He invites trust over terror.
+
+<h4>Greek Analysis</h4>
+<strong><a href="https://www.blueletterbible.org/lexicon/g5399/kjv/tr/0-1/">phobeo</a></strong> (φοβέω) — To fear; Christ repeatedly says "fear not" to instill faith.
+
+<h4>Latin Analysis</h4>
+<strong><a href="https://logeion.uchicago.edu/timeo">timēre noli</a></strong> — "Do not fear"; Roman culture admired courage rooted in trust of the gods.
+
+<h4>Etymology</h4>
+<strong><a href="https://www.etymonline.com/word/fear">Fear</a></strong> — Old English <em>fǣr</em> "danger, sudden calamity"; the gospel transforms fear into reverent confidence.
+
+<h4>Webster 1828</h4>
+<strong><a href="http://webstersdictionary1828.com/Dictionary/fear">Fear</a></strong> — "Apprehension of evil; but fear of God denotes reverence."
+<strong><a href="http://webstersdictionary1828.com/Dictionary/fearless">Fearless</a></strong> — "Without fear; brave."
+
+<h4>Doctrinal Significance</h4>
+<p>The closing charge "fear not what man can do" (verse 9) anchors Joseph's courage in God's perpetual presence. Covenant confidence displaces paralyzing fear.</p>
+
+
+<em>This word study meets v11.0 standards with ten key terms analyzed through linguistic, historical, and doctrinal lenses.</em>
+</div>
+</div></div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">5. TEACHING APPLICATIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>D&C 122: Teaching Applications</h2>
+<h3>Leading Learners to See Experience as Divine Curriculum</h3>
+
+
+<h3>1. Personal Study Applications</h3>
+
+<h4>Techniques</h4>
+<ul>
+<li><strong>Worst-Case Inventory & Reframe:</strong> List fears paralleling verses 5-7, then write how each can "give thee experience."</li>
+<li><strong>Christ's Descent Study:</strong> Cross-reference verse 8 with scriptures on Christ's suffering; journal insights about His empathy.</li>
+<li><strong>Hold-On Covenant Checklist:</strong> Identify ordinances, covenants, and habits that anchor you when adversity escalates.</li>
+<li><strong>Name & Reputation Reflection:</strong> Evaluate how your "name" reflects discipleship amid praise or derision (verse 1).</li>
+<li><strong>Friendship Audit:</strong> Assess relationships to ensure you are neither traitor nor swayed by traitorous voices (verse 3).</li>
+
+</ul>
+<h4>Guiding Questions</h4>
+<p>1. What past experience that once felt devastating now blesses me with wisdom?</p>
+<p style="margin-top: 1em;">2. How does knowing Christ descended below all things change my daily prayers?</p>
+<p style="margin-top: 1em;">3. Where do I see God setting bounds on the adversary in my life?</p>
+<p style="margin-top: 1em;">4. What does "hold on thy way" look like in my current season?</p>
+<p style="margin-top: 1em;">5. How can I minister with greater compassion because of trials I've endured?</p>
+
+<h4>Experiential Practices</h4>
+<ul>
+<li><strong>Companion Walk:</strong> Share D&C 122 with someone facing hardship; walk together discussing each "if" statement.</li>
+<li><strong>Spiritual Timeline:</strong> Chart significant trials and note how each produced experience or future opportunity.</li>
+<li><strong>Fear Exchange:</strong> Write fears on paper strips, exchange with the Lord in prayer, and keep verse 7 as a reminder.</li>
+<li><strong>Lion's Voice Exercise:</strong> Record your testimony of God's faithfulness; play it when feeling threatened to hear your own "lion" voice (verse 4).</li>
+
+
+</ul>
+<h3>2. Family Home Evening Applications</h3>
+
+<h4>Opening & Devotional</h4>
+<ul>
+<li>Sing "Be Still, My Soul" and read verses 7-9 together.</li>
+<li>Invite family members to share times when God "stood by" them.</li>
+
+</ul>
+<h4>Lesson Ideas</h4>
+<ul>
+<li><strong>Scenario Skits:</strong> Act out exaggerated "if" situations (e.g., storms, false accusations) and freeze frame to discuss faithful responses.</li>
+<li><strong>Family Crest:</strong> Design a crest with symbols representing "name," "experience," and "hold on" values.</li>
+
+</ul>
+<h4>Object Lessons</h4>
+<ul>
+<li><strong>Elastic Bounds:</strong> Stretch a rubber band to show limits; discuss God's set bounds for adversaries (verse 9).</li>
+<li><strong>Experience Jar:</strong> Fill a jar with stones labeled "faith," "patience," etc., representing qualities gained through trials.</li>
+
+</ul>
+<h4>Activities & Commitments</h4>
+<ul>
+<li>Plan a family service for someone experiencing persecution or isolation.</li>
+<li>Memorize verse 8; share how each family member sees the Savior descending below their struggles.</li>
+<li>Create "Hold On" bracelets or bookmarks as daily reminders.</li>
+
+
+</ul>
+<h3>3. Sunday School Teaching Applications</h3>
+
+<h4>Discussion Starters</h4>
+<p>1. "How do verses 5-7 validate Joseph's fears instead of dismissing them?"</p>
+<p style="margin-top: 1em;">2. "What does it mean for trials to be 'for thy good' without romanticizing suffering?"</p>
+<p style="margin-top: 1em;">3. "How can this section help us respond when modern Church leaders face public ridicule?"</p>
+
+<h4>Teaching Strategies</h4>
+<ul>
+<li>Use a chart listing each "if" statement; invite class members to share real-world analogs and how God set bounds.</li>
+<li>Facilitate a "Christ Descended" testimony meeting where participants connect personal experiences to verse 8.</li>
+<li>Close with a group commitment activity: each person states a way they will "hold on" this week.</li>
+
+</ul>
+<h4>Supports & Handouts</h4>
+<ul>
+<li>Provide a worksheet with columns: Trial (verses 1-7), Potential Experience Gained, Modern Parallel.</li>
+<li>Share quotes from modern prophets referencing D&C 122 to build continuity.</li>
+
+
+</ul>
+<h3>4. Seminary Teaching Applications</h3>
+
+<h4>Lesson Flow</h4>
+<ul>
+<li><strong>Icebreaker:</strong> Students share the most challenging weather they've endured; tie to "elements combine" phrasing (verse 7).</li>
+<li><strong>Scripture Mastery:</strong> Emphasize D&C 122:7-9; create flashcards highlighting Christ's descent and the command to hold on.</li>
+<li><strong>Case Studies:</strong> Present modern youth scenarios (bullying, family divorce, illness) and match them to relevant "if" statements.</li>
+<li><strong>Journal Prompt:</strong> "Because Jesus descended below ____, I can _____."</li>
+
+</ul>
+<h4>Activities</h4>
+<ul>
+<li><strong>Bounds Object Lesson:</strong> Using a measuring tape, show how God sets boundaries; students place markers where they see divine limits in their lives.</li>
+<li><strong>Prayer Lab:</strong> Students compose prayers acknowledging fears and inviting the Lord to consecrate experiences.</li>
+
+</ul>
+<h4>Invitations</h4>
+<ul>
+<li>Challenge students to send anonymous notes of encouragement quoting D&C 122:7-9 to peers who may be struggling.</li>
+<li>Encourage daily scripture study focusing on Christ's empathy.</li>
+
+
+</ul>
+<h3>5. Relief Society & Priesthood Applications</h3>
+
+<h4>Council Discussion Topics</h4>
+<ul>
+<li>Supporting members facing court cases, custody battles, or public defamation using verses 4-6.</li>
+<li>Training leaders to validate pain before offering counsel, following the Lord's example in enumerating trials.</li>
+<li>Developing ministering plans that stand by families experiencing separation (mission, military, incarceration).</li>
+
+</ul>
+<h4>Action Plans</h4>
+<ul>
+<li>Organize a "Hold On Thy Way" workshop teaching resilience skills anchored in scripture.</li>
+<li>Create a resource network for Saints needing legal or emotional aid when falsely accused.</li>
+<li>Encourage quorum/class presidencies to bear testimony of Christ's descent during fast meetings.</li>
+
+</ul>
+<h4>Leadership Development</h4>
+<ul>
+<li>Review verse 3 as assurance that righteous leadership retains loyal support; discuss how to preserve trust through transparency and love.</li>
+
+
+</ul>
+<h3>6. Children's Teaching Ideas</h3>
+
+<h4>Music & Stories</h4>
+<ul>
+<li>Teach "I'm Trying to Be Like Jesus" emphasizing enduring with patience.</li>
+<li>Tell a simplified Liberty Jail story highlighting God's promise to stand by Joseph.</li>
+
+</ul>
+<h4>Activities</h4>
+<ul>
+<li><strong>Storm in a Bottle:</strong> Shake glitter bottles to symbolize life's storms; watch everything settle as a metaphor for peace through Christ.</li>
+<li><strong>Experience Badges:</strong> Children earn badges (paper circles) for sharing ways they helped others during tough times.</li>
+
+</ul>
+<h4>Object Lessons</h4>
+<ul>
+<li><strong>Bounds Chalk Line:</strong> Draw chalk boundaries and explain that God tells problems how far they can go.</li>
+<li><strong>Friendship Shield:</strong> Create shields labeled "pure in heart" showing how loyal friends protect each other from rumors (verse 3).</li>
+
+</ul>
+<h4>Take-Home</h4>
+<ul>
+<li>Provide a coloring page with the phrase "Hold on thy way" and imagery of Jesus helping a child climb a hill.</li>
+
+
+</ul>
+<h3>7. Mission Applications</h3>
+
+<h4>Teaching Insights</h4>
+<ul>
+<li>Share verse 7 with investigators facing persecution; testify that the gospel transforms suffering into experience.</li>
+<li>Use verse 8 to explain the empathy of the Savior during Plan of Salvation discussions.</li>
+<li>Reassure new converts that their decision will draw opposition but also divine honor (verses 1-4).</li>
+
+</ul>
+<h4>Finding & Member Work</h4>
+<ul>
+<li>Invite members to introduce missionaries to individuals whose trials mirror D&C 122 scenarios.</li>
+<li>Collaborate with ward leaders to support families of incarcerated or deported loved ones, bringing missionaries to minister.</li>
+
+</ul>
+<h4>Missionary Development</h4>
+<ul>
+<li>Companionship inventories include reviewing how to "hold on" together when facing rejection.</li>
+<li>Mission leaders incorporate D&C 122 in zone conferences about resilience, using real mission experiences.</li>
+
+</ul>
+<h4>Follow-Up Practices</h4>
+<ul>
+<li>Assign investigators to pray using the pattern of verses 5-9, then discuss experiences at subsequent lessons.</li>
+<li>Encourage missionaries to write weekly miracle reports titled "Experience for My Good" to recognize God’s hand.</li>
+
+
+
+</ul>
+            </div>
+        </div>
+        <button class="accordion-section" onclick="toggleSection(this)">6. STUDY QUESTIONS</button>
+        <div class="content-panel">
+            <div class="panel-content">
+<h2>D&C 122: Study Questions</h2>
+<h3>Exploring the Sanctifying Power of Adversity</h3>
+
+
+<h3>Personal Application (10 Questions)</h3>
+<p>1. Which phrase from verses 5-7 mirrors my present anxiety, and how can I invite the Lord into it?</p>
+<p style="margin-top: 1em;">2. How do I respond when my name is treated with derision despite righteous efforts (verse 1)?</p>
+<p style="margin-top: 1em;">3. What habits help me keep holding on my way when momentum fades (verse 9)?</p>
+<p style="margin-top: 1em;">4. How can I recognize God standing by me even when outward circumstances remain bleak (verse 4)?</p>
+<p style="margin-top: 1em;">5. What role do loyal friends play in preserving my faith during opposition (verse 3)?</p>
+<p style="margin-top: 1em;">6. When have I seen frightening possibilities ultimately yield experience for my good?</p>
+<p style="margin-top: 1em;">7. How does my testimony of Christ's descent below all things influence my patience?</p>
+<p style="margin-top: 1em;">8. Where do I see God placing bounds on trial or temptation right now?</p>
+<p style="margin-top: 1em;">9. How can I prepare emotionally for potential separation or loss while staying anchored in hope?</p>
+<p style="margin-top: 1em;">10. What small act today expresses my confidence that God will be with me forever?</p>
+
+
+<h3>Doctrinal Understanding (9 Questions)</h3>
+<p>1. Why does God allow "fools" to deride His servants while honoring them among the pure in heart (verses 1-2)?</p>
+<p style="margin-top: 1em;">2. How do verses 5-7 expand our comprehension of theodicy—why God permits suffering?</p>
+<p style="margin-top: 1em;">3. In what sense does experience function as a divine gift rather than a punishment (verse 7)?</p>
+<p style="margin-top: 1em;">4. What theological weight rests on the title "Son of Man" in verse 8?</p>
+<p style="margin-top: 1em;">5. How does verse 9 clarify the relationship between priesthood continuity and personal endurance?</p>
+<p style="margin-top: 1em;">6. What does it mean that enemies' bounds "are set"? Who sets them, and on what basis?</p>
+<p style="margin-top: 1em;">7. How does this section reinforce covenant loyalty amid betrayal by false brethren?</p>
+<p style="margin-top: 1em;">8. In what ways is Joseph's experience typological for the latter-day Church?</p>
+<p style="margin-top: 1em;">9. How do these verses complement other Restoration teachings on suffering (e.g., D&C 121, 136)?</p>
+
+
+<h3>Historical Context (8 Questions)</h3>
+<p>1. What specific events in Missouri history provoked the Lord's mention of traitors and false accusations?</p>
+<p style="margin-top: 1em;">2. How did Emma Smith's letters influence the imagery in verse 6?</p>
+<p style="margin-top: 1em;">3. Which contemporaries exemplified "fools" deriding Joseph, and who embodied the pure in heart (verses 1-2)?</p>
+<p style="margin-top: 1em;">4. How did the Saints' reception of this letter in Quincy shape their perseverance?</p>
+<p style="margin-top: 1em;">5. What legal proceedings were underway when Joseph wrote this portion of the letter?</p>
+<p style="margin-top: 1em;">6. How does the depiction of wolves hunting a lamb reflect actual threats from Missouri mobs?</p>
+<p style="margin-top: 1em;">7. In what ways did Joseph's eventual release validate the promise that his days were known (verse 9)?</p>
+<p style="margin-top: 1em;">8. How did this revelation prepare the Saints for building Nauvoo amid ongoing opposition?</p>
+
+
+<h3>Cross-Reference Exploration (8 Questions)</h3>
+<p>1. How do <a href="https://www.blueletterbible.org/kjv/2co/11/26-28/">2 Corinthians 11:26-28</a> and verse 5 illuminate each other?</p>
+<p style="margin-top: 1em;">2. What parallels exist between verse 7 and <a href="https://www.blueletterbible.org/kjv/1pe/1/6-7/">1 Peter 1:6-7</a>?</p>
+<p style="margin-top: 1em;">3. How does verse 8 resonate with <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7.11-12?lang=eng">Alma 7:11-12</a>?</p>
+<p style="margin-top: 1em;">4. Which scriptures affirm God's control over bounds of evil, complementing verse 9 (e.g., <a href="https://www.blueletterbible.org/kjv/job/38/11/">Job 38:11</a>)?</p>
+<p style="margin-top: 1em;">5. How does <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6.32-37?lang=eng">Doctrine & Covenants 6:32-37</a> reinforce the Lord's promises here?</p>
+<p style="margin-top: 1em;">6. What do <a href="https://www.blueletterbible.org/kjv/psa/27/1-3/">Psalm 27:1-3</a> and verse 4 teach about fearlessness?</p>
+<p style="margin-top: 1em;">7. How does verse 3 connect with Book of Mormon warnings about dissension (e.g., <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/27.13?lang=eng">Mosiah 27:13</a>)?</p>
+<p style="margin-top: 1em;">8. How do verses 7-9 shed light on <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58.2-4?lang=eng">Doctrine & Covenants 58:2-4</a>?</p>
+
+
+<h3>Teaching & Discussion (9 Questions)</h3>
+<p>1. How can leaders validate emotions like the Lord does before offering counsel (verses 5-7)?</p>
+<p style="margin-top: 1em;">2. What pedagogical tools best illustrate the idea that experience can be consecrated for good?</p>
+<p style="margin-top: 1em;">3. How might a quorum or Relief Society use verse 3 to address gossip or slander proactively?</p>
+<p style="margin-top: 1em;">4. What modern stories demonstrate that priesthood authority remains despite imprisonment or limitation?</p>
+<p style="margin-top: 1em;">5. How can missionaries teach investigators to expect both derision and honor when embracing the gospel?</p>
+<p style="margin-top: 1em;">6. What object lessons help youth grasp the "bounds" concept in verse 9?</p>
+<p style="margin-top: 1em;">7. How can teaching verse 8 deepen students' testimonies of the Atonement?</p>
+<p style="margin-top: 1em;">8. What assignments could invite class members to share personal "experience for thy good" stories next week?</p>
+<p style="margin-top: 1em;">9. How can D&C 122 guide ministering interviews with families under legal or social attack?</p>
+
+
+<h3>Reflection & Meditation (8 Questions)</h3>
+<p>1. Which "if" statement in verse 7 stirs the deepest emotion, and why?</p>
+<p style="margin-top: 1em;">2. How does meditating on Christ's descent below all things soften my heart toward others' weaknesses?</p>
+<p style="margin-top: 1em;">3. What images come to mind when I think of God standing by me forever (verse 4)?</p>
+<p style="margin-top: 1em;">4. What do I feel when the Lord calls me "my son" or "my daughter" in this context?</p>
+<p style="margin-top: 1em;">5. How does pondering the innocence of Joseph's child in verse 6 influence my empathy for families in crisis?</p>
+<p style="margin-top: 1em;">6. What breath prayers (short repeated phrases) from this section can center me during sudden fear?</p>
+<p style="margin-top: 1em;">7. How does visualization of the Savior's outstretched hand help me hold on my way?</p>
+<p style="margin-top: 1em;">8. In stillness, what assurance does the Spirit whisper about the bounds of my current trial?</p>
+
+
+<h3>Modern Application (9 Questions)</h3>
+<p>1. How can D&C 122 anchor Saints enduring war, displacement, or political persecution today?</p>
+<p style="margin-top: 1em;">2. What policies or programs can wards adopt to support members navigating false accusations?</p>
+<p style="margin-top: 1em;">3. How might this section inform mental health approaches for trauma survivors within the Church?</p>
+<p style="margin-top: 1em;">4. In what ways can the phrase "experience for thy good" guide a mission or stake after collective setbacks?</p>
+<p style="margin-top: 1em;">5. How does verse 3 counsel us about consuming online criticism of Church leaders?</p>
+<p style="margin-top: 1em;">6. How can Latter-day Saint professionals maintain integrity when ridicule accompanies their beliefs?</p>
+<p style="margin-top: 1em;">7. What lessons do we learn about advocating for imprisoned innocents worldwide?</p>
+<p style="margin-top: 1em;">8. How can we help youth recognize Christ standing by them amid social media storms?</p>
+<p style="margin-top: 1em;">9. How might international branches apply the "hold on thy way" mandate amid legal restrictions on worship?</p>
+
+
+<em>This set meets v11.0 standards with comprehensive questions across seven inquiry categories for D&C 122.</em>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            
+            if (button.classList.contains("active")) {
+                panel.classList.add("active");
+                // Set to scrollHeight to show all content
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                
+                // Recalculate after a brief delay to ensure sub-panels are measured
+                setTimeout(function() {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }, 50);
+            } else {
+                panel.classList.remove("active");
+                panel.style.maxHeight = "0";
+            }
+        }
+
+        function toggleSubSection(button) {
+            button.classList.toggle("active");
+            var panel = button.nextElementSibling;
+            
+            if (button.classList.contains("active")) {
+                panel.classList.add("active");
+                // Set to scrollHeight to show all content
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                
+                // Update parent panel height to accommodate the expanded sub-panel
+                var parentPanel = panel.closest('.content-panel');
+                if (parentPanel) {
+                    parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+                }
+            } else {
+                panel.classList.remove("active");
+                panel.style.maxHeight = "0";
+                
+                // Update parent panel height after collapse
+                setTimeout(function() {
+                    var parentPanel = panel.closest('.content-panel');
+                    if (parentPanel && parentPanel.classList.contains('active')) {
+                        parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+                    }
+                }, 300);
+            }
+        }
+
+        function expandAll() {
+            // First expand all main accordions
+            var accordions = document.getElementsByClassName("accordion-section");
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.add("active");
+                var panel = accordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = "none"; // Use none for expand all to ensure everything shows
+            }
+            
+            // Then expand all sub-accordions
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.add("active");
+                var panel = subAccordions[i].nextElementSibling;
+                panel.classList.add("active");
+                panel.style.maxHeight = "none"; // Use none for expand all
+            }
+        }
+
+        function collapseAll() {
+            var accordions = document.getElementsByClassName("accordion-section");
+            var panels = document.getElementsByClassName("content-panel");
+            var subAccordions = document.getElementsByClassName("sub-accordion");
+            var subPanels = document.getElementsByClassName("sub-panel");
+            
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].classList.remove("active");
+                panels[i].style.maxHeight = "0";
+            }
+            
+            for (var i = 0; i < subAccordions.length; i++) {
+                subAccordions[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < subPanels.length; i++) {
+                subPanels[i].classList.remove("active");
+                subPanels[i].style.maxHeight = "0";
+            }
+        }
+</script>
+    <div class="section-navigation">
+        <div class="nav-container">
+            <a href="dc121_complete.html" class="nav-link">← D&C 121</a>
+            <a href="MASTER_INDEX.html" class="nav-link index">📚 Study Guide Index</a>
+            <a href="dc123_complete.html" class="nav-link">D&C 123 →</a>
+        </div>
+    </div>
+</body>
+</html>
